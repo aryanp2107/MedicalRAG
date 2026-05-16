@@ -1,0 +1,2053 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260512",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC12646272",
+                "infons": {
+                    "license": "CC BY-NC-ND"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1073/pnas.2423469122",
+                            "article-id_pmc": "PMC12646272",
+                            "article-id_pmid": "41218125",
+                            "article-id_publisher-id": "202423469",
+                            "elocation-id": "e2423469122",
+                            "issue": "46",
+                            "kwd": "histological image imageQTLs (image quantitative trait loci) image-based age prediction transcriptome deep-learning models",
+                            "license": "This article is distributed under Creative Commons Attribution-NonCommercial-NoDerivatives License 4.0 (CC BY-NC-ND).",
+                            "name_0": "surname:Meng;given-names:Ran",
+                            "name_1": "surname:Zhu;given-names:William",
+                            "name_2": "surname:Cameron;given-names:Christopher J. F.",
+                            "name_3": "surname:Ni;given-names:Pengyu",
+                            "name_4": "surname:Zhou;given-names:Xiao",
+                            "name_5": "surname:Ulammandakh;given-names:Tselmeg",
+                            "name_6": "surname:Gerstein;given-names:Mark B.",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "122",
+                            "year": "2026"
+                        },
+                        "text": "Machine-learning models based on histological images from healthy donors identify imageQTLs and predict chronological age",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 122,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Significance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 135,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "This study establishes a comprehensive framework that links histological image features to genotype, transcriptome, and chronological age in large-scale healthy tissue datasets, providing valuable insights into tissue morphology. By identifying 906 significant, interpretable image quantitative trait loci (imageQTLs) and conducting differential expression analysis based on image features, we enhance understanding of genetic and morphological interactions. Additionally, we developed predictive models for both gene expression and chronological age from raw histological images, introducing an approach to studying age-related tissue-specific changes and presenting a model to demonstrate the predictability of age from histological images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 878,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Histological images offer a wealth of data. Mining these data holds significant potential for enhancing disease diagnosis and prognosis, though challenges remain, especially in noncancer contexts. In this study, we developed a statistical framework that links raw histological images and their derived features to the genotype, transcriptome, and chronological age of the samples. We first demonstrated an association between image features and genotypes, identifying 906 image quantitative trait loci (imageQTLs) significantly associated with image features. Next, we identified differentially expressed (DE) genes by stratifying samples into image-similar groups based on image features and performing DE comparisons between groups. Additionally, we developed a deep-learning model that accurately predicts gene expression in specific tissues from raw images and their features, highlighting gene sets associated with observed morphological changes. Finally, we constructed another deep-learning model to predict chronological age directly from raw images and their features, revealing relationships between age and tissue morphology, especially aspects derived from nucleus features. Both models are supported by a computational approach that greatly compresses gigapixel whole-slide images and extracts interpretable nucleus features, integrating both large-scale tissue morphology and smaller local structures. We have made all interpretable nucleus features, imageQTLs, DE genes, and deep-learning models available as online resources for further research.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2441,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Advanced histological image analysis, particularly when combined with neural networks and other analytical techniques, is an emerging field with the potential to improve both disease diagnosis and prognostic capabilities. Genotype, gene expression, aging, and environmental factors influence histological tissue morphology. Investigating the associations between histological image features and various levels of genetic data, such as genotype or transcriptomic data, across tissues from healthy donors is essential for uncovering the underlying molecular mechanisms that shape tissue morphology. Such insights are critical for understanding how disruptions in these mechanisms may lead to disease. Despite its importance, this area has not yet been fully explored. Here, we develop an approach that offers a hierarchical view of how genotype, gene expression, and epigenetic modifications shape histological morphology. As the global population ages, studying the relationship between histological images and aging will be crucial for explaining the mechanisms behind aging-related chronic conditions, such as cardiovascular disease, diabetes, Alzheimer\u2019s disease, and certain cancers like prostate and lung cancer. Uncovering these basic processes can illuminate disease mechanisms, paving the way for better diagnosis and prevention.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3780,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "However, multiple challenges remain. First, most studies have primarily focused on cancer or predicting gene expression in cancerous tissues, where histological images exhibit more distinctive features. For example, commonly observed features include a large nucleus with irregular size and shape, prominent nucleoli, scarce cytoplasm, and intense staining. These features limit the applicability of past models in noncancerous contexts, which tend to have more subtle features. Another study applied a model in a noncancerous setting, attempting to predict gene expression from histology images across multiple tissues. However, that study used a single, non\u2013tissue-specific model. As a result, the predictions reflected average gene expression patterns across samples from each tissue, capturing general tissue-specific trends rather than precise, sample-specific expression profiles.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4669,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In addition to cancer or gene expression prediction, prior studies have attempted to address the association between genotype and histological image features, but they have either focused on a single tissue type or used uninterpretable image features generated through dimensionality reduction techniques.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4975,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Moreover, interactions among genotype, gene expression, epigenetic modifications, age, and histological morphology are complex and multifaceted (Fig. 1A). Genetic material inherited from parents affects gene expression, which in turn impacts tissue morphology. The aging process plays a crucial role in gene expression, exhibiting tissue-specific effects. Yamamoto et al. showed that aging has a greater impact on gene expression patterns than genetics in most tissues, with age-related expression patterns being more tissue-specific. These researchers also demonstrated that most tissues align with Medawar\u2019s hypothesis, where purifying selection (which eliminates harmful or deleterious mutations from a population) has a greater impact on early-life gene expression, except in highly proliferative tissues like blood and lung. Age has also been shown to be associated with histological changes in various tissues, including the brain and skin. In this paper, \u201cage\u201d refers specifically to chronological age, which differs from \u201clongevity,\u201d the total lifespan of an organism influenced by both genetic and nongenetic factors. In addition to these factors, environmental stress responses can lead to metabolic changes and epigenetic alterations, which may subsequently impact transcription. Environmental stress may also lead to somatic mutations, which can affect gene expression, histological phenotypes, disease susceptibility, and aging.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6427,
+                        "infons": {
+                            "file": "pnas.2423469122fig01.jpg",
+                            "id": "fig01",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Dataset overview and network architecture. (A) Complex and multifaceted interactions among genotype, gene expression, histological images, age, longevity, and environment. (B) Data modality overview. This study focused on 12 tissues from the GTEx dataset, incorporating three key data types: genetic data, histological image data, and metadata. Nucleus features and NIC-compressed images were derived from the histological image data. Analyses such as imageQTL, DE analysis, and EWAS were conducted to identify associations between genetic data and interpretable image features. Nucleus features, compressed images, and metadata were used as inputs for both the HISNUC-X and HISNUC-AGE models. (C) Overall network architecture for the HISNUC-X and HISNUC-AGE models. The giga-pixel images (X*Y*3 pixels) were compressed into [(X/128)*(Y/128)*128] dimensions using the NIC algorithm. Background white space was trimmed, and the compressed WSI was tiled into multiple 32 \u00d7 32 \u00d7 128 tiles. Eight tiles with high tissue occupancy were then selected as input to HISNUC-X or HISNUC-AGE. Nucleus features and metadata were encoded using self-normalizing neural networks and then integrated with image features via tensor fusion to predict chronological age and gene expression (Methods and SI Appendix, Table S1).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7736,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Previous studies have paved the way for utilizing deep learning to extract features for downstream data analysis. For example, the HE2RNA, Pacpaint, and PC-CHiP models have demonstrated the ability to predict gene expression from histological tumor images or classify cancer subtypes. These studies have advanced the field of histological image analysis for predicting cancer-related content. However, features extracted by transfer learning, especially when pretrained on nonhistological datasets, may not transfer well to the specific and complex patterns seen in histology, leading to suboptimal performance and potential loss of critical information. While some models have been pretrained specifically for histological image classification, they primarily focus on distinguishing tissue types through hierarchical feature extraction. Adapting these models for interindividual predictions, such as predicting an individual\u2019s gene expression in a specific tissue, may require specialized fine-tuning, as the pretrained features may not fully capture the subtle variations necessary for accurate individual-level predictions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8866,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we compressed gigapixel histological images to highly compact image representations using Neural Image Compression (NIC). The NIC model is based on unsupervised image representation learning. Specifically, the NIC BiGAN (Bidirectional Generative Adversarial Network) encoder is pretrained on histology images via adversarial learning, enabling the compression of gigapixel images into compact latent representations that capture deep semantic information. Instead of extracting a linear set of features, it reconstructs images, helping to preserve complex morphological details. It demonstrates exceptional performance and preserves the original spatial arrangements after compression. In addition to compressed images, we used QuPath to extract interpretable image features of the nucleus, including nucleus area, eccentricity, circularity, and the nucleus-to-cell area ratio. We investigated the associations among these nucleus features, genotypes, and the transcriptome through Image Quantitative Trait Loci (imageQTL) and differential expression (DE) analysis. We identified 906 imageQTLs. These imageQTLs bridge the gap between genotype and image phenotype by illuminating the impact of genetic variations on interpretable image features. To further categorize the samples based on nucleus features, we identified DE genes by stratifying the samples according to nucleus characteristics (e.g., comparing samples with large vs. small nucleus area). Additionally, we examined the relationship between nuclear morphology and age by calculating the correlations between chronological age and nucleus features. Finally, by integrating compressed HIStological images, derived NUCleus features, and demographic metadata, we developed two types of deep-learning models capable of accurately predicting tissue-specific gene eXpression profiles (HISNUC-X) and chronological Age (HISNUC-AGE) for healthy donors. With the HISNUC-AGE model, the histological morphology of skin, tibial nerve, tibial artery, and testis tissues exhibited greater predictive power for chronological age due to more pronounced age-related changes. Compared to previous histological image models that largely depend on uninterpretable image features, our model enhances explainability by using interpretable nucleus features and maintains spatial context within tissue morphology via compressed images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11255,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11263,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Dataset Overview and Overall Network Architecture.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11314,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our analysis leveraged data (and metadata) from 838 donors within the Genotype-Tissue Expression (GTEx) dataset (SI Appendix, Fig. S1 and Table S1), spanning 12 tissues and multiple data modalities, including genotype data, tissue-specific gene expression profiles, methylation sites, 10,209 histological images, and 24 distinct nucleus feature types (Fig. 1B). Each GTEx tissue RNA expression sample was obtained through bulk sequencing and paired with a histological whole-slide image (WSI).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11808,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "For each tissue type, we used QuPath to segment cells and nuclei and extract relevant nucleus features from WSIs (Methods). These features included the nucleus area, circularity, eccentricity, and the nucleus-to-cell area ratio (Fig. 2A). Each WSI contained over 10,000 cells. We employed statistical measures, such as Q1, Q2, Q3, mode, mean, and SD\u2014to characterize the distribution of nucleus features (Dataset S1). These nucleus features were integrated with genotype data from the donors, resulting in the identification of 906 imageQTLs, revealing associations between genetic variations and interpretable image features in particular tissues (Datasets S2 and S3). Additionally, we examined the associations between the transcriptome and nucleus features through DE analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12590,
+                        "infons": {
+                            "file": "pnas.2423469122fig02.jpg",
+                            "id": "fig02",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Associations among interpretable nucleus features, genotype, and gene expression. (A) An example image from the thyroid illustrates the image features identified by QuPath. (Left) The inner red circles represent nuclei segmented by QuPath, while the outer red circles delineate cell boundaries. This study focused primarily on nucleus area, nucleus circularity, nucleus eccentricity, and the nucleus-to-cell area ratio. (Right) Kernel density estimation of the distribution of nucleus circularity from the thyroid sample WSI. (B) Number of imageQTLs identified for each tissue and nucleus features. The box plot is color-coded according to 12 tissue types on the Right. (The color scheme is consistent with that used in the other figures.) (C and D) Manhattan plots show imageQTL results for two representative tissues: (C) not-sun-exposed skin tissue with the nucleus-to-cell area ratio and (D) tibial nerve tissue with the nucleus area. The Y-axis represents \u2212log10\nP-values, while the X-axis displays SNP loci across chromosomes. Circled dots highlight two SNPs shown in panels E and F. (E) Box plot illustrating the nucleus-to-cell area ratio across the reference and alternative alleles of rs76587387 in the not-sun-exposed skin tissue. (F) Box plot depicting the distribution of nucleus area across the reference and alternative alleles of rs12444074 in tibial nerve tissue.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13973,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "For each tissue, we trained two convolutional neural network (CNN)-based multimodal models to predict: 1) gene expression (HISNUC-X) and 2) chronological age (HISNUC-AGE) (Fig. 1C). Both models employ a CNN architecture to extract features from compressed WSIs. Nucleus features (extracted via QuPath) and donor metadata were encoded using self-normalizing neural networks (SNNs), and all modalities were integrated through a fusion layer (see Methods and SI Appendix, Table S1 for details). We have made the extracted nucleus features, imageQTLs, DE genes, and both sets of pretrained models publicly available as data resources (SI Appendix and Data, Materials, and Software Availability).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14665,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Analyzing Image Feature Associations with Genotype to Map ImageQTLs.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14734,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "By integrating nucleus features extracted via QuPath with GTEx genotype data, we identified associations between single-nucleotide polymorphisms (SNPs) and individual image features, uncovering 906 SNP loci significantly associated with image traits (imageQTLs) (Dataset S2). After linkage disequilibrium pruning and functional annotation using FUMA, these loci were consolidated into 384 lead SNPs (Methods and Dataset S3).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15159,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The image features most frequently associated with imageQTLs were nucleus eccentricity and circularity. The number of imageQTLs per tissue is shown in Fig. 2B. Notably, the skin (not-sun-exposed), heart atrial appendage, and thyroid tissues exhibited relatively large numbers of imageQTLs (Fig. 2B). Although the sun-exposed skin tissue had a larger sample size than its not-sun-exposed counterpart (SI Appendix, Table S1), which typically provides greater power in QTL calculations, the number of significant SNPs associated with the sun-exposed skin did not exceed that of the not-sun-exposed tissue. This result is likely due to the greater environmental impact on the sun-exposed tissue.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15851,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Among the imageQTL loci, 594 genes were mapped using FUMA\u2019s SNP-to-gene annotation (Dataset S3). Of these, we identified a list of genes with potential roles in regulating nuclear morphology, based on experimental evidence or literature-based inferences suggesting plausible mechanistic links (Dataset S4). Here, we present strong examples of imageQTL SNPs linked to morphological changes through well-established biological mechanisms. First, as shown in Fig. 2 C and E, SNP rs76587387 (on chromosome 8, chr8) was correlated with the nucleus-to-cell area ratio in not-sun-exposed skin tissue. The alternative allele was associated with a larger nucleus-to-cell area ratio. This SNP maps to the LZTS1 gene (SI Appendix, Fig. S2), which encodes a nuclear-localized tumor suppressor involved in microtubule stabilization, mitotic progression, and cell growth regulation, and also influences the endosome\u2013nucleus distance. Given the role of mitotic control in regulating nucleus size, we propose that allelic variation at this locus may alter nuclear morphology via modulation of LZTS1 mediated cell cycle progression or endosome\u2013nucleus positioning (SI Appendix, Fig. S3). Second, SNP rs12444074 (on chr16) (Fig. 2 D and F) was correlated with the \u201cnucleus size\u201d feature in tibial nerve tissue, showing significant differences between the alternative and reference alleles. The reference allele was associated with a smaller nucleus size. This SNP maps to KIAA0556 (SI Appendix, Fig. S2), which encodes a microtubule-associated ciliary base protein and is also localized close to the nucleus. Its known functions, anchoring microtubules and coordinating nucleus\u2013cytoskeleton interactions, suggest a role in modulating nucleus size and positioning (SI Appendix, Fig. S3). These findings demonstrate that imageQTLs capture associations between genotype and interpretable nucleus features in histological images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17771,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "In addition, we identified 50 imageQTLs that overlap with GTEx expression quantitative trait loci (eQTLs) (Methods and Dataset S5), suggesting that these variants may influence nucleus features by modulating the expression of associated eGenes. One such example is GSDMD, a gene implicated in both imageQTL and eQTL analyses. This gene (encoding gasdermin D), activated by inflammatory caspases, is a key effector of pyroptosis. Upon activation, its N-terminal fragment (GSDMD-NT) forms membrane pores, primarily at the plasma membrane, but recent studies suggest it can also target intracellular membranes, including the nuclear envelope (SI Appendix, Fig. S3). This disruption of membrane integrity may permit nuclear entry of cytosolic factors such as caspase-11, which has been implicated in histone cleavage and chromatin remodeling, and ultimately may alter nuclear morphology observable by microscopy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18680,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Linking Nuclear Morphology to Differential Gene Expression and DNA Methylation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18760,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To investigate the association between image-derived nucleus features and gene expression, we stratified samples based on their nuclear characteristics and identified DE genes between groups (e.g., large vs. small nucleus area or high vs. low nucleus-to-cell area ratio) (Fig. 3; see Methods and Data, Materials, and Software Availability). In particular, we found that LMNA and ACTB were differentially expressed in association with several nucleus features across multiple tissues. High expression of LMNA and ACTB was associated with an increase in nucleus size. Additionally, high LMNA expression was evident in clusters with greater nucleus eccentricity. Previous studies showed that LMNA encodes lamin A/C proteins, which are associated with nucleus size, and that overexpression of LMNA leads to an increased nucleus aspect ratio. The ACTB gene encodes the beta-actin protein, which plays a role in the structure and shape of the cell and also affects nucleus shape.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19734,
+                        "infons": {
+                            "file": "pnas.2423469122fig03.jpg",
+                            "id": "fig03",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "DE analysis for different nucleus feature groups. Log2 fold changes and adjusted P-values for DE genes based on various nucleus features. Each dot represents a gene. Dots are color-coded according to tissue types. Genes with a \u2212log10(adj. P-value) greater than 35 are marked with an \u201cx.\u201d Genes with an absolute log2 fold change greater than 0.1 and an adjusted P-value less than 0.01 are shown in the figure.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20149,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Additionally, we compared genes mapped by imageQTL SNPs to the DE genes, revealing a subset of overlapping genes (Dataset S6). This overlap suggested that certain SNPs and their adjacent genes may directly influence nucleus features or coregulate these features through alterations in gene expression. Three good examples of this are TMPRSS2, CD2AP, and FRY. These genes have supporting evidence from previous studies demonstrating that changes in their expression or function can lead to alterations in nucleus shape, size, or structure (Dataset S7).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20701,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "In the above sections, we explored the relationship between nucleus features, genetic variants (SNPs), and gene expression. Next, we investigated whether nucleus features are also associated with DNA methylation, which is generally considered an upstream regulator of gene expression. To do this, we conducted an epigenome-wide association study (EWAS) focused on lung tissue data from eGTEx. The analysis focused solely on lung tissue, as this represents the largest methylation dataset available in the eGTEx database. We correlated nucleus features with methylation values at each CpG site, identifying methylation sites significantly associated with nucleus features such as nucleus eccentricity and the nucleus-to-cell area ratio (Methods, SI Appendix, Fig. S4, Left, and Data, Materials, and Software Availability). Gene set enrichment analysis (GSEA) using these sites revealed substantial overlap between the enriched gene sets and the DE genes related to lung nucleus features (SI Appendix, Fig. S4, Right).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21718,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "HISNUC-X Model: Tissue-Specific Prediction of Gene Expression.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21781,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To further explore the relationship between gene expression and histological images, we developed 12 tissue-specific models to predict gene expression based on WSIs. We defined tissue-specific genes as those with a Tau score greater than 0.85 and gene expression levels greater than 1. The number of tissue-specific genes identified for each tissue varied, ranging from 156 to 6,677 (Fig. 4A). The testis had over 6,500 tissue-specific genes, considerably more than other tissues. For each tissue model, the 100 genes with the highest expression levels were selected as targets. To link nuclear morphology to gene expression, we calculated the Pearson correlations between nucleus features and the 100 selected genes. For instance, Fig. 4B depicts the correlation between nucleus features and 100 tissue-specific gene expression profiles in lung tissue. We evaluated the relationship between nucleus features and gene expression and subsequently used these features as input to the HISNUC-X model (Dataset S8, details in Methods).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22812,
+                        "infons": {
+                            "file": "pnas.2423469122fig04.jpg",
+                            "id": "fig04",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Prediction of tissue-specific gene expression using HISNUC-X. (A) The number of tissue-specific genes identified using the Tau score. (B) Pearson correlation between nucleus features extracted by QuPath and tissue-specific gene expression levels in the GTEx lung dataset. (C) Pearson correlation (adj. P < 0.05) between predicted and target gene expression levels in the test set. The distribution of correlations for all predictable genes is presented in box plots. (D) Absolute Pearson correlation between observed gene expression level and chronological age across samples. Each dot represents one gene, with the Y-axis displaying the correlation. For each tissue, genes were categorized into two groups based on whether the Pearson correlation between HISNUC-X\u2013predicted and observed expression exceeded 0.4. Genes with correlation >0.4 are color-coded by tissue type, while those with correlation \u22640.4 are shown in gray. We conducted the Mann\u2013Whitney U test (one-sided) to compare the distributions of correlations between these two groups. The results demonstrated a significant difference in the age-correlation distributions between high- and low-prediction-accuracy genes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24000,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "For each prediction target, we assessed the correlation between predicted and observed gene expression levels using the held-out test set. Fig. 4C highlights the Pearson correlation for each gene in each tissue, focusing on predictable genes\u2014those with significant correlations across three independent experiments. Significance was determined using Fisher\u2019s method followed by the Holm\u2013\u0160id\u00e1k (HS) method to control for multiple testing (adjusted P-value < 0.05; Dataset S9). Median absolute error (MAE) is also reported for each gene prediction. Notably, genes from skin tissues were less predictable compared to those from esophagus mucosa, heart, lung, tibial nerve, and testis tissues. Within the same tissue, certain genes demonstrated predictable expression, while others did not. To gain deeper insights into this variability, we investigated why some tissue-specific genes were more predictable than others in the same tissue. In the four somatic tissues with the highest gene-level predictability, esophagus mucosa, heart atrial appendage, heart left ventricle, and lung, we observed both strong prediction correlations and a large number of predictable genes. Among these four tissues, genes with a Pearson correlation >0.4 between HISNUC-X\u2013predicted and observed expression generally showed significantly stronger associations with chronological age compared to those with correlations \u22640.4 (Fig. 4D). To test whether gene expression predictability reflects an underlying association with age\u2014even when age is not used as an input\u2014we retrained the model shown in Fig. 4D without including the \u201cage\u201d variable in the metadata.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25656,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "HISNUC-AGE Model: Tissue-Specific Prediction of Chronological Age.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25723,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "We trained HISNUC-AGE models for 12 different tissues to predict chronological age, integrating compressed WSIs, interpretable nucleus features, and donor metadata as inputs. All models followed the network architecture in Fig. 1C, with slight variations in WSI tiling size and learning rate (details in Dataset S10).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26041,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The nucleus features were evaluated for their correlation with age (Fig. 5A). In particular, the features in lung, tibial nerve, sun-exposed skin, and testis were especially strongly correlated. Nucleus-to-cell area ratios showed a negative correlation with chronological age across most tissues. In contrast, the variability of nucleus circularity increased with age in most tissues, indicating greater heterogeneity in nucleus shape in older age, and nucleus eccentricity (Q1, Q2, Q3, mean, mode) showed a positive correlation with age in most tissues. The latter finding is supported by Iijima et al., who reported that increased nucleus eccentricity with age is associated with decreased \u03b1-Klotho expression.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26758,
+                        "infons": {
+                            "file": "pnas.2423469122fig05.jpg",
+                            "id": "fig05",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Chronological age prediction for tibial nerve using the HISNUC-AGE model. (A) Pearson correlation between chronological age and QuPath-extracted nucleus features for each GTEx tissue dataset. (B). The scatter plot shows the predicted age and the actual chronological age for tibial nerve samples from a single prediction experiment. The correlation is 0.70 (P-value 2.06e-43). The MAE is 5.97 y between predicted and target values. (C) SHAP analysis highlights the pixel weights mapped back to the original image for two samples from different age groups, with positive SHAP pixels shown in red (contributing to older age predictions) and negative SHAP pixels shown in blue (contributing to younger age predictions). Arrows indicate the fiber regions. (C) (Top) presents two tiles from the WSI of the 20 to 29-y-old donor, while (C) (Bottom) shows two tiles from the 70 to 79-y-old donor. In the younger donor\u2019s tiles, myelinated fiber regions (highlighted in blue and indicated by black arrows) contribute to the younger age prediction, whereas in the older donor\u2019s tiles, regions associated with older age (shown in red) are more prominent. (D) Comparison of SHAP values for nucleus features and metadata between two samples from different age groups. Dots are colored by feature value, from red (high) to blue (low). The SHAP values on the X-axis indicate their impact on the model output. Only the top 5 features (ranked by feature importance based on these two samples) that contribute to the model are displayed, distinguishing the two samples from different age groups. TRVNTSR indicates whether the donor was ventilated for less than 24 h before the estimated procurement start time. TRDNISCH represents the total ischemic time for the donor. (E) Mean absolute SHAP values for metadata and nucleus features across the entire test set, ranked by feature importance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28635,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Fig. 5B shows the chronological age prediction results for the tibial nerve. We used SHapley Additive exPlanations (SHAP) values to assess the feature importance of compressed images (Fig. 5C), nucleus features, and metadata for age prediction (Fig. 5 D and E). For illustration, we present two representative examples from different age groups: a 20 to 29-y-old donor (GTEX-13CZU-1726) and a 70 to 79-y-old donor (GTEX-13OVH-0326) (Fig. 5 C and D). The SHAP values highlight how the myelinated fiber regions in the younger donor are important for the age prediction. Moreover, this finding is supported by previous studies showing that thicker myelin and larger fiber diameters are inversely correlated with aging in mice.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29359,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Furthermore, Fig. 5E explores the contributions of the top 5 nucleus features and top 5 metafeatures across the entire test set for the tibial nerve. Overall, nucleus features, such as the mode of nucleus circularity, the SD of eccentricity, and the nucleus-to-cell area ratio, were the most significant contributors to chronological age predictions. Using a similar strategy, we also analyzed image, nucleus, and metafeature contributions for sun-exposed skin, providing examples that demonstrate the model\u2019s interpretability (SI Appendix, Fig. S5).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29912,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Stepping back to overall performance, Fig. 6 displays the correlation between predicted and the actual chronological age from the test sets across all 12 tissues (SI Appendix, Fig. S6 and Datasets S10 and S11). The MAE and concordance index (c-index) were used to evaluate prediction accuracy (Dataset S11). Four tissues demonstrated particularly strong predictive performance: tibial artery, tibial nerve, sun-exposed skin, and testis. However, the chronological ages of the two heart tissues were less predictable, likely because the biological age of the heart tends to be consistently younger than its chronological age.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30537,
+                        "infons": {
+                            "file": "pnas.2423469122fig06.jpg",
+                            "id": "fig06",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Correlation between chronological age and tissue-specific age predicted by the HISNUC-AGE model. (A) Comparison of correlation results across tissues shows elastic net baseline model predictions in gray and HISNUC-AGE results colored according to each tissue. The error bars represent one SD above and below the mean, illustrating the spread of the data around the average from three independent prediction experiment replicates (see Datasets S11 and S13 for details). (B) Scatter plot of the predicted age vs. the actual chronological age for each tissue from a single prediction experiment, including the best-fit line. The scatter plot colored in gray depicts predictions from metadata using the elastic net baseline model as a control. The scatter plot colored by tissue displays predictions from the HISNUC-AGE models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31361,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "As a control, we employed an elastic net baseline model using only metadata as input (Datasets S12 and S13; details in Methods). Compared with the elastic net baseline model, the additional information from histological imaging improved age predictions across all tissues.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31634,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31645,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Computational histopathology workflows play a crucial role in analyzing large gigapixel WSIs. We leveraged the NIC and QuPath algorithms to integrate interpretable nucleus features with histological images in a deep-learning context. Our HISNUC models effectively preserve large-scale tissue morphology and spatial information while capturing fine local nuclear structures.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32019,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "We applied QuPath to analyze 10,209 histology WSIs from various tissues in the GTEx dataset, detecting tens of thousands of nuclei per WSI and deriving their quantitative features. As the most efficient software available for large-scale histological imaging analysis, QuPath facilitated cell detection, segmentation, and feature extraction, producing valuable quantitative data on cell and nuclear morphology as well as staining intensities. These extracted image features enhanced interpretability in imageQTL analysis, DE analysis, and HISNUC models. Unlike previous studies that relied on abstract features to identify imageQTLs, our approach directly indicates which aspects are potentially affected by SNPs and genes. Incorporating interpretable image features across multiple tissues enhances our understanding of the intricate relationships among genetics, epigenetic, and tissue morphology. Additionally, the nucleus features detected for each image in the dataset, along with imageQTLs and DE genes, serve as valuable resources for future analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33078,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Histological images at different scales emphasize distinct levels of morphological detail. In our study, we used GTEx WSIs scanned at 20\u00d7 magnification (0.4942 \u03bcm/pixel) without downsampling, providing the highest available resolution. At this scale, a typical nucleus spans approximately 10 to 20 pixels in diameter, and small regions (20 to 60 pixels) can capture subcellular or cellular structures, depending on tissue type. Larger tissue-level features, such as glandular organization, stromal composition, and vascular structures, emerge across broader regions spanning thousands of pixels (e.g., 4,096\u00d74,096). In our models, QuPath-extracted nucleus features from 20\u00d7 WSIs provide quantitative subcellular morphology, and ablation experiments confirm their critical importance\u2014removing nucleus features significantly reduces model performance. Furthermore, the NIC-giga framework compresses raw 128 \u00d7 128 RGB patches into compact 128-dimensional vectors using an autoencoder pretrained specifically on histopathology data to preserve high-level subcellular and cellular features. We then aggregate multiple 64 \u00d7 64 (or 32 \u00d7 32) compressed patches per WSI, effectively spanning raw image areas of up to 8,192 \u00d7 8,192 (or 4,096 \u00d7 4,096) pixels. By integrating multiple patches across each slide, the model learns diverse spatial contexts and captures tissue heterogeneity. This architecture enables the model to represent a broad morphological spectrum from nucleus shape and size to tissue-level architecture and spatial organization. Ultimately, our multimodal approach combines fine-grained image features, cell-level morphological measurements, and patient-level metadata, capturing both micro- and macrostructural cues relevant to biological aging and transcriptomic variation. These inputs are fused through a deep neural network that enables robust prediction while maintaining interpretability through nucleus-derived features.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35029,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "We recognize potential areas for enhancing our study. First, technical variations in histological image capture and processing may impact the detected features; for example, sample thickness and the slicing process may affect tissue shape and morphology. Comparing WSIs paired with bulk sequencing data to those paired with spatial transcriptomic data is akin to the distinction between bulk RNA sequencing and single-cell sequencing. While bulk methods are more cost-effective, they generally provide lower resolution. The nucleus image features extracted from each WSI may originate from various cell types. To mitigate these challenges, we employed statistical distributions to describe nucleus features within a WSI, converting raw feature data into structured inputs for integration with imaging and metadata in predictive modeling. In our imageQTL studies, we used the mode as a representative value to characterize the predominant image features within each WSI, illustrating how alternative alleles influence these nucleus features. Nevertheless, determining a more accurate and representative value for QuPath detection within each WSI remains an open question. By leveraging spatial transcriptomic data for training, we can partially address these issues, resulting in models that not only enhance prediction accuracy but also reduce the costs associated with spatial transcriptomics. For instance, a well-trained model can predict gene expression without the need for sequencing. This approach would significantly enhance the interpretation of image features extracted, establishing a vital connection with localized expression data.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36674,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36682,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Nucleus Feature Extraction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36710,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "QuPath v0.4.3 was used to extract nucleus features from GTEx WSIs. QuPath is publicly available (https://github.com/qupath/qupath/releases). Default settings were followed as outlined in the QuPath tutorial: https://qupath.readthedocs.io/en/stable/docs/tutorials/index.html. The image type was set to \u201cbrightfield H&E,\u201d and stain vectors were optimized. Subsequently, we ran a pixel classifier to identify relevant tissue areas. Cell and nucleus detection was performed using QuPath\u2019s cell detection tool. Finally, the extracted cell and nucleus detection measurements for each WSI resulted in a structured dataset for further analysis. We configured the pipeline for each tissue type to accommodate different tissue morphologies. This automated feature extraction was crucial for ensuring consistent and objective quantification of tissue characteristics across all slides.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37591,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Four key nucleus features were used in this study: 1) nucleus area, 2) nucleus circularity, 3) nucleus eccentricity, and 4) nucleus-to-cell area ratio. We excluded certain features, such as the nucleus perimeter and max caliper, due to their high correlation with nucleus area. Each WSI contained over 10,000 cells; therefore, we employed several parameters to characterize the distribution within each WSI. Outliers were filtered using a 1.5 interquartile range. We then applied kernel density estimation, partitioning the data into 500 bins, and selected the value corresponding to the highest density, representing the mode of the entire distribution. Additionally, we included the first quartile (Q1), second quartile (Q2), third quartile (Q3), mean (here we used a 90% trimmed mean), and SD to describe the distribution. These six representative values for each nucleus feature were then utilized in subsequent analyses, resulting in 24 nucleus features in total.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38560,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "ImageQTL Analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38579,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To identify associations between interpretable nucleus image features and genotype, we conducted an imageQTL analysis. For this analysis, we employed a genome-wide association study approach, using the general linear models implemented in PLINK v2.0. For each nucleus feature and GTEx tissue, a set of imageQTLs was calculated. The mode value of a given nucleus feature was used to represent each WSI, treating it as a continuous phenotype across donor samples. Gender, age, death Hardy (which represents the speed of death: 0 = ventilator case, 1 = violent and fast death, 2 = fast death from natural causes, 3 = intermediate death, and 4 = slow death), and 20 genotype principal components were included in the imageQTL analysis as covariates to account for population stratification. GTEx genotype data were obtained (file name: \u201cGTEx_Analysis_2017-06-05_v8_WholeGenomeSeq_838Indiv_Analysis_Freeze.SHAPEIT2_phased.MAF01.vcf.gz\u201d) and any SNP with a minor allele frequency smaller than 0.01 was excluded from the analysis. The number of individual samples for each tissue type is listed in SI Appendix, Table S1. A genome-wide significance threshold of P-value < 5e-8 was applied, and significant SNPs were annotated using Functional Mapping and Annotation of Genome-Wide Association Studies (FUMA) v1.5.2 (Dataset S3). We defined overlap between imageQTLs and GTEx eQTLs (Dataset S5) as any imageQTL that is either identical to a GTEx eQTL or in strong linkage disequilibrium with a GTEx eQTL SNP.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40083,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "DE Analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40096,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "DE genes were identified in each GTEx tissue and for each type of nucleus feature. The mode value of each nucleus feature was used to represent each WSI. GTEx individuals were categorized into nonoverlapping binary groups based on their nucleus features for each tissue and feature type. For example, in thyroid tissue, WSIs were categorized into \u201clarge\u201d or \u201csmall\u201d nucleus area groups based on the mode of the nucleus area values for each WSI. DE genes were calculated between large and small nucleus area samples in thyroid tissue. This approach was similarly applied to calculate DE genes for other tissues and nucleus features, including nucleus area, circularity, eccentricity, and the nucleus-to-cell area ratio.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40823,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We utilized raw bulk gene expression profiles from GTEx (GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz) for the DE analysis. Filtering was performed using counts per million (CPM) normalization to remove lowly expressed genes. Genes were excluded if their CPM-normalized expression was >0.5 in less than 30% of the samples, or if their total raw counts across all individuals were <500.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41224,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "DE analysis for each tissue and nucleus feature was conducted using DESeq2\u2019s standard pipeline with the likelihood ratio test. The analysis included age, gender, race, the death Hardy scale, ischemia time (TRDNISCH), log-transformed unique molecular identifiers as covariates. Contrasts were made between the large and small groups, and multiple testing corrections (Benjamini\u2013Hochberg [BH]) were applied. Genes with an adjusted P-value < 0.01 and abs(log2fold) greater than 0.1 were considered significantly differentially expressed between the contrast conditions. To focus on stronger effects, a more stringent threshold of abs(log2fold) > 0.5 may be applied.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41891,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "EWAS for Lung Nucleus Features.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41923,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Within the GTEx dataset, several tissues have methylation data available, with lung tissue having the largest dataset, consisting of 190 samples across 206,802 CpG sites. The remaining 11 GTEx tissues were not analyzed due to their limited size in methylation data (e.g., muscle; N = 42). We first divided the samples into binary groups (as described in the DE analysis). EWAS analysis was performed using the ChAMP package. We calculated the association between methylation values at each CpG site and binary nucleus features. Significant methylation sites were identified using the champ.DMP function, while significant regions were determined using the champ.DMR function. Additionally, we performed GSEA using the internal champ.GSEA function. Multiple hypothesis correction was applied using ChAMP. CpG sites or CpG pathways with an adjusted P-value < 0.05 were considered significant and included.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42827,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "HISNUC-X and HISNUC-AGE\u2014Deep-Learning Models for Gene Expression and Chronological Age Prediction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42928,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "NIC image compression.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42951,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The NIC framework employs unsupervised learning techniques to compress images into smaller, more manageable forms with minimal information loss. NIC compression can utilize one of three unsupervised learning strategies: autoencoders, contrastive learning, or BiGANs. In our study, we selected BiGANs for autoencoding due to their superior performance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43303,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Gigapixel WSIs ([X, Y, 3]) were divided into adjacent tiles (128 \u00d7 128 \u00d7 3 pixels per tile), and each tile was compressed into a one-dimensional 1D vector (1 \u00d7 1 \u00d7 128) using the NIC algorithm. This process transformed raw pixel data into dense latent space encodings and captured the essential features and patterns while discarding noise and irrelevant information. These 1D vectors were then stacked according to their original spatial arrangement within the WSI, ensuring that spatial relationships between tiles were preserved in the compressed representation. Consequently, the dimensionality of the original RGB image was effectively reduced to [(X/128), (Y/128),128].",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43983,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Preparing compressed WSIs for input to HISNUC.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44030,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Following NIC compression, we obtained compressed WSIs. First, we used a tissue-background segmentation algorithm to effectively remove the background by setting the background pixels to zero. This step was followed by the elimination of entire rows or columns composed solely of empty pixels and focusing the analysis on regions of interest within the WSI. The WSIs were tiled using a sliding window approach, generating 32 \u00d7 32 \u00d7 128 (or 64 \u00d7 64 \u00d7 128) pixel tiles with a 16-pixel (or 32-pixel) step, both column-wise and row-wise. Tiles exceeding a threshold of 450 NaN values (or 1,800 NaN) were discarded to maintain data quality. Eight tiles with high tissue occupancy were selected as input. The dataset creation process combined image data, nucleus features, and metadata, followed by shuffling for randomness, and splitting into training (53%), validation (13%), and testing (33%) sets to rigorously evaluate the model\u2019s performance. We ensured that 33% of the nontraining data was used for testing, allowing for the assessment of model generalization.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45098,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "HISNUC architecture for gene expression and age prediction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45158,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Tiles of compressed WSIs were used as image input for the CNN, followed by fully connected layers. The first convolutional layer had 64 filters and a kernel size of 3 \u00d7 3. These layers were followed by an average pooling layer to reduce the feature map size. A dropout rate of 0.2 was applied thereafter to mitigate overfitting. The architecture included two additional sets of convolutional layers, with 128 and 256 filters, respectively, each followed by average pooling and dropout layers. After the convolutional and pooling layers, the network transitioned to a flattening layer. This was followed by multiple dense layers employing ReLU activation. Metadata and nucleus features were processed through dedicated SNNs. Each encoder consisted of fully connected layers with Scaled Exponential Linear Unit (SELU) activations and AlphaDropout regularization, enabling stable representation learning. The modality-specific embeddings derived from image patches, nucleus features, and metadata information were integrated using a tensor fusion framework, which enables outer product\u2013based interactions and supports effective cross-modal learning. The resulting fused representation was passed through fully connected layers to perform either gene expression or chronological age prediction, depending on the target task.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46482,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For the gene expression prediction model, the output layer comprised 100 units, matching the number of genes being predicted, with a linear activation function to output continuous gene expression levels. In contrast, the chronological age prediction model featured a single-unit output layer with a linear activation function. The model was trained using the SGD optimizer, minimizing mean squared error (MSE), with callbacks for model checkpointing and early stopping to mitigate overfitting. Model evaluation and saving procedures were executed posttraining, ensuring the preservation of models with the best validation loss.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47111,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We also investigated the potential for multi-instance learning (MIL) [a common WSI embedding technique ] to improve WSI encoding with HISNUC. We employed an attention-based MIL architecture to aggregate CNN-compressed features from all available patches per WSI (up to a maximum of 30). More specifically, each patch was encoded using the CNN framework described above, and the resulting features were aggregated via an attention-based pooling layer to yield a 128-dimensional slide-level representation. Nucleus features and metadata were encoded separately using the SNN encoders. The modality-specific embeddings and the MIL-aggregated image features were combined via tensor fusion. The resulting fused representation was then passed through fully connected layers to predict the final outcome. The MIL-based HISNUC variant resulted in slightly improved gene expression predictions in a subset of tissues (tibial artery, muscle) compared to the original HISNUC model (SI Appendix, Fig. S7).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48106,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Training and evaluating the HISNUC-X model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48150,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Tissue-specific genes were calculated using the Tau score and defined as those with a Tau score greater than 0.85 and gene expression values exceeding 1. The 100 tissue-specific genes with the highest expression levels were selected. Log-transformed TPM (transcripts per kilobase million) normalized gene expression data from bulk RNA sequencing were utilized as prediction targets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48533,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The gene expression prediction model was trained for each tissue type using varying learning rates. The input tile sizes were typically 32 \u00d7 32 \u00d7 128 for most tissues, though some tissues utilized a tile size of 64 \u00d7 64 \u00d7 128. The nucleus feature inputs also varied by tissue type (Dataset S8). The metadata input for the HISNUC-X model included height, weight, BMI, age, TRDNISCH, drinking index, smoking index (calculated based on frequency and duration), TRVNTSR (indicating whether the donor was ventilated for less than 24 h before the estimated procurement start time), gender, race, death Hardy category (DTHHRDY), RNA integrity number (SMRIN), and autolysis score (SMATSSCR). Categorical variables were transformed using one-hot encoding, while numerical variables were normalized. All expanded metadata were protected data and accessible through dbGAP. For the experiment depicted in Fig. 4D, the model was retrained with the \u201cage\u201d variable removed from the metadata input to eliminate any potential impact on the gene expression prediction results. Training and validation MSE plots were used to track model convergence. Log-scaled loss plots further highlighted subtle changes in training dynamics (SI Appendix, Fig. S8). The gene expression level for a sample was estimated by averaging the predictions obtained from all tiles of the WSI for that donor. Evaluation involved comparing predicted and observed gene expression levels from the test set using Pearson correlation coefficients. Three independent experiments were conducted, each with different training, validation, and test sets. The correlation coefficients and P-values were combined using Fisher\u2019s z-transformation and Fisher\u2019s method, with the Holm\u2013\u0160id\u00e1k method applied to control for multiple testing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50329,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Training and evaluating the HISNUC-AGE model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50375,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The HISNUC-AGE prediction models were trained by tissue using different learning rates (Dataset S10). The input tile sizes were typically 32 \u00d7 32 \u00d7 128, though some tissues utilized a tile size of 64 \u00d7 64 \u00d7 128. The nucleus feature inputs varied by tissue type. Only nucleus features with age correlations exceeding Pearson\u2019s r = 0.15 were used as input (Dataset S10). The metadata input for the HISNUC-AGE model included height, weight, BMI, TRDNISCH, drinking index, smoking index, TRVNTSR, gender, race, and DTHHRDY. The \u201cage\u201d variable was removed from the metadata input for all HISNUC-AGE models. The prediction target utilized in the training was precise chronological age rather than categorized into age buckets, which was also protected data and available for download from dbGaP. Training and validation MSE plots were used to track model convergence. Log-scaled loss plots further highlighted subtle changes in training dynamics (SI Appendix, Fig. S8).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51349,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For chronological age prediction, the donor\u2019s age was estimated by averaging predictions across all tiles from the WSI of the donor. Pearson correlation and c-index were calculated between predictions and targets. MAE was used as an additional metric to assess the performance of the HISNUC-AGE model (Dataset S11). The error bars in Fig. 6A represent one SD above and below the mean of the correlation, showing the spread of the data around the average from three independent prediction experiment replicates.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51862,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "SHAP analysis for interpreting feature importance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51913,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We leveraged SHAP to interpret the predictions from our network. SHAP values provided an understanding of image, metadata, and nucleus feature contributions, highlighting which parts of the input are most influential in determining the output. Using GradientExplainer, we generated explanations for a subset of the test images. This method identified the pixels and patterns within the images that significantly influenced the model\u2019s predictions. By plotting these SHAP values, we displayed the impact of each pixel on the model\u2019s output, emphasizing the importance of different regions in the images for predicting the target variable. Additionally, we visualized the contributions of nucleus and metadata features using the SHAP summary and SHAP bar plot functions. This interpretability is crucial for validating the model\u2019s decision-making process and building trust in its predictions. Moreover, it provides potential pathways for further refining our model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52884,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Predicting chronological age using metadata with elastic net baseline models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52962,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To provide a control basis of comparison for our study, we employed elastic net baseline models to make chronological age predictions from datasets consisting of only the metadata with no histological image information, again followed by shuffling for randomness and splitting into training, validation, and testing sets. The metadata input for the elastic net baseline model included height, weight, BMI, total ischemic time for the donor, drinking index, smoking index, TRVNTSR, gender, race, and DTHHRDY. The training, validation, and testing samples used were identical to those employed in the HISNUC-AGE model, ensuring comparability of the results. Training and testing with several different alpha and L1 ratio values for the elastic net baseline model revealed 0.5 and 0.0226 to be the optimal values, respectively (Dataset S12). The Pearson correlation was computed between the predicted values and the target chronological age (Dataset S13).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53915,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Comparative analysis with multimodal baselines.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53963,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "A ResNet50 model pretrained on ImageNet was used as an encoder to convert each 224 \u00d7 224 image patch into a 1,024-dimensional feature vector. Specifically, features were extracted after the third residual block (conv3_block4_out) using spatial average pooling, followed by a dense layer with ReLU activation. These vectors served as high-level representations of morphological patterns within tissue regions. We used an attention-based MIL architecture to aggregate thousands of instance-level patches for each WSI. To integrate different modalities, namely, nucleus features and metadata, with encoded WSI patches, multimodal baselines were constructed using a similar architecture described in the HISNUC-X and HISNUC-AGE sections. The overall architecture incorporates SNN encoders for each modality and employs tensor fusion for multimodal integration. These multimodal baselines were applied to the tibial nerve, heart atrial appendage, and testis for both age and gene expression prediction tasks. However, they did not outperform the HISNUC models (SI Appendix, Fig. S9).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55043,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supplementary Material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55066,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": "This article is a PNAS Direct Submission.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55108,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Data, Materials, and Software Availability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55151,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Code for HISNUC, along with the trained HISNUC-X and HISNUC-AGE models, is available at https://github.com/gersteinlab/HISNUC under the MIT license. Key resources, including nucleus features extracted with QuPath, imageQTLs, DE genes, and EWAS are available through DOI: 10.5061/dryad.8gtht771x. GTEx-v8 bulk RNA expression and histological data are publicly available through open access at https://www.gtexportal.org/home/datasets. Genotype data and expanded subject metadata are protected and accessible through dbGAP accession number phs000424.v8.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55703,
+                        "infons": {
+                            "fpage": "80",
+                            "lpage": "89",
+                            "pub-id_pmid": "30240647",
+                            "section_type": "REF",
+                            "source": "iScience",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2018"
+                        },
+                        "text": "Histopathological image QTL discovery of immune infiltration variants",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55773,
+                        "infons": {
+                            "fpage": "1609",
+                            "pub-id_pmid": "33707455",
+                            "section_type": "REF",
+                            "source": "Nat. Commun.",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2021"
+                        },
+                        "text": "Joint analysis of expression levels and histological images identifies genes associated with tissue morphology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55884,
+                        "infons": {
+                            "fpage": "579",
+                            "pub-id_pmid": "31022926",
+                            "section_type": "REF",
+                            "source": "Cancers",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2019"
+                        },
+                        "text": "Histopathological imaging\u2212environment interactions in cancer modeling",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55956,
+                        "infons": {
+                            "fpage": "365",
+                            "lpage": "366",
+                            "pub-id_pmid": "37118075",
+                            "section_type": "REF",
+                            "source": "Nat. Aging",
+                            "type": "ref",
+                            "volume": "2",
+                            "year": "2022"
+                        },
+                        "text": "The importance of aging in cancer research",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55999,
+                        "infons": {
+                            "fpage": "104044",
+                            "pub-id_pmid": "33049477",
+                            "section_type": "REF",
+                            "source": "Comput. Biol. Med.",
+                            "type": "ref",
+                            "volume": "126",
+                            "year": "2020"
+                        },
+                        "text": "Cellular morphological features are predictive markers of cancer cell state",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56075,
+                        "infons": {
+                            "fpage": "44",
+                            "pub-id_pmid": "38539231",
+                            "section_type": "REF",
+                            "source": "Genome Med.",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2024"
+                        },
+                        "text": "Deep learning in cancer genomics and histopathology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56127,
+                        "infons": {
+                            "section_type": "REF",
+                            "source": "Comparative Oncology",
+                            "type": "ref",
+                            "year": "2010"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56128,
+                        "infons": {
+                            "elocation-id": "e0242858",
+                            "pub-id_pmid": "33237966",
+                            "section_type": "REF",
+                            "source": "PLoS One",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2020"
+                        },
+                        "text": "Identifying transcriptomic correlates of histology using deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56199,
+                        "infons": {
+                            "fpage": "1550",
+                            "lpage": "1557",
+                            "pub-id_pmid": "36344834",
+                            "section_type": "REF",
+                            "source": "Nat. Methods",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2022"
+                        },
+                        "text": "High-dimensional gene expression and morphology profiles of cells across 28, 000 genetic and chemical perturbations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56315,
+                        "infons": {
+                            "fpage": "5803",
+                            "pub-id_pmid": "36192477",
+                            "section_type": "REF",
+                            "source": "Nat. Commun.",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2022"
+                        },
+                        "text": "Tissue-specific impacts of aging and genetics on gene expression patterns in humans",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56399,
+                        "infons": {
+                            "fpage": "797",
+                            "lpage": "804",
+                            "pub-id_pmid": "24322030",
+                            "section_type": "REF",
+                            "source": "Rom. J. Morphol. Embryol.",
+                            "type": "ref",
+                            "volume": "54",
+                            "year": "2013"
+                        },
+                        "text": "The process of ageing reflected by histological changes in the skin",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56467,
+                        "infons": {
+                            "fpage": "649",
+                            "lpage": "660",
+                            "pub-id_pmid": "32418702",
+                            "section_type": "REF",
+                            "source": "Rev. Neurol. (Paris)",
+                            "type": "ref",
+                            "volume": "176",
+                            "year": "2020"
+                        },
+                        "text": "Normal ageing of the brain: Histological and biological aspects",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56531,
+                        "infons": {
+                            "fpage": "593",
+                            "lpage": "610",
+                            "pub-id_pmid": "26373265",
+                            "section_type": "REF",
+                            "source": "Nat. Rev. Mol. Cell Biol.",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2015"
+                        },
+                        "text": "Epigenetic regulation of ageing: Linking environmental inputs to genomic stability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56614,
+                        "infons": {
+                            "fpage": "22",
+                            "pub-id_pmid": "30555601",
+                            "section_type": "REF",
+                            "source": "Inflamm. Regen.",
+                            "type": "ref",
+                            "volume": "38",
+                            "year": "2018"
+                        },
+                        "text": "Molecular mechanisms regulating lifespan and environmental stress responses",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56690,
+                        "infons": {
+                            "fpage": "3877",
+                            "pub-id_pmid": "32747659",
+                            "section_type": "REF",
+                            "source": "Nat. Commun.",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2020"
+                        },
+                        "text": "A deep learning model to predict RNA-Seq expression of tumours from whole slide images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56777,
+                        "infons": {
+                            "fpage": "3459",
+                            "pub-id_pmid": "37311751",
+                            "section_type": "REF",
+                            "source": "Nat. Commun.",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2023"
+                        },
+                        "text": "Pacpaint: A histology-based deep learning model uncovers the extensive intratumor molecular heterogeneity of pancreatic adenocarcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56912,
+                        "infons": {
+                            "fpage": "800",
+                            "lpage": "810",
+                            "pub-id_pmid": "35122049",
+                            "section_type": "REF",
+                            "source": "Nat. Cancer",
+                            "type": "ref",
+                            "volume": "1",
+                            "year": "2020"
+                        },
+                        "text": "Pan-cancer computational histopathology reveals mutations, tumor composition and prognosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57003,
+                        "infons": {
+                            "fpage": "122807",
+                            "section_type": "REF",
+                            "source": "Expert Syst. Appl.",
+                            "type": "ref",
+                            "volume": "242",
+                            "year": "2024"
+                        },
+                        "text": "A comparison review of transfer learning and self-supervised learning: Definitions, applications, advantages and limitations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57128,
+                        "infons": {
+                            "fpage": "567",
+                            "lpage": "578",
+                            "pub-id_pmid": "31442971",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Pattern Anal. Mach. Intell.",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "2021"
+                        },
+                        "text": "Neural image compression for gigapixel histopathology image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57197,
+                        "infons": {
+                            "fpage": "16878",
+                            "pub-id_pmid": "29203879",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2017"
+                        },
+                        "text": "QuPath: Open source software for digital pathology image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57263,
+                        "infons": {
+                            "fpage": "580",
+                            "lpage": "585",
+                            "pub-id_pmid": "23715323",
+                            "section_type": "REF",
+                            "source": "Nat. Genet.",
+                            "type": "ref",
+                            "volume": "45",
+                            "year": "2013"
+                        },
+                        "text": "The Genotype-Tissue Expression (GTEx) project",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57309,
+                        "infons": {
+                            "fpage": "972",
+                            "lpage": "981",
+                            "section_type": "REF",
+                            "source": "Self-Normalizing Neural Networks",
+                            "type": "ref",
+                            "year": "2017"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57310,
+                        "infons": {
+                            "fpage": "865",
+                            "lpage": "878.e6",
+                            "pub-id_pmid": "35944502",
+                            "section_type": "REF",
+                            "source": "Cancer Cell",
+                            "type": "ref",
+                            "volume": "40",
+                            "year": "2022"
+                        },
+                        "text": "Pan-cancer integrative histology-genomic analysis via multimodal deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57389,
+                        "infons": {
+                            "fpage": "626",
+                            "lpage": "635",
+                            "pub-id_doi": "10.1007/978-3-031-16443-9_60",
+                            "section_type": "REF",
+                            "series": "Lecture Notes in Computer Science",
+                            "source": "Medical Image Computing and Computer Assisted Intervention\u2014MICCAI 2022",
+                            "type": "ref",
+                            "volume": "vol. 13435",
+                            "year": "2022"
+                        },
+                        "text": "Survival prediction of brain cancer with incomplete radiology, pathology, genomic, and demographic data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57493,
+                        "infons": {
+                            "fpage": "1103",
+                            "lpage": "1114",
+                            "section_type": "REF",
+                            "source": "Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing",
+                            "type": "ref",
+                            "year": "2017"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57494,
+                        "infons": {
+                            "fpage": "10374",
+                            "lpage": "10379",
+                            "pub-id_pmid": "11504921",
+                            "section_type": "REF",
+                            "source": "Proc. Natl. Acad. Sci. U.S.A.",
+                            "type": "ref",
+                            "volume": "98",
+                            "year": "2001"
+                        },
+                        "text": "FEZ1/LZTS1 gene at 8p22 suppresses cancer cell growth and regulates mitosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57570,
+                        "infons": {
+                            "fpage": "293",
+                            "pub-id_pmid": "26714646",
+                            "section_type": "REF",
+                            "source": "Genome Biol.",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2015"
+                        },
+                        "text": "KIAA0556 is a novel ciliary basal body component mutated in Joubert syndrome",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57647,
+                        "infons": {
+                            "fpage": "99",
+                            "lpage": "103",
+                            "pub-id_pmid": "28459430",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "547",
+                            "year": "2017"
+                        },
+                        "text": "Chemotherapy drugs induce pyroptosis through caspase-3 cleavage of a gasdermin",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57726,
+                        "infons": {
+                            "fpage": "153",
+                            "lpage": "158",
+                            "pub-id_pmid": "27383986",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "535",
+                            "year": "2016"
+                        },
+                        "text": "Inflammasome-activated gasdermin D causes pyroptosis by forming membrane pores",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57805,
+                        "infons": {
+                            "fpage": "16381",
+                            "pub-id_pmid": "31705037",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2019"
+                        },
+                        "text": "Correlation between nuclear morphology and adipogenic differentiation: Application of a combined experimental and computational modeling approach",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57951,
+                        "infons": {
+                            "fpage": "19017",
+                            "lpage": "19022",
+                            "pub-id_pmid": "19850871",
+                            "section_type": "REF",
+                            "source": "Proc. Natl. Acad. Sci. U.S.A.",
+                            "type": "ref",
+                            "volume": "106",
+                            "year": "2009"
+                        },
+                        "text": "A perinuclear actin cap regulates nuclear shape",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57999,
+                        "infons": {
+                            "fpage": "403",
+                            "lpage": "414",
+                            "pub-id_pmid": "25915839",
+                            "section_type": "REF",
+                            "source": "Oncogene",
+                            "type": "ref",
+                            "volume": "35",
+                            "year": "2016"
+                        },
+                        "text": "The oncogene ERG: A key factor in prostate cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58049,
+                        "infons": {
+                            "fpage": "2105",
+                            "lpage": "2110",
+                            "pub-id_pmid": "18245377",
+                            "section_type": "REF",
+                            "source": "Proc. Natl. Acad. Sci. U.S.A.",
+                            "type": "ref",
+                            "volume": "105",
+                            "year": "2008"
+                        },
+                        "text": "A causal role for ERG in neoplastic transformation of prostate epithelium",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58123,
+                        "infons": {
+                            "fpage": "2891",
+                            "lpage": "2902",
+                            "pub-id_pmid": "15800069",
+                            "section_type": "REF",
+                            "source": "Mol. Biol. Cell",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2005"
+                        },
+                        "text": "Clues to CD2-associated protein involvement in cytokinesis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58182,
+                        "infons": {
+                            "fpage": "137",
+                            "lpage": "146",
+                            "pub-id_pmid": "24403109",
+                            "section_type": "REF",
+                            "source": "J. Biochem. (Tokyo)",
+                            "type": "ref",
+                            "volume": "155",
+                            "year": "2014"
+                        },
+                        "text": "Multifaceted roles of Furry proteins in invertebrates and vertebrates",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58252,
+                        "infons": {
+                            "fpage": "1664",
+                            "lpage": "1670",
+                            "pub-id_pmid": "29019975",
+                            "section_type": "REF",
+                            "source": "Nat. Genet.",
+                            "type": "ref",
+                            "volume": "49",
+                            "year": "2017"
+                        },
+                        "text": "Enhancing GTEx by bridging the gaps between genotype, gene expression, and disease",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58335,
+                        "infons": {
+                            "fpage": "112",
+                            "lpage": "122",
+                            "pub-id_pmid": "36510025",
+                            "section_type": "REF",
+                            "source": "Nat. Genet.",
+                            "type": "ref",
+                            "volume": "55",
+                            "year": "2023"
+                        },
+                        "text": "DNA methylation QTL mapping across diverse human tissues provides molecular links between genetic variation and complex traits",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58462,
+                        "infons": {
+                            "fpage": "3313",
+                            "lpage": "3341",
+                            "pub-id_pmid": "33611312",
+                            "section_type": "REF",
+                            "source": "Aging",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2021"
+                        },
+                        "text": "Ageing transcriptome meta-analysis reveals similarities and differences between key mammalian tissues",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58564,
+                        "infons": {
+                            "fpage": "339",
+                            "lpage": "345",
+                            "section_type": "REF",
+                            "source": "Biom. J.",
+                            "type": "ref",
+                            "volume": "33",
+                            "year": "1991"
+                        },
+                        "text": "On fisher\u2019s method of combining p-values",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58607,
+                        "infons": {
+                            "fpage": "101264",
+                            "pub-id_pmid": "33540043",
+                            "section_type": "REF",
+                            "source": "Ageing Res. Rev.",
+                            "type": "ref",
+                            "volume": "67",
+                            "year": "2021"
+                        },
+                        "text": "Deterioration of nuclear morphology and architecture: A hallmark of senescence and aging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58696,
+                        "infons": {
+                            "fpage": "18",
+                            "pub-id_pmid": "36627269",
+                            "section_type": "REF",
+                            "source": "Nat. Commun.",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2023"
+                        },
+                        "text": "Age-related matrix stiffening epigenetically regulates \u03b1-Klotho expression and compromises chondrocyte integrity",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58813,
+                        "infons": {
+                            "fpage": "4768",
+                            "lpage": "4777",
+                            "section_type": "REF",
+                            "source": "In Proceedings of the 31st International Conference on Neural Information Processing Systems",
+                            "type": "ref",
+                            "year": "2017"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58814,
+                        "infons": {
+                            "fpage": "1101",
+                            "lpage": "1111",
+                            "pub-id_pmid": "32052433",
+                            "section_type": "REF",
+                            "source": "J. Anat.",
+                            "type": "ref",
+                            "volume": "236",
+                            "year": "2020"
+                        },
+                        "text": "Different patterns in age-related morphometric alteration of myelinated fibers and capillaries of the tibial nerve: A longitudinal study in normal rats",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58966,
+                        "infons": {
+                            "fpage": "10752",
+                            "pub-id_pmid": "32612244",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2020"
+                        },
+                        "text": "The biological age of the heart is consistently younger than chronological age",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59045,
+                        "infons": {
+                            "pub-id_doi": "10.48550/arXiv.2411.07660",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "HMIL: Hierarchical multi-instance learning for fine-grained whole slide image classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59138,
+                        "infons": {
+                            "fpage": "103124",
+                            "pub-id_pmid": "38428271",
+                            "section_type": "REF",
+                            "source": "Med. Image Anal.",
+                            "type": "ref",
+                            "volume": "94",
+                            "year": "2024"
+                        },
+                        "text": "Cross-scale multi-instance learning for pathological image diagnosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59207,
+                        "infons": {
+                            "fpage": "16123",
+                            "lpage": "16134",
+                            "section_type": "REF",
+                            "source": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+                            "type": "ref",
+                            "year": "2022"
+                        },
+                        "text": "\u201cScaling vision transformers to gigapixel images via hierarchical self-supervised learning\u201d",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59303,
+                        "infons": {
+                            "fpage": "7",
+                            "pub-id_pmid": "25722852",
+                            "section_type": "REF",
+                            "source": "Gigascience",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2015"
+                        },
+                        "text": "Second-generation PLINK: Rising to the challenge of larger and richer datasets",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59382,
+                        "infons": {
+                            "fpage": "1826",
+                            "pub-id_pmid": "29184056",
+                            "section_type": "REF",
+                            "source": "Nat. Commun.",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2017"
+                        },
+                        "text": "Functional mapping and annotation of genetic associations with FUMA",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59450,
+                        "infons": {
+                            "fpage": "550",
+                            "pub-id_pmid": "25516281",
+                            "section_type": "REF",
+                            "source": "Genome Biol.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2014"
+                        },
+                        "text": "Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59530,
+                        "infons": {
+                            "fpage": "3982",
+                            "lpage": "3984",
+                            "pub-id_pmid": "28961746",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "33",
+                            "year": "2017"
+                        },
+                        "text": "ChAMP: Updated methylation analysis pipeline for Illumina BeadChips",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59598,
+                        "infons": {
+                            "fpage": "196",
+                            "lpage": "212",
+                            "section_type": "REF",
+                            "series": "Lecture Notes in Computer Science",
+                            "source": "Computer Vision\u2014ECCV 2024",
+                            "type": "ref",
+                            "volume": "vol. 15069",
+                            "year": "2025"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59599,
+                        "infons": {
+                            "pub-id_doi": "10.48550/ARXIV.1802.04712",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2018"
+                        },
+                        "text": "Attention-based deep multiple instance learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59647,
+                        "infons": {
+                            "fpage": "770",
+                            "lpage": "778",
+                            "section_type": "REF",
+                            "source": "2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+                            "type": "ref",
+                            "year": "2016"
+                        },
+                        "text": "Deep residual learning for image recognition",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59692,
+                        "infons": {
+                            "fpage": "248",
+                            "lpage": "255",
+                            "section_type": "REF",
+                            "source": "2009 IEEE Conference on Computer Vision and Pattern Recognition",
+                            "type": "ref",
+                            "year": "2009"
+                        },
+                        "text": "ImageNet: A large-scale hierarchical image database",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59744,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": ", HISNUC. GitHub. https://github.com/gersteinlab/HISNUC. Deposited 26 August 2025.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59827,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": ", Nucleus feature profiles from GTEx histological images across 12 tissues. Dryad. https://datadryad.org/dataset/doi:10.5061/dryad.8gtht771x. Deposited 16 August 2025.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59995,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": ". https://www.gtexportal.org/home/datasets. Accessed 1 October 2022.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60064,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": ". https://dbgap.ncbi.nlm.nih.gov/beta/study/phs000424.v8.p2/. Accessed 1 October 2022.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60151,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supporting Information",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

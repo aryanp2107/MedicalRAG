@@ -1,0 +1,878 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260505",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13135508",
+                "infons": {
+                    "license": "CC BY-NC-ND"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1038/s41598-026-49861-w",
+                            "article-id_pmc": "PMC13135508",
+                            "article-id_pmid": "42069740",
+                            "article-id_publisher-id": "49861",
+                            "elocation-id": "14037",
+                            "kwd": "Medical imaging Imaging",
+                            "license": "Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article\u2019s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article\u2019s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.",
+                            "name_0": "surname:Kaplun;given-names:Dmitrii",
+                            "name_1": "surname:Graf;given-names:Markus",
+                            "name_2": "surname:Wang;given-names:Haifeng",
+                            "section_type": "TITLE",
+                            "title": "Subject terms",
+                            "type": "front",
+                            "volume": "16",
+                            "year": "2026"
+                        },
+                        "text": "From intelligent models to clinical tools: the evolving landscape of AI in medical imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 91,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Integration of Artificial Intelligence (AI), particularly deep learning, into medical imaging represents a profound shift in diagnostic medicine, moving from purely descriptive analysis to advanced predictive and prescriptive analytics. This Collection explores the rapid advancement of AI-driven tools in their specific fields such as oncology, cardiology, ophthalmology and so on, highlighting their potential to improve diagnostic accuracy, workflow efficiency, and personalized treatment planning. However, significant challenges remain, including the heterogeneity of medical image data, the \u201cblack box\u201d nature of some intelligent models, and the critical hurdles of clinical integration and validation. The research presented here addresses these frontiers, showcasing innovations in algorithm development, explainable AI, and translational application. This Editorial synthesizes the contributions and outlines the essential collaborative pathway\u2014uniting computer scientists, clinicians, and regulatory bodies\u2014required to translate algorithmic promise into robust, trustworthy, and equitable clinical tools that genuinely improve patient care.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1250,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1263,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The advent of Artificial Intelligence (AI) in medical imaging is not just an incremental improvement but a foundational transformation. Using deep learning, these systems promise to move beyond traditional manual interpretation of images\u2014a task subject to human variability and fatigue\u2014towards a future of automated, quantitative, and predictive analytics. The impetus for this shift is clear: an ever-growing volume of imaging data, increasing computational power, and the urgent need for tools that can support clinical decision-making in the face of complex disease patterns. This Collection, \"Artificial intelligence and medical imaging\u201d (https://www.nature.com/collections/bjeiihhgfa), captures a snapshot of this dynamic field at a pivotal moment, presenting research that both demonstrates the remarkable potential of these technologies and thoughtfully engages with the substantial obstacles that lie between a well-trained intelligent algorithm and its effective use at the patient\u2019s bedside.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2273,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "The promise: enhancing the diagnostic pipeline",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2320,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The core promise of AI in medical imaging lies in its ability to enhance human expertise. The papers in this Collection exemplify this in various anatomical domains and imaging modalities. For example, the work on intelligent retinal disease detection using deep learning illustrates how algorithms can detect pathologies with high sensitivity, offering a scalable solution for early intervention in populations where access to specialist ophthalmologists is limited . Similarly, research into a deep learning framework for automated frame selection in kidney ultrasound tackles a fundamental, yet time-consuming, pre-analytic step . By ensuring that only diagnostically optimal images are forwarded for interpretation, such tools can streamline workflow, reduce sonographer variability, and allow clinicians to focus their cognitive efforts on diagnosis rather than image curation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3203,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Perhaps most significantly, AI enables a shift from detection to characterization and prediction. The contribution to the diagnosis of NextGen lung disease with explainable artificial intelligence points toward this future . Here, the goal extends beyond simply identifying a nodule; it involves analyzing its texture, shape, and growth patterns to predict malignancy risk or therapeutic response. This predictive profiling, powered by AI\u2019s capacity to find subtle, multi-dimensional patterns invisible to the human eye, is the cornerstone of moving toward more personalized medicine. It transforms the image from a static picture into a dynamic data source rich with prognostic information. This principle is further exemplified by the work on multi-modal data integration for complex disease diagnosis .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4011,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "The hurdles: robustness, interpretation, and integration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4068,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Despite this promise, the path to clinical adoption is fraught with well-documented challenges, a reality this Collection does not shy away from. The introductory note rightly identifies the heterogeneity and complexity of medical images as a primary barrier. For instance, an algorithm trained on curated data from a single manufacturer\u2019s CT scanner can fail spectacularly when applied to images from a different institution with alternative protocols, patient populations, or hardware . This lack of robustness and generalizability remains a critical failure point for many intelligent models that perform excellently in controlled retrospective studies but falter in real-world settings, underscoring the need for advanced architectural solutions .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4822,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Closely linked is the challenge of interpretability. Superior performance of a deep neural network often comes at the cost of transparency. This so called \u201cblack box\u201d problem\u2014where even its developers cannot fully explain why a model arrived at a specific output\u2014is antithetical to the principles of clinical medicine, where understanding the \u201cwhy\u201d is essential for trust and informed decision-making. This is why the emphasis on explainable artificial intelligence (XAI), as demonstrated in the lung disease diagnosis paper and others focusing on model transparency and trustworthiness, is so vital . Techniques that generate visual heatmaps or provide logical rationales for a model\u2019s findings are not academic luxuries; they are prerequisites for building clinician confidence and facilitating a productive human-AI partnership.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5668,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Finally, and most dauntingly, is the challenge of intelligent model integration into the clinical workflow. A technically brilliant algorithm is useless if it requires 15 additional steps, disrupts a radiologist\u2019s workflow, or outputs information that does not align with clinical decision pathways. Successful integration requires co-design with end-users\u2014like radiologists, technologists, and referring physicians\u2014from the earliest stages of developments. It demands that AI tools can be evaluated not just by metrics such as area-under-the-curve (AUC), but also by their impact on reporting turnaround time, diagnostic confidence, and, ultimately, patient outcomes, as explored in studies on automated analysis for surgical planning and staging .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6424,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "The foundations: a framework for responsible translation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6481,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "To effectively address these challenges, the field must adopt a coordinated, multi-stakeholder framework for the responsible translation of AI technologies into clinical practice. The research presented in this Collection, which is primarily oriented toward intelligent model development and technical validation, constitutes the first essential foundation of this framework .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6858,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The second foundation is rigorous, prospective clinical validation. This requires moving beyond internal or retrospective test sets to well-designed, multi-centre clinical trials that evaluate an AI system\u2019s performance, clinical utility, and impact on workflow in real-world healthcare settings, with explicit comparison to the current standard of care.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7215,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The third foundation is the development and implementation of robust regulatory and ethical governance mechanisms. Regulatory agencies globally are progressively refining their frameworks for software as a medical device (SaMD). Clearly articulated pathways are required to assess AI systems with adaptive or continuously learning behaviour, in a manner that preserves patient safety and clinical effectiveness while not unduly constraining innovation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7668,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "From an ethical perspective, it is critical to mitigate algorithmic bias by ensuring that training datasets are representative of heterogeneous and historically underrepresented populations, thereby reducing the risk of systematically poorer performance in these groups. Furthermore, transparent delineation of responsibility and accountability in human\u2013AI collaborative decision-making must be maintained. These concerns are directly engaged by emerging research that characterizes and seeks to remediate bias in medical AI systems .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8205,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "The road ahead: collaborative intelligence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8248,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The future illuminated by this Collection is not one of AI replacing radiologists, but of\u00a0augmented intelligence. The most powerful diagnostic entity will be the synergy between human clinical judgment, with its nuanced understanding of context and patient narrative, and AI\u2019s computational prowess in pattern recognition and quantitative analysis. The goal is a collaborative loop: AI handles high-volume screening and quantitative measurements, flagging complex cases and presenting predictive analytics; the clinician provides oversight, integrates multimodal data, and makes the final diagnostic and therapeutic judgment.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8877,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Future research must therefore focus on designing these collaborative interfaces and studying their effects. We need to understand how AI output should be presented, how it influences decision-making (for better or worse), and how to train the next generation of clinicians to be savvy consumers and interpreters of AI-generated insights. The focus will expand from disease detection or classification to holistic patient profiling, integrating imaging data with genomics, electronic health records, and real-world monitoring data to build comprehensive models for personalized health management, as seen in applications beyond traditional radiology .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9529,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9540,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "All of the papers gathered in this Collection provide compelling evidence that AI is reshaping the very fabric of medical imaging . From automating tedious tasks to unlocking novel biomarkers within familiar images, the potential to improve diagnostic accuracy, efficiency, and personalization is immense. However, as the research also implicitly argues, realizing this potential requires more than sophisticated codes. It demands a fundamental commitment to addressing the \"last-mile\" problems of clinical integration: building robust, interpretable, and equitable systems through deep collaboration across disciplines. The journey from a promising intelligent model to a trusted clinical tool is complex, but by integrating innovation into clinical need and ethical rigour , we can steer this powerful technology toward a future where it truly improves the care of every patient.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10422,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Publisher\u2019s note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10441,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10560,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10581,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "Conceptualization, M.G. and H.W.; Methodology, D.K.; Project administration, D.K.; Validation-all; writing-all.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10693,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title"
+                        },
+                        "text": "Declarations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10706,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title"
+                        },
+                        "text": "Competing interests",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10726,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The authors declare no competing interests.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10770,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10781,
+                        "infons": {
+                            "citation-alternatives": "Hussein, S. A., Farouk, A. A. & Saeid, M. M. Intelligent retinal disease detection using deep learning. Sci. Rep.15, 43282. 10.1038/s41598-025-28376-w (2025).\n",
+                            "fpage": "43282",
+                            "name_0": "surname:Hussein;given-names:SA",
+                            "name_1": "surname:Farouk;given-names:AA",
+                            "name_2": "surname:Saeid;given-names:MM",
+                            "pub-id_doi": "10.1038/s41598-025-28376-w",
+                            "pub-id_pmid": "41354757",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Intelligent retinal disease detection using deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10839,
+                        "infons": {
+                            "citation-alternatives": "Dejene, F. M. et al. Knowledge distillation-based lightweight MobileNet model for diabetic retinopathy classification. Sci. Rep.10.1038/s41598-025-30893-7 (2025).\n",
+                            "name_0": "surname:Dejene;given-names:FM",
+                            "name_1": "surname:Ayano;given-names:YM",
+                            "name_2": "surname:Feyisa;given-names:DW",
+                            "pub-id_doi": "10.1038/s41598-025-30893-7",
+                            "pub-id_pmid": "41350373",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "Knowledge distillation-based lightweight MobileNet model for diabetic retinopathy classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10936,
+                        "infons": {
+                            "citation-alternatives": "Gong, Z. et al. Acquire continuous and precise score for fundus image quality assessment: FTHNet and FQS dataset. Sci. Rep.15, 40524. 10.1038/s41598-025-24423-8 (2025).\n",
+                            "fpage": "40524",
+                            "name_0": "surname:Gong;given-names:Z",
+                            "name_1": "surname:Deng;given-names:Z",
+                            "name_2": "surname:Gan;given-names:R",
+                            "pub-id_doi": "10.1038/s41598-025-24423-8",
+                            "pub-id_pmid": "41254095",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Acquire continuous and precise score for fundus image quality assessment: FTHNet and FQS dataset",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11033,
+                        "infons": {
+                            "citation-alternatives": "Seraj, A. et al. Deep learning framework for automated frame selection in kidney ultrasound. Sci. Rep.15, 41940. 10.1038/s41598-025-25755-1 (2025).\n",
+                            "fpage": "41940",
+                            "name_0": "surname:Seraj;given-names:A",
+                            "name_1": "surname:Monazami;given-names:SP",
+                            "name_2": "surname:Davoodi;given-names:R",
+                            "pub-id_doi": "10.1038/s41598-025-25755-1",
+                            "pub-id_pmid": "41290740",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Deep learning framework for automated frame selection in kidney ultrasound",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11108,
+                        "infons": {
+                            "citation-alternatives": "Veeramani, N. et al. NextGen lung disease diagnosis with explainable artificial intelligence. Sci. Rep.15, 33052. 10.1038/s41598-025-07603-4 (2025).\n",
+                            "fpage": "33052",
+                            "name_0": "surname:Veeramani;given-names:N",
+                            "pub-id_doi": "10.1038/s41598-025-07603-4",
+                            "pub-id_pmid": "41006281",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "NextGen lung disease diagnosis with explainable artificial intelligence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11180,
+                        "infons": {
+                            "citation-alternatives": "Li, Y. et al. Lung nodule detection using a multi-scale convolutional neural network and global channel spatial attention mechanisms. Sci. Rep.15, 12313. 10.1038/s41598-025-97187-w (2025).\n",
+                            "fpage": "12313",
+                            "name_0": "surname:Li;given-names:Y",
+                            "name_1": "surname:Hui;given-names:L",
+                            "name_2": "surname:Wang;given-names:X",
+                            "pub-id_doi": "10.1038/s41598-025-97187-w",
+                            "pub-id_pmid": "40210738",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Lung nodule detection using a multi-scale convolutional neural network and global channel spatial attention mechanisms",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11299,
+                        "infons": {
+                            "citation-alternatives": "Prasath, V. B. et al. Web based AI-driven framework combining multi-modal data with CNN and LLM for Parkinson\u2019s disease diagnosis. Sci. Rep.15, 38556. 10.1038/s41598-025-22448-7 (2025).\n",
+                            "fpage": "38556",
+                            "name_0": "surname:Prasath;given-names:VB",
+                            "pub-id_doi": "10.1038/s41598-025-22448-7",
+                            "pub-id_pmid": "41188323",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Web based AI-driven framework combining multi-modal data with CNN and LLM for Parkinson\u2019s disease diagnosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11409,
+                        "infons": {
+                            "citation-alternatives": "Hrzic, F. et al. A simple and effective approach for body part recognition on CT scans based on projection estimation. Sci. Rep.15, 31788. 10.1038/s41598-025-17174-z (2025).\n",
+                            "fpage": "31788",
+                            "name_0": "surname:Hrzic;given-names:F",
+                            "name_1": "surname:Movahhedi;given-names:M",
+                            "name_2": "surname:Lavoie-Gagne;given-names:O",
+                            "pub-id_doi": "10.1038/s41598-025-17174-z",
+                            "pub-id_pmid": "40877547",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "A simple and effective approach for body part recognition on CT scans based on projection estimation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11510,
+                        "infons": {
+                            "citation-alternatives": "Khan, U. & Liatsis, P. Seg2RefineNet: A novel DL-based framework for 2D CCTA image-based segmentation and 3D volume-based refinement. Sci. Rep.15, 41096. 10.1038/s41598-025-24953-1 (2025).\n",
+                            "fpage": "41096",
+                            "name_0": "surname:Khan;given-names:U",
+                            "name_1": "surname:Liatsis;given-names:P",
+                            "pub-id_doi": "10.1038/s41598-025-24953-1",
+                            "pub-id_pmid": "41266585",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Seg2RefineNet: A novel DL-based framework for 2D CCTA image-based segmentation and 3D volume-based refinement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11620,
+                        "infons": {
+                            "citation-alternatives": "Zhou, T. et al. Long-range correlation-guided dual-encoder fusion network for medical images. Sci. Rep.15, 38964. 10.1038/s41598-025-22834-1 (2025).\n",
+                            "fpage": "38964",
+                            "name_0": "surname:Zhou;given-names:T",
+                            "name_1": "surname:Zhang;given-names:Z",
+                            "name_2": "surname:Lu;given-names:H",
+                            "pub-id_doi": "10.1038/s41598-025-22834-1",
+                            "pub-id_pmid": "41198857",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Long-range correlation-guided dual-encoder fusion network for medical images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11697,
+                        "infons": {
+                            "citation-alternatives": "Alqarni, M. et al. An investigation of race bias in deep learning-based segmentation of prostate MRI images. Sci. Rep.15, 43427. 10.1038/s41598-025-26189-5 (2025).\n",
+                            "fpage": "43427",
+                            "name_0": "surname:Alqarni;given-names:M",
+                            "name_1": "surname:Jones;given-names:EL",
+                            "name_2": "surname:Ribeiro;given-names:L",
+                            "pub-id_doi": "10.1038/s41598-025-26189-5",
+                            "pub-id_pmid": "41353223",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "An investigation of race bias in deep learning-based segmentation of prostate MRI images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11786,
+                        "infons": {
+                            "citation-alternatives": "Park, S. et al. Computed tomography-based nnU-Net for region-specific brain structural changes across the Alzheimer\u2019s continuum and frontotemporal dementia subtypes. Sci. Rep.15, 42597. 10.1038/s41598-025-26604-x (2025).\n",
+                            "fpage": "42597",
+                            "name_0": "surname:Park;given-names:S",
+                            "name_1": "surname:Kim;given-names:K",
+                            "name_2": "surname:Lim;given-names:KY",
+                            "pub-id_doi": "10.1038/s41598-025-26604-x",
+                            "pub-id_pmid": "41315482",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Computed tomography-based nnU-Net for region-specific brain structural changes across the Alzheimer\u2019s continuum and frontotemporal dementia subtypes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11937,
+                        "infons": {
+                            "citation-alternatives": "Slimi, H. et al. Trustworthy pneumonia detection in chest X-ray imaging through attention-guided deep learning. Sci. Rep.15, 40029. 10.1038/s41598-025-23664-x (2025).\n",
+                            "fpage": "40029",
+                            "name_0": "surname:Slimi;given-names:H",
+                            "name_1": "surname:Balti;given-names:A",
+                            "name_2": "surname:Abid;given-names:S",
+                            "pub-id_doi": "10.1038/s41598-025-23664-x",
+                            "pub-id_pmid": "41238604",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Trustworthy pneumonia detection in chest X-ray imaging through attention-guided deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12031,
+                        "infons": {
+                            "citation-alternatives": "Yoganathan, T. et al. Automated cardiac MRI analysis for robust profiling of heart failure models in mice. Sci. Rep.10.1038/s41598-025-30810-y (2025).\n",
+                            "name_0": "surname:Yoganathan;given-names:T",
+                            "name_1": "surname:Sooknah;given-names:M",
+                            "name_2": "surname:Martin-McNulty;given-names:B",
+                            "pub-id_doi": "10.1038/s41598-025-30810-y",
+                            "pub-id_pmid": "41339487",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "Automated cardiac MRI analysis for robust profiling of heart failure models in mice",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12115,
+                        "infons": {
+                            "citation-alternatives": "Wang, L. et al. DCS-NET: A multi-task model for uterine ROI detection and automatic staging of early endometrial cancer in MRI. Sci. Rep.15, 41024. 10.1038/s41598-025-25004-5 (2025).\n",
+                            "fpage": "41024",
+                            "name_0": "surname:Wang;given-names:L",
+                            "name_1": "surname:Feng;given-names:L",
+                            "name_2": "surname:Zhang;given-names:J",
+                            "pub-id_doi": "10.1038/s41598-025-25004-5",
+                            "pub-id_pmid": "41266696",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "DCS-NET: A multi-task model for uterine ROI detection and automatic staging of early endometrial cancer in MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12226,
+                        "infons": {
+                            "citation-alternatives": "Roffet, F. et al. Deep learning and whole-brain networks for biomarker discovery: Modeling the dynamics of brain fluctuations in resting-state and cognitive tasks. Sci. Rep.15, 41005. 10.1038/s41598-025-24702-4 (2025).\n",
+                            "fpage": "41005",
+                            "name_0": "surname:Roffet;given-names:F",
+                            "name_1": "surname:Deco;given-names:G",
+                            "name_2": "surname:Delrieux;given-names:C",
+                            "pub-id_doi": "10.1038/s41598-025-24702-4",
+                            "pub-id_pmid": "41266387",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Deep learning and whole-brain networks for biomarker discovery: Modeling the dynamics of brain fluctuations in resting-state and cognitive tasks",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12371,
+                        "infons": {
+                            "citation-alternatives": "Du, Z. et al. Four-class classification of tumor-induced colorectal obstruction histopathology: A ResNet\u2013mamba-mased study on cellular interaction pattern recognition. Sci. Rep.15, 39722. 10.1038/s41598-025-23263-w (2025).\n",
+                            "fpage": "39722",
+                            "name_0": "surname:Du;given-names:Z",
+                            "name_1": "surname:Ma;given-names:H",
+                            "name_2": "surname:Zhang;given-names:P",
+                            "pub-id_doi": "10.1038/s41598-025-23263-w",
+                            "pub-id_pmid": "41224975",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Four-class classification of tumor-induced colorectal obstruction histopathology: A ResNet\u2013mamba-mased study on cellular interaction pattern recognition",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12526,
+                        "infons": {
+                            "citation-alternatives": "Wang, Z., Wang, Y. & Sun, Z. Sensitivity analysis of data augmentation methods on performance of deep learning model for lung sounds classification. Sci. Rep.15, 39268. 10.1038/s41598-025-23106-8 (2025).\n",
+                            "fpage": "39268",
+                            "name_0": "surname:Wang;given-names:Z",
+                            "name_1": "surname:Wang;given-names:Y",
+                            "name_2": "surname:Sun;given-names:Z",
+                            "pub-id_doi": "10.1038/s41598-025-23106-8",
+                            "pub-id_pmid": "41214170",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Sensitivity analysis of data augmentation methods on performance of deep learning model for lung sounds classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12645,
+                        "infons": {
+                            "citation-alternatives": "Sharmila, V. & Geetha, S. Multi-stage convo-enhanced retinex canny DeepLabv3+ FusionNet for enhanced detection and classification of bleeding regions in GI tract. Sci. Rep.15, 40967. 10.1038/s41598-025-24716-y (2025).\n",
+                            "fpage": "40967",
+                            "name_0": "surname:Sharmila;given-names:V",
+                            "name_1": "surname:Geetha;given-names:S",
+                            "pub-id_doi": "10.1038/s41598-025-24716-y",
+                            "pub-id_pmid": "41266504",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Multi-stage convo-enhanced retinex canny DeepLabv3+ FusionNet for enhanced detection and classification of bleeding regions in GI tract",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12781,
+                        "infons": {
+                            "citation-alternatives": "Esmaeili, M. et al. Hierarchical attention mechanism combined with deep neural networks for accurate semantic segmentation of dental structures in panoramic radiographs. Sci. Rep.15, 38725. 10.1038/s41598-025-22560-8 (2025).\n",
+                            "fpage": "38725",
+                            "name_0": "surname:Esmaeili;given-names:M",
+                            "name_1": "surname:Dalili;given-names:Z",
+                            "name_2": "surname:Sadr;given-names:H",
+                            "pub-id_doi": "10.1038/s41598-025-22560-8",
+                            "pub-id_pmid": "41193542",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Hierarchical attention mechanism combined with deep neural networks for accurate semantic segmentation of dental structures in panoramic radiographs",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12930,
+                        "infons": {
+                            "citation-alternatives": "Kayaci, S. T. et al. End-to-end CNN-based detection of permanent first molars and prediction of root development stages from panoramic radiographs. Sci. Rep.15, 38814. 10.1038/s41598-025-22707-7 (2025).\n",
+                            "fpage": "38814",
+                            "name_0": "surname:Kayaci;given-names:ST",
+                            "name_1": "surname:Ilhan;given-names:HO",
+                            "name_2": "surname:Serbes;given-names:G",
+                            "pub-id_doi": "10.1038/s41598-025-22707-7",
+                            "pub-id_pmid": "41193653",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "End-to-end CNN-based detection of permanent first molars and prediction of root development stages from panoramic radiographs",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13056,
+                        "infons": {
+                            "citation-alternatives": "Naeem, M. A. et al. Automated skin cancer detection using MedFusionNet with attention-based fusion of ConvNeXt and vision transformer. Sci. Rep.15, 43811. 10.1038/s41598-025-31816-2 (2025).\n",
+                            "fpage": "43811",
+                            "name_0": "surname:Naeem;given-names:MA",
+                            "name_1": "surname:Yang;given-names:S",
+                            "name_2": "surname:Saleem;given-names:MA",
+                            "pub-id_doi": "10.1038/s41598-025-31816-2",
+                            "pub-id_pmid": "41387901",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Automated skin cancer detection using MedFusionNet with attention-based fusion of ConvNeXt and vision transformer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13170,
+                        "infons": {
+                            "citation-alternatives": "Tyagi, A. K. et al. BoxCell: Leveraging SAM for cell segmentation with box supervision. Sci. Rep.15, 42652. 10.1038/s41598-025-26789-1 (2025).\n",
+                            "fpage": "42652",
+                            "name_0": "surname:Tyagi;given-names:AK",
+                            "pub-id_doi": "10.1038/s41598-025-26789-1",
+                            "pub-id_pmid": "41274955",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "BoxCell: Leveraging SAM for cell segmentation with box supervision",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

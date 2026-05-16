@@ -1,0 +1,10 @@
+﻿venv/
+
+.env
+
+vector_store.pkl
+
+vector_store.pkl
+
+*.pkl
+*.pkl.gz

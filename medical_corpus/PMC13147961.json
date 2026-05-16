@@ -1,0 +1,2279 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260508",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13147961",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.3389/fmed.2026.1770289",
+                            "article-id_pmc": "PMC13147961",
+                            "elocation-id": "1770289",
+                            "kwd": "cubature Kalman filter deep learning image enhancement medical image reconstruction multimodal imaging organ-wise disease classification structural similarity",
+                            "license": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.",
+                            "name_0": "surname:Arif;given-names:Saad",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "13",
+                            "year": "2026"
+                        },
+                        "text": "Multimodal medical image reconstruction and organ-wise disease classification using a hybrid deep learning-Kalman filtering framework",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 134,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Medical image reconstruction and enhancement play a critical role in improving the reliability of computer assisted disease analysis. In this study, a simulation-based hybrid framework is proposed that integrates a deep neural network (DNN) with a cubature Kalman filter (CKF) to combine nonlinear state estimation with learning-based refinement for improved image reconstruction and organ-wise disease classification. The framework is evaluated in a controlled simulation environment using synthetic multimodal radiology-pathology images representing four organs (liver, kidney, lung, and heart) and three disease severity levels (normal, mild, and severe). The proposed hybrid approach consistently demonstrates higher reconstruction fidelity and classification performance than standalone CKF and DNN models. Quantitative evaluation using the peak signal-to-noise ratio and the structural similarity index measure indicates improved structural preservation and noise reduction. In addition, classification analysis using confusion matrices and derived performance metrics demonstrates reliable discrimination between disease severity levels. Across the simulated cases, improvements of approximately 5\u201310% in classification accuracy and higher reconstruction quality are achieved relative to baseline methods. These findings suggest that the integration of nonlinear filtering with deep learning can provide a robust computational framework for multimodal medical image reconstruction and organ-wise disease analysis. Although the results are based on simulation experiments, the proposed approach demonstrates potential for future validation using real clinical imaging datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1820,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1833,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Developments in medical imaging have significantly enhanced the early identification and clinical evaluation of disease, however, radiology and pathology imaging pipelines remain largely disintegrated, preventing the provision of a holistic diagnostic interpretation. The noninvasive anatomical context provided by radiological modalities such as computed tomography (CT), magnetic resonance imaging (MRI), and ultrasound are often limited by noise, motion artifacts, and low contrast in subtle lesions. In contrast, pathology images contain rich microstructural information but are typically acquired through labor intensive procedures, manually interpreted, and involve staining processes that are often time consuming. The integration of these complementary domains has the potential to improve diagnostic precision, particularly in cases of organ specific abnormalities where both macro and micro level characteristics are important determinants. Recently, deep neural networks (DNN) and Bayesian state estimation filters have demonstrated considerable potential in addressing complex nonlinear problems in medical image reconstruction and enhancement. Among these approaches, the cubature Kalman filter (CKF) has attracted attention because of its capability to efficiently handle high-dimensional nonlinear measurement models, making it suitable for progressive refinement of imaging data. Despite these advancements, several significant challenges remain. Radiological images acquired in clinical settings are frequently affected by noise, reduced contrast, and partial occlusions, particularly in soft tissue organs such as the liver, lungs, and kidneys. Pathology images, although highly detailed, may exhibit inconsistencies due to nonuniform staining, varying magnifications, and tissue deformation. Furthermore, many existing reconstruction methods rely on predefined transformation models and therefore lack flexibility in handling variations in image quality and acquisition conditions. Earlier machine learning models used for organ-wise disease classification often exhibit limited robustness to variations in imaging resolution, low signal-to-noise ratios, and inter organ feature heterogeneity. Although modern deep learning architectures demonstrate improved classification performance, the dynamic relationships among measurement noise, reconstruction uncertainty, and cross modality feature consistency are frequently overlooked.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4284,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The objective of this work is to establish a foundation for clinically validated diagnostic system by investigating the feasibility of integrating nonlinear filtering with deep learning for multimodal medical image reconstruction and organ-wise disease classification. This study represents a preliminary effort to explore the integration of the CKF with DNN for this purpose. Current medical imaging pipelines lack an integrated framework capable of jointly reconstructing, enhancing, and classifying radiology-pathology images while preserving organ specific feature fidelity. Existing DNN-based approaches are typically trained in an end-to-end manner without explicitly modeling measurement uncertainty, which may lead to oversmoothing, feature distortion, and reduced diagnostic reliability. In contrast, filtering-based approaches such as the Kalman filter, extended Kalman filter (EKF), and unscented Kalman filter (UKF) alone are insufficient for large scale nonlinear reconstruction tasks because they cannot exploit the hierarchical feature representations learned by deep architectures. As a result, enhancement quality may remain suboptimal, particularly under severe noise conditions, low contrast lesions, and inconsistent pathological characteristics. Therefore, there is a clear need for a unified hybrid framework capable of synergistically combining the feature extraction capability of DNNs with the uncertainty-aware reconstruction provided by CKF, followed by robust organ-wise disease classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5807,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Literature review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5825,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Existing studies have explored numerous multimodal imaging and fusion strategies to address the limitations of standalone imaging modalities and to enable more reliable clinical decision making. An unsupervised multistage deep learning framework, PAMRF, was proposed for the fusion of misaligned photoacoustic tomography (PAT) and MRI data through integrated registration and self-attentive fusion. It was demonstrated that the method accurately aligned PAT-MRI image pairs and produced high quality fused images of small animal scans obtained from commercial imaging systems. A two-stage deep learning framework was presented for the diagnosis of degenerative lumbar spine disease. In this framework, a mask region-based convolutional neural network (Mask R-CNN) was employed to localize vertebrae and intervertebral discs before performing refined multi angle classification. It was demonstrated that the generation of synthesized multi angle disc views from combined sagittal and axial slices significantly improved diagnostic performance, yielding higher F1-scores compared with single view inputs. In another study, superimposed AlexNet models (SAlexNet-1 and SAlexNet-2) were introduced to classify primary brain tumors, including glioma, meningioma, and pituitary tumors. These models integrated a hybrid attention mechanism (HAM), dense feature extraction, and semi-transfer learning (STL) to improve classification performance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7262,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "An artificial intelligence (AI)-based lung cancer diagnostic framework was also presented, incorporating Butterworth filtering, bi-level feature selection using the chaotic crow search algorithm-random forest (CCSA-RF), and feature extraction using multi space image reconstruction (MIR) combined with the gray level co-occurrence matrix (GLCM). It was demonstrated that a hybrid sparse convolutional neural network (SCNN) combined with probabilistic neural network (PNN)-based classification effectively distinguished benign, normal, and malignant cases in the LUNA16 CT dataset, achieving strong performance across multiple evaluation metrics. A Mamba-based vision foundation model, Swin-UMamba, was introduced for medical image segmentation. The model provided linear computational complexity and improved efficiency compared with traditional transformer-based architectures. It was demonstrated that the model, supported by a self-supervised adaptation scheme designed to reduce the gap between natural and medical image domains, outperformed several state-of-the-art CNN, transformers, and Mamba-based models across multiple medical imaging datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8418,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A study presented DiffChest, a self-conditioned diffusion model trained on a large dataset of chest radiographs, which was designed to generate patient specific explanations and identify confounding variables that could affect the reliability of AI-based diagnostic systems. The model demonstrated high inter reader agreement and strong diagnostic performance across multiple chest disease conditions while reliably visualizing confounders associated with treatment patterns. A deep learning-based kidney disease classification framework using Darknet53 was also proposed to detect renal abnormalities, including stones, cysts, tumors, and normal kidney conditions, using a large multi-source medical imaging dataset. The results indicated that the Darknet53-based model achieved higher performance in terms of accuracy, recall, specificity, precision, and F1-score compared with several benchmark methods, demonstrating strong potential for automated kidney disease detection. Recent developments in the application of artificial intelligence to radiopharmaceutical and molecular imaging have also been investigated, where AI-based models were used to optimize image reconstruction, quantification, and diagnostic interpretation processes. In related work, a residual U-Net architecture enhanced with efficient channel attention (ECA) and a dual attention network (DANet) was proposed to improve feature representation for medical image segmentation tasks. The elastix platform was introduced as an open-source medical image registration software based on intensity-driven registration methods. The platform was developed to align medical imaging datasets across modalities, time points, or subjects using a modular algorithmic framework.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10158,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Implicit deformable models have also been investigated for medical image enhancement and segmentation. In one study, a geodesic formulation was applied to segment multiple objects simultaneously in CT and MRI scans. The modified geodesic method enabled effective comparison between implicit and explicit deformable models, demonstrating the advantages and limitations of implicit approaches under conditions of poor contrast, weak edges, and imaging artifacts. A medical imaging software platform was also developed using a standard object-oriented design and established software design patterns to integrate algorithms for reconstruction, segmentation, registration, and visualization. The platform was shown to provide a flexible and practical framework for researchers and engineers, with experimental evaluations demonstrating its effectiveness in medical image processing tasks. In another study, the S-transform, which combines the properties of Fourier and wavelet transforms, was applied to medical image analysis tasks such as noise removal and texture analysis. It was demonstrated that the use of parallel and vectorized computations reduced the computational time of the S-transform by approximately 25 times, thereby accelerating medical image processing algorithms.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11439,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A critical synthesis of representative prior studies, comparing their core methodologies, strengths, and limitations, is summarized in Table 1. The table also highlights the specific research gap addressed by the proposed hybrid CKF-DNN framework. Despite significant progress in medical image processing and analysis, several limitations remain in existing approaches. To provide a clearer overview, Table 2 summarizes the limitations identified in existing literature along with the associated research gaps, highlighting opportunities for developing robust, interpretable, and computationally efficient frameworks capable of integrated image reconstruction, enhancement, and organ-wise disease classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12152,
+                        "infons": {
+                            "file": "tab1.xml",
+                            "id": "tab1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Critical synthesis of related literature highlighting key contributions, limitations, and the research gap addressed by the proposed hybrid CKF-DNN framework.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12311,
+                        "infons": {
+                            "file": "tab1.xml",
+                            "id": "tab1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Category/theme</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Representative studies</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Strengths</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Key limitations</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Gap addressed in this work</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Multimodal fusion and registration</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\"><xref rid=\"ref13\" ref-type=\"bibr\">13</xref><xref rid=\"ref22\" ref-type=\"bibr\">22</xref><xref rid=\"ref24\" ref-type=\"bibr\">24</xref></td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Accurate alignment and fusion across imaging modalities</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">High computational cost limited robustness to nonlinear noise</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Joint nonlinear state estimation with reduced computational complexity using CKF</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Deep learning-based classification</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\"><xref rid=\"ref14\" ref-type=\"bibr\">14</xref><xref rid=\"ref15\" ref-type=\"bibr\">15</xref><xref rid=\"ref19\" ref-type=\"bibr\">19</xref></td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">High classification accuracy and effective feature learning</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Sensitivity to noise and data imbalance; lack of explicit uncertainty modeling</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">CKF-based state estimation improves robustness prior to DNN-based refinement</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Filtering and hybrid AI models</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\"><xref rid=\"ref16\" ref-type=\"bibr\">16</xref><xref rid=\"ref20\" ref-type=\"bibr\">20</xref></td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Improved diagnostic reliability through hybrid processing pipelines</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Sequential architectures with weak coupling between filtering and learning components</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Tight integration of CKF and DNN within a unified reconstruction and classification framework</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Efficiency-oriented architectures</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\"><xref rid=\"ref17\" ref-type=\"bibr\">17</xref></td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Reduced computational complexity</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Limited interpretability and restricted clinical relevance</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Balanced accuracy-complexity trade-off demonstrated through quantitative evaluation</td></tr></tbody></table>\n"
+                        },
+                        "text": "Category/theme\tRepresentative studies\tStrengths\tKey limitations\tGap addressed in this work\t \tMultimodal fusion and registration\t\tAccurate alignment and fusion across imaging modalities\tHigh computational cost limited robustness to nonlinear noise\tJoint nonlinear state estimation with reduced computational complexity using CKF\t \tDeep learning-based classification\t\tHigh classification accuracy and effective feature learning\tSensitivity to noise and data imbalance; lack of explicit uncertainty modeling\tCKF-based state estimation improves robustness prior to DNN-based refinement\t \tFiltering and hybrid AI models\t\tImproved diagnostic reliability through hybrid processing pipelines\tSequential architectures with weak coupling between filtering and learning components\tTight integration of CKF and DNN within a unified reconstruction and classification framework\t \tEfficiency-oriented architectures\t\tReduced computational complexity\tLimited interpretability and restricted clinical relevance\tBalanced accuracy-complexity trade-off demonstrated through quantitative evaluation\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13391,
+                        "infons": {
+                            "file": "tab2.xml",
+                            "id": "tab2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Limitations and research gaps of existing medical imaging methods.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13458,
+                        "infons": {
+                            "file": "tab2.xml",
+                            "id": "tab2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Study/method</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Limitations of existing literature</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Research gaps</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">PAMRFuse (PAT\u2013MRI fusion)</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Difficulty in handling misaligned images and spatial distortions; limited validation because the method represents an early-stage approach, and its generalizability remains insufficiently tested.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Development of robust methods capable of handling misalignment and spatial distortion across diverse imaging datasets.</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Swin-UMamba (medical image segmentation)</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Transformer-based architectures are computationally expensive and demonstrate limited adaptability for small medical imaging datasets.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Design of lightweight and computationally efficient foundation models suitable for small scale medical datasets.</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">DiffChest (chest radiograph analysis)</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Existing approaches lack the ability to visualize confounding factors and provide patient-specific diagnostic explanations.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Development of interpretable models capable of generating patient-specific explanations and identifying confounding variables.</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">AI in radiopharmaceutical and molecular imaging</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Limited clinical translation, as many previous AI-based methods focus primarily on single tasks such as reconstruction or quantification.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Integration of AI techniques for end-to-end radiopharmaceutical image analysis and clinical decision support.</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Elastix (medical image registration)</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">A single registration method cannot address all imaging applications; earlier software frameworks lacked modularity and flexible comparison mechanisms.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Development of modular registration frameworks adaptable to multiple imaging modalities and experimental settings.</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Medical imaging software platform</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Earlier platforms lacked integration of widely used algorithms within a flexible and consistent framework.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Development of unified and flexible platforms that integrate reconstruction, segmentation, registration, and visualization tools.</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">S-transform</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Computationally intensive; conventional implementations are too slow for practical medical imaging applications.</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Development of fast and parallelized implementations of the S-transform for real-time medical image processing.</td></tr></tbody></table>\n"
+                        },
+                        "text": "Study/method\tLimitations of existing literature\tResearch gaps\t \tPAMRFuse (PAT\u2013MRI fusion)\tDifficulty in handling misaligned images and spatial distortions; limited validation because the method represents an early-stage approach, and its generalizability remains insufficiently tested.\tDevelopment of robust methods capable of handling misalignment and spatial distortion across diverse imaging datasets.\t \tSwin-UMamba (medical image segmentation)\tTransformer-based architectures are computationally expensive and demonstrate limited adaptability for small medical imaging datasets.\tDesign of lightweight and computationally efficient foundation models suitable for small scale medical datasets.\t \tDiffChest (chest radiograph analysis)\tExisting approaches lack the ability to visualize confounding factors and provide patient-specific diagnostic explanations.\tDevelopment of interpretable models capable of generating patient-specific explanations and identifying confounding variables.\t \tAI in radiopharmaceutical and molecular imaging\tLimited clinical translation, as many previous AI-based methods focus primarily on single tasks such as reconstruction or quantification.\tIntegration of AI techniques for end-to-end radiopharmaceutical image analysis and clinical decision support.\t \tElastix (medical image registration)\tA single registration method cannot address all imaging applications; earlier software frameworks lacked modularity and flexible comparison mechanisms.\tDevelopment of modular registration frameworks adaptable to multiple imaging modalities and experimental settings.\t \tMedical imaging software platform\tEarlier platforms lacked integration of widely used algorithms within a flexible and consistent framework.\tDevelopment of unified and flexible platforms that integrate reconstruction, segmentation, registration, and visualization tools.\t \tS-transform\tComputationally intensive; conventional implementations are too slow for practical medical imaging applications.\tDevelopment of fast and parallelized implementations of the S-transform for real-time medical image processing.\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15566,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Study contribution",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15585,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, the hybrid framework is evaluated using a simulation-based dataset designed to emulate multimodal radiology-pathology imaging conditions. A hybrid CKF-DNN model is proposed in which nonlinear state estimation is combined with deep learning-based refinement to achieve accurate reconstruction, enhancement, and organ-wise disease classification of synthetic radiology-pathology images. The main contributions of this study are summarized as follows:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16049,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A hybrid CKF-DNN framework is introduced that integrates nonlinear state estimation with deep learning-based refinement to achieve accurate reconstruction and enhancement of multimodal radiology-pathology images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16262,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Improved image reconstruction quality is demonstrated, as measured by the peak signal-to-noise ratio (PSNR) and the structural similarity index measure (SSIM), compared with standalone CKF and DNN models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16467,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Enhanced organ-wise disease classification performance is achieved, with an accuracy improvement of approximately 5\u201310% and high area under the curve (AUC) scores (0.88\u20130.95) across multiple organs (liver, kidney, lung, and heart) and disease conditions (normal, mild, and severe).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16753,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Preservation of critical structural and pathological features is verified through confusion matrix evaluation and residual analysis, supporting reliable and simulation-based interpretation of reconstructed medical images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16975,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "An integrated computational framework is developed for image reconstruction, enhancement, and organ-wise disease classification. The framework demonstrates improved reconstruction quality and classification performance in simulated multimodal imaging scenarios and shows promising potential for future clinical validation and investigation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17316,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The remainder of this paper is organized as follows. Section 2 presents the fundamental principles of radiology-pathology integration, nonlinear filtering, deep learning-based enhancement, and multi-organ disease classification. Section 3 describes the proposed hybrid CKF-DNN framework in a step-by-step manner. Section 4 presents experimental results and analysis using quantitative evaluation metrics, visual assessment, and classification performance analysis with brief discussion in section 5. Finally, section 6 concludes the study by summarizing the key findings, limitations, and directions for future research.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17937,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Theoretical background and mathematical formulation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17989,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In this section, the theoretical foundations of the hybrid reconstruction and classification framework are presented. The framework is developed based on two complementary components: the CKF, which serves as a model-driven estimator for nonlinear radiological image reconstruction, and a DNN, which acts as a data-driven enhancement and pathology-guided refinement unit. Their mathematical formulations, operational mechanisms, and algorithmic structures are described in the following subsections.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18489,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Cubature Kalman filtering",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18515,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "CKF has emerged as an effective state estimation technique for nonlinear systems and has been widely applied in medical image reconstruction. In contrast to traditional linear filtering approaches, CKF approximates nonlinear transformations of state and measurement variables using a set of carefully selected cubature points that represent the Gaussian statistics of the system. This formulation enables accurate propagation of the state mean and covariance under strongly nonlinear imaging models, such as those encountered in CT, MRI, and hybrid radiology-pathology imaging systems. CKF has been effectively applied to reduce reconstruction artifacts, improve image fidelity, and enhance the signal-to-noise ratio, making it particularly suitable for organ-wise disease analysis. Its recursive structure enables the incorporation of prior information and sequential measurement updates, thereby providing robust and computationally tractable solutions for high-dimensional and noisy radiological data. By integrating CKF with deep learning-based refinement, nonlinear image reconstruction can be further improved, leading to enhanced structural preservation and diagnostic reliability. Radiological image formation is inherently nonlinear due to attenuation effects, beam tissue interactions, and modality-specific noise characteristics. To estimate the underlying clean signal from degraded measurements, CKF is employed as a nonlinear Bayesian estimator. As illustrated in Figure 1, CKF recursively estimates the nonlinear system states through prediction and update stages.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20095,
+                        "infons": {
+                            "file": "fmed-13-1770289-g001.jpg",
+                            "id": "fig1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Workflow of CKF algorithm illustrating the prediction stage, cubature-based moment computation, and update steps for nonlinear state estimation of image patches.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20257,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In the proposed framework, CKF is applied to latent feature vectors rather than full resolution image patches. Specifically, CKF operates on feature vectors of dimension 32\u201364, whereas raw image patches may exceed 104\u2013105 pixels. This representation significantly reduces computational costs. The prediction and update steps of CKF scale as O (\ud835\udc513) with respect to the latent state dimension \ud835\udc51, resulting in manageable computational complexity under the proposed configuration. In the current implementation, the average processing time per patch was below 50\u202fms on a standard CPU in a simulation-based environment. Although real-time clinical deployment is not claimed, these results demonstrate the practical feasibility of the proposed framework for offline and near real-time analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21058,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "CKF models the imaging process as a discrete-time nonlinear state-space system:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21138,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "where  denotes the latent clean radiological image at iteration ,  represents the acquired noisy measurement, and  and  denote nonlinear state transition and measurement functions, respectively. The process and observation noises  and  represent uncertainties arising from sensor distortion, scattering effects, and reconstruction approximations. CKF approximates the nonlinear transformation of Gaussian distributions by generating third-degree spherical-radial cubature points. For an -dimensional state,  cubature points are defined as:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21678,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "where  denotes the standard basis vectors. These cubature points are propagated through the nonlinear state model as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21795,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The predicted state mean and covariance are then computed as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21856,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A similar cubature transformation is applied through the measurement model to compute the predicted measurement statistics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21979,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The Kalman gain is then obtained as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22015,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "and the posterior state estimate is updated as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22062,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "with the updated covariance given by",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22099,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This recursive estimation process provides noise resilient and uncertainty-aware reconstruction of radiological images, which serves as the foundation for subsequent DNN-based refinement. Unlike conventional residual learning approaches, the proposed DNN enhancement stage is explicitly guided by CKF-based state estimates, enabling uncertainty-aware refinement of reconstructed features rather than purely data-driven residual correction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22539,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Deep neural network",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22559,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "DNN have demonstrated strong capabilities in reconstructing high frequency details, enhancing contrast, and learning complex nonlinear relationships between degraded and clean medical images. In this work, a multistage DNN is employed to refine CKF outputs by leveraging both radiological structural patterns and pathological textural cues, thereby enabling cross modal consistency and improved diagnostic quality. DNN operates by transforming input images through a sequence of learnable layers that progressively extract meaningful features. As illustrated in Figure 2, the DNN workflow begins with convolutional layers that capture low level patterns such as edges and textures. These features are then processed through activation layers that introduce nonlinearity, followed by pooling or down sampling layers that reduce dimensionality while preserving relevant information. More abstract feature representations that distinguish anatomical structures from pathological variations are learned in deeper layers. Finally, fully connected layers integrate the extracted features to generate output predictions, enabling both reconstruction enhancement and organ-wise disease classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23753,
+                        "infons": {
+                            "file": "fmed-13-1770289-g002.jpg",
+                            "id": "fig2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Overview of the DNN architecture illustrating input image patches, convolutional feature extraction, residual-based enhancement, and latent feature encoding for organ-wise classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23941,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Given the CKF estimate , the DNN learns a nonlinear enhancement function defined as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24025,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "where  represents the network mapping with trainable parameters . The architecture consists of three primary components:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24146,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Encoder:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24155,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Multi scale features are extracted from CKF outputs using convolutional layers:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24235,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "where  denotes a nonlinear activation function such as ReLU or Leaky ReLU.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24310,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Fusion Block:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24324,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Pathology-derived texture embeddings are incorporated as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24381,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "where  performs spatial attention and feature recalibration.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24442,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Decoder:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24451,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The enhanced output is reconstructed through up sampling and residual learning:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24531,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This formulation stabilizes training and preserves the structural fidelity of the CKF estimate.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24627,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Training is driven by a hybrid objective function defined as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24688,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "which balances pixel-level accuracy, structural similarity, and perceptual quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24772,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The outputs of CKF and DNN are fused through a consistency-driven formulation to leverage the strengths of both estimators:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24896,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The fusion weight is adaptively updated using residual information:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24964,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A residual-guided correction feedback loop is also incorporated:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25029,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This mechanism enables CKF to dynamically update its uncertainty model based on the refinement provided by the DNN.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25145,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Materials and methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25167,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The proposed framework integrates deep learning-based feature representation with CKF-based nonlinear state estimation to enable radiological image reconstruction, pathological feature enhancement, and organ-wise disease classification. As illustrated in Figure 3, the methodology consists of five sequential phases: (1) multimodal data acquisition and preprocessing, (2) CKF-based nonlinear image reconstruction, (3) DNN-based enhancement and feature encoding, (4) multi-branch organ-specific classification, and (5) decision fusion. Each stage is designed to exploit the complementary strengths of CKF and DNN modules, thereby improving robustness to noise, enabling cross modal consistency, and enhancing diagnostic accuracy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25896,
+                        "infons": {
+                            "file": "fmed-13-1770289-g003.jpg",
+                            "id": "fig3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Overview of the proposed hybrid CKF-DNN framework illustrating multimodal preprocessing, CKF-based reconstruction, DNN-based enhancement, organ-wise classification, and decision fusion.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26082,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Multimodal image acquisition and preprocessing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26129,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The synthetic dataset was generated using a physics-based simulation model designed to reproduce realistic variability, noise characteristics, and incomplete data conditions. Gaussian noise at multiple signal-to-noise ratio levels and structured masking were applied to emulate measurement uncertainty and missing information while maintaining statistical consistency with real datasets. Disease severity levels were assigned using percentage-based deviation thresholds from baseline parameters, classifying cases as normal, mild, and severe. The same labeling criteria as derived from the real datasets were applied to the synthetic datasets to ensure consistency, reproducibility, and practical relevance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26837,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The processing pipeline begins with paired radiology images (CT/MRI) and pathology images (whole slide images, WSI) obtained for each case. Because these modalities differ in spatial scale, resolution, and tissue appearance, a standardized preprocessing procedure is applied.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27113,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "First, intensity normalization is performed as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27160,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "where  and  represent modality specific mean and standard deviation values.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27236,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Radiological images undergo bias field correction, while pathology images are stain normalized using either the Reinhard or Macenko transformation to ensure cross slide consistency. All images are resized to a fixed grid and segmented into patches corresponding to organ-specific anatomical regions using an atlas-guided mask. This procedure ensures that CKF and DNN modules operate on spatially aligned and organ consistent data units. The hyperparameters were set as \u03b1\u202f=\u202f0.6, \u03b2\u202f=\u202f0.3, \u03b3\u202f=\u202f0.1, and \u03bb\u202f=\u202f1\u202f\u00d7\u202f10\u22124, determined through cross validation to balance reconstruction quality, classification accuracy, and training stability. Sensitivity analysis confirmed the robustness of these parameter values.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27970,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "CKF-based reconstruction of noisy and irregular modalities",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28029,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "CKF is then employed to reconstruct images corrupted by noise, artifacts, or missing pixel values. The radiological reconstruction process is modeled using a nonlinear state space formulation:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28222,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "where  represents the latent clean image patch,  denotes the observed corrupted patch, and  and  represent process and measurement noise, respectively. CKF approximates Gaussian integration using cubature points defined as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28445,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "where  denotes the state dimension and  are basis vectors. The predicted state estimate is computed as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28548,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The update stage follows the standard CKF gain computation and correction step:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28628,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This nonlinear reconstruction preserves spatial structures while mitigating noise and correcting distortions caused by missing data.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28761,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "DNN-based image enhancement and deep feature encoding",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28815,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The CKF reconstructed patches are subsequently processed by a DNN for image enhancement and feature extraction. To reduce overfitting and ensure reproducible training, the DNN was trained using a fixed set of hyperparameters. Regularization with a dropout rate of 0.3 was applied after each convolutional block and fully connected layer. L2 weight regularization with a penalty coefficient of 1\u202f\u00d7\u202f10\u22124 was also incorporated. Training was performed using k-fold cross validation (\ud835\udc58 = 5), with data partitioned at the patient level to prevent information leakage between folds. Early stopping was employed with a patience value of 10 epochs based on validation loss. The network was trained using the Adam optimizer with an initial learning rate of 1\u202f\u00d7\u202f10\u22124 and a batch size of 16, resulting in stable convergence across experimental scenarios. DNN architecture consists of two primary components.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29728,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "(a) Enhancement Network ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29753,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "A U-Net style encoder decoder network is used to refine structural boundaries, suppress residual noise, and restores texture details. The enhanced image output  is computed as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29929,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "where  represents a learned residual mapping.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29975,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "(b) Feature Encoder ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29996,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Deep features are extracted using a convolutional backbone, producing a latent representation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30090,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "that captures organ-specific textures, lesion morphology, and disease severity indicators. These features serve as the basis for multiorgan classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30246,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Multi-branch organ-specific classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30289,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Because disease manifestations vary across organs (e.g., lung nodules differ from liver lesions and renal anomalies), a multi branch architecture is adopted. The latent vector z is replicated across multiple organ specific branches, each containing dense layers optimized for the corresponding anatomical region. The classification output for organ  is defined as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30653,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "where the softmax function produces class probabilities corresponding to disease categories such as normal, mild, and severe. The per-organ classification loss is defined as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30827,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "and the total multi organ loss is",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30861,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This formulation enables organ-aware specialization while benefiting from shared feature representations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30967,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Decision fusion and reporting",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30997,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The final diagnostic output is generated by integrating organ-wise classification probabilities with enhancement and reconstruction quality metrics such as PSNR, SSIM, and mean squared error (MSE). A fusion rule is defined as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31223,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "where  represents quality-aware confidence score derived from both DNN and CKF outputs. The system reports reconstructed images, disease severity scores, and confidence maps to support interpretation and diagnostic analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31448,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31456,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "All results reported in this section correspond to simulation experiments designed to analyze algorithmic behavior under controlled noise and reconstruction conditions. The hybrid CKF-DNN model was evaluated on 50 simulated cases representing four organs (liver, kidney, lung, and heart) under three disease conditions: normal, mild, and severe. These cases were generated using a physics-based imaging model designed to emulate multimodal radiology-pathology imaging conditions across the four organs. In the synthetic dataset, the normal, mild, and severe conditions were generated by progressively increasing signal variations to simulate baseline, moderate, and advanced pathological states, respectively. Performance was evaluated using several criteria, including image reconstruction quality (PSNR and SSIM), residual error analysis, organ-wise disease classification accuracy, receiver operating characteristic (ROC) curve and AUC analysis, confusion matrices, and multi metric performance consistency. The results demonstrate that the integration of DNN with CKF significantly improves image fidelity and diagnostic accuracy. All simulations and experiments were implemented in MATLAB R2023a using the Deep Learning Toolbox and the Signal Processing Toolbox. Statistical analyses and performance evaluations were conducted within the same environment to ensure implementation consistency and reproducibility.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32874,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "CKF reconstruction performance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32905,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The initial performance of CKF reconstruction was evaluated to assess the convergence behavior and reconstruction accuracy of the filtering process. Figure 4a shows that the mean CKF reconstruction error decreases rapidly during the first 20 iterations and then stabilizes, indicating effective state estimation. The liver and lung cases exhibited slightly higher residual errors because these organs present more complex structural patterns. CKF achieved an average PSNR of 28.3\u202f\u00b1\u202f1.2\u202fdB and an SSIM value of 0.82\u202f\u00b1\u202f0.05, which indicates strong reconstruction performance, although some limitations remained in preserving fine structural details.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33565,
+                        "infons": {
+                            "file": "fmed-13-1770289-g004.jpg",
+                            "id": "fig4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "(a) CKF reconstruction error (mean \u00b1 standard deviation) across 50 simulated cases and four organs, demonstrating rapid convergence. (b) Heatmap of PSNR values across all cases and organs, indicating improved reconstruction performance of the hybrid framework. (c) Heatmap of SSIM values across all cases and organs, demonstrating improved structural reconstruction using the hybrid framework. (d) Residual error map for a representative case, confirming low residual intensity across most pixels.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34064,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Hybrid reconstruction analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34095,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The integration of DNN refinement significantly improved reconstruction quality. Heatmaps of PSNR and SSIM values are presented in Figures 4b,c across all organs and cases. The hybrid framework achieved a PSNR of 30.2\u202f\u00b1\u202f0.9\u202fdB and an SSIM of 0.91\u202f\u00b1\u202f0.03, representing an improvement of approximately 2\u202fdB in PSNR and 0.09 in SSIM compared with CKF alone. Residual analysis, shown in Figure 4d, indicates that more than 90% of pixels exhibited reconstruction errors below 5% of the maximum intensity, suggesting that error distribution remained within acceptable limits. Notably, the largest improvements were observed for the liver and lung, indicating that the hybrid framework is particularly effective for imaging scenarios involving complex anatomical structures and higher noise levels.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34901,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Organ-wise classification performance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34939,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The hybrid framework successfully preserved organ-specific features critical for disease classification. Figure 5a presents classification accuracy across all organs and disease conditions. The average classification accuracies were 93% for liver, 88% for kidney, 95% for lung, and 90% for heart, representing an improvement of 5\u201310% compared with standalone CKF or DNN models. Figure 5b presents boxplots comparing PSNR values across CKF, DNN, and hybrid methods, highlighting consistently higher PSNR values and reduced variability for the hybrid approach.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35500,
+                        "infons": {
+                            "file": "fmed-13-1770289-g005.jpg",
+                            "id": "fig5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "(a) Heatmap of organ-wise classification accuracy across 50 simulated cases, highlighting the superior performance of the hybrid CKF-DNN framework. (b) Boxplots of PSNR values for each organ across different methods, illustrating the reconstruction quality advantage of the proposed hybrid approach.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35800,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "ROC curves and AUC metrics were used to assess diagnostic reliability. Figure 6a shows ROC curves demonstrating strong discrimination capability between normal, mild, and severe disease conditions across organs. The hybrid framework achieved AUC values ranging from 0.88 to 0.95, with the highest values observed for lung and kidney cases. Figure 6b presents a radar plot of AUC values for each organ and disease condition, further confirming consistent classification performance across severity levels. The reported ROC and AUC values represent the mean results obtained across repeated simulation runs, and confidence intervals were calculated to indicate statistical reliability. Multi class ROC and AUC values were computed using a one-vs-rest classification strategy. Model performance was evaluated using both macro-averaged AUC (the mean of per-class AUC values) and micro-averaged AUC (computed across all samples). The macro-averaged AUC obtained in the simulations was 0.92, indicating balanced classification performance across severity levels, while the micro-averaged AUC was 0.94, reflecting strong overall classification accuracy weighted by class prevalence.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36976,
+                        "infons": {
+                            "file": "fmed-13-1770289-g006.jpg",
+                            "id": "fig6",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "(a) Organ-wise ROC curves demonstrating the high discrimination capability of the hybrid CKF-DNN framework. (b) Radar plot of AUC values across organs and disease conditions, highlighting robust classification performance. (c) Scatter plot of PSNR vs. SSIM across all organs, indicating a strong positive correlation between reconstruction fidelity and structural similarity. (d) Parallel coordinates plot illustrating PSNR, SSIM, and classification accuracy across all simulated cases.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37463,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The scatter plot of PSNR versus SSIM shown in Figure 6c indicates a strong positive correlation between structural similarity and pixel-level fidelity (r\u202f=\u202f0.82). Most cases achieved PSNR values greater than 30\u202fdB and SSIM values greater than 0.9, demonstrating consistent reconstruction quality across the dataset. Multi metric performance analysis is illustrated in Figure 6d using a parallel coordinates plot.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37882,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figures 7a\u2013d presents detailed confusion matrices for organ-wise classification performance. Strong diagonal dominance indicates high predictive accuracy, with more than 85% correct classifications across all organs. Misclassifications primarily occurred between adjacent disease severity levels (mild versus severe), reflecting the inherent challenge of distinguishing subtle pathological differences. These results demonstrate the robustness of the proposed hybrid framework for organ-wise disease detection.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38395,
+                        "infons": {
+                            "file": "fmed-13-1770289-g007.jpg",
+                            "id": "fig7",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Organ-wise confusion matrices illustrating multi class classification performance for the Normal, Mild, and Severe conditions in (a) Liver, (b) Kidney, (c) Lung, and (d) Heart, highlighting correct predictions along the diagonal and misclassification patterns between adjacent severity levels.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38689,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Case study demonstrating CKF-guided DNN refinement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38740,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To illustrate the importance of CKF guidance, a synthetic case study was conducted in which the input signal was heavily corrupted by noise. As illustrated in Figure 8, the standalone DNN model (blue dash-dot line) was less effective in reconstructing the underlying signal, particularly in regions with sharp transitions. When CKF guidance was incorporated, the DNN predictions became smoother and more consistent with the ground truth (green line), demonstrating improved reconstruction fidelity. This example highlights the benefit of CKF-DNN integration, particularly under challenging conditions involving low signal-to-noise ratios or incomplete data, and supports the quantitative improvements observed in PSNR and SSIM metrics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39476,
+                        "infons": {
+                            "file": "fmed-13-1770289-g008.jpg",
+                            "id": "fig8",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Case study illustrating the impact of CKF guidance on DNN predictions under noisy conditions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39570,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39581,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "An ablation and sensitivity analysis was conducted to evaluate the contribution and robustness of the adaptive fusion mechanism, as summarized in Table 3. The complete CKF-DNN model with adaptive fusion consistently outperformed both fixed weight fusion and DNN only models in terms of reconstruction quality and classification accuracy. These results confirm the importance of dynamically weighting the outputs of CKF and DNN modules. When adaptive fusion was replaced with fixed equal weights, a measurable decline in performance was observed. This result indicates that fixed fusion strategies are less effective in adapting to variations across organs and disease severity levels. Furthermore, sensitivity analysis demonstrated that moderate perturbations of the fusion parameters (\u00b120%) produced only minor changes in PSNR, SSIM, and classification accuracy. This finding suggests that the adaptive fusion mechanism is stable and does not require excessive parameter tuning. Overall, the results demonstrate that the adaptive fusion strategy is both effective and robust.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40659,
+                        "infons": {
+                            "file": "tab3.xml",
+                            "id": "tab3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Ablation and sensitivity analysis of the adaptive fusion mechanism illustrating the impact of fusion strategies and parameter variations (\u03b1, \u03b2, \u03b3) on reconstruction quality (PSNR, SSIM) and organ-wise classification accuracy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40896,
+                        "infons": {
+                            "file": "tab3.xml",
+                            "id": "tab3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Variant</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">PSNR (dB)</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">SSIM</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Accuracy (%)</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Observation</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Full CKF-DNN\u202f+\u202fadaptive fusion</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">30.2\u202f\u00b1\u202f0.9</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.91\u202f\u00b1\u202f0.03</td><td align=\"char\" valign=\"top\" char=\"\u2013\" rowspan=\"1\" colspan=\"1\">88\u201395</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Best reconstruction and classification; robust across organs</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Fixed-weight fusion</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">29.5\u202f\u00b1\u202f1.0</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.88\u202f\u00b1\u202f0.04</td><td align=\"char\" valign=\"top\" char=\"\u2013\" rowspan=\"1\" colspan=\"1\">85\u201391</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Performance degradation observed; adaptive weighting beneficial</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">DNN only</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">29.1\u202f\u00b1\u202f1.0</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.86\u202f\u00b1\u202f0.04</td><td align=\"char\" valign=\"top\" char=\"\u2013\" rowspan=\"1\" colspan=\"1\">83\u201389</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Demonstrates the contribution of CKF guidance</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Sensitivity \u00b120%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">29.9\u201330.3</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.90\u20130.91</td><td align=\"char\" valign=\"top\" char=\"\u2013\" rowspan=\"1\" colspan=\"1\">87\u201394</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Stable performance indicating robustness to parameter variation</td></tr></tbody></table>\n"
+                        },
+                        "text": "Variant\tPSNR (dB)\tSSIM\tAccuracy (%)\tObservation\t \tFull CKF-DNN\u202f+\u202fadaptive fusion\t30.2\u202f\u00b1\u202f0.9\t0.91\u202f\u00b1\u202f0.03\t88\u201395\tBest reconstruction and classification; robust across organs\t \tFixed-weight fusion\t29.5\u202f\u00b1\u202f1.0\t0.88\u202f\u00b1\u202f0.04\t85\u201391\tPerformance degradation observed; adaptive weighting beneficial\t \tDNN only\t29.1\u202f\u00b1\u202f1.0\t0.86\u202f\u00b1\u202f0.04\t83\u201389\tDemonstrates the contribution of CKF guidance\t \tSensitivity \u00b120%\t29.9\u201330.3\t0.90\u20130.91\t87\u201394\tStable performance indicating robustness to parameter variation\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41427,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Table 4 provides a quantitative comparison of the proposed CKF-DNN framework with recent transformer-based and diffusion-based approaches. The proposed method achieved classification accuracies of 85.7% for liver, 84.2% for kidney, 88.2% for lung, and 73.3% for heart, outperforming both transformer-based methods (83.2, 80.5, 85.0, 70.1%) and diffusion-based models (84.5, 81.7, 86.3, 72.4%). In addition, the CKF-DNN framework achieved the highest macro-averaged AUC (0.92) and micro-averaged AUC (0.94) compared with transformer-based models (0.88, 0.89) and diffusion-based models (0.89, 0.90). These results quantitatively demonstrate that the integration of CKF guidance improves the ability of DNN to handle noise and incomplete data while enhancing multi organ disease classification accuracy. Overall, the proposed hybrid framework demonstrates consistent improvements of approximately 2\u20133% in organ-wise classification accuracy and 0.02\u20130.04 in AUC values compared with recent approaches, indicating meaningful performance gains relative to existing methods.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42500,
+                        "infons": {
+                            "file": "tab4.xml",
+                            "id": "tab4",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Comparison of the proposed CKF-DNN approach with recent transformer-based and diffusion-based methods across four organs.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42622,
+                        "infons": {
+                            "file": "tab4.xml",
+                            "id": "tab4",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Method</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Liver Acc (%)</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Kidney Acc (%)</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Lung Acc (%)</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Heart Acc (%)</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Macro-AUC</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Micro-AUC</th></tr></thead><tbody><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Transformer-based <xref rid=\"ref25\" ref-type=\"bibr\">25</xref></td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">83.2</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">80.5</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">85.0</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">70.1</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">0.88</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">0.89</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Diffusion-based <xref rid=\"ref26\" ref-type=\"bibr\">26</xref></td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">84.5</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">81.7</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">86.3</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">72.4</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">0.89</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">0.90</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Baseline DNN</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">81.2</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">82.4</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">83.8</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">71.2</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">0.88</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">0.88</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">CKF-DNN (proposed)</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">\n<bold>85.7</bold>\n</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">\n<bold>84.2</bold>\n</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">\n<bold>88.2</bold>\n</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">\n<bold>73.3</bold>\n</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">\n<bold>0.92</bold>\n</td><td align=\"char\" valign=\"middle\" char=\".\" rowspan=\"1\" colspan=\"1\">\n<bold>0.94</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "Method\tLiver Acc (%)\tKidney Acc (%)\tLung Acc (%)\tHeart Acc (%)\tMacro-AUC\tMicro-AUC\t \tTransformer-based \t83.2\t80.5\t85.0\t70.1\t0.88\t0.89\t \tDiffusion-based \t84.5\t81.7\t86.3\t72.4\t0.89\t0.90\t \tBaseline DNN\t81.2\t82.4\t83.8\t71.2\t0.88\t0.88\t \tCKF-DNN (proposed)\t85.7\t84.2\t88.2\t73.3\t0.92\t0.94\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42904,
+                        "infons": {
+                            "file": "tab4.xml",
+                            "id": "tab4",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "The highest values of each metric is shown in bold.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42956,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "To evaluate whether the observed improvements were statistically significant, paired t-tests were performed between the proposed hybrid framework and the baseline CKF and DNN models using PSNR and SSIM values across the 50 simulated cases. The results indicated that the improvements achieved by the hybrid model were statistically significant (p\u202f<\u202f0.05), confirming that the observed reconstruction gains were not due to random variation. In addition, paired sample t-tests were conducted on classification accuracy and macro- and micro-AUC values across multiple experimental runs to further validate the statistical significance of the observed performance improvements. Ninety-five percent confidence intervals (CI) were computed for each metric to quantify variability and verify that performance differences between methods were statistically significant. For example, in liver classification, the CKF-DNN framework achieved an accuracy of 85.7% (95% CI: 83.1\u201388.3%), compared with 81.2% (95% CI: 78.0\u201384.3%) for the baseline DNN (p\u202f<\u202f0.01), confirming a statistically robust improvement. Similar trends were observed across the remaining organs. Furthermore, a two-way analysis of variance (ANOVA) was conducted to evaluate image reconstruction performance for the proposed framework across different disease severity levels (normal, mild, and severe). The results demonstrated that the hybrid CKF-DNN framework significantly improved image reconstruction performance (p\u202f<\u202f0.05) across the evaluated severity levels for multi-organ disease analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44529,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Despite the promising performance of the proposed CKF-DNN framework, several limitations should be acknowledged. First, the experimental evaluation was conducted using a relatively small dataset, which may limit the generalizability of the learned representations across diverse patient populations, imaging protocols, scanners, and pathology staining variations. Second, disease severity labels were derived from dataset annotations rather than prospective expert-based clinical validation. Consequently, the reported diagnostic results should be interpreted as indicators of algorithmic performance rather than as clinical decision support outcomes. Third, the CKF formulation assumes approximately Gaussian noise in the latent feature space. Although this assumption is common in nonlinear filtering methods, more complex non-Gaussian noise characteristics may exist in raw radiological or pathological images. Fourth, although the computational feasibility of the framework was demonstrated in simulation experiments, the current implementation has not yet been optimized for real-time deployment or resource constrained clinical hardware, particularly when processing high dimensional image patches. Furthermore, radiology-pathology spatial alignment was performed at the whole organ level rather than through voxel-to-histology correspondence, which may limit fine grained cross modal analysis. Finally, although improvements were demonstrated through adaptive fusion and reconstruction mechanisms, further investigations involving larger ablation studies, multicenter datasets, and comparisons with emerging transformer- and diffusion-based architectures remain important directions for future research. Evaluating robustness across different scanners and acquisition protocols will also be critical for future clinical deployment. Despite these limitations, simulation-based evaluation remains a widely accepted preliminary step for assessing algorithmic robustness before large scale validation on real clinical datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46560,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46571,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, a simulation-based hybrid framework integrating cubature Kalman filtering (CKF) with deep neural networks (DNN) was presented for multimodal medical image reconstruction and organ-wise disease classification. The proposed approach combines the uncertainty aware state estimation capability of CKF with the representation learning capacity of DNN to improve both image reconstruction quality and classification performance. The framework was evaluated using 50 simulated multimodal cases representing four organs (liver, kidney, lung, and heart) and three disease severity levels: normal, mild, and severe. The results demonstrated consistent improvements in reconstruction fidelity and classification performance compared with standalone CKF and DNN models. Quantitative evaluation indicated that the hybrid framework achieved an average improvement of approximately 1.9\u202fdB in peak signal-to-noise ratio, an increase of 0.09 in structural similarity index measure, and 5\u201310% higher classification accuracy across the evaluated organs. Additional analyses using receiver operating characteristics curve and area under the curve metrics, confusion matrices, and residual error distributions further confirmed that the proposed framework preserves important structural and pathological characteristics while improving discrimination between disease severity levels. Although the results demonstrate promising algorithmic performance, the present study was conducted using simulation experiments based on synthetic multimodal datasets. Therefore, the framework should be interpreted as a computational proof-of-concept rather than a clinically validated diagnostic system. Future work will focus on validating the proposed method using larger real world medical imaging datasets, incorporating multi-center clinical data, and evaluating robustness across different imaging modalities, scanners, and acquisition protocols. Further extensions may also investigate the integration of emerging architectures such as transformer-based or diffusion-based models to enhance reconstruction fidelity and diagnostic interpretability. Overall, the proposed CKF-DNN hybrid framework provides a flexible computational approach for integrating nonlinear filtering with deep learning in multimodal medical image analysis and offers a promising direction for future research in robust image reconstruction and organ-wise disease classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49015,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Edited by: Vinayakumar Ravi, Prince Mohammad bin Fahd University, Saudi Arabia",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49094,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Reviewed by: Rayyan Azam Khan, CancerCare Manitoba, Canada",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49153,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Ali Haider Khan, Lahore Garrison University, Pakistan",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49207,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49235,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The data analyzed in this study is subject to the following licenses/restrictions: All data used in this study were synthetically generated for simulation purposes and no human or public patient data were used. Therefore, formal ethical approval and informed consent were not applicable. Requests to access these datasets should be directed to sarif@kfu.edu.sa.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49597,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49618,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "SA: Conceptualization, Data curation, Formal analysis, Funding acquisition, Investigation, Methodology, Software, Validation, Visualization, Writing \u2013 original draft, Writing \u2013 review & editing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49817,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflict of interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49838,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that this work was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50011,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Generative AI statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50035,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that Generative AI was not used in the creation of this manuscript.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50126,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "Any alternative text (alt text) provided alongside figures in this article has been generated by Frontiers with the support of artificial intelligence and reasonable efforts have been made to ensure accuracy, including review by the authors wherever possible. If you identify any issues, please contact us.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50433,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Publisher\u2019s note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50452,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50799,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50810,
+                        "infons": {
+                            "fpage": "108200",
+                            "name_0": "surname:Seoni;given-names:S",
+                            "name_1": "surname:Shahini;given-names:A",
+                            "name_2": "surname:Meiburger;given-names:KM",
+                            "name_3": "surname:Marzola;given-names:F",
+                            "name_4": "surname:Rotunno;given-names:G",
+                            "name_5": "surname:Acharya;given-names:UR",
+                            "pub-id_doi": "10.1016/j.cmpb.2024.108200",
+                            "pub-id_pmid": "38677080",
+                            "section_type": "REF",
+                            "source": "Comput Methods Prog Biomed",
+                            "type": "ref",
+                            "volume": "250",
+                            "year": "2024"
+                        },
+                        "text": "All you need is data preparation: a systematic review of image harmonization techniques in multi-center/device studies for medical support systems",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50957,
+                        "infons": {
+                            "fpage": "103671",
+                            "name_0": "surname:Yuan;given-names:Z",
+                            "name_1": "surname:Stojanovski;given-names:D",
+                            "name_2": "surname:Li;given-names:L",
+                            "name_3": "surname:Gomez;given-names:A",
+                            "name_4": "surname:Jogeesvaran;given-names:H",
+                            "name_5": "surname:Puyol-Ant\u00f3n;given-names:E",
+                            "pub-id_doi": "10.1016/j.media.2025.103671",
+                            "pub-id_pmid": "40554255",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "105",
+                            "year": "2025"
+                        },
+                        "text": "Deepspv: a deep learning pipeline for 3D spleen volume estimation from 2D ultrasound images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51049,
+                        "infons": {
+                            "fpage": "109256",
+                            "name_0": "surname:Matta;given-names:S",
+                            "name_1": "surname:Lamard;given-names:M",
+                            "name_2": "surname:Zhang;given-names:P",
+                            "name_3": "surname:Le Guilcher;given-names:A",
+                            "name_4": "surname:Borderie;given-names:L",
+                            "name_5": "surname:Cochener;given-names:B",
+                            "pub-id_doi": "10.1016/j.compbiomed.2024.109256",
+                            "pub-id_pmid": "39427426",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "183",
+                            "year": "2024"
+                        },
+                        "text": "A systematic review of generalization research in medical image classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51128,
+                        "infons": {
+                            "fpage": "110094",
+                            "name_0": "surname:Hussain;given-names:J",
+                            "name_1": "surname:B\u00e5th;given-names:M",
+                            "name_2": "surname:Ivarsson;given-names:J",
+                            "pub-id_doi": "10.1016/j.compbiomed.2025.110094",
+                            "pub-id_pmid": "40198987",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "191",
+                            "year": "2025"
+                        },
+                        "text": "Generative adversarial networks in medical image reconstruction: a systematic literature review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51224,
+                        "infons": {
+                            "fpage": "1254",
+                            "lpage": "69",
+                            "name_0": "surname:Arasaratnam;given-names:I",
+                            "name_1": "surname:Haykin;given-names:S",
+                            "pub-id_doi": "10.1109/TAC.2009.2019800",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Autom Control",
+                            "type": "ref",
+                            "volume": "54",
+                            "year": "2009"
+                        },
+                        "text": "Cubature kalman filters",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51248,
+                        "infons": {
+                            "fpage": "980",
+                            "lpage": "93",
+                            "name_0": "surname:Li;given-names:Y",
+                            "name_1": "surname:Shao;given-names:HC",
+                            "name_2": "surname:Liang;given-names:X",
+                            "name_3": "surname:Chen;given-names:L",
+                            "name_4": "surname:Li;given-names:R",
+                            "name_5": "surname:Jiang;given-names:S",
+                            "pub-id_doi": "10.1109/TMI.2023.3325703",
+                            "pub-id_pmid": "37851552",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "2024"
+                        },
+                        "text": "Zero-shot medical image translation via frequency-guided diffusion models",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51322,
+                        "infons": {
+                            "fpage": "1194",
+                            "lpage": "205",
+                            "name_0": "surname:Zhao;given-names:K",
+                            "name_1": "surname:Pang;given-names:K",
+                            "name_2": "surname:Hung;given-names:ALY",
+                            "name_3": "surname:Zheng;given-names:H",
+                            "name_4": "surname:Yan;given-names:R",
+                            "name_5": "surname:Sung;given-names:K",
+                            "pub-id_doi": "10.1109/TMI.2024.3483109",
+                            "pub-id_pmid": "39418139",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "44",
+                            "year": "2025"
+                        },
+                        "text": "MRI super-resolution with partial diffusion models",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51373,
+                        "infons": {
+                            "fpage": "277",
+                            "lpage": "89",
+                            "name_0": "surname:Hu;given-names:P",
+                            "name_1": "surname:Li;given-names:J",
+                            "name_2": "surname:Wang;given-names:Y",
+                            "name_3": "surname:Kong;given-names:D",
+                            "pub-id_doi": "10.1016/j.intonc.2025.06.007",
+                            "section_type": "REF",
+                            "source": "Int. Oncol.",
+                            "type": "ref",
+                            "volume": "1",
+                            "year": "2025"
+                        },
+                        "text": "Deep learning in abdominal organ segmentation: a review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51429,
+                        "infons": {
+                            "fpage": "352",
+                            "lpage": "67",
+                            "name_0": "surname:Buchnik;given-names:I",
+                            "name_1": "surname:Revach;given-names:G",
+                            "name_2": "surname:Steger;given-names:D",
+                            "name_3": "surname:Van Sloun;given-names:RJ",
+                            "name_4": "surname:Routtenberg;given-names:T",
+                            "name_5": "surname:Shlezinger;given-names:N",
+                            "pub-id_doi": "10.1109/TSP.2023.3344360",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Signal Process",
+                            "type": "ref",
+                            "volume": "72",
+                            "year": "2023"
+                        },
+                        "text": "Latent-Kalmannet: learned Kalman filtering for tracking from high-dimensional signals",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51515,
+                        "infons": {
+                            "fpage": "383",
+                            "lpage": "400",
+                            "name_0": "surname:Komura;given-names:D",
+                            "name_1": "surname:Ochi;given-names:M",
+                            "name_2": "surname:Ishikawa;given-names:S",
+                            "pub-id_doi": "10.1016/j.csbj.2024.12.033",
+                            "pub-id_pmid": "39897057",
+                            "section_type": "REF",
+                            "source": "Comput Struct Biotechnol J",
+                            "type": "ref",
+                            "volume": "27",
+                            "year": "2025"
+                        },
+                        "text": "Machine learning methods for histopathological image analysis: updates in 2024",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51594,
+                        "infons": {
+                            "fpage": "109014",
+                            "name_0": "surname:Zubair;given-names:M",
+                            "name_1": "surname:Hussain;given-names:M",
+                            "name_2": "surname:Albashrawi;given-names:MA",
+                            "name_3": "surname:Bendechache;given-names:M",
+                            "name_4": "surname:Owais;given-names:M",
+                            "pub-id_doi": "10.1016/j.cmpb.2025.109014",
+                            "pub-id_pmid": "40946521",
+                            "section_type": "REF",
+                            "source": "Comput Methods Prog Biomed",
+                            "type": "ref",
+                            "volume": "272",
+                            "year": "2025"
+                        },
+                        "text": "A comprehensive review of techniques, algorithms, advancements, challenges, and clinical applications of multi-modal medical image fusion for improved diagnosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51755,
+                        "infons": {
+                            "fpage": "110979",
+                            "name_0": "surname:Denisova;given-names:E",
+                            "name_1": "surname:Francia;given-names:P",
+                            "name_2": "surname:Nardi;given-names:C",
+                            "name_3": "surname:Bocchi;given-names:L",
+                            "pub-id_doi": "10.1016/j.compbiomed.2025.110979",
+                            "pub-id_pmid": "40882480",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "197",
+                            "year": "2025"
+                        },
+                        "text": "Advancements in biomedical rendering: a survey on AI-based denoising techniques",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51835,
+                        "infons": {
+                            "fpage": "1702",
+                            "lpage": "14",
+                            "name_0": "surname:Zhong;given-names:Y",
+                            "name_1": "surname:Zhang;given-names:S",
+                            "name_2": "surname:Liu;given-names:Z",
+                            "name_3": "surname:Zhang;given-names:X",
+                            "name_4": "surname:Mo;given-names:Z",
+                            "name_5": "surname:Zhang;given-names:Y",
+                            "pub-id_doi": "10.1109/TMI.2023.3347511",
+                            "pub-id_pmid": "38147426",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "2024"
+                        },
+                        "text": "Unsupervised fusion of misaligned PAT and MRI images via mutually reinforcing cross-modality image generation and registration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51962,
+                        "infons": {
+                            "fpage": "2062",
+                            "name_0": "surname:Chen;given-names:K",
+                            "name_1": "surname:Zheng;given-names:L",
+                            "name_2": "surname:Zhao;given-names:H",
+                            "name_3": "surname:Wang;given-names:Z",
+                            "pub-id_doi": "10.3390/math12132062",
+                            "section_type": "REF",
+                            "source": "Mathematics",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2024"
+                        },
+                        "text": "Deep learning-based intelligent diagnosis of lumbar diseases with multi-angle view of intervertebral disc",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52068,
+                        "infons": {
+                            "fpage": "104025",
+                            "name_0": "surname:Chaudhary;given-names:Q u a",
+                            "name_1": "surname:Qureshi;given-names:SA",
+                            "name_2": "surname:Sadiq;given-names:T",
+                            "name_3": "surname:Usman;given-names:A",
+                            "name_4": "surname:Khawar;given-names:A",
+                            "name_5": "surname:Shah;given-names:STH",
+                            "pub-id_doi": "10.1016/j.rineng.2025.104025",
+                            "section_type": "REF",
+                            "source": "Results Eng",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2025"
+                        },
+                        "text": "SAlexNet: superimposed AlexNet using residual attention mechanism for accurate and efficient automatic primary brain tumor detection and classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52220,
+                        "infons": {
+                            "fpage": "168",
+                            "name_0": "surname:Gharaibeh;given-names:NY",
+                            "name_1": "surname:De Fazio;given-names:R",
+                            "name_2": "surname:Al-Naami;given-names:B",
+                            "name_3": "surname:Al-Hinnawi;given-names:AR",
+                            "name_4": "surname:Visconti;given-names:P",
+                            "pub-id_doi": "10.3390/jimaging10070168",
+                            "pub-id_pmid": "39057739",
+                            "section_type": "REF",
+                            "source": "J Imaging",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2024"
+                        },
+                        "text": "Automated lung Cancer diagnosis applying Butterworth filtering, bi-level feature extraction, and Sparce convolutional neural network to Luna 16 CT images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52374,
+                        "infons": {
+                            "fpage": "3898",
+                            "lpage": "3908",
+                            "name_0": "surname:Liu;given-names:J",
+                            "name_1": "surname:Yang;given-names:H",
+                            "name_2": "surname:Zhou;given-names:HY",
+                            "name_3": "surname:Yu;given-names:L",
+                            "name_4": "surname:Liang;given-names:Y",
+                            "name_5": "surname:Yu;given-names:Y",
+                            "pub-id_doi": "10.1109/TMI.2024.3508698",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "44",
+                            "year": "2024"
+                        },
+                        "text": "Swin-UMamba\u2020: adapting mamba-based vision foundation models for medical image segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52467,
+                        "infons": {
+                            "fpage": "101713",
+                            "name_0": "surname:Han;given-names:T",
+                            "name_1": "surname:\u017digutyt\u0117;given-names:L",
+                            "name_2": "surname:Huck;given-names:L",
+                            "name_3": "surname:Huppertz;given-names:MS",
+                            "name_4": "surname:Siepmann;given-names:R",
+                            "name_5": "surname:Gandelsman;given-names:Y",
+                            "pub-id_doi": "10.1016/j.xcrm.2024.101713",
+                            "pub-id_pmid": "39241771",
+                            "section_type": "REF",
+                            "source": "Cell Rep Med",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2024"
+                        },
+                        "text": "Reconstruction of patient-specific confounders in AI-based radiologic image interpretation using generative pretraining",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52587,
+                        "infons": {
+                            "fpage": "101663",
+                            "name_0": "surname:Obaid;given-names:W",
+                            "name_1": "surname:Hussain;given-names:A",
+                            "name_2": "surname:Rabie;given-names:T",
+                            "name_3": "surname:Abd;given-names:DH",
+                            "name_4": "surname:Mansoor;given-names:W",
+                            "pub-id_doi": "10.1016/j.imu.2025.101663",
+                            "section_type": "REF",
+                            "source": "Inf Med Unlocked",
+                            "type": "ref",
+                            "volume": "57",
+                            "year": "2025"
+                        },
+                        "text": "Multi-model deep learning approach for the classification of kidney diseases using medical images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52685,
+                        "infons": {
+                            "fpage": "6199",
+                            "lpage": "221",
+                            "name_0": "surname:Tao;given-names:J",
+                            "name_1": "surname:Liang;given-names:L",
+                            "name_2": "surname:Hao;given-names:S",
+                            "name_3": "surname:Chen;given-names:Y",
+                            "name_4": "surname:Yang;given-names:Z",
+                            "name_5": "surname:Cai;given-names:Y",
+                            "pub-id_doi": "10.1016/j.apsb.2025.09.039",
+                            "pub-id_pmid": "41477342",
+                            "section_type": "REF",
+                            "source": "Acta Pharm Sin B",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Artificial intelligence for radiopharmaceutical and molecular imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52755,
+                        "infons": {
+                            "fpage": "196",
+                            "lpage": "205",
+                            "name_0": "surname:Klein;given-names:S",
+                            "name_1": "surname:Staring;given-names:M",
+                            "name_2": "surname:Murphy;given-names:K",
+                            "name_3": "surname:Viergever;given-names:MA",
+                            "name_4": "surname:Pluim;given-names:JPW",
+                            "pub-id_doi": "10.1109/TMI.2009.2035616",
+                            "pub-id_pmid": "19923044",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "29",
+                            "year": "2010"
+                        },
+                        "text": "Elastix: a toolbox for intensity-based medical image registration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52821,
+                        "infons": {
+                            "fpage": "2229",
+                            "lpage": "40",
+                            "name_0": "surname:Wang;given-names:H",
+                            "name_1": "surname:Ni;given-names:D",
+                            "name_2": "surname:Wang;given-names:Y",
+                            "pub-id_doi": "10.1109/TMI.2024.3362968",
+                            "pub-id_pmid": "38319758",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "2024"
+                        },
+                        "text": "Recursive deformable pyramid network for unsupervised medical image registration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52902,
+                        "infons": {
+                            "fpage": "800",
+                            "lpage": "12",
+                            "name_0": "surname:Tian;given-names:J",
+                            "name_1": "surname:Xue;given-names:J",
+                            "name_2": "surname:Dai;given-names:Y",
+                            "name_3": "surname:Chen;given-names:J",
+                            "name_4": "surname:Zheng;given-names:J",
+                            "pub-id_doi": "10.1109/TITB.2008.926395",
+                            "pub-id_pmid": "19000961",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Inf Technol Biomed",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2008"
+                        },
+                        "text": "A novel software platform for medical image processing and analyzing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52971,
+                        "infons": {
+                            "fpage": "689",
+                            "lpage": "91",
+                            "name_0": "surname:Brown;given-names:RA",
+                            "name_1": "surname:Zhu;given-names:H",
+                            "name_2": "surname:Mitchell;given-names:JR",
+                            "pub-id_doi": "10.1109/TMI.2005.845320",
+                            "pub-id_pmid": "15889555",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2005"
+                        },
+                        "text": "Distributed vector processing of a new local multiscale Fourier transform for medical imaging applications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53078,
+                        "infons": {
+                            "fpage": "107775",
+                            "name_0": "surname:Ekanayake;given-names:M",
+                            "name_1": "surname:Pawar;given-names:K",
+                            "name_2": "surname:Harandi;given-names:M",
+                            "name_3": "surname:Egan;given-names:G",
+                            "name_4": "surname:Chen;given-names:Z",
+                            "pub-id_doi": "10.1016/j.compbiomed.2023.107775",
+                            "pub-id_pmid": "38061154",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "168",
+                            "year": "2024"
+                        },
+                        "text": "McSTRA: a multi-branch cascaded swin transformer for point spread function-guided robust MRI reconstruction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53186,
+                        "infons": {
+                            "fpage": "121413",
+                            "name_0": "surname:Xu;given-names:Z",
+                            "name_1": "surname:Zhang;given-names:R",
+                            "name_2": "surname:Huang;given-names:W",
+                            "name_3": "surname:Deng;given-names:G",
+                            "name_4": "surname:Liang;given-names:X",
+                            "name_5": "surname:Guo;given-names:L",
+                            "pub-id_doi": "10.1016/j.neuroimage.2025.121413",
+                            "pub-id_pmid": "40759265",
+                            "section_type": "REF",
+                            "source": "NeuroImage",
+                            "type": "ref",
+                            "volume": "318",
+                            "year": "2025"
+                        },
+                        "text": "Accelerating multi-directional diffusion MRI through patch-based joint reconstruction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

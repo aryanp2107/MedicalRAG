@@ -1,0 +1,2471 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260502",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13131096",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.3389/fninf.2026.1795354",
+                            "article-id_pmc": "PMC13131096",
+                            "elocation-id": "1795354",
+                            "kwd": "artificial intelligence brain tumor classification deep learning generative adversarial network MRI image VGG16",
+                            "license": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.",
+                            "name_0": "surname:Mustafa;given-names:Omara",
+                            "name_1": "surname:Alhatamleh;given-names:Salem",
+                            "name_10": "surname:Alghulayqah;given-names:Latifah",
+                            "name_11": "surname:Amin;given-names:Mohammad",
+                            "name_2": "surname:Mhanna;given-names:Hamad Yahia Abu",
+                            "name_3": "surname:Almahmoud;given-names:Abdallah",
+                            "name_4": "surname:Malkawi;given-names:Rami",
+                            "name_5": "surname:Malkawi;given-names:Majd",
+                            "name_6": "surname:Yaseen;given-names:Abdel-Baset Bani",
+                            "name_7": "surname:Akhdar;given-names:Hanan Fawaz",
+                            "name_8": "surname:Malkawi;given-names:Hatem",
+                            "name_9": "surname:Maashey;given-names:Fatimah",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "20",
+                            "year": "2026"
+                        },
+                        "text": "A deep learning based NeuroFusionNet approach for automated brain tumor diagnosis from MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 91,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Background",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 102,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Brain tumor diagnosis from magnetic resonance imaging (MRI) remains a challenging task due to the high variability in tumor appearance and the limitations of manual interpretation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 283,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 291,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "To address these challenges, this paper proposes NeuroFusionNet, a deep learning framework for automated brain tumor classification from MRI. The framework integrates GAN-based synthetic image generation with transfer learning using a fine-tuned VGG16 backbone. Real and GAN-generated MRI images are passed through VGG16 to extract discriminative feature representations, which are then used for final classification. To adapt the model to domain-specific MRI characteristics while preserving pretrained knowledge, the last ten layers of VGG16 are fine-tuned and the remaining layers are kept frozen.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 892,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 900,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The effectiveness of NeuroFusionNet is validated on two publicly available brain MRI datasets. Experimental results demonstrate that the proposed learning framework achieves classification accuracies of 99.05 and 98.75% on the Brain Tumor MRI Dataset and the MRI with Bounding Boxes Dataset, respectively, consistently outperforming several state-of-the-art neural architectures, including VGG16, VGG19, MobileNetV2, DenseNet121, and NASNetLarge.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1347,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1358,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The results suggest that NeuroFusionNet is effective for the evaluated public MRI datasets; additional external validation is required.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1494,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1507,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Brain tumors arise from abnormal cell proliferation within the brain or adjacent intracranial structures and may be primary or metastatic. They are classified into two categories: primary, which indicates that they originate in the brain, and secondary, which indicates that they spread from another area of the body. Additionally, types of brain tumors are classified based on their histomorphology, which is determined by their unique molecular characteristics and tissue histology. Meningioma is the most common primary CNS tumor overall, whereas glioblastoma is the most common malignant primary brain tumor, they constitute a significant threat to public health. Gliomas can impact any region of the brain and may present as either well-defined or diffusely dispersed tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2288,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Gliomas are tumors of the glial cells of the brain, which are used to support the functioning of the nerves inside the brain. These tumors belong to a category called astrocytoma, oligodendrogliomas, brain stem gliomas, and optic gliomas, all of which may be classified as either benign or malignant neoplasms. The most common type of brain tumor is meningioma, which originates from the meninges, the membrane that encases and protects the brain and spinal cord. Approximately 10\u201315% of meningiomas are categorized as atypical or malignant, but the rest, constituting 85\u201390%, are benign. A pituitary adenoma is the commonest tumor of the pituitary gland, the organ controlling the endocrine system. Tumors of the pituitary gland are classified according to their size into pituitary microadenomas (those with a diameter of less than 10\u202fmm), pituitary macroadenomas (greater than 10\u202fmm), and massive tumors (more than 40\u202fmm).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3224,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Research on the classification of brain tumors is complex and continuing. This study aimed to classify several forms of brain tumors using MRI scans. Computed Tomography (CT) and Magnetic Resonance Imaging (MRI) are two prevalent technologies for detecting irregularities in the location, size, or composition of brain tissue. Medical experts favor MRI over other diagnostic methods, and research in this field is increasingly significant. Tissues can be imaged with CT and MRI to determine their dimensions, morphology, and position.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3759,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Recent developments in medical AI have increasingly validated machine learning in a spectrum of diseases. For instance, federated learning is the focus of extensive research concerning IoT-based health applications, while ensemble approaches have generated great results in coronary artery disease detection. Supervised learning methods, too, have been efficiently used in the classification of neurological conditions, such as migraine. The above studies illustrate that AI is expected to play an increasingly important role in the health domain, thus spurring more investigations into deep-learning architectures, mainly NeuroFusionNet, for complex diagnostic problems. In the present study, despite the availability of recent architectures such as ResNet50 and Vision Transformers, VGG16 was selected as a backbone due to its stability, simplicity in transfer learning, and demonstrated strong performance in multiple medical imaging tasks. To counter class imbalance, the minority tumor classes were oversampled, and class weighting in training was implemented. A mean squared error (MSE) loss function was used to train the GAN component to enhance the critical features corresponding to MRI images for classification. As for transfer learning, this was achieved by unfreezing the last ten layers of VGG16, with loss convergence monitored through validation loss tracking and early stopping. For completeness and reproducibility, a full architectural block diagram has been inserted to illustrate GAN-based feature enhancement combined with transfer learning and classification layers.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5350,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This study aims to improve the care of patients with brain tumors and increase the accuracy of diagnosis by leveraging deep learning models. The main contributions of this study are as follows:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5544,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A new hybrid method, VGG16 and generative adversarial networks (GANs) (NeuroFusionNet), is presented to identify different types of brain tumors and distinguish them from healthy tissue.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5731,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "To improve brain tumor classification performance, the suggested model incorporates deep transfer learning.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5839,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The NeuroFusionNet was compared with VGG16, VGG19, MobileNetV2, DenseNet121, and NASNetLarge under a consistent experimental setting.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5973,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "To improve generality and resilience, the model uses data augmentation techniques, fine-tuning strategies, and an ideal learning rate schedule.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6117,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6125,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The proposed NeuroFusionNet framework combines GAN-based synthetic image generation with transfer learning using a VGG16 backbone to classify brain MRI images into four classes: glioma, meningioma, no tumor, and pituitary tumor, as shown in Figure 1. Real and GAN-generated MRI images are passed through the VGG16 backbone to extract feature representations, which are then combined before the final classification layer. The last ten layers of VGG16 were unfrozen for fine-tuning, while the remaining layers were kept frozen to preserve pretrained ImageNet representations. Classification was performed using a custom classifier head composed of Global Average Pooling, dense layers, batch normalization, and dropout, followed by a softmax output layer. Adam optimization with cosine decay learning-rate scheduling, early stopping, and ReduceLROnPlateau was used during training.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7006,
+                        "infons": {
+                            "file": "fninf-20-1795354-g001.jpg",
+                            "id": "fig1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "High-level overview of the proposed NeuroFusionNet workflow for brain tumor classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7098,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Dataset",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7106,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The methodology was evaluated using two datasets: the Brain Tumor MRI dataset, with selected squares, including a 7,153 MRI images, and another brain tumor MRI with boundary boxes, consisting of 5,249 MRI images. Both datasets comprise four categories: glioma, pituitary, meningioma, and No tumor, as illustrated in Figure 2. Table 1 illustrates the allocation of classes for both datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7497,
+                        "infons": {
+                            "file": "fninf-20-1795354-g002.jpg",
+                            "id": "fig2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Sample in the data brain tumor MRI dataset and MRI for brain tumor with bounding boxes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7585,
+                        "infons": {
+                            "file": "tab1.xml",
+                            "id": "tab1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Number of images and category: brain tumor.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7629,
+                        "infons": {
+                            "file": "tab1.xml",
+                            "id": "tab1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Dataset</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Case</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Number of images</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"5\" colspan=\"1\">Brain tumor MRI dataset</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Glioma</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">1,621</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Meningioma</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">1775</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">No tumor</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">2000</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Pituitary</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">1757</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Total</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">7,153</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"5\" colspan=\"1\">Brain tumor MRI with boundary boxes</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Glioma</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">1,289</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Meningioma</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">1,589</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">No tumor</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">811</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Pituitary</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">1,560</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Total</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">5,249</td></tr></tbody></table>\n"
+                        },
+                        "text": "Dataset\tCase\tNumber of images\t \tBrain tumor MRI dataset\tGlioma\t1,621\t \tMeningioma\t1775\t \tNo tumor\t2000\t \tPituitary\t1757\t \tTotal\t7,153\t \tBrain tumor MRI with boundary boxes\tGlioma\t1,289\t \tMeningioma\t1,589\t \tNo tumor\t811\t \tPituitary\t1,560\t \tTotal\t5,249\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7883,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All data used in this study were obtained from publicly available databases, and their usage did not require patient consent or institutional authorization, as they are publicly available and de-identified datasets, in accordance with applicable ethical guidelines",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8148,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Preprocessing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8162,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this part of the methodology, the preprocessing pipeline has been discussed in detail to address class imbalance and augment MRI images from two Kaggle datasets: the Brain Tumor MRI Dataset and the MRI for Brain Tumor with Bounding Boxes. Class distributions in the original datasets were first analyzed to determine which of the four tumor types was imbalanced. For instance, the classes were resampled using the random oversampling of minority classes via duplication until they had equal representation across all classes. The newly created dataset was saved to a new directory, including the original images and replicated images. All images were resized to the same dimensions of 224\u202f\u00d7\u202f224 pixels, meeting requirements for input to deep learning models like VGG16 for computational efficiency and uniformity during training. To ensure proper evaluation, the dataset was first divided into training (80%), validation (10%), and testing (10%) subsets. Data augmentation and balancing techniques were subsequently applied to improve class representation and enhance model generalization. Care was taken to maintain separation between training and evaluation processes, ensuring that model performance reflects its ability to generalize to unseen data, as illustrated in Figure 3. More importantly, to improve the performance of the model, data augmentation was performed with the Image Data Generator in TensorFlow, in which random transformations were applied, including rotations, zooms, shearing, shifting, and flips across a horizontal axis that represented variability in the real world and would create different representations of MRI images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9822,
+                        "infons": {
+                            "file": "fninf-20-1795354-g003.jpg",
+                            "id": "fig3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Dataset preprocessing steps.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9851,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Methods of transfer learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9880,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Pre-trained models are deep learning models that have been created and trained on extensive datasets. As a result, they can extract vast amounts of pertinent data from the input. These models provide a strong foundation for applications such as image classification, language translation, and object detection. Figure 4 illustrates the workflow of transfer learning adopted in this study. Furthermore, fine-tuning pre-trained models can significantly enhance performance, especially when working with limited or domain-specific datasets, while also reducing training time and computational cost. In this study, the proposed model is compared with five pre-trained architectures: VGG16, MobileNetV2, VGG19, DenseNet121, and NASNetLarge.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10616,
+                        "infons": {
+                            "file": "fninf-20-1795354-g004.jpg",
+                            "id": "fig4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "The overall workflow methods of transfer learning in this study.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10681,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Data augmentation generators with GAN",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10719,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this manner, both data augmentation methods and the so-called Generative Adversarial Network (GAN) are implemented separately, which enhances the training process and performance of the deep learning model. Here is how these two methods complement each other: they can obtain a more diverse and representative dataset, which enables the model to perform even better on data it had not encountered earlier.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11128,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As per the explanation, augmentation is done on training images, capturing crops of an image through the Image Data Generator class. The generator utilizes transformation techniques including rotation, zoom, width/height shift, and even horizontal flipping of the target images. These modifications help the model during the training phase by trying to wipe out memorization of the distinct patterns within the images and instead instill generalized features across the distinct versions. By dynamically generating these augmented images during training, the model effectively gets a different version of the data in every epoch cycle. Such might help to counter overfitting by encompassing a greater variety of data. As shown in the sample from the Data Generator Figure 5.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11903,
+                        "infons": {
+                            "file": "fninf-20-1795354-g005.jpg",
+                            "id": "fig5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Sample from data generator.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11931,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Besides, a Generative Adversarial Network (GAN) is also used to perform this task and to expand the dataset even more. The GAN comprises two important models \u2013 a Generator and a Discriminator. The generator generates images from random latent vectors (random noise) by feeding them to transposed convolution layers for creating realistic-looking images. These images are called synthetic images and are aimed at increasing the variety of original training data. On the other hand, the discriminator is made to tell apart real images of the dataset from fake images produced by the generator. With the fake ones, convolutional layers and Leaky ReLU activations analyze the images. The discriminator evaluates the quality of the generated images to enhance the generation of novel images by the generator. As shown in the Overall Workflow GAN Figure 6.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12784,
+                        "infons": {
+                            "file": "fninf-20-1795354-g006.jpg",
+                            "id": "fig6",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "The overall workflow of synthetic images using GAN.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12836,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To produce a dataset that is both larger and more diverse, the combination of methods of data augmentation and GAN-generated images is employed in this approach. Additional variants of original data are contributed with augmented images, whilst GAN images add completely novel data points. All these techniques together improve the training process by making sure that the model is trained with a rich and varied set of images. Furthermore, the data generators used for both augmentation and synthetic image creation ensure that images are adequately preprocessed, scaled, and shuffled before being input into the model for a seamless and efficient training process. In GANs, a least-squares adversarial loss was used for the discriminator to distinguish between real and synthetic images as shown in (Equation 1):",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13651,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As an ablation study for the evaluation of the influence of GAN-generated data on classification performance, two distinct versions of the model NeuroFusionNet were trained: One with traditional augmentation only and the other with both traditional augmentation and GAN-generated samples. The results showed a classification accuracy gain of 1.72% on the Brain Tumor MRI Dataset and 1.41% on the MRI with Bounding Boxes Dataset when GAN-generated images were utilized. This gain is credited to the enrichment of minority classes with the synthetic data and variability that allows better feature learning by the model. This work improved the generator by increasing epochs, fine-tuning the discriminator feedback using label smoothing, and manipulating noise vector sampling to yield or induce more realistic image structure. These improvements improved classification accuracy of synthetic data diversity and realism, leading to increased robustness and generalization of the classification model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14650,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To ensure class balance, synthetic images were generated for minority classes until each class reached the same number of samples as the majority class within the training set. The generated images were combined with real images to form a balanced dataset, with an approximate real-to-synthetic ratio determined dynamically based on class distribution.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15003,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The GAN was trained using a least-squares adversarial loss, and stability was improved through techniques such as label smoothing and controlled noise vector sampling. Although no explicit quantitative metrics such as Fr\u00e9chet Inception Distance (FID) were computed, visual inspection and training stability were used as practical indicators of image quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15363,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Feature extraction with GAN",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15391,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The proposed technique of feature extraction using a Generative Adversarial Network (GAN) works in an advanced way: the generator model of the GAN is used to generate synthetic images, from which discriminative features are extracted that can be utilized in the training of a classifier, or for the enhancement of an existing model. It is a two-pronged approach-increasing the dataset size and permitting the model to learn useful and diverse features from both synthetic and real data.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15878,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "A GAN model is trained using the min-max game between a discriminator D and a generator network G in the original GAN formulation. The GAN aims to approximate a probability distribution function, which is supposed to be the source of some data. The generator-discriminator min-max game\u2019s goal function can be expressed as follows as shown in (Equation 2):",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16236,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "When given a certain random latent vector input, the GAN\u2019s generator creates synthetic images. These random latent vectors act as noise inputs, inputs that the generator converts into images at a resolution of 224\u202f\u00d7\u202f224 pixels, like the samples it was trained on. The artificial images generated by such research can then be supplemented into samples for training purposes to get a better model. In cases where the original dataset is small, these provide a way to improve model learning with a more diverse range of examples.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16770,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Construction for this custom generator architecture is in principle deep convolutional, in keeping with the spirit of DCGAN. The initial ingredient is a fully connected input layer that reshapes the noise vector into a 7\u202f\u00d7\u202f7\u202f\u00d7\u202f256 tensor and follows the series of transposed convolutional layers to upsample the resulting tensor into high resolution images. More details of the structure are as follows. Input layer a 100D latent vector is projected and reshaped as shown in (Equation 3):",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17269,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Upsampling layers three Conv2DTranspose layers upsample the tensor to 14\u202f\u00d7\u202f14, 28\u202f\u00d7\u202f28, and 56\u202f\u00d7\u202f56 resolutions with decreasing filter sizes (128, 64, 32), each followed by batch normalization and ReLU activation as shown in (Equation 4):",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17523,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Output layer a final Conv2DTranspose layer generates a 224\u202f\u00d7\u202f224\u202f\u00d7\u202f3 RGB image as shown in (Equation 5):",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17638,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Then the process will continue by generation of synthetic images, where the first step will involve introducing the synthetic images into a pretrained feature extraction backbone to extract relevant features from each generated image. The synthesized features would then allow the model to capture common modes in the data that may not be present in the actual training set. Once trained, the generator generates a variety of synthetic images, which, in union with real data, enable the model to balance some of the broader patterns and improve generalization. In a post-processing stage, features from these synthetic images are extracted using a pretrained backbone (VGG16) and fused with features from real images before passing into the final classification layer of NeuroFusionNet.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18425,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This feature extraction framework, assisted by GAN-generated data, provides more diversity to the dataset and teaches the model from both real-world and synthetic examples, which makes improvements in generalization. Generation of significant features leads the model to learn a comprehensive representation of wider data diversity, which eventually leads to better performance in various tasks like classification and segmentation. To put it briefly, feature extraction with GAN can help augment the dataset by creating synthetic images, contributing to the higher variability of the data, which in turn produces a better model performance. This is how the mixture of real and synthetic data helps create more generalized decisions that can recognize more complex patterns and improve the accuracy of predictions. As shown in Figure 7.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19262,
+                        "infons": {
+                            "file": "fninf-20-1795354-g007.jpg",
+                            "id": "fig7",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Feature extraction with GAN.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19291,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Transfer learning with VGG16",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19320,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Transfer learning utilizes the already trained VGG16 model to enable the re-utilization of features learned from (GAN) due to its prowess in capturing very complex and hierarchical features of spatial properties. The classification process deals with the identification of four tumor types: glioma, meningioma, no tumor, and pituitary. Here, the VGG16 model is used along with features extracted from GANs. The generator model of the GAN generates synthetic images from random latent vectors, which are then fed into the VGG16 model. These synthetic images offer a rich set of features that complement the original dataset. So, after proving the extracted features that represent the characteristics of both the original and synthetic images for the subsequent layers of the transfer learning pipeline.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20123,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The customized classifier is employed on the uppermost layers of the VGG16 model and transformed into a classifier specific to the task; it also adds Dense layers, batch normalization, and dropout. As a result, these images can be classified into four categories of tumors. While the lower layers of the VGG16 model remain frozen, retaining the advantages of pre-trained features, the upper layers are fine-tuned to adjust the model for the new task. This fine-tuning of the model allows it to reproduce better the high-level feature representation from the combined dataset of real and synthetic images. In this paradigm, GAN-based feature extraction competes with transfer learning to fortify the generalization ability of the model to the dataset. The rich features achieved through VGG16 are made even richer when they are provided with different angles and improvements of synthetic variations from the GAN approach. This creates synergy much grander with GAN and VGG16 in their robustness for classifying the minor patterns, getting a level of accuracy in classification on the brain tumor dataset. As shown in the overall workflow Figure 8.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21271,
+                        "infons": {
+                            "file": "fninf-20-1795354-g008.jpg",
+                            "id": "fig8",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "The overall workflow: transfer learning with VGG16.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21323,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Proposed model: NeuroFusionNet",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21354,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "NeuroFusionNet has been named for the model\u2019s core purpose and its design. The prefix \u201cNeuro\u201d represents its focus on neuroscience and neuroimaging, as it is specifically fashioned to process and segment those kinds of MRI images to detect and classify brain tumors. The word \u201cFusion\u201d refers to the extraordinary combination of the technologies embedded in the model. This approach combines the high-dimensional feature extraction from a GAN-based generator and the domain-specific knowledge from a pre-trained VGG16 model in which the generator and the model are synthesized in such a way that the results appear to be both robust and accurate. Besides the technological characteristics, the synergistic combination of generative modeling and transfer learning aspects is also described by this fusion, and this mechanistic arrangement leads to a holistic and more informative depiction of tumor traits. At the very end of the term, the term \u201cNet\u201d is the one that describes that it is a neural network that constitutes the main part of this solution. The name of NeuroFusionNet encompasses the model\u2019s cutting-edge, interdisciplinary approach to diagnosing and classifying brain tumors, as the model is of crucial importance for brain tumor detection.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22623,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The model uses a GAN to extract features and integrates them with a transfer learning framework to leverage pre-trained knowledge. The process begins with a GAN generator, which processes brain MRI images to create high-quality, multidimensional features. The generator network is shaped from layers of convolution, batch normalization, and up-sampling, and it is designed to adjust image features, which are the most important for the differentiation of tumor types. These extracted features, which are more informative and understandable, are used as input data for the process of transfer learning, where we use the VGG16 model. VGG16 provides a robust foundation by using learned filters that capture general image patterns including edges and textures, which are later adjusted to the tumor classification task. To conduct fine-tuning on VGG16, we limit the last ten layers to be the only ones trainable so that the network retains the learned features but evolves as required. After the primary architecture, the VGG16 outcome is reshaped by Global Average Pooling (GAP), dense layers, batch normalization, and dropout regularization, thus, the model will be enabled to accumulate shared knowledge while at the same time fighting overfitting. The final layer is a softmax layer, which generates probabilities for the four tumor classes. The categorical cross-entropy loss function guides the training process, and it is given by as shown in (Equation 6):",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24084,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Where  is the true label (one-hot encoded) for the class  of sample  is the predicted probability for the class ,  is the number of samples and  is the number of classes. The purpose of this loss is to make sure that the predicted probabilities of the classes are in close agreement with the true labels. The optimization process in NeuroFusionNet uses plans that are even more fine-tuned by adding a Cosine Decay Learning Rate Scheduler, which automatically scales the learning rate  of every epoch t, following a formula as shown in (Equation 7:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24632,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Where  signifies the initial learning value and  is the total number of decay steps epochs. This is the method that vouches for the gradual drop in the learning rate, facilitating more significant adjustments at the beginning of the training and smaller but more accurate corrections as the model converges. As an added measure, callbacks such as Early Stopping done with the help of Reduce LROn Plateau can stop training when the validation loss no longer decreases, prevent overfitting, and decrease the learning rate even more when the model\u2019s performance is stagnant. One of the methods to monitor the model\u2019s performance during training is to use accuracy scores and a confusion matrix to see class-wise predictions. NeuroFusionNet\u2019s balance of robust feature extraction and proper classification is achieved by combining the generative capabilities of the GAN, the representational power of VGG16, and the optimization techniques, making it a perfect tool for brain tumor diagnosis. As shown in the Overview Figure 9.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25662,
+                        "infons": {
+                            "file": "fninf-20-1795354-g009.jpg",
+                            "id": "fig9",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Detailed architecture of the proposed NeuroFusionNet framework, including GAN-based feature extraction and VGG16-based classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25797,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Evaluation proposed method",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25824,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "NeuroFusionNet, the methodology for the detection of brain tumors, looks at various indicators that measure the model\u2019s performance, including but not limited to accuracy, precision, sensitivity, specificity, and F1 score. Every single parameter is valuable to determine the model\u2019s capability of providing accurate diagnosis and clinical applicability. The next paragraphs give detailed descriptions and definitions, as well as equations, a discussion of context, and the relationship of all these modules to the classification of Glioma, Meningioma, No Tumor, and Pituitary cases.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26411,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "TP (True Positives): Cases that the model has diagnosed properly, Glioma, Meningioma, or Pituitary tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26518,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "TN (True Negatives): Situations in which the model is correct and classifies no tumor images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26612,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "FP (False Positives): Instances of a healthy brain image (No Tumor) are misclassified as one of the tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26720,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "FN (False Negatives): Cases a \u201cbrain tumor\u201d that is misclassified as \u201cNo Tumor.\u201d",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26809,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Accuracy is defined as the proportion of correctly classified samples that takes the total occurrence of the correct predictions (both positive and negative) and compares it to the whole number of predictions. It unfolds the full information about the model\u2019s overall effectiveness, particularly in differentiating accurately between Glioma, Meningioma, Pituitary tumors, and no tumor cases as shown in (Equation 8).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27228,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The provision of proportion of correctly identified positive cases to the total number of positive results determines Precision. High precision leads to a reduction in false positives, which is vital in disease categorization and reduction of the number of incorrect cases diagnosis in healthy patients. as shown in (Equation 9).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27558,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Sensitivity (Recall) is a way to assess the model\u2019s ability to accurately identify the true positive cases, which, in turn, tells us how well it detects the Glioma, Meningioma, and Pituitary tumor as shown in (Equation 10).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27784,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Specificity is testing the model\u2019s capacity to correctly tell No Tumor cases; it lowers the chance of false positives. High specificity is extremely important since wrong classification is very common; for example, healthy images can be classified as images of tumors, which can lead to a lot of unnecessary treatments and interventions as shown in (Equation 11).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28150,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The F1 Score is the harmonic mean of Precision and Sensitivity. Using the F1 Score, the classifications of different tumor types and No Tumor cases can be balanced, and especially when the data distribution is imbalanced this metric is even more helpful as shown in (Equation 12).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28431,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "With the incorporation of such evaluations, NeuroFusionNet provides a reliable classification for images about Brain Tumor categories, i.e., Glioma, Meningioma, Pituitary, and No Tumor cases, contributing to a crucial step in medical diagnostics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28678,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Computing environment",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28700,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The average training time per epoch was approximately 42\u202fs. A PC with Windows 11 Pro, 16\u202fGB of RAM, a 12th-generation i7-12700k 3.50\u202fGHz processor, and an NVIDIA GPU RTX 4060 Ti was used to complete this task.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28916,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Result",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28923,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "A brain tumor MRI and a brain tumor MRI with border boxes were used in the study to assess the NeuroFusionNet model. Both datasets include image classes for normal tissues and pituitary tumors, gliomas, and meningiomas. Split is used in this work to separate the dataset an 80% for training, 10% for validation, and 10% for testing. To ensure a fair and consistent comparison, identical hyperparameter settings were applied across all models, including the proposed NeuroFusionNet and the baseline architectures. These parameters were selected based on commonly recommended configurations from official implementations and relevant literature. In addition, all models were trained using the same data splits, preprocessing pipeline, and evaluation protocol to eliminate any bias introduced by unequal experimental conditions. Table 2 presents the hyperparameter configuration used for training all models. A learning rate of 0.0001, batch size of 8, and 50 training epochs were selected to achieve stable convergence while maintaining computational efficiency, particularly for high-resolution MRI images. The Rectified Linear Unit (ReLU) activation function was used for intermediate layers, while the Softmax function was applied in the output layer for multi-class classification. The Adam optimizer and a dropout rate of 0.5 were employed to improve generalization and reduce overfitting.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30316,
+                        "infons": {
+                            "file": "tab2.xml",
+                            "id": "tab2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Unified hyperparameter configuration used for training all models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30383,
+                        "infons": {
+                            "file": "tab2.xml",
+                            "id": "tab2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Hyperparameter</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Value</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Image size</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">(224,224)</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Batch size</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">8</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Learning rate</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.0001</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Epochs</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">50</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Activation function</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Rectified linear unit (ReLU)</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Dropout</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.5</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Optimizer</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Adam</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Output activation function</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Softmax</td></tr></tbody></table>\n"
+                        },
+                        "text": "Hyperparameter\tValue\t \tImage size\t(224,224)\t \tBatch size\t8\t \tLearning rate\t0.0001\t \tEpochs\t50\t \tActivation function\tRectified linear unit (ReLU)\t \tDropout\t0.5\t \tOptimizer\tAdam\t \tOutput activation function\tSoftmax\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30599,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Comparing different models",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30626,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_3"
+                        },
+                        "text": "Comparison of models and results on the brain tumor MRI dataset",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30690,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Initially, five pre-trained models were utilized on two datasets. The identical hyperparameter settings were employed to evaluate each of these models. The efficacy of the trained models was compared to that of the proposed hybrid model, NeuroFusionNet, which employs the pre-trained VGG16 model for transfer learning and GANs for feature extraction. This study effectively utilizes both advanced representations of medical imaging data and the enhancement of synthetic features. On the Brain Tumor MRI Dataset, NeuroFusionNet achieved 99.05% accuracy, 99.07% precision, 99.05% sensitivity, 99.68% specificity, and 99.05% F1 score, as presented in Table 3 and Figure 10. The VGG16 model ranked last, exhibiting the lowest accuracy (91.66%), sensitivity (91.66%), specificity (97.22%), and F1-score (91.63%). Furthermore, a comparison was conducted between two models, MobileNetV2 and DenseNet121, revealing comparable accuracy levels of 97.79% for MobileNetV2 and 97.48% for DenseNet121. The proposed NeuroFusionNet model outperformed the evaluated baseline architectures.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31763,
+                        "infons": {
+                            "file": "tab3.xml",
+                            "id": "tab3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Performance evaluation on the brain tumor MRI dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31818,
+                        "infons": {
+                            "file": "tab3.xml",
+                            "id": "tab3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Model</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Accuracy</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Precision</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Sensitivity</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Specificity</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">F1 score</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">MobileNetV2</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.79%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.79%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.79%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.26%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.79%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">VGG16</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">91.66%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">92.63%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">91.66%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.22%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">91.63%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">VGG19</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">93.39%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">93.51%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">93.39%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.79%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">93.39%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">DenseNet121</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.48%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.50%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.48%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.16%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.47%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">NASNetLarge</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">96.54%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">96.52%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">96.54%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.84%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">96.52%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">NeuroFusionNet</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.05%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.07%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.05%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.68%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.05%</td></tr></tbody></table>\n"
+                        },
+                        "text": "Model\tAccuracy\tPrecision\tSensitivity\tSpecificity\tF1 score\t \tMobileNetV2\t97.79%\t97.79%\t97.79%\t99.26%\t97.79%\t \tVGG16\t91.66%\t92.63%\t91.66%\t97.22%\t91.63%\t \tVGG19\t93.39%\t93.51%\t93.39%\t97.79%\t93.39%\t \tDenseNet121\t97.48%\t97.50%\t97.48%\t99.16%\t97.47%\t \tNASNetLarge\t96.54%\t96.52%\t96.54%\t98.84%\t96.52%\t \tNeuroFusionNet\t99.05%\t99.07%\t99.05%\t99.68%\t99.05%\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32164,
+                        "infons": {
+                            "file": "fninf-20-1795354-g010.jpg",
+                            "id": "fig10",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Comparison of performance metrics of different models using the brain tumor MRI dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32253,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure 11 illustrates the enhanced accuracy and diminished error of the proposed model, NeuroFusionNet, during the training and validation phases. The model achieved 99.05%. An enhanced approach to model comparison involves the analysis of confusion matrices. A compilation of both precise and imprecise estimations is referred to as a confusion matrix. Figure 12 presents the outcomes of the confusion matrices.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32666,
+                        "infons": {
+                            "file": "fninf-20-1795354-g011.jpg",
+                            "id": "fig11",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "NeuroFusionNet\u2019s training and validation metrics (accuracy and loss) on the brain tumor MRI dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32769,
+                        "infons": {
+                            "file": "fninf-20-1795354-g012.jpg",
+                            "id": "fig12",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Using the brain tumor MRI Dataset, confusion matrices for each model are compared.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32852,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_3"
+                        },
+                        "text": "Comparison of models and results on MRI for brain tumor with bounding boxes dataset",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32936,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The next step involved using the same pre-trained models on the second dataset, MRI for Brain Tumor with Bounding Boxes, which included three distinct types of tumors and normal tissues. The same hyperparameter settings were used to evaluate each of these models. The proposed model, NeuroFusionNet, was implemented. The model was trained for 50 epochs. Table 4 shows that the accuracy, sensitivity, and specificity achieved values of 98.75, 98.75, and 99.58%, respectively, demonstrating the high ability of NeuroFusionNet to classify brain tumor images. The MobileNetV2 model achieved an accuracy of 97.13%, sensitivity of 97.13%, specificity of 99.04%, and F1 score of 97.12%. The VGG16 model achieves an accuracy of 92.88%. The DenseNet121 and NASNetLarge models showed varying accuracy in classifying brain images, achieving 97.25 and 95.56%, respectively. Figure 13 shows a graphical illustration of the model\u2019s effectiveness.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33871,
+                        "infons": {
+                            "file": "tab4.xml",
+                            "id": "tab4",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Performance evaluation on MRI for brain tumor with bounding boxes dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33946,
+                        "infons": {
+                            "file": "tab4.xml",
+                            "id": "tab4",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Model</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Accuracy</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Precision</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Sensitivity</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Specificity</th><th align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">F1 score</th></tr></thead><tbody><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">MobileNetV2</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.13%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.13%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.13%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.04%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.12%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">VGG16</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">92.88%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">93.52%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">92.88%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.63%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">93.00%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">VGG19</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">94.13%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">94.30%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">94.12%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.04%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">94.18%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">DenseNet121</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.25%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.26%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.25%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.08%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">97.25%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">NASNetLarge</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">95.56%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">95.56%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">95.50%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.50%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">95.52%</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">NeuroFusionNet</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.75%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.75%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.75%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">99.58%</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">98.74%</td></tr></tbody></table>\n"
+                        },
+                        "text": "Model\tAccuracy\tPrecision\tSensitivity\tSpecificity\tF1 score\t \tMobileNetV2\t97.13%\t97.13%\t97.13%\t99.04%\t97.12%\t \tVGG16\t92.88%\t93.52%\t92.88%\t97.63%\t93.00%\t \tVGG19\t94.13%\t94.30%\t94.12%\t98.04%\t94.18%\t \tDenseNet121\t97.25%\t97.26%\t97.25%\t99.08%\t97.25%\t \tNASNetLarge\t95.56%\t95.56%\t95.50%\t98.50%\t95.52%\t \tNeuroFusionNet\t98.75%\t98.75%\t98.75%\t99.58%\t98.74%\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34292,
+                        "infons": {
+                            "file": "fninf-20-1795354-g013.jpg",
+                            "id": "fig13",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Comparison of performance metrics of different models using the MRI for brain tumor with bounding boxes dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34405,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "From Figure 14, it is noticeable that NeuroFusionNet showed nearly maximally boosted accuracy with a minimal error in training and validation. The model achieved 98.75%. The confusion matrices presented in Figure 15 for five different models, further emphasize the well-documented superiority of NeuroFusionNet due to higher accuracy and fewer incorrect predictions. Confusion matrices summarize the general view of correct and incorrect predictions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34856,
+                        "infons": {
+                            "file": "fninf-20-1795354-g014.jpg",
+                            "id": "fig14",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "NeuroFusionNet\u2019s training and validation metrics (accuracy and loss) on the MRI for brain tumor with bounding boxes dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34983,
+                        "infons": {
+                            "file": "fninf-20-1795354-g015.jpg",
+                            "id": "fig15",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Using the MRI for brain tumor with bounding boxes dataset, the confusion matrices for each model are compared.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35094,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Although we have shown that the proposed NeuroFusionNet is effective on two widely accepted MRI datasets, broader evaluation across clinical sites, modalities, and protocols will be necessary to gather generalizability measures. Future validation efforts of our design will extend to other real datasets such as BraTS, TCGA, and TCIA, where a comparative evaluation will be done to check the overall robustness and actual clinical data adaptability for the model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35558,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To gain further insight into the classification behavior of NeuroFusionNet, we analyzed the confusion matrices (Figures 12, 15) as well as derived class-wise performance metrics. While the overall accuracy almost reaches perfection, examining it closely shows that most wrong predictions are between meningiomas and gliomas. This is because, in some cases, these two types of tumors share certain features of shape and intensity, which makes them indistinguishable on MRI scans. However, as illustrated in the new Supplementary Table S1, the model keeps a very high precision, recall, and F1-score of over 0.97 for all classes, revealing that the model performs well for all classes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36242,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Ethical considerations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36265,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Medical diagnosis using artificial intelligence models introduces very serious ethical issues. Of course, first and foremost is patient confidentiality and security of data, especially when handling very sensitive medical information. This study used publicly available datasets. Ethical discussion, therefore, focuses on privacy, bias, transparency, and appropriate clinical use of AI-based decision support. Such measures are necessary to prevent any breach or unauthorized access that may affect the confidentiality of the patients. Furthermore, biases in training data can cascade against AI models, leading to differences in diagnosis accuracy across demographic groups. Continued model validation and testing with multiple populations are needed to alleviate biases and ensure equity in healthcare outcomes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37079,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Artificial intelligence can greatly enhance diagnostic processes; however, it should not replace the judgment of medical professionals. Our approach ensures that AI acts only as a supporting tool and never as a replacement by underlining the need to always retain physician decision-making authority. Emphasizing model interpretability, through which medical practitioners can comprehend and critically question AI recommendations, is of critical importance if trust in AI-assisted diagnosis is to be maintained. Ultimately, this ethical framework is a commitment to the development and implementation of AI technology within health, with the upholding of moral standards.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37752,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Nevertheless, present results are very strong, however, future persisting risks of overfitting or unstable training are likely with limited annotated datasets and varied acquisition protocols of MRIs. Current techniques for regularization and validation are effective to an extent, but they could also merit future consideration for dynamic learning rate scheduling. These models in a medical scenario are related to various difficulties regarding integration with hospital systems, real-time inference, and even more transparency in decisions made. One other advanced version of this work in the future would use federated learning and other privacy-preserving techniques, such as differential privacy, that could become highly useful in a very sensitive environment like medical information. NeuroFusionNet achieved high accuracy on the evaluated public datasets; additional external validation and deployment studies are required before clinical use. It can augment radiologists as a second-opinion diagnosis tool, helping them come up with much faster and consistent tumor classification across patients. It\u2019s very small computational appetite allows it to be set up not just on hospital servers, but also on edge devices. By reducing diagnostic time and minimizing human error, the model could improve early detection rates and treatment planning. In moving further into the clinical environment, however, validation on multi-center, real-world datasets and integration with PACS (Picture Archiving and Communication Systems) would be necessary, including all regulatory approvals and development of user-friendly interface.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39384,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Limitations of the study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39409,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The principal restriction is the necessity for more diverse data to train the model, as inadequate data may compromise the model\u2019s accuracy and effectiveness in addressing atypical events or non-representative datasets. Nevertheless, research data has been well preserved in databases like Kaggle. Nonetheless, there exists a degree of computational complexity. These responsibilities can be mitigated by employing cloud-based software, such as the complimentary edition of Google Colab. Moreover, the concept necessitates considerable computing power, rendering its application difficult in resource-constrained environments. A comprehensive assessment of additional medical imaging modalities, including X-rays and CT scans for diverse conditions, must confirm the model\u2019s efficacy over a broad spectrum of applications. Mitigating these constraints enhances the model\u2019s reliability and comprehensiveness for application in medical practice. Lass imbalance should be assessed directly from class distributions and class-wise performance. Future research will include detailed per-class performance evaluation, including confusion matrices and false positive/negative analysis, to ensure balanced predictive performance across all tumor types, particularly underrepresented ones.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40696,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Although the proposed model achieves high accuracy on publicly available datasets, it is important to note that such benchmarks may not fully reflect real-world clinical conditions. Datasets collected from platforms such as Kaggle often exhibit limited variability in imaging protocols, patient demographics, and acquisition settings, which may result in optimistic performance estimates. In contrast, more challenging datasets, such as BraTS, include greater heterogeneity and complexity, providing a more realistic evaluation of model robustness and generalization. Therefore, further validation on diverse and clinically representative datasets is necessary to fully assess the practical applicability of the proposed framework.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41428,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41439,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study presents a novel deep learning framework, NeuroFusionNet, for the multiclass classification of brain tumors using MRI images. The model combines a VGG16-based architecture with a custom GAN generator and transfer learning to enhance feature extraction and classification performance. Across two publicly available datasets, the proposed method achieved outstanding classification accuracies of 99.05% and 98.75%, respectively, outperforming several well-established models including VGG16, MobileNetV2, and DenseNet121. These findings demonstrate the model\u2019s potential in improving diagnostic accuracy and efficiency in clinical neuroimaging workflows.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42105,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Diagnosis and classification of brain tumors have undergone extensive improvement through the application of deep learning techniques on various medical imaging modalities, such as CT, MRI, and histology. This section presents the most recent progress made from various studies on brain tumors, methods of detection, and multimodal approaches that have reached a high classification rate of benign and malignant brain tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42531,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In a study by, deep learning was used to scan for brain tumors in MRI images, including both binary and multiclass classification. The study relied on a dataset of 7,753 MRI images, including data harvested from Qhills Technologies Pvt. Ltd. and the Brain Tumor MRI collection. Various models from the deep learning family, such as CNN, AlexNet, and VGG-16, were assessed in terms of performance. VGG-16 gave an accuracy of 96.4%, followed by CNN (73.1%) and AlexNet (76.9%). The methodology included data preprocessing, but there were promising results against many limitations, including the variability in MRI image quality. A study by suggests another method, Explainable Artificial Intelligence with UNet-based Segmentation and Bayesian Machine Learning for Brain Tumor Classification (XAISS-BMLBT), on MRI-based brain tumor detection. The study could perform the whole analysis concerning four categories using a benchmark MRI dataset of 5,500 samples: glioma, meningioma, pituitary, and no-tumor cases. The methods employed were bilateral filtering, which was performed on the raw images for noise reduction; MEDU-Net\u202f+\u202fsegmentation; feature extraction through ResNet50; and BRANN for classification purposes. Hyperparameter tuning was performed by employing improved radial movement optimization (IRMO) to maximize the performance of the model under study. The record classification accuracy thus achieved was 97.75%, which is superior to that achieved by supervised deep learning models such as ResNet50, Inception-V3, and Fine-tuned VGG19. The study also had limitations and generalization-related concerns regarding real-time applications. Also, the dependence on a single dataset poses additional concerns regarding the capability of the model to perform under different imaging situations and clinical environments.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44364,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In study by, initiated the Variational Spatial Attention with Graph Convolutional Neural Network (VSA-GCNN) module for brain tumor segmentation and classification using MRI images. The research was mainly focused on the MRI datasets from BraTS 2019, 2020, and 2021. Noise being removed from the images using min-max normalization is an important step before carrying out the segmentation. The proposed methodology integrated tumor segmentation with VSA-GCNN, feature extraction with AlexNet, and classification using Bidirectional Gated Recurrent Unit (Bi-GRU). The results of the experiment indicated that this method had the maximum performance with an accuracy value of 98.2% on the BraTS 2020 dataset. Further, it had relatively high values in sensitivity (99.4%) and specificity (97.6%). Limitations include a well-known dependence on high-quality labeled MRI data and the difficulty in achieving generalizability in the real world; moreover, the variations in MRI acquisition techniques severely affect generalizability. Although it was suggested in the study of, BrainNet, has developed deep learning based on CNN models for the classification of brain tumors using MRI images. The model was developed, trained, and evaluated against well-validated transfer learning architectures such as VGG13, VGG16, VGG19, InceptionResV2, and SqueezeNet. BrainNet had achieved 99.96% percent training accuracy and 97.71% percent test accuracy, higher than those of the comparable models. Limitations were the dependency on large amounts of labeled datasets, computational intensity, and the risk of overfitting with efforts such as dropout and batch normalization, restricting real-world diagnostic uses.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46063,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "The researcher presented a deep learning model for brain tumor classification that rendered an accuracy of 98% in four tumor categories. It included image preprocessing steps such as resizing, normalization, and data augmentation. The proposed sequential CNN model involved convolutional, max pooling, dropout, and dense layers along with grad-CAM for interpretability. High accuracy rendered by the model is also dependent on labeled datasets and high computational resources, thus somewhat of a challenge in addition to performance discrepancies caused by differences in demographic data and imaging protocols. A study by Alain Marcel Dikande Simo indicated that an FCNN-based deep learning model performed at a 95% level on multiclass tumor classification. Using a dataset worth 7,023 images from Kaggle Brain Tumor MRI, this optimized model was trained with Adam and Nesterov momentum optimizers; the latter one proved to be best at balancing precision and recall. The model suffered from limitations like sparsity of the dataset and class imbalance, which limit the generalizability of the model. Further validation and dataset expansion were recommended to make the model more robust.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47254,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In their study, Muhammad Sami Ullah proposed BrainNet - a deep learning framework with residual blocks and stacked autoencoders for multimodal classification of a brain tumor. This framework, which was trained using the BraTS2020 and BraTS2021 datasets, consists of a stacked encoder-decoder network of 10 convolutional layers along with a modified Grey Wolf Optimization technique to achieve 98% accuracy. However, it also involved very high computational costs, hyperparameter searches across large landscapes, and the complexities of carrying over such models for a very diverse set of real-world datasets. In their recent research, Daniel Reyes and Javier S\u00e1nchez conducted a thorough comparative study of several normalized CNNs for brain tumor classification. VGG, ResNet, EfficientNet, MobileNet, and ConvNeXt were a few of the architectures evaluated against two MRI datasets. The best performance of these models attained a stunning accuracy of 98.7%, illustrating rather sane results. There were also mentions of drawbacks such as heft computational costs, long training times, and limited data augmentation advantages. Krishnan also devised a Rotation Invariant Vision Transformer (RViT) model in his research, which urges improving classification accuracy using fused rotated patch embeddings to address tumor orientation issues in MRIs. With 98.6% accuracy and high sensitivity and specificity, the model was evaluated on the Kaggle Brain Tumor MRI Dataset. Its only limitation in fall consumption is that it can only work on binary classification, which is a limiting factor for many in multi-class tumor detection; on top of that, additional computational complexity poses a challenge to its clinical deployment.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48983,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Unlike previous studies that primarily rely on standalone CNN architectures or use GANs solely for data augmentation, the proposed NeuroFusionNet introduces a hybrid learning paradigm where the GAN component actively contributes to feature representation learning. While transformer-based models have shown promising results, they often require large-scale datasets and high computational resources, which limits their applicability in medical imaging. In contrast, NeuroFusionNet achieves superior performance by leveraging a lightweight yet effective architecture combined with adversarial feature enhancement. Furthermore, the proposed model demonstrates consistent performance across multiple datasets, addressing the generalization limitations observed in prior works. As shown in Table 5.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49778,
+                        "infons": {
+                            "file": "tab5.xml",
+                            "id": "tab5",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Systematic comparison of existing deep learning models for brain tumor classification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49865,
+                        "infons": {
+                            "file": "tab5.xml",
+                            "id": "tab5",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Study</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Architecture</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Dataset</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Accuracy</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Limitation</th><th align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Difference from NeuroFusionNet</th></tr></thead><tbody><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref20\" ref-type=\"bibr\">Mahajan et al. (2025)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">VGG16, CNN</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">7,753 MRI</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">96.4%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Limited robustness</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No GAN integration</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref18\" ref-type=\"bibr\">Lakshmi et al. (2025)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">UNet + ResNet50</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">5,500 MRI</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">97.75%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Single dataset</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No feature-level GAN learning</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref24\" ref-type=\"bibr\">Pratap Joshi et al. (2025)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">VSA-GCNN + BiGRU</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">BraTS</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">98.2%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">High data dependency</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Complex pipeline</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref28\" ref-type=\"bibr\">Singh et al. (2024)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">CNN variants</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">MRI dataset</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">97.71%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Overfitting risk</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No adversarial learning</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref2\" ref-type=\"bibr\">Alshuhail et al. (2024)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">CNN</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">MRI dataset</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">98%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Data dependency</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No GAN/limited generalization</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref27\" ref-type=\"bibr\">Simo et al. (2024)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">FCNN-based deep learning</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Kaggle Brain Tumor MRI</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">95%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">The sparsity of the dataset</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No GAN/limited generalization</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref31\" ref-type=\"bibr\">Ullah et al. (2024)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Autoencoder + Residual</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">BraTS</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">98%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">High computational cost</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No feature-level fusion</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref25\" ref-type=\"bibr\">Reyes and S\u00e1nchez (2024)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">VGG, ResNet, EfficientNet, MobileNet, and ConvNeXt</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">MRI dataset</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">The best performance of these models attained accuracy of 98.7%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">heft computational costs</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No GAN/limited generalization</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\n<xref rid=\"ref17\" ref-type=\"bibr\">Krishnan et al. (2024)</xref>\n</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Vision transformer</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">MRI</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">98.6%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Binary only</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">No multiclass generalization</td></tr><tr><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Proposed model</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">VGG16\u202f+\u202fGAN</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Multiple datasets</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">99.05%</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">\u2014</td><td align=\"left\" valign=\"middle\" rowspan=\"1\" colspan=\"1\">Feature-level GAN integration</td></tr></tbody></table>\n"
+                        },
+                        "text": "Study\tArchitecture\tDataset\tAccuracy\tLimitation\tDifference from NeuroFusionNet\t \t\tVGG16, CNN\t7,753 MRI\t96.4%\tLimited robustness\tNo GAN integration\t \t\tUNet + ResNet50\t5,500 MRI\t97.75%\tSingle dataset\tNo feature-level GAN learning\t \t\tVSA-GCNN + BiGRU\tBraTS\t98.2%\tHigh data dependency\tComplex pipeline\t \t\tCNN variants\tMRI dataset\t97.71%\tOverfitting risk\tNo adversarial learning\t \t\tCNN\tMRI dataset\t98%\tData dependency\tNo GAN/limited generalization\t \t\tFCNN-based deep learning\tKaggle Brain Tumor MRI\t95%\tThe sparsity of the dataset\tNo GAN/limited generalization\t \t\tAutoencoder + Residual\tBraTS\t98%\tHigh computational cost\tNo feature-level fusion\t \t\tVGG, ResNet, EfficientNet, MobileNet, and ConvNeXt\tMRI dataset\tThe best performance of these models attained accuracy of 98.7%\theft computational costs\tNo GAN/limited generalization\t \t\tVision transformer\tMRI\t98.6%\tBinary only\tNo multiclass generalization\t \tProposed model\tVGG16\u202f+\u202fGAN\tMultiple datasets\t99.05%\t\u2014\tFeature-level GAN integration\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50857,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion and further work",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50885,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In conclusion, NeuroFusionNet performed strongly for four-class brain MRI classification on the evaluated public datasets. We can efficiently employ synthetic feature augmentation and high-level representations from medical imaging data by combining a pre-trained VGG16 model with generative adversarial networks (GANs) for feature extraction and transfer learning. The model employs data augmentation methods, fine-tuning approaches, and an optimal learning rate schedule to enhance generalization and robustness. In the Brain Tumor MRI dataset, NeuroFusionNet achieves the best accuracy of 99.05% in MRI scan analysis, whereas it attains 98.75% accuracy utilizing the Bounding Boxes Dataset for brain tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51596,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "Future work aims to improve the model\u2019s reliability and generalizability by applying k-fold cross-validation and testing it on diverse, external datasets from independent institutions. It will also involve a deeper analysis of brain cancer subtypes using larger datasets that consider age and gender differences. Advanced techniques such as digital twins and federated learning will be integrated to enhance real-world applicability. Additionally, performance will be improved through modern architectures like Transformers, Vision Transformers (ViTs), spatial attention mechanisms, and hybrid CNN\u2013RNN models for better feature extraction from MRI scans. Overall, these enhancements are expected to increase accuracy, interpretability, and robustness beyond the already strong current results.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52394,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Edited by: Antonio Brunetti, Politecnico di Bari, Italy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52450,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Reviewed by: Abid Amin Naeem, The University of Tennessee, United States",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52523,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Khalid Been Md. Badruzzaman Biplob, Daffodil International University, Bangladesh",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52605,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52633,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The original contributions presented in the study are included in the article/supplementary material, further inquiries can be directed to the corresponding author.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52798,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Ethics statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52815,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Ethical approval was not required for the studies involving humans because the study used publicly available dataset. The studies were conducted in accordance with the local legislation and institutional requirements. Written informed consent for participation was not required from the participants or the participants' legal guardians/next of kin in accordance with the national legislation and institutional requirements because the study used publicly available dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53290,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53311,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "OM: Data curation, Writing \u2013 original draft, Supervision, Methodology. SA: Validation, Investigation, Methodology, Software, Writing \u2013 original draft. HMh: Writing \u2013 original draft, Formal analysis, Visualization, Data curation, Validation. AA: Writing \u2013 review & editing, Investigation, Resources, Project administration, Supervision. RM: Methodology, Software, Writing \u2013 original draft. MM: Validation, Data curation, Investigation, Writing \u2013 review & editing. A-BY: Investigation, Visualization, Writing \u2013 review & editing, Formal analysis. HA: Writing \u2013 review & editing, Funding acquisition, Conceptualization, Resources. HMa: Formal analysis, Data curation, Supervision, Writing \u2013 review & editing, Visualization. FM: Resources, Writing \u2013 review & editing, Validation. LA: Resources, Writing \u2013 review & editing, Project administration. MA: Writing \u2013 review & editing, Software, Conceptualization, Methodology.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54251,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflict of interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54272,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that this work was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54445,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Generative AI statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54469,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that Generative AI was not used in the creation of this manuscript.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54560,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "Any alternative text (alt text) provided alongside figures in this article has been generated by Frontiers with the support of artificial intelligence and reasonable efforts have been made to ensure accuracy, including review by the authors wherever possible. If you identify any issues, please contact us.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54867,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Publisher\u2019s note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54886,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55233,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55244,
+                        "infons": {
+                            "fpage": "209517",
+                            "lpage": "209527",
+                            "name_0": "surname:Abdollahi;given-names:A.",
+                            "name_1": "surname:Pradhan;given-names:B.",
+                            "name_2": "surname:Gite;given-names:S.",
+                            "name_3": "surname:Alamri;given-names:A.",
+                            "pub-id_doi": "10.1109/access.2020.3038225",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2020"
+                        },
+                        "text": "Building footprint extraction from high resolution aerial images using generative adversarial network (GAN) architecture",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55365,
+                        "infons": {
+                            "fpage": "118",
+                            "name_0": "surname:Alshuhail;given-names:A.",
+                            "name_1": "surname:Thakur;given-names:A.",
+                            "name_2": "surname:Chandramma;given-names:R.",
+                            "name_3": "surname:Mahesh;given-names:T. R.",
+                            "name_4": "surname:Almusharraf;given-names:A.",
+                            "name_5": "surname:Vinoth Kumar;given-names:V.",
+                            "pub-id_doi": "10.1186/s12880-024-01285-6",
+                            "pub-id_pmid": "38773391",
+                            "section_type": "REF",
+                            "source": "BMC Med. Imaging",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2024"
+                        },
+                        "text": "Refining neural network algorithms for accurate brain tumor classification in MRI imagery",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55455,
+                        "infons": {
+                            "name_0": "surname:Atienza;given-names:R.",
+                            "section_type": "REF",
+                            "source": "Advanced Deep Learning with TensorFlow 2 and Keras: Apply DL, GANs, VAEs, Deep RL, Unsupervised Learning, Object Detection and Segmentation, and More",
+                            "type": "ref",
+                            "year": "2020"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55456,
+                        "infons": {
+                            "name_0": "surname:Barman;given-names:D.",
+                            "name_1": "surname:Satheesh;given-names:A.",
+                            "name_2": "surname:Vanlalpeka;given-names:J.",
+                            "name_3": "surname:Bora;given-names:A.",
+                            "name_4": "surname:Nandi;given-names:G.",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55457,
+                        "infons": {
+                            "fpage": "153",
+                            "lpage": "166",
+                            "name_0": "surname:Brummer;given-names:M. E.",
+                            "name_1": "surname:Mersereau;given-names:R. M.",
+                            "name_2": "surname:Eisner;given-names:R. L.",
+                            "name_3": "surname:Lewine;given-names:R. R. J.",
+                            "pub-id_doi": "10.1109/42.232244",
+                            "pub-id_pmid": "18218403",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Med. Imaging",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "1993"
+                        },
+                        "text": "Automatic detection of brain contours in MRI data sets",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55512,
+                        "infons": {
+                            "fpage": "108661",
+                            "name_0": "surname:Campos;given-names:E. M.",
+                            "name_1": "surname:Saura;given-names:P. F.",
+                            "name_2": "surname:Gonz\u00e1lez-Vidal;given-names:A.",
+                            "name_3": "surname:Hern\u00e1ndez-Ramos;given-names:J. L.",
+                            "name_4": "surname:Bernab\u00e9;given-names:J. B.",
+                            "name_5": "surname:Baldini;given-names:G.",
+                            "pub-id_doi": "10.1016/j.comnet.2021.108661",
+                            "section_type": "REF",
+                            "source": "Comput. Netw.",
+                            "type": "ref",
+                            "volume": "203",
+                            "year": "2022"
+                        },
+                        "text": "Evaluating federated learning for intrusion detection in internet of things: review and challenges",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55611,
+                        "infons": {
+                            "fpage": "114",
+                            "lpage": "123",
+                            "name_0": "surname:DeAngelis;given-names:L. M.",
+                            "pub-id_doi": "10.1056/nejm200101113440207",
+                            "pub-id_pmid": "11150363",
+                            "section_type": "REF",
+                            "source": "N. Engl. J. Med.",
+                            "type": "ref",
+                            "volume": "344",
+                            "year": "2001"
+                        },
+                        "text": "Brain tumors",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55624,
+                        "infons": {
+                            "name_0": "surname:Esfandiari;given-names:MR",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55625,
+                        "infons": {
+                            "name_0": "surname:Godishala;given-names:A. K.",
+                            "name_1": "surname:Yassin;given-names:H.",
+                            "name_2": "surname:Veena;given-names:R.",
+                            "name_3": "surname:Lai;given-names:D. T. C.",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2022"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55626,
+                        "infons": {
+                            "name_0": "surname:Goodfellow;given-names:I. J.",
+                            "name_1": "surname:Pouget-Abadie;given-names:J.",
+                            "name_2": "surname:Mirza;given-names:M.",
+                            "name_3": "surname:Xu;given-names:B.",
+                            "name_4": "surname:Warde-Farley;given-names:D.",
+                            "name_5": "surname:Ozair;given-names:S.",
+                            "section_type": "REF",
+                            "source": "Adv. Neural Inf. Process. Syst.",
+                            "type": "ref",
+                            "volume": "27",
+                            "year": "2014"
+                        },
+                        "text": "Generative adversarial nets",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55654,
+                        "infons": {
+                            "name_0": "surname:Gulati;given-names:S.",
+                            "name_1": "surname:Guleria;given-names:K.",
+                            "name_2": "surname:Goyal;given-names:N.",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2022"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55655,
+                        "infons": {
+                            "fpage": "156966",
+                            "lpage": "156977",
+                            "name_0": "surname:Han;given-names:C.",
+                            "name_1": "surname:Rundo;given-names:L.",
+                            "name_2": "surname:Araki;given-names:R.",
+                            "name_3": "surname:Nagano;given-names:Y.",
+                            "name_4": "surname:Furukawa;given-names:Y.",
+                            "name_5": "surname:Mauri;given-names:G.",
+                            "pub-id_doi": "10.1109/access.2019.2947606",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2019"
+                        },
+                        "text": "Combining noise-to-image and image-to-image GANs: brain MR image augmentation for tumor detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55753,
+                        "infons": {
+                            "fpage": "4806",
+                            "lpage": "4813",
+                            "name_0": "surname:Ho;given-names:Y.",
+                            "name_1": "surname:Wookey;given-names:S.",
+                            "pub-id_doi": "10.1109/ACCESS.2019.2962617",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2019"
+                        },
+                        "text": "The real-world-weight cross-entropy loss function: modeling the costs of mislabeling",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55838,
+                        "infons": {
+                            "fpage": "9",
+                            "lpage": "18",
+                            "name_0": "surname:Hsiao;given-names:T.-Y.",
+                            "name_1": "surname:Chang;given-names:Y.-C.",
+                            "name_2": "surname:Chou;given-names:H.-H.",
+                            "name_3": "surname:Chiu;given-names:C.-T.",
+                            "pub-id_doi": "10.1016/j.sysarc.2019.02.008",
+                            "section_type": "REF",
+                            "source": "J. Syst. Archit.",
+                            "type": "ref",
+                            "volume": "95",
+                            "year": "2019"
+                        },
+                        "text": "Filter-based deep-compression with global average pooling for convolutional networks",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55923,
+                        "infons": {
+                            "fpage": "10173",
+                            "lpage": "10196",
+                            "name_0": "surname:Huang;given-names:L.",
+                            "name_1": "surname:Qin;given-names:J.",
+                            "name_2": "surname:Zhou;given-names:Y.",
+                            "name_3": "surname:Zhu;given-names:F.",
+                            "name_4": "surname:Liu;given-names:L.",
+                            "name_5": "surname:Shao;given-names:L.",
+                            "pub-id_doi": "10.1109/TPAMI.2023.3250241",
+                            "pub-id_pmid": "37027763",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Pattern Anal. Mach. Intell.",
+                            "type": "ref",
+                            "volume": "45",
+                            "year": "2023"
+                        },
+                        "text": "Normalization techniques in training dnns: methodology, analysis and application",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56004,
+                        "infons": {
+                            "name_0": "surname:Konar;given-names:J.",
+                            "name_1": "surname:Khandelwal;given-names:P.",
+                            "name_2": "surname:Tripathi;given-names:R.",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2020"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56005,
+                        "infons": {
+                            "fpage": "1414925",
+                            "name_0": "surname:Krishnan;given-names:P. T.",
+                            "name_1": "surname:Krishnadoss;given-names:P.",
+                            "name_2": "surname:Khandelwal;given-names:M.",
+                            "name_3": "surname:Gupta;given-names:D.",
+                            "name_4": "surname:Nihaal;given-names:A.",
+                            "name_5": "surname:Kumar;given-names:T. S.",
+                            "pub-id_doi": "10.3389/fninf.2024.1414925",
+                            "pub-id_pmid": "38957549",
+                            "section_type": "REF",
+                            "source": "Front. Neuroinform.",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "2024"
+                        },
+                        "text": "Enhancing brain tumor detection in MRI with a rotation invariant vision transformer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56089,
+                        "infons": {
+                            "fpage": "690",
+                            "name_0": "surname:Lakshmi;given-names:K.",
+                            "name_1": "surname:Amaran;given-names:S.",
+                            "name_2": "surname:Subbulakshmi;given-names:G.",
+                            "name_3": "surname:Padmini;given-names:S.",
+                            "name_4": "surname:Joshi;given-names:G. P.",
+                            "name_5": "surname:Cho;given-names:W.",
+                            "pub-id_doi": "10.1038/s41598-024-84692-7",
+                            "pub-id_pmid": "39753735",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Explainable artificial intelligence with UNet based segmentation and Bayesian machine learning for classification of brain tumors using MRI images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56236,
+                        "infons": {
+                            "fpage": "1231",
+                            "lpage": "1251",
+                            "name_0": "surname:Louis;given-names:D. N.",
+                            "name_1": "surname:Perry;given-names:A.",
+                            "name_2": "surname:Wesseling;given-names:P.",
+                            "name_3": "surname:Brat;given-names:D. J.",
+                            "name_4": "surname:Cree;given-names:I. A.",
+                            "name_5": "surname:Figarella-Branger;given-names:D.",
+                            "pub-id_doi": "10.1093/neuonc/noab106",
+                            "pub-id_pmid": "34185076",
+                            "section_type": "REF",
+                            "source": "Neuro-Oncology",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2021"
+                        },
+                        "text": "The 2021 WHO classification of tumors of the central nervous system: a summary",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56315,
+                        "infons": {
+                            "fpage": "81",
+                            "lpage": "100",
+                            "name_0": "surname:Mahajan;given-names:S.",
+                            "name_1": "surname:Dhull;given-names:A.",
+                            "name_2": "surname:Dahiya;given-names:A.",
+                            "pub-id_doi": "10.4114/intartif.vol28iss75pp81-100",
+                            "section_type": "REF",
+                            "source": "Intelig. Artif.",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2025"
+                        },
+                        "text": "An efficient deep learning technique for brain abnormality detection using MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56394,
+                        "infons": {
+                            "fpage": "167",
+                            "lpage": "179",
+                            "name_0": "surname:Mardani;given-names:M.",
+                            "name_1": "surname:Gong;given-names:E.",
+                            "name_2": "surname:Cheng;given-names:J. Y.",
+                            "name_3": "surname:Vasanawala;given-names:S. S.",
+                            "name_4": "surname:Zaharchuk;given-names:G.",
+                            "name_5": "surname:Xing;given-names:L.",
+                            "pub-id_doi": "10.1109/TMI.2018.2858752",
+                            "pub-id_pmid": "30040634",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Med. Imaging",
+                            "type": "ref",
+                            "volume": "38",
+                            "year": "2018"
+                        },
+                        "text": "Deep generative adversarial neural networks for compressive sensing MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56466,
+                        "infons": {
+                            "fpage": "516",
+                            "lpage": "524",
+                            "name_0": "surname:Molitch;given-names:M. E.",
+                            "pub-id_doi": "10.1001/jama.2016.19699",
+                            "pub-id_pmid": "28170483",
+                            "section_type": "REF",
+                            "source": "JAMA",
+                            "type": "ref",
+                            "volume": "317",
+                            "year": "2017"
+                        },
+                        "text": "Diagnosis and treatment of pituitary adenomas: a review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56522,
+                        "infons": {
+                            "fpage": "507",
+                            "lpage": "522",
+                            "name_0": "surname:Muhammad;given-names:K.",
+                            "name_1": "surname:Khan;given-names:S.",
+                            "name_2": "surname:Del Ser;given-names:J.",
+                            "name_3": "surname:De Albuquerque;given-names:V. H. C.",
+                            "pub-id_doi": "10.1109/TNNLS.2020.2995800",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Neural Netw. Learn. Syst.",
+                            "type": "ref",
+                            "volume": "32",
+                            "year": "2020"
+                        },
+                        "text": "Deep learning for multigrade brain tumor classification in smart healthcare systems: a prospective survey",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56628,
+                        "infons": {
+                            "fpage": "29",
+                            "name_0": "surname:Pratap Joshi;given-names:K.",
+                            "name_1": "surname:Gowda;given-names:V. B.",
+                            "name_2": "surname:Bidare Divakarachari;given-names:P.",
+                            "name_3": "surname:Siddappa Parameshwarappa;given-names:P.",
+                            "name_4": "surname:Patra;given-names:R. K.",
+                            "pub-id_doi": "10.3390/bdcc9020029",
+                            "section_type": "REF",
+                            "source": "Big Data Cogn. Comput.",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2025"
+                        },
+                        "text": "VSA-GCNN: attention guided graph neural networks for brain tumor segmentation and classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56725,
+                        "infons": {
+                            "fpage": "e25468",
+                            "name_0": "surname:Reyes;given-names:D.",
+                            "name_1": "surname:S\u00e1nchez;given-names:J.",
+                            "pub-id_doi": "10.1016/j.heliyon.2024.e25468",
+                            "pub-id_pmid": "38352765",
+                            "section_type": "REF",
+                            "source": "Heliyon",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2024"
+                        },
+                        "text": "Performance of convolutional neural networks for the classification of brain tumors using magnetic resonance imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56842,
+                        "infons": {
+                            "name_0": "surname:Sapra;given-names:L.",
+                            "name_1": "surname:Sandhu;given-names:J. K.",
+                            "name_2": "surname:Goyal;given-names:N.",
+                            "section_type": "REF",
+                            "source": "Advances in Communication and Computational Technology: Select Proceedings of ICACCT 2019",
+                            "type": "ref",
+                            "year": "2021"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56843,
+                        "infons": {
+                            "fpage": "101423",
+                            "name_0": "surname:Simo;given-names:A. M. D.",
+                            "name_1": "surname:Kouanou;given-names:A. T.",
+                            "name_2": "surname:Monthe;given-names:V.",
+                            "name_3": "surname:Nana;given-names:M. K.",
+                            "name_4": "surname:Lonla;given-names:B. M.",
+                            "pub-id_doi": "10.1016/j.imu.2023.101423",
+                            "section_type": "REF",
+                            "source": "Inf. Med. Unlocked",
+                            "type": "ref",
+                            "volume": "44",
+                            "year": "2024"
+                        },
+                        "text": "Introducing a deep learning method for brain tumor classification using MRI data towards better performance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56951,
+                        "infons": {
+                            "fpage": "3283",
+                            "lpage": "3292",
+                            "name_0": "surname:Singh;given-names:T.",
+                            "name_1": "surname:Nair;given-names:R. R.",
+                            "name_2": "surname:Babu;given-names:T.",
+                            "name_3": "surname:Wagh;given-names:A.",
+                            "name_4": "surname:Bhosalea;given-names:A.",
+                            "name_5": "surname:Duraisamy;given-names:P.",
+                            "pub-id_doi": "10.1016/j.procs.2024.04.310",
+                            "section_type": "REF",
+                            "source": "Procedia Comput. Sci.",
+                            "type": "ref",
+                            "volume": "235",
+                            "year": "2024"
+                        },
+                        "text": "BrainNet: a deep learning approach for brain tumor classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57017,
+                        "infons": {
+                            "name_0": "surname:Sorour;given-names:A",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57018,
+                        "infons": {
+                            "fpage": "14",
+                            "name_0": "surname:Thakur;given-names:A.",
+                            "name_1": "surname:Gupta;given-names:M.",
+                            "name_2": "surname:Sinha;given-names:D. K.",
+                            "name_3": "surname:Mishra;given-names:K. K.",
+                            "name_4": "surname:Venkatesan;given-names:V. K.",
+                            "name_5": "surname:Guluwadi;given-names:S.",
+                            "pub-id_doi": "10.1007/s44196-023-00397-1",
+                            "section_type": "REF",
+                            "source": "Int. J. Comput. Intell. Syst.",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2024"
+                        },
+                        "text": "Transformative breast cancer diagnosis using CNNs with optimized ReduceLROnPlateau and early stopping enhancements",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57133,
+                        "infons": {
+                            "fpage": "5895",
+                            "name_0": "surname:Ullah;given-names:M. S.",
+                            "name_1": "surname:Khan;given-names:M. A.",
+                            "name_2": "surname:Almujally;given-names:N. A.",
+                            "name_3": "surname:Alhaisoni;given-names:M.",
+                            "name_4": "surname:Akram;given-names:T.",
+                            "name_5": "surname:Shabaz;given-names:M.",
+                            "pub-id_doi": "10.1038/s41598-024-56657-3",
+                            "pub-id_pmid": "38467755",
+                            "section_type": "REF",
+                            "source": "Sci. Rep.",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2024"
+                        },
+                        "text": "BrainNet: a fusion assisted novel optimal framework of residual blocks and stacked autoencoders for multimodal brain tumor classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57271,
+                        "infons": {
+                            "fpage": "166",
+                            "lpage": "193",
+                            "name_0": "surname:Van Meir;given-names:E. G.",
+                            "name_1": "surname:Hadjipanayis;given-names:C. G.",
+                            "name_2": "surname:Norden;given-names:A. D.",
+                            "name_3": "surname:Shu;given-names:H.",
+                            "name_4": "surname:Wen;given-names:P. Y.",
+                            "name_5": "surname:Olson;given-names:J. J.",
+                            "pub-id_doi": "10.3322/caac.20069",
+                            "pub-id_pmid": "20445000",
+                            "section_type": "REF",
+                            "source": "CA Cancer J. Clin.",
+                            "type": "ref",
+                            "volume": "60",
+                            "year": "2010"
+                        },
+                        "text": "Exciting new advances in neuro-oncology: the avenue to a cure for malignant glioma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57354,
+                        "infons": {
+                            "fpage": "6",
+                            "name_0": "surname:You;given-names:A.",
+                            "name_1": "surname:Kim;given-names:J. K.",
+                            "name_2": "surname:Ryu;given-names:I. H.",
+                            "name_3": "surname:Yoo;given-names:T. K.",
+                            "pub-id_doi": "10.1186/s40662-022-00277-3",
+                            "pub-id_pmid": "35109930",
+                            "section_type": "REF",
+                            "source": "Eye Vis.",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2022"
+                        },
+                        "text": "Application of generative adversarial networks (GAN) for ophthalmology image domains: a survey",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57449,
+                        "infons": {
+                            "fpage": "43",
+                            "lpage": "76",
+                            "name_0": "surname:Zhuang;given-names:F.",
+                            "name_1": "surname:Qi;given-names:Z.",
+                            "name_2": "surname:Duan;given-names:K.",
+                            "name_3": "surname:Xi;given-names:D.",
+                            "name_4": "surname:Zhu;given-names:Y.",
+                            "name_5": "surname:Zhu;given-names:H.",
+                            "pub-id_doi": "10.1109/JPROC.2020.3004555",
+                            "section_type": "REF",
+                            "source": "Proc. IEEE",
+                            "type": "ref",
+                            "volume": "109",
+                            "year": "2020"
+                        },
+                        "text": "A comprehensive survey on transfer learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

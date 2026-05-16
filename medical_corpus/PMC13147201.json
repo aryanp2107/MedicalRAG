@@ -1,0 +1,2431 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260508",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13147201",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.3389/fonc.2026.1773400",
+                            "article-id_pmc": "PMC13147201",
+                            "elocation-id": "1773400",
+                            "kwd": "deep learning hepatocellular carcinoma machine learning radiomics nomogram transcatheter arterial chemoembolization",
+                            "license": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.",
+                            "name_0": "surname:Chen;given-names:Genxiang",
+                            "name_1": "surname:Li;given-names:Bo",
+                            "name_2": "surname:Liu;given-names:Aijun",
+                            "name_3": "surname:Li;given-names:Bin",
+                            "name_4": "surname:Mei;given-names:Yong",
+                            "name_5": "surname:Tan;given-names:Li",
+                            "name_6": "surname:Chen;given-names:Jing",
+                            "name_7": "surname:Hao;given-names:Zhiyuan",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "16",
+                            "year": "2026"
+                        },
+                        "text": "Establishment and validation of a CT-based clinical deep learning radiomics nomogram for predicting the response to transcatheter arterial chemoembolization in patients with hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 199,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Background",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 210,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Hepatocellular carcinoma (HCC) is a common malignant tumor of the liver worldwide, significantly impacting human health. Transcatheter arterial chemoembolization (TACE) is one of the key treatment modalities for HCC, making accurate prediction of the TACE response (TR) crucial for personalized treatment. This study aimed to develop and validate a clinical deep learning (DL) -based radiomics (Rad) nomogram (CDLRN) using pre-treatment contrast-enhanced computed tomography (CT) images and clinical data to predict TR in patients with HCC.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 751,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 759,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Clinical and CT data were retrospectively collected from HCC patients who underwent TACE at the Department of Hepatobiliary Surgery of Shangluo Central Hospital from January 2019 to December 2023.\u00a0A total of 144 patients met the study criteria and were randomly divided into training and validation cohorts at a ratio of 7:3, resulting in 102 and 42 patients, respectively. TR was assessed in according with the Modified Response Evaluation Criteria in Solid Tumors (mRECIST). Univariate and multivariate logistic regression (LR) analyses were conducted to identify independent risk factors associated with TR. Rad and DL features were extracted from preprocessed arterial-phase CT images. These features and image signatures were constructed through four steps: repeatability evaluation, univariate analysis, least absolute shrinkage and selection operator (LASSO) method, and multivariate LR analysis. A novel CDLRN model was then established to predict TR.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1720,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1728,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Among all models, the CDLRN significantly outperformed the others (P<0.05). Specifically, the area under the receiver operating characteristic curve (AUC) was 0.958 (95% confidence interval [CI]: 0.916-1.000) for the training cohort and 0.916 (95% CI: 0.835-0.997) for the validation cohort, both significantly higher than individual indicators. The CDLRN model demonstrated a specificity of 0.957, sensitivity of 0.839, and overall accuracy of 89.2% in the training cohort. In the validation cohort, the specificity was 1.0, sensitivity was 0.741, and accuracy was 83.3%. \u201cThe calibration curves demonstrated strong concordance between predicted and actual probabilities, underscoring the model\u2019s reliability. Furthermore, decision curve analysis highlighted the substantial clinical utility of the CDLRN model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2545,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2556,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The CDLRN showed high discrimination and accuracy in predicting the response to the first TACE in patients with HCC, demonstrating its potential to provide invaluable information for clinical decision-making.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2765,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2778,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Primary liver cancer is a common cancer worldwide, severely affecting human health, it ranks as the sixth most common cancer and the third leading cause of cancer deaths. The occurrence of HCC is a series of complex biological processes involving genomics, and most HCC patients in China are also highly associated with hepatitis B virus infection. The 5-year survival rate for HCC patients has improved, but many are diagnosed at intermediate or advanced stages due to the lack of early symptoms, limiting surgery and worsening prognosis. Treatment strategies include drug therapy, transarterial chemoembolization (TACE), hepatic arterial infusion chemotherapy, local ablation, and liver transplantation. Among these, TACE is a key treatment for patients with advanced HCC, especially those classified as Stage B according to the Barcelona Clinic Liver Cancer (BCLC) staging criteria. However, tumor heterogeneity leads to variable responses to TACE, resulting in high local recurrence rates and significant prognostic disparities. Predicting treatment response before TACE is vital for personalizing HCC treatment and improving survival. When TACE is unlikely to help, choosing alternative therapies promptly is crucial. Therefore, a reliable method to predict TR before TACE is urgently needed for managing intermediate to advanced HCC.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4118,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Current studies have shown that factors such as tumor size, margin, internal arteries, Child-Pugh grade, pathological stage, microvascular invasion (MVI), and various blood test indices, including alpha fetoprotein (AFP), are closely related to the prognosis of TACE and hold predictive value for patients with unresectable HCC Additionally, some research has confirmed that the methylation of cytokine signaling 1 and 3 is highly correlated with TR. However, the accuracy and sensitivity of traditional prognostic markers for predicting TR in unresectable HCC are often limited and usually require invasive procedures. Moreover, regional differences and comorbidities can also cause discrepancies in clinical predictions, failing to fully capture tumor heterogeneity. This variability can hinder clinical decision-making, worsen prognosis, and make these methods hard to apply widely in practice.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5016,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In recent years, the rapid advancement of medical statistics and computer software has led to the widespread recognition of medical imaging omics among researchers. This approach uses medical image data, combining data mining and statistical tools to extract high-throughput features for disease prognosis and prediction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5338,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Multi-omics prediction models that integrate various omics data and traditional logistic regression (LR) analysis significantly outperform conventional empirical models in accuracy. Liver cancer research has seen a significant rise in artificial intelligence applications, especially in radiomics (Rad), machine learning, and deep learning (DL). These technologies have been used for differential tumor diagnosis, pathological grading, MVI assessment, early recurrence prediction of treatment efficacy. Studies have shown that Rad offers high accuracy and predictive value for assessing pathological grades, drug responses, asymptomatic survival times, and early recurrence in liver cancer. Additionally, studies have demonstrated that DL is valuable in predicting MVI, lymphatic metastasis, postoperative recurrence, and overall prognosis. Therefore, we hypothesize that a model integrating clinical (Clinic), Rad, and DL features preoperatively could improve TR prediction in unresectable HCC patients, evaluate TACE effects, and support individualized treatment strategies to enhance survival. Contrast-enhanced computed tomography (CT) is a common diagnostic tool for primary liver cancer. This study aims to develop an optimal CT-based CDLRN model for preoperative TR prediction. We aimed to validate the predictive performance of this model using the concordance index (C-index), calibration curves, decision curve analysis (DCA), and internal validation sets. A nomogram was used to visualize the CDLRN linear model, improving the readability of prediction results and discussing the model\u2019s clinical feasibility.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6961,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Materials and methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6983,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6992,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study was in accordance with the Declaration of Helsinki (revised in 2013), approved by the Ethics Committee of Shangluo Central Hospital (LW2024040), with a waiver for informed consent. The data of 144 inpatients diagnosed with HCC who were unresectable or unwilling to receive curative treatment and initially treated with TACE at Shangluo Central Hospital between February 2019 and December 2023. The enrollment process is illustrated in Appendix E1 and Supplementary Figure\u00a01.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7479,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Demographic and clinical characteristics of patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7532,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Demographic and clinical characteristics were obtained from the Hospital Information System (HIS) and included age, sex, leukocyte count, platelet count, prothrombin time, activated partial thromboplastin time, fibrinogen, total bilirubin, alanine aminotransferase, aspartate aminotransferase, creatinine, ascites presence, Child-Pugh score, AFP levels, hepatitis status, cirrhosis status, BCLC staging, and performance status score. Three radiologists (ZY, ZJQ, and LHY), with 8, 9, and 21 years of experience, respectively, evaluated routine semantic features of the CT scans, including maximum tumor diameter, number of tumors, tumor capsule (incomplete/complete), and margin (clear/blurred). Follow-up evaluations occurred one month after the first TACE treatment and every three months thereafter, during which contrast-enhanced CT scans were performed to assess the treatment response.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8424,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "TACE treatment and response assessment",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8463,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "TACE treatment and response assessment are described in detail in the Appendix E2. The TR group included patients with a complete response (CR) or partial response (PR), while those with disease progression (PD) or stable disease (SD) were classified as nTR.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8722,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "CT examination and image preprocessing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8761,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Contrast-enhanced CT is the primary examination method for diagnosing and treating patients with HCC and is the most widely used imaging modality in Rad research. Details of image acquisition and processing are documented in Appendix E3 and Supplementary Table\u00a01.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9026,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Feature extraction and selection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9059,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure\u00a01A shows the workflow of this study. To enhance accuracy and stability, the TR after the first TACE treatment was independently evaluated by two experienced radiologists (A and B) according to the mRECIST. A total of 1,834 quantitative radiomic features were extracted from the VOIs using the Pyradiomics package (version 3.0.1). The deep learning features were extracted using the pre-trained DenseNet-121. Detailed information on the Rad and DL features extraction process can be found in Appendix (E4, E5) and Supplementary Table\u00a02.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9604,
+                        "infons": {
+                            "file": "fonc-16-1773400-g001.jpg",
+                            "id": "f1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Overview of the study pipeline. (A) Baseline construction process of the traditional machine learning LR model. (B) Construction process of the deep learning model, which uses two-dimensional arterial phase computed tomography images as input for the pre-trained model based on the classic convolutional neural network (DenseNet-121). The predicted probabilities for TR and nTR are the outputs. Additionally, Grad-CAM is utilized to visualize the model\u2019s decision-making process. (C) Development of the CDLRN for predicting TR in patients with unresectable hepatocellular carcinoma undergoing TACE treatment. CT, computed tomography; LR, logistic regression; TR, TACE response; nTR, non-TACE response; Grad-CAM, gradient-weighted class activation mapping; CDLRN, clinical deep learning radiomics nomogram; TACE, transarterial chemoembolization.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10451,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "DL and Rad signature building",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10481,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We selected the maximum 2D ROI plane of the tumor for analysis. Logistic regression analysis was performed on selected Rad features and DL features. Define the individual probability value of the output as signature, so as to obtain the DL signature and Rad signature. Detailed information on the Rad and DL signature building can be found in Appendix (E4, E5).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10843,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Using gradient-weighted class activation mapping (Grad-CAM), we visualized the DL model by weighting the gradient information from the last convolutional layer of the CNN. This produced a class activation map highlighting significant areas, improving the model\u2019s interpretability. Figure\u00a01B shows the entire DL model development process.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11184,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "CDLRN construction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11203,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For the screening of clinical features, continuous variables that conform to a normal distribution are described using the mean and standard deviation, with intergroup comparisons performed using the Student\u2019s t-test. For continuous variables with a skewed distribution, they are presented as the median and interquartile range, and intergroup comparisons are conducted using the Mann\u2013Whitney U test. Categorical variables are expressed as proportions and compared using either the Chi-square test or Fisher\u2019s exact test.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11731,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We combine the screened clinical features, Rad signatures, and DL signatures to develop TR prediction models using four different machine learning methods: LR, support vector machine (SVM), multilayer perceptron (MLP), and random forest (RF). The procedure for selecting the LR model is described in detail in the Appendix E6. The random seed was set to 100 in the training group. We assessed model performance using average accuracy, recall, precision, F1 score, positive predictive value, and area under the curve (AUC) across various machine learning algorithms. The best method was chosen to construct a TR model, which was then validated in a separate validation group. Finally, the best LR model was chosen to build the CDLRN model, as shown in Figure\u00a01C, along with a nomogram for model visualization. The efficiency of this model was significantly enhanced compared to other models, as confirmed by DeLong testing (p < 0.05); the specific results are detailed in Supplementary Figure\u00a02.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12728,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Statistical analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12749,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The Shapiro-Wilk test assessed normality for continuous variables. Normally distributed variables are presented as means with standard deviations, and differences between groups were compared using Student\u2019s t-test. For skewed variables, medians and interquartile ranges are reported, with the Mann-Whitney U test for cohort comparisons. Categorical variables are expressed as rates and composition ratios, with differences analyzed using the Pearson chi-squared test or Fisher\u2019s exact test. A significance level of p<0.05 was set. Independent predictors of TR were identified through univariate and multivariate analyses, including the LASSO regression model. Logistic regression analysis used a stepwise backward approach based on the Akaike Information Criterion (AIC) to build a diagnostic prediction model. The Rad-signature and DL-signature were included in the clinical model to form a combined model. Predictive performance was evaluated using accuracy, sensitivity, specificity, positive predictive value (PPV), negative predictive value (NPV), and AUC. R software was used for model fitting and nomogram generation, with accuracy verified using calibration curves and the Hosmer-Lemeshow test. The DeLong test compared AUC values, and clinical utility was assessed through DCA, validated in a separate group. Two-sided p<0.05 was considered statistically significant. All statistical analyses were performed using R software (version 4.1.2; http://www.r-project.org/).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14232,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14240,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Demographic and clinical characteristics of patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14293,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "A total of 144 patients were enrolled in this study, including 83 with TR and 61 with nTR. The average age was 59.8 \u00b1 12 years, with a male-to-female ratio of 3.65:1 (113 males and 31 females). Among the participants, 121 had hepatitis B cirrhosis, and 92 had multiple tumors. Patients were randomly divided into a training group (102) and a validation group (42), with no significant differences between the two cohorts (P > 0.05). Baseline characteristics are summarized in Table\u00a01. Univariate regression analysis was performed in the training group, resulting in five selected variables (Ascites, ECOG, Child-Pugh score, margin, and tumor capsule) for multivariate LR analysis, the findings are summarized in Table\u00a02. Notably, the tumor capsule variable showed a significant difference in TR and nTR between the two patient groups (P < 0.05) and was identified as an independent predictor of TR, which was used to construct a clinical model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15241,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Clinical characteristics of patients in the training and validation cohorts.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15318,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Variables</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training cohort<break/>(n=102)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation cohort<break/>(n=42)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">P value</th></tr></thead><tbody><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Age (years), mean (SD)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">59.04 (11.94)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">61.57 (13.06)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.256</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Gender, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.985</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Male</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">80 (78.43)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">33 (78.57)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Female</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">22 (21.57)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">9 (21.43)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">WBC*10<sup>9</sup>, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">5.21 (3.26, 6.89)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">4.93 (3.39, 7.10)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.679</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">PLT*10<sup>9</sup>, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">152.0 (90.0, 217.2)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">127.5 (84.0, 156.8)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.091</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">PT, mean (SD)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">13.91 (2.60)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">18.29 (23.32)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.686</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">APTT, mean (SD)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">81.31 (20.16)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">79.50 (15.31)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.763</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Fib, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">2.85 (2.15, 3.56)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">2.66 (1.95, 3.47)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.496</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">TBIL, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">20.15 (13.25, 31.85)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">21.85 (16.88, 35.30)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.207</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">ALT, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">38.5 (20.0, 64.3)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">32.5 (25.5, 62.8)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.886</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">AST, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">61.5 (30.0, 100.3)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">53.0 (33.8, 97.5)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.738</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cr, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">57.0 (49.0, 72.0)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">59.5 (50.0, 67.3)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.974</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">AFP, median (IQR)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">436.55 (85.90, 1918.28)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">290.05 (45.68, 1891.78)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.667</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">TD, mean (SD)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">7.98 (3.83)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">7.38 (3.57)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.389</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">TN, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.065</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Single</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">32 (31.4)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">20 (47.6)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Multiple</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">70 (68.6)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">22 (52.4)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Ascites, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.891</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Absent</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">74 (72.5)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">30 (71.4)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Present</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">28 (27.5)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">12 (28.6)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">HBsAg, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.269</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Positive</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">83 (81.37)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">38 (90.48)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Negative</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">19 (18.63)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">4 (9.52)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cirrhosis, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.243</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Absent</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">49 (48.04)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">15 (35.71)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Present</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">53 (51.96)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">27 (64.29)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">BCLC stage, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.397</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003A</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">28 (27.45)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">16 (38.10)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003B</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">68 (66.67)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">23 (54.76)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003C</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">6 (5.88)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">3 (7.14)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Child-Pugh, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.569</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003A</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">40 (39.22)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">19 (45.24)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003B</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">36 (35.29)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">11 (26.19)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003C</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">26 (25.49)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">12 (28.57)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">ECOG, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.688</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u20030</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">57 (55.88)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">25 (59.52)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u20031</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">45 (44.12)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">16 (40.48)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Tumor Capsule, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.709</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Incomplete</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">44 (43.14)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">16 (38.10)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Complete</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">58 (56.86)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">26 (61.90)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Margin, n (%)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.101</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Blur</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">59 (57.84)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">18 (42.86)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2003Clear</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">43 (42.16)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">24 (57.14)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\"/></tr></tbody></table>\n"
+                        },
+                        "text": "Variables\tTraining cohort(n=102)\tValidation cohort(n=42)\tP value\t \tAge (years), mean (SD)\t59.04 (11.94)\t61.57 (13.06)\t0.256\t \tGender, n (%)\t\t\t0.985\t \t\u2003Male\t80 (78.43)\t33 (78.57)\t\t \t\u2003Female\t22 (21.57)\t9 (21.43)\t\t \tWBC*109, median (IQR)\t5.21 (3.26, 6.89)\t4.93 (3.39, 7.10)\t0.679\t \tPLT*109, median (IQR)\t152.0 (90.0, 217.2)\t127.5 (84.0, 156.8)\t0.091\t \tPT, mean (SD)\t13.91 (2.60)\t18.29 (23.32)\t0.686\t \tAPTT, mean (SD)\t81.31 (20.16)\t79.50 (15.31)\t0.763\t \tFib, median (IQR)\t2.85 (2.15, 3.56)\t2.66 (1.95, 3.47)\t0.496\t \tTBIL, median (IQR)\t20.15 (13.25, 31.85)\t21.85 (16.88, 35.30)\t0.207\t \tALT, median (IQR)\t38.5 (20.0, 64.3)\t32.5 (25.5, 62.8)\t0.886\t \tAST, median (IQR)\t61.5 (30.0, 100.3)\t53.0 (33.8, 97.5)\t0.738\t \tCr, median (IQR)\t57.0 (49.0, 72.0)\t59.5 (50.0, 67.3)\t0.974\t \tAFP, median (IQR)\t436.55 (85.90, 1918.28)\t290.05 (45.68, 1891.78)\t0.667\t \tTD, mean (SD)\t7.98 (3.83)\t7.38 (3.57)\t0.389\t \tTN, n (%)\t\t\t0.065\t \t\u2003Single\t32 (31.4)\t20 (47.6)\t\t \t\u2003Multiple\t70 (68.6)\t22 (52.4)\t\t \tAscites, n (%)\t\t\t0.891\t \t\u2003Absent\t74 (72.5)\t30 (71.4)\t\t \t\u2003Present\t28 (27.5)\t12 (28.6)\t\t \tHBsAg, n (%)\t\t\t0.269\t \t\u2003Positive\t83 (81.37)\t38 (90.48)\t\t \t\u2003Negative\t19 (18.63)\t4 (9.52)\t\t \tCirrhosis, n (%)\t\t\t0.243\t \t\u2003Absent\t49 (48.04)\t15 (35.71)\t\t \t\u2003Present\t53 (51.96)\t27 (64.29)\t\t \tBCLC stage, n (%)\t\t\t0.397\t \t\u2003A\t28 (27.45)\t16 (38.10)\t\t \t\u2003B\t68 (66.67)\t23 (54.76)\t\t \t\u2003C\t6 (5.88)\t3 (7.14)\t\t \tChild-Pugh, n (%)\t\t\t0.569\t \t\u2003A\t40 (39.22)\t19 (45.24)\t\t \t\u2003B\t36 (35.29)\t11 (26.19)\t\t \t\u2003C\t26 (25.49)\t12 (28.57)\t\t \tECOG, n (%)\t\t\t0.688\t \t\u20030\t57 (55.88)\t25 (59.52)\t\t \t\u20031\t45 (44.12)\t16 (40.48)\t\t \tTumor Capsule, n (%)\t\t\t0.709\t \t\u2003Incomplete\t44 (43.14)\t16 (38.10)\t\t \t\u2003Complete\t58 (56.86)\t26 (61.90)\t\t \tMargin, n (%)\t\t\t0.101\t \t\u2003Blur\t59 (57.84)\t18 (42.86)\t\t \t\u2003Clear\t43 (42.16)\t24 (57.14)\t\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17095,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "WBC, white blood cells; PLT, platelet; PT, prothrombin time; APTT, Activated partial thromboplastin time; Fib, fibrinogen; TBIL, total bilirubin; ALT, alanine aminotransferase; AST, Aspartate Aminotransferase; AFP, alpha fetoprotein; Cr, serum creatinine; TD, tumor diameter; TN, tumor number; ECOG, Eastern Cooperative Oncology Group.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17431,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Univariate and multivariate logistic regression analyses of clinical characteristics for TR in the training cohort.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17547,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"middle\" rowspan=\"2\" align=\"center\" colspan=\"1\">Variables</th><th valign=\"middle\" colspan=\"2\" align=\"center\" rowspan=\"1\">Univariate analysis</th><th valign=\"middle\" colspan=\"2\" align=\"center\" rowspan=\"1\">Multivariate analysis</th></tr><tr><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">P value</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">OR (95%CI)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">P value</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">OR (95%CI)</th></tr></thead><tbody><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Age, (years)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.198</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.004 (0.999-1.010)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Gender</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.282</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.183 (0.916-1.528)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">WBC*10<sup>9</sup></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.881</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.996 (0.948-1.045)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">PLT*10<sup>9</sup></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.957</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.997 (0.993-1.002)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">PT, (s)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.440</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.011 (0.988-1.035)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">APTT, (s)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.258</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.003 (0.999-1.007)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Fib, (g/L)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.640</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.029 (0.931-1.138)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">TBIL, (\u03bcmol/L)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.226</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.988 (0.970-1.007)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">ALT, (U/L)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.538</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.001 (0.998-1.005)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">AST, (U/L)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.244</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.998 (0.995-1.001)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cr, (\u03bcmol/L)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.242</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.003 (0.999-1.008)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">AFP, (ng/mL)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.417</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.000 (1.000-1.000)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">TD, (cm)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.366</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.980 (0.945-1.017)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">TN</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.083</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.904 (0.822-0.995)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Ascites</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">\n<bold>0.005</bold>\n</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.273 (0.128-0.582)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.148</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.326 (0.091-1.166)</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">HBsAg</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.155</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.371 (0.951-1.976)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cirrhosis</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.680</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.893 (0.568-1.404)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">BCLC stage</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.405</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.840 (0.595-1.186)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Child-Pugh</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">\n<bold>0.014</bold>\n</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.637 (0.471-0.860)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.945</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.967 (0.469-1.994)</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">ECOG</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;<bold>0.001</bold></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.324 (0.183-0.572)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.136</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.355 (0.113-1.113)</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Tumor Capsule</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;<bold>0.001</bold></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3.833 (2.250-6.534)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">\n<bold>0.003</bold>\n</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">5.823 (2.208-15.348)</td></tr><tr><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">Margin</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;<bold>0.001</bold></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">5.286 (2.683-10.412)</td><td valign=\"middle\" align=\"left\" rowspan=\"1\" colspan=\"1\">0.176</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.522 (0.819-7.768)</td></tr></tbody></table>\n"
+                        },
+                        "text": "Variables\tUnivariate analysis\tMultivariate analysis\t \tP value\tOR (95%CI)\tP value\tOR (95%CI)\t \tAge, (years)\t0.198\t1.004 (0.999-1.010)\t\t\t \tGender\t0.282\t1.183 (0.916-1.528)\t\t\t \tWBC*109\t0.881\t0.996 (0.948-1.045)\t\t\t \tPLT*109\t0.957\t0.997 (0.993-1.002)\t\t\t \tPT, (s)\t0.440\t1.011 (0.988-1.035)\t\t\t \tAPTT, (s)\t0.258\t1.003 (0.999-1.007)\t\t\t \tFib, (g/L)\t0.640\t1.029 (0.931-1.138)\t\t\t \tTBIL, (\u03bcmol/L)\t0.226\t0.988 (0.970-1.007)\t\t\t \tALT, (U/L)\t0.538\t1.001 (0.998-1.005)\t\t\t \tAST, (U/L)\t0.244\t0.998 (0.995-1.001)\t\t\t \tCr, (\u03bcmol/L)\t0.242\t1.003 (0.999-1.008)\t\t\t \tAFP, (ng/mL)\t0.417\t1.000 (1.000-1.000)\t\t\t \tTD, (cm)\t0.366\t0.980 (0.945-1.017)\t\t\t \tTN\t0.083\t0.904 (0.822-0.995)\t\t\t \tAscites\t0.005\t0.273 (0.128-0.582)\t0.148\t0.326 (0.091-1.166)\t \tHBsAg\t0.155\t1.371 (0.951-1.976)\t\t\t \tCirrhosis\t0.680\t0.893 (0.568-1.404)\t\t\t \tBCLC stage\t0.405\t0.840 (0.595-1.186)\t\t\t \tChild-Pugh\t0.014\t0.637 (0.471-0.860)\t0.945\t0.967 (0.469-1.994)\t \tECOG\t<0.001\t0.324 (0.183-0.572)\t0.136\t0.355 (0.113-1.113)\t \tTumor Capsule\t<0.001\t3.833 (2.250-6.534)\t0.003\t5.823 (2.208-15.348)\t \tMargin\t<0.001\t5.286 (2.683-10.412)\t0.176\t2.522 (0.819-7.768)\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18641,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "OR, odds ratio; CI, confidence interval; The bold values mean the P value<0.05.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18721,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Rad and DL signatures validation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18754,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "After a thorough feature screening process, the features related to TR in the training group were reduced to 15 Rad features and 4 DL features. These features constructed the Rad signature and DL signature, respectively. The detailed process for constructing these signatures and the selected features are provided in Appendix E4 and Supplementary Table\u00a02. For the construction of the Rad signature model, we used Shapley Additive exPlanation (SHAP) values to visually explain feature importance for the LR machine learning model (Figure\u00a02A). SHAP summarized the data for each patient, with each point on the graph representing an individual patient, colored by feature value from low (blue) to high (red), and ranked by importance. Figure\u00a02A shows that the wavelet_HHL_glcm_Correlation feature is the most significant for distinguishing TR from nTR, with an increasing trend in model output corresponding to higher feature values. To enhance the interpretability of the DL model\u2019s output, we applied Grad-CAM for visualization (Figure\u00a02B). This technique revealed obvious differences in key areas identified by each model within the sample. Notably, the Rad signature exhibited superior predictive performance compared to the DL signature. The C-index for TR prediction was 0.895 (95% confidence interval [CI], 0.834-0.957) for the Rad signature and 0.840 (95% CI, 0.763-0.917) for the DL signature. Although the Rad signature outperformed the DL signature, the combined deep learning radiomics (DLR) signature, which incorporated both Rad and DL features, achieved the best performance with a C-index of 0.925 (95% CI, 0.873-0.977). In the validation group, all models demonstrated strong predictive ability (Table\u00a03).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20482,
+                        "infons": {
+                            "file": "fonc-16-1773400-g002.jpg",
+                            "id": "f2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "(A) SHAP summary plot of the radiomics signature model, illustrating feature relevance and the contribution of combined features to the model\u2019s predictive performance. (B) Areas of interest identified by the deep learning models in CT image analysis of hepatocellular carcinoma. SHAP, Shapley Additive exPlanation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20799,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "The performance of different models in the training and validation cohorts.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20875,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"middle\" colspan=\"2\" align=\"left\" rowspan=\"1\">Model</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">AUC (95% CI)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Accuracy</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Sensitivity</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Specificity</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PPV</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">NPV</th></tr></thead><tbody><tr><td valign=\"middle\" rowspan=\"2\" align=\"left\" colspan=\"1\">Clinical model</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.780 (0.699-0.862)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.784</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.821</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.739</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.793</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.773</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.826 (0.701-0.951)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.833</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.852</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.80</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.885</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.750</td></tr><tr><td valign=\"middle\" rowspan=\"2\" align=\"left\" colspan=\"1\">Rad signature</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.895 (0.834-0.957)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.833</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.946</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.696</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.791</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.914</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.731 (0.573-0.889)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.714</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.778</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.60</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.769</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.562</td></tr><tr><td valign=\"middle\" rowspan=\"2\" align=\"left\" colspan=\"1\">DL signature</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.840 (0.763-0.917)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.784</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.821</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.739</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.793</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.773</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.733 (0.562-0.905)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.714</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.667</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.80</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.857</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.571</td></tr><tr><td valign=\"middle\" rowspan=\"2\" align=\"left\" colspan=\"1\">DLR signature</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.925 (0.873-0.977)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.873</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.857</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.891</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.906</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.737</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.726 (0.564-0.888)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.738</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.778</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.667</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.808</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.625</td></tr><tr><td valign=\"middle\" rowspan=\"2\" align=\"left\" colspan=\"1\">CDLRN</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.958 (0.916-0.999)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.902</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.857</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.957</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.960</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.846</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.916 (0.835-0.997)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.857</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.778</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.998</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.989</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.714</td></tr></tbody></table>\n"
+                        },
+                        "text": "Model\tAUC (95% CI)\tAccuracy\tSensitivity\tSpecificity\tPPV\tNPV\t \tClinical model\tTraining\t0.780 (0.699-0.862)\t0.784\t0.821\t0.739\t0.793\t0.773\t \tValidation\t0.826 (0.701-0.951)\t0.833\t0.852\t0.80\t0.885\t0.750\t \tRad signature\tTraining\t0.895 (0.834-0.957)\t0.833\t0.946\t0.696\t0.791\t0.914\t \tValidation\t0.731 (0.573-0.889)\t0.714\t0.778\t0.60\t0.769\t0.562\t \tDL signature\tTraining\t0.840 (0.763-0.917)\t0.784\t0.821\t0.739\t0.793\t0.773\t \tValidation\t0.733 (0.562-0.905)\t0.714\t0.667\t0.80\t0.857\t0.571\t \tDLR signature\tTraining\t0.925 (0.873-0.977)\t0.873\t0.857\t0.891\t0.906\t0.737\t \tValidation\t0.726 (0.564-0.888)\t0.738\t0.778\t0.667\t0.808\t0.625\t \tCDLRN\tTraining\t0.958 (0.916-0.999)\t0.902\t0.857\t0.957\t0.960\t0.846\t \tValidation\t0.916 (0.835-0.997)\t0.857\t0.778\t0.998\t0.989\t0.714\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21617,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "AUC, area under the receiver-operating-characteristic curve; CI, confidence interval; PPV, positive predictive value; NPV, negative predictive value;.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21768,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "Rad, radiomics; DL, deep learning; DLR, deep learning and radiomics; CDLRN, clinical and deep learning and radiomics nomogram.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21895,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Performance and validation of CDLRN",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21931,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "In the training group, the Rad-based signature, DL-based signature, and Tumor Capsule were identified as independent risk factors for TR. We constructed a combined model, termed the CDLRN, using backward stepwise LR based on the minimum AIC for these factors (Figure\u00a03A). SHAP provided a nomogram illustrating the range and distribution of feature importance in relation to model output. Notably, the Rad signature emerged as the most important feature for distinguishing between TR and nTR classifications (Figure\u00a03B). The AUC values for the Clinical Model, Rad signature, DL signature, DLR model, and CDLRN in the training group were 0.780 (95% CI, 0.699-0.862), 0.895 (95% CI, 0.834-0.957), 0.840 (95% CI, 0.763-0.917), 0.925 (95% CI, 0.873-0.977), and 0.958 (95% CI, 0.916-0.999), respectively. Similarly, each model maintained a high AUC in the validation group (Table\u00a03). This demonstrated that the CDLRN model had superior predictive performance among all models (Figure\u00a04A). By integrating Rad and DL features into the clinical model, we enhanced its predictive accuracy (Table\u00a03). Furthermore, in the validation group, the performance of the CDLRN model was significantly better than that of the other models (Figure\u00a04B). Both in the training set and the validation group, the calibration curves for all models showed good consistency between the TR prediction of CDLRN and the actual observations (p > 0.05) (Figures\u00a04C, D). Additionally, DCA revealed that across all cohorts, the CDLRN provided a greater net benefit than the other models at relevant thresholds (Figures\u00a05A, B).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23529,
+                        "infons": {
+                            "file": "fonc-16-1773400-g003.jpg",
+                            "id": "f3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "(A) Predictive nomogram for estimating the probability of TR. (B) SHAP summary plot of the radiomic-clinical model, demonstrating feature relevance and the contribution of combined features to the model\u2019s predictive performance. TR, TACE response; SHAP, Shapley Additive exPlanation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23815,
+                        "infons": {
+                            "file": "fonc-16-1773400-g004.jpg",
+                            "id": "f4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Receiver operating characteristic curves for the five models in the training cohort (A) and validation cohort (B). Calibration curves for the five models in the training cohort (C) and validation cohort (D).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24023,
+                        "infons": {
+                            "file": "fonc-16-1773400-g005.jpg",
+                            "id": "f5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Decision curve analysis for the CDLRN, deep learning signature, radiomics signature, deep learning radiomics signature, and clinical model in the training cohort (A) and validation cohort (B). CDLRN, clinical deep learning radiomics nomogram.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24266,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24277,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "TACE is a treatment for patients with unresectable intermediate and advanced HCC, serving as a conventional therapeutic approach. Its primary mechanism involves embolizing the tumor\u2019s blood supply, which induces ischemia and subsequent necrosis, thereby inhibiting tumor progression. However, tumor heterogeneity, spatial structure variations, and individual differences can lead to significant differences in tumor behavior. As a result, some HCC patients may be refractory to TACE, leading to local tumor recurrence or metastasis. Therefore, accurately assessing the objective response of the tumor prior to the first TACE treatment is crucial for timely adjustments in therapeutic decisions. Furthermore, the early and accurate prediction of treatment response and prognosis has certain reference value for selecting appropriate treatment plans for individual patients. As medical science advances, understanding tumor heterogeneity has improved, but information on intratumoral heterogeneity from routine exams remains limited. In this study, we proposed and validated a non-invasive CDLRN model based on preprocessed arterial abdominal CT images, using DL and Rad to analyze image features. This model aims to accurately classify HCC patients into nTR and TR groups preoperatively. Our findings suggest the CDLRN model can help clinicians identify the objective response of patients to TACE treatment at an early stage and has certain clinical significance in the treatment selection of HCC patients.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25785,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "HCC is clinically heterogeneous, requiring accurate TR and prognosis predictions to select appropriate therapies. AFP, a biomarker strongly correlated with HCC, is widely used for early diagnosis and monitoring. It serves as an important indicator of tumor activity and is often considered an independent risk factor for early recurrence after HCC resection. Additionally, some studies have reported a negative correlation between serum AFP levels and overall survival (OS) time following TACE. However, AFP has limitations in prognostic prediction for HCC, as its measurement can be invasive and may not accurately predict outcomes for small tumors (\u22643 cm). In our study, AFP was not a reliable predictor of objective response to TACE; instead, the Tumor Capsule feature emerged as a significant predictor. This discrepancy may stem from patient differences and varying sample sizes in previous studies. Our findings show that Tumor Capsule is highly correlated with TR (P < 0.05) and serves as a non-invasive, easily obtainable predictor of TACE outcomes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26845,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "This conclusion is supported by other reports. Overall, Tumor Capsule was found to be an independent predictor of TR, achieving an AUC of 0.780 (95% CI: 0.699-0.862). This study highlighted a novel machine learning approach for Rad analysis, which quantitatively extracted high-throughput image features from medical images for computer-aided data analysis, allowing prediction of treatment responses for various tumors. Prior research indicates that Rad analysis has potential predictive value in liver cancer, lung cancer, cholangiocarcinoma, gastric cancer, and colorectal cancer. Studies have shown that although clinically relevant risk factors provide predictive insights for HCC patients prior to TACE, they often overlook critical imaging information. In contrast, Rad analysis offers detailed insights into intratumoral heterogeneity that may not be discernible to radiologists. Certain texture features, such as those derived from the gray level co-occurrence matrix (GLCM) and gray size zone matrix (GLSZM), can effectively identify TR.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27893,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In our study, we developed a Rad model with an AUC of 0.895 (95% CI: 0.834-0.957). Notably, the 15 Rad features used in our analysis included conversion factors, particularly Laplacian of Gaussian (LoG) and wavelet-based features, which provided deeper insights into tumor heterogeneity. In addition, in some reports, SHAP analysis has aided in elucidating the prediction logic of the model by assessing the contribution of each feature to the prediction outcomes. We ranked the Rad features based on their importance and selected the top eight for SHAP analysis visualization, helping to clarify the influence of each feature on the Rad signature model\u2019s outputs (Figure\u00a02A).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28573,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we used transfer learning with the DenseNet-121 CNN architecture for DL feature extraction. Unlike traditional manual measurement features, DenseNet-121 is widely used in vision applications due to its excellent performance and efficient parameter usage. This structure allows for the extraction of task-specific depth information from the neural network\u2019s hidden layers, even though the DL features themselves lack specific physical meanings. The features captured by this DL algorithm can effectively predict early recurrence, metastasis after liver cancer resection, and survival outcomes for resectable HCC. Previous studies have demonstrated that DL offers valuable insights into the tumor microenvironment, especially regarding spatial heterogeneity and TACE sensitivity. In our study, DL features predicted TR well, with AUC values of 0.84 in the training group and 0.73 in the validation group. There was no significant difference in performance between the DL prediction model, the clinical model, and the Rad signature (P > 0.05). However, the performance of the combined CDLRN model\u2014integrating the DL signature with the Rad signature and clinical features\u2014outperformed any individual model. Notably, Grad-CAM visualization has been shown in previous studies to intuitively display complex tumor structures. Since both tumor boundaries and internal structure are critical areas of interest in HCC research, we employed Grad-CAM to visualize these aspects in our study, aiding in the differentiation between TR and nTR. The visualizations revealed that nTR tumors exhibited irregular shapes, unclear boundaries, and complex intratumoral heterogeneity compared to TR tumors, further validating the effectiveness of the DL signature.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30336,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "We found that the predictive capabilities of the CDLRN model in both the training and validation groups were superior to any other model (p < 0.05), with AUCs of 0.958 and 0.916, respectively. Previous studies have identified multiple clinical or molecular risk factors associated with TR; however, the results from these indicators can be inconsistent. This variability may be attributed to differing distributions of clinical characteristics among patients. The CDLRN model addresses this issue by incorporating high-dimensional imaging features that specifically quantify intratumoral heterogeneity, thus enhancing predictive performance. Constructed from 15 radiomic features, 4 DL features, and 1 clinical factor, these selected imaging features were tested for correlation and were found to be weakly or uncorrelated. Furthermore, the clinical utility of constructing a CDLRN model through decision curve evaluation can provide reference value for the selection of treatment options for HCC patients. Therefore, the CDLRN model has some reference value for whether to undergo TACE treatment in HCC patients.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31450,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study had several limitations. Firstly, it was a single-center retrospective study with a small sample size, introducing bias. The CDLRN model\u2019s generalizability should be validated in larger, multi-center prospective studies. Secondly, DL feature extraction used two-dimensional (2D) imaging from the largest tumor cross-section instead of 3D imaging, potentially missing critical information from the tumor\u2019s upper and lower layers. Future research should focus on comprehensive 3D analysis. Thirdly, we did not conduct a survival analysis, and longer patient follow-up is needed for meaningful survival data. Continuous monitoring of outcomes is essential for assessing TACE prognosis. Lastly, the CDLRN model lacked biological features, leaving the significance of DL features unclear. Future studies integrating Rad with pathomics or genomics may provide deeper insights into HCC\u2019s microscopic characteristics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32377,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32388,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In summary, we developed and validated a novel, non-invasive CT-based model using DL and Rad analysis to predict treatment response in HCC patients before TACE. The CDLRN model effectively combines imaging features and clinical factors, providing a new idea for HCC treatment. However, further research is still needed to confirm its clinical value.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32738,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Edited by: Shuhang Wang, Peking Union Medical College Hospital (CAMS), China",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32815,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Reviewed by: Jingxin Yan, South China University of Technology, China",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32885,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Cristian Lindner, Universidad de Concepci\u00f3n, Chile",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32937,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32965,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The raw data supporting the conclusions of this article will be made available by the authors, without undue reservation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33087,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Ethics statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33104,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The studies involving humans were approved by Ethics Committee of Shangluo Central Hospital. The studies were conducted in accordance with the local legislation and institutional requirements. The ethics committee/institutional review board waived the requirement of written informed consent for participation from the participants or the participants\u2019 legal guardians/next of kin because: 1. This study is a retrospective study and does not involve human tissue, genetics and other biological sample information; the study involved minimal harm. Since it is a retrospective study, signing the consent form will make it impossible to conduct the study (e.g., some patients have died at the time of the study). 2. In this study, the patients (survivors) included in the study obtained the verbal consent of the patients and their families by telephone follow-up. The research subjects can choose to withdraw at any time, and the withdrawal will not adversely affect their rights and interests. 3. Privacy protection of research subjects: The patient data and information involved in this study are anonymous, and personal information is represented by codes. No personal information will be disclosed during the research. In addition, we have implemented strict data security measures to ensure the security and confidentiality of research data. 4. We believe that the implementation of non-informed consent in this study is necessary and reasonable. We are committed to strictly abide by ethical norms during the research process to ensure that the rights and interests of research subjects are fully protected.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34718,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34739,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "ZH: Conceptualization, Data curation, Formal analysis, Resources, Writing \u2013 original draft. GC: Data curation, Investigation, Methodology, Project administration, Resources, Visualization, Writing \u2013 original draft. BoL: Conceptualization, Data curation, Formal analysis, Methodology, Writing \u2013 original draft, Writing \u2013 review & editing. AL: Conceptualization, Funding acquisition, Resources, Supervision, Validation, Visualization, Writing \u2013 review & editing. BiL: Conceptualization, Data curation, Formal analysis, Funding acquisition, Writing \u2013 review & editing. YM: Investigation, Methodology, Validation, Visualization, Writing \u2013 review & editing. LT: Conceptualization, Data curation, Project administration, Software, Visualization, Writing \u2013 original draft. JC: Conceptualization, Formal analysis, Methodology, Visualization, Writing \u2013 review & editing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35619,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflict of interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35640,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The authors declared that this work was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35811,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Generative AI statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35835,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that generative AI was not used in the creation of this manuscript.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35926,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "Any alternative text (alt text) provided alongside figures in this article has been generated by Frontiers with the support of artificial intelligence and reasonable efforts have been made to ensure accuracy, including review by the authors wherever possible. If you identify any issues, please contact us.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36233,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Publisher\u2019s note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36252,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36599,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supplementary material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36622,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The Supplementary Material for this article can be found online at: https://www.frontiersin.org/articles/10.3389/fonc.2026.1773400/full#supplementary-material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36781,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36792,
+                        "infons": {
+                            "name_0": "surname:Sung;given-names:H",
+                            "name_1": "surname:Ferlay;given-names:J",
+                            "name_2": "surname:Siegel;given-names:RL",
+                            "name_3": "surname:Laversanne;given-names:M",
+                            "name_4": "surname:Soerjomataram;given-names:I",
+                            "name_5": "surname:Jemal;given-names:A",
+                            "pub-id_doi": "10.3322/caac.21660",
+                            "pub-id_pmid": "33538338",
+                            "section_type": "REF",
+                            "source": "CA: A Cancer J For Clin",
+                            "type": "ref",
+                            "volume": "71",
+                            "year": "2021"
+                        },
+                        "text": "Global cancer statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36911,
+                        "infons": {
+                            "name_0": "surname:Llovet;given-names:JM",
+                            "name_1": "surname:Kelley;given-names:RK",
+                            "name_2": "surname:Villanueva;given-names:A",
+                            "name_3": "surname:Singal;given-names:AG",
+                            "name_4": "surname:Pikarsky;given-names:E",
+                            "name_5": "surname:Roayaie;given-names:S",
+                            "pub-id_doi": "10.1038/s41572-020-00240-3",
+                            "pub-id_pmid": "33479224",
+                            "section_type": "REF",
+                            "source": "Nat Rev Dis Primers",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2021"
+                        },
+                        "text": "Hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36936,
+                        "infons": {
+                            "name_0": "surname:El\u2013Serag;given-names:HB",
+                            "name_1": "surname:Rudolph;given-names:KL",
+                            "pub-id_doi": "10.1053/j.gastro.2007.04.061",
+                            "pub-id_pmid": "17570226",
+                            "section_type": "REF",
+                            "source": "Gastroenterology",
+                            "type": "ref",
+                            "volume": "132",
+                            "year": "2007"
+                        },
+                        "text": "Hepatocellular carcinoma: Epidemiology and molecular carcinogenesis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37004,
+                        "infons": {
+                            "fpage": "87",
+                            "lpage": "93",
+                            "name_0": "surname:Sciarra;given-names:A",
+                            "name_1": "surname:Di Tommaso;given-names:L",
+                            "name_2": "surname:Nakano;given-names:M",
+                            "name_3": "surname:Destro;given-names:A",
+                            "name_4": "surname:Torzilli;given-names:G",
+                            "name_5": "surname:Donadon;given-names:M",
+                            "pub-id_doi": "10.1016/j.jhep.2015.08.031",
+                            "pub-id_pmid": "26343958",
+                            "section_type": "REF",
+                            "source": "J Hepatol",
+                            "type": "ref",
+                            "volume": "64",
+                            "year": "2016"
+                        },
+                        "text": "Morphophenotypic changes in human multistep hepatocarcinogenesis with translational implications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37101,
+                        "infons": {
+                            "name_0": "surname:Chen;given-names:W",
+                            "name_1": "surname:Zheng;given-names:R",
+                            "name_2": "surname:Baade;given-names:PD",
+                            "name_3": "surname:Zhang;given-names:S",
+                            "name_4": "surname:Zeng;given-names:H",
+                            "name_5": "surname:Bray;given-names:F",
+                            "pub-id_doi": "10.3322/caac.21338",
+                            "pub-id_pmid": "26808342",
+                            "section_type": "REF",
+                            "source": "CA: A Cancer J For Clin",
+                            "type": "ref",
+                            "volume": "66",
+                            "year": "2016"
+                        },
+                        "text": "Cancer statistics in China, 2015",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37134,
+                        "infons": {
+                            "name_0": "surname:Zhou;given-names:J",
+                            "name_1": "surname:Sun;given-names:H-C",
+                            "name_2": "surname:Wang;given-names:Z",
+                            "name_3": "surname:Cong;given-names:W-M",
+                            "name_4": "surname:Wang;given-names:J-H",
+                            "name_5": "surname:Zeng;given-names:M-S",
+                            "pub-id_doi": "10.1159/000488035",
+                            "pub-id_pmid": "30319983",
+                            "section_type": "REF",
+                            "source": "Liver Cancer",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2018"
+                        },
+                        "text": "Guidelines for diagnosis and treatment of primary liver cancer in China (2017 edition)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37221,
+                        "infons": {
+                            "name_0": "surname:Forner;given-names:A",
+                            "name_1": "surname:Reig;given-names:M",
+                            "name_2": "surname:Bruix;given-names:J",
+                            "pub-id_doi": "10.1016/s0140-6736(18)30010-2",
+                            "pub-id_pmid": "29307467",
+                            "section_type": "REF",
+                            "source": "Lancet",
+                            "type": "ref",
+                            "volume": "391",
+                            "year": "2018"
+                        },
+                        "text": "Hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37246,
+                        "infons": {
+                            "name_0": "surname:Sieghart;given-names:W",
+                            "name_1": "surname:Hucke;given-names:F",
+                            "name_2": "surname:Peck-Radosavljevic;given-names:M",
+                            "pub-id_doi": "10.1016/j.jhep.2015.02.010",
+                            "pub-id_pmid": "25681552",
+                            "section_type": "REF",
+                            "source": "J Hepatol",
+                            "type": "ref",
+                            "volume": "62",
+                            "year": "2015"
+                        },
+                        "text": "Transarterial chemoembolization: Modalities, indication, and patient selection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37325,
+                        "infons": {
+                            "name_0": "surname:Erstad;given-names:DJ",
+                            "name_1": "surname:Tanabe;given-names:KK",
+                            "pub-id_doi": "10.1245/s10434-019-07227-9",
+                            "pub-id_pmid": "30788629",
+                            "section_type": "REF",
+                            "source": "Ann Surg Oncol",
+                            "type": "ref",
+                            "volume": "26",
+                            "year": "2019"
+                        },
+                        "text": "Prognostic and therapeutic implications of microvascular invasion in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37419,
+                        "infons": {
+                            "name_0": "surname:Shao;given-names:G",
+                            "name_1": "surname:Liu;given-names:R",
+                            "name_2": "surname:Ding;given-names:W",
+                            "name_3": "surname:Lu;given-names:L",
+                            "name_4": "surname:Li;given-names:W",
+                            "name_5": "surname:Cao;given-names:H",
+                            "pub-id_doi": "10.1097/cad.0000000000000690",
+                            "pub-id_pmid": "30134285",
+                            "section_type": "REF",
+                            "source": "Anti-Cancer Drugs",
+                            "type": "ref",
+                            "volume": "29",
+                            "year": "2018"
+                        },
+                        "text": "Efficacy and safety of raltitrexed-based transarterial chemoembolization for colorectal cancer liver metastases",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37531,
+                        "infons": {
+                            "name_0": "surname:Wu;given-names:F-X",
+                            "name_1": "surname:Chen;given-names:J",
+                            "name_2": "surname:Bai;given-names:T",
+                            "name_3": "surname:Zhu;given-names:S-L",
+                            "name_4": "surname:Yang;given-names:T-B",
+                            "name_5": "surname:Qi;given-names:L-N",
+                            "pub-id_doi": "10.1186/s12885-017-3545-5",
+                            "pub-id_pmid": "28899349",
+                            "section_type": "REF",
+                            "source": "BMC Cancer",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2017"
+                        },
+                        "text": "The safety and efficacy of transarterial chemoembolization combined with sorafenib and sorafenib mono-therapy in patients with BCLC stage B/C hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37698,
+                        "infons": {
+                            "name_0": "surname:Park;given-names:HJ",
+                            "name_1": "surname:Kim;given-names:JH",
+                            "name_2": "surname:Choi;given-names:S-Y",
+                            "name_3": "surname:Lee;given-names:ES",
+                            "name_4": "surname:Park;given-names:SJ",
+                            "name_5": "surname:Byun;given-names:JY",
+                            "pub-id_doi": "10.2214/ajr.16.17398",
+                            "pub-id_pmid": "28813195",
+                            "section_type": "REF",
+                            "source": "Am J Roentgenol",
+                            "type": "ref",
+                            "volume": "209",
+                            "year": "2017"
+                        },
+                        "text": "Prediction of therapeutic response of hepatocellular carcinoma to transcatheter arterial chemoembolization based on pretherapeutic dynamic CT and textural findings",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37862,
+                        "infons": {
+                            "name_0": "surname:Kim;given-names:CJ",
+                            "name_1": "surname:Kim;given-names:HJ",
+                            "name_2": "surname:Park;given-names:JH",
+                            "name_3": "surname:Park;given-names:DI",
+                            "name_4": "surname:Cho;given-names:YK",
+                            "name_5": "surname:Sohn;given-names:CI",
+                            "pub-id_doi": "10.1111/liv.12270",
+                            "pub-id_pmid": "23890360",
+                            "section_type": "REF",
+                            "source": "Liver Int",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2013"
+                        },
+                        "text": "Radiologic response to transcatheter hepatic arterial chemoembolization and clinical outcomes in patients with hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37998,
+                        "infons": {
+                            "elocation-id": "e3043-e3043",
+                            "name_0": "surname:Wang;given-names:J-H",
+                            "name_1": "surname:Zhong;given-names:X-P",
+                            "name_2": "surname:Zhang;given-names:Y-F",
+                            "name_3": "surname:Wu;given-names:X-L",
+                            "name_4": "surname:Li;given-names:S-H",
+                            "name_5": "surname:Jian;given-names:P-E",
+                            "pub-id_doi": "10.1038/cddis.2017.428",
+                            "pub-id_pmid": "28880268",
+                            "section_type": "REF",
+                            "source": "Cell Death Dis",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2017"
+                        },
+                        "text": "Cezanne predicts progression and adjuvant TACE response in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38082,
+                        "infons": {
+                            "fpage": "28627",
+                            "name_0": "surname:Bei-Ge Jiang;given-names:NW",
+                            "name_1": "surname:Jian Huang",
+                            "name_2": "surname:Yuan Yang",
+                            "name_3": "surname:Wei-Ping Zhou",
+                            "pub-id_doi": "10.18632/oncotarget.16157",
+                            "pub-id_pmid": "28404963",
+                            "section_type": "REF",
+                            "source": "Oncotarget",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2017"
+                        },
+                        "text": "Tumor SOCS3 methylation status predicts the treatment response to TACE and prognosis in HCC patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38183,
+                        "infons": {
+                            "elocation-id": "e312",
+                            "name_0": "surname:S. Mahmoudi;given-names:SB",
+                            "name_1": "surname:Yzx1;given-names:JA",
+                            "name_2": "surname:V. Koch",
+                            "name_3": "surname:D.P. Dos Santos",
+                            "pub-id_doi": "10.1016/j.clon.2023.01.018",
+                            "pub-id_pmid": "36804153",
+                            "section_type": "REF",
+                            "source": "Clin Oncol",
+                            "type": "ref",
+                            "volume": "35",
+                            "year": "2023"
+                        },
+                        "text": "Computed tomography radiomics to differentiate intrahepatic cholangiocarcinoma and hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38291,
+                        "infons": {
+                            "fpage": "66",
+                            "lpage": "76",
+                            "name_0": "surname:Szczypi\u0144ski;given-names:PM",
+                            "name_1": "surname:Strzelecki;given-names:M",
+                            "name_2": "surname:Materka;given-names:A",
+                            "name_3": "surname:Klepaczko;given-names:A",
+                            "pub-id_doi": "10.1016/j.cmpb.2008.08.005",
+                            "pub-id_pmid": "18922598",
+                            "section_type": "REF",
+                            "source": "Comput Methods Programs BioMed",
+                            "type": "ref",
+                            "volume": "94",
+                            "year": "2009"
+                        },
+                        "text": "MaZda\u2014A software package for image texture analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38345,
+                        "infons": {
+                            "name_0": "surname:Park;given-names:HJ",
+                            "name_1": "surname:Park;given-names:B",
+                            "name_2": "surname:Lee;given-names:SS",
+                            "pub-id_doi": "10.3348/kjr.2019.0752",
+                            "pub-id_pmid": "32193887",
+                            "section_type": "REF",
+                            "source": "Korean J Radiol",
+                            "type": "ref",
+                            "volume": "21",
+                            "year": "2020"
+                        },
+                        "text": "Radiomics and deep learning: Hepatic applications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38395,
+                        "infons": {
+                            "fpage": "1",
+                            "lpage": "13",
+                            "name_0": "surname:Huang;given-names:F",
+                            "name_1": "surname:Liu;given-names:X",
+                            "name_2": "surname:Liu;given-names:P",
+                            "name_3": "surname:Xu;given-names:D",
+                            "name_4": "surname:Li;given-names:Z",
+                            "name_5": "surname:Lin;given-names:H",
+                            "pub-id_doi": "10.1155/2022/7099476",
+                            "pub-id_pmid": "36203532",
+                            "section_type": "REF",
+                            "source": "Comput Math Methods Med",
+                            "type": "ref",
+                            "volume": "2022",
+                            "year": "2022"
+                        },
+                        "text": "The application value of MRI T2\u2217WI radiomics nomogram in discriminating hepatocellular carcinoma from intrahepatic cholangiocarcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38531,
+                        "infons": {
+                            "fpage": "697",
+                            "lpage": "705",
+                            "name_0": "surname:Hu;given-names:H-T",
+                            "name_1": "surname:Shan;given-names:Q-Y",
+                            "name_2": "surname:Chen;given-names:S-L",
+                            "name_3": "surname:Li;given-names:B",
+                            "name_4": "surname:Feng;given-names:S-T",
+                            "name_5": "surname:Xu;given-names:E-J",
+                            "pub-id_doi": "10.1007/s11547-020-01174-2",
+                            "pub-id_pmid": "32200455",
+                            "section_type": "REF",
+                            "source": "La Radiologia Med",
+                            "type": "ref",
+                            "volume": "125",
+                            "year": "2020"
+                        },
+                        "text": "CT-based radiomics for preoperative prediction of early recurrent hepatocellular carcinoma: Technical reproducibility of acquisition and scanners",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38677,
+                        "infons": {
+                            "name_0": "surname:Zhao;given-names:Y",
+                            "name_1": "surname:Wu;given-names:J",
+                            "name_2": "surname:Zhang;given-names:Q",
+                            "name_3": "surname:Hua;given-names:Z",
+                            "name_4": "surname:Qi;given-names:W",
+                            "name_5": "surname:Wang;given-names:N",
+                            "pub-id_doi": "10.1002/jmri.27424",
+                            "pub-id_pmid": "33217114",
+                            "section_type": "REF",
+                            "source": "J Magn Reson Imaging",
+                            "type": "ref",
+                            "volume": "53",
+                            "year": "2020"
+                        },
+                        "text": "Radiomics analysis based on multiparametric MRI for predicting early recurrence in hepatocellular carcinoma after partial hepatectomy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38811,
+                        "infons": {
+                            "name_0": "surname:Hu;given-names:H-T",
+                            "name_1": "surname:Wang;given-names:Z",
+                            "name_2": "surname:Huang;given-names:X-W",
+                            "name_3": "surname:Chen;given-names:S-I",
+                            "name_4": "surname:Zheng;given-names:X",
+                            "name_5": "surname:Ruan;given-names:S-M",
+                            "pub-id_doi": "10.1007/s00330-018-5797-0",
+                            "pub-id_pmid": "30421015",
+                            "section_type": "REF",
+                            "source": "Eur Radio",
+                            "type": "ref",
+                            "volume": "29",
+                            "year": "2018"
+                        },
+                        "text": "Ultrasound-based radiomics score: A potential biomarker for the prediction of microvascular invasion in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38940,
+                        "infons": {
+                            "fpage": "249",
+                            "name_0": "surname:Chen;given-names:Z",
+                            "name_1": "surname:Zuo;given-names:X",
+                            "name_2": "surname:Zhang;given-names:Y",
+                            "name_3": "surname:Han;given-names:G",
+                            "name_4": "surname:Zhang;given-names:L",
+                            "name_5": "surname:Ding;given-names:W",
+                            "pub-id_doi": "10.21037/atm-22-2828",
+                            "pub-id_pmid": "37082689",
+                            "section_type": "REF",
+                            "source": "Ann Trans Med",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2023"
+                        },
+                        "text": "Derivation and validation of machine learning models for preoperative estimation of microvascular invasion risk in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39080,
+                        "infons": {
+                            "name_0": "surname:Liu;given-names:Q",
+                            "name_1": "surname:Li;given-names:J",
+                            "name_2": "surname:Liu;given-names:F",
+                            "name_3": "surname:Ding;given-names:J",
+                            "name_4": "surname:Chen;given-names:W",
+                            "name_5": "surname:Wei;given-names:Y",
+                            "pub-id_doi": "10.1186/s40644-020-00360-9",
+                            "pub-id_pmid": "33198809",
+                            "section_type": "REF",
+                            "source": "Cancer Imaging",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2020"
+                        },
+                        "text": "A radiomics nomogram for the prediction of overall survival in patients with hepatocellular carcinoma after hepatectomy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39200,
+                        "infons": {
+                            "name_0": "surname:Ma;given-names:X",
+                            "name_1": "surname:Wei;given-names:J",
+                            "name_2": "surname:Gu;given-names:D",
+                            "name_3": "surname:Zhu;given-names:Y",
+                            "name_4": "surname:Feng;given-names:B",
+                            "name_5": "surname:Liang;given-names:M",
+                            "pub-id_doi": "10.1007/s00330-018-5985-y",
+                            "pub-id_pmid": "30770969",
+                            "section_type": "REF",
+                            "source": "Eur Radio",
+                            "type": "ref",
+                            "volume": "29",
+                            "year": "2019"
+                        },
+                        "text": "Preoperative radiomics nomogram for microvascular invasion prediction in hepatocellular carcinoma using contrast-enhanced CT",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39325,
+                        "infons": {
+                            "elocation-id": "749137",
+                            "name_0": "surname:Ren;given-names:S",
+                            "name_1": "surname:Li;given-names:Q",
+                            "name_2": "surname:Liu;given-names:S",
+                            "name_3": "surname:Qi;given-names:Q",
+                            "name_4": "surname:Duan;given-names:S",
+                            "name_5": "surname:Mao;given-names:B",
+                            "pub-id_doi": "10.3389/fonc.2021.749137",
+                            "pub-id_pmid": "34804935",
+                            "section_type": "REF",
+                            "source": "Front Oncol",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2021"
+                        },
+                        "text": "Clinical value of machine learning-based ultrasomics in preoperative differentiation between hepatocellular carcinoma and intrahepatic cholangiocarcinoma: A multicenter study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39500,
+                        "infons": {
+                            "name_0": "surname:Molodianovitch;given-names:K",
+                            "name_1": "surname:Faraggi;given-names:D",
+                            "name_2": "surname:Reiser;given-names:B",
+                            "pub-id_doi": "10.1002/bimj.200610223",
+                            "pub-id_pmid": "17094340",
+                            "section_type": "REF",
+                            "source": "Biom J",
+                            "type": "ref",
+                            "volume": "48",
+                            "year": "2006"
+                        },
+                        "text": "Comparing the areas under two correlated ROC curves: Parametric and non\u2010parametric approaches",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39596,
+                        "infons": {
+                            "name_0": "surname:Wang;given-names:Y",
+                            "name_1": "surname:Lang;given-names:J",
+                            "name_2": "surname:Zuo;given-names:JZ",
+                            "name_3": "surname:Dong;given-names:Y",
+                            "name_4": "surname:Hu;given-names:Z",
+                            "name_5": "surname:Xu;given-names:X",
+                            "pub-id_doi": "10.1007/s00330-022-08887-0",
+                            "pub-id_pmid": "35678859",
+                            "section_type": "REF",
+                            "source": "Eur Radio",
+                            "type": "ref",
+                            "volume": "32",
+                            "year": "2022"
+                        },
+                        "text": "The radiomic-clinical model using the SHAP method for assessing the treatment response of whole-brain radiotherapy: A multicentric study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39733,
+                        "infons": {
+                            "name_0": "surname:Selvaraju;given-names:RR",
+                            "name_1": "surname:Cogswell;given-names:M",
+                            "name_2": "surname:Das;given-names:AVR",
+                            "name_3": "surname:Parikh;given-names:D",
+                            "name_4": "surname:Batra;given-names:D",
+                            "name_5": "surname:Dai;given-names:C",
+                            "pub-id_doi": "10.1007/s11263-019-01228-7",
+                            "pub-id_pmid": "41940407",
+                            "section_type": "REF",
+                            "source": "Int J Comput Vision",
+                            "type": "ref",
+                            "volume": "128",
+                            "year": "2020"
+                        },
+                        "text": "Grad-CAM: Visual explanations from deep networks via gradient-based localization",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39814,
+                        "infons": {
+                            "name_0": "surname:An;given-names:H",
+                            "name_1": "surname:Bhatia;given-names:I",
+                            "name_2": "surname:Cao;given-names:F",
+                            "name_3": "surname:Huang;given-names:Z",
+                            "name_4": "surname:Xie;given-names:C",
+                            "pub-id_doi": "10.1186/s12885-023-10620-z",
+                            "pub-id_pmid": "36869284",
+                            "section_type": "REF",
+                            "source": "BMC Cancer",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2023"
+                        },
+                        "text": "CT texture analysis in predicting treatment response and survival in patients with hepatocellular carcinoma treated with transarterial chemoembolization using random forest models",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39994,
+                        "infons": {
+                            "name_0": "surname:Aujay;given-names:G",
+                            "name_1": "surname:Etchegaray;given-names:C",
+                            "name_2": "surname:Blanc;given-names:J-F",
+                            "name_3": "surname:Lapuyade;given-names:B",
+                            "name_4": "surname:Papadopoulos;given-names:P",
+                            "name_5": "surname:Pey;given-names:M-A",
+                            "pub-id_doi": "10.1016/j.diii.2022.01.009",
+                            "pub-id_pmid": "35183483",
+                            "section_type": "REF",
+                            "source": "Diagn Interventional Imaging",
+                            "type": "ref",
+                            "volume": "103",
+                            "year": "2022"
+                        },
+                        "text": "Comparison of MRI-based response criteria and radiomics for the prediction of early response to transarterial radioembolization in patients with hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40164,
+                        "infons": {
+                            "elocation-id": "662366",
+                            "name_0": "surname:Fang;given-names:S",
+                            "name_1": "surname:Lai;given-names:L",
+                            "name_2": "surname:Zhu;given-names:J",
+                            "name_3": "surname:Zheng;given-names:L",
+                            "name_4": "surname:Xu;given-names:Y",
+                            "name_5": "surname:Chen;given-names:W",
+                            "pub-id_doi": "10.3389/fmolb.2021.662366",
+                            "pub-id_pmid": "34532340",
+                            "section_type": "REF",
+                            "source": "Front Mol Biosci",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2021"
+                        },
+                        "text": "A radiomics signature-based nomogram to predict the progression-free survival of patients with hepatocellular carcinoma after transcatheter arterial chemoembolization plus radiofrequency ablation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40360,
+                        "infons": {
+                            "fpage": "e2121143",
+                            "name_0": "surname:Wang;given-names:W",
+                            "name_1": "surname:Peng;given-names:Y",
+                            "name_2": "surname:Feng;given-names:X",
+                            "name_3": "surname:Zhao;given-names:Y",
+                            "name_4": "surname:Seeruttun;given-names:S-R",
+                            "name_5": "surname:Zhang;given-names:J",
+                            "pub-id_doi": "10.1001/jamanetworkopen.2021.21143",
+                            "pub-id_pmid": "34410397",
+                            "section_type": "REF",
+                            "source": "JAMA Netw Open",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2021"
+                        },
+                        "text": "Development and validation of a computed tomography\u2013based radiomics signature to predict response to neoadjuvant chemotherapy for locally advanced gastric cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40524,
+                        "infons": {
+                            "fpage": "1210",
+                            "lpage": "1223.e3",
+                            "name_0": "surname:Gaba;given-names:RC",
+                            "name_1": "surname:Lokken;given-names:RP",
+                            "name_2": "surname:Hickey;given-names:RM",
+                            "name_3": "surname:Lipnik;given-names:AJ",
+                            "name_4": "surname:Lewandowski;given-names:RJ",
+                            "name_5": "surname:Salem;given-names:R",
+                            "pub-id_doi": "10.1016/j.jvir.2017.04.025",
+                            "pub-id_pmid": "28669744",
+                            "section_type": "REF",
+                            "source": "J Vasc Interventional Radiol",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2017"
+                        },
+                        "text": "Quality improvement guidelines for transarterial chemoembolization and embolization of hepatic Malignancy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40630,
+                        "infons": {
+                            "name_0": "surname:Arizumi;given-names:T",
+                            "name_1": "surname:Ueshima;given-names:K",
+                            "name_2": "surname:Minami;given-names:T",
+                            "name_3": "surname:Kono;given-names:M",
+                            "name_4": "surname:Chishina;given-names:H",
+                            "name_5": "surname:Takita;given-names:M",
+                            "pub-id_doi": "10.1159/000367743",
+                            "pub-id_pmid": "26734579",
+                            "section_type": "REF",
+                            "source": "Liver Cancer",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2015"
+                        },
+                        "text": "Effectiveness of sorafenib in patients with transcatheter arterial chemoembolization (TACE) refractory and intermediate-stage hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40781,
+                        "infons": {
+                            "fpage": "122540",
+                            "name_0": "surname:Li;given-names:J",
+                            "name_1": "surname:Liu;given-names:Y",
+                            "name_2": "surname:Zheng;given-names:R",
+                            "name_3": "surname:Qu;given-names:C",
+                            "name_4": "surname:Li;given-names:J",
+                            "pub-id_doi": "10.1016/j.lfs.2024.122540",
+                            "pub-id_pmid": "38428568",
+                            "section_type": "REF",
+                            "source": "Life Sci",
+                            "type": "ref",
+                            "volume": "342",
+                            "year": "2024"
+                        },
+                        "text": "Molecular mechanisms of TACE refractoriness: Directions for improvement of the TACE procedure",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40875,
+                        "infons": {
+                            "fpage": "792",
+                            "lpage": "800",
+                            "name_0": "surname:Banerjee;given-names:S",
+                            "name_1": "surname:Wang;given-names:DS",
+                            "name_2": "surname:Kim;given-names:HJ",
+                            "name_3": "surname:Sirlin;given-names:CB",
+                            "name_4": "surname:Chan;given-names:MG",
+                            "name_5": "surname:Korn;given-names:RL",
+                            "pub-id_doi": "10.1002/hep.27877",
+                            "pub-id_pmid": "25930992",
+                            "section_type": "REF",
+                            "source": "Hepatology",
+                            "type": "ref",
+                            "volume": "62",
+                            "year": "2015"
+                        },
+                        "text": "A computed tomography radiogenomic biomarker predicts microvascular invasion and clinical outcomes in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41002,
+                        "infons": {
+                            "fpage": "2338",
+                            "name_0": "surname:Gu;given-names:Y",
+                            "name_1": "surname:Huang;given-names:H",
+                            "name_2": "surname:Tong;given-names:Q",
+                            "name_3": "surname:Cao;given-names:M",
+                            "name_4": "surname:Ming;given-names:W",
+                            "name_5": "surname:Zhang;given-names:R",
+                            "pub-id_doi": "10.3390/cancers15082338",
+                            "pub-id_pmid": "37190266",
+                            "section_type": "REF",
+                            "source": "Cancers",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2023"
+                        },
+                        "text": "Multi-view radiomics feature fusion reveals distinct immuno-oncological characteristics and clinical prognoses in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41141,
+                        "infons": {
+                            "fpage": "32",
+                            "lpage": "40",
+                            "name_0": "surname:Zhao;given-names:H",
+                            "name_1": "surname:Hua;given-names:Y",
+                            "name_2": "surname:Dai;given-names:T",
+                            "name_3": "surname:He;given-names:J",
+                            "name_4": "surname:Tang;given-names:M",
+                            "name_5": "surname:Fu;given-names:X",
+                            "pub-id_doi": "10.1016/j.ejrad.2016.12.030",
+                            "pub-id_pmid": "28189206",
+                            "section_type": "REF",
+                            "source": "Eur J Radiol",
+                            "type": "ref",
+                            "volume": "88",
+                            "year": "2017"
+                        },
+                        "text": "Development and validation of a novel predictive scoring model for microvascular invasion in patients with hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41273,
+                        "infons": {
+                            "name_0": "surname:Zhang;given-names:Z",
+                            "name_1": "surname:Jiang;given-names:H",
+                            "name_2": "surname:Chen;given-names:J",
+                            "name_3": "surname:Wei;given-names:Y",
+                            "name_4": "surname:Cao;given-names:L",
+                            "name_5": "surname:Ye;given-names:Z",
+                            "pub-id_doi": "10.1186/s40644-019-0209-5",
+                            "pub-id_pmid": "31088553",
+                            "section_type": "REF",
+                            "source": "Cancer Imaging",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2019"
+                        },
+                        "text": "Hepatocellular carcinoma: Radiomics nomogram on gadoxetic acid-enhanced MR imaging for early postoperative recurrence prediction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41402,
+                        "infons": {
+                            "name_0": "surname:Wu;given-names:M",
+                            "name_1": "surname:Tan;given-names:H",
+                            "name_2": "surname:Gao;given-names:F",
+                            "name_3": "surname:Hai;given-names:J",
+                            "name_4": "surname:Ning;given-names:P",
+                            "name_5": "surname:Chen;given-names:J",
+                            "pub-id_doi": "10.1007/s00330-018-5787-2",
+                            "pub-id_pmid": "30406313",
+                            "section_type": "REF",
+                            "source": "Eur Radio",
+                            "type": "ref",
+                            "volume": "29",
+                            "year": "2018"
+                        },
+                        "text": "Predicting the grade of hepatocellular carcinoma based on non-contrast-enhanced MRI radiomics signature",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41506,
+                        "infons": {
+                            "name_0": "surname:Deng;given-names:P-Z",
+                            "name_1": "surname:Zhao;given-names:B-G",
+                            "name_2": "surname:Huang;given-names:X-H",
+                            "name_3": "surname:Xu;given-names:T-F",
+                            "name_4": "surname:Chen;given-names:Z-J",
+                            "name_5": "surname:Wei;given-names:Q-F",
+                            "pub-id_doi": "10.3748/wjg.v28.i31.4376",
+                            "pub-id_pmid": "36159012",
+                            "section_type": "REF",
+                            "source": "World J Gastroenterol",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2022"
+                        },
+                        "text": "Preoperative contrast-enhanced computed tomography-based radiomics model for overall survival prediction in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41639,
+                        "infons": {
+                            "name_0": "surname:Joyce;given-names:JA",
+                            "name_1": "surname:Pollard;given-names:JW",
+                            "pub-id_doi": "10.1038/nrc2618",
+                            "pub-id_pmid": "19279573",
+                            "section_type": "REF",
+                            "source": "Nat Rev Cancer",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2008"
+                        },
+                        "text": "Microenvironmental regulation of metastasis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41683,
+                        "infons": {
+                            "name_0": "surname:Dioguardi Burgio;given-names:M",
+                            "pub-id_doi": "10.1007/s00330-023-09792-w",
+                            "pub-id_pmid": "37391622",
+                            "section_type": "REF",
+                            "source": "Eur Radio",
+                            "type": "ref",
+                            "volume": "33",
+                            "year": "2023"
+                        },
+                        "text": "Non-invasive prediction of microvascular invasion in patients with hepatocellular carcinoma: Is there any added value in combining imaging features and radiomics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41845,
+                        "infons": {
+                            "fpage": "1085",
+                            "name_0": "surname:Brancato;given-names:V",
+                            "name_1": "surname:Garbino;given-names:N",
+                            "name_2": "surname:Salvatore;given-names:M",
+                            "name_3": "surname:Cavaliere;given-names:C",
+                            "pub-id_doi": "10.3390/diagnostics12051085",
+                            "pub-id_pmid": "35626241",
+                            "section_type": "REF",
+                            "source": "Diagnostics",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2022"
+                        },
+                        "text": "MRI-based radiomic features help identify lesions and predict histopathological grade of hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41959,
+                        "infons": {
+                            "name_0": "surname:Xu;given-names:X",
+                            "name_1": "surname:Zhang;given-names:H-L",
+                            "name_2": "surname:Liu;given-names:Q-P",
+                            "name_3": "surname:Sun;given-names:S-W",
+                            "name_4": "surname:Zhang;given-names:J",
+                            "name_5": "surname:Zhu;given-names:F-P",
+                            "pub-id_doi": "10.1016/j.jhep.2019.02.023",
+                            "pub-id_pmid": "30876945",
+                            "section_type": "REF",
+                            "source": "J Hepatol",
+                            "type": "ref",
+                            "volume": "70",
+                            "year": "2019"
+                        },
+                        "text": "Radiomic analysis of contrast-enhanced CT predicts microvascular invasion and outcome in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42073,
+                        "infons": {
+                            "fpage": "105058",
+                            "name_0": "surname:Wang;given-names:X",
+                            "name_1": "surname:Wang;given-names:S",
+                            "name_2": "surname:Yin;given-names:X",
+                            "name_3": "surname:Zheng;given-names:Y",
+                            "pub-id_doi": "10.1016/j.compbiomed.2021.105058",
+                            "pub-id_pmid": "34836622",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "141",
+                            "year": "2022"
+                        },
+                        "text": "MRI-based radiomics distinguish different pathological types of hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42162,
+                        "infons": {
+                            "fpage": "16",
+                            "lpage": "24",
+                            "name_0": "surname:Liu;given-names:A",
+                            "name_1": "surname:Wang;given-names:Z",
+                            "name_2": "surname:Yang;given-names:Y",
+                            "name_3": "surname:Wang;given-names:J",
+                            "name_4": "surname:Dai;given-names:X",
+                            "name_5": "surname:Wang;given-names:L",
+                            "pub-id_doi": "10.1002/cac2.12002",
+                            "pub-id_pmid": "32125097",
+                            "section_type": "REF",
+                            "source": "Cancer Commun",
+                            "type": "ref",
+                            "volume": "40",
+                            "year": "2020"
+                        },
+                        "text": "Preoperative diagnosis of Malignant pulmonary nodules in lung cancer screening with a radiomics nomogram",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42267,
+                        "infons": {
+                            "fpage": "107612",
+                            "name_0": "surname:Chen;given-names:B",
+                            "name_1": "surname:Mao;given-names:Y",
+                            "name_2": "surname:Li;given-names:J",
+                            "name_3": "surname:Zhao;given-names:Z",
+                            "name_4": "surname:Chen;given-names:Q",
+                            "name_5": "surname:Yu;given-names:Y",
+                            "pub-id_doi": "10.1016/j.compbiomed.2023.107612",
+                            "pub-id_pmid": "37939408",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "167",
+                            "year": "2023"
+                        },
+                        "text": "Predicting very early recurrence in intrahepatic cholangiocarcinoma after curative hepatectomy using machine learning radiomics based on CECT: A multi-institutional study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42438,
+                        "infons": {
+                            "fpage": "101348",
+                            "name_0": "surname:Cui;given-names:Y",
+                            "name_1": "surname:Zhang;given-names:J",
+                            "name_2": "surname:Li;given-names:Z",
+                            "name_3": "surname:Wei;given-names:K",
+                            "name_4": "surname:Lei;given-names:Y",
+                            "name_5": "surname:Ren;given-names:J",
+                            "pub-id_doi": "10.1016/j.eclinm.2022.101348",
+                            "pub-id_pmid": "35340629",
+                            "section_type": "REF",
+                            "source": "eClinicalMedicine",
+                            "type": "ref",
+                            "volume": "46",
+                            "year": "2022"
+                        },
+                        "text": "A CT-based deep learning radiomics nomogram for predicting the response to neoadjuvant chemotherapy in patients with locally advanced gastric cancer: A multicenter cohort study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42615,
+                        "infons": {
+                            "fpage": "102271",
+                            "name_0": "surname:Zhou;given-names:S",
+                            "name_1": "surname:Sun;given-names:D",
+                            "name_2": "surname:Mao;given-names:W",
+                            "name_3": "surname:Liu;given-names:Y",
+                            "name_4": "surname:Cen;given-names:W",
+                            "name_5": "surname:Ye;given-names:L",
+                            "pub-id_doi": "10.1016/j.eclinm.2023.102271",
+                            "pub-id_pmid": "37869523",
+                            "section_type": "REF",
+                            "source": "eClinicalMedicine",
+                            "type": "ref",
+                            "volume": "65",
+                            "year": "2023"
+                        },
+                        "text": "Deep radiomics-based fusion model for prediction of bevacizumab treatment response and outcome in patients with colorectal cancer liver metastases: a multicentre cohort study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42790,
+                        "infons": {
+                            "fpage": "e13872",
+                            "name_0": "surname:Bernard;given-names:D",
+                            "name_1": "surname:Doumard;given-names:E",
+                            "name_2": "surname:Ader;given-names:I",
+                            "name_3": "surname:Kemoun;given-names:P",
+                            "name_4": "surname:Pag\u00e8s;given-names:JC",
+                            "name_5": "surname:Galinier;given-names:A",
+                            "pub-id_doi": "10.1111/acel.13872",
+                            "pub-id_pmid": "37300327",
+                            "section_type": "REF",
+                            "source": "Aging Cell",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2023"
+                        },
+                        "text": "Explainable machine learning framework to predict personalized physiological aging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42873,
+                        "infons": {
+                            "fpage": "112905",
+                            "name_0": "surname:Chen;given-names:C",
+                            "name_1": "surname:Quan;given-names:J",
+                            "name_2": "surname:Chen;given-names:X",
+                            "name_3": "surname:Yang;given-names:T",
+                            "name_4": "surname:Yu;given-names:C",
+                            "name_5": "surname:Ye;given-names:S",
+                            "pub-id_doi": "10.1016/j.intimp.2024.112905",
+                            "pub-id_pmid": "39173401",
+                            "section_type": "REF",
+                            "source": "Int Immunopharmacol",
+                            "type": "ref",
+                            "volume": "141",
+                            "year": "2024"
+                        },
+                        "text": "Explore key genes of Crohn\u2019s disease based on glycerophospholipid metabolism: a comprehensive analysis utilizing Mendelian randomization, multi-omics integration, machine learning, and SHAP methodology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43077,
+                        "infons": {
+                            "fpage": "e2212930",
+                            "name_0": "surname:Deng;given-names:H",
+                            "name_1": "surname:Eftekhari;given-names:Z",
+                            "name_2": "surname:Carlin;given-names:C",
+                            "name_3": "surname:Veerapong;given-names:J",
+                            "name_4": "surname:Fournier;given-names:KF",
+                            "name_5": "surname:Johnston;given-names:FM",
+                            "pub-id_doi": "10.1001/jamanetworkopen.2022.12930",
+                            "pub-id_pmid": "35612856",
+                            "section_type": "REF",
+                            "source": "JAMA Netw Open",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2022"
+                        },
+                        "text": "Development and validation of an explainable machine learning model for major complications after cytoreductive surgery",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43197,
+                        "infons": {
+                            "name_0": "surname:Gao;given-names:R",
+                            "name_1": "surname:Zhao;given-names:S",
+                            "name_2": "surname:Aishanjiang;given-names:K",
+                            "name_3": "surname:Cai;given-names:H",
+                            "name_4": "surname:Wei;given-names:T",
+                            "name_5": "surname:Zhang;given-names:Y",
+                            "pub-id_doi": "10.1186/s13045-021-01167-2",
+                            "pub-id_pmid": "34565412",
+                            "section_type": "REF",
+                            "source": "J Hematol Oncol",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2021"
+                        },
+                        "text": "Deep learning for differential diagnosis of Malignant hepatic tumors based on multi-phase contrast-enhanced CT and clinical data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43326,
+                        "infons": {
+                            "name_0": "surname:Lei;given-names:Z",
+                            "name_1": "surname:Li;given-names:J",
+                            "name_2": "surname:Wu;given-names:D",
+                            "name_3": "surname:Xia;given-names:Y",
+                            "name_4": "surname:Wang;given-names:Q",
+                            "name_5": "surname:Si;given-names:A",
+                            "pub-id_doi": "10.1001/jamasurg.2015.4257",
+                            "pub-id_pmid": "26579636",
+                            "section_type": "REF",
+                            "source": "JAMA Surg",
+                            "type": "ref",
+                            "volume": "151",
+                            "year": "2016"
+                        },
+                        "text": "Nomogram for preoperative estimation of microvascular invasion risk in hepatitis B virus\u2013related hepatocellular carcinoma within the Milan criteria",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43476,
+                        "infons": {
+                            "elocation-id": "698373",
+                            "name_0": "surname:Gong;given-names:X-Q",
+                            "name_1": "surname:Tao;given-names:Y-Y",
+                            "name_2": "surname:Wu;given-names:YK",
+                            "name_3": "surname:Liu;given-names:N",
+                            "name_4": "surname:Yu;given-names:X",
+                            "name_5": "surname:Wang;given-names:R",
+                            "pub-id_doi": "10.3389/fonc.2021.698373",
+                            "pub-id_pmid": "34616673",
+                            "section_type": "REF",
+                            "source": "Front Oncol",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2021"
+                        },
+                        "text": "Progress of MRI radiomics in hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43530,
+                        "infons": {
+                            "fpage": "890",
+                            "lpage": "901",
+                            "name_0": "surname:Harding-Theobald;given-names:E",
+                            "name_1": "surname:Louissaint;given-names:J",
+                            "name_2": "surname:Maraj;given-names:B",
+                            "name_3": "surname:Cuaresma;given-names:E",
+                            "name_4": "surname:Townsend;given-names:W",
+                            "name_5": "surname:Mendiratta-Lala;given-names:M",
+                            "pub-id_doi": "10.1111/apt.16563",
+                            "pub-id_pmid": "34390014",
+                            "section_type": "REF",
+                            "source": "Aliment Pharmacol Ther",
+                            "type": "ref",
+                            "volume": "54",
+                            "year": "2021"
+                        },
+                        "text": "Systematic review: radiomics for the diagnosis and prognosis of hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43619,
+                        "infons": {
+                            "elocation-id": "1031400",
+                            "name_0": "surname:Nan;given-names:Y",
+                            "name_1": "surname:Zhao;given-names:S",
+                            "name_2": "surname:Zhang;given-names:X",
+                            "name_3": "surname:Xiao;given-names:Z",
+                            "name_4": "surname:Guo;given-names:R",
+                            "pub-id_doi": "10.3389/fimmu.2022.1031400",
+                            "pub-id_pmid": "36578484",
+                            "section_type": "REF",
+                            "source": "Front Immunol",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2022"
+                        },
+                        "text": "Machine learning-based predictive and risk analysis using real-world data with blood biomarkers for hepatitis B patients in the Malignant progression of hepatocellular carcinoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

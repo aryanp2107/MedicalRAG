@@ -1,0 +1,2561 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260508",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13144078",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.3389/fdgth.2026.1768780",
+                            "article-id_pmc": "PMC13144078",
+                            "elocation-id": "1768780",
+                            "kwd": "artificial intelligence biomarkers clinical translation deep learning diabetic retinopathy multi-organ complications personalized medicine retinal fundus imaging",
+                            "license": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.",
+                            "name_0": "surname:Huang;given-names:Liting",
+                            "name_1": "surname:Lu;given-names:Hongyun",
+                            "name_2": "surname:Yang;given-names:Mingqi",
+                            "name_3": "surname:Liu;given-names:Yanyan",
+                            "name_4": "surname:Han Wang;given-names:Mini",
+                            "name_5": "surname:Zhang;given-names:Kang",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "8",
+                            "year": "2026"
+                        },
+                        "text": "Artificial intelligence in fundus photography for type 2 diabetes: a scoping review of systemic biomarkers and multi-organ risk prediction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 139,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Type 2 diabetes mellitus (T2DM) is associated with multi-organ complications, including cardiovascular and renal disease. Fundus photography provides a non-invasive window into systemic microvascular health, and artificial intelligence (AI) has enabled extraction of retinal biomarkers for systemic risk prediction beyond diabetic retinopathy detection. We conducted a methodologically structured scoping review following PRISMA-ScR guidance to map AI applications in retinal imaging for multi-organ risk stratification in T2DM. Studies using machine learning or deep learning models to predict cardiovascular, renal, or cerebrovascular outcomes were identified and characterized. Rather than quantitative pooling, we examined modeling strategies, validation approaches, performance reporting, and translational readiness across heterogeneous study designs. AI models frequently demonstrated promising discrimination; however, substantial heterogeneity was observed in cohort size, outcome definitions, imaging modalities, and validation strategies. External validation was limited, calibration was inconsistently assessed, and subgroup analyses addressing fairness and device-related domain shift were rarely reported. Most studies emphasized discrimination metrics without comprehensive evaluation of clinical utility.Retinal AI shows potential for scalable systemic risk surveillance in T2DM, but rigorous external validation, standardized reporting, and prospective implementation studies are required to enable safe and equitable clinical translation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1696,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1709,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Diabetes has become an increasingly severe public health issue worldwide, and it is estimated to affect 536.6 million adults (20\u201379 years) in 2021, projected to rise to 783.2 million by 2045, of which more than 90% of cases are type 2 diabetes mellitus (T2DM). This epidemic imposes a significant burden not only due to hyperglycemia itself but crucially through its devastating multi-organ complications, including cardiovascular disease (CVD), stroke, chronic kidney disease (CKD), and vision-threatening diabetic retinopathy (VTDR). Individuals with T2DM face substantially elevated risks of myocardial infarction, cerebrovascular accidents, congestive heart failure, end-stage renal disease, and all-cause mortality. However, predicting these complications early remains challenging with current clinical strategies. Reliance on traditional risk factors and laboratory biomarkers, such as blood pressure measurements for hypertension or albuminuria and estimated glomerular filtration rate (eGFR) for diabetic kidney disease (DKD), often requires invasive blood or urine sampling. Moreover, these indicators may lack sensitivity in the early stages of disease and can be influenced by physiological variability, such as white-coat effects or diurnal fluctuations. Therefore, there is an urgent need to develop non-invasive and highly precise methods for predicting the risk of diabetic complications, in order to mitigate adverse outcomes associated with missed or delayed diagnoses. Consequently, non-invasive biomarkers capable of reflecting early systemic pathophysiological changes has become a major priority in diabetes research and clinical risk stratification.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3384,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The retina, as an embryological extension of the central nervous system, offers direct visualization of the microvasculature in vivo. Retinal fundus image emerges as a uniquely powerful and non-invasive window into systemic vascular and metabolic health. Color fundus photography (CFP) is relatively cost-effective, widely deployed in screening programs (especially for diabetic retinopathy), and avoids the invasiveness associated with many current systemic risk assessments. Changes visible in the retina are increasingly recognized not merely as indicators of localized ocular disease but as sensitive biomarkers reflecting systemic micro- and macrovascular pathophysiology associated with diabetes and its complications. These findings highlight the retina's potential as an integrated indicator of systemic disease risk, and underscore the need to develop analytical approaches for assessing the correlation between retinal fundus photographs and diabetic complications.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4360,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The advent of sophisticated Artificial Intelligence (AI), particularly deep learning (DL), has revolutionized the analysis of retinal images, unlocking their potential for systemic risk prediction beyond traditional ocular diagnostics. AI algorithms excel at detecting subtle, complex patterns and biomarkers in fundus images that may elude human observers or conventional methods. DL models have demonstrated strong performance (AUC 0.85\u20130.93) in identifying chronic kidney disease and type 2 diabetes from fundus images, alone or combined with clinical metadata, underscoring the retina's role as a window into systemic health. Multimodal deep learning (MMDL), which integrates retinal images with readily available clinical variables, has further shown superior performance for conditions like hypertension, DKD, and cardiovascular disease compared to unimodal models. Machine learning approaches, particularly tree-based learners and deep neural networks, frequently achieve higher sensitivity and specificity than traditional regression models for risk prediction and are adept at handling complex data like medical images. Globally, AI applications for predicting diabetic microvascular complications are expanding rapidly. While reviews report promising performance [e.g., a mean c-statistic of 0.81 for DKD prediction on internal validation ], there remains a need for more robust external validation, especially for complications beyond DKD. The field is evolving from single-modality analysis toward integrating retinal imaging with other data streams, such as electronic health records(EHRs) and genomic information, to develop more accurate and holistic predictive models. AI applied to routine retinal images moves beyond detecting diabetic retinopathy; it demonstrates significant potential (AUC range: 0.676\u20130.971 across complications) for opportunistic, non-invasive screening of multiple systemic complications, including DKD, cardiovascular disease, and neuropathy, offering a scalable solution for comprehensive risk prediction and early intervention. Figure\u00a01 shows the overview of AI-based multi-organ risk prediction from CFP. The subfigures of Figure\u00a01 are cited from Han's studies.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6572,
+                        "infons": {
+                            "file": "fdgth-08-1768780-g001.jpg",
+                            "id": "F1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Overview of AI-based multi-organ risk prediction from retinal fundus imaging. (A) The representative color fundus photographs. Subpanel A-1 displays a retinal image with key ocular biomarkers (e.g., vessels, optic disc, macula) annotated. A-2 shows a Grad-CAM heatmap highlighting salient regions that drive the model's prediction, providing explainable-AI\u2013based interpretability. (B) Schematic representation of the deep learning architecture that processes a standard color fundus photograph (CFP): the image undergoes feature extraction through successive convolutional layers and is mapped to risk-related representations. (C) Visualization model interpretability with additional Grad-CAM visualizations demonstrating localized regions of diagnostic importance. (D) The outputs to generate multi-organ risk stratification, linking ocular biomarkers to systemic endpoints such as cardiovascular and neurologic outcomes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7497,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This review summarizes current advances in AI applied to retinal imaging for systemic risk prediction in type 2 diabetes. We first outline the biological rationale for retinal biomarkers reflecting multi-organ microvascular and neurodegenerative processes. Next, we review retinal imaging modalities and AI methodologies, including traditional machine learning, deep learning, multimodal fusion, and explainable AI techniques. We then synthesize current evidence on AI models predicting cardiovascular, cerebrovascular, renal, and neurological outcomes. Finally, we discuss key challenges for clinical translation, including external validation, algorithmic fairness, interpretability, and regulatory considerations. Also,we highlight future research priorities for implementing retinal AI as a scalable, non-invasive platform for multi-organ risk surveillance in T2DM.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8367,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8375,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Study design",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8388,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study adopted a methodologically structured scoping review to evaluate and characterize the current evidence on AI applications in CFP for systemic risk prediction in T2DM. The review followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses Extension for Scoping Reviews (PRISMA-ScR) framework to ensure methodological transparency and reproducibility. A scoping review approach was selected because the field encompasses imaging modalities, AI architectures, and outcome definitions, which preclude formal quantitative synthesis. Therefore, this review aimed to identify and describe the breadth of existing studies, methodological trends, and translational readiness of AI-based retinal imaging approaches for predicting multi-organ complications associated with T2DM rather than to estimate pooled effect sizes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9231,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Search strategy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9247,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "A systematic literature search was performed across the following databases: PubMed, Embase, Web of Science, and IEEE Xplore. The search timeframe was set from January 1, 2017, to December 31, 2025. A combination of controlled vocabulary and free-text terms was used to ensure comprehensiveness and precision. Search terms were categorized as follows: (1) Retinal imaging: CFP, optical coherence tomography (OCT), optical coherence tomography angiography (OCTA); (2) Artificial intelligence: artificial intelligence, DL, ML; (3) Clinical context: T2DM, cardiovascular disease, kidney disease, systemic risk.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9855,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Eligibility criteria",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9876,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Studies were included if they met the following criteria: research articles that applied machine learning or deep learning techniques to retinal imaging data for predicting systemic disease outcomes; studies that used retinal fundus images or related retinal imaging modalities as primary model inputs; studies involving individuals with T2DM or mixed populations in which systemic risk prediction relevant to diabetes complications was reported; and studies providing quantitative evaluation metrics such as area under the receiver operating characteristic curve (AUC) or related performance indicators. Studies were excluded if they were editorials, commentaries, case reports, conference abstracts without full methodological details, or non-English publications. Studies focusing solely on ophthalmic outcomes such as diabetic retinopathy detection without reporting systemic risk prediction were also excluded. This approach ensured that the review captured research directly linking retinal AI imaging with multi-organ risk stratification, aligning with the study's translational focus.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10969,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Study selection and data extraction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11005,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All retrieved records were independently screened by two investigators at the title/abstract stage and full-text stage; discrepancies were resolved through consensus. The study selection process was documented in a PRISMA-ScR flow diagram. A standardized data extraction form was used to collect key information, including: country, study population, sample size, imaging modality and acquisition details, model architecture, training strategy, validation scheme (internal split, cross-validation, external validation), and performance metrics (AUC, sensitivity, specificity). Calibration measures and subgroup analyses were also recorded. Given the substantial heterogeneity across studies in endpoint definition, cohort composition, modeling procedures, and reporting formats, a quantitative meta-analysis was not performed. Instead, a structured narrative synthesis was conducted to summarize methodological trends, evaluate the quality of validation, and analyze the translational potential for clinical implementation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12029,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12037,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To illustrate the overall analytical framework underlying AI-based retinal imaging for systemic complication prediction in T2DM, Figure\u00a02 summarizes the typical pipeline from retinal image acquisition to clinical risk prediction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12268,
+                        "infons": {
+                            "file": "fdgth-08-1768780-g002.jpg",
+                            "id": "F2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "AI-based retinal imaging for systemic risk prediction in diabetes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12335,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Study selection and characteristics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12371,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "A total of 58 studies met the predefined eligibility criteria and were included in the final synthesis (Figure\u00a03). The included studies demonstrated substantial heterogeneity in geographic distribution, cohort size, imaging modality, modeling strategy, and validation design. Sample sizes ranged from small proof-of-concept datasets to large-scale population cohorts exceeding tens of thousands of participants, reflecting both exploratory and implementation-oriented research stages.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12857,
+                        "infons": {
+                            "file": "fdgth-08-1768780-g003.jpg",
+                            "id": "F3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "PRISMA-ScR framework.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12879,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Imaging modalities varied considerably and included conventional CFP, ultra-widefield (UWF) imaging, OCT, and OCT angiography OCTA. Most studies relied primarily on CFP due to its accessibility and scalability, whereas OCT and OCTA were more frequently used in studies investigating neurodegenerative or microvascular biomarkers. Regarding modeling strategies, deep learning approaches\u2014predominantly convolutional neural networks (CNNs) and, in recent studies, Vision Transformers (ViTs)\u2014were most commonly adopted. A smaller subset employed traditional machine learning models such as Random Forest, LASSO regression, and XGBoost. Several studies developed multimodal frameworks integrating retinal imaging with demographic variables, biochemical markers, or electronic health records (EHRs), reflecting a shift toward clinically integrated prediction systems.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13745,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Validation strategies were inconsistent across studies. Internal random splits and k-fold cross-validation were frequently used, while true external validation on geographically independent cohorts was performed in only a minority of publications. Although discrimination metrics such as area under the receiver operating characteristic curve (AUC) were widely reported, calibration assessment, decision curve analysis, and subgroup evaluation were inconsistently described.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14220,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Outcomes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14229,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Across the included literature, AI-based retinal models were developed to predict diverse systemic outcomes in T2DM. These outcomes clustered into five principal domains: cardiovascular, cerebrovascular, renal, neurological and multi-oragan complications. Table\u00a01 summarizes representative studies that applied retinal imaging\u2013based AI models to predict systemic complications in T2DM.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14618,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Representative AI applications for systemic complication prediction from retinal images in T2DM.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14715,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><colgroup span=\"1\"><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"center\" span=\"1\"/><col align=\"left\" span=\"1\"/></colgroup><thead><tr><th valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Target complication</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Retinal biomarkers used</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">AI methodology</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Data inputs</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Reported performance (AUC)</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Clinical implication</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CVD and Hypertension <xref rid=\"B4\" ref-type=\"bibr\">4</xref><xref rid=\"B15\" ref-type=\"bibr\">15</xref><xref rid=\"B18\" ref-type=\"bibr\">18</xref></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">DR severity, vascular caliber, vessel tortuosity, fractal dimension</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CNN-based deep learning models; multimodal fusion networks</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Fundus images\u2009+\u2009clinical risk factors</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u223c0.78\u20130.87</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Early cardiovascular risk stratification using non-invasive retinal screening</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">DKD and Microalbuminuria (MAU) <xref rid=\"B3\" ref-type=\"bibr\">3</xref><xref rid=\"B12\" ref-type=\"bibr\">12</xref><xref rid=\"B19\" ref-type=\"bibr\">19</xref><xref rid=\"B20\" ref-type=\"bibr\">20</xref></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Microvascular lesions, vessel tortuosity, reduced fractal dimension</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">ML models (XGBoost, Random Forest) and DL frameworks</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Retinal features\u2009+\u2009laboratory biomarkers (HbA1c, inflammatory markers)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Up to \u223c0.87</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Prediction of microalbuminuria and CKD progression</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cerebrovascular Disease/Stroke <xref rid=\"B21\" ref-type=\"bibr\">21</xref></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Retinal vascular geometry, arteriolar narrowing, venular dilation</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CNN and multimodal predictive models</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Fundus images\u2009\u00b1\u2009clinical variables</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u223c0.8\u20130.9</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Identification of stroke risk and vascular dysfunction</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Neurological Complications <xref rid=\"B22\" ref-type=\"bibr\">22</xref><xref rid=\"B23\" ref-type=\"bibr\">23</xref></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">RNFL thinning, GCC thickness reduction</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Deep learning models analyzing OCT images</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">OCT imaging data</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Variable; moderate-to-high discrimination</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Detection of neurodegenerative and neuropathic processes</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Multi-oragan risk prediction <xref rid=\"B24\" ref-type=\"bibr\">24</xref></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Combined vascular, structural, and neurodegenerative retinal biomarkers</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Multimodal AI integrating retinal imaging with EHR and biochemical data</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Fundus\u2009+\u2009OCT\u2009+\u2009clinical datasets</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u223c0.78\u20130.90 depending on outcome</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Comprehensive systemic risk modeling in diabetes</td></tr></tbody></table>\n"
+                        },
+                        "text": "Target complication\tRetinal biomarkers used\tAI methodology\tData inputs\tReported performance (AUC)\tClinical implication\t \tCVD and Hypertension \tDR severity, vascular caliber, vessel tortuosity, fractal dimension\tCNN-based deep learning models; multimodal fusion networks\tFundus images\u2009+\u2009clinical risk factors\t\u223c0.78\u20130.87\tEarly cardiovascular risk stratification using non-invasive retinal screening\t \tDKD and Microalbuminuria (MAU) \tMicrovascular lesions, vessel tortuosity, reduced fractal dimension\tML models (XGBoost, Random Forest) and DL frameworks\tRetinal features\u2009+\u2009laboratory biomarkers (HbA1c, inflammatory markers)\tUp to \u223c0.87\tPrediction of microalbuminuria and CKD progression\t \tCerebrovascular Disease/Stroke \tRetinal vascular geometry, arteriolar narrowing, venular dilation\tCNN and multimodal predictive models\tFundus images\u2009\u00b1\u2009clinical variables\t\u223c0.8\u20130.9\tIdentification of stroke risk and vascular dysfunction\t \tNeurological Complications \tRNFL thinning, GCC thickness reduction\tDeep learning models analyzing OCT images\tOCT imaging data\tVariable; moderate-to-high discrimination\tDetection of neurodegenerative and neuropathic processes\t \tMulti-oragan risk prediction \tCombined vascular, structural, and neurodegenerative retinal biomarkers\tMultimodal AI integrating retinal imaging with EHR and biochemical data\tFundus\u2009+\u2009OCT\u2009+\u2009clinical datasets\t\u223c0.78\u20130.90 depending on outcome\tComprehensive systemic risk modeling in diabetes\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16192,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "These studies collectively highlight the potential of retinal biomarkers as non-invasive indicators of systemic microvascular disease. Among these outcome domains, cardiovascular complications have received the greatest research attention due to their high prevalence and mortality burden in T2DM. Cardiovascular outcomes represented the most frequently investigated category. Large-scale clinical evidence demonstrates a graded association between DR severity and future cardiovascular events. Minimal non-proliferative DR (NPDR) significantly increases the hazard of myocardial infarction (MI), congestive heart failure (CHF), and all-cause mortality (HR 1.15\u20131.31), with risks escalating substantially in moderate-to-severe NPDR (HR 1.55\u20131.92) and proliferative DR (PDR) (HR 1.87\u20132.53). Severe stages such as PDR and diabetic macular edema (DME) are particularly associated with incident and fatal cardiovascular disease. Moreover, DR progression dynamics themselves may serve as early indicators of systemic microvascular vulnerability, as even mild NPDR can demonstrate rapid short-term progression. These findings provide biological plausibility for AI-based cardiovascular risk prediction using retinal biomarkers.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17420,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Beyond overt DR staging, quantitative vascular geometry metrics, including arteriolar narrowing, venular dilation, tortuosity and reduced fractal dimension, reflect systemic vascular remodeling and microvascular rarefaction. Prospective studies have linked these parameters to hypertension, incident cardiovascular disease, stroke risk, and diabetic nephropathy. Reduced fractal dimension was independently associated with incident DR (OR\u2009=\u20090.75; 95% CI: 0.58\u20130.96), reinforcing the concept of shared systemic microvascular pathophysiology.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17967,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Renal complications constituted the second major domain. Retinal microvascular lesions, including intraretinal hemorrhages and vascular remodeling patterns, correlate with DKD severity. AI operationalization of these features has yielded promising results. Machine learning models such as XGBoost (AUC\u2009=\u20090.803), and Random Forest (AUC\u2009=\u20090.87 for microalbuminuria) demonstrated strong predictive performance when combining retinal and systemic variables. These findings position the retina as a non-invasive surrogate of renal microvasculopathy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18520,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Neurological and cerebrovascular complications represent an emerging frontier. RNFL thinning measured by OCT correlates with peripheral and autonomic neuropathy, suggesting shared neurodegenerative pathways. Additionally, ML-based analysis of fundus images has demonstrated high discrimination between ischemic and hemorrhagic stroke (AUC 0.929 and 0.951, respectively), highlighting the retina's potential for non-invasive cerebrovascular triage. Beyond retinal imaging, AI applied to other vascular beds also shows promise. A study using a carotid ultrasound-based radiomics nomogram, which integrated imaging features with clinical factors like the triglyceride-glucose index, effectively predicted ischemic stroke risk in T2DM patients, achieving an AUC of 0.898, thereby offering another convenient and customizable tool for cerebrovascular risk stratification. The foundational work by Kermany's study demonstrated the power of deep learning not only in classifying retinal diseases but also in providing interpretable diagnoses by highlighting regions of interest, a concept that is now being extended to systemic risk prediction. Kermany's study Similarly, the breadth of AI application in ophthalmology has expanded significantly, with recent efforts like the RFMiD challenge focusing on detecting a wide array of both frequent and rare retinal pathologies, which is crucial for developing generalizable screening models for broader populations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19975,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Model architectures and imaging modalities",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20018,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "AI methodologies for retinal analysis have evolved from traditional feature-engineered pipelines to deep representation learning and multimodal fusion systems. Early machine learning approaches relied on handcrafted vascular features followed by classifiers such as support vector machines or Random Forests. While interpretable, these models were limited by feature design constraints and demonstrated plateaued performance for complex systemic risk prediction tasks. The major stages in the evolution of artificial intelligence architectures applied to retinal image analysis are summarized in Table\u00a02.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20624,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Evolution of artificial intelligence architectures in retinal image analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20702,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><colgroup span=\"1\"><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/></colgroup><thead><tr><th valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Dimension</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Early ML era</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">DL &amp; hybrid models</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Multi-modal fusion systems</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Emerging AI solutions</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Modeling architectures</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Two-step pipelines: handcrafted features\u2009+\u2009classifiers (SVM, Random Forest, logistic regression)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">End-to-end CNN architectures (ResNet, DenseNet) and Vision Transformers; hybrid CNN-RNN models for temporal imaging</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Modality-specific subnetworks integrated via early, late, or intermediate fusion</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Federated learning, domain adaptation, privacy-preserving AI</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Feature representation</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Expert-defined vascular metrics and lesion features</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Hierarchical features automatically extracted from raw pixels</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Joint feature spaces integrating retinal images with clinical variables, biochemical markers, and EHR data</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Self-supervised learning and foundation models trained on large unlabeled datasets</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Predictive capability</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Adequate for DR detection but limitied for systemic risk prediction</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">High performance for DR grading and lesion detection; expert-level accuracy in controlled datasets</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Improved prediction of cardiovascular, renal, and neurological complications</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Robust generalization across populations and imaging devices</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Clinical applications</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">DR screening and lesion identification</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">DR severity grading, macular edema detection, early complication prediction</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Multi-organ risk prediction (CVD, DKD, neuropathy)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Personalized risk stratification and longitudinal monitoring</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Key limitations</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Dependence on manual feature engineering</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Limited generalizability across institutions and imaging devices</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Data integration complexity and heterogeneous annotations</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Need for large-scale prospective validation</td></tr></tbody></table>\n"
+                        },
+                        "text": "Dimension\tEarly ML era\tDL & hybrid models\tMulti-modal fusion systems\tEmerging AI solutions\t \tModeling architectures\tTwo-step pipelines: handcrafted features\u2009+\u2009classifiers (SVM, Random Forest, logistic regression)\tEnd-to-end CNN architectures (ResNet, DenseNet) and Vision Transformers; hybrid CNN-RNN models for temporal imaging\tModality-specific subnetworks integrated via early, late, or intermediate fusion\tFederated learning, domain adaptation, privacy-preserving AI\t \tFeature representation\tExpert-defined vascular metrics and lesion features\tHierarchical features automatically extracted from raw pixels\tJoint feature spaces integrating retinal images with clinical variables, biochemical markers, and EHR data\tSelf-supervised learning and foundation models trained on large unlabeled datasets\t \tPredictive capability\tAdequate for DR detection but limitied for systemic risk prediction\tHigh performance for DR grading and lesion detection; expert-level accuracy in controlled datasets\tImproved prediction of cardiovascular, renal, and neurological complications\tRobust generalization across populations and imaging devices\t \tClinical applications\tDR screening and lesion identification\tDR severity grading, macular edema detection, early complication prediction\tMulti-organ risk prediction (CVD, DKD, neuropathy)\tPersonalized risk stratification and longitudinal monitoring\t \tKey limitations\tDependence on manual feature engineering\tLimited generalizability across institutions and imaging devices\tData integration complexity and heterogeneous annotations\tNeed for large-scale prospective validation\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22315,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The advent of deep learning enabled end-to-end feature extraction directly from pixel-level data. Prior work has demonstrated the feasibility of interpretable deep learning in retinal image analysis. The subsequent rapid growth in this area is underscored by comprehensive reviews like that of Yao's study, which detail the latest AI-driven methodologies for diabetic retinopathy and diabetic macular edema, encompassing disease identification, patient profiling, and prediction of disease progression. Furthermore, the creation and utilization of diverse datasets, such as the \u201cRetinal Fundus Multi-disease Image Dataset\u201d (RFMiD) used in the challenge described, are critical for training robust models capable of detecting a wide spectrum of pathologies, moving beyond the detection of only the most common diseases. Convolutional neural networks such as ResNet and DenseNet, and more recently Vision Transformers, achieved expert-level performance in DR grading and lesion segmentation. The utility of Vision Transformers extends beyond retinal imaging; for instance, a ViT-based model has demonstrated superior performance over standard CNNs in diagnosing coronary layered plaque from optical coherence tomography (OCT) images, achieving an AUC of 0.886, highlighting the versatility and power of this architecture for cardiovascular risk stratification. Hybrid architectures integrating CNNs with recurrent neural networks further leveraged temporal information in sequential retinal scans, improving progression modeling. Optimized CNN variants incorporating adaptive filters and metaheuristic optimization achieved accuracies approaching 98% in controlled settings.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23992,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Multimodal fusion strategies represent a key methodological advancement. These architectures combine retinal imaging with clinical variables, biochemical markers (e.g., HbA1c, LDL-C), and EHR-derived endpoints. Early fusion, late fusion, and intermediate feature fusion approaches have been implemented, with transformer-based cross-modal attention mechanisms improving flexibility and performance. Multimodal systems have demonstrated additive predictive value for cardiovascular and renal outcomes, increasing AUC for major adverse cardiovascular events prediction from 0.697 to 0.728 when combining retinal, clinical, and polygenic risk scores.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24640,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Imaging modality selection influences model capability. CFP remains dominant due to scalability, whereas OCT provides quantitative neurostructural metrics such as RNFL and GCC thickness, and OCTA enables capillary-level microvascular mapping. However, device variability and acquisition heterogeneity introduce domain shift challenges, which remain insufficiently addressed in many studies.The major retinal imaging modalities used for AI-based systemic risk prediction and their respective advantages and limitations are summarized in Table\u00a03.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25186,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Retinal imaging modalities and their role in AI-based systemic risk prediction in T2DM.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25274,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><colgroup span=\"1\"><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/><col align=\"left\" span=\"1\"/></colgroup><thead><tr><th valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Imagind modality</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Structural/functional information</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Typical AI-extracted features</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Advantages for AI modeling</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Limitations</th><th valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">Relevant systemic associations/references</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CFP</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">2D imaging of retinal vasculature and lesions; includes microaneurysms, hemorrhages, exudates; UWF extends peripheral view</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Vessel caliber, tortuosity, fractal dimension, lesion counts, DR severity grading</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">High accessibility; suitable for large-scale screening;large datasets available for AI training</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Limited depth information; limited functional or perfusion data</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cardiovascular risk prediction; hypertension prediction; systemic vascular health indicators <xref rid=\"B18\" ref-type=\"bibr\">18</xref><xref rid=\"B24\" ref-type=\"bibr\">24</xref><xref rid=\"B40\" ref-type=\"bibr\">40</xref></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Optical Coherence Tomography (OCT)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cross-sectional imaging of retinal layers; quantifies RNFL thickness, GCC thickness, macular edema</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Layer thickness metrics, volumetric structural features, neurodegenerative markers</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">High spatial resolution; quantitative metrics suitable for deep learning feature extraction</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Limited field of view; equipment cost; requires trained acquisition</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Neuropathy, neurodegeneration, cognitive decline associations <xref rid=\"B23\" ref-type=\"bibr\">23</xref><xref rid=\"B39\" ref-type=\"bibr\">39</xref><xref rid=\"B42\" ref-type=\"bibr\">42</xref></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">OCT Angiography (OCTA)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Non-invasive microvasculature and capillary networks</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">FAZ area, vessel density, perfusion metrics, microvascular dropout</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Sensitive to early microvascular alterations; strong biomarker potential for systemic microangiopathy</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Motion artifacts; signal attenuation in media opacity</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Diabetic nephropathy risk, microvascular disease, cardiovascular risk <xref rid=\"B42\" ref-type=\"bibr\">42</xref><xref rid=\"B43\" ref-type=\"bibr\">43</xref></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Fluorescein/ICG Angiography (FA/ICGA)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Dye-based imaging of retinal and choroidal vasculature</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Perfusion patterns, leakage detection, vascular remodeling</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Functional gold standard for vascular pathology</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Invasiveness; risk of adverse reactions; unsuitable for large-scale AI screening</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Historically used in vascular disease characterization; increasingly replaced by OCTA <xref rid=\"B44\" ref-type=\"bibr\">44</xref></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Emerging Modalities (AOSLO, Hyperspectral)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cellular-level imaging (AOSLO) or metabolic/oxygenation mapping (hyperspectral)</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Cellular morphology, metabolic signatures, oxygen saturation patterns</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Potential detection of earliest metabolic and microvascular alterations</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Experimental; limited dataset; high cost</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">Early metabolic dysfunction and microvascular disease indicators <xref rid=\"B39\" ref-type=\"bibr\">39</xref><xref rid=\"B45\" ref-type=\"bibr\">45</xref></td></tr></tbody></table>\n"
+                        },
+                        "text": "Imagind modality\tStructural/functional information\tTypical AI-extracted features\tAdvantages for AI modeling\tLimitations\tRelevant systemic associations/references\t \tCFP\t2D imaging of retinal vasculature and lesions; includes microaneurysms, hemorrhages, exudates; UWF extends peripheral view\tVessel caliber, tortuosity, fractal dimension, lesion counts, DR severity grading\tHigh accessibility; suitable for large-scale screening;large datasets available for AI training\tLimited depth information; limited functional or perfusion data\tCardiovascular risk prediction; hypertension prediction; systemic vascular health indicators \t \tOptical Coherence Tomography (OCT)\tCross-sectional imaging of retinal layers; quantifies RNFL thickness, GCC thickness, macular edema\tLayer thickness metrics, volumetric structural features, neurodegenerative markers\tHigh spatial resolution; quantitative metrics suitable for deep learning feature extraction\tLimited field of view; equipment cost; requires trained acquisition\tNeuropathy, neurodegeneration, cognitive decline associations \t \tOCT Angiography (OCTA)\tNon-invasive microvasculature and capillary networks\tFAZ area, vessel density, perfusion metrics, microvascular dropout\tSensitive to early microvascular alterations; strong biomarker potential for systemic microangiopathy\tMotion artifacts; signal attenuation in media opacity\tDiabetic nephropathy risk, microvascular disease, cardiovascular risk \t \tFluorescein/ICG Angiography (FA/ICGA)\tDye-based imaging of retinal and choroidal vasculature\tPerfusion patterns, leakage detection, vascular remodeling\tFunctional gold standard for vascular pathology\tInvasiveness; risk of adverse reactions; unsuitable for large-scale AI screening\tHistorically used in vascular disease characterization; increasingly replaced by OCTA \t \tEmerging Modalities (AOSLO, Hyperspectral)\tCellular-level imaging (AOSLO) or metabolic/oxygenation mapping (hyperspectral)\tCellular morphology, metabolic signatures, oxygen saturation patterns\tPotential detection of earliest metabolic and microvascular alterations\tExperimental; limited dataset; high cost\tEarly metabolic dysfunction and microvascular disease indicators \t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27462,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Methodological quality landscape",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27495,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Across studies, methodological rigor varied substantially. Internal validation using random splits or cross-validation predominated, whereas external validation on independent cohorts was limited. This raises concerns regarding overfitting and inflated performance estimates.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27771,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Calibration assessment, decision curve analysis, and clinical threshold reporting were inconsistently performed, limiting evaluation of clinical utility. Subgroup analyses by age, sex, ethnicity, or imaging device type were rarely reported, precluding assessment of algorithmic fairness. Studies have documented AUC performance gaps exceeding 12% between racial subgroups in DR grading models, underscoring the need for systematic bias evaluation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28219,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Explainability techniques such as Grad-CAM were applied in several studies; however, validation of interpretability outputs was seldom conducted. As a result, the clinical reliability of highlighted regions remains uncertain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28445,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28456,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_2"
+                        },
+                        "text": "Interpretation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28471,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "This scoping review synthesizes emerging evidence that retinal imaging, when combined with artificial intelligence, extends far beyond diabetic retinopathy detection and increasingly functions as a systemic biomarker platform for multi-organ risk stratification in type 2 diabetes. The biological plausibility of this paradigm is strongly supported by longitudinal epidemiological studies demonstrating graded associations between DR severity and cardiovascular outcomes, as well as microvascular geometry alterations predictive of hypertension and incident vascular disease. Retinal neurodegenerative markers, including RNFL thinning and ganglion cell complex loss detected via OCT, further correlate with diabetic neuropathy and central neurodegeneration, reinforcing the concept of the retina as an accessible window into systemic vascular and neuronal health. These developments illustrate the growing transition of retinal AI from proof-of-concept research toward clinically decision-support systems.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29477,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Importantly, several included studies demonstrated that even early-stage retinal microvascular alterations\u2014such as minimal NPDR\u2014carry prognostic implications for myocardial infarction, congestive heart failure, and mortality. This aligns with mechanistic insights suggesting that retinal microangiopathy mirrors generalized endothelial dysfunction and capillary rarefaction. AI models trained on such microstructural patterns may therefore capture preclinical systemic vulnerability before overt organ failure develops.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30001,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "However, reported AUC values ranging from 0.73 to 0.97 across cardiovascular, renal, and cerebrovascular predictions should be interpreted cautiously. Discrimination metrics alone do not reflect calibration quality, clinical decision thresholds, or longitudinal stability. Several studies relied exclusively on internal validation or random splits, which are known to inflate performance estimates compared to geographically external validation. In addition, some studies may be vulnerable to overfitting due to limited sample sizes relative to the complexity of deep learning architectures. Moreover, heterogeneity in outcome definitions, follow-up duration, and event adjudication limits cross-study comparability. Thus, while the aggregate evidence is promising, it remains predominantly exploratory rather than implementation-ready.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30838,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "The evolution from handcrafted vascular feature engineering to deep convolutional neural networks and transformer-based architectures has substantially improved representational capacity. Multimodal fusion approaches integrating retinal imaging with clinical biomarkers and EHR-derived variables further enhanced predictive accuracy for major adverse cardiovascular events and renal decline. These findings suggest that retinal data provide complementary rather than standalone predictive value within broader risk modeling ecosystems. The paradigm of using retinal imaging for systemic health forecasting is powerfully articulated, whose review highlights the substantial potential of AI-based retinal biomarkers in predicting neurodegenerative, cardiovascular, and chronic kidney diseases. They emphasize that the retina's unique features enable a non-invasive window into the central nervous system and microvascular circulation, a concept that is central to the studies reviewed in our paper.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31835,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_2"
+                        },
+                        "text": "Explainability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31850,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Explainability remains central to clinical acceptance and regulatory integration of AI-based retinal systems. Visualization techniques such as Grad-CAM have consistently highlighted perivascular and optic disc regions when predicting hypertension, cardiovascular risk, and systemic metabolic status. These saliency distributions are biologically coherent, given the established relationship between vascular caliber, tortuosity, and systemic hemodynamics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32306,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Nevertheless, visualization-based interpretability provides associative rather than causal explanations. Several studies applying CNN and hybrid architectures did not formally validate whether highlighted regions correspond to clinically meaningful microvascular lesions. Furthermore, attention maps may be unstable under minor perturbations, raising concerns regarding explanation reliability. Future work should incorporate quantitative interpretability metrics, counterfactual testing, and clinician-blinded validation experiments to ensure that explanations reflect pathophysiologically relevant structures rather than dataset artifacts. The importance of model interpretability, as demonstrated in the early work, cannot be overstated. Their framework provided a more transparent diagnosis by highlighting the regions recognized by the neural network, a practice that remains essential for building clinical trust and validating that models are focusing on pathophysiologically relevant structures.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33310,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In addition, as multimodal transformer frameworks become more prevalent, explainability must expand beyond pixel-level saliency toward cross-modal attention transparency, particularly when integrating biochemical or genomic data. Without such transparency, model decisions risk becoming increasingly opaque as architectural complexity grows.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33652,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_2"
+                        },
+                        "text": "Domain shift",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33665,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Domain shift represents one of the most significant translational barriers identified across included studies. Performance degradation has been observed when algorithms trained on homogeneous datasets are applied to ethnically diverse or geographically distinct populations. For example, subgroup analyses in DR detection models demonstrated AUC differences exceeding 12% between racial groups, raising concerns about algorithmic fairness and systemic bias.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34123,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Device heterogeneity further compounds this issue. Variations in camera manufacturer, field-of-view, illumination conditions, and image resolution can alter pixel-level distributions, challenging deep model generalization. OCT and OCTA devices introduce additional inter-manufacturer variability in layer segmentation and vascular density quantification. Few studies implemented structured domain adaptation, adversarial training, or federated learning frameworks to mitigate these effects.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34614,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Although generative augmentation and transfer learning approaches have shown theoretical promise, standardized benchmarking across independent external cohorts remains rare. Regulatory approval pathways increasingly demand evidence of consistent performance across demographic strata and device types. Therefore, future research must prioritize multi-center prospective validation, fairness auditing, and recalibration protocols before large-scale deployment.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35074,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_2"
+                        },
+                        "text": "Clinical translation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35095,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "While our review notes the promising performance of predictive models, reviews like Yao's study caution that there is often a disparity between the potential of AI models and their actual effectiveness in real-world clinical applications. Overcoming challenges in deployment, regulatory compliance, and seamless integration into existing healthcare workflows is essential for these technologies to realize their full potential. The development of comprehensive, multi-disease datasets, as championed by the RFMiD challenge described, is a crucial step toward building generalizable models that can be reliably deployed in diverse clinical settings, moving beyond the proof-of-concept stage toward implementation-ready tools. The ultimate goal is to leverage AI-based retinal imaging to transform primary care and systemic disease management through early detection and personalized care plans, a vision that underscores the translational urgency highlighted in our conclusion.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36072,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "From a translational perspective, AI-enabled retinal assessment aligns conceptually with the movement toward integrated diabetes care and early complication surveillance. FDA-cleared autonomous DR systems demonstrate that regulatory pathways for retinal AI are feasible. For instance, a deep learning model using Inception V3 architecture achieved high diagnostic performance for severe DR (AUC 0.968), demonstrating the technical capability of AI to accurately identify vision-threatening conditions, thereby potentially increasing the accessibility and efficiency of large-scale screening programs. However, extending from disease detection to multi-organ prognostication substantially increases evidentiary requirements.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36796,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Most predictive models for cardiovascular and renal outcomes remain retrospective and observational. Prospective impact studies evaluating whether AI-informed screening alters therapeutic decision-making, improves risk factor control, or reduces event rates are lacking. Cost-effectiveness analyses are similarly underreported, despite the high global burden of T2DM-related complications.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37186,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Clinical workflow integration also warrants consideration. AI outputs must be interpretable, threshold-calibrated, and seamlessly embedded within EHR systems to support endocrinologists, cardiologists, and primary care physicians. Furthermore, medicolegal accountability frameworks remain underdeveloped. Liability distribution between developers, healthcare institutions, and clinicians requires regulatory clarification to facilitate responsible adoption. Critically, the successful translation of AI into practice hinges not only on technical and regulatory readiness but also on the perceptions and acceptance of its end-users. A recent survey within the English NHS Diabetic Eye Screening Programme found that both people living with diabetes and healthcare practitioners believe AI integration is inevitable and could improve efficiency. However, concerns about job losses, data security, and the safety of AI-driven decisions were prevalent, alongside misconceptions about AI's role in patient interactions. This underscores the urgent need for targeted education to build trust and facilitate the smooth integration of AI into screening workflows.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38342,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Importantly, retinal AI should be conceptualized as an augmentation tool rather than a replacement for clinical expertise. Hybrid decision-support systems combining AI risk estimates with clinician judgment may offer the most pragmatic implementation pathway. Continuous monitoring, periodic model recalibration, and performance auditing will be essential to maintain safety and effectiveness over time.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38746,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38757,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "This review underscores the retina as a non-invasive biomarker hub reflecting systemic microvascular and neurodegenerative processes in T2DM. AI models leveraging retinal imaging\u2014particularly multimodal deep learning systems\u2014demonstrate promising performance for predicting cardiovascular, renal, cerebrovascular, and neurological complications.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39107,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "However, translation into routine care requires rigorous external validation, standardized reporting, fairness evaluation, domain-shift mitigation, and prospective outcome studies. With coordinated efforts across ophthalmology, endocrinology, data science, and regulatory governance, AI-enabled retinal assessment may evolve into a scalable platform for integrated, preemptive, and personalized multi-organ risk management in type 2 diabetes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39550,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Edited by: Heping Xu, Aier Eye Institute, China",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39598,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Reviewed by: Navid Sobhi, Farabi Eye Hospital, Iran",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39650,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Yaser Khakpour, Guilan University of Medical Sciences, Iran",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39710,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39731,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "LH: Methodology, Resources, Writing \u2013 original draft, Writing \u2013 review & editing. MY: Writing \u2013 review & editing. YL: Writing \u2013 review & editing. HL: Supervision, Writing \u2013 review & editing. MH: Supervision, Writing \u2013 review & editing. KZ: Validation, Supervision, Writing \u2013 review & editing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40038,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflict of interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40059,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that this work was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40232,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Generative AI statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40256,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that generative AI was used in the creation of this manuscript. AI-assisted language editing tools (e.g., ChatGPT) were used to improve grammar and readability. The authors take full responsibility for the content.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40494,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "Any alternative text (alt text) provided alongside figures in this article has been generated by Frontiers with the support of artificial intelligence and reasonable efforts have been made to ensure accuracy, including review by the authors wherever possible. If you identify any issues, please contact us.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40801,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Publisher's note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40818,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41165,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41176,
+                        "infons": {
+                            "fpage": "04192",
+                            "name_0": "surname:Liang;given-names:Y",
+                            "name_1": "surname:Zhang;given-names:X",
+                            "name_2": "surname:Mei;given-names:W",
+                            "name_3": "surname:Li;given-names:Y",
+                            "name_4": "surname:Du;given-names:Z",
+                            "name_5": "surname:Wang;given-names:Y",
+                            "pub-id_doi": "10.7189/jogh.14.04192",
+                            "pub-id_pmid": "39391902",
+                            "section_type": "REF",
+                            "source": "J Glob Health",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2024"
+                        },
+                        "text": "Predicting vision-threatening diabetic retinopathy in patients with type 2 diabetes mellitus: systematic review, meta-analysis, and prospective validation study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41337,
+                        "infons": {
+                            "fpage": "1169",
+                            "issue": "8",
+                            "lpage": "79",
+                            "name_0": "surname:Modjtahedi;given-names:BS",
+                            "name_1": "surname:Wu;given-names:J",
+                            "name_2": "surname:Luong;given-names:TQ",
+                            "name_3": "surname:Gandhi;given-names:NK",
+                            "name_4": "surname:Fong;given-names:DS",
+                            "name_5": "surname:Chen;given-names:W",
+                            "pub-id_doi": "10.1016/j.ophtha.2020.12.019",
+                            "pub-id_pmid": "33359888",
+                            "section_type": "REF",
+                            "source": "Ophthalmology",
+                            "type": "ref",
+                            "volume": "128",
+                            "year": "2021"
+                        },
+                        "text": "Severity of diabetic retinopathy and the risk of future cerebrovascular disease, cardiovascular disease, and all-cause mortality",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41466,
+                        "infons": {
+                            "fpage": "241",
+                            "issue": "1",
+                            "name_0": "surname:Shi;given-names:S",
+                            "name_1": "surname:Gao;given-names:L",
+                            "name_2": "surname:Zhang;given-names:J",
+                            "name_3": "surname:Zhang;given-names:B",
+                            "name_4": "surname:Xiao;given-names:J",
+                            "name_5": "surname:Xu;given-names:W",
+                            "pub-id_doi": "10.1186/s12911-023-02343-9",
+                            "pub-id_pmid": "37904184",
+                            "section_type": "REF",
+                            "source": "BMC Med Inform Decis Mak",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2023"
+                        },
+                        "text": "The automatic detection of diabetic kidney disease from retinal vascular parameters combined with clinical variables using artificial intelligence in type-2 diabetes patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41641,
+                        "infons": {
+                            "fpage": "1080",
+                            "issue": "11",
+                            "name_0": "surname:Baharoon;given-names:M",
+                            "name_1": "surname:Almatar;given-names:H",
+                            "name_2": "surname:Alduhayan;given-names:R",
+                            "name_3": "surname:Aldebasi;given-names:T",
+                            "name_4": "surname:Alahmadi;given-names:B",
+                            "name_5": "surname:Bokhari;given-names:Y",
+                            "pub-id_doi": "10.3390/bioengineering11111080",
+                            "pub-id_pmid": "39593740",
+                            "section_type": "REF",
+                            "source": "Bioengineering",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2024"
+                        },
+                        "text": "HyMNet: a multimodal deep learning system for hypertension prediction using Fundus images and cardiometabolic risk factors",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41764,
+                        "infons": {
+                            "fpage": "102927",
+                            "name_0": "surname:Messica;given-names:S",
+                            "name_1": "surname:Presil;given-names:D",
+                            "name_2": "surname:Hoch;given-names:Y",
+                            "name_3": "surname:Lev;given-names:T",
+                            "name_4": "surname:Hadad;given-names:A",
+                            "name_5": "surname:Katz;given-names:O",
+                            "pub-id_doi": "10.1016/j.artmed.2024.102927",
+                            "pub-id_pmid": "38991398",
+                            "section_type": "REF",
+                            "source": "Artif Intell Med",
+                            "type": "ref",
+                            "volume": "154",
+                            "year": "2024"
+                        },
+                        "text": "Enhancing stroke risk and prognostic timeframe assessment with deep learning and a broad range of retinal biomarkers",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41881,
+                        "infons": {
+                            "fpage": "657",
+                            "issue": "2",
+                            "lpage": "74",
+                            "name_0": "surname:Arnould;given-names:L",
+                            "name_1": "surname:Meriaudeau;given-names:F",
+                            "name_2": "surname:Guenancia;given-names:C",
+                            "name_3": "surname:Germanese;given-names:C",
+                            "name_4": "surname:Delcourt;given-names:C",
+                            "name_5": "surname:Kawasaki;given-names:R",
+                            "pub-id_doi": "10.1007/s40123-022-00641-5",
+                            "pub-id_pmid": "36562928",
+                            "section_type": "REF",
+                            "source": "Ophthalmol Ther",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2023"
+                        },
+                        "text": "Using artificial intelligence to analyse the retinal vascular network: the future of cardiovascular risk assessment based on oculomics? A narrative review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42036,
+                        "infons": {
+                            "fpage": "14",
+                            "issue": "1",
+                            "name_0": "surname:Lee;given-names:YC",
+                            "name_1": "surname:Cha;given-names:J",
+                            "name_2": "surname:Shim;given-names:I",
+                            "name_3": "surname:Park;given-names:W-Y",
+                            "name_4": "surname:Kang;given-names:SW",
+                            "name_5": "surname:Lim;given-names:DH",
+                            "pub-id_doi": "10.1038/s41746-023-00748-4",
+                            "pub-id_pmid": "36732671",
+                            "section_type": "REF",
+                            "source": "NPJ Digit Med",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2023"
+                        },
+                        "text": "Multimodal deep learning of fundus abnormalities and traditional risk factors for cardiovascular risk prediction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42149,
+                        "infons": {
+                            "fpage": "533",
+                            "issue": "6",
+                            "lpage": "45",
+                            "name_0": "surname:Zhang;given-names:K",
+                            "name_1": "surname:Liu;given-names:X",
+                            "name_2": "surname:Xu;given-names:J",
+                            "name_3": "surname:Yuan;given-names:J",
+                            "name_4": "surname:Cai;given-names:W",
+                            "name_5": "surname:Chen;given-names:T",
+                            "pub-id_doi": "10.1038/s41551-021-00745-6",
+                            "pub-id_pmid": "34131321",
+                            "section_type": "REF",
+                            "source": "Nat Biomed Eng",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2021"
+                        },
+                        "text": "Deep-learning models for the detection and incidence prediction of chronic kidney disease and type 2 diabetes from retinal fundus images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42286,
+                        "infons": {
+                            "fpage": "80",
+                            "issue": "12",
+                            "name_0": "surname:Basu;given-names:S",
+                            "name_1": "surname:Johnson;given-names:KT",
+                            "name_2": "surname:Berkowitz;given-names:SA",
+                            "pub-id_doi": "10.1007/s11892-020-01353-5",
+                            "pub-id_pmid": "33270183",
+                            "section_type": "REF",
+                            "source": "Curr Diab Rep",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2020"
+                        },
+                        "text": "Use of machine learning approaches in clinical epidemiological research of diabetes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42370,
+                        "infons": {
+                            "fpage": "104",
+                            "issue": "1",
+                            "name_0": "surname:Sobhi;given-names:N",
+                            "name_1": "surname:Sadeghi-Bazargani;given-names:Y",
+                            "name_2": "surname:Mirzaei;given-names:M",
+                            "name_3": "surname:Abdollahi;given-names:M",
+                            "name_4": "surname:Jafarizadeh;given-names:A",
+                            "name_5": "surname:Pedrammehr;given-names:S",
+                            "pub-id_doi": "10.1007/s40200-025-01596-7",
+                            "pub-id_pmid": "40224528",
+                            "section_type": "REF",
+                            "source": "J Diabetes Metab Disord",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2025"
+                        },
+                        "text": "Artificial intelligence for early detection of diabetes mellitus complications via retinal imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42469,
+                        "infons": {
+                            "fpage": "273",
+                            "issue": "2",
+                            "lpage": "86",
+                            "name_0": "surname:Kanbour;given-names:S",
+                            "name_1": "surname:Harris;given-names:C",
+                            "name_2": "surname:Lalani;given-names:B",
+                            "name_3": "surname:Wolf;given-names:RM",
+                            "name_4": "surname:Fitipaldi;given-names:H",
+                            "name_5": "surname:Gomez;given-names:MF",
+                            "pub-id_doi": "10.1177/19322968231223726",
+                            "pub-id_pmid": "38189280",
+                            "section_type": "REF",
+                            "source": "J Diabetes Sci Technol",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "2024"
+                        },
+                        "text": "Machine learning models for prediction of diabetic microvascular complications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42548,
+                        "infons": {
+                            "fpage": "100868",
+                            "issue": "5",
+                            "name_0": "surname:Meng;given-names:Z",
+                            "name_1": "surname:Guan;given-names:Z",
+                            "name_2": "surname:Yu;given-names:S",
+                            "name_3": "surname:Wu;given-names:Y",
+                            "name_4": "surname:Zhao;given-names:Y",
+                            "name_5": "surname:Shen;given-names:J",
+                            "pub-id_doi": "10.1016/j.landig.2025.02.008",
+                            "pub-id_pmid": "40312169",
+                            "section_type": "REF",
+                            "source": "Lancet Digit Health",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2025"
+                        },
+                        "text": "Non-invasive biopsy diagnosis of diabetic kidney disease via deep learning applied to retinal images: a population-based study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42675,
+                        "infons": {
+                            "fpage": "99",
+                            "lpage": "113",
+                            "name_0": "surname:Wang;given-names:MH",
+                            "name_1": "surname:Pan;given-names:Y",
+                            "name_2": "surname:Liu;given-names:J",
+                            "name_3": "surname:Wang;given-names:J",
+                            "name_4": "surname:Pan;given-names:Y",
+                            "section_type": "REF",
+                            "source": "AI in MRI-based Brain Disease Prediction",
+                            "type": "ref",
+                            "year": "2026"
+                        },
+                        "text": "Unveiling the interdisciplinary landscape of brain MRI in ophthalmology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42747,
+                        "infons": {
+                            "fpage": "2697",
+                            "name_0": "surname:Mini Han Wang;given-names:KK-LC",
+                            "name_1": "surname:Lin;given-names:Z",
+                            "name_2": "surname:Yu;given-names:X",
+                            "name_3": "surname:Pan;given-names:Y",
+                            "pub-id_doi": "10.3390/electronics12122697",
+                            "section_type": "REF",
+                            "source": "Electronics",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2023"
+                        },
+                        "text": "An explainable artificial intelligence-based robustness optimization approach for age-related macular degeneration detection based on medical IOT systems",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42901,
+                        "infons": {
+                            "fpage": "2722",
+                            "issue": "7",
+                            "lpage": "31",
+                            "name_0": "surname:White;given-names:T",
+                            "name_1": "surname:Selvarajah;given-names:V",
+                            "name_2": "surname:Wolfhagen-Sand;given-names:F",
+                            "name_3": "surname:Svang\u00e5rd;given-names:N",
+                            "name_4": "surname:Mohankumar;given-names:G",
+                            "name_5": "surname:Fenici;given-names:P",
+                            "pub-id_doi": "10.1111/dom.15587",
+                            "pub-id_pmid": "38618987",
+                            "section_type": "REF",
+                            "source": "Diabetes Obes Metab",
+                            "type": "ref",
+                            "volume": "26",
+                            "year": "2024"
+                        },
+                        "text": "Prediction of cardiovascular risk factors from retinal fundus photographs: validation of a deep learning algorithm in a prospective non-interventional study in Kenya",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43067,
+                        "infons": {
+                            "fpage": "3",
+                            "issue": "1",
+                            "name_0": "surname:Syed;given-names:MG",
+                            "name_1": "surname:Trucco;given-names:E",
+                            "name_2": "surname:Mookiah;given-names:MRK",
+                            "name_3": "surname:Lang;given-names:CC",
+                            "name_4": "surname:McCrimmon;given-names:RJ",
+                            "name_5": "surname:Palmer;given-names:CNA",
+                            "pub-id_doi": "10.1186/s12933-024-02564-w",
+                            "pub-id_pmid": "39748380",
+                            "section_type": "REF",
+                            "source": "Cardiovasc Diabetol",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2025"
+                        },
+                        "text": "Deep-learning prediction of cardiovascular outcomes from routine retinal images in individuals with type 2 diabetes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43183,
+                        "infons": {
+                            "fpage": "586",
+                            "issue": "6",
+                            "lpage": "93",
+                            "name_0": "surname:Xie;given-names:J",
+                            "name_1": "surname:Ikram;given-names:MK",
+                            "name_2": "surname:Cotch;given-names:MF",
+                            "name_3": "surname:Klein;given-names:B",
+                            "name_4": "surname:Varma;given-names:R",
+                            "name_5": "surname:Shaw;given-names:JE",
+                            "pub-id_doi": "10.1001/jamaophthalmol.2017.0988",
+                            "pub-id_pmid": "28472362",
+                            "section_type": "REF",
+                            "source": "JAMA Ophthalmol",
+                            "type": "ref",
+                            "volume": "135",
+                            "year": "2017"
+                        },
+                        "text": "Association of diabetic macular edema and proliferative diabetic retinopathy with cardiovascular disease",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43288,
+                        "infons": {
+                            "fpage": "1103",
+                            "issue": "5",
+                            "lpage": "12",
+                            "name_0": "surname:Forster;given-names:RB",
+                            "name_1": "surname:Garcia;given-names:ES",
+                            "name_2": "surname:Sluiman;given-names:AJ",
+                            "name_3": "surname:Grecian;given-names:SM",
+                            "name_4": "surname:McLachlan;given-names:S",
+                            "name_5": "surname:MacGillivray;given-names:TJ",
+                            "pub-id_doi": "10.1007/s00125-021-05388-5",
+                            "pub-id_pmid": "33515071",
+                            "section_type": "REF",
+                            "source": "Diabetologia",
+                            "type": "ref",
+                            "volume": "64",
+                            "year": "2021"
+                        },
+                        "text": "Retinal venular tortuosity and fractal dimension predict incident retinopathy in adults with type 2 diabetes: the Edinburgh type 2 diabetes study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43434,
+                        "infons": {
+                            "fpage": "1899",
+                            "issue": "2",
+                            "lpage": "908",
+                            "name_0": "surname:Long;given-names:W",
+                            "name_1": "surname:Wang;given-names:X",
+                            "name_2": "surname:Lu;given-names:L",
+                            "name_3": "surname:Wei;given-names:Z",
+                            "name_4": "surname:Yang;given-names:J",
+                            "pub-id_doi": "10.1007/s40200-024-01440-4",
+                            "pub-id_pmid": "39610509",
+                            "section_type": "REF",
+                            "source": "J Diabetes Metab Disord",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2024"
+                        },
+                        "text": "Development of a predictive model for the risk of microalbuminuria: comparison of 2 machine learning algorithms",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43546,
+                        "infons": {
+                            "fpage": "876559",
+                            "name_0": "surname:Zhao;given-names:Y",
+                            "name_1": "surname:Li;given-names:X",
+                            "name_2": "surname:Li;given-names:S",
+                            "name_3": "surname:Dong;given-names:M",
+                            "name_4": "surname:Yu;given-names:H",
+                            "name_5": "surname:Zhang;given-names:M",
+                            "pub-id_doi": "10.3389/fendo.2022.876559",
+                            "section_type": "REF",
+                            "source": "Front Endocrinol",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2022"
+                        },
+                        "text": "Using machine learning techniques to develop risk prediction models for the risk of incident diabetic retinopathy among patients with type 2 diabetes Mellitus: a cohort study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43721,
+                        "infons": {
+                            "fpage": "916966",
+                            "name_0": "surname:Qu;given-names:Y",
+                            "name_1": "surname:Zhuo;given-names:Y",
+                            "name_2": "surname:Lee;given-names:J",
+                            "name_3": "surname:Huang;given-names:X",
+                            "name_4": "surname:Yang;given-names:Z",
+                            "name_5": "surname:Yu;given-names:H",
+                            "pub-id_doi": "10.3389/fneur.2022.916966",
+                            "pub-id_pmid": "36071896",
+                            "section_type": "REF",
+                            "source": "Front Neurol",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2022"
+                        },
+                        "text": "Ischemic and haemorrhagic stroke risk estimation using a machine-learning-based retinal image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43824,
+                        "infons": {
+                            "fpage": "e0307317",
+                            "issue": "7",
+                            "name_0": "surname:Mateen;given-names:M",
+                            "name_1": "surname:Ejaz;given-names:S",
+                            "name_2": "surname:Baig;given-names:R",
+                            "name_3": "surname:Ashraf;given-names:Z",
+                            "name_4": "surname:Alnfiai;given-names:MM",
+                            "name_5": "surname:Alnahari;given-names:MM",
+                            "pub-id_doi": "10.1371/journal.pone.0307317",
+                            "pub-id_pmid": "39052616",
+                            "section_type": "REF",
+                            "source": "PLoS One",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2024"
+                        },
+                        "text": "A deep learning framework for the early detection of multi-retinal diseases",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43900,
+                        "infons": {
+                            "fpage": "1129860",
+                            "name_0": "surname:Hu;given-names:F",
+                            "name_1": "surname:Liu;given-names:L",
+                            "name_2": "surname:Liu;given-names:Z",
+                            "name_3": "surname:Cao;given-names:M",
+                            "name_4": "surname:Li;given-names:G",
+                            "name_5": "surname:Zhang;given-names:X",
+                            "pub-id_doi": "10.3389/fendo.2023.1129860",
+                            "section_type": "REF",
+                            "source": "Front Endocrinol",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2023"
+                        },
+                        "text": "Meta-analysis of the characteristic expression of circulating microRNA in type 2 diabetes mellitus with acute ischemic cerebrovascular disease",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44043,
+                        "infons": {
+                            "fpage": "103089",
+                            "name_0": "surname:Yang;given-names:Q",
+                            "name_1": "surname:Bee;given-names:YM",
+                            "name_2": "surname:Lim;given-names:CC",
+                            "name_3": "surname:Sabanayagam;given-names:C",
+                            "name_4": "surname:Yim-Lui Cheung;given-names:C",
+                            "name_5": "surname:Wong;given-names:TY",
+                            "pub-id_doi": "10.1016/j.eclinm.2025.103089",
+                            "pub-id_pmid": "40052065",
+                            "section_type": "REF",
+                            "source": "eClinicalMedicine",
+                            "type": "ref",
+                            "volume": "81",
+                            "year": "2025"
+                        },
+                        "text": "Use of artificial intelligence with retinal imaging in screening for diabetes-associated complications: systematic review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44165,
+                        "infons": {
+                            "fpage": "9768",
+                            "issue": "18",
+                            "name_0": "surname:Lee;given-names:C-C",
+                            "name_1": "surname:Hsing;given-names:S-C",
+                            "name_2": "surname:Lin;given-names:Y-T",
+                            "name_3": "surname:Lin;given-names:C",
+                            "name_4": "surname:Chen;given-names:J-T",
+                            "name_5": "surname:Chen;given-names:Y-H",
+                            "pub-id_doi": "10.3390/ijerph18189768",
+                            "pub-id_pmid": "34574686",
+                            "section_type": "REF",
+                            "source": "Int J Environ Res Public Health",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "2021"
+                        },
+                        "text": "The importance of close follow-up in patients with early-grade diabetic retinopathy: a Taiwan population-based study grading via deep learning model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44314,
+                        "infons": {
+                            "fpage": "1357580",
+                            "name_0": "surname:Liu;given-names:Y",
+                            "name_1": "surname:Kong;given-names:Y",
+                            "name_2": "surname:Yan;given-names:Y",
+                            "name_3": "surname:Hui;given-names:P",
+                            "pub-id_doi": "10.3389/fendo.2024.1357580",
+                            "section_type": "REF",
+                            "source": "Front Endocrinol",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2024"
+                        },
+                        "text": "Explore the value of carotid ultrasound radiomics nomogram in predicting ischemic stroke risk in patients with type 2 diabetes mellitus",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44450,
+                        "infons": {
+                            "fpage": "1122",
+                            "issue": "5",
+                            "lpage": "1131.e9",
+                            "name_0": "surname:Kermany;given-names:DS",
+                            "name_1": "surname:Goldbaum;given-names:M",
+                            "name_2": "surname:Cai;given-names:W",
+                            "name_3": "surname:Valentim;given-names:CCS",
+                            "name_4": "surname:Liang;given-names:H",
+                            "name_5": "surname:Baxter;given-names:SL",
+                            "pub-id_doi": "10.1016/j.cell.2018.02.010",
+                            "pub-id_pmid": "29474911",
+                            "section_type": "REF",
+                            "source": "Cell",
+                            "type": "ref",
+                            "volume": "172",
+                            "year": "2018"
+                        },
+                        "text": "Identifying medical diagnoses and treatable diseases by image-based deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44532,
+                        "infons": {
+                            "fpage": "103365",
+                            "name_0": "surname:Pachade;given-names:S",
+                            "name_1": "surname:Porwal;given-names:P",
+                            "name_2": "surname:Kokare;given-names:M",
+                            "name_3": "surname:Deshmukh;given-names:G",
+                            "name_4": "surname:Sahasrabuddhe;given-names:V",
+                            "name_5": "surname:Luo;given-names:Z",
+                            "pub-id_doi": "10.1016/j.media.2024.103365",
+                            "pub-id_pmid": "39395210",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "99",
+                            "year": "2025"
+                        },
+                        "text": "RFMid: retinal image analysis for multi-disease detection challenge",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44600,
+                        "infons": {
+                            "fpage": "1527010",
+                            "name_0": "surname:Han Wang;given-names:M",
+                            "name_1": "surname:Cui;given-names:J",
+                            "name_2": "surname:Lee;given-names:SM-Y",
+                            "name_3": "surname:Lin;given-names:Z",
+                            "name_4": "surname:Zeng;given-names:P",
+                            "name_5": "surname:Li;given-names:X",
+                            "pub-id_doi": "10.3389/frai.2025.1527010",
+                            "pub-id_pmid": "40166361",
+                            "section_type": "REF",
+                            "source": "Front Artif Intell",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2025"
+                        },
+                        "text": "Applied machine learning in intelligent systems: knowledge graph-enhanced ophthalmic contrastive learning with \u201cclinical profile\u201d prompts",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44742,
+                        "infons": {
+                            "fpage": "4999",
+                            "issue": "1",
+                            "name_0": "surname:Sorin;given-names:V",
+                            "name_1": "surname:Kapelushnik;given-names:N",
+                            "name_2": "surname:Hecht;given-names:I",
+                            "name_3": "surname:Zloto;given-names:O",
+                            "name_4": "surname:Glicksberg;given-names:BS",
+                            "name_5": "surname:Bufman;given-names:H",
+                            "pub-id_doi": "10.1038/s41598-025-88948-8",
+                            "pub-id_pmid": "39930078",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "Integrated visual and text-based analysis of ophthalmology clinical cases using a large language model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44845,
+                        "infons": {
+                            "fpage": "102617",
+                            "name_0": "surname:Usman;given-names:TM",
+                            "name_1": "surname:Saheed;given-names:YK",
+                            "name_2": "surname:Nsang;given-names:A",
+                            "name_3": "surname:Ajibesin;given-names:A",
+                            "name_4": "surname:Rakshit;given-names:S",
+                            "pub-id_doi": "10.1016/j.artmed.2023.102617",
+                            "pub-id_pmid": "37673580",
+                            "section_type": "REF",
+                            "source": "Artif Intell Med",
+                            "type": "ref",
+                            "volume": "143",
+                            "year": "2023"
+                        },
+                        "text": "A systematic literature review of machine learning based risk prediction models for diabetic retinopathy progression",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44962,
+                        "infons": {
+                            "fpage": "23",
+                            "issue": "1",
+                            "name_0": "surname:Yao;given-names:J",
+                            "name_1": "surname:Lim;given-names:J",
+                            "name_2": "surname:Lim;given-names:GYS",
+                            "name_3": "surname:Ong;given-names:JCL",
+                            "name_4": "surname:Ke;given-names:Y",
+                            "name_5": "surname:Tan;given-names:TF",
+                            "pub-id_doi": "10.1186/s40662-024-00389-y",
+                            "pub-id_pmid": "38880890",
+                            "section_type": "REF",
+                            "source": "Eye Vision",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2024"
+                        },
+                        "text": "Novel artificial intelligence algorithms for diabetic retinopathy and diabetic macular edema",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45055,
+                        "infons": {
+                            "fpage": "1728",
+                            "issue": "10",
+                            "lpage": "39",
+                            "name_0": "surname:Rajesh;given-names:AE",
+                            "name_1": "surname:Davidson;given-names:OQ",
+                            "name_2": "surname:Lee;given-names:CS",
+                            "name_3": "surname:Lee;given-names:AY",
+                            "pub-id_doi": "10.2337/dci23-0032",
+                            "pub-id_pmid": "37729502",
+                            "section_type": "REF",
+                            "source": "Diabetes Care",
+                            "type": "ref",
+                            "volume": "46",
+                            "year": "2023"
+                        },
+                        "text": "Artificial intelligence and diabetic retinopathy: aI framework, prospective studies, head-to-head validation, and cost-effectiveness",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45188,
+                        "infons": {
+                            "fpage": "15166",
+                            "issue": "1",
+                            "name_0": "surname:Sushith;given-names:M",
+                            "name_1": "surname:Sathiya;given-names:A",
+                            "name_2": "surname:Kalaipoonguzhali;given-names:V",
+                            "name_3": "surname:Sathya;given-names:V",
+                            "pub-id_doi": "10.1038/s41598-025-99309-w",
+                            "pub-id_pmid": "40307328",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "A hybrid deep learning framework for early detection of diabetic retinopathy using retinal fundus images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45293,
+                        "infons": {
+                            "fpage": "2432",
+                            "name_0": "surname:Araki;given-names:M",
+                            "name_1": "surname:Park;given-names:S",
+                            "name_2": "surname:Nakajima;given-names:A",
+                            "name_3": "surname:Lee;given-names:H",
+                            "name_4": "surname:Ye;given-names:JC",
+                            "name_5": "surname:Jang;given-names:IK",
+                            "pub-id_doi": "10.1038/s41598-023-29293-6",
+                            "pub-id_pmid": "36765086",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2023"
+                        },
+                        "text": "Diagnosis of coronary layered plaque by deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45347,
+                        "infons": {
+                            "fpage": "227",
+                            "issue": "1",
+                            "name_0": "surname:Thanikachalam;given-names:V",
+                            "name_1": "surname:Kabilan;given-names:K",
+                            "name_2": "surname:Erramchetty;given-names:SK",
+                            "pub-id_doi": "10.1186/s12880-024-01406-1",
+                            "pub-id_pmid": "39198741",
+                            "section_type": "REF",
+                            "source": "BMC Med Imaging",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2024"
+                        },
+                        "text": "Optimized deep CNN for detection and classification of diabetic retinopathy and diabetic macular edema",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45450,
+                        "infons": {
+                            "comment": "Fusion learning methods for the agerelated macular degeneration diagnosis based on multiple sources of ophthalmic digital images",
+                            "name_0": "surname:Mini Han Wang;given-names:JZ",
+                            "name_1": "surname:H;given-names:C",
+                            "name_2": "surname:Tang;given-names:Z",
+                            "name_3": "surname:Yu;given-names:X",
+                            "name_4": "surname:Hou;given-names:G",
+                            "name_5": "surname:Yang;given-names:J",
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45451,
+                        "infons": {
+                            "fpage": "445",
+                            "issue": "2",
+                            "lpage": "84",
+                            "name_0": "surname:Wang;given-names:MH",
+                            "name_1": "surname:Xing;given-names:L",
+                            "name_2": "surname:Pan;given-names:Y",
+                            "name_3": "surname:Gu;given-names:F",
+                            "name_4": "surname:Fang;given-names:J",
+                            "name_5": "surname:Yu;given-names:X",
+                            "pub-id_doi": "10.26599/BDMA.2023.9020024",
+                            "section_type": "REF",
+                            "source": "Big Data Min Anal",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2024"
+                        },
+                        "text": "AI-based advanced approaches and dry eye disease detection based on multi-source evidence: cases, applications, issues, and future directions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45593,
+                        "infons": {
+                            "fpage": "252",
+                            "issue": "2",
+                            "lpage": "63",
+                            "name_0": "surname:Szeto;given-names:SK-H",
+                            "name_1": "surname:Hui;given-names:VWK",
+                            "name_2": "surname:Siu;given-names:V",
+                            "name_3": "surname:Mohamed;given-names:S",
+                            "name_4": "surname:Chan;given-names:CKM",
+                            "name_5": "surname:Cheung;given-names:CYL",
+                            "pub-id_doi": "10.1097/APO.0000000000000584",
+                            "section_type": "REF",
+                            "source": "Asia Pacific J Ophthalmol",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2023"
+                        },
+                        "text": "Recent advances in clinical applications of imaging in retinal diseases",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45665,
+                        "infons": {
+                            "fpage": "123",
+                            "issue": "2",
+                            "lpage": "31",
+                            "name_0": "surname:Ashrafkhorasani;given-names:M",
+                            "name_1": "surname:Habibi;given-names:A",
+                            "name_2": "surname:Nittala;given-names:MG",
+                            "name_3": "surname:Corradetti;given-names:G",
+                            "name_4": "surname:Emamverdi;given-names:M",
+                            "name_5": "surname:Sadda;given-names:SR",
+                            "pub-id_doi": "10.4103/sjopt.sjopt_151_23",
+                            "pub-id_pmid": "38988777",
+                            "section_type": "REF",
+                            "source": "Saudi J Ophthalmol",
+                            "type": "ref",
+                            "volume": "38",
+                            "year": "2024"
+                        },
+                        "text": "Peripheral retinal lesions in diabetic retinopathy on ultra-widefield imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45743,
+                        "infons": {
+                            "fpage": "2702",
+                            "issue": "5",
+                            "lpage": "11",
+                            "name_0": "surname:Sayman Muslubas;given-names:I",
+                            "name_1": "surname:Arf;given-names:S",
+                            "name_2": "surname:Hocaoglu;given-names:M",
+                            "name_3": "surname:Giray Ersoz;given-names:M",
+                            "name_4": "surname:Karacorlu;given-names:M",
+                            "pub-id_doi": "10.1177/11206721211055961",
+                            "pub-id_pmid": "34806463",
+                            "section_type": "REF",
+                            "source": "Eur J Ophthalmol",
+                            "type": "ref",
+                            "volume": "32",
+                            "year": "2022"
+                        },
+                        "text": "Best disease presenting as subretinal pigment epithelium hyperreflectivite lesion on spectral-domain optical coherence tomography: multimodal imaging features",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45902,
+                        "infons": {
+                            "fpage": "135",
+                            "issue": "2",
+                            "lpage": "9",
+                            "name_0": "surname:Chen;given-names:Y",
+                            "name_1": "surname:Qi;given-names:Z",
+                            "name_2": "surname:Hou;given-names:X",
+                            "name_3": "surname:Chen;given-names:L",
+                            "pub-id_doi": "10.5603/EP.a2022.0085",
+                            "pub-id_pmid": "36916544",
+                            "section_type": "REF",
+                            "source": "Endokrynol Pol",
+                            "type": "ref",
+                            "volume": "74",
+                            "year": "2023"
+                        },
+                        "text": "Optical coherence tomography angiography for assessment of changes of the retina and choroid in different stages of diabetic retinopathy and their relationship with diabetic nephropathy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46088,
+                        "infons": {
+                            "fpage": "356",
+                            "issue": "2",
+                            "lpage": "80",
+                            "name_0": "surname:Mallery;given-names:RM",
+                            "pub-id_doi": "10.1212/cont.0000000000001543",
+                            "pub-id_pmid": "40179400",
+                            "section_type": "REF",
+                            "source": "Continuum",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2025"
+                        },
+                        "text": "Ocular imaging and electrophysiology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46125,
+                        "infons": {
+                            "fpage": "38",
+                            "issue": "1",
+                            "lpage": "45",
+                            "name_0": "surname:Geli\u015fken;given-names:F",
+                            "pub-id_doi": "10.4274/tjo.galenos.2023.89735",
+                            "section_type": "REF",
+                            "source": "Turkish J Ophthalmol",
+                            "type": "ref",
+                            "volume": "54",
+                            "year": "2024"
+                        },
+                        "text": "Indocyanine green angiography",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46155,
+                        "infons": {
+                            "fpage": "1285",
+                            "issue": "12",
+                            "name_0": "surname:Wang;given-names:C-Y",
+                            "name_1": "surname:Nguyen;given-names:H-T",
+                            "name_2": "surname:Fan;given-names:W-S",
+                            "name_3": "surname:Lue;given-names:J-H",
+                            "name_4": "surname:Saenprasarn;given-names:P",
+                            "name_5": "surname:Chen;given-names:M-M",
+                            "pub-id_doi": "10.3390/diagnostics14121285",
+                            "pub-id_pmid": "38928700",
+                            "section_type": "REF",
+                            "source": "Diagnostics",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2024"
+                        },
+                        "text": "Glaucoma detection through a novel hyperspectral imaging band selection and vision transformer integration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46262,
+                        "infons": {
+                            "fpage": "13",
+                            "issue": "2",
+                            "name_0": "surname:Burlina;given-names:P",
+                            "name_1": "surname:Joshi;given-names:N",
+                            "name_2": "surname:Paul;given-names:W",
+                            "name_3": "surname:Pacheco;given-names:KD",
+                            "name_4": "surname:Bressler;given-names:NM",
+                            "pub-id_doi": "10.1167/tvst.10.2.13",
+                            "pub-id_pmid": "34003898",
+                            "section_type": "REF",
+                            "source": "Transl Vis Sci Technol",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2021"
+                        },
+                        "text": "Addressing artificial intelligence bias in retinal diagnostics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46325,
+                        "infons": {
+                            "fpage": "e001596",
+                            "issue": "1",
+                            "name_0": "surname:Zhang;given-names:Y",
+                            "name_1": "surname:Shi;given-names:J",
+                            "name_2": "surname:Peng;given-names:Y",
+                            "name_3": "surname:Zhao;given-names:Z",
+                            "name_4": "surname:Zheng;given-names:Q",
+                            "name_5": "surname:Wang;given-names:Z",
+                            "pub-id_doi": "10.1136/bmjdrc-2020-001596",
+                            "pub-id_pmid": "33087340",
+                            "section_type": "REF",
+                            "source": "BMJ Open Diabetes Res Care",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2020"
+                        },
+                        "text": "Artificial intelligence-enabled screening for diabetic retinopathy: a real-world, multicenter and prospective study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46441,
+                        "infons": {
+                            "fpage": "81",
+                            "issue": "2",
+                            "lpage": "6",
+                            "name_0": "surname:Pawar;given-names:B",
+                            "name_1": "surname:Lobo;given-names:SN",
+                            "name_2": "surname:Joseph;given-names:M",
+                            "name_3": "surname:Jegannathan;given-names:S",
+                            "name_4": "surname:Jayraj;given-names:H",
+                            "pub-id_doi": "10.4103/meajo.meajo_406_20",
+                            "pub-id_pmid": "34759664",
+                            "section_type": "REF",
+                            "source": "Middle East Afr J Ophthalmol",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2021"
+                        },
+                        "text": "Validation of artificial intelligence algorithm in the detection and staging of diabetic retinopathy through Fundus photography",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46569,
+                        "infons": {
+                            "fpage": "57",
+                            "issue": "2",
+                            "lpage": "63",
+                            "name_0": "surname:Jennings;given-names:G",
+                            "name_1": "surname:Raffoul;given-names:N",
+                            "name_2": "surname:Nelson;given-names:M",
+                            "pub-id_doi": "10.18773/austprescr.2024.014",
+                            "pub-id_pmid": "38737366",
+                            "section_type": "REF",
+                            "source": "Aust Prescr",
+                            "type": "ref",
+                            "volume": "47",
+                            "year": "2024"
+                        },
+                        "text": "Assessing, communicating and managing cardiovascular disease risk: a practical summary of the 2023 guideline",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46678,
+                        "infons": {
+                            "comment": "Deep learning for macular fovea detection based on ultra-widefield fundus images",
+                            "name_0": "surname:Wang;given-names:MH",
+                            "name_1": "surname:Huang;given-names:L",
+                            "name_2": "surname:Hou;given-names:G",
+                            "name_3": "surname:Yang;given-names:J",
+                            "name_4": "surname:Xing;given-names:L",
+                            "name_5": "surname:Yuan;given-names:Q",
+                            "name_6": "surname:Kelvin;given-names:ZL",
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46679,
+                        "infons": {
+                            "fpage": "548",
+                            "issue": "5",
+                            "name_0": "surname:Wang;given-names:MH",
+                            "pub-id_doi": "10.3390/bioengineering12050548",
+                            "pub-id_pmid": "40428167",
+                            "section_type": "REF",
+                            "source": "Bioengineering",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2025"
+                        },
+                        "text": "Integrating artificial intelligence and precision therapeutics for advancing the diagnosis and treatment of age-related macular degeneration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46820,
+                        "infons": {
+                            "fpage": "17",
+                            "issue": "1",
+                            "name_0": "surname:Tan;given-names:YY",
+                            "name_1": "surname:Kang;given-names:HG",
+                            "name_2": "surname:Lee;given-names:CJ",
+                            "name_3": "surname:Kim;given-names:SS",
+                            "name_4": "surname:Park;given-names:S",
+                            "name_5": "surname:Thakur;given-names:S",
+                            "pub-id_doi": "10.1186/s40662-024-00384-3",
+                            "pub-id_pmid": "38711111",
+                            "section_type": "REF",
+                            "source": "Eye Vision",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2024"
+                        },
+                        "text": "Prognostic potentials of AI in ophthalmology: systemic disease forecasting via retinal imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46915,
+                        "infons": {
+                            "fpage": "165",
+                            "issue": "1",
+                            "lpage": "71",
+                            "name_0": "surname:Hsieh;given-names:Y-T",
+                            "name_1": "surname:Chuang;given-names:L-M",
+                            "name_2": "surname:Jiang;given-names:Y-D",
+                            "name_3": "surname:Chang;given-names:T-J",
+                            "name_4": "surname:Yang;given-names:C-M",
+                            "name_5": "surname:Yang;given-names:C-H",
+                            "pub-id_doi": "10.1016/j.jfma.2020.03.024",
+                            "pub-id_pmid": "32307321",
+                            "section_type": "REF",
+                            "source": "J Formos Med Assoc",
+                            "type": "ref",
+                            "volume": "120",
+                            "year": "2021"
+                        },
+                        "text": "Application of deep learning image assessment software VeriSee\u2122 for diabetic retinopathy screening",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47016,
+                        "infons": {
+                            "fpage": "97",
+                            "issue": "1",
+                            "name_0": "surname:Henry;given-names:KE",
+                            "name_1": "surname:Kornfield;given-names:R",
+                            "name_2": "surname:Sridharan;given-names:A",
+                            "name_3": "surname:Linton;given-names:RC",
+                            "name_4": "surname:Groh;given-names:C",
+                            "name_5": "surname:Wang;given-names:T",
+                            "pub-id_doi": "10.1038/s41746-022-00597-7",
+                            "pub-id_pmid": "35864312",
+                            "section_type": "REF",
+                            "source": "NPJ Digit Med",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2022"
+                        },
+                        "text": "Human\u2013machine teaming is key to AI adoption: clinicians\u2019 experiences with a deployed machine learning system",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47129,
+                        "infons": {
+                            "fpage": "1694",
+                            "issue": "9",
+                            "lpage": "701",
+                            "name_0": "surname:Do\u011fan;given-names:ME",
+                            "name_1": "surname:Bilgin;given-names:AB",
+                            "name_2": "surname:Sari;given-names:R",
+                            "name_3": "surname:Bulut;given-names:M",
+                            "name_4": "surname:Akar;given-names:Y",
+                            "name_5": "surname:Aydemir;given-names:M",
+                            "pub-id_doi": "10.1038/s41433-024-03000-9",
+                            "pub-id_pmid": "38467864",
+                            "section_type": "REF",
+                            "source": "Eye",
+                            "type": "ref",
+                            "volume": "38",
+                            "year": "2024"
+                        },
+                        "text": "Head to head comparison of diagnostic performance of three non-mydriatic cameras for diabetic retinopathy screening with artificial intelligence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47274,
+                        "infons": {
+                            "fpage": "849",
+                            "issue": "3",
+                            "lpage": "56",
+                            "name_0": "surname:Zhang;given-names:X",
+                            "name_1": "surname:li;given-names:F",
+                            "name_2": "surname:Li;given-names:D",
+                            "name_3": "surname:Wei;given-names:Q",
+                            "name_4": "surname:Han;given-names:X",
+                            "name_5": "surname:Zhang;given-names:B",
+                            "pub-id_doi": "10.1007/s00417-021-05402-x",
+                            "pub-id_pmid": "34591173",
+                            "section_type": "REF",
+                            "source": "Graefe\u2019s Arch Clin Exp Ophthalmol",
+                            "type": "ref",
+                            "volume": "260",
+                            "year": "2022"
+                        },
+                        "text": "Automated detection of severe diabetic retinopathy using deep learning method",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47352,
+                        "infons": {
+                            "fpage": "e12422",
+                            "issue": "3",
+                            "name_0": "surname:Oh;given-names:S",
+                            "name_1": "surname:Kim;given-names:JH",
+                            "name_2": "surname:Choi;given-names:S-W",
+                            "name_3": "surname:Lee;given-names:HJ",
+                            "name_4": "surname:Hong;given-names:J",
+                            "name_5": "surname:Kwon;given-names:SH",
+                            "pub-id_doi": "10.2196/12422",
+                            "pub-id_pmid": "30907742",
+                            "section_type": "REF",
+                            "source": "J Med Internet Res",
+                            "type": "ref",
+                            "volume": "21",
+                            "year": "2019"
+                        },
+                        "text": "Physician confidence in artificial intelligence: an online mobile survey",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47425,
+                        "infons": {
+                            "fpage": "1075",
+                            "issue": "8",
+                            "lpage": "81",
+                            "name_0": "surname:de Oliveira;given-names:JAE",
+                            "name_1": "surname:Nakayama;given-names:LF",
+                            "name_2": "surname:Zago Ribeiro;given-names:L",
+                            "name_3": "surname:de Oliveira;given-names:TVF",
+                            "name_4": "surname:Choi;given-names:SNJH",
+                            "name_5": "surname:Neto;given-names:EM",
+                            "pub-id_doi": "10.1007/s00592-023-02105-z",
+                            "pub-id_pmid": "37149834",
+                            "section_type": "REF",
+                            "source": "Acta Diabetol",
+                            "type": "ref",
+                            "volume": "60",
+                            "year": "2023"
+                        },
+                        "text": "Clinical validation of a smartphone-based retinal camera for diabetic retinopathy screening",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47517,
+                        "infons": {
+                            "fpage": "e240",
+                            "issue": "5",
+                            "lpage": "9",
+                            "name_0": "surname:Xie;given-names:Y",
+                            "name_1": "surname:Nguyen;given-names:QD",
+                            "name_2": "surname:Hamzah;given-names:H",
+                            "name_3": "surname:Lim;given-names:G",
+                            "name_4": "surname:Bellemo;given-names:V",
+                            "name_5": "surname:Gunasekeran;given-names:DV",
+                            "pub-id_doi": "10.1016/S2589-7500(20)30060-1",
+                            "pub-id_pmid": "33328056",
+                            "section_type": "REF",
+                            "source": "Lancet Digit Health",
+                            "type": "ref",
+                            "volume": "2",
+                            "year": "2020"
+                        },
+                        "text": "Artificial intelligence for teleophthalmology-based diabetic retinopathy screening in a national programme: an economic analysis modelling study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47662,
+                        "infons": {
+                            "fpage": "e220269",
+                            "issue": "3",
+                            "name_0": "surname:Gomez Rossi;given-names:J",
+                            "name_1": "surname:Rojas-Perilla;given-names:N",
+                            "name_2": "surname:Krois;given-names:J",
+                            "name_3": "surname:Schwendicke;given-names:F",
+                            "pub-id_doi": "10.1001/jamanetworkopen.2022.0269",
+                            "pub-id_pmid": "35289862",
+                            "section_type": "REF",
+                            "source": "JAMA Netw. Open",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2022"
+                        },
+                        "text": "Cost-effectiveness of artificial intelligence as a decision-support system applied to the detection and grading of melanoma, dental caries, and diabetic retinopathy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47827,
+                        "infons": {
+                            "fpage": "111964",
+                            "name_0": "surname:Wahlich;given-names:C",
+                            "name_1": "surname:Chandrasekaran;given-names:L",
+                            "name_2": "surname:Chaudhry;given-names:UAR",
+                            "name_3": "surname:Willis;given-names:K",
+                            "name_4": "surname:Chambers;given-names:R",
+                            "name_5": "surname:Bolter;given-names:L",
+                            "pub-id_doi": "10.1016/j.diabres.2024.111964",
+                            "pub-id_pmid": "39709112",
+                            "section_type": "REF",
+                            "source": "Diabetes Res Clin Pract",
+                            "type": "ref",
+                            "volume": "219",
+                            "year": "2025"
+                        },
+                        "text": "Patient and practitioner perceptions around use of artificial intelligence within the English NHS diabetic eye screening programme",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47958,
+                        "infons": {
+                            "fpage": "20",
+                            "issue": "1",
+                            "name_0": "surname:Su;given-names:C",
+                            "name_1": "surname:Wang;given-names:P",
+                            "name_2": "surname:Foo;given-names:N",
+                            "name_3": "surname:Ho;given-names:D",
+                            "pub-id_doi": "10.1038/s41514-025-00211-6",
+                            "pub-id_pmid": "40128254",
+                            "section_type": "REF",
+                            "source": "NPJ Aging",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2025"
+                        },
+                        "text": "Optimizing metabolic health with digital twins",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48005,
+                        "infons": {
+                            "fpage": "1517918",
+                            "name_0": "surname:Wang;given-names:MH",
+                            "name_1": "surname:Jiang;given-names:X",
+                            "name_2": "surname:Zeng;given-names:P",
+                            "name_3": "surname:Li;given-names:X",
+                            "name_4": "surname:Chong;given-names:KK-L",
+                            "name_5": "surname:Hou;given-names:G",
+                            "pub-id_doi": "10.3389/frai.2025.1517918",
+                            "pub-id_pmid": "40017484",
+                            "section_type": "REF",
+                            "source": "Front Artif Intell",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2025"
+                        },
+                        "text": "Balancing accuracy and user satisfaction: the role of prompt engineering in AI-driven healthcare solutions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,1936 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260513",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13159388",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.7759/cureus.106838",
+                            "article-id_pmc": "PMC13159388",
+                            "elocation-id": "e106838",
+                            "issue": "4",
+                            "kwd": "ai and machine learning chronic cancer pain opioid misuse opioid use systematic scoping review",
+                            "license": "This is an open access article distributed under the terms of the Creative Commons Attribution License CC-BY 4.0., which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+                            "name_0": "surname:Muacevic;given-names:Alexander",
+                            "name_1": "surname:Adler;given-names:John R",
+                            "name_2": "surname:Zompola;given-names:Anastasia",
+                            "name_3": "surname:Asimakopoulos;given-names:Thalis",
+                            "name_4": "surname:Iosifidou;given-names:Christina",
+                            "name_5": "surname:Monopatis;given-names:Dimitris Orfeas",
+                            "name_6": "surname:Braimakis;given-names:Fotis",
+                            "name_7": "surname:Kouroukli;given-names:Irene C",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "18",
+                            "year": "2026"
+                        },
+                        "text": "Machine Learning Applications for Opioid Use Management in Chronic Cancer Pain: A Systematic Scoping Review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 108,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Chronic pain remains a critical clinical issue worldwide, with adverse effects on the quality of life of oncology patients. Meanwhile, the overuse of opioids to treat or alleviate chronic cancer pain has contributed to a global opioid crisis. The increasing accessibility of high-quality clinical datasets and computational frameworks has promoted the use of machine learning (ML) techniques in clinical practice to manage opioid consumption. This review investigates the current bibliography referring to the role of applied ML techniques in opioid administration in patients with chronic cancer pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 711,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The objective of the current scoping review, according to population, intervention, comparison, and outcome (PICO) standards, was to evaluate the effectiveness of ML techniques in monitoring opioid consumption in patients with chronic cancer pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 959,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "This review includes scientific journal papers published from 2010 to 2024 that use healthcare data from patients with chronic cancer pain, apply machine learning techniques, and may address the potential consequences of the misuse of opioids.\u00a0A systematic literature search, following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, was performed in PubMed and Google Scholar databases. Data extracted include\u00a0the study\u2019s goal, dataset used, cohort selected, types of ML models created, model evaluation metrics, and the details of the ML tools and techniques used to create the models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1595,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "After conducting the screening process, 50 articles were identified, but only four focused specifically on or included data of patients with chronic cancer pain\u00a0where ML techniques were applied. The four included studies showed high performance (area under the curve {AUC}: >0.8)\u00a0in predicting opioid adherence, misuse, and long-term use. Although\u00a0generalizability remains limited due to small sample sizes and a lack of external validation, it sets distinct limits in applying these methods in clinical use.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2107,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "After a thorough review of recent literature, ML models demonstrated promising accuracy in predicting opioid adherence, misuse, and long-term use among patients with chronic cancer pain. However, these findings are based on studies with limited sample sizes and a lack of external validation, which restricts their generalizability. Future research should focus specifically on populations with chronic cancer pain and expand predictive models to incorporate a combination of clinical, psychosocial, biometric, and genomic data. This approach may enable more accurate, personalized, and safer opioid management in oncology care.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2736,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction and background",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2764,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The integration of artificial intelligence (AI) and machine learning (ML) techniques in healthcare has transformed the clinical approach to complex conditions, such as opioid use disorder (OUD). OUD is a multifactorial illness marked by extended opioid use and characterized by the loss of control of opioid use, which is continued despite harm. It is a serious adverse event that can result despite the therapeutic use\u00a0of opioids in the management of chronic cancer pain. Clinically, OUD may manifest as physical dependence, psychological dependence, or both, with the condition potentially progressing from dependence to addiction. Core clinical features include an overpowering desire to use opioids, the development of opioid tolerance, and the emergence of withdrawal symptoms upon opioid discontinuation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3576,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "ML is a subfield of artificial intelligence (AI) that involves algorithms capable of autonomously performing tasks while continuously improving their accuracy and performance through experience and exposure to data. ML algorithms can be applied to prediction, pattern recognition, or data classification, and various metrics are used to assess their effectiveness. There are four primary types of ML algorithms: supervised, semi-supervised, unsupervised, and reinforcement learning. In supervised learning, the algorithm is trained using labeled data, allowing it to predict outputs for new, unseen input data. Semi-supervised learning functions similarly but integrates both labeled and unlabeled data to enhance learning efficiency. Unsupervised learning, on the other hand, relies solely on unlabeled data, requiring the model to identify patterns and correlations from the input data. Finally, reinforcement learning involves algorithms that optimize decision-making by mimicking the trial-and-error learning process to achieve the best possible outcomes. In the clinical domain also, natural language processing (NLP), a specialized field of AI, is widely used to extract meaningful insights from clinical text.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4793,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A more advanced subset of ML is deep learning (DL), which is currently considered a core technology. DL uses multilayered\u00a0neural networks, called deep neural networks, to simulate the complex decision-making power of the human brain. There are different types of DL models, such as convolutional neural networks, deep reinforcement learning, and recurrent neural networks. On the whole, these different AI tools can identify patterns and extract useful insights from complex medical data, making them invaluable in the field of medical practice.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5340,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Globally, cancer is one of the most prevalent diseases, and one of its most frequent and disabling symptoms is pain. Cancer-related pain may arise from the primary tumor itself or metastases\u00a0or as a side effect of treatment. Chronic cancer pain can significantly impact patients\u2019 quality of life, leading to dysfunction and potentially increasing mortality rates. While pain itself is not life-threatening, prolonged exposure can worsen overall health outcomes. Worldwide, the primary treatment for moderate to severe cancer pain is the prescription of opioids. For mild to moderate pain, weak opioids such as codeine, hydrocodone, and tramadol are recommended. As pain becomes more severe, a combination of strong opioids and non-opioid analgesics is typically prescribed for more effective pain management.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6152,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Opioid use disorder (OUD) is a multifactorial condition influenced by both genetic and clinical factors, making it challenging for clinicians to accurately assess and interpret the effects of opioid medications using only patient history or conventional statistical approaches. Additionally, the heterogeneity of the disease, shaped by individual genetic and clinical profiles, further complicates diagnosis and management. These complexities can be better addressed through the application of artificial intelligence (AI) tools in clinical practice. Integrating AI into healthcare holds excellent potential for improving either early disease diagnosis\u00a0or early prevention, as AI-driven tools can recognize patterns and characteristics in disease and even surpass human diagnostic capabilities. Hence, the application of ML in patients with OUD may be useful for classifying, managing, and predicting patient outcomes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7072,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This scoping review explores the role of ML techniques in the identification, prediction, and management of OUD in patients with chronic cancer. Given the limited number of eligible studies, a scoping methodology approach was adopted to synthesize current evidence and identify existing research gaps. Although the primary focus was to investigate studies that use patients with chronic cancer as a population sample, studies involving broader populations that included patients with chronic cancer pain were also considered, in order to maximize the amount of relevant research to better characterize opioid consumption patterns and associated risks within this clinical context. Ultimately, this scoping review aims to highlight the potential of ML-driven tools to support clinical decision-making and improve patient outcomes in the management of OUD.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7927,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7934,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7942,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Protocol Registration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7964,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This review was registered in the International Prospective Register of Systematic Reviews (PROSPERO) (protocol number: CRD42025634367), an international registry for systematic reviews in health and social care.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8177,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Compliance With Ethics Guidelines",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8211,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This article is a synthesis of previously conducted research and does not include any new experimental studies involving human participants conducted by the authors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8377,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Literature Review Strategy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8404,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A systematic search was conducted in PubMed and Google Scholar to identify relevant studies published from January 2010 to December 2024 that investigated the application of machine learning (ML) techniques in detecting opioid use disorder (OUD) among patients with cancer with chronic pain. In PubMed, the search strategy employed the following combination of text words: (\u201cOUD\u201d OR \u201copioid use disorder\u201d OR \u201copioid dependence\u201d) AND (\u201cmachine learning\u201d OR \u201cartificial intelligence\u201d). In Google Scholar, advanced searches were performed using keywords such as \u201cmachine learning in opioid consumption,\u201d \u201cML in opioid use disorder,\u201d and \u201cAI and opioid dependence,\u201d targeting keywords within the title and abstract fields. The extracted articles were then imported into Rayyan (Rayyan Systems Inc., Cambridge, MA), where two reviewers independently screened the titles and abstracts.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9316,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Inclusion and Exclusion Criteria",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9349,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Specific criteria were defined for the selection of articles included in this systematic scoping review. Eligible studies involved human participants who were oncology patients experiencing chronic pain. The included studies were required to analyze clinical or genetic characteristics of patients using machine learning (ML) techniques to assess or control opioid consumption. Only original studies published in English between 2010 and 2025, and freely available in full text, were included.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9843,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Data Synthesis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9858,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This study used aggregated data where possible, in accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10017,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Given the small number of cancer-specific studies identified, quantitative synthesis techniques such as meta-analysis or meta-regression were not feasible.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10173,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Data Collection Process",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10197,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The data gathered encompassed AI/ML methods employed, input variables and predicted outcomes, approaches used for model validation, and metrics to evaluate models\u2019 performance. The overall quality of the included articles was assessed by focusing on appraising both the risk of bias (ROB) and adherence to reporting guidelines. Since studies focusing exclusively on patients with chronic cancer pain were limited, articles that included at least a portion of patients with chronic cancer pain in their study population were also considered. To assess the risk of bias, the Prediction model Risk Of Bias Assessment Tool (PROBAST) was utilized, which evaluates four key domains, participants, predictors, outcomes, and analysis, through 20 methodological questions to establish the overall risk of bias. To additionally report the quality of the gathered articles, transparent reporting of a multivariable prediction model for individual prognosis was employed\u00a0to examine whether the included studies reported all the necessary details for the theme of the review.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11263,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The scripts used for generating the graphs are publicly available on GitHub at\u00a0https://github.com/alphazita.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11373,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11381,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Search and Screening Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11410,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In the initial screening, the search yielded a total of 255 published articles between 2010 and 2025. After importing the results into Rayyan, a web-based tool designed to support systematic reviews by enabling efficient de-duplication, blinded screening, and the resolution of conflicts among reviewers, 164 duplicate articles were identified and removed. A total of 91 unique articles remained for full screening. The remaining articles were then screened based on titles and abstracts, leading to 41 exclusions. Consequently, 50 articles were selected for full-text review to determine the final set of studies included. The search strategy process is illustrated in the following PRISMA flow diagram (Figure 1).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12126,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i01.jpg",
+                            "id": "FIG1",
+                            "section_type": "FIG",
+                            "type": "fig_title_caption"
+                        },
+                        "text": "PRISMA Flowchart",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12143,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i01.jpg",
+                            "id": "FIG1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "PRISMA:\u00a0Preferred Reporting Items for Systematic Reviews and Meta-Analyses",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12219,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Study Characteristics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12241,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The primary aim of this review was to identify studies that applied machine learning techniques to analyze opioid use, misuse, or adherence specifically in patients with chronic cancer pain. However, only a limited number of studies focusing exclusively on the application of machine learning in populations with chronic cancer pain were found between 2010 and 2025. It was determined not to extend the search period, as the aim was to capture the most up-to-date literature. To maintain scientific relevance, the inclusion criteria were broadened to encompass studies involving mixed chronic pain conditions, provided that patients with cancer pain were included in the population. During the screening process, studies that explicitly excluded patients with chronic cancer pain were removed. Subsequently, all articles that had no implementation for patients with cancer were removed. Table 1 presents the final list of included studies, along with their population characteristics, applied ML methods, prediction targets, and main findings. A number of studies were excluded at this stage; although these studies involved populations with comorbidities and chronic pain, they did not include or specify whether some of the patients included in the study\u00a0were suffering from cancer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13527,
+                        "infons": {
+                            "file": "TAB1.xml",
+                            "id": "TAB1",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Chronic Cancer Pain Articles and Mixed Ones Including Patients With Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13602,
+                        "infons": {
+                            "file": "TAB1.xml",
+                            "id": "TAB1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "ML, machine learning; AUC,\u00a0area under the curve; SVM, support vector machine; MLP, multilayer perceptron; NLP, natural language processing; OUD,\u00a0opioid use; PPV,\u00a0positive predictive value; AUROC,\u00a0area under the receiver operating characteristic;\u00a0CUI,\u00a0Controlled Unclassified Information",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13895,
+                        "infons": {
+                            "file": "TAB1.xml",
+                            "id": "TAB1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><tbody><tr style=\"background-color:#ccc\"><td rowspan=\"1\" colspan=\"1\">Author (Year)</td><td rowspan=\"1\" colspan=\"1\">Title</td><td rowspan=\"1\" colspan=\"1\">Country</td><td rowspan=\"1\" colspan=\"1\">Population/Data Source</td><td rowspan=\"1\" colspan=\"1\">Patients With Cancer</td><td rowspan=\"1\" colspan=\"1\">Sample Size</td><td rowspan=\"1\" colspan=\"1\">ML Method(s)</td><td rowspan=\"1\" colspan=\"1\">Outcome/Prediction Target</td><td rowspan=\"1\" colspan=\"1\">Main Results (Performance)</td></tr><tr><td rowspan=\"1\" colspan=\"1\">Held et al., 2024 <xref rid=\"REF19\" ref-type=\"bibr\">19</xref></td><td rowspan=\"1\" colspan=\"1\">Development and internal validation of a prediction model for long-term opioid use\u2014an analysis of insurance claims data</td><td rowspan=\"1\" colspan=\"1\">Switzerland</td><td rowspan=\"1\" colspan=\"1\">Insurance claims (Helsana Group)</td><td rowspan=\"1\" colspan=\"1\">Mixed (includes 13% cancer)</td><td rowspan=\"1\" colspan=\"1\">266,476</td><td rowspan=\"1\" colspan=\"1\">Generalized linear regression and random forest</td><td rowspan=\"1\" colspan=\"1\">Long-term opioid use prediction</td><td rowspan=\"1\" colspan=\"1\">AUC, 0.927; accuracy, 81.6%</td></tr><tr style=\"background-color:#ccc\"><td rowspan=\"1\" colspan=\"1\">Liu et al., 2024 <xref rid=\"REF18\" ref-type=\"bibr\">18</xref></td><td rowspan=\"1\" colspan=\"1\">Opioid Nonadherence Risk Prediction of Patients with Cancer-Related Pain Based on Five Machine Learning Algorithms</td><td rowspan=\"1\" colspan=\"1\">China</td><td rowspan=\"1\" colspan=\"1\">Hospital-based cancer pain registry</td><td rowspan=\"1\" colspan=\"1\">Yes (cancer pain)</td><td rowspan=\"1\" colspan=\"1\">1,195</td><td rowspan=\"1\" colspan=\"1\">Logistic regression, random forest, XGBoost, SVM, and MLP</td><td rowspan=\"1\" colspan=\"1\">Opioid nonadherence prediction</td><td rowspan=\"1\" colspan=\"1\">AUC, 0.82; accuracy, 0.82</td></tr><tr><td rowspan=\"1\" colspan=\"1\">Poulsen et al., 2024 <xref rid=\"REF17\" ref-type=\"bibr\">17</xref></td><td rowspan=\"1\" colspan=\"1\">Developing a Framework to Infer Opioid Use Disorder Severity From Clinical Notes to Inform Natural Language Processing Methods: Characterization Study</td><td rowspan=\"1\" colspan=\"1\">USA</td><td rowspan=\"1\" colspan=\"1\">Electronic health record (HER) clinical notes (mixed: chronic pain, OUD, and control)</td><td rowspan=\"1\" colspan=\"1\">Mixed (includes chronic pain)</td><td rowspan=\"1\" colspan=\"1\">82 patients and 1,436 annotated sentences</td><td rowspan=\"1\" colspan=\"1\">NLP/annotation schema development</td><td rowspan=\"1\" colspan=\"1\">Characterization of OUD severity in clinical text</td><td rowspan=\"1\" colspan=\"1\">Inter-annotator agreement &gt;70%; PPV ~0.71 for moderate/severe OUD detection</td></tr><tr style=\"background-color:#ccc\"><td rowspan=\"1\" colspan=\"1\">Sharma et al., 2020\u00a0<xref rid=\"REF21\" ref-type=\"bibr\">21</xref></td><td rowspan=\"1\" colspan=\"1\">Publicly available machine learning models for identifying opioid misuse from the clinical notes of hospitalized patients</td><td rowspan=\"1\" colspan=\"1\">USA</td><td rowspan=\"1\" colspan=\"1\">Adult hospitalized patients; electronic health record (EHR) clinical notes from a US health system (2007-2017)</td><td rowspan=\"1\" colspan=\"1\">Mixed (not cancer-specific)</td><td rowspan=\"1\" colspan=\"1\">1,000 inpatient encounters (case-control annotated dataset)</td><td rowspan=\"1\" colspan=\"1\">Convolutional neural network (CNN), max pooling network, and logistic regression; comparison with a rule-based model; NLP features including CUI codes, character-based and n-gram features</td><td rowspan=\"1\" colspan=\"1\">Identification/classification of opioid misuse from clinical notes</td><td rowspan=\"1\" colspan=\"1\">Best models achieved an AUROC of &gt; 0.90; CNN and max pooling neural networks using CUI features</td></tr></tbody></table>\n"
+                        },
+                        "text": "Author (Year)\tTitle\tCountry\tPopulation/Data Source\tPatients With Cancer\tSample Size\tML Method(s)\tOutcome/Prediction Target\tMain Results (Performance)\t \tHeld et al., 2024 \tDevelopment and internal validation of a prediction model for long-term opioid use\u2014an analysis of insurance claims data\tSwitzerland\tInsurance claims (Helsana Group)\tMixed (includes 13% cancer)\t266,476\tGeneralized linear regression and random forest\tLong-term opioid use prediction\tAUC, 0.927; accuracy, 81.6%\t \tLiu et al., 2024 \tOpioid Nonadherence Risk Prediction of Patients with Cancer-Related Pain Based on Five Machine Learning Algorithms\tChina\tHospital-based cancer pain registry\tYes (cancer pain)\t1,195\tLogistic regression, random forest, XGBoost, SVM, and MLP\tOpioid nonadherence prediction\tAUC, 0.82; accuracy, 0.82\t \tPoulsen et al., 2024 \tDeveloping a Framework to Infer Opioid Use Disorder Severity From Clinical Notes to Inform Natural Language Processing Methods: Characterization Study\tUSA\tElectronic health record (HER) clinical notes (mixed: chronic pain, OUD, and control)\tMixed (includes chronic pain)\t82 patients and 1,436 annotated sentences\tNLP/annotation schema development\tCharacterization of OUD severity in clinical text\tInter-annotator agreement >70%; PPV ~0.71 for moderate/severe OUD detection\t \tSharma et al., 2020\u00a0\tPublicly available machine learning models for identifying opioid misuse from the clinical notes of hospitalized patients\tUSA\tAdult hospitalized patients; electronic health record (EHR) clinical notes from a US health system (2007-2017)\tMixed (not cancer-specific)\t1,000 inpatient encounters (case-control annotated dataset)\tConvolutional neural network (CNN), max pooling network, and logistic regression; comparison with a rule-based model; NLP features including CUI codes, character-based and n-gram features\tIdentification/classification of opioid misuse from clinical notes\tBest models achieved an AUROC of > 0.90; CNN and max pooling neural networks using CUI features\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15893,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Risk-of-Bias Assessment and Quality of Studies",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15940,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In order to evaluate the risk of bias (ROB) in the final included studies, the PROBAST tool was applied. By applying this technique, a total of 20 signaling questions that focus on four domains (participants, predictors, outcome, and analysis) were answered. In Table 2,\u00a0the results of the PROBAST application in the included studies\u00a0are presented. To quantify the relevance within each domain, a qualitative scale ranging from low to high relevance was applied (domain rated low/moderate/high/unclear) (Figure 2).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16457,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i02.jpg",
+                            "id": "FIG2",
+                            "section_type": "FIG",
+                            "type": "fig_title_caption"
+                        },
+                        "text": "Risk of Bias (PROBAST)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16480,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i02.jpg",
+                            "id": "FIG2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Source: Held et al., 2024; Poulsen et al., 2024; Sharma et al., 2020; Liu et al., 2024 ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16568,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i02.jpg",
+                            "id": "FIG2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "PROBAST, Prediction model Risk Of Bias Assessment Tool; ROB, risk of bias",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16642,
+                        "infons": {
+                            "file": "TAB2.xml",
+                            "id": "TAB2",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Risk of Bias Score According to PROBAST",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16682,
+                        "infons": {
+                            "file": "TAB2.xml",
+                            "id": "TAB2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "PROBAST, Prediction model Risk Of Bias Assessment Tool; ROB, risk of bias;\u00a0ML, machine learning; AUC,\u00a0area under the curve; EHRs, electronic health records",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16840,
+                        "infons": {
+                            "file": "TAB2.xml",
+                            "id": "TAB2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><tbody><tr style=\"background-color:#ccc\"><td rowspan=\"1\" colspan=\"1\">Study (File Citation)</td><td rowspan=\"1\" colspan=\"1\">Participants</td><td rowspan=\"1\" colspan=\"1\">Predictors</td><td rowspan=\"1\" colspan=\"1\">Outcome</td><td rowspan=\"1\" colspan=\"1\">Analysis</td><td rowspan=\"1\" colspan=\"1\">Overall ROB</td><td rowspan=\"1\" colspan=\"1\">Applicability Concerns</td><td rowspan=\"1\" colspan=\"1\">Short Evaluation/Key Points</td></tr><tr><td rowspan=\"1\" colspan=\"1\">Held et al., 2024 <xref rid=\"REF19\" ref-type=\"bibr\">19</xref></td><td rowspan=\"1\" colspan=\"1\">Low \u2192 moderate</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Some (mixed population, including 13% cancer)</td><td rowspan=\"1\" colspan=\"1\">Large insurance claim cohort (n \u2248 266k) \u2192 good. Predictors and outcome clearly defined (demographics, comorbidities, MED dose, etc.). Analysis: applied a multiple regression model and random forest analysis with validation and calibration reported (AUC, calibration plots, and Brier score) but lacking external validation; some transparency limits (data not publicly available and only a limited portion of the population, approximately 12% of the Swiss population) \u2192 moderate overall ROB</td></tr><tr style=\"background-color:#ccc\"><td rowspan=\"1\" colspan=\"1\">Poulsen et al., 2024 <xref rid=\"REF17\" ref-type=\"bibr\">17</xref></td><td rowspan=\"1\" colspan=\"1\">Moderate \u2192 high</td><td rowspan=\"1\" colspan=\"1\">Low \u2192 moderate</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Moderate (mixed cohorts; includes chronic pain but not cancer-specific)</td><td rowspan=\"1\" colspan=\"1\">Study develops/validates an annotation schema (27 classes) on clinical notes (82 patients and 1,436 sentences). Participants: small, selected cohorts (some groups, only European ancestry); may limit representativeness \u2192 moderate/high. Predictors (annotation classes) are well defined; outcome (severity score derived from annotations) is clearly specified; inter-annotator agreement acceptable (&gt;70% in many batches). Analysis: appropriate for annotation study but small sample and limited external generalizability; study is not a predictive model per se (no ML model validation on external data). Overall ROB moderate</td></tr><tr><td rowspan=\"1\" colspan=\"1\">Sharma et al., 2020\u00a0<xref rid=\"REF21\" ref-type=\"bibr\">21</xref></td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Low \u2192 moderate</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Moderate (mixed cohorts; includes chronic pain but not cancer-specific)</td><td rowspan=\"1\" colspan=\"1\">The cohort compares and evaluates the performance of three different algorithms: logistic regression, random forest, and gradient boosting. Participants: medical data from Tennessee Medicaid (n = 2.487). Predictors included demographics, medication use, comorbidities, and diagnostic codes extracted from EHRs. The data were appropriately defined, describing the samples, but feature handling (missing data and key feature\u00a0selection) was not fully transparent. Analysis: Random forest achieved the best performance (AUC, 0.93; accuracy, 0.88). The validation was done only with internal data. Overall ROB moderate</td></tr><tr style=\"background-color:#ccc\"><td rowspan=\"1\" colspan=\"1\">Liu et al., 2024 <xref rid=\"REF18\" ref-type=\"bibr\">18</xref></td><td rowspan=\"1\" colspan=\"1\">Low \u2192 moderate</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Low</td><td rowspan=\"1\" colspan=\"1\">Moderate</td><td rowspan=\"1\" colspan=\"1\">Low (specific to the population with cancer-related pain)</td><td rowspan=\"1\" colspan=\"1\">The study included 1,195 patients with chronic confirmed malignancies and moderate to severe cancer pain. The participants were recruited from a tertiary cancer center in China. Predictors included demographics and clinical predictors (43 variables, including pain characteristics, medication use, and psychosocial scores). The opioid nonadherence was based on both medical records and self-reported behaviors. Analysis: five ML algorithms (logistic regression, random forest, XGBoost, support vector machine, and multilayer perceptron) were compared to logistic regression, showing the best performance (AUC, 0.82; accuracy, 0.82). The validation was done only with internal data. Overall ROB was low to moderate</td></tr></tbody></table>\n"
+                        },
+                        "text": "Study (File Citation)\tParticipants\tPredictors\tOutcome\tAnalysis\tOverall ROB\tApplicability Concerns\tShort Evaluation/Key Points\t \tHeld et al., 2024 \tLow \u2192 moderate\tLow\tLow\tModerate\tModerate\tSome (mixed population, including 13% cancer)\tLarge insurance claim cohort (n \u2248 266k) \u2192 good. Predictors and outcome clearly defined (demographics, comorbidities, MED dose, etc.). Analysis: applied a multiple regression model and random forest analysis with validation and calibration reported (AUC, calibration plots, and Brier score) but lacking external validation; some transparency limits (data not publicly available and only a limited portion of the population, approximately 12% of the Swiss population) \u2192 moderate overall ROB\t \tPoulsen et al., 2024 \tModerate \u2192 high\tLow \u2192 moderate\tLow\tModerate\tModerate\tModerate (mixed cohorts; includes chronic pain but not cancer-specific)\tStudy develops/validates an annotation schema (27 classes) on clinical notes (82 patients and 1,436 sentences). Participants: small, selected cohorts (some groups, only European ancestry); may limit representativeness \u2192 moderate/high. Predictors (annotation classes) are well defined; outcome (severity score derived from annotations) is clearly specified; inter-annotator agreement acceptable (>70% in many batches). Analysis: appropriate for annotation study but small sample and limited external generalizability; study is not a predictive model per se (no ML model validation on external data). Overall ROB moderate\t \tSharma et al., 2020\u00a0\tModerate\tLow \u2192 moderate\tLow\tModerate\tModerate\tModerate (mixed cohorts; includes chronic pain but not cancer-specific)\tThe cohort compares and evaluates the performance of three different algorithms: logistic regression, random forest, and gradient boosting. Participants: medical data from Tennessee Medicaid (n = 2.487). Predictors included demographics, medication use, comorbidities, and diagnostic codes extracted from EHRs. The data were appropriately defined, describing the samples, but feature handling (missing data and key feature\u00a0selection) was not fully transparent. Analysis: Random forest achieved the best performance (AUC, 0.93; accuracy, 0.88). The validation was done only with internal data. Overall ROB moderate\t \tLiu et al., 2024 \tLow \u2192 moderate\tLow\tLow\tLow\tModerate\tLow (specific to the population with cancer-related pain)\tThe study included 1,195 patients with chronic confirmed malignancies and moderate to severe cancer pain. The participants were recruited from a tertiary cancer center in China. Predictors included demographics and clinical predictors (43 variables, including pain characteristics, medication use, and psychosocial scores). The opioid nonadherence was based on both medical records and self-reported behaviors. Analysis: five ML algorithms (logistic regression, random forest, XGBoost, support vector machine, and multilayer perceptron) were compared to logistic regression, showing the best performance (AUC, 0.82; accuracy, 0.82). The validation was done only with internal data. Overall ROB was low to moderate\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19938,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Based on the PROBAST, most of the included studies demonstrated a moderate overall risk of bias. The common limitation among the studies was the small sample sizes, according to the use of patients with chronic cancer pain. In addition, model validation was restricted to internal datasets, with no external or independent testing. This highlights the need for more focused validation in cancer-specific populations to strengthen the reliability of findings. The predictors and outcomes were generally well defined and appropriately applied in ML frameworks. Model performance was evaluated using standard metrics such as the area under the curve (AUC) and classification accuracy, supporting acceptable levels of predictive validity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20673,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Findings by Theme",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20691,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "One of the primary constraints of the current investigation was identifying recently published research that only examines the impact of ML in opioid-dependent\u00a0patients with chronic cancer pain. Due to the limited number of such specific studies, the inclusion criteria were broadened to incorporate research involving the population with chronic cancer pain that shares opioid use patterns, adherence issues, and risk behaviors. From the included studies, only one study specifically focused on patients with chronic cancer pain. The others involved populations with mixed chronic pain that may share comparable patterns of opioid use, adherence, and risk behavior. Therefore, insights from these models remain informative for understanding potential ML applications in oncology pain management. Performance metrics reported across studies were heterogeneous, with most studies presenting area under the curve (AUC), accuracy, sensitivity, and specificity. Confidence intervals and measures of uncertainty were rarely reported in the included studies.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21745,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "ML Techniques in Opioid Prescription and Chronic Use",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21798,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "One thematic area included studies addressing long-term or chronic opioid use and ML models applied to identify risk factors associated with prolonged opioid therapy. Held et al. (2024) developed and internally validated a prediction model using insurance claim data, integrating demographic, clinical, and prescription-related predictors. From the applied algorithms, both generalized linear regression and random forest models achieved strong performance (AUC = 0.93) and indicate that ML techniques can effectively identify patients at risk for long-term opioid dependence, including subgroups of patients suffering from chronic cancer pain. However, external validation and cancer-specific analyses\u00a0limit\u00a0the direct applicability of these findings to oncology in oncology-focused management.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22596,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "ML in Opioid Misuse and Opioid Addiction Detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22647,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Another research focus involved the use of ML in clinical or behavioral data to detect opioid misuse or OUD. Sharma et al. (2020) and Poulsen et al. (2024) applied NLP-based and deep learning models to electronic clinical notes to identify misuse behaviors and OUD severity levels. Both approaches achieved high internal validity (area under the receiver operating characteristic {AUROC} > 0.90), indicating that ML can effectively detect language or behavioral cues related to misuse. Nonetheless, their populations included general hospitalized patients or patients with chronic pain and not specifically oncology patients with chronic pain. To strengthen their clinical relevance and expand the applicability of such models in exclusively cancer-related opioid management, external validation of such data is needed.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23467,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "ML for Adherence and Response Prediction in Opioid Therapy in Cancer Pain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23541,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Liu et al. examined opioid nonadherence specifically among patients with cancer pain\u00a0by using five ML algorithms. Demographic, psychosocial, and clinical features were used as predictors. The performance of the models was ideal. Logistic regression\u00a0achieved the best performance, with an AUC of 0.82, an accuracy of 0.82, and a specificity of 0.71. The findings highlight the potential of ML to assess adherence behavior in the oncology pain population, offering valuable insight for personalized pain management. Nevertheless, the relatively small sample size limits generalizability, underscoring the need for larger samples and emphasizing the need for broader validation\u00a0to allow the generalizability of the model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24263,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Overall, in the freely available bibliography, there are articles examining misuse, adherence, and long-term opioid use. However, their translation to chronic cancer pain contexts remains limited by data heterogeneity, small sample sizes, and a lack of targeted validation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24537,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure 3 shows the algorithm\u00a0distribution among the different studies\u00a0that were included in the review. \u200b",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24647,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i03.jpg",
+                            "id": "FIG3",
+                            "section_type": "FIG",
+                            "type": "fig_title_caption"
+                        },
+                        "text": "Distribution of Machine Learning Methods in the Included Studies",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24712,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i03.jpg",
+                            "id": "FIG3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "ML, machine learning; SVM, support vector machine; NLP, natural language processing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24796,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The variations in sample size among studies are presented in Figure 4. As there was distinct discrimination between the included studies according to the sample size, on the x-axis, the log value of each sample size is used. On the y-axis,\u00a0the study\u00a0is presented, and on the x-axis, the log per sample size in the graph also depicts the applied algorithms per study.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25165,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i04.jpg",
+                            "id": "FIG4",
+                            "section_type": "FIG",
+                            "type": "fig_title_caption"
+                        },
+                        "text": "Sample Size per Study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25187,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i04.jpg",
+                            "id": "FIG4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Source: Held et al., 2024; Poulsen et al., 2024; Sharma et al., 2020; Liu et al., 2024 ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25275,
+                        "infons": {
+                            "file": "cureus-0018-00000106838-i04.jpg",
+                            "id": "FIG4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "ML, machine learning; SVM, support vector machine; MLP, multilayer perceptron; NLP, natural language processing; RF, random forest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25406,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25417,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "After an extensive review of the recent literature, it was found that the application of machine learning (ML) methods in the use of opioids for patients with cancer with chronic conditions is still at a very early stage. Most models were used to predict adherence, misuse, or long-term opioid use, providing valuable insight into the potential use of ML in optimizing opioid therapy for oncology patients. The algorithms used to analyze data in each study were mainly random forest, logistic regression, neural networks, and NLP. The average performance of the applied models was high, achieving an AUC of >0.8, but with internal validation only.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26065,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A targeted update of the literature (2024-2025) revealed that\u00a0despite the increasing number of machine learning applications in opioid research, no newly published studies specifically address opioid management using ML in\u00a0populations with chronic cancer pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26328,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Of the four studies included in this scoping review, only one directly evaluated ML-based prediction in a cancer-specific chronic pain cohort, Liu et al., who developed a model to predict opioid nonadherence in patients with cancer-related pain and reported strong performance metrics (AUC = 0.82). The remaining studies examined mixed\u00a0populations with\u00a0chronic pain, which may include oncology patients as subgroups, but were not designed to extract cancer-specific patterns. This highlights a critical gap: while ML models show promise across broader chronic pain settings, datasets dedicated to the oncology population are necessary to develop clinically meaningful, cancer-centered opioid risk models. As an overall view, the findings suggest that ML approaches are technically feasible but clinically immature in oncology settings. For the gap in literature, it must be underlined that recent studies have primarily focused on acute cancer pain settings or on populations without cancer, such as opioid misuse prediction, overdose risk, and postoperative opioid use. This persistent gap underscores the lack of tailored, data-driven approaches for chronic cancer pain management and highlights an important direction for future research.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27572,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Cancer pain presents unique clinical characteristics that differentiate it from non-cancer chronic pain and influence the performance of ML-based opioid prediction systems. Cancer-related chronic pain is complex and has multiple clinical features that distinguish it from non-cancer chronic pain. Its intensity may fluctuate due to tumor progression and treatment toxicities, making opioid prescribing more challenging. ML models must account for this vulnerability when supporting clinical decisions. Studies also show that genetic predictors have not reliably estimated opioid requirements in patients with cancer, highlighting the difficulty of personalizing dosing. Therefore, dedicated cancer-specific datasets are needed.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28300,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The integration of ML into clinical decision-making for opioid use is highly promising, particularly in light of the findings of the included studies, which\u00a0demonstrated high performance in identifying patients at risk of opioid misuse, dependence, or nonadherence. Potential clinical applications include early warning systems for detecting adherence issues, optimized dosing recommendations, and personalized treatment strategies. However, for clinicians to make safe and effective decisions, it is essential that they fully understand and critically evaluate the models\u2019 predictions. Moreover, the evaluation of these models must be based on cancer-specific clinical data to ensure relevance and reliability.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29015,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The current scoping review indicates that machine learning (ML) has the potential to improve current and future clinical practice. Specifically, the analyses conducted in each study led to different conclusions regarding adherence, misuse, and long-term opioid use. The studies conducted by Held et al. and Liu et al. suggest that opioid-related risk in patients with cancer is multifactorial and not driven by a single predictor. Regarding the NLP-based analyses performed by Poulsen et al. and Sharma et al., the way clinical information is documented plays an important role in model prediction. In particular, the findings of Sharma et\u00a0al.\u2019s study\u00a0demonstrate that PHI-free modeling using standardized clinical concept representations can effectively capture relevant misuse patterns. Taken together, these findings imply that early risk stratification and tailored clinical decision support are feasible, but they require rich\u00a0cancer-specific features, careful feature selection, and attention to electronic health record documentation practices.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30072,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The key milestone of the present scoping review is emphasizing the need to expand the use of ML in patients suffering from chronic cancer pain. The findings of the included studies\u00a0pinpoint the capability of the ML techniques to identify clinically relevant opioid-related outcomes such as nonadherence, misuse, and prolonged opioid use. Previous analysis on the application of ML in opioid research has primarily focused on populations with general pain or broader groups not specific to chronic cancer pain, highlighting the novelty and importance of focusing on cancer-related pain. From a clinical perspective, the utilization of ML in hospital practice could help personalize opioid therapy in oncology. It would allow therapy to be adjusted to each patient\u2019s needs, improving monitoring and enabling the prevention or early detection of potential issues with opioid adherence. Another important advantage would be the use of these tools for real-time patient monitoring.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31052,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The main gaps and limitations identified in the included studies were related to small and heterogeneous datasets. The data often originated from insurance or hospital records, not specifically from patients with chronic cancer pain. Therefore, the datasets may have been limited or biased by their sources, with restricted or overly specific predictors. Future models should incorporate multimodal data, such as clinical, imaging, and genomic information, to make them more transparent, explainable, and suitable for clinical translation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31592,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The limited number of studies identified in this review reflects the early stage of research on ML-based opioid management in chronic cancer pain. Machine learning applications in oncology pain have only recently begun to emerge, with few studies specifically targeted cancer-related chronic pain. A major barrier is the scarcity of high-quality clinical datasets that capture opioid consumption, pain trajectories, and treatment context in sufficient detail for predictive modeling. Also, the high cost of the proper equipment to analyze these datasets imposes a lot of limitations. Furthermore, most available databases do not integrate multimodal information such as genomics, patient-reported outcomes, and longitudinal treatment records, which limits model performance and generalizability. As a result, most recently published cohorts\u00a0apply ML techniques in broader populations with chronic pain, which may not fully represent the complexity of cancer-related chronic pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32573,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In addition to technical limitations, the use of ML in opioid management for cancer pain raises important ethical considerations. Many ML models operate as \u201cblack box\u201d systems, providing predictions without transparent clinical reasoning. This can undermine clinician trust and limit their use in patient care. Furthermore, models trained on limited or unrepresentative datasets may lead to biased clinical decisions, particularly for vulnerable populations with cancer. Protecting patient privacy and autonomy is also critical, as oncology datasets often contain highly sensitive information that requires strong data security measures and compliance with health data regulations. Addressing these ethical concerns is essential for the safe clinical deployment of ML-based opioid decision systems in oncology.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33388,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Future studies should focus on developing ML models that are trained and validated in chronic cancer pain cohorts. Comparing different ML architectures and combining reinforcement learning with deep learning could provide valuable insights into the mechanisms underlying chronic cancer pain and improve model interpretability. To make these tools clinically useful, it is necessary to validate them on external datasets and evaluate their performance using various metrics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33862,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "ML techniques are indeed very promising for opioid management in chronic cancer pain. However, their clinical translation requires robust, cancer-specific validation. The integration of ML into clinical practice represents a valuable step forward for clinicians, provided it is accompanied by collaboration between data scientists and pain specialists to enhance pain management in patients with chronic cancer pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34279,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Limitations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34291,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "While the primary scope of the review was to study the application of ML techniques in opioid use in patients with chronic cancer pain, there were notable limitations in the available literature. To address this limitation, studies involving patients with cancer pain as a comorbidity were also included. The final included studies were characterized by heterogeneity in their populations and applied methods, making direct comparisons somewhat difficult. The sample size per study was also limited (<1,000 participants), reducing model robustness and generalizability to oncology settings. One commonality among the different studies\u00a0was the lack of external validation. The metrics used to evaluate the performance of each model did not include calibration, precision-recall, or F1 scores, making it difficult to assess the reliability of the models. Almost none of the studies performed external testing on independent datasets. Most studies used customized data for both training and validations, such as insurance records or hospital data, tailored to the specific needs of each study, thereby reducing the generalizability of the models and posing a risk of bias.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35462,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "There is no doubt that the application of AI techniques in pain management can greatly enhance patients\u2019 quality of life. However, there are specific limitations that must be overcome to maximize the benefits of AI for both patients and healthcare providers. The main obstacles relate to the operational nature of AI tools, which often function as \u201cblack boxes\u201d. There is a need for greater transparency; both patients and clinicians should understand how models make decisions, what data are used, and what assumptions underlie their predictions. Models can also exhibit bias, often due to a lack of diversity or insufficient training data for certain patient groups. Another challenge concerns the inherent complexity of pain assessment. Accurately recognizing pain is essential for effective therapy but remains difficult because of its subjective character and multiple influencing factors, including emotional, behavioral, and lifestyle components. Finally, it is crucial to maintain data privacy. Given that patients\u2019 information is vulnerable, any AI tool must safeguard confidentiality, prevent discrimination, and strengthen rather than replace the patient-clinician relationship.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36660,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Directions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36671,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "It is true that the use of machine learning (ML) algorithms for monitoring opioid consumption in patients with chronic cancer pain is highly promising. To address the current limitations, several steps can be taken. Given the unique clinical and biological features of cancer pain, future ML models should be trained and evaluated in dedicated cancer-specific datasets that incorporate the different characteristics such as pain severity, cancer stage, treatment context (e.g., palliative), and genetic markers associated with opioid metabolism. Cancer pain is heterogeneous, and models developed in broader populations with chronic pain may not capture the different expression of specific features, leading to decreased performance and limited generalizability across oncology patients.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37460,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Furthermore, it is essential to validate the performance of existing models using external datasets that are specifically representative of populations with chronic cancer pain, ensuring that their predictive accuracy remains consistent. In addition, model performance should be evaluated using a broader range of metrics, particularly those assessing generalizability, calibration, and potential over-fitting (e.g., Brier score, calibration slope, and F1 score). Creating strong evidence for the usefulness of ML in clinical settings\u00a0will boost the integration of these technologies in clinical decision-making.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38074,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Expanding the datasets to include a combination of biometric, genetic, and clinical information would also be beneficial. Multimodal data offer deeper clinical insight. Also, integrating diverse predictors that provide a more comprehensive view of the patient could enable clinicians to make more accurate, individualized decisions, taking into account both therapeutic responses and potential adverse effects.\u00a0The combination of different data types and the inclusion of patients with more chronic cancer pain reflects the multifactorial nature of chronic cancer pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38645,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38657,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "The present scoping review highlights that the implementation of machine learning techniques in monitoring opioid use among patients with chronic cancer pain remains at an early stage. Although the included studies demonstrated strong internal performance in different fields of application in opioid use, such as\u00a0predicting opioid adherence, misuse, and long-term use, most were conducted in mixed or non-cancer-specific populations, limiting their direct applicability to oncology care. The findings suggest that ML can be applied in clinical decision-making as they achieved high performance in identifying patients at risk for opioid misuse or inadequate pain control, contributing to more personalized and safer pain management. However, the generalizability of the models is restricted by small sample sizes, limited external validation, and heterogeneous datasets. Future research should focus on heterogeneous, prospective studies including chronic cancer pain cohorts. To expand the efficiency of the model, integrating diverse data types such as clinical, psychosocial, biometric, and genomic information would be advantageous. Ultimately, ML tools hold significant promise in optimizing opioid use and improving the quality of life for patients with cancer experiencing chronic pain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39953,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title"
+                        },
+                        "text": "Disclosures",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39965,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "footnote"
+                        },
+                        "text": "Conflicts of interest: In compliance with the ICMJE uniform disclosure form, all authors declare the following:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40077,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "footnote"
+                        },
+                        "text": "Payment/services info: All authors have declared that no financial support was received from any organization for the submitted work.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40211,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "footnote"
+                        },
+                        "text": "Financial relationships: All authors have declared that they have no financial relationships at present or within the previous three years with any organizations that might have an interest in the submitted work.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40424,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "footnote"
+                        },
+                        "text": "Other relationships: All authors have declared that there are no other relationships or activities that could appear to have influenced the submitted work.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40580,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title"
+                        },
+                        "text": "Author Contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40601,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "footnote"
+                        },
+                        "text": "Concept and design:\u00a0 Anastasia Zompola, Thalis Asimakopoulos, Christina Iosifidou, Dimitris Orfeas Monopatis, Fotis Braimakis, Irene C. Kouroukli",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40748,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "footnote"
+                        },
+                        "text": "Acquisition, analysis, or interpretation of data:\u00a0 Anastasia Zompola, Thalis Asimakopoulos, Christina Iosifidou, Dimitris Orfeas Monopatis, Fotis Braimakis, Irene C. Kouroukli",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40925,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "footnote"
+                        },
+                        "text": "Drafting of the manuscript:\u00a0 Anastasia Zompola, Thalis Asimakopoulos, Christina Iosifidou, Dimitris Orfeas Monopatis, Fotis Braimakis, Irene C. Kouroukli",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41080,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "footnote"
+                        },
+                        "text": "Critical review of the manuscript for important intellectual content:\u00a0 Anastasia Zompola, Thalis Asimakopoulos, Christina Iosifidou, Dimitris Orfeas Monopatis, Fotis Braimakis, Irene C. Kouroukli",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41277,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "footnote"
+                        },
+                        "text": "Supervision:\u00a0 Irene C. Kouroukli",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41311,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41322,
+                        "infons": {
+                            "name_0": "surname:Dydyk;given-names:AM",
+                            "name_1": "surname:Jain;given-names:NK",
+                            "name_2": "surname:Gupta;given-names:M",
+                            "section_type": "REF",
+                            "source": "StatPearls [Internet]",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "Opioid use disorder: evaluation and management",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41369,
+                        "infons": {
+                            "fpage": "1015",
+                            "name_0": "surname:Praveen;given-names:KT",
+                            "name_1": "surname:Law;given-names:F",
+                            "name_2": "surname:O'Shea;given-names:J",
+                            "name_3": "surname:Melichar;given-names:J",
+                            "section_type": "REF",
+                            "source": "BMJ Clin Evid",
+                            "type": "ref",
+                            "volume": "2011",
+                            "year": "2011"
+                        },
+                        "text": "Opioid dependence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41387,
+                        "infons": {
+                            "fpage": "675",
+                            "lpage": "687",
+                            "name_0": "surname:Jiang;given-names:T",
+                            "name_1": "surname:Gradus;given-names:JL",
+                            "name_2": "surname:Rosellini;given-names:AJ",
+                            "pub-id_pmid": "32800297",
+                            "section_type": "REF",
+                            "source": "Behav Ther",
+                            "type": "ref",
+                            "volume": "51",
+                            "year": "2020"
+                        },
+                        "text": "Supervised machine learning: a brief primer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41431,
+                        "infons": {
+                            "fpage": "120495",
+                            "name_0": "surname:Shakya;given-names:AK",
+                            "name_1": "surname:Pillai;given-names:G",
+                            "name_2": "surname:Chakrabarty;given-names:S",
+                            "section_type": "REF",
+                            "source": "Expert Syst Appl",
+                            "type": "ref",
+                            "volume": "231",
+                            "year": "2023"
+                        },
+                        "text": "Reinforcement learning algorithms: a brief survey",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41481,
+                        "infons": {
+                            "fpage": "832",
+                            "name_0": "surname:Carvalho;given-names:DV",
+                            "name_1": "surname:Pereira;given-names:EM",
+                            "name_2": "surname:Cardoso;given-names:JS",
+                            "section_type": "REF",
+                            "source": "Electronics",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2019"
+                        },
+                        "text": "Machine learning interpretability: a survey on methods and metrics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41548,
+                        "infons": {
+                            "fpage": "0",
+                            "name_0": "surname:Le Glaz;given-names:A",
+                            "name_1": "surname:Haralambous;given-names:Y",
+                            "name_2": "surname:Kim-Dufor;given-names:DH",
+                            "section_type": "REF",
+                            "source": "J Med Internet Res",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2021"
+                        },
+                        "text": "Machine learning and natural language processing in mental health: systematic review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41633,
+                        "infons": {
+                            "fpage": "19",
+                            "lpage": "29",
+                            "name_0": "surname:Pugliese;given-names:R",
+                            "name_1": "surname:Regondi;given-names:S",
+                            "name_2": "surname:Marini;given-names:R",
+                            "section_type": "REF",
+                            "source": "Data Sci Manag",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2021"
+                        },
+                        "text": "Machine learning-based approach: global trends, research directions, and regulatory standpoints",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41729,
+                        "infons": {
+                            "fpage": "509",
+                            "lpage": "518",
+                            "name_0": "surname:Hagedorn;given-names:JM",
+                            "name_1": "surname:George;given-names:TK",
+                            "name_2": "surname:Aiyer;given-names:R",
+                            "name_3": "surname:Schmidt;given-names:K",
+                            "name_4": "surname:Halamka;given-names:J",
+                            "name_5": "surname:D'Souza;given-names:RS",
+                            "pub-id_pmid": "38328019",
+                            "section_type": "REF",
+                            "source": "J Pain Res",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2024"
+                        },
+                        "text": "Artificial intelligence and pain medicine: an introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41788,
+                        "infons": {
+                            "fpage": "6838",
+                            "lpage": "6858",
+                            "name_0": "surname:Mestdagh;given-names:F",
+                            "name_1": "surname:Steyaert;given-names:A",
+                            "name_2": "surname:Lavand'homme;given-names:P",
+                            "pub-id_pmid": "37504360",
+                            "section_type": "REF",
+                            "source": "Curr Oncol",
+                            "type": "ref",
+                            "volume": "30",
+                            "year": "2023"
+                        },
+                        "text": "Cancer pain management: a narrative review of current concepts, strategies, and techniques",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41879,
+                        "infons": {
+                            "fpage": "118",
+                            "lpage": "123",
+                            "name_0": "surname:Humble;given-names:SR",
+                            "name_1": "surname:Varela;given-names:N",
+                            "name_2": "surname:Jayaweera;given-names:A",
+                            "name_3": "surname:Bhaskar;given-names:A",
+                            "pub-id_pmid": "29553987",
+                            "section_type": "REF",
+                            "source": "Curr Opin Support Palliat Care",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2018"
+                        },
+                        "text": "Chronic postsurgical pain and cancer: the catch of surviving the unsurvivable",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41957,
+                        "infons": {
+                            "fpage": "7459",
+                            "name_0": "surname:Trullols;given-names:M",
+                            "name_1": "surname:Ruiz de Porras;given-names:V",
+                            "pub-id_pmid": "40806585",
+                            "section_type": "REF",
+                            "source": "Int J Mol Sci",
+                            "type": "ref",
+                            "volume": "26",
+                            "year": "2025"
+                        },
+                        "text": "Opioid use in cancer pain management: navigating the line between relief and addiction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42044,
+                        "infons": {
+                            "fpage": "31",
+                            "lpage": "35",
+                            "name_0": "surname:Crist;given-names:RC",
+                            "name_1": "surname:Reiner;given-names:BC",
+                            "name_2": "surname:Berrettini;given-names:WH",
+                            "pub-id_pmid": "30118972",
+                            "section_type": "REF",
+                            "source": "Curr Opin Psychol",
+                            "type": "ref",
+                            "volume": "27",
+                            "year": "2019"
+                        },
+                        "text": "A review of opioid addiction genetics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42082,
+                        "infons": {
+                            "fpage": "0",
+                            "lpage": "90",
+                            "name_0": "surname:Salama;given-names:V",
+                            "name_1": "surname:Godinich;given-names:B",
+                            "name_2": "surname:Geng;given-names:Y",
+                            "section_type": "REF",
+                            "source": "J Pain Symptom Manag",
+                            "type": "ref",
+                            "volume": "68",
+                            "year": "2024"
+                        },
+                        "text": "Artificial intelligence and machine learning in cancer pain: a systematic review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42163,
+                        "infons": {
+                            "fpage": "20",
+                            "name_0": "surname:Nasef;given-names:D",
+                            "name_1": "surname:Nasef;given-names:D",
+                            "name_2": "surname:Sawiris;given-names:V",
+                            "name_3": "surname:Weinstein;given-names:B",
+                            "name_4": "surname:Garcia;given-names:J",
+                            "name_5": "surname:Toma;given-names:M",
+                            "section_type": "REF",
+                            "source": "J Hosp Manag Health Policy",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2025"
+                        },
+                        "text": "Integrating artificial intelligence in clinical practice, hospital management, and health policy: literature review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42279,
+                        "infons": {
+                            "fpage": "0",
+                            "name_0": "surname:Moher;given-names:D",
+                            "name_1": "surname:Liberati;given-names:A",
+                            "name_2": "surname:Tetzlaff;given-names:J",
+                            "name_3": "surname:Altman;given-names:DG",
+                            "section_type": "REF",
+                            "source": "PLoS Med",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2009"
+                        },
+                        "text": "Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42368,
+                        "infons": {
+                            "fpage": "0",
+                            "lpage": "33",
+                            "name_0": "surname:Moons;given-names:KG",
+                            "name_1": "surname:Wolff;given-names:RF",
+                            "name_2": "surname:Riley;given-names:RD",
+                            "section_type": "REF",
+                            "source": "Ann Intern Med",
+                            "type": "ref",
+                            "volume": "170",
+                            "year": "2019"
+                        },
+                        "text": "PROBAST: a tool to assess risk of bias and applicability of prediction model studies: explanation and elaboration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42482,
+                        "infons": {
+                            "fpage": "0",
+                            "name_0": "surname:Poulsen;given-names:MN",
+                            "name_1": "surname:Freda;given-names:PJ",
+                            "name_2": "surname:Troiani;given-names:V",
+                            "name_3": "surname:Mowery;given-names:DL",
+                            "section_type": "REF",
+                            "source": "JMIR Ment Health",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2024"
+                        },
+                        "text": "Developing a framework to infer opioid use disorder severity from clinical notes to inform natural language processing methods: characterization study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42633,
+                        "infons": {
+                            "fpage": "7347876",
+                            "name_0": "surname:Liu;given-names:J",
+                            "name_1": "surname:Luo;given-names:J",
+                            "name_2": "surname:Chen;given-names:X",
+                            "pub-id_pmid": "38872993",
+                            "section_type": "REF",
+                            "source": "Pain Res Manag",
+                            "type": "ref",
+                            "volume": "2024",
+                            "year": "2024"
+                        },
+                        "text": "Opioid nonadherence risk prediction of patients with cancer-related pain based on five machine learning algorithms",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42748,
+                        "infons": {
+                            "fpage": "44",
+                            "lpage": "53",
+                            "name_0": "surname:Held;given-names:U",
+                            "name_1": "surname:Forzy;given-names:T",
+                            "name_2": "surname:Signorell;given-names:A",
+                            "name_3": "surname:Deforth;given-names:M",
+                            "name_4": "surname:Burgstaller;given-names:JM",
+                            "name_5": "surname:Wertli;given-names:MM",
+                            "pub-id_pmid": "37782553",
+                            "section_type": "REF",
+                            "source": "Pain",
+                            "type": "ref",
+                            "volume": "165",
+                            "year": "2024"
+                        },
+                        "text": "Development and internal validation of a prediction model for long-term opioid use\u2014an analysis of insurance claims data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42870,
+                        "infons": {
+                            "fpage": "502",
+                            "lpage": "508",
+                            "name_0": "surname:Zhao;given-names:S",
+                            "name_1": "surname:Browning;given-names:J",
+                            "name_2": "surname:Cui;given-names:Y",
+                            "name_3": "surname:Wang;given-names:J",
+                            "pub-id_pmid": "35003334",
+                            "section_type": "REF",
+                            "source": "J Pharm Health Serv Res",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2021"
+                        },
+                        "text": "Using machine learning to classify patients on opioid use",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42928,
+                        "infons": {
+                            "fpage": "79",
+                            "name_0": "surname:Sharma;given-names:B",
+                            "name_1": "surname:Dligach;given-names:D",
+                            "name_2": "surname:Swope;given-names:K",
+                            "name_3": "surname:Salisbury-Afshar;given-names:E",
+                            "name_4": "surname:Karnik;given-names:NS",
+                            "name_5": "surname:Joyce;given-names:C",
+                            "name_6": "surname:Afshar;given-names:M",
+                            "pub-id_pmid": "32349766",
+                            "section_type": "REF",
+                            "source": "BMC Med Inform Decis Mak",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2020"
+                        },
+                        "text": "Publicly available machine learning models for identifying opioid misuse from the clinical notes of hospitalized patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43050,
+                        "infons": {
+                            "fpage": "2173",
+                            "lpage": "2184",
+                            "name_0": "surname:Filipponi;given-names:C",
+                            "name_1": "surname:Masiero;given-names:M",
+                            "name_2": "surname:Pizzoli;given-names:SF",
+                            "name_3": "surname:Grasso;given-names:R",
+                            "name_4": "surname:Ferrucci;given-names:R",
+                            "name_5": "surname:Pravettoni;given-names:G",
+                            "pub-id_pmid": "35855762",
+                            "section_type": "REF",
+                            "source": "Cancer Manag Res",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2022"
+                        },
+                        "text": "A comprehensive analysis of the cancer chronic pain experience: a narrative review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43133,
+                        "infons": {
+                            "fpage": "981",
+                            "lpage": "983",
+                            "name_0": "surname:Char;given-names:DS",
+                            "name_1": "surname:Shah;given-names:NH",
+                            "name_2": "surname:Magnus;given-names:D",
+                            "pub-id_pmid": "29539284",
+                            "section_type": "REF",
+                            "source": "N Engl J Med",
+                            "type": "ref",
+                            "volume": "378",
+                            "year": "2018"
+                        },
+                        "text": "Implementing machine learning in health care - addressing ethical challenges",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43210,
+                        "infons": {
+                            "fpage": "22892",
+                            "lpage": "22898",
+                            "name_0": "surname:Gullapalli;given-names:BT",
+                            "name_1": "surname:Carreiro;given-names:S",
+                            "name_2": "surname:Chapman;given-names:BP",
+                            "name_3": "surname:Garland;given-names:EL",
+                            "name_4": "surname:Rahman;given-names:T",
+                            "pub-id_pmid": "38646089",
+                            "section_type": "REF",
+                            "source": "Proc AAAI Conf Artif Intell",
+                            "type": "ref",
+                            "volume": "38",
+                            "year": "2024"
+                        },
+                        "text": "Pharmacokinetics-informed neural network for predicting opioid administration moments with wearable sensors",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43318,
+                        "infons": {
+                            "fpage": "195",
+                            "name_0": "surname:Kelly;given-names:CJ",
+                            "name_1": "surname:Karthikesalingam;given-names:A",
+                            "name_2": "surname:Suleyman;given-names:M",
+                            "name_3": "surname:Corrado;given-names:G",
+                            "name_4": "surname:King;given-names:D",
+                            "pub-id_pmid": "31665002",
+                            "section_type": "REF",
+                            "source": "BMC Med",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2019"
+                        },
+                        "text": "Key challenges for delivering clinical impact with artificial intelligence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43393,
+                        "infons": {
+                            "name_0": "surname:Kris A.;given-names:Wetterstrand",
+                            "name_1": "surname:M.S;given-names:M.S",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2026"
+                        },
+                        "text": "The cost of sequencing a human genome",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43431,
+                        "infons": {
+                            "fpage": "1773",
+                            "lpage": "1784",
+                            "name_0": "surname:Acosta;given-names:JN",
+                            "name_1": "surname:Falcone;given-names:GJ",
+                            "name_2": "surname:Rajpurkar;given-names:P",
+                            "name_3": "surname:Topol;given-names:EJ",
+                            "pub-id_pmid": "36109635",
+                            "section_type": "REF",
+                            "source": "Nat Med",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2022"
+                        },
+                        "text": "Multimodal biomedical AI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43456,
+                        "infons": {
+                            "fpage": "719",
+                            "lpage": "742",
+                            "name_0": "surname:Chen;given-names:RJ",
+                            "name_1": "surname:Wang;given-names:JJ",
+                            "name_2": "surname:Williamson;given-names:DF",
+                            "pub-id_pmid": "37380750",
+                            "section_type": "REF",
+                            "source": "Nat Biomed Eng",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2023"
+                        },
+                        "text": "Algorithmic fairness in artificial intelligence for medicine and healthcare",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43532,
+                        "infons": {
+                            "fpage": "0",
+                            "name_0": "surname:Cross;given-names:JL",
+                            "name_1": "surname:Choma;given-names:MA",
+                            "name_2": "surname:Onofrey;given-names:JA",
+                            "section_type": "REF",
+                            "source": "PLOS Digit Health",
+                            "type": "ref",
+                            "volume": "3",
+                            "year": "2024"
+                        },
+                        "text": "Bias in medical AI: implications for clinical decision-making",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43594,
+                        "infons": {
+                            "fpage": "47",
+                            "name_0": "surname:Ahmed;given-names:MM",
+                            "name_1": "surname:Okesanya;given-names:OJ",
+                            "name_2": "surname:Oweidat;given-names:M",
+                            "name_3": "surname:Othman;given-names:ZK",
+                            "name_4": "surname:Musa;given-names:SS",
+                            "name_5": "surname:Lucero-Prisno Iii;given-names:DE",
+                            "pub-id_pmid": "40646553",
+                            "section_type": "REF",
+                            "source": "BioData Min",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "2025"
+                        },
+                        "text": "The ethics of data mining in healthcare: challenges, frameworks, and future directions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43681,
+                        "infons": {
+                            "name_0": "surname:Anekar;given-names:AA",
+                            "name_1": "surname:Hendrix;given-names:JM",
+                            "name_2": "surname:Cascella;given-names:M",
+                            "section_type": "REF",
+                            "source": "StatPearls [Internet]",
+                            "type": "ref",
+                            "year": "2023"
+                        },
+                        "text": "WHO analgesic ladder",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43702,
+                        "infons": {
+                            "fpage": "11",
+                            "lpage": "18",
+                            "name_0": "surname:Datto;given-names:CJ",
+                            "name_1": "surname:Hu;given-names:Y",
+                            "name_2": "surname:Wittbrodt;given-names:E",
+                            "name_3": "surname:Fine;given-names:PG",
+                            "pub-id_pmid": "30855718",
+                            "section_type": "REF",
+                            "source": "J Opioid Manag",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2019"
+                        },
+                        "text": "Opioid utilization patterns among patients with cancer and non-cancer pain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43777,
+                        "infons": {
+                            "fpage": "5979",
+                            "name_0": "surname:Hicks;given-names:SA",
+                            "name_1": "surname:Str\u00fcmke;given-names:I",
+                            "name_2": "surname:Thambawita;given-names:V",
+                            "name_3": "surname:Hammou;given-names:M",
+                            "name_4": "surname:Riegler;given-names:MA",
+                            "name_5": "surname:Halvorsen;given-names:P",
+                            "name_6": "surname:Parasa;given-names:S",
+                            "pub-id_pmid": "35395867",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2022"
+                        },
+                        "text": "On evaluation metrics for medical applications of artificial intelligence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

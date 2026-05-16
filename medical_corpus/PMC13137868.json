@@ -1,0 +1,3118 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260506",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13137868",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1093/gigascience/giag037",
+                            "article-id_pmc": "PMC13137868",
+                            "article-id_pmid": "41934171",
+                            "article-id_publisher-id": "giag037",
+                            "elocation-id": "giag037",
+                            "kwd": "long-read sequencing Oxford Nanopore Technologies somatic mutation tumour purity sequencing depth",
+                            "license": "This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.",
+                            "name_0": "surname:Zhang;given-names:Jia",
+                            "name_1": "surname:Wong;given-names:Ho Yi",
+                            "name_2": "surname:Liu;given-names:Lingchen",
+                            "name_3": "surname:Koufariotis;given-names:Lambros T",
+                            "name_4": "surname:Wood;given-names:Scott",
+                            "name_5": "surname:Fitzpatrick;given-names:Nadine",
+                            "name_6": "surname:Quiatchon;given-names:Jenny",
+                            "name_7": "surname:Collins;given-names:Paul",
+                            "name_8": "surname:Pearson;given-names:John V",
+                            "name_9": "surname:Waddell;given-names:Nicola",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "15",
+                            "year": "2026"
+                        },
+                        "text": "Cancer genome standards for long-read sequencing using cancer cell line mixtures",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 81,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Abstract",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 90,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Background",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 101,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Long-read sequencing (LRS) improves genome alignment and facilitates resolving variants in genomic regions of low complexity, making it a promising approach for cancer variant detection and biomarker discovery.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 312,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 320,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Here, we evaluate the performance of LRS using Oxford Nanopore sequencing to detect somatic variants across different tumour purities and sequencing depths by comparing to somatic variants from short-read sequencing. We generated experimental mixtures of cancer cell lines and matched normal cell lines to simulate 10 tumour purities (ranging from 0 to 100% tumour content). This resulted in 22 samples, which were sequenced using whole-genome LRS to a targeted depth of 60x, and somatic variants were identified. We down-sampled data to explore the optimal read depth for somatic variant detection. Our results show long-read variant calling tools achieve recall rates comparable to short-read gold standards. While tumour sequencing depth of 30x\u201360x is generally sufficient for detecting common variants, particularly structural variants, sequencing the matched normal sample at adequate depth is crucial for accuracy. Notably, we found variants unique to LRS that may represent real and previously undetected events.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1342,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1353,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "This study highlights key factors for optimising cancer genome sequencing with LRS and provides a comprehensive dataset of cell line mixtures for future research and tool development.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1537,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1550,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Cancer is a complex and multifaceted disease characterized by diverse genetic and epigenetic alterations, such as single-nucleotide variations (SNVs), structural variations (SVs), and changes in base methylation. These genomic changes drive abnormal cellular proliferation and carcinogenesis, and represent targets for treatment making the detection of mutations in tumour cells crucial for cancer research and precision therapy. While high-throughput short-read sequencing (SRS) has been widely used to identify somatic mutations across various cancer types, it often fails to detect variations in low-complexity, highly repetitive, or GC-biased regions due to limited mappability. Long-read sequencing (LRS) technologies, such as those developed by Pacific Biosciences and Oxford Nanopore Technologies (ONT), offer extended read lengths that can span highly repetitive genomic regions effectively. Initially used to enhance reference genome assembly and to resolve haplotypes, LRS is increasingly applied in cancer genomics due to its ability to identify novel variations in previously unresolved regions of tumour genomes. Recent studies using high-throughput platforms like the Nanopore PromethION have enabled rapid and comprehensive profiling of various advanced cancer cohorts and central nervous system tumours, demonstrating significant potential for clinical applications. However, the use of LRS in cancer has largely been restricted to a small number of studies or the analysis of cell lines, which underscores the importance of benchmarking these technologies to optimize their clinical and research use.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3168,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The evolution of LRS technologies has led to a proliferation of approaches for analysing the resulting data, including basecalling, alignment, and variant calling. LRS requires computational methods that are distinct from SRS methods due to its longer read length and unique error profiles. Benchmarking studies have evaluated various LRS tools to analyse cancer genome data, including aligners, somatic structural variation detection, and methylation detection methods. However, many of these evaluations relied on in silico data or sequence data from cell lines, meaning they did not capture complexities of tumour tissue samples such as tumour purity. Notably, some benchmarking efforts are published alongside the development of new tools, which can introduce bias as optimal parameters may not be used for each tool. Therefore, independent benchmarking is valuable with the continuously emerging new tools and frequent version updates for existing tools.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4128,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Tumour purity and sequencing depth have a significant impact on the data quality and interpretation in tumour genomics studies. Tumour purity refers to the proportion of cancer cells in a sample, and it can affect the signal-to-noise ratio, particularly for detecting somatic alterations (mutations specific to the cancer cells in a sample). Low tumour purity can mask somatic mutations by lowering the somatic variant allele frequency, potentially leading to false negatives. Sequencing depth determines the sensitivity for identifying low-frequency variants as well as the ability to distinguish signals from germline cells; therefore, sequencing depth is particularly crucial in heterogeneous tumours where low tumour purity and subclonal mutations are prevalent. Together, tumour purity and read depth influence the ability to detect somatic mutations, analyse clonal evolution, and understand tumour heterogeneity. Inadequate tumour purity or sequencing depth can result in the incorrect detection of clinically relevant alterations, which will negatively impact genomic discovery for cancer research and precision medicine. The implications of tumour purity and sequencing depth for LRS methods have not been explored.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5353,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we created cancer reference samples from two pairs of matched tumour-normal cell lines to measure the impact of tumour purity (0\u2013100%) and sequence depth on somatic mutation detection. We sequenced the samples to an average read depth of >60x using Oxford Nanopore LRS. We compared the somatic variant calls from different experimental settings against our SRS gold standard to determine optimal sequencing strategies. The results establish guidelines for expected data quality based on differing tumour purity levels and sequencing depths, providing valuable insights for optimizing experimental design in tumour sequencing studies. Furthermore, the generated dataset serves as a valuable resource for the development and validation of bioinformatic tools in this rapidly evolving field.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6159,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6167,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Study design and overview",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6193,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "We generated two tumour-normal paired cancer samples to simulate different tumour purities and sequence read depths to evaluate the ability of LRS to identify somatic mutations (Fig.\u00a01). We cultured two cell lines representing distinct tumour types (melanoma, COLO829 and breast cancer, HCC1937) and a matched non-tumour cell line for each. DNA was extracted from each cell line and matched tumour- and non-tumour-derived DNA were serially mixed to simulate 10 tumour purity levels at 10% increments (0 to 100%). This resulted in 10 tumour mixtures and one matched blood lymphocyte (BL, as a germline/normal control) sample per cell line pair. A sequencing library was made for each sample and sequenced with the PromethION from ONT using two flow cells per library (R10.4.1). Basecalling was performed using Dorado (v0.5.1) with the super accuracy (SUP) model. The mean and median read quality scores were 21.8 and 23. The average yield per flow cell was 126 Gb, and the read length N50 was 10.4 kb (Supplementary Fig. S1A).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7220,
+                        "infons": {
+                            "file": "giag037fig1.jpg",
+                            "id": "fig1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "The overview of the experiment design. Two tumour-derived cancer cell lines, COLO829 and HCC1937, with their patient-matched non-tumour B lymphoblastoid (BL) cell line, were cultured and DNA extracted. The DNA was quantified, and tumour and non-tumour DNA samples were mixed to obtain tumour cell mixtures with decreasing tumour purity by 10% decrements. Libraries for each cell line mixture (n = 11 for each tumour cell line) were sequenced with the Nanopore PromethION sequencer with two flow cells per library. The raw data were basecalled with Dorado, and the 5mC methylation at CpG sites was called with a matched Remora model during basecalling. Sequence data were aligned to GRCh38 assembly and somatic SNVs, indels, and structural variations were identified for samples with different tumour purity levels. Sequencing depths were simulated by subsampling reads at 60x, 45x, 30x, and 15x for samples with 100, 80, 60 and 40% tumour purity levels. These combinations of sequencing depths (n = 9 per tumour cell line) were used for somatic SNV, indels, and SV detection. Short-read gold standard somatic mutations were constructed by overlapping high-confident sets from SRS of three replicate libraries for each cell line. Finally, the somatic variation results were compared with the short-read gold standard to evaluate the performance of LRS under different tumour purity and depths. The figure was created using BioRender (https://www.biorender.com).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8681,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Two experiments were designed to assess the impact of common variables on somatic mutation calling in cancer samples: tumour purity and sequence read depth. To assess the impact of tumour purity, the 10 tumour cell mixtures and BL germline samples were sequenced to a mean depth of 70.61x for COLO829 (range 58.29x to 79.13x) and 61.57x for HCC1937 (range 53.42x to 71.14x) (Supplementary Fig. S1B), resulting in >95% of the genome being covered by at least 1 read (Supplementary Fig. S1C). The N50 (median aligned read length) for each library ranged from 9.4 to 10.4\u00a0kb (Supplementary Fig. S1D). We assessed impact of alignment using different human reference assemblies, CHM13-T2T and GRCh38. Slight improvements were observed using the CHM13-T2T reference with lower sequence divergence between reads and reference sequences and higher mapping rates (Supplementary Table S1). However, in our study,we used the GRCh38 assembly due to the comprehensive annotations and maximized compatibility with current tools and our short-read gold standard. To evaluate the performance of mutation detection under different sequencing read depths, we randomly subsampled sequence reads from four tumour mixtures (100, 80, 60, and 40%) per tumour type (COLO829 and HCC1937) and the matched BL sequence data to create tumour and germline BAM files with 60x, 45x, 30x, and 15x sequencing read depths. This resulted in nine combinations of sequencing depths.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10127,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "In both experiments, we compared multiple approaches to call somatic single-nucleotide variants (SNVs), small insertions and deletions (indels), and structural variants (SVs). To assess the accuracy of the mutations detected with the LRS, we created a \u201cgold standard\u201d call from short-read data by sequencing DNA from the two tumour and matched non-tumour cell lines using three short-read replicate libraries. Sequencing resulted in a minimum read depth of 34x in BL and 67x in tumour samples, and we identified 40,422 SNVs, 416 indels, and 57 SVs in the \u201cgold standard\u201d short-read somatic calls for COLO829 and 48,982 SNVs, 3,236 indels, and 573 SVs for HCC1937 (Supplementary Fig. S2A\u2013F).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10828,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Tumour purity impacts somatic mutation detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10877,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Patient tumour tissues have different tumour purities; therefore, we created 10 tumour mixtures for each cell line to explore how tumour purity impacts somatic mutation detection from LRS. Two approaches were used for somatic SNV and indel detection from long-read data. ClairS and DeepSomatic. The shifted distributions of variant mutation allele frequency (VAF) for SNVs (Supplementary Fig. S3A) and methylation frequency at CpG sites that are differentially methylated between the tumour and normal cell lines (Supplementary Fig. S3B) support the serial dilutions of tumour DNA by normal cell DNA.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11478,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Overall, the number of somatic mutations detected by ClairS and DeepSomatic decreased with decreasing tumour purity, resulting in a lower recall (Fig.\u00a02A). Nevertheless, even at low tumour purity, the precision remained high (>79.5%). DeepSomatic had a higher precision than ClairS for COLO829 (ClairS range from 82.2 to 92.8%, DeepSomatic range 95.4 to 98.4%) and HCC1937 (ClairS range 79.5 to 86.1%, DeepSomatic range 84.5 to 93.5%) (Fig. 2A and Supplementary Fig. S4). In terms of recall, DeepSomatic had a higher mean recall at all tumour purity levels except the sample with 100% tumour purity compared to ClairS for COLO829 (ClairS 81.27%, DeepSomatic 86.39%); however, ClairS had a higher mean recall than DeepSomatic in HCC1937 in samples with lower tumour purity (<50%) (ClairS 81.43%, DeepSomatic 77.02%). To confirm these results, we performed a data simulation using the COLO829 data aligned to chromosome 22 with NanoSim to introduce defined somatic SNVs to establish a ground-truth mutation set. This data confirmed that both ClairS and DeepSomatic show high (>99%) precision and recall at 100% tumour purity, with DeepSomatic achieving higher recall at lower purities than ClairS for this sample (Supplementary Table S3).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12716,
+                        "infons": {
+                            "file": "giag037fig2.jpg",
+                            "id": "fig2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Tumour purity affects somatic SNV and INDEL calling. (A) Number of true positive (TP), false positive (FP), and false negative (FN) SNV calls in COLO829 and HCC1937 tumour cell mixtures using ClairS and DeepSomatic. The size of each call was present on the right side of 0 on the x-axis, and the missed call size on the left side. Precision and recall rates are labelled at the edges of the right and left sides of each row. (B) Boxplots comparing the distribution of variant allele frequency (VAF) for FP and TP in SNV calling with decreasing tumour purity. (C) The bar plot displays the number of TP, FP, and FN indel calls. The pale colour represents the deletions, and the solid colour shows the insertions. Precision and recall rates are labelled at the edges of the right and left sides of each row. (D) Boxplots comparing the distribution of VAF for FP and TP in indel calling with decreasing tumour purity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13631,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Within the sequenced mixtures (not simulated data), the majority of the SNVs were detected by both approaches, with 90% of SNVs being detected by ClairS and DeepSomatic for the COLO829 non-diluted sample and 87% for HCC1937 (Supplementary Table S2). The union of the two approaches achieved higher recall at the cost of introducing more FP events. The variant allele frequency of true positive (TP, present in \u201cgold standard\u201d) calls decreased with decreasing tumour purity for both COLO829 and HCC1937 (Fig.\u00a02B) as expected. In contrast, the false positive (FP, absent from \u201cgold standard\u201d) calls for COLO829 do not show a decrease in AF, with FP having a greater range of AF in both COLO829 and HCC1937 at higher tumour purities (Fig.\u00a02B). Interestingly, for ClairS, the read depth for FP calls was consistently lower than for TP calls (Supplementary Fig. S5A). This was not the case for DeepSomatic, suggesting that DeepSomatic FP variants might be TP variants missed by SRS meanwhile read depth could be used as a filter to remove real FP events in ClairS. The quality scores were lower for FP events compared to TP for both callers (Supplementary Fig. S5B). The different patterns observed in allele frequency, read depth, and quality score distributions between TP and FP events suggest that integrating these measures could serve as an efficient filter to reduce FP calls.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15020,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The average recall for indels (ClairS 71.62% for COLO829, 80.28% for HCC1937; DeepSomatic 57.85% for COLO829, 62.66% for HCC1937) (Fig.\u00a02C) was lower than SNV (Fig.\u00a02A). ClairS had a higher recall for indels at all tumour purity levels than DeepSomatic. Similar to SNV detection, the number of somatic indels detected by ClairS and DeepSomatic decreased with decreasing tumour purity, resulting in a lower recall (Fig. 2C). The average precision was significantly lower for indels (ClairS: 24.6% for COLO829, 42.39% for HCC1937; DeepSomatic: 68.55% for COLO829, 64.27% for HCC1937) than for SNVs (ClairS: 90.57% for COLO829, 83.61% for HCC1937; DeepSomatic: 96.87% for COLO829, 89.29% for HCC1937). The ClairS approach consistently had a lower precision in all tumour purities compared to DeepSomatic for both cell lines (Fig.\u00a02C). There was no difference between the detection of insertion and deletion events (Fig.\u00a02C).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15946,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Similar to the SNVs calls, the mutation allele frequency of true positive (TP, present in \u201cgold standard\u201d) indels calls decreased with decreasing tumour purity for both COLO829 and HCC1937 (Fig.\u00a02D). The AF of TP indels was higher than the FP calls for ClairS but not DeepSomatic, suggesting that AF could be used as a filter to remove FP indel events in ClairS. The read depth for FP and TP calls was similar for indel events in ClairS and DeepSomatic (Supplementary Fig. S6A), suggesting that read depth is not useful for determining TP events. The quality scores were lower for FP events compared to TP for both callers (Supplementary Fig. S6B), suggesting that quality could be used as a filter to remove potential FP calls.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16680,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "We compared the SV calls under different purities using four SV detection tools in two cell lines. Most SV calls in the short-read \u201cgold standard\u201d are identified with long-read SV callers; however, with 3 out of 57 in COLO829 and 87 out of 573 HCC1937 short-read \u201cgold standard\u201d SVs were not detected by any LR tool in all tumour purity levels (Fig. 3), suggesting these events may be missed by LRS or false positive calls in the short-read data. Samples with higher purity usually generate more SV calls (Supplementary Fig. S7), with a decreasing SV count as purity decreases, particularly in HCC1937, where there are more SV events (573, compared to 57 in COLO829). The Severus tool displays the best recall rates (36.84\u201384.21% in COLO829 and 26.18\u201378.53% in HCC1937) at all tumour purity levels for both cell lines. Even at 20% tumour purity, the recall for Severus is 63.16% for COLO829 and 50.79% for HCC1937. In contrast, the recall for other tools at 20% tumour purity for COLO829 and HCC1937, respectively, was 42.11 and 36.47% for Delly, 40.35 and 35.25% for nanomonsv, and 28.07 and 20.59% for SAVANA. The recall rate for SAVANA was comparable to nanomonsv in higher purity samples (>60%); however, SAVANA did not perform as well in lower purity samples (Supplementary Fig. S7).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17981,
+                        "infons": {
+                            "file": "giag037fig3.jpg",
+                            "id": "fig3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Tumour purity affects somatic SV calling. A heatmap of short-read \u201cgold standard\u201d SV events that are detected by long read using four SV callers in decreasing tumour purity levels for COLO829 and HCC1937 tumour cell lines. SVs of different SV types (DEL: deletion, INS/DUP: insertion/duplication, INV: inversion, TRA: translocation) are filled with different colours.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18353,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Sequencing depth affects somatic mutation calls",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18401,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "We sub-sampled tumour and germline samples to simulate different read depths (60x, 45x, 30x, and 15x) and then compared the somatic mutation detection under four purities (100, 80, 60, and 40%). This resulted in nine scenarios of tumour-germline sequencing depths under four tumour purities (Fig.\u00a01).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18703,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Lower read depth in the germline sample is expected to impact somatic SNV detection. For ClairS, this resulted in an increase in recall and a decrease in precision, whereas for DeepSomatic, it resulted in a lower recall and a higher precision. When the germline samples were sequenced at 15x sequencing depth, the performance of these approaches was severely impacted, a finding that was confirmed in simulated data (Supplementary Table 3). Within the sequenced mixtures (not simulated data), using the samples with 100% purity, the precision dropped below 65% in both cell lines for ClairS, and the recall also dropped below 65% in HCC1937 for DeepSomatic (Fig.\u00a04A). Furthermore, we observed the average allele frequency of FP SNVs when the normal sample at 15x depth higher than other read depth combinations (Supplementary Fig. S8). Similarly, in indel calling, lower sequencing depth in normal samples leads to decreased precision but increased recall for ClairS except when normal samples had only 15x read depth, whereas DeepSomatic results in reduced recall but improved precision (Fig.\u00a04B). Interestingly, ClairS demonstrates robustness to the impact in the HCC1937 cell line, while DeepSomatic shows greater robustness in COLO829. Similar results were observed for samples with lower tumour purity (Supplementary Fig. S9).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20037,
+                        "infons": {
+                            "file": "giag037fig4.jpg",
+                            "id": "fig4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Sequencing depth affects somatic SNV and indel calling. Number of true positive, false positive, and false negative somatic variant calls under nine depth combinations (y-axis) of tumour and normal samples in COLO829 and HCC1937 using ClairS and DeepSomatic in samples with 100% tumour purity. (A) Somatic SNV calling performance in recall and precision of ClairS and DeepSomatic. (B) Somatic indel calling performance in recall and precision of ClairS and DeepSomatic, deletions and insertions were filled with stacked bars in different alpha.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20582,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Sequencing depth in both tumour and normal samples had a smaller impact on SV calling than SNV and indel calling, particularly for nanomonsv and Severus (Supplementary Fig. S10). Nanomonsv consistently demonstrated the highest precision in four tools across tumour purities, underscoring the importance of incorporating a reference panel to achieve accurate variant detection. Meanwhile, SAVANA is more sensitive not only to tumour purity but also to sequencing depth. In terms of recall, Delly outperformed SAVANA in recall when germline samples were sequenced at 15x, although its recall remained lower than that of nanomonsv and Severus. Severus exhibited the highest recall among the four tools across all depth combinations and detected more LR-specific (FP) SVs than nanomonsv, particularly in scenarios with lower depth in the normal sample. While the LR-specific SVs may represent novel SVs, they could also be read false positives.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21523,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "False positives detected by LRS might be true",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21569,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Despite the high recall rate in variant detection using LRS compared with SRS, we found that many LR-specific false positive calls might be real. The proportions of single substitution signatures (SBS) catalogues extracted in the false positives had high cosine similarity to our short-read gold standard with 0.79 and 0.89 for ClairS, 0.96 and 0.97 for DeepSomatic in COLO829 and HCC1937 (Fig.\u00a05A). Notably, ClairS detected more T to C (A to G) type mutations with a context AA existing in FP-positive calls for both cell lines. We also found that false positive SNVs from ClairS tend to cluster along the centromere and telomere regions (Supplementary Figs S11 and S12) along chromosomes for both cell lines compared with DeepSomatic (Supplementary Figs S13 and S14). This suggests that DeepSomatic has more stringent variant calling at difficult genome regions. The genome stratification of false positive SNVs shows that ClairS calls more FPs in tandem repeats and low mappability regions, while DeepSomatic calls more FPs in areas of high or low GC%. Meanwhile, the genome stratification of false positive indels displays a similar pattern between the two tools with a higher proportion of FPs overlapped with tandem repeats and genomic regions with GC percentages <30% or > 55% (Supplementary Fig. S15).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22880,
+                        "infons": {
+                            "file": "giag037fig5.jpg",
+                            "id": "fig5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Potential novel events detected by LRS. (A) The comparison of the 96 mutational catalogues between the short-read gold standard and FP from LRS. (B) The number of SVs in four types (DEL: deletion, INS/DUP: insertion/duplication, INV: inversion, TRA: translocation) from FP, FN, and TP. (C) The SV length distribution of FP and TP events in DEL, INS/DUP, and INV types, the black dot in each bar indicates the mean value.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23301,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The high-confidence LR SV calls presented in at least two out of four tools also contain many LR-specific SVs. While these SVs may appear as false positives, we expected some of these SVs to be real due to the technical advantage of long-read over short-read. In support of this, we found that a substantial fraction of the LR-specific SVs are located at genomic regions of extreme GC content (GC% <30 or >55) or within low mappability for short reads (Supplementary Fig. S16). Furthermore, these events are mostly deletions, insertions, and duplications with shorter lengths (<10 kb) (Fig.\u00a05B, C), which means they can be sequenced by a single long read with high confidence. Meanwhile, SRS might miss these smaller SVs (<10\u00a0kb) due to the restriction of the length of reads and the uncertainty of the pair-end library sizes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24130,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Germline leakage is more related to the sequencing depth but not tumour purity",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24209,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Germline leakage refers to germline mutations being misclassified as somatic calls in the variant detection pipeline. We estimate the germline leakage rate by quantifying somatic calls with a maximum population frequency above 0.1 in gnomAD (version 4.1). While this threshold may not capture all germline variants, we used these values to compare the germline leakage across tumour purity and sequencing depth. We found that the germline leakage rates remain low across tumour purity and start to increase with tumour purity less than 30% for ClairS while decreasing for DeepSomatic (Supplementary Fig. 17A). Notably, we found that the leakage spiked when the sequencing depth in the germline was 15x, suggesting enough depth in germline samples is crucial for avoiding germline variation contamination in somatic mutation detection (Supplementary Fig. 17B).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25069,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Benchmarking SV using publicly available gold standard",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25124,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Using short-read data to build the SV gold standard is a challenge due to technical limitations of SRS to detect the full set of SVs in the genome. Previously, a COLO829 SV truth set SV, including 68 SVs, was thoroughly characterized with multiple sequencing platforms, including short-read and long-read technologies. We benchmarked our long-read SVs to this truth set to evaluate how many SVs that were missed by our SR gold standard can be detected by LRS. The recall rates are slightly lower than the results when benchmarking with our SR gold standard (Supplementary Fig. S18). This suggests our \u201cgold standard\u201d captured most SVs; however, differences exist because our \u201cgold standard\u201d was constructed using single-platform sequencing data and also genetic changes may accumulate in cell line passaging causing cells from different organizations to increasingly differ across time.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26019,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26030,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we sequenced a series of\u00a0in vitro cell line mixtures with different tumour purity levels from two cancer types and compared the performance of long-read somatic variant detection tools, including SNVs, indels, and SVs (\u226550\u00a0bp). Additionally, our in silico sequencing depth down-sampling allowed us to evaluate the impact of sequencing read depths of tumour and normal samples on variant detection. Our results provide a practical guide for cancer genomic sequencing of clinical samples, and the dataset of sequenced mixtures could be valuable for benchmarking the robustness of variant calling tools under different tumour purity settings.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26689,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Previous studies have benchmarked LRS for variant calling in a range of genomic contexts, but many focused on germline-specific variants or prioritized specific genomic features such as SVs, CpG methylation, and mRNA, some with the impact of tumour purity addressed by the in silico mixing dataset. However, there remains a critical need to benchmark LRS for variant calling in the context of tumour genomics. Unlike germline variants, somatic mutations in tumours exhibit substantial heterogeneity, both within and across cancer types, posing unique challenges for accurate detection. Through experimental mixing DNA of tumour and normal cell lines and in silico down-sampling data, we showed that LRS tools can detect >50% of the variants of all kinds from a short-read \u201cgold standard\u201d at tumour purities as low as 20% and for 30x\u201360x sequencing depth in tumour. Importantly, our data show that having enough depth in germline sample (>15x) is critical for recall and precision of somatic mutations. These findings can guide parameters for clinical sequencing protocols.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27768,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "As expected, tumour purity significantly affects somatic mutation detection, with lower purity reducing sensitivity across SNVs, indels, and SVs. This highlights the challenge of identifying rare somatic alleles in samples with significant stromal cell content. However, even at low tumour purity (e.g., 20%), LRS, especially with Severus for SVs, maintains a reasonable recall rate, demonstrating its utility in low-cellularity samples. Although Nanopore sequencing has lower base qualities (Q20\u2013Q30) than the current SRS (Q30\u2013Q40), deep-learning-based SNV callers like ClairS and DeepSomatic effectively mitigate sequencing errors. ClairS combines pileup and full-alignment models using Bi-GRU and ResNet architectures to classify variants as germline, somatic, or artefacts. DeepSomatic, using a CNN-based model, processes alignment pileups as images. These architectural differences likely drive performance differences. DeepSomatic\u2019s higher precision for SNVs and indels suggests a more conservative, error-resistant approach, possibly due to its training data and algorithm design. While ClairS achieves comparable SNV recall and better indel recall, it has lower precision, suggesting it requires stringent downstream filtering of variants based on biological context. Notably, ClairS detects variants in centromeric and telomeric regions, indicating its potential to identify mutations in genomic regions traditionally inaccessible to short reads. These results suggest that despite lower base qualities, LRS is able to accurately call somatic mutations even in samples with low tumour content.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29377,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Among the four long-read SV detection tools evaluated, Severus consistently outperformed Delly, nanomonsv, and SAVANA across varying tumour purities and sequencing depths. Severus maintained high recall even at low tumour purity and sequencing depth (15\u00d7), suggesting its ability to detect tumour-specific signals with minimal interference from germline contamination. SAVANA\u2019s performance declined at lower tumour purities and showed high sensitivity to reduced sequencing depth, potentially limiting its applicability in clinical settings. However, its recent integration of tumour purity, ploidy, and copy number alteration inferences may address these problems. Nanomonsv performed similarly to SAVANA but remained more robust at lower tumour purities and sequencing depths. Its use of an internal human germline SV reference panel makes it more conservative in SV detection, which aligns with previous findings.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30297,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "LRS inherently offers advantages for SV detection over short-read approaches. Given that SNV and small indel detection show comparable performance between long- and short-read technologies, a key question is whether LRS enhances SVs discovery by detecting variants missed by SRS. While previous studies suggested that most large SVs in tumour genomes are detectable by short reads, our findings indicate that long reads uniquely capture numerous short-to-intermediate SVs (<10\u00a0kb), which were underrepresented in earlier analyses. This further underscores the importance of LRS in tumour genomics, particularly for identifying novel SV markers beyond the resolution of short-read methods.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30987,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "To enable future cancer genomics studies and translate LRS into the clinic, we need to know what read depth is required to reliably detect somatic mutations. Our sequencing depth down-sampling experiment suggests that balancing coverage between tumour and normal samples can improve somatic variant detection potentially by minimizing germline contamination. Furthermore, sequencing depths of 15x or less for the germline sample significantly harm somatic variant calling and should be avoided. In our study, we sequenced both tumour and normal samples using two flow cells aim for a read depth of 60x. While we obtain data of \u223c30x genomic sequencing coverage per flow cell, a study has shown that a single Nanopore PromethION flow cell can generate >33\u00d7 human genome coverage with ultra-long reads (N50 >35 kb) with optimized DNA processing and library preparation. Assuming that sequencing with a shorter (10 kb) read length N50 produces higher yields per flow cell, in the future we can reduce sequencing costs by using only one flowcell each for tumour and normal.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32059,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Although long reads allow improved mapping in genomic regions of low complexity, the alignment accuracy remains imperfect. Some suggest the reason to be low read accuracy; however, the main factor could be the genome assembly. We used the GRCh38 assembly in this study as it provides more comprehensive clinical annotations for the downstream analyses; however, GRCh38 remains incomplete with unresolved gaps and repetitive sequences of unknown size. Recent studies suggest that using the CHM13-T2T assembly results in better genetic variant detection from more precision alignment, especially in highly repetitive regions such as centromeres and telomeres. Future studies exploring the impact of reference assemblies on variant calling performance may provide valuable insights into cancer genome sequencing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32869,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "The \u201cgold standard\u201d used in this study was constructed with the SRS with all the limitations that imply. Previously, researchers have utilized the synthetic mixtures of two fully homozygous human cell lines to mock somatic mutations, and apply read simulators such as NanoSim or pbsim2 to upsample data for validation of variant detection. While this is a good strategy to explore variant calling performance under extreme scenarios, differences in variation calling performance were found when using the real tumour cell line, which underscores the heterogeneous nature of cancer samples. A major output of our study is the creation of reference data (with a range of tumour purities) that can be used by research community. To this end, we deliberately selected two cancer types, one with a high SNV burden, the other with a high SV burden. Establishing references for other key features of cancer genomes, such as subclone mutations, tandem repeats, and complex SVs, will largely facilitate the development of better computational tools.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33914,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study explored the optimal experimental design for cancer genome sequencing using LRS through creation of tumour purity mixtures. Many LRS analysis tools are still under active development, and while we are far from a definitive \u201cbest practice\u201d for cancer variant calling using LRS, we have investigated key aspects key and highlighted directions for improvement. Importantly, we provide a publicly available dataset of LRS cancer cell line mixtures, offering a valuable resource for future tool development and benchmarking in this fast-evolving field.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34477,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Materials and methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34499,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Ethical statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34517,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This work involves the use of human cell lines, which were approved by the QIMR Berghofer Human Research Ethical Committee (P3577 and P3527).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34659,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Cell culture, DNA extraction, and mixing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34700,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "COLO829 (RRID:CVCL_1137), COLO829_BL (RRID:CVCL_1999), HCC1937 (RRID: CVCL_0290), and HCC1937_BL (RRID:CVCL_3281) were maintained in RPMI +10% FBS. All cell lines were tested for mycoplasma and STR profiling. Cells were harvested between passages 8 and 10. Cells were dissociated using 0.25% trypsin at 37\u00b0C for 5 min and spun at 1,200 rpm for 5 min. Cells were washed once with PBS and kept at \u201380\u00b0C until DNA extraction. DNA was extracted using AllPrep DNA/RNA Mini Kit (802024, Qiagen) according to the manufacturer\u2019s protocols and eluted in TE buffer. To prepare samples with various tumour purities, both tumour and normal DNA were diluted to 50 ng/\u00b5l using the TE buffer. The tumour and its corresponding normal DNA were mixed in specific ratios to create 10 samples that represent tumour purities ranging from 0 to 100% with increments of 10%.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35558,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Library preparation and Oxford nanopore sequencing with PromethION",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35625,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "DNA quantity and quality were assessed using an Implen NanoPhotometer, then run on a TapeStation (Agilent) to evaluate fragment size. High molecular weight DNA was sheared to 10\u201312 kb using Covaris g-tubes. Approximately 1 \u00b5g of sheared genomic DNA was used to make libraries using the ONT ligation sequencing kit (SQK-LSK114), according to the manufacturer\u2019s instructions, except that ligation was extended to 30 min. Each library was loaded at approximately 10 fmol on two separate R10.4.1 PromethION flow cells and sequenced for 72 h on a PromethION P24 sequencer within QIMR Berghofer Scientific Services.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36240,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Basecalling, methylation calling, and alignment",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36288,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The raw POD5 files from the sequencer were basecalled using Dorado (v0.5.1) with the super accuracy (SUP) model for the R10 flow cell (dna_r10.4.1_e8.2_400bps_sup@v4.3.0). The 5mC and 5hmC methylation were also detected using Dorado with the matched Remora model (dna_r10.4.1_e8.2_400bps_sup@v4.3.0_5mCG_5hmCG@v1). SAMtools (v1.17) was used to convert the unaligned basecalled BAM file from basecalling to FASTQ format and filter out reads with average quality (QS) <10 before alignment, and minimap2 (v2.26) was used to align reads to the GRCh38 genome assembly (-y \u2013MD -ax map-ont). The aligned BAM files were sorted and indexed using SAMtools. The percentage of 5mC methylated reads at CpG sites was calculated using modkit (v2.4.0) pileup based on the MM and ML tags of reads from both strands in the BAM files (\u2013combine-strands \u2013cpg).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37134,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Read depth simulation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37156,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To evaluate the performance of variant calling under sequencing strategies, we used Sambamba (v1.0.1) to downsample data from the tumour and the matched B lymphoblast BAM files with 60x, 45x, 30x, and 15x read depths in samples with 100, 80, 60, and 40% tumour purities. Reads were randomly sampled from the aligned BAM files at the proportion based on the expected and original depth. If a BAM file did not reach a 60x read depth, we used the original BAM file (53.42x for the library of HCC1937 cell line at 40% tumour purity). In total, we generated nine combinations of sequencing depths with either higher read depths in tumour samples (60x-45x, 60x-30x, 45x-30x, 45x-15x, 30x-15x) or equal read depths in both tumour and normal (60x-60x, 45x-45x, 30x-30x, 15x-15x). The depth of subsampled BAM files was confirmed with mosdepth (v0.2.9) to check the potential effect of varied read lengths.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38053,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Somatic SNV, indel, and SV detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38090,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We used ClairS (v0.1.7) and DeepSomatic (v1.6.0) for SNV and short indel detection in tumour cells. These tools were selected as they are both actively updated and designed to call somatic SNVs and indels using a pair of tumour and normal BAM files to predict tumour-specific variants using pre-trained deep-learning models. For ClairS, we used the ont_r10_dorado_sup_5khz model for somatic SNV detection and the r1041_e82_400bps_sup_v430 model from rerio for Clair3. For DeepSomatic SNV calling, we used default parameters with an internal ONT model provided by Google Health. The final results in VCF were filtered for somatic SNVs with GT=\u201d1/1\u201d and FILTER=\u201dPASS\u201d using BCFtools (v1.19) as described in the DeepSomatic document.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38829,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We used four tools (Delly (v1.2.6), nanomonsv (v0.7.1), SAVANA (v1.0.5), and Severus (v1.0)) to call SV using long reads. Each tool uses a pair of tumour and normal BAM files and runs with default parameters with SV length less than 50 bp were excluded. In addition, nanomonsv included an extra reference panel of 30 human genomes to filter somatic SVs. As part of the nanomonsv pipeline, SV events that overlapped with simple repeats were filtered and the SV type was annotated using the sv_type.py script of the package. Phased and haplotagged BAM files were provided to Severus, and variable number tandem repeat regions were used in the analysis. WhatsHap (v1.4) was used to phase genomics variants in germline VCF files and add tags to each read in BAM files with known haplotypes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39616,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Short-read sequencing for cancer cell lines",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39660,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "DNA was extracted for COLO829 and HCC1937 cells and matched B lymphoblastoid cells using the Qiagen AllPrep DNA mini kit according to the manufacturer\u2019s protocol (Qiagen, Germany). Whole genome analysis was performed on DNA from tumour and BL cells using DNA PCR-free prep and sequenced on a NovaSeq (Illumina).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39974,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "The short-read gold standard for SNVs and indels",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40023,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We used the concordant high-confident somatic SNV calls based on three high-depth short-reads sequencing of COLO829 and HCC1937 as our \u201cgold standard.\u201d The cell lines were cultured from the same purchase within a few passages and thus can avoid extensive sub-clonal somatic mutations. The short-read data of three biological replicates were analysed with our in-house standard Cromwell pipeline to detect somatic SNVs with GATK (v4.0.4.0) and qSNP (v2.1.4) and somatic small indels with GATK. For merging SNVs, we first split multi-base variants into consecutive SNVs and also split multiallelic sites into multiple entries using the BCFtools norm module. Next, the intersection of high-confidence SNVs for three libraries was calculated using the BCFtools isec command. Finally, the three VCF files were merged and annotated with the intersection results using BCFtools merge. SNVs that are detected in at least two libraries were used as a short-read \u201cgold standard.\u201d The indel gold standard was generated similarly to SNV but without atomization.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41081,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "The short-read gold standard for SVs",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41118,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For each library of COLO829 and HCC1937, we used Delly, GRIDSS (v2.13.2), and LUMPY (v0.3.1) to call SV from short-read data. The somatic SVs were extracted from each tool and merged within each library. The SVs that were detected by at least two tools were further merged between libraries for each cell line. Finally, SVs that were shared by at least two libraries were used as the SV gold standard. The merging of SVs is not as straightforward as SNVs. The output from each tool was first converted into a simple VCF format with five SV types (INS, INV, DEL, DUP, and TRA), and Jasmine was used to merge multiple VCF files and to determine the overlapping.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41778,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "EPIC array data analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41803,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The intensity data (IDAT) files of each cell line were loaded and analysed with the minfi (v1.48.0) R package. Specifically, the raw signals were transformed and normalized as beta values at each probe CpG position, and the probes that contained an SNP at the CpG interrogations or the single-nucleotide extension were excluded. To compare long-read methylation with EPIC array data, we performed liftover for EPIC array results from hg19 to hg38 using R packages GenomicRanges (v1.54.1) and rtracklayer (v1.62.0) with the chain file from the UCSC Genome Browser. The methylation data were also used to confirm the tumour purity levels within the serial diluted samples. Specifically, differentially methylated CpG sites between the tumour and blood lymphocyte cell lines were determined as probes with beta values \u22650.7 in tumour and \u22640.3 in BL, or \u22640.3 in tumour and \u22650.7 in BL. The distribution of these CpG sites was then assessed in the samples with different tumour purities for COLO829 and HCC1937.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42816,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Benchmarking",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42829,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We benchmarked the somatic SNVs and indels calling using the Python script compare.py of ClairS. We also used hap.py for comparison, which generated similar results. All SNVs and indels with PASS filter were used as the target to calculate the recall, precision, and F1 values with the corresponding gold standard for each cell line and variant type as the truth set. For SV benchmarking, tools had different formats to represent SV events. We converted the breakpoint pairs from different tools into the simple type VCF format and merged them with the short-read gold standard using Jasmine with default parameters, and only SVs with a length greater than 50 bp were considered. The public COLO829 SV truth set (Version v4) was downloaded from Zenodo (10.5281/zenodo.7515830) and compared with the results for a 100% tumour purity sample. The recall and the precision rates were calculated as",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43723,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Genome regions and stratifications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43758,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To investigate the genomic distribution of variants identified as TP, FP, and FN, genome stratifications for GRCh38, including low complexity, segmental duplications, low mappability, and GC content outliers, were downloaded from the genome-in-a-bottle consortium (v3.4). The overlapping status of each variant in regions of different categories was determined in R with the GenomicRanges and VariantAnnotation (v1.48) packages. The genome-wide distribution of TP, FP, and FN SNVs was visualized using rainfall plots, which were aligned with chromosome ideograms annotated with cytogenetic banding patterns (gieStain) obtained from the UCSC Genome Browser.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44415,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Mutational signatures analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44446,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All SNV somatic mutations were converted into a 96-channel mutational profile (SBS-96 vector) and were subsequently decomposed into contributions of COSMIC reference catalogue (v2.0, GRCh38) using the R package deconstructSigs (v1.8.0). To evaluate whether LR-specific variants, classified as false positives, might represent genuine mutational events, we compared their mutational spectra with the short-read gold standard set. Specifically, a cosine similarity was computed between the two profiles.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44948,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Germline leakage estimate",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44974,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To assess the extent of germline contamination in somatic variant calling, we quantified the proportion of SNVs commonly observed in the general population. Population allele frequencies were retrieved using BCFtools, which was used to query each variant against the gnomAD VCF files (version 4.1). SNVs with a population allele frequency (AF_grpmax) greater than 0.1 were classified as germline variants.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45380,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Visualization and IGV check",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45408,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Data wrangling was implemented in R (v4.3.1) with tidyverse (v1.2.1) and visualized using ggplot2 (v3.4.4) and ggh4x (v0.2.8). The long-read- and short-read-specific SV events were extracted as BEDPE files, and the IGV view of regions was generated using igv-reports (v1.12.0).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45686,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "An in silico simulation with simulated COLO829 Nanopore sequencing data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45758,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Chromosome 22 was extracted from GRCh38 genome and integrated with gold standard germline SNVs and somatic SNVs of COLO829 and COLO829_BL using SAMtools and BCFtools. Nanopore reads were simulated using NanoSim (v3.2.3) trained on a subset of empirical data of COLO829_BL to approximate realistic read length and error characteristics. Matched tumour-normal datasets were generated based on the synthetic tumour and germline genomes at tumour purity 10, 20, 40, 60, 80, and 100% and sequencing depths of 15x, 30x, 45x, and 60x, respectively. These datasets were processed using the same alignment and variant-calling workflow as the empirical mixtures, and performance was evaluated against the known truth set.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46470,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Availability of source code and requirements",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46515,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Project name: nanopore_celllines_benchmark.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46559,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Project homepage: https://github.com/bakeronit/nanopore_celllines_benchmark.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46636,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Operating system: Linux (Rocky Linux 9.7).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46679,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Programming language: Python, R, Bash.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46718,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Other requirements: Snakemake\u22658.2.0, tidyverse\u22652.0.0.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46776,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "License: BSD-3-Clause license.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46807,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Additional files",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46824,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S1. The quality of sequence data and alignment for tumour mixtures and matched normal samples. (A) Dot plot showing the total data yield (gb, gigabases) and read length N50 kb (kilobases) for each flow cell. Samples are ordered by sample type, then gb of sequence. (B) Total sequencing depth for each sample, with the x-axis showing the sample tumour purity and the y-axis indicating the sequence read depth. (C) The proportion of genome assembly covered by at least one read in each sample. (D) Alignment length N50 for each sample. Samples are coloured by type (blue: B lymphoblast non-tumour and red: tumour mixture).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47467,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S2. Creation of short-read \u201cgold standard\u201d somatic mutation calls for the COLO829 and HCC1937 cell lines. The COLO829 and HCC1937 tumour-derived cell lines and their matched non-tumour cell lines were sequenced in triplicate in short reads. For COLO829, the UpSet plots show the number of somatic (A) single-nucleotide variants (SNVs), (B) insertion and deletion (indels), and (C) structural variant (SV) events detected uniquely in each replicate and shared by three or two replicates. For HCC1937, UpSet plots show the number of somatic (D) SNVs, (E) indels, and (F) SV events detected uniquely in each replicate and shared by three or two biological replicates. Blue bars represent events shared by at least two replicates, which were used to define the gold standard.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48265,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S3. The distribution of variant allele frequency (AF) and methylation in samples with different tumour purities. (A) The distribution of variant allele frequency of SNVs at the genomic regions with a copy number equal to two in COLO829 and HCC1937. The lines are coloured by tumour purity from 100 to 10%. (B) The methylation frequency distribution in CpG sites (x-axis) in tumour samples with different tumour purities (y-axis) for COLO829 (left) and HCC1937 (right). Only the CpG sites with differential methylation frequency between the 100% tumour and blood lymphocyte cell lines are included in the plot. Plots are coloured by the methylation status in the 100% tumour sample with a high (red) or low (blue) methylation level.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49019,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S4. Precision-recall curves (AUPRC) for variant detection across different tumour purities. The precision (y-axis) and recall (x-axis) of long read calls against the short read \u201cgold standard\u201d are shown for SNVs (A), indels (B), and SVs (B). Points are coloured by tumour purity. In panels (A) and (B), points in circles shape represent ClairS results, and triangles represent DeepSomatic. In panel (C), line colour indicates SV callers. The results for COLO829 (left panel) and HCC1937 (right panel) cell lines are shown.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49568,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S5. Read depth and quality scores for somatic SNV calls. (A) Box plot showing read depth in tumour samples with varying tumour purity for TP (yellow) and FP (blue) SNVs called by ClairS and DeepSomatic for COLO829 and HCC1937 cell lines. (B) Box plot of QUAL scores from ClairS and DeepSomatic for TP and FP SNV calls in samples with varying tumour purity for COLO829 and HCC1937. The line in the box is the median of the data, the whiskers extend to the minimum and maximum values within 1.5 times the interquartile range (IQR) from the quartiles. Data points beyond the whiskers are shown as individual outliers. FP: false positive; TP: true positive; QUAL: quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50259,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S6. Boxplots of read depth and quality scores for TP and FP indel calls in tumour samples. (A) Read depth in tumour samples with varying tumour purity for TP (yellow) and FP (blue) indels called by ClairS and DeepSomatic for COLO829 and HCC1937 cell lines. (B) QUAL scores from ClairS and DeepSomatic for TP and FP indel calls in samples with varying tumour purity for COLO829 and HCC1937. The line in the box is the median of the data, the whiskers extend to the minimum and maximum values within 1.5 times the interquartile range (IQR) from the quartiles.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50839,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S7. Precision and recall of SV calling using four tools in samples with varied tumour purity for COLO829 and HCC1937. The bar height represents the total number of SV events detected by each tool. Bar colour indicates SV call concordance: blue for FP events; yellow for TP events; red for FN events. Precision and recall rates are labelled to the right and left of each bar, respectively.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51250,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S8. Variant allele frequency (VAF), read depth in tumour (DP), and quality score (QUAL) of FP and TP SNV calls from ClairS and DeepSomatic in COLO829 and HCC1937 samples with nine sequencing depth combinations. Panels are arranged with COLO829 on the left and HCC1937 on the right, and ClairS on the top and DeepSomatic on the bottom. Within each panel, results are further separated by sequencing depth combinations ranging from 15x\u201315x to 60x\u201360x (tumour\u2014normal). FP calls are shown in blue and TP calls in yellow.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51795,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S9. Recall and precision of Indel calling across sequencing depths and tumour purities. Each panel displays the number of indels classified as true positives (TP, yellow), false positives (FP, blue), and false negatives (FN, red) across nine combinations of tumour-normal sequencing depths and four tumour purities (100, 80, 60, and 40%). Precision and recall are displayed to the right and left of each bar, respectively.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52240,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S10. Recall and precision of SV calling using four tools for nine different tumour-normal read depth combinations in COLO829 and HCC1937. Each of the eight blocks represents results from an SV caller for a cell line. Within each block, the y-axis indicates the read depth combinations, and the x-axis represents the number of discordant or concordant SV calls.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52623,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S11. The rainfall plots of FN, FP, and TP SNVs of ClairS in COLO829. Chromosomes 1\u201322 were listed as rows, with the ideogram shown at the top. The colour in the chromosome ideograms is shown in the key. The x-axis presents the position on each chromosome, and the y-axis presents the distance between an SNV and its neighbouring SNV. Points are coloured as FN (red), FP (blue), and TP (yellow). Cytogenetic bands (Stain): gneg (light), gpos25\u2013100 (increasingly dark), acen (centromere, red), gvar (heterochromatic regions), and stalk (secondary constriction).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53209,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S12. The rainfall plots of FN, FP, and TP SNVs of ClairS in HCC1937. Chromosomes 1\u201322 were listed as rows, with the ideogram shown at the top. The colour in the chromosome ideograms is shown in the key. The x-axis presents the position on each chromosome, and the y-axis presents the distance between an SNV and its neighbouring SNV. Points are coloured as FN (red), FP (blue), and TP (yellow). Cytogenetic bands (Stain): gneg (light), gpos25\u2013100 (increasingly dark), acen (centromere, red), gvar (heterochromatic regions), and stalk (secondary constriction).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53795,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S13. The rainfall plots of FN, FP, and TP SNVs of DeepSomatic in COLO829. Chromosomes 1\u201322 were listed as rows, with the ideogram shown at the top. The colour in the chromosome ideograms is shown in the key. The x-axis presents the position on each chromosome, and the y-axis presents the distance between an SNV and its neighbouring SNV. Points are coloured as FN (red), FP (blue), and TP (yellow). Cytogenetic bands (Stain): gneg (light), gpos25\u2013100 (increasingly dark), acen (centromere, red), gvar (heterochromatic regions), and stalk (secondary constriction).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54386,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S14. The rainfall plots of FN, FP, and TP SNVs of DeepSomatic in HCC1937. Chromosomes 1\u201322 were listed as rows, with the ideogram shown at the top. The colour in the chromosome ideograms is shown in the key. The x-axis presents the position on each chromosome, and the y-axis presents the distance between an SNV and its neighbouring SNV. Points are coloured as FN (red), FP (blue), and TP (yellow). Cytogenetic bands (Stain): gneg (light), gpos25\u2013100 (increasingly dark), acen (centromere, red), gvar (heterochromatic regions), and stalk (secondary constriction).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54977,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S15. The proportion of false-positive variants that overlap with different genome stratifications across tumour purities. Four types of genome stratifications were examined for SNVs (A) and indels (B) called by ClairS and DeepSomatic in COLO829: segmental duplications, tandem repeats, short read low mappability regions, and abnormal GC% regions. The colour of tiles represents the proportion of variants that overlap with specific genome stratifications.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55456,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S16. The proportion of false-positive SVs that overlap with different genome stratifications in samples with 100% tumour purity. SVs specific to LRS are termed false-positive events compared to short reads. Genome stratifications were labelled on the\u00a0x-axis with results from four tools listed on the horizontal panels for COLO829 (left) and HCC1937 (right). Bars in teal represent the SV proportions that overlap with specific genome stratifications.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55931,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S17. Germline leakage rate across tumour purity and sequencing depth. (A) The germline leakage rate in samples of the COLO829 and HCC1937 cell lines with tumour purity from 100% to 10% for ClairS and DeepSomatic. (B) The germline leakage rate in variant calls with different tumour and normal read depth combinations for ClairS and DeepSomatic in COLO829 and HCC1937. Only tumour samples with 100% tumour purity were shown in the plot.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56389,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Figure S18. Benchmarking SV detection using the public COLO829 gold standard. (A) Heatmap showing the 68 gold standard SVs (x-axis) that were detected or missed by four tools across different tumour purities, with colours indicating the SV types. (B) Bar plots display the recall and precision rates calculated for each tool under different tumour purities, with colours indicating the FP, FN, or TP.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56805,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Table S1. Comparison of LRS alignments between CHM13-T2T and GRCh38 human reference assemblies.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56916,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Table S2. SNV detection of intersections and unions between ClairS and DeepSomatic across tumour purity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57036,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": " Supplementary Table S3. The somatic SNV calling performance on chromosome 22 using ClairS and DeepSomatic.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57144,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supplementary Material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57167,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57188,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "Jia Zhang (Conceptualization [lead], Formal analysis [lead], Investigation [lead], Methodology [lead], Software [lead], Visualization [lead], Writing \u2013 original draft [lead]), Ho Yi Wong (Investigation [supporting], Resources [supporting], Writing \u2013 review & editing [supporting]), Lingchen Liu (Methodology [supporting], Writing \u2013 review & editing [supporting]), Lambros T. Koufariotis (Formal analysis [supporting], Resources [supporting], Writing \u2013 review & editing [supporting]), Scott Wood (Resources [supporting], Writing \u2013 review & editing [supporting]), Nadine Fitzpatrick (Investigation [supporting], Resources [supporting], Writing \u2013 review & editing [supporting]), Jenny Quiatchon (Investigation [supporting], Resources [supporting], Writing \u2013 review & editing [supporting]), Paul Collins (Investigation [supporting], Resources [supporting], Supervision [supporting], Writing \u2013 review & editing [supporting]), John V. Pearson (Conceptualization [equal], Data curation [supporting], Funding acquisition [equal], Methodology [supporting], Resources [supporting], Supervision [equal], Writing \u2013 review & editing [supporting]) and Nicola Waddell\u00a0(Conceptualization [equal], Data curation [supporting], Funding acquisition [equal], Methodology [supporting], Resources [supporting], Supervision [equal], Writing \u2013 review & editing [supporting])",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58559,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "title_1"
+                        },
+                        "text": "Funding",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58567,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "paragraph"
+                        },
+                        "text": "This work was funded by a Cancer Council Queensland (CCQ) Accelerating Collaborative Cancer Research (AACR) Grant (000000027). N.W. is funded by the National Health and Medical Research Council of Australia (NHMRC) Investigator Grant (2018244). L.L. is supported by a University of Queensland Graduate School Scholarship, QIMR Berghofer PhD Top-Up Scholarship. This research was performed on QIMR Berghofer computing infrastructure supported by the Ian Potter Foundation and the Australian Cancer Research Foundation (ACRF) through the ACRF Centre for Optimised Cancer Therapy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59145,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59163,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "All additional supporting data are available in the GigaScience repository, GigaDB. The BAM files for cell line mixtures are available from the European Genome-Phenome Archive (EGA) under accession number EGAD00001015628 under study EGAS00001008107. Raw POD5 files are available on request.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59454,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Competing interests",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59474,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "J.V.P. and N.W. are co-founders of genomiQa. L.L. and N.W. were funded by Oxford Nanopore to present work from this study at meetings. The remaining authors declare that there are no competing interests.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59678,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59689,
+                        "infons": {
+                            "fpage": "94",
+                            "lpage": "101",
+                            "pub-id_doi": "10.1038/s41586-020-1943-3",
+                            "pub-id_pmid": "32025018",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "578",
+                            "year": "2020"
+                        },
+                        "text": "The repertoire of mutational signatures in human cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59745,
+                        "infons": {
+                            "fpage": "31",
+                            "lpage": "46",
+                            "pub-id_doi": "10.1158/2159-8290.CD-21-1059",
+                            "pub-id_pmid": "35022204",
+                            "section_type": "REF",
+                            "source": "Cancer Discov",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2022"
+                        },
+                        "text": "Hallmarks of cancer: new dimensions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59781,
+                        "infons": {
+                            "fpage": "82",
+                            "lpage": "93",
+                            "pub-id_doi": "10.1038/s41586-020-1969-6",
+                            "pub-id_pmid": "32025007",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "578",
+                            "year": "2020"
+                        },
+                        "text": "Pan-cancer analysis of whole genomes consortium. pan-cancer analysis of whole genomes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59867,
+                        "infons": {
+                            "fpage": "312",
+                            "lpage": "17",
+                            "pub-id_doi": "10.1038/s41586-018-0811-x",
+                            "pub-id_pmid": "30602793",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "565",
+                            "year": "2019"
+                        },
+                        "text": "Age-related remodelling of oesophageal epithelia by mutated cancer drivers",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 59942,
+                        "infons": {
+                            "fpage": "100540",
+                            "pub-id_doi": "10.1016/j.esmoop.2022.100540",
+                            "pub-id_pmid": "35849877",
+                            "section_type": "REF",
+                            "source": "ESMO Open",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2022"
+                        },
+                        "text": "Comparison of actionable events detected in cancer genomes by whole-genome sequencing, in silico whole-exome and mutation panels",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60071,
+                        "infons": {
+                            "fpage": "91",
+                            "pub-id_doi": "10.1038/s41698-022-00334-z",
+                            "section_type": "REF",
+                            "source": "NPJ Precis Onc",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2022"
+                        },
+                        "text": "Comprehensive pan-cancer genomic landscape of KRAS altered cancers and real-world outcomes in solid tumors",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60178,
+                        "infons": {
+                            "fpage": "483",
+                            "lpage": "501",
+                            "pub-id_doi": "10.1038/s41576-021-00338-8",
+                            "pub-id_pmid": "33762738",
+                            "section_type": "REF",
+                            "source": "Nat Rev Genet",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2021"
+                        },
+                        "text": "Clinical cancer genomic profiling",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60212,
+                        "infons": {
+                            "fpage": "9029",
+                            "pub-id_doi": "10.1038/s41467-024-53260-y",
+                            "pub-id_pmid": "39424793",
+                            "section_type": "REF",
+                            "source": "Nat Commun",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2024"
+                        },
+                        "text": "The GIAB genomic stratifications resource for human reference genomes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60282,
+                        "infons": {
+                            "fpage": "1275",
+                            "pub-id_doi": "10.3390/cancers16071275",
+                            "pub-id_pmid": "38610953",
+                            "section_type": "REF",
+                            "source": "Cancers",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2024"
+                        },
+                        "text": "The application of long-read sequencing to cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60332,
+                        "infons": {
+                            "fpage": "246",
+                            "pub-id_doi": "10.1186/s13059-019-1828-7",
+                            "pub-id_pmid": "31747936",
+                            "section_type": "REF",
+                            "source": "Genome Biol",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2019"
+                        },
+                        "text": "Structural variant calling: the long and the short of it",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60389,
+                        "infons": {
+                            "fpage": "278",
+                            "lpage": "89",
+                            "pub-id_doi": "10.1016/j.gpb.2015.08.002",
+                            "pub-id_pmid": "26542840",
+                            "section_type": "REF",
+                            "source": "Genomics Proteomics Bioinformatics",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2015"
+                        },
+                        "text": "PacBio sequencing and its applications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60428,
+                        "infons": {
+                            "fpage": "1348",
+                            "lpage": "1365",
+                            "pub-id_doi": "10.1038/s41587-021-01108-x",
+                            "pub-id_pmid": "34750572",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "39",
+                            "year": "2021"
+                        },
+                        "text": "Nanopore sequencing technology, bioinformatics and applications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60492,
+                        "infons": {
+                            "fpage": "688",
+                            "lpage": "96",
+                            "pub-id_doi": "10.1101/gr.168450.113",
+                            "pub-id_pmid": "24418700",
+                            "section_type": "REF",
+                            "source": "Genome Res",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2014"
+                        },
+                        "text": "Reconstructing complex regions of genomes using long-read sequencing technology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60572,
+                        "infons": {
+                            "fpage": "44",
+                            "lpage": "53",
+                            "pub-id_doi": "10.1126/science.abj6987",
+                            "pub-id_pmid": "35357919",
+                            "section_type": "REF",
+                            "source": "Science",
+                            "type": "ref",
+                            "volume": "376",
+                            "year": "2022"
+                        },
+                        "text": "The complete sequence of a human genome",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60612,
+                        "infons": {
+                            "fpage": "261",
+                            "lpage": "66",
+                            "pub-id_doi": "10.1038/nbt.2833",
+                            "pub-id_pmid": "24561555",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "32",
+                            "year": "2014"
+                        },
+                        "text": "Whole-genome haplotyping using long reads and statistical methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60678,
+                        "infons": {
+                            "fpage": "3",
+                            "lpage": "10",
+                            "pub-id_doi": "10.1038/s10038-019-0658-5",
+                            "pub-id_pmid": "31474751",
+                            "section_type": "REF",
+                            "source": "J Hum Genet",
+                            "type": "ref",
+                            "volume": "65",
+                            "year": "2020"
+                        },
+                        "text": "A new era of long-read sequencing for cancer genomics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60732,
+                        "infons": {
+                            "fpage": "1126",
+                            "lpage": "35",
+                            "pub-id_doi": "10.1101/gr.231100.117",
+                            "pub-id_pmid": "29954844",
+                            "section_type": "REF",
+                            "source": "Genome Res",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2018"
+                        },
+                        "text": "Complex rearrangements and oncogene amplifications revealed by long-read DNA and RNA sequencing of a breast cancer cell line",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60857,
+                        "infons": {
+                            "fpage": "108174",
+                            "pub-id_doi": "10.1016/j.compbiomed.2024.108174",
+                            "pub-id_pmid": "38442557",
+                            "section_type": "REF",
+                            "source": "Comput Biol Med",
+                            "type": "ref",
+                            "volume": "171",
+                            "year": "2024"
+                        },
+                        "text": "Long-read sequencing unveils novel somatic variants and methylation patterns in the genetic information system of early lung cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 60989,
+                        "infons": {
+                            "fpage": "e1010514",
+                            "pub-id_doi": "10.1371/journal.pgen.1010514",
+                            "pub-id_pmid": "36812239",
+                            "section_type": "REF",
+                            "source": "PLoS Genet",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2023"
+                        },
+                        "text": "Long-read sequencing identifies novel structural variations in colorectal cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61070,
+                        "infons": {
+                            "fpage": "100674",
+                            "pub-id_doi": "10.1016/j.xgen.2024.100674",
+                            "pub-id_pmid": "39406235",
+                            "section_type": "REF",
+                            "source": "Cell Genomics",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2024"
+                        },
+                        "text": "Long-read sequencing of an advanced cancer cohort resolves rearrangements, unravels haplotypes, and reveals methylation landscapes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61201,
+                        "infons": {
+                            "fpage": "840",
+                            "lpage": "48",
+                            "pub-id_doi": "10.1038/s41591-024-03435-3",
+                            "pub-id_pmid": "40021833",
+                            "section_type": "REF",
+                            "source": "Nat Med",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2025"
+                        },
+                        "text": "Rapid brain tumor classification from sparse epigenomic data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61262,
+                        "infons": {
+                            "fpage": "1567",
+                            "lpage": "77",
+                            "pub-id_doi": "10.1038/s41591-025-03562-5",
+                            "pub-id_pmid": "40133526",
+                            "section_type": "REF",
+                            "source": "Nat Med",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2025"
+                        },
+                        "text": "Prospective, multicenter validation of a platform for rapid molecular profiling of central nervous system tumors",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61375,
+                        "infons": {
+                            "fpage": "giab003",
+                            "pub-id_doi": "10.1093/gigascience/giab003",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2021"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61376,
+                        "infons": {
+                            "fpage": "338",
+                            "lpage": "45",
+                            "pub-id_doi": "10.1038/nbt.4060",
+                            "pub-id_pmid": "29431738",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "36",
+                            "year": "2018"
+                        },
+                        "text": "Nanopore sequencing and assembly of a human genome with ultra-long reads",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61449,
+                        "infons": {
+                            "fpage": "329",
+                            "lpage": "46",
+                            "pub-id_doi": "10.1038/s41576-018-0003-4",
+                            "pub-id_pmid": "29599501",
+                            "section_type": "REF",
+                            "source": "Nat Rev Genet",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2018"
+                        },
+                        "text": "Piercing the dark matter: bioinformatics of long-range sequencing and mapping",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61527,
+                        "infons": {
+                            "fpage": "e16515",
+                            "pub-id_doi": "10.7717/peerj.16515",
+                            "pub-id_pmid": "38130927",
+                            "section_type": "REF",
+                            "source": "PeerJ",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2023"
+                        },
+                        "text": "Benchmarking long-read genome sequence alignment tools for human genomics applications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61614,
+                        "infons": {
+                            "fpage": "898",
+                            "pub-id_doi": "10.1186/s12864-024-10792-3",
+                            "pub-id_pmid": "39350042",
+                            "section_type": "REF",
+                            "source": "BMC Genomics",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2024"
+                        },
+                        "text": "Performance of somatic structural variant calling in lung cancer using Oxford Nanopore sequencing technology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61723,
+                        "infons": {
+                            "fpage": "69",
+                            "pub-id_doi": "10.1186/s13059-024-03207-9",
+                            "pub-id_pmid": "38468278",
+                            "section_type": "REF",
+                            "source": "Genome Biol",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2024"
+                        },
+                        "text": "A comparison of methods for detecting DNA methylation from long-read sequencing of human genomes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61820,
+                        "infons": {
+                            "fpage": "1810",
+                            "lpage": "21",
+                            "pub-id_doi": "10.1038/s41592-023-02026-3",
+                            "pub-id_pmid": "37783886",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2023"
+                        },
+                        "text": "Benchmarking long-read RNA-sequencing analysis tools using in silico mixtures",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 61898,
+                        "infons": {
+                            "fpage": "295",
+                            "pub-id_doi": "10.1186/s13059-021-02510-z",
+                            "pub-id_pmid": "34663425",
+                            "section_type": "REF",
+                            "source": "Genome Biol",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2021"
+                        },
+                        "text": "DNA methylation-calling tools for Oxford Nanopore sequencing: a survey and human epigenome-wide evaluation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62005,
+                        "infons": {
+                            "pub-id_doi": "10.1038/s41587-025-02839-x",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "Accurate somatic small variant discovery for multiple sequencing technologies with DeepSomatic",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62100,
+                        "infons": {
+                            "fpage": "9630",
+                            "pub-id_doi": "10.1038/s41467-025-64547-z",
+                            "pub-id_pmid": "41173866",
+                            "section_type": "REF",
+                            "source": "Nat Commun",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2025"
+                        },
+                        "text": "ClairS-TO: a deep-learning method for long-read tumor-only somatic small variant calling",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62189,
+                        "infons": {
+                            "fpage": "247",
+                            "lpage": "257",
+                            "pub-id_doi": "10.1038/s41587-025-02618-8",
+                            "pub-id_pmid": "40185952",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "44",
+                            "year": "2026"
+                        },
+                        "text": "Severus detects somatic structural variation and complex rearrangements in cancer genomes using long-read sequencing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62306,
+                        "infons": {
+                            "fpage": "1436",
+                            "lpage": "46",
+                            "pub-id_doi": "10.1038/s41592-025-02708-0",
+                            "pub-id_pmid": "40437218",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2025"
+                        },
+                        "text": "SAVANA: reliable analysis of somatic structural variants and copy number aberrations using long-read sequencing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62418,
+                        "infons": {
+                            "fpage": "210",
+                            "lpage": "23",
+                            "pub-id_doi": "10.1016/j.cels.2015.08.015",
+                            "pub-id_pmid": "26645048",
+                            "section_type": "REF",
+                            "source": "Cell Syst",
+                            "type": "ref",
+                            "volume": "1",
+                            "year": "2015"
+                        },
+                        "text": "Optimizing cancer genome sequencing and analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62467,
+                        "infons": {
+                            "fpage": "1141",
+                            "lpage": "50",
+                            "pub-id_doi": "10.1038/s41587-021-00994-5",
+                            "pub-id_pmid": "34504346",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "39",
+                            "year": "2021"
+                        },
+                        "text": "Toward best practice in cancer mutation detection with whole-genome and whole-exome sequencing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62562,
+                        "infons": {
+                            "fpage": "e1252",
+                            "pub-id_doi": "10.1002/ctm2.1252",
+                            "section_type": "REF",
+                            "source": "Clinical & Translational Med",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2023"
+                        },
+                        "text": "Tumour purity as an underlying key factor in tumour mutation detection in colorectal cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62654,
+                        "infons": {
+                            "fpage": "995",
+                            "lpage": "1005",
+                            "pub-id_doi": "10.1200/PO.20.00016",
+                            "section_type": "REF",
+                            "source": "JCO Precis Oncol",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2020"
+                        },
+                        "text": "Systematic assessment of tumor purity and its clinical implications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62722,
+                        "infons": {
+                            "fpage": "8971",
+                            "pub-id_doi": "10.1038/ncomms9971",
+                            "pub-id_pmid": "26634437",
+                            "section_type": "REF",
+                            "source": "Nat Commun",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2015"
+                        },
+                        "text": "Systematic pan-cancer analysis of tumour purity",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62770,
+                        "infons": {
+                            "fpage": "321",
+                            "lpage": "32",
+                            "pub-id_doi": "10.1038/nrg3445",
+                            "pub-id_pmid": "23594910",
+                            "section_type": "REF",
+                            "source": "Nat Rev Genet",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2013"
+                        },
+                        "text": "Cancer genome-sequencing study design",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62808,
+                        "infons": {
+                            "fpage": "28",
+                            "pub-id_doi": "10.1186/s12859-018-2046-0",
+                            "section_type": "REF",
+                            "source": "BMC Bioinf",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2018"
+                        },
+                        "text": "Germline contamination and leakage in whole genome somatic single nucleotide variant detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62903,
+                        "infons": {
+                            "fpage": "92",
+                            "lpage": "100",
+                            "pub-id_doi": "10.1038/s41586-023-06045-0",
+                            "pub-id_pmid": "38057664",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "625",
+                            "year": "2024"
+                        },
+                        "text": "A genomic mutational constraint map using variation in 76,156 human genomes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 62979,
+                        "infons": {
+                            "fpage": "100139",
+                            "pub-id_doi": "10.1016/j.xgen.2022.100139",
+                            "pub-id_pmid": "36778136",
+                            "section_type": "REF",
+                            "source": "Cell Genomics",
+                            "type": "ref",
+                            "volume": "2",
+                            "year": "2022"
+                        },
+                        "text": "A multi-platform reference for somatic structural variation detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63049,
+                        "infons": {
+                            "fpage": "3438",
+                            "pub-id_doi": "10.1038/s41467-021-23778-6",
+                            "pub-id_pmid": "34103501",
+                            "section_type": "REF",
+                            "source": "Nat Commun",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2021"
+                        },
+                        "text": "Systematic benchmarking of tools for CpG methylation detection from nanopore sequencing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63137,
+                        "infons": {
+                            "fpage": "1349",
+                            "lpage": "63",
+                            "pub-id_doi": "10.1038/s41592-024-02298-3",
+                            "pub-id_pmid": "38849569",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "21",
+                            "year": "2024"
+                        },
+                        "text": "Systematic assessment of long-read RNA-seq methods for transcript identification and quantification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63237,
+                        "infons": {
+                            "fpage": "10001",
+                            "pub-id_doi": "10.1038/ncomms10001",
+                            "pub-id_pmid": "26647970",
+                            "section_type": "REF",
+                            "source": "Nat Commun",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2015"
+                        },
+                        "text": "A comprehensive assessment of somatic mutation detection in cancer using whole-genome sequencing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63334,
+                        "infons": {
+                            "fpage": "983",
+                            "lpage": "87",
+                            "pub-id_doi": "10.1038/nbt.4235",
+                            "pub-id_pmid": "30247488",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "36",
+                            "year": "2018"
+                        },
+                        "text": "A universal SNP and small-indel variant caller using deep neural networks",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63408,
+                        "infons": {
+                            "fpage": "qzaf082",
+                            "pub-id_doi": "10.1093/gpbjnl/qzaf082",
+                            "pub-id_pmid": "40973068",
+                            "section_type": "REF",
+                            "source": "Genomics Proteomics Bioinformatics",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "Long-range somatic structural variation calling from matched tumor-normal co-assembly graphs",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63501,
+                        "infons": {
+                            "fpage": "e11524",
+                            "pub-id_doi": "10.1002/aps3.11524",
+                            "pub-id_pmid": "37342170",
+                            "section_type": "REF",
+                            "source": "Appl Plant Sci",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2023"
+                        },
+                        "text": "Balancing read length and sequencing depth: Optimizing Nanopore long-read sequencing for monocots with an emphasis on the Liliales",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63632,
+                        "infons": {
+                            "fpage": "18",
+                            "pub-id_doi": "10.1038/s41439-024-00276-x",
+                            "pub-id_pmid": "38632226",
+                            "section_type": "REF",
+                            "source": "Hum Genome Var",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2024"
+                        },
+                        "text": "Comparative evaluation of SNVs, indels, and structural variations detected with short- and long-read sequencing data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63749,
+                        "infons": {
+                            "fpage": "2139",
+                            "lpage": "48",
+                            "pub-id_doi": "10.1038/s41588-023-01540-6",
+                            "pub-id_pmid": "37945902",
+                            "section_type": "REF",
+                            "source": "Nat Genet",
+                            "type": "ref",
+                            "volume": "55",
+                            "year": "2023"
+                        },
+                        "text": "Most large structural variants in cancer genomes can be detected without long reads",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63833,
+                        "infons": {
+                            "fpage": "1483",
+                            "lpage": "92",
+                            "pub-id_doi": "10.1038/s41592-023-01993-x",
+                            "pub-id_pmid": "37710018",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2023"
+                        },
+                        "text": "Scalable Nanopore sequencing of human genomes provides a comprehensive view of haplotype-resolved variation and methylation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 63957,
+                        "infons": {
+                            "fpage": "57",
+                            "pub-id_doi": "10.1038/s41525-024-00445-5",
+                            "pub-id_pmid": "39516456",
+                            "section_type": "REF",
+                            "source": "npj Genom Med",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2024"
+                        },
+                        "text": "Benchmarking nanopore sequencing and rapid genomics feasibility: validation at a quaternary hospital in New Zealand",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64073,
+                        "infons": {
+                            "fpage": "464",
+                            "lpage": "83",
+                            "pub-id_doi": "10.1038/s41576-023-00590-0",
+                            "pub-id_pmid": "37059810",
+                            "section_type": "REF",
+                            "source": "Nat Rev Genet",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2023"
+                        },
+                        "text": "Variant calling and benchmarking in an era of complete human genome sequences",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64151,
+                        "infons": {
+                            "pub-id_doi": "10.1101/2024.03.15.24304369",
+                            "section_type": "REF",
+                            "source": "medRxiv",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "The benefit of a complete reference genome for cancer structural variant analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64233,
+                        "infons": {
+                            "fpage": "9000",
+                            "pub-id_doi": "10.1038/s41598-024-59683-3",
+                            "pub-id_pmid": "38637641",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2024"
+                        },
+                        "text": "Long-read sequencing and optical mapping generates near T2T assemblies that resolves a centromeric translocation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64346,
+                        "infons": {
+                            "fpage": "595",
+                            "lpage": "97",
+                            "pub-id_doi": "10.1038/s41592-018-0054-7",
+                            "pub-id_pmid": "30013044",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2018"
+                        },
+                        "text": "A synthetic-diploid benchmark for accurate variant-calling evaluation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64416,
+                        "infons": {
+                            "fpage": "1",
+                            "lpage": "6",
+                            "pub-id_doi": "10.1093/gigascience/gix010",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2017"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64417,
+                        "infons": {
+                            "fpage": "589",
+                            "lpage": "95",
+                            "pub-id_doi": "10.1093/bioinformatics/btaa835",
+                            "pub-id_pmid": "32976553",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "37",
+                            "year": "2021"
+                        },
+                        "text": "PBSIM2: a simulator for long-read sequencers with a novel generative model of quality scores",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64510,
+                        "infons": {
+                            "fpage": "24607",
+                            "pub-id_doi": "10.1038/srep24607",
+                            "pub-id_pmid": "27094764",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2016"
+                        },
+                        "text": "A somatic reference standard for cancer genome sequencing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64568,
+                        "infons": {
+                            "fpage": "623",
+                            "lpage": "30",
+                            "pub-id_doi": "10.1038/nmeth.3407",
+                            "pub-id_pmid": "25984700",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2015"
+                        },
+                        "text": "Combining tumor genome simulation with crowdsourcing to benchmark somatic single-nucleotide-variant detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64678,
+                        "infons": {
+                            "fpage": "431",
+                            "lpage": "42",
+                            "pub-id_doi": "10.1038/s41587-024-02225-z",
+                            "pub-id_pmid": "38671154",
+                            "section_type": "REF",
+                            "source": "Nat Biotechnol",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "2025"
+                        },
+                        "text": "Analysis and benchmarking of small and large genomic variants across tandem repeats",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64762,
+                        "infons": {
+                            "comment": "Dorado: Oxford Nanopore\u2019s Basecaller (Accessed Dec 2023)",
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64763,
+                        "infons": {
+                            "fpage": "2078",
+                            "lpage": "79",
+                            "pub-id_doi": "10.1093/bioinformatics/btp352",
+                            "pub-id_pmid": "19505943",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2009"
+                        },
+                        "text": "The sequence alignment/map format and SAMtools",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64810,
+                        "infons": {
+                            "fpage": "4572",
+                            "lpage": "74",
+                            "pub-id_doi": "10.1093/bioinformatics/btab705",
+                            "pub-id_pmid": "34623391",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "37",
+                            "year": "2021"
+                        },
+                        "text": "New strategies to improve minimap2 alignment accuracy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64864,
+                        "infons": {
+                            "fpage": "2032",
+                            "lpage": "34",
+                            "pub-id_doi": "10.1093/bioinformatics/btv098",
+                            "pub-id_pmid": "25697820",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2015"
+                        },
+                        "text": "Sambamba: fast processing of NGS alignment formats",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64915,
+                        "infons": {
+                            "fpage": "867",
+                            "lpage": "68",
+                            "pub-id_doi": "10.1093/bioinformatics/btx699",
+                            "pub-id_pmid": "29096012",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2018"
+                        },
+                        "text": "Mosdepth: quick coverage calculation for genomes and exomes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64975,
+                        "infons": {
+                            "fpage": "giab008",
+                            "pub-id_doi": "10.1093/gigascience/giab008",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2021"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 64976,
+                        "infons": {
+                            "fpage": "i333",
+                            "lpage": "i339",
+                            "pub-id_doi": "10.1093/bioinformatics/bts378",
+                            "pub-id_pmid": "22962449",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2012"
+                        },
+                        "text": "DELLY: structural variant discovery by integrated paired-end and split-read analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65061,
+                        "infons": {
+                            "fpage": "e74",
+                            "pub-id_doi": "10.1093/nar/gkad526",
+                            "pub-id_pmid": "37336583",
+                            "section_type": "REF",
+                            "source": "Nucleic Acids Res",
+                            "type": "ref",
+                            "volume": "51",
+                            "year": "2023"
+                        },
+                        "text": "Precise characterization of somatic complex structural variations from tumor/control paired long-read sequencing data with nanomonsv",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65194,
+                        "infons": {
+                            "fpage": "127",
+                            "lpage": "38",
+                            "pub-id_doi": "10.1007/978-1-0716-2819-5_8",
+                            "pub-id_pmid": "36335496",
+                            "section_type": "REF",
+                            "source": "Methods Mol Biol",
+                            "type": "ref",
+                            "volume": "2590",
+                            "year": "2023"
+                        },
+                        "text": "Read-based phasing and analysis of phased variants with WhatsHap",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65259,
+                        "infons": {
+                            "fpage": "11.10.1",
+                            "lpage": "11.10.33",
+                            "pub-id_doi": "10.1002/0471250953.bi1110s43",
+                            "section_type": "REF",
+                            "source": "Curr Protoc Bioinformatics",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "2013"
+                        },
+                        "text": "From FastQ data to high-confidence variant calls: the genome analysis toolkit best practices pipeline",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65361,
+                        "infons": {
+                            "fpage": "e74380",
+                            "pub-id_doi": "10.1371/journal.pone.0074380",
+                            "pub-id_pmid": "24250782",
+                            "section_type": "REF",
+                            "source": "PLoS One",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2013"
+                        },
+                        "text": "Somatic point mutation calling in low cellularity tumors",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65418,
+                        "infons": {
+                            "fpage": "202",
+                            "pub-id_doi": "10.1186/s13059-021-02423-x",
+                            "pub-id_pmid": "34253237",
+                            "section_type": "REF",
+                            "source": "Genome Biol",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2021"
+                        },
+                        "text": "GRIDSS2: comprehensive characterisation of somatic structural variation using single breakend variants and structural variant phasing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65552,
+                        "infons": {
+                            "fpage": "R84",
+                            "pub-id_doi": "10.1186/gb-2014-15-6-r84",
+                            "pub-id_pmid": "24970577",
+                            "section_type": "REF",
+                            "source": "Genome Biol",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2014"
+                        },
+                        "text": "LUMPY: a probabilistic framework for structural variant discovery",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65618,
+                        "infons": {
+                            "fpage": "408",
+                            "lpage": "17",
+                            "pub-id_doi": "10.1038/s41592-022-01753-3",
+                            "pub-id_pmid": "36658279",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2023"
+                        },
+                        "text": "Jasmine and Iris: population-scale structural variant comparison and analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65696,
+                        "infons": {
+                            "fpage": "1363",
+                            "lpage": "69",
+                            "pub-id_doi": "10.1093/bioinformatics/btu049",
+                            "pub-id_pmid": "24478339",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "30",
+                            "year": "2014"
+                        },
+                        "text": "Minfi: a flexible and comprehensive bioconductor package for the analysis of Infinium DNA methylation microarrays",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65810,
+                        "infons": {
+                            "fpage": "e1003118",
+                            "pub-id_doi": "10.1371/journal.pcbi.1003118",
+                            "pub-id_pmid": "23950696",
+                            "section_type": "REF",
+                            "source": "PLoS Comput Biol",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2013"
+                        },
+                        "text": "Software for computing and annotating genomic ranges",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65863,
+                        "infons": {
+                            "fpage": "1841",
+                            "lpage": "42",
+                            "pub-id_doi": "10.1093/bioinformatics/btp328",
+                            "pub-id_pmid": "19468054",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2009"
+                        },
+                        "text": "rtracklayer: an R package for interfacing with genome browsers",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65926,
+                        "infons": {
+                            "fpage": "D1188",
+                            "lpage": "D95",
+                            "pub-id_doi": "10.1093/nar/gkac1072",
+                            "pub-id_pmid": "36420891",
+                            "section_type": "REF",
+                            "source": "Nucleic Acids Res",
+                            "type": "ref",
+                            "volume": "51",
+                            "year": "2023"
+                        },
+                        "text": "The UCSC Genome Browser database: 2023 update",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 65972,
+                        "infons": {
+                            "fpage": "2076",
+                            "lpage": "78",
+                            "pub-id_doi": "10.1093/bioinformatics/btu168",
+                            "pub-id_pmid": "24681907",
+                            "section_type": "REF",
+                            "source": "Bioinformatics",
+                            "type": "ref",
+                            "volume": "30",
+                            "year": "2014"
+                        },
+                        "text": "VariantAnnotation: a bioconductor package for exploration and annotation of genetic variants",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 66065,
+                        "infons": {
+                            "fpage": "D1243",
+                            "lpage": "49",
+                            "pub-id_doi": "10.1093/nar/gkae974",
+                            "pub-id_pmid": "39460617",
+                            "section_type": "REF",
+                            "source": "Nucleic Acids Res",
+                            "type": "ref",
+                            "volume": "53",
+                            "year": "2025"
+                        },
+                        "text": "The UCSC Genome Browser database: 2025 update",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 66111,
+                        "infons": {
+                            "fpage": "31",
+                            "pub-id_doi": "10.1186/s13059-016-0893-4",
+                            "pub-id_pmid": "26899170",
+                            "section_type": "REF",
+                            "source": "Genome Biol",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2016"
+                        },
+                        "text": "DeconstructSigs: delineating mutational processes in single tumors distinguishes DNA repair deficiencies and patterns of carcinoma evolution",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 66252,
+                        "infons": {
+                            "fpage": "1686",
+                            "pub-id_doi": "10.21105/joss.01686",
+                            "section_type": "REF",
+                            "source": "JOSS",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2019"
+                        },
+                        "text": "Welcome to the tidyverse",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 66277,
+                        "infons": {
+                            "pub-id_doi": "10.1007/978-3-319-24277-4",
+                            "section_type": "REF",
+                            "source": "ggplot2: Elegant Graphics for Data Analysis",
+                            "type": "ref",
+                            "year": "2016"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 66278,
+                        "infons": {
+                            "comment": "ggh4x: Hacks for \u201cggplot2.\u201d R package version 0.3.1.9000. 2025 Accessed Jan 2024",
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 66279,
+                        "infons": {
+                            "comment": "GigaScience Database",
+                            "pub-id_doi": "10.5524/102811",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2026"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

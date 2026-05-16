@@ -1,0 +1,2503 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260507",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13140756",
+                "infons": {
+                    "license": "CC BY-NC-ND"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1049/syb2.70060",
+                            "article-id_pmc": "PMC13140756",
+                            "article-id_pmid": "41902378",
+                            "article-id_publisher-id": "SYB270060",
+                            "elocation-id": "e70060",
+                            "issue": "1",
+                            "kwd": "bioinformatics data analysis feature extraction neural nets",
+                            "license": "This is an open access article under the terms of the http://creativecommons.org/licenses/by-nc-nd/4.0/ License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non\u2010commercial and no modifications or adaptations are made.",
+                            "name_0": "surname:Shen;given-names:Jie",
+                            "name_1": "surname:Miao;given-names:Zheng",
+                            "name_10": "surname:Zhang;given-names:Fuquan",
+                            "name_2": "surname:Wang;given-names:Lixia",
+                            "name_3": "surname:Huo;given-names:Zhen",
+                            "name_4": "surname:Lu;given-names:Tao",
+                            "name_5": "surname:Liang;given-names:Yuebin",
+                            "name_6": "surname:Ji;given-names:Binbin",
+                            "name_7": "surname:Xi;given-names:ShuXue",
+                            "name_8": "surname:Tian;given-names:Geng",
+                            "name_9": "surname:Yang;given-names:Jialiang",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "20",
+                            "year": "2026"
+                        },
+                        "text": "Deep Learning Can Predict the Overall Survival of Cervical Cancer Based on Histopathological Image, Gene Mutation and Clinical Information",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 139,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "ABSTRACT",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 148,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The fusion of data features from different modes, such as pathology images and sequence data, has the potential to predict the overall survival (OS) of patients with cervical cancer. This study aims to develop a novel prediction model for overall survival (OS) that incorporates pathology images, clinical data and molecular data. The model underwent training using comprehensive cervical cancer data from The Cancer Genome Atlas (TCGA), which include 119 patients. To independently validate the model, we used a manually collected dataset from Peking Union Medical College Hospital (PUMCH), comprising 53 patients with cervical cancer. LASSO Cox regression analysis was applied to identify relevant features associated with overall survival (OS), resulting in the identification of 484 genes, including RGR, DBN1 and CALCR, as well as numerous image features. Building upon these findings, a multimodal deep learning model was developed to effectively classify the overall survival (OS) of patients with cervical cancer into two categories: short term (ST: \u2264\u00a03\u00a0years) and long term (LT: >\u00a03\u00a0years) based on the integration of pathology images and clinical features. The developed model achieved reasonably good prediction accuracy in the independent testing dataset from PUMCH, with an area under the curve (AUC) value of 0.783. In conclusion, the combination of pathology images with clinical and molecular data enables the creation of accurate and reliable prediction models for cervical cancer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1653,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "This study aims to develop a novel prediction model for the overall survival of patients with cervical cancer by incorporating a comprehensive range of data, including pathology images, clinical data and molecular data. The model was trained using data from The Cancer Genome Atlas (TCGA) and subsequently validated using a dataset from Peking Union Medical College Hospital (PUMCH). The results demonstrate the model's effectiveness, achieving an area under the curve (AUC) value of 0.783. This validates that the combination of pathology images with clinical and molecular data enables the creation of accurate and reliable cervical cancer survival prediction models. ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2324,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2337,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Cervical cancer represents a substantial global health burden, being ranked as the fourth most prevalent cancer among women worldwide. It additionally ranks among the top three cancers affecting women under the age of 45. Because of the\u00a0advancements in cancer screening techniques, human papillomavirus (HPV) vaccines and the identification of cancer mechanisms, such as susceptibility genes, the incidence and mortality of cervical cancer have decreased considerably. Despite these notable advancements, cervical cancer continues to impose a substantial burden, displaying a 5\u2010year overall survival (OS) rate of approximately 66%. Similarly to numerous other cancer types, the OS rates for patients with cervical cancer exhibit significant variations based on the stage of the cancer (https://www.cancer.net/cancer\u2010types/cervical\u2010cancer/statistics). The five\u2010year OS rates for patients with early\u2010stage cervical cancer, those with lymph node metastasis and those with distant metastasis are 92%, 44% and 18%, respectively. The significant decrease in overall survival in advanced\u2010stage cancer patients is primarily attributed to the high frequency of recurrence and metastasis, especially in cases where the origin is unknown. Hence, it is imperative to promptly diagnose cervical cancer and accurately assess the prognosis after resection surgery in order to determine the appropriate course of adjuvant therapy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3765,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The standard treatment for cervical cancer typically entails neoadjuvant chemotherapy combined with surgery, supplementary surgery after radiotherapy or concurrent chemoradiotherapy. These treatment modalities have considerably enhanced the prognosis for patients with cervical cancer. Presently, clinicians depend on the International Federation of Gynaecology and Obstetrics (FIGO) staging system as a means to prognosticate patient outcomes. Studies have demonstrated a close correlation between survival rates and various factors, including tumour pathological type, degree of differentiation, primary tumour size, as well as squamous cell carcinoma antigen levels before and after treatment. Nevertheless, determining the optimal adjuvant therapy and treatment intensity for individual patients remains a challenge. Aggressive treatment approaches can pose risks and adverse effects, whereas milder treatments may not effectively prevent cancer recurrence and metastasis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4742,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Fortunately, the progress in molecular sequencing, medical imaging and machine learning has facilitated the development of computational models that enable the evaluation of prognostic factors in patients with cervical cancer. These models consider crucial factors, including the risk of recurrence and metastasis, as well as the anticipated survival of the patient. For instance, the integration of multiomics data, such as somatic mutation, gene expression and methylation, alongside medical imaging and the cancer tissue microbiome, has been leveraged to anticipate postsurgical resection survival in cancer patients. In addition, data derived from The Cancer Genome Atlas (TCGA), encompassing computed tomography (CT), magnetic resonance imaging (MRI) and whole slide pathological imaging (WSI) data, have been employed to examine overall survival in patients. Meanwhile, with the development of computer\u2010aided diagnosis (CAD) and image scanning technology, whole slide image (WSI) scanners have been widely used in the field of diagnostic pathology.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5799,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Multilayer neural networks, commonly referred to as deep learning, have demonstrated promising outcomes in extracting insights from diverse clinical data as well as medical images. For example, Mukhopadhyay et\u00a0al. integrated deep learning algorithms with haematoxylin and eosin (H&E) images to successfully predict genetic alterations. Likewise, automated histopathological analysis systems have demonstrated their value in prognosticating various malignant tumours, such as breast cancer, lung cancer and colorectal cancer. These systems explore the correlation between the information embedded in pathological images and patients' survival. Yu et\u00a0al. devised a regularised computational framework that discerns long\u2010term and short\u2010term survivors in both Stage I adenocarcinoma (p\u00a0<\u00a00.003) and squamous cell carcinoma (p\u00a0=\u00a00.023) of lung cancer patients within the TCGA dataset. This was achieved by selecting high\u2010level features from the entire H&E images. Sun et\u00a0al. presented a pioneering approach named GPMKL that effectively integrates heterogeneous information, such as genomic data and pathological images, for predicting the survival of breast cancer patients. This method demonstrated superior performance compared to existing survival prediction methods. Zadeh et\u00a0al. introduced DeepSurvNet, a deep convolutional neural network (CNN)\u2010based model, to precisely classify the duration of survival after diagnosis for patients diagnosed with brain cancer. This model utilises histopathological images and categorises survival length into four classes: Class I (0\u20136\u00a0months), Class II (6\u201312\u00a0months), Class III (12\u201324\u00a0months) and Class IV (>\u00a024\u00a0months). Yixin Li et\u00a0al. provided an overview of existing methods for pathology image analysis based on Markov random fields (MRFs) and conditional random fields (CRFs), and in the paper, they introduce the frameworks of the two random field models. They also summarised their analytical operation principles and optimisation methods. Chen Li et\u00a0al., on the other hand, presented a comprehensive review: Machine vision methods for cervical histopathology image analysis are two cross\u2010pipelines. In the first pipeline, this article provides a longitudinal review of related studies based on the application goals of machine vision technology. In the second pipeline, this article provides a cross\u2010sectional review of these studies using detailed machine vision techniques. In addition, this article summarises the research motivation, methodology and system evaluation of each reference. Zizhen Fan et\u00a0al. proposed a weakly supervised cervical cancer nest image recognition method based on the conjunctive attention mechanism and visual transformer (CAM\u2010VT), which can analyse pap slices quickly and accurately. Md Mamunur Rahaman et\u00a0al. proposed a hybrid deep feature fusion (HDFF) technique based on DL to accurately classify cervical cells. In addition, Wanli Liu et\u00a0al. proposed a deep learning\u2010based framework, CVM\u2010Cerebral, for the cervical cell classification task. CVM\u2010Cerebral first proposes a CNN module and a VT module for local and global feature extraction, respectively, and then designs a multilayer perceptron module for fusing the local and global features for final classification. Despite the growing utilisation of deep learning techniques and the analysis of histopathological images in cancer research, to the best of our knowledge, no study has endeavoured to predict the OS of patients with cervical cancer using multimodal deep learning methods that integrate histopathological images, clinical data and multiomics data. Consequently, there is a critical need for a feature fusion methodology capable of effectively integrating survival\u2010associated features from various data domains, including imaging data, genomic data and clinical data.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9658,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "To address this research gap, we introduce a novel multimodal deep residual learning approach aimed at directly predicting the overall survival of patients with cervical cancer using H&E images and clinical information. Specifically, our contributions are as follows: (1) Multimodal deep learning model: We introduce an innovative multimodal deep residual learning model that directly predicts patients with cervical cancer' overall survival by leveraging a combination of H&E images and clinical information. This model harnesses the capabilities of deep learning to effectively integrate diverse data sources. (2) Feature fusion methodology: Addressing existing research gaps, we have developed a feature fusion methodology capable of efficiently integrating survival\u2010associated features from various data domains, including imaging data, genomic data and clinical data. This methodology holds the potential to enhance prognostic accuracy. (3) Independent validation: To rigorously evaluate our model's efficacy, we collected an independent dataset from Peking Union Medical College Hospital (PUMCH). This dataset comprises H&E images, clinical information and somatic mutation data, enabling us to independently validate the model's performance. (4) Clinical impact: Our research seeks to bridge the divide between computational models and clinical practice. By accurately predicting patients with cervical cancer' overall survival, our model has the potential to assist clinicians in making well\u2010informed decisions regarding adjuvant therapy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11209,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In conclusion, this study presents a comprehensive approach to cervical cancer prognosis, integrating state\u2010of\u2010the\u2010art deep learning techniques with multimodal data fusion. We firmly believe that our contributions will advance the field of cervical cancer prognosis and, ultimately, benefit patient care.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11520,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Materials and Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11542,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Training Data Preparation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11568,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We evaluate the proposed methods on the public WSI dataset TCGA\u2010CESC. At the patient level, we randomly split the 119 prognostic patients with somatic mutations in this dataset into training and validation sets with a ratio of 80:20. The fivefold cross\u2010validation method was adopted to screen and determine the model hyperparameters, such as learning rate and optimiser.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11943,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Clinical characteristics of patients, including age, tumour stage, survival time, last follow\u2010up time and status, were compiled. The statistical standard for OS time was defined as the patient's survival time if their status was death; otherwise, it was the last follow\u2010up time. Patients were then categorised into two groups: ST (OS time \u2264\u00a03\u00a0years) and LT (total survival time >\u00a03\u00a0years). We labelled H&E images of patients with OS time of >\u00a03\u00a0years as 0 and\u00a0\u2264\u00a03\u00a0years as 1.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12436,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Testing Data Collection and Analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12473,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We collected complete clinical and pathological data from 80 cases of cervical cancer at PUMCH from October 2004 to June 2012 and used these data for the independent testing of the model. The study design and sample collection were approved by the Medical Ethics Committee of Peking Union Medical College Hospital, and all participants provided informed written consent.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12844,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To be included in the study, patients had to meet the following criteria: (1) confirmation of cervical squamous cell carcinoma or adenocarcinoma by pathology; (2) confirmation of 2018 FIGO Stage Ib\u2013IIb by at least two doctors at the level of deputy director of gynaecological oncology or above; (3) initial treatment with concurrent surgical treatment and chemoradiotherapy; (4) absence of serious heart, liver, kidney, brain or haematopoietic system diseases; (5) no history of immune\u2010related diseases; (6) no other tumours; and (7) complete clinical data. Patients were excluded if they had other tumours, cervical cancer of other pathological types, such as adenosquamous carcinoma or clear cell carcinoma, a history of previous radiotherapy or chemotherapy, or refused to participate in the study.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13650,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Therapy and Efficacy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13671,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The study followed up with each patient at the outpatient clinic every 3\u00a0months for 2\u00a0years and every 6\u00a0months thereafter until October 2019. Each patient was tracked for a minimum of 36\u00a0months or until death, recurrence or metastasis occurred. Throughout the follow\u2010up period, we assessed the long\u2010term efficacy of each patient by analysing their 3\u2010year survival rate, progression\u2010free survival (PFS) and overall survival (OS) rates. We defined the duration from the start of treatment to the last follow\u2010up or death as the survival time and the duration from the start of treatment to recurrence, metastasis or last follow\u2010up as tumour\u2010free survival time.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14347,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Image Preprocessing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14367,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "During the preprocessing of images from TCGA and PUMCH, there are five main steps, which are detailed as follows.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14481,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Quality Control",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14497,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To overcome the artefact and batch effect caused unintentionally during routine slide preparation (such as staining), there is an urgent need for a reproducible, automated method to accurately identify high\u2010quality slides. HistoQC is an open\u2010source quality control tool for digital pathological sections, which can be used to find abnormal values at the queue level\u2014for example, slides with deeper or lighter staining than other slides in the queue. HistoQC determines abnormal slides by identifying abnormal values in image metrics (including colour histogram, brightness and contrast). Specifically, the element  of the metric matrix  represents the value of the  image metric of the  sample.  ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15200,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For the image metric ,  and  represent the mean and standard deviation of all samples, respectively. If , the  sample is regarded as a qualified sample; otherwise, it is regarded as an unqualified sample for filtering. Figure\u00a01 shows four WSI samples: two WSIs that did not meet the brightness standard and were excluded (Figure\u00a01a,c), and two WSIs that met\u00a0all quality control standards and were included for tumour region annotation (Figure\u00a01b,d).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15654,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g004.jpg",
+                            "id": "syb270060-fig-0001",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Examples of WSIs meeting and falling short of the quality control standards. (a)\u00a0A WSI excluded because the brightness was too high. (b)\u00a0A WSI included because all its indicators met the quality control standards. (c)\u00a0A WSI excluded because the brightness was too low. (d)\u00a0A WSI included because all its indicators met the quality control standards.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16008,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Tumour Region Annotation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16033,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The tumour regions in the H&E\u2010stained images were marked in an irregular circle by experienced pathologists. Pathologists need to separate tumour regions from normal regions accurately, as the overall survival is related to the tumour mutations or the tumour regions. The training process was all conducted in the marked tumour regions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16372,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Image Segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16391,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "WSIs are unsuitable for constructing predictive models, not only due to their significant size but also because they contain distracting areas such as voids and holes. Nonoverlapping patches of a size of 512\u00a0\u00d7\u00a0512 pixels at 40x magnification are then extracted from the tumour tissue regions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16687,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Remove Invalid Areas",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16708,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "There were many invalid areas in the contour, such as areas with a high blank rate, which would have caused significant interference and would not have been conducive to model training. Before training the model, tiles with a blank ratio of more than 30% were removed.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16977,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Colour Normalisation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16998,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The method proposed by Macenko et\u00a0al. was used to perform the colour normalisation of H&E images, which considered the staining technology of tissue section preparation. First, all colour values of the image were converted to optical density (OD) values using logarithmic transformation. Then, the OD tuple was decomposed by singular value decomposition to find the 2D projection with high variance. Finally, the obtained colour space transformation was applied to the original image. The computational pathology toolbox \u2018tiatoolbox\u2019 (https://github.com/TissueImageAnalytics/tiatoolbox/tree/publication) developed by Tissue Image Analytics (TIA) laboratory was used to achieve colour normalisation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17702,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Finally, to address the sample imbalance issue in the TCGA dataset, we employed the undersampling technique during the model training process. Specifically, we randomly selected a subset of samples from the majority class (LT group) to match the sample size of the minority class (ST group), ensuring a balanced class distribution for model learning. This approach was chosen to avoid potential overfitting risks associated with oversampling (e.g.,\u00a0redundant information from duplicated minority samples) while maintaining the intrinsic characteristics of the original data as much as possible.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18298,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Screening of Prognostic Genes for Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18348,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We used univariate Cox proportional hazards regression: Only genes with a hazard ratio (HR) 95% confidence interval (CI) not crossing 1 and a p\u2010value <\u00a00.05 were retained. Additionally, to mitigate the confounding effect of clinical variables (e.g.,\u00a0age, FIGO staging) on survival associations, we adjusted for these covariates in the Cox model (p\u2010value <\u00a00.05).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18718,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Image Feature Representation Based on ResNet18",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18765,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Because the CNN has stable learning performance, it is considered to be the most advanced algorithm in image recognition and classification. The structure of CNN mainly consists of three types of layers: (1) input layer, (2) hidden layers and (3) output layer. An image is first fed into the input layer and then fed into the hidden layer for extracting low\u2010level features. The extracted low\u2010level features are fed into convolution layers and pooling layers for feature reduction and filtering, and then advanced features are extracted through the later hidden layer. Finally, the advanced features are fed to the output layer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19397,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Residual network (ResNet) is a large\u2010scale CNN containing residual blocks. We used the ResNet18 convolutional neural network pretrained on the ImageNet dataset to extract image features. The ResNet18 network is composed of 18 layers, and its network structure is shown in Figure\u00a02a. First, the tiles with 512\u00a0\u00d7\u00a0512 pixels and 3 channels (512\u00a0\u00d7\u00a0512\u00a0\u00d7\u00a03) are resized to 224\u00a0\u00d7\u00a0224\u00a0\u00d7\u00a03 and fed into a convolution layer with a convolution core size of 7\u00a0\u00d7\u00a07 and a step size of 2. The output of this layer is 112 \u00d7 112, and the number of channels is 64. Then, the tile is fed into a maximum pooling layer with a convolution core size of 3\u00a0\u00d7\u00a03 and a step size of 2, and the output of this layer is 56\u00a0\u00d7\u00a056, and the number of channels is 64. Subsequently, there are four residual blocks, each consisting of two basic blocks, each of which contains two convolutional layers, and the structure of the residual block is shown in Figure\u00a02b. After four residual blocks, the output size is 7\u00a0\u00d7\u00a07, and the number of channels is 512. The last two layers of ResNet18 are the average pooling layer and the fully connected layer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20540,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g006.jpg",
+                            "id": "syb270060-fig-0002",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "The structure of ResNet18 and residual blocks. (a)\u00a0The network structure of ResNet, where yellow represents the first residual block, orange represents the second residual block, green represents the third residual block, and purple represents the fourth residual block; (b)\u00a0the structure of each residual block.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20855,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Feature Fusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20870,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Because different modes have different forms of expression and different perspectives, there are some overlaps; that is, there is information redundancy, or there may be a variety of information interactions between different modes. If we can analyse multimodal information reasonably, we can obtain rich feature information, which will provide theoretical support for improving prediction performance. Therefore, we considered fusing the two modes of H&E images and clinical information to improve the OS prediction of patients with cervical cancer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21421,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We used multimodal compact bilinear (MCB) for feature fusion. The expression of MCB is as follows:   ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21523,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In the equation,  represents the features from different modalities of input data;  and  denote the weights learned by the model from images and clinical information, respectively. Correspondingly,  and  represent features from two different modalities of data.  represents the number of generated .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21823,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "MCB uses a pretrained CNN to extract high\u2010level features from images and word embeddings from text, and then it decodes the extracted features through long short\u2010term memory. It should be pointed out that word embedding can convert text into digital representation, helping the model to better process text information. Then, the count sketch method is used to reduce the dimension of the features. After obtaining the reduced\u2010dimension features, a fast Fourier transform (FFT) is used to transform the features to the frequency domain, the vector inner product is performed in the frequency domain, and the inner product result is inversely transformed to the time domain space by FFT. Specifically, the MCB algorithm was used to fuse the penultimate layer of ResNet18 with clinical features, and the fusion result was fed into the BN layer before the linear layer. The feature dimension of the clinical part is 1, with the clinical feature being age, and the feature dimension from the ResNet part is 128. These two features together serve as inputs to the MCB module, which then outputs features with a size of 128.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22948,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Nuclear Segmentation and Classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22988,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To bolster the model's interpretability, we conducted an investigation into the make\u2010up of the tumour microenvironment in patients. Here, for a given patch, we use HoVer\u2010Net trained on the PanNuke dataset to locate cell nuclei and predict their types. HoVer\u2010Net is a convolutional neural network that performs segmentation and classification of cell nuclei. This network leverages instance\u2010rich information encoded within vertical and horizontal distance maps of nuclear pixels to their centres of mass and achieves accurate segmentation even in areas with overlapping instances. Five categories of nuclei are predicted: neoplastic, non\u2010neoplastic epithelial, inflammatory, connective tissue and dead cells. For each image patch, HoVer\u2010Net generates a set of nuclear centroids together with their cell type and the corresponding nuclear segmentation mask.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23856,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Nuclear Morphological Features Extraction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23898,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Assuming that the morphology of different types of nuclei is associated with OS time, we extract 15 nuclear morphological features, such as nuclear size, eccentricity, orientation and length of the major axis (see Table\u00a01), using the output binary mask of each nucleus. Therefore, each detected nucleus is represented by a 15\u2010dimensional feature vector which contains 15 different morphological properties. We utilised the average values and standard deviations of 15 features for the five types of cell nuclei, as well as the counts of the five types of cell nuclei, to obtain a 155\u2010dimensional feature vector for each patch.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24530,
+                        "infons": {
+                            "file": "syb270060-tbl-0001.xml",
+                            "id": "syb270060-tbl-0001",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Overview of 15 quantitatively measured shape descriptors for assessing cell morphology.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24618,
+                        "infons": {
+                            "file": "syb270060-tbl-0001.xml",
+                            "id": "syb270060-tbl-0001",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><col align=\"left\" span=\"1\"/><col align=\"center\" span=\"1\"/><thead valign=\"bottom\"><tr style=\"border-bottom:solid 1px #000000\"><th align=\"left\" valign=\"bottom\" rowspan=\"1\" colspan=\"1\">Feature</th><th align=\"center\" valign=\"bottom\" rowspan=\"1\" colspan=\"1\">Description</th></tr></thead><tbody valign=\"top\"><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Area</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Number of pixels in the region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">bbox_area</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The pixel count of the bounding box that encloses the target region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">convex_area</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The number of pixels in the convex hull image, where the convex hull refers to the smallest convex polygon that encloses the target region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Eccentricity</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Ratio of the focal distance (distance between focal points) over the major axis length</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">equivalent_diameter</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The diameter of a circle with the same area as the region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">euler_number</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Number of objects in the region subtracted from the number of holes in those objects</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Extent</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The proportion of pixels in the bounding box that are also in the region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">filler_area</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Number of pixels of the region with all the holes filled in</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">inertia_tensor_eigvals_x</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The eigenvalues of the inertia tensor along the <italic toggle=\"yes\">x</italic>\u2010axis in decreasing order</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">inertia_tensor_eigvals_y</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The eigenvalues of the inertia tensor along the <italic toggle=\"yes\">y</italic>\u2010axis in decreasing order</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">major_axis_length</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The length of the major axis of the ellipse that has the same normalised second central moments as the region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">minor_axis_length</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The length of the minor axis of the ellipse that has the same normalised second central moments as the region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Orientation</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The angle between the <italic toggle=\"yes\">x</italic>\u2010axis and the major axis of the ellipse, where the ellipse shares the same second moments as the target region</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Perimeter</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Perimeter of object which approximates the contour as a line through the centres of border pixels using a 4\u2010connectivity</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">Solidity</td><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">The ratio of the region's pixel count to the convex hull image's pixel count</td></tr></tbody></table>\n"
+                        },
+                        "text": "Feature\tDescription\t \tArea\tNumber of pixels in the region\t \tbbox_area\tThe pixel count of the bounding box that encloses the target region\t \tconvex_area\tThe number of pixels in the convex hull image, where the convex hull refers to the smallest convex polygon that encloses the target region\t \tEccentricity\tRatio of the focal distance (distance between focal points) over the major axis length\t \tequivalent_diameter\tThe diameter of a circle with the same area as the region\t \teuler_number\tNumber of objects in the region subtracted from the number of holes in those objects\t \tExtent\tThe proportion of pixels in the bounding box that are also in the region\t \tfiller_area\tNumber of pixels of the region with all the holes filled in\t \tinertia_tensor_eigvals_x\tThe eigenvalues of the inertia tensor along the x\u2010axis in decreasing order\t \tinertia_tensor_eigvals_y\tThe eigenvalues of the inertia tensor along the y\u2010axis in decreasing order\t \tmajor_axis_length\tThe length of the major axis of the ellipse that has the same normalised second central moments as the region\t \tminor_axis_length\tThe length of the minor axis of the ellipse that has the same normalised second central moments as the region\t \tOrientation\tThe angle between the x\u2010axis and the major axis of the ellipse, where the ellipse shares the same second moments as the target region\t \tPerimeter\tPerimeter of object which approximates the contour as a line through the centres of border pixels using a 4\u2010connectivity\t \tSolidity\tThe ratio of the region's pixel count to the convex hull image's pixel count\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26191,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Statistical Analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26212,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We obtained the OS time of all patients in the training cohort and test cohort and estimated the survival probability of patients with cervical cancer using the Kaplan\u2013Meier method. We then plotted the Kaplan\u2013Meier survival curve to estimate the 50th percentile (median) of survival time and compare the survival distribution of two or more groups. The differences in survival among groups were compared by the log\u2010rank test with a p\u2010value of <\u00a00.05 indicating significant difference. The data were analysed using R software. In each cohort, patients with cervical cancer were divided into two classes (Class ST: OS time \u2264\u00a03\u00a0years; Class LT: OS time >\u00a03\u00a0years) to complete the following assessment. We used Cox survival analysis to measure the influencing factors of survival on somatic mutation data, which was realised by the R package \u2018survival\u2019 and visualised by the function \u2018ggforest\u2019 in the \u2018surviviner\u2019 package. The GO and KEGG enrichment of survival\u2010associated genes were analysed and plotted using the R package \u2018clusterprofiler\u2019. In addition, the receiver operating characteristic (ROC) curve and the area under the curve (AUC) were calculated to evaluate and verify the discrimination and stability of the model for predicting the overall survival of cervical cancer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27525,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27533,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Framework of the Study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27556,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The study employed a framework depicted in Figure\u00a03 to examine biomarkers relevant to the overall survival (OS) of patients with cervical cancer. A multimodal deep learning approach was developed to forecast OS. In this study, haematoxylin and eosin (H&E) images from The Cancer Genome Atlas (TCGA) and Peking Union Medical College Hospital (PUMCH) were scanned at a resolution of 0.12 microns per pixel under a 40x objective lens. The quality of the scanned images was controlled, and the tumour area was labelled by pathologists (Figure\u00a03a). Our proposed framework comprises three parts: data preprocessing, model training and model inference. During data preprocessing, the tumour regions of H&E images were segmented into patches (512\u00a0\u00d7\u00a0512 pixels), and colour normalisation was performed. Then, we used univariate Cox regression analysis and KM analysis to screen for mutation features and clinical features associated with survival, respectively. Finally, we used the random forest method to model the screened mutations or clinical characteristics related to survival and ranked them according to their importance. These three parts of data constitute the dataset for our model training. The model training was verified using fivefold cross\u2010validation to obtain the best hyperparameters and model structure (Figure\u00a03b). The best models and hyperparameters were then retrained on the TCGA dataset and inferred on the PUMCH dataset (Figure\u00a03c). H&E image features were extracted utilising ResNet18, and a multimodal model for predicting the survival of patients with cervical cancer was established by integrating the H&E image features with the molecular features (Figure\u00a03d).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29249,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g007.jpg",
+                            "id": "syb270060-fig-0003",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Framework of this study. (a)\u00a0Data annotation: H&E\u2010stained slides were scanned, and the pathologist was asked to label the quality and tumour area. (b)\u00a0Cross\u2010validation on TCGA: The data of the three modes are preprocessed as input to the model, and the hyperparameters and model structure are selected using cross\u2010validation. (c)\u00a0Train and inference: Full TCGA data are used for training and PUMCH data for inference. (d)\u00a0Building a novel fusion model to predict overall survival.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29740,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our proposed model has a floating point operation per second (flop) of 7294.15 million, whereas the number of parameters is only 22.42 million.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29884,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Patient Characteristics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29908,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "A total of 251 cases of patients with cervical cancer were downloaded from TCGA, comprising H&E images, clinical information and somatic mutation data obtained through WES. Additionally, 65 cases from PUMCH were collected. Patients with unavailable survival information (123 from TCGA and two from PUMCH) were excluded. HistoQC was applied for quality control, resulting in the removal of 19 patients (nine from TCGA and 10 from PUMCH). Consequently, our study comprised 119 patients from TCGA and 53 patients from PUMCH. Table\u00a02 presents an overview of the patients' general characteristics. There were slight differences in the distribution of clinical characteristics between TCGA and PUMCH patients. Specifically, in the TCGA dataset, 64 (53.78%) patients were <\u00a050\u00a0years old, whereas 55 (46.22%) patients were \u2265\u00a050\u00a0years old. Furthermore, over 50% of the patients were classified as Stage I, with 23 (19.33%) at Stage II, 17 (14.26%) at Stage III and 17 (14.26%) at Stage IV. Based on the duration of OS, patients were divided into two groups: ST (\u2264\u00a03\u00a0years) and LT (>\u00a03\u00a0years). Of the patients, 40 (33.61%) had an OS time of \u2264\u00a03\u00a0years, whereas the remaining 79 (66.39%) patients had an OS time of >\u00a03\u00a0years. Moving on to the PUMCH dataset, 42 (79.25%) patients were <\u00a050\u00a0years old, and all samples were early\u2010stage tumours, with 32 (60.38%) patients at Stage I and 21 (39.62%) patients at Stage II.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31336,
+                        "infons": {
+                            "file": "syb270060-tbl-0002.xml",
+                            "id": "syb270060-tbl-0002",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Slide\u2010level classification using fivefold cross\u2010validation in TCGA datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31417,
+                        "infons": {
+                            "file": "syb270060-tbl-0002.xml",
+                            "id": "syb270060-tbl-0002",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><col align=\"left\" span=\"1\"/><col align=\"center\" span=\"1\"/><col align=\"center\" span=\"1\"/><col align=\"center\" span=\"1\"/><thead valign=\"bottom\"><tr style=\"border-bottom:solid 1px #000000\"><th align=\"left\" valign=\"bottom\" rowspan=\"1\" colspan=\"1\">Method</th><th align=\"center\" valign=\"bottom\" rowspan=\"1\" colspan=\"1\">AUC</th><th align=\"center\" valign=\"bottom\" rowspan=\"1\" colspan=\"1\">Recall</th><th align=\"center\" valign=\"bottom\" rowspan=\"1\" colspan=\"1\">Precision</th></tr></thead><tbody valign=\"top\"><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">FIGO</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.612</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.511</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.529</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet18</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.725</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.475</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.510</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet50</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.728</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.450</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.633</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet101</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.727</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.450</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.565</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet18+clinical (Concat)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.724</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.525</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.551</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet50+clinical (Concat)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.713</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.425</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.588</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet101+clinical (Concat)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.726</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.475</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.559</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet18+mutation (Concat)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.724</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.525</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.559</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet50+mutation (Concat)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.719</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.425</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.544</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet101+mutation (Concat)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.734</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.400</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.491</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet18+clinical (MCBP)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.738</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.525</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.579</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet50+clinical (MCBP)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.716</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.400</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.567</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet101+clinical (MCBP)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.722</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.390</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.500</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet18+mutation (MCBP)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.686</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.500</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.515</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet50+mutation (MCBP)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.673</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.425</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.520</td></tr><tr><td align=\"left\" valign=\"top\" rowspan=\"1\" colspan=\"1\">ResNet101+mutation (MCBP)</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.688</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.425</td><td align=\"center\" valign=\"top\" rowspan=\"1\" colspan=\"1\">0.500</td></tr></tbody></table>\n"
+                        },
+                        "text": "Method\tAUC\tRecall\tPrecision\t \tFIGO\t0.612\t0.511\t0.529\t \tResNet18\t0.725\t0.475\t0.510\t \tResNet50\t0.728\t0.450\t0.633\t \tResNet101\t0.727\t0.450\t0.565\t \tResNet18+clinical (Concat)\t0.724\t0.525\t0.551\t \tResNet50+clinical (Concat)\t0.713\t0.425\t0.588\t \tResNet101+clinical (Concat)\t0.726\t0.475\t0.559\t \tResNet18+mutation (Concat)\t0.724\t0.525\t0.559\t \tResNet50+mutation (Concat)\t0.719\t0.425\t0.544\t \tResNet101+mutation (Concat)\t0.734\t0.400\t0.491\t \tResNet18+clinical (MCBP)\t0.738\t0.525\t0.579\t \tResNet50+clinical (MCBP)\t0.716\t0.400\t0.567\t \tResNet101+clinical (MCBP)\t0.722\t0.390\t0.500\t \tResNet18+mutation (MCBP)\t0.686\t0.500\t0.515\t \tResNet50+mutation (MCBP)\t0.673\t0.425\t0.520\t \tResNet101+mutation (MCBP)\t0.688\t0.425\t0.500\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32117,
+                        "infons": {
+                            "file": "syb270060-tbl-0002.xml",
+                            "id": "syb270060-tbl-0002",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "\nNote: Top rows: comparing the performance of different ResNet architectures. Bottom rows: comparing the performance of different mode feature fusion methods based on ResNet architectures.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32306,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Tumour Stage Is Significantly Associated With Overall Survival Rate in Patients With Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32407,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Survival analysis was carried out to assess the impact of clinical characteristics, and the corresponding survival curves were generated using the training data, as depicted in Figure\u00a04. Age was stratified into two groups: 0 represented individuals younger than 50\u00a0years old, whereas 1 included individuals aged 50\u00a0years or older. The analysis revealed that age did not have a significant impact on the survival rate (log\u2010rank p\u00a0=\u00a00.32) (Figure\u00a04a). On the other hand, a statistically significant difference in survival rate was observed among patients at different tumour stages (log\u2010rank p\u00a0=\u00a00.0056) (Figure\u00a04b).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33035,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g001.jpg",
+                            "id": "syb270060-fig-0004",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Kaplan\u2013Meier plot of clinical features. (a)\u00a0Kaplan\u2013Meier curves of the groups with patients <\u00a050\u00a0years old and \u2265\u00a050\u00a0years old. (b)\u00a0Kaplan\u2013Meier curves of tumour stage.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33217,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Some Differentially Mutated Genes Were Associated With Overall Survival Rate in Patients With Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33327,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To identify genetic mutations that have an impact on overall survival, a univariate Cox survival analysis was conducted using LASSO Cox regression. In order to mitigate the influence of clinical variables, a proportional hazards regression model was established with age and stage as covariates. Consequently, a total of 484 genes were discovered to exhibit significant associations with the survival rate. As shown in Figure\u00a05a\u2013c, the hazard ratios (HRs) of the top three genes significantly associated with the survival rate were determined to be as follows: RGR (HR\u00a0=\u00a075.3, 95% CI\u00a0=\u00a012.98\u2013436.6, p\u00a0<\u00a00.001), DBN1 (HR\u00a0=\u00a035.4, 95% CI\u00a0=\u00a07.22\u2013173.9, p\u00a0<\u00a00.001) and CALCR (HR\u00a0=\u00a035.8, 95% CI\u00a0=\u00a06.89\u2013185.6, p\u00a0<\u00a00.001***). Mutations occurring in these genes are linked to an elevated risk of mortality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34152,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g002.jpg",
+                            "id": "syb270060-fig-0005",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Establishment of the differentially mutated genes prediction model associated with the OS of cervical cancer and OS\u2010related gene enrichment analysis. (a\u2013c). Hazard ratios of the enrolled OS\u2010related genes obtained using LASSO Cox regression analysis. (d)\u00a0Enriched GO terms for biological process annotations. (e)\u00a0Enriched KEGG pathways.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34496,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Functional enrichment analysis was conducted on the 484 genes found to be significantly different. The results of the Gene Ontology (GO) pathway enrichment analysis revealed enrichments in various pathways, including \u2018mitotic sister chromatid segregation\u2019, \u2018negative regulation of peptidyl\u2010tyrosine phosphorylation\u2019, \u2018mitotic nuclear division\u2019, \u2018negative regulation of\u00a0transferase activity\u2019, \u2018nuclear division\u2019, \u2018sister chromatid segregation\u2019, \u2018organelle fission\u2019, \u2018establishment of organelle localisation\u2019,\u00a0\u2018negative regulation of kinase activity\u2019, and \u2018chromatin\u2010mediated maintenance of transcription\u2019 (Figure\u00a05d). Additionally, the Kyoto Encyclopaedia of Genes and Genomes (KEGG) pathway enrichment analysis demonstrated significant enrichments, primarily in pathways related to \u2018Olfactory transduction,\u2019 \u2018Other types of O\u2010glycan biosynthesis,\u2019 \u2018Ether lipid metabolism,\u2019 \u2018Glycosphingolipid biosynthesis\u2010globo and isoglobo series,\u2019 \u2018Phenylalanine metabolism,\u2019 \u2018Cushing syndrome,\u2019 \u2018Nicotine addiction,\u2019 and \u2018Other glycan degradation\u2019 (Figure\u00a05e).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35628,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Histopathological Images Can Predict Cervical Cancer Overall Survival Better",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35705,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To enhance the precision of cervical cancer survival prediction, we developed prediction models utilising clinical data, molecular data and H&E image data, all based on a dedicated training set. The clinical and gene mutation models were constructed employing a random forest approach, with hyperparameters determined through grid search. To maintain data integrity, special attention was given to the H&E image data to prevent information leakage. Tiles extracted from the same patient were classified into separate datasets. Each tile was then processed by ResNet18, traversing the convolution and pooling layers to obtain the probability of the tile. By averaging the probabilities of all tiles, we estimated the probability of each slide, subsequently assigning the patient to the ST cohort if the projected probability exceeded 0.5 and to the LT cohort otherwise.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36574,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The receiver operating characteristic (ROC) curves, generated through fivefold cross\u2010validation, are presented in Figure\u00a06a. Remarkably, the performance of the prediction model for cervical cancer survival based on H&E images exhibited the highest accuracy, achieving an area under the curve (AUC) value of 0.725. In comparison, the predictive performance of using clinical data yielded an AUC of 0.647, whereas molecular data yielded the lowest predictive performance with an AUC of 0.559.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37068,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g009.jpg",
+                            "id": "syb270060-fig-0006",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Performance of overall survival prediction models. (a)\u00a0ROC curves of models based on H&E images, clinical data, molecular data, H&E images combined with molecular data and H&E images combined with clinical data on the training set. (b)\u00a0ROC curves of models based on H&E images and H&E images combined with clinical data on the independent test set. (c)\u00a0Bar chart of AUC, precision and recall based on H&E images and H&E images combined with clinical data on the independent test set. (d)\u00a0Confusion matrix on the independent test set.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37606,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Comparison With Baselines and Different Data Fusions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37659,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Classification results are summarised in Table\u00a02. Additionally, we evaluated several other classic ResNet methods, including ResNet50 and ResNet101. To investigate the impact of multimodal information on cervical cancer survival, we combined clinical or molecular features with image patch features for modelling. The ablation experiments of MCBP and Concat multimodal fusion methods were conducted based on the ResNet backbone.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38089,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The results indicate that the integration of ResNet18 with clinical features brought about a certain improvement under the AUC metric. Nevertheless, owing to the constraints on sample size, there exists a subtle difference in mutation distribution and patient survival. This adds interference factors to the model when mutation information is introduced.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38444,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Multimodal Information Based on the Combination of Clinical Data and H&E Images Can Improve the Accuracy of Predicting Cervical Cancer Survival",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38588,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To investigate the impact of the fusion model, the top three molecular features determined through feature importance ranking were combined with image features. The performance of this fused model, evaluated using fivefold cross\u2010validation, is presented in Figure\u00a06a. The results reveal that the AUC for H&E images combined with the KLHDC7B molecular feature was 0.686, whereas the AUC for H&E images combined with the age feature was 0.738 on the training set. Figure\u00a06b displays the ROC curve of the fusion model on an independent test set, with an AUC of 0.720 for H&E images and 0.783 for H&E images combined with the age feature. Additionally, the precision and recall of the model were evaluated on independent test sets (Figure\u00a06c), indicating that the precision and recall for H&E images combined with the age feature were 0.610 and 0.636, respectively, both higher than those for H&E images alone. The confusion matrix of this model on the independent test set is illustrated in Figure\u00a06d. The results demonstrate that incorporating clinical features enhances the accuracy of the model's predictions. However, the model's predictive performance based on H&E images combined with gene mutation features was inferior to that of the model based solely on H&E images, potentially due to the fact that the introduced gene mutation features contained less valuable information and introduced more noise. Nonetheless, the multimodal information derived from the combination of clinical data and H&E images can effectively forecast the survival rate of patients with cervical cancer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40179,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Visualisation of Detection Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40214,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To further decipher the biological basis of the model's decision\u2010making, we employed gradient\u2010weighted class activation mapping (Grad\u2010CAM) for visual analysis of the trained predictive model. By generating heat maps, we localised key regions within the input features that contribute significantly to the model's classification, thereby revealing the core biological features prioritised by the model. As shown in Figure\u00a07, in the ST group, as shown by the heat maps, our model focuses more on the stromal regions and relatively fewer tumour cells. In contrast, the heat maps of the LT group pay greater attention to areas with dense tumour cells.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40869,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g008.jpg",
+                            "id": "syb270060-fig-0007",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Visualisation of model. Left: the heat maps represent the ST group; right: the heat maps represent the LT group.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40982,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Correlation Between Tumour Microenvironment and Overall Survival",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41047,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To ascertain the impact of the nuclear morphological features of the five types of extracted cell nuclei on overall survival, Cox multivariate survival analyses were conducted. As shown in Figure\u00a08a\u2013b, the C\u2010index values for the Cox multivariate models constructed with 31 features of inflammatory and dead cells in TCGA are all 0.76. The C\u2010index values for neoplastic, non\u2010neoplastic epithelial and connective tissue are 0.77, 0.76 and 0.78 (see Figure S1), respectively. Figure\u00a08c displays that, with the exception of neoplastic, a statistically significant difference in survival rates was observed among patients for the other four types of cells (log\u2010rank p\u00a0<\u00a00.05). For the Cox multivariate models trained on various cell types in TCGA, validation using the PUMCH datasets revealed the following C\u2010index values: Neoplastic cells had a C\u2010index of 0.49, non\u2010neoplastic epithelial cells had a C\u2010index of 0.57, inflammatory cells had a C\u2010index of 0.62, connective tissue had a C\u2010index of 0.49, and dead cells had a C\u2010index of 0.64 (Figure\u00a08d).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42122,
+                        "infons": {
+                            "file": "SYB2-20-e70060-g005.jpg",
+                            "id": "syb270060-fig-0008",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Development and validation of predictive model for survival\u2010related morphological features of cell nuclei. (a\u2013b) The forest plot demonstrating the Cox multivariate model constructed for inflammatory and necrotic cell nuclei features in TCGA. (c)\u00a0The Kaplan\u2013Meier curves show the effect of high and low levels of each type of cell content on survival. (d)\u00a0The bar graphs show the validated C\u2010index values for five cell types in PUMCH.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42566,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42577,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Cervical cancer presents a significant global public health concern, ranking as the fourth most prevalent cancer among women worldwide. It is particularly burdensome in low\u2010 and middle\u2010income countries compared to high\u2010income countries. Clinicians grapple with the challenge of selecting the most suitable treatment approach for each patient, emphasising the importance of survival rate analysis in clinical decision\u2010making. The identification of biomarkers capable of predicting the survival outcome in patients with cervical cancer would allow clinicians to tailor treatment plans, avoiding unnecessary interventions in cases of stable conditions. Nevertheless, the development of an effective prognostic model for survival prediction remains a major obstacle. Recent advances in computer technology have given rise to computer\u2010aided diagnostic and prognostic prediction methods predicated on H&E\u2010stained images. Despite these advancements, further improvement is needed to enhance the accuracy of image\u2010based prognostic prediction models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43633,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we have developed a multimodal deep learning algorithm to directly predict the overall survival of patients with cervical cancer using H&E\u2010stained histology and clinical informatics. Our dataset consisted of 119 samples from TCGA and 53 samples from PUMCH, encompassing WSIs, clinical information and somatic mutation data based on WES. Our survival analysis demonstrated statistically significant differences in overall survival among patients with different tumour stages, with Stage IV patients exhibiting the poorest survival rate (Figure\u00a04b). Early detection and systematic treatment have considerably improved the prognosis for early\u2010stage cervical cancer. However, in advanced\u2010stage cervical cancer, tumour progression and recurrence have led to a high mortality rate. To identify molecular markers associated with cervical cancer survival, we conducted univariate Cox survival analysis using LASSO Cox regression. Among the 484 genes found to be significantly associated with overall survival, RGR, DBN1 and CALCR were the three most significant based on Cox analysis (p\u00a0\u2264\u00a00.01). We conducted a literature search for the 484 mutated genes identified in our study and found that 102 of them have been previously reported to be associated with cervical cancer. This confirms the reliability of our use of Cox analysis for screening mutated genes. DBN1 has been reported to be overexpressed in colorectal cancer and plays a crucial role in its metastasis. In a study focused on non\u2010small\u2010cell lung cancer patients in Stages I to III, a gene prognostic model incorporating DBN1 as a multivariate marker showed potential clinical value for risk stratification. CALCR, on the other hand, belongs to the G protein\u2010coupled neuropeptide receptor family and has been linked to poor prognosis in acute myeloid leukaemia (AML) and is upregulated at AML relapse. Additionally, Xing et\u00a0al. found a decreased expression of CALCRL in patients with cervical squamous cell carcinoma and endocervical adenocarcinoma. Interestingly, patients with low CALCRL expression exhibited better OS. These studies further support the close association between CALCRL and cancer. In the functional enrichment analysis of the three genes, the association between the KEGG pathway \u2018olfactory transduction\u2019 and cervical cancer prognosis is strong. Liu et\u00a0al. revealed that OLFM4 augmentation interferes with the mTOR signalling pathway, and the suppressive effects of OLFM4 on cell migration and invasion are largely weakened by phosphatidic acid (PA)\u2010induced mTOR signal activation, which implicates the potential role of the mTOR pathway in OLFM4\u2010related cervical metastasis. Our findings underscore the contribution of molecular markers in determining overall survival of cervical cancer. Nevertheless, further investigations and confirmation from prospective studies are necessary.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46535,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "We subsequently developed a deep learning model by utilising H&E images, clinical information and molecular data from 119 patients with cervical cancer sourced from TCGA. To evaluate the model's performance, we employed an independent test set comprising 53 patients with cervical cancer from PUMCH. Our findings revealed that H&E histopathological images exhibited the highest predictive power, achieving an AUC of 0.725. To further enhance the prediction performance, we integrated H&E image features with other omics features. Notably, the multimodal deep learning model, which combined H&E images with clinical features, exhibited the most accurate predictions, attaining an AUC of 0.783 on the independent test set. These results strongly suggest the potential of multimodal deep learning models as promising tools for accurately predicting overall survival in cervical cancer.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47418,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Furthermore, to enhance the model's interpretability, we hypothesised that the micromorphology of cells within H&E\u2010stained slides could predict biological prognosis. To this end, we extracted morphological features of five types of cell nuclei for Cox multivariate survival analysis. We found that inflammatory and dead cells may be associated with patient survival. Mu et\u00a0al. also suggested that preoperative systemic inflammation scores are a simple yet useful prognostic factor for postoperative survival in patients with cervical cancer. Meanwhile, Liu et\u00a0al. showed that a cell death\u2010related lncRNA\u2010based index could be used to predict the prognosis of patients with cervical cancer, especially the sensitivity to chemotherapeutic agents. This confirms that there is a potential link between H&E and OS.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48235,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "However, our study does have several limitations. Firstly, the sample size we utilised was relatively small, and the clinical information collected was limited in scope. Secondly, the accuracy of our model requires further improvement. Thirdly, notable variations in race and genetic backgrounds existed between the training and test data sources. Finally, hyperspectral and multispectral imaging of cell and tissue autofluorescence is an emerging technology in which fluorescence imaging is applied to biological materials across multiple spectral channels. In future research endeavours, we intend to address these limitations by increasing the number of patients with cervical cancer included in our study, incorporating a broader range of clinical features and implementing more advanced hyperspectral and multispectral imaging and deep learning techniques to enhance the model's accuracy. Additionally, we aim to explore potential disparities in survival rates, H&E image characteristics and gene mutation profiles among different populations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49284,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49295,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In summary, our study has successfully identified molecular markers that are significantly linked to the overall survival of patients with cervical cancer. Notably, we have demonstrated the potential of utilising H&E\u2010stained histopathological images as a means to accurately predict survival outcomes. Furthermore, our findings highlight the added benefit of combining H&E image features with relevant clinical features via a deep learning model, leading to improved prediction performance. However, it is crucial to note that the clinical validity of our model necessitates confirmation through rigorous experimentation in future research pursuits.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49947,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In our future investigations, we intend to explore alternative combinations of H&E image features and omics data to construct an even more precise prediction model for the overall survival of patients with cervical cancer. Furthermore, the successful implementation of deep learning in this context has the potential to revolutionise routine clinical practice.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50308,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author Contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50329,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": " Jie Shen: data curation, formal analysis, methodology, software, validation, writing \u2013 review and editing. Zheng Miao: data curation, formal analysis, methodology, software, validation. Lixia Wang: writing \u2013 original draft. Zhen Huo: data curation, validation. Tao Lu: data curation, validation. Yuebin Liang: writing \u2013 original draft, writing \u2013 review and editing. Binbin Ji: writing \u2013 original draft, writing \u2013 review and editing. ShuXue Xi: writing \u2013 review and editing. Geng Tian: writing \u2013 review and editing. Jialiang Yang: conceptualisation, writing \u2013 review and editing. Fuquan Zhang: conceptualisation, project administration.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50984,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "title_1"
+                        },
+                        "text": "Funding",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50992,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "paragraph"
+                        },
+                        "text": "This work is supported by grants from the National high level hospital clinical research funding (2022\u2010PUMCH\u2010A\u2010102), the National 135 Major Project of China (2016YFC0105207) to F.Z., and Beijing Chaoyang Digital Health Proof of Concept Project (2025SLZD020).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51257,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "title_1"
+                        },
+                        "text": "Ethics Statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51274,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "paragraph"
+                        },
+                        "text": "The study design and sample collection were approved by the Medical Ethics Committee of Peking Union Medical College Hospital, and all participants provided informed written consent.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51457,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflicts of Interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51479,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "Y.L., B.J., G.T. and J.Y. are currently employed in Genesis Beijing Co. Ltd. The other authors have no conflicts of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51605,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supporting information",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51628,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data Availability Statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51656,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "WSI (.svs file), clinical data and mutation data from the TCGA\u2010CESC cohort are publicly available and can be downloaded from the GDC Data Portal. The PUMCH cohort used for external validation in this study has not been made publicly available due to privacy law restrictions. The relevant data and tumour samples of this cohort are held by the first author of this article (J.\u00a0S.). All requests for sharing data and samples must be submitted to the corresponding author within 15\u00a0years from the date of publication of this article, accompanied by a scientific research proposal. Based on the specific research proposal, the first author, J. S., will determine the timing, duration, specific purposes and conditions for data sharing upon obtaining ethical approval. The processing period for data access requests is 3\u00a0months.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52486,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52497,
+                        "infons": {
+                            "fpage": "169",
+                            "issue": "10167",
+                            "lpage": "182",
+                            "pub-id_doi": "10.1016/s0140-6736(18)32470-x",
+                            "pub-id_pmid": "30638582",
+                            "section_type": "REF",
+                            "source": "Lancet",
+                            "type": "ref",
+                            "volume": "393",
+                            "year": "2019"
+                        },
+                        "text": "Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52513,
+                        "infons": {
+                            "fpage": "4953",
+                            "issue": "18",
+                            "lpage": "4973",
+                            "pub-id_doi": "10.1158/1078-0432.ccr-20-2833",
+                            "pub-id_pmid": "33888488",
+                            "section_type": "REF",
+                            "source": "Clinical Cancer Research",
+                            "type": "ref",
+                            "volume": "27",
+                            "year": "2021"
+                        },
+                        "text": "Cervical Cancer Immunotherapy: Facts and Hopes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52560,
+                        "infons": {
+                            "fpage": "554",
+                            "issue": "3",
+                            "lpage": "560",
+                            "pub-id_doi": "10.31083/j.ejgo.2021.03.2416",
+                            "section_type": "REF",
+                            "source": "European Journal of Gynaecological Oncology",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2021"
+                        },
+                        "text": "Overexpression of SOCS4 Inhibits Proliferation and Migration of Cervical Cancer Cells by Regulating JAK1/STAT3 Signaling Pathway",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52689,
+                        "infons": {
+                            "fpage": "e191",
+                            "issue": "2",
+                            "lpage": "e203",
+                            "pub-id_doi": "10.1016/s2214-109x(19)30482-6",
+                            "pub-id_pmid": "31812369",
+                            "section_type": "REF",
+                            "source": "Lancet Global Health",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2020"
+                        },
+                        "text": "Estimates of Incidence and Mortality of Cervical Cancer in 2018: A Worldwide Analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52775,
+                        "infons": {
+                            "fpage": "1603",
+                            "issue": "21",
+                            "lpage": "1607",
+                            "pub-id_doi": "10.1056/nejm200105243442107",
+                            "pub-id_pmid": "11372013",
+                            "section_type": "REF",
+                            "source": "New England Journal of Medicine",
+                            "type": "ref",
+                            "volume": "344",
+                            "year": "2001"
+                        },
+                        "text": "Clinical Practice. Current Approaches to Cervical\u2010Cancer Screening",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52844,
+                        "infons": {
+                            "fpage": "1908",
+                            "issue": "19",
+                            "lpage": "1910",
+                            "pub-id_doi": "10.1056/nejmp078053",
+                            "pub-id_pmid": "17494923",
+                            "section_type": "REF",
+                            "source": "New England Journal of Medicine",
+                            "type": "ref",
+                            "volume": "356",
+                            "year": "2007"
+                        },
+                        "text": "Introducing HPV Vaccine in Developing Countries\u2014Key Challenges and Issues",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52920,
+                        "infons": {
+                            "elocation-id": "100277",
+                            "issue": "5",
+                            "pub-id_doi": "10.1016/j.xinn.2022.100277",
+                            "pub-id_pmid": "35866046",
+                            "section_type": "REF",
+                            "source": "Innovation (Camb)",
+                            "type": "ref",
+                            "volume": "3",
+                            "year": "2022"
+                        },
+                        "text": "Cancer Susceptibility Genes: Update and Systematic Perspectives",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52984,
+                        "infons": {
+                            "fpage": "457",
+                            "issue": "5",
+                            "lpage": "465",
+                            "pub-id_doi": "10.1016/j.currproblcancer.2018.06.003",
+                            "pub-id_pmid": "30064936",
+                            "section_type": "REF",
+                            "source": "Current Problems in Cancer",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2018"
+                        },
+                        "text": "Cervical Cancer Worldwide",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53010,
+                        "infons": {
+                            "fpage": "333",
+                            "lpage": "342",
+                            "pub-id_doi": "10.1016/j.csbj.2021.12.028",
+                            "pub-id_pmid": "35035786",
+                            "section_type": "REF",
+                            "source": "Computational and Structural Biotechnology Journal",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2022"
+                        },
+                        "text": "Prediction of HER2\u2010Positive Breast Cancer Recurrence and Metastasis Risk From Histopathological Images and Clinical Information via Multimodal Deep Learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53169,
+                        "infons": {
+                            "elocation-id": "619330",
+                            "pub-id_doi": "10.3389/fcell.2021.619330",
+                            "pub-id_pmid": "34012960",
+                            "section_type": "REF",
+                            "source": "Frontiers in Cell and Developmental Biology",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2021"
+                        },
+                        "text": "Evaluating DNA Methylation, Gene Expression, Somatic Mutation, and Their Combinations in Inferring Tumor Tissue\u2010of\u2010Origin",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53295,
+                        "infons": {
+                            "elocation-id": "394",
+                            "pub-id_doi": "10.3389/fbioe.2020.00394",
+                            "pub-id_pmid": "32509741",
+                            "section_type": "REF",
+                            "source": "Frontiers in Bioengineering and Biotechnology",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2020"
+                        },
+                        "text": "TOOme: A Novel Computational Framework to Infer Cancer Tissue\u2010of\u2010Origin by Integrating Both Gene Mutation and Expression",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53420,
+                        "infons": {
+                            "elocation-id": "165916",
+                            "issue": "11",
+                            "pub-id_doi": "10.1016/j.bbadis.2020.165916",
+                            "pub-id_pmid": "32771416",
+                            "section_type": "REF",
+                            "source": "Biochimica et Biophysica Acta (BBA)\u2014Molecular Basis of Disease",
+                            "type": "ref",
+                            "volume": "1866",
+                            "year": "2020"
+                        },
+                        "text": "A Machine Learning Framework to Trace Tumor Tissue\u2010of\u2010Origin of 13 Types of Cancer Based on DNA Somatic Mutation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53537,
+                        "infons": {
+                            "fpage": "443",
+                            "issue": "4",
+                            "lpage": "452",
+                            "pub-id_doi": "10.2478/raon-2019-0048",
+                            "pub-id_pmid": "31626590",
+                            "section_type": "REF",
+                            "source": "Radiology and Oncology",
+                            "type": "ref",
+                            "volume": "53",
+                            "year": "2019"
+                        },
+                        "text": "LncRNA PVT1 Promotes Proliferation and Invasion Through Enhancing Smad3 Expression by Sponging miR\u2010140\u20105p in Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53666,
+                        "infons": {
+                            "fpage": "231",
+                            "issue": "3",
+                            "lpage": "237",
+                            "pub-id_doi": "10.1016/j.jfma.2012.10.021",
+                            "pub-id_pmid": "25777974",
+                            "section_type": "REF",
+                            "source": "Journal of the Formosan Medical Association",
+                            "type": "ref",
+                            "volume": "114",
+                            "year": "2015"
+                        },
+                        "text": "The Prognostic Factors for Locally Advanced Cervical Cancer Patients Treated by Intensity\u2010Modulated Radiation Therapy With Concurrent Chemotherapy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53815,
+                        "infons": {
+                            "fpage": "353",
+                            "issue": "1",
+                            "lpage": "372",
+                            "pub-id_doi": "10.1007/s11357-019-00106-x",
+                            "pub-id_pmid": "31637571",
+                            "section_type": "REF",
+                            "source": "GeroScience",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2020"
+                        },
+                        "text": "Human Geroprotector Discovery by Targeting the Converging Subnetworks of Aging and Age\u2010Related Diseases",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 53921,
+                        "infons": {
+                            "elocation-id": "3284",
+                            "issue": "1",
+                            "pub-id_doi": "10.1038/s41598-019-39150-0",
+                            "pub-id_pmid": "30824727",
+                            "section_type": "REF",
+                            "source": "Scientific Reports",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2019"
+                        },
+                        "text": "Prognostic Value of Preoperative Systemic Immune\u2010Inflammation Index in Patients With Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54024,
+                        "infons": {
+                            "elocation-id": "Cd010260",
+                            "issue": "4",
+                            "pub-id_doi": "10.1002/14651858.CD010260.pub2",
+                            "pub-id_pmid": "25847525",
+                            "section_type": "REF",
+                            "source": "Cochrane Database of Systematic Reviews",
+                            "type": "ref",
+                            "year": "2015"
+                        },
+                        "text": "Hysterectomy With Radiotherapy or Chemotherapy or Both for Women With Locally Advanced Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54127,
+                        "infons": {
+                            "fpage": "57",
+                            "issue": "2",
+                            "lpage": "61",
+                            "pub-id_doi": "10.5603/gp.2020.0017",
+                            "pub-id_pmid": "32141049",
+                            "section_type": "REF",
+                            "source": "Ginekologia Polska",
+                            "type": "ref",
+                            "volume": "91",
+                            "year": "2020"
+                        },
+                        "text": "Efficacy and Prognostic Factors of Concurrent Chemoradiotherapy in Patients With Stage Ib3 and IIa2 Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54243,
+                        "infons": {
+                            "fpage": "3406",
+                            "issue": "11",
+                            "lpage": "3412",
+                            "pub-id_doi": "10.1245/s10434-017-6031-z",
+                            "pub-id_pmid": "28785898",
+                            "section_type": "REF",
+                            "source": "Annals of Surgical Oncology",
+                            "type": "ref",
+                            "volume": "24",
+                            "year": "2017"
+                        },
+                        "text": "2017 Update on the Querleu\u2010Morrow Classification of Radical Hysterectomy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54318,
+                        "infons": {
+                            "fpage": "422",
+                            "issue": "2",
+                            "lpage": "423",
+                            "pub-id_doi": "10.1016/j.ygyno.2010.12.346",
+                            "pub-id_pmid": "21295332",
+                            "section_type": "REF",
+                            "source": "Gynecologic Oncology",
+                            "type": "ref",
+                            "volume": "121",
+                            "year": "2011"
+                        },
+                        "text": "The Proper Use of Multimodality Treatment in Locally Advanced Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54396,
+                        "infons": {
+                            "fpage": "164",
+                            "issue": "2",
+                            "lpage": "173",
+                            "pub-id_doi": "10.2174/1574893616666210708143556",
+                            "section_type": "REF",
+                            "source": "Current Bioinformatics",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2022"
+                        },
+                        "text": "Cervical Cancer Metastasis and Recurrence Risk Prediction Based on Deep Convolutional Neural Network",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54497,
+                        "infons": {
+                            "elocation-id": "737",
+                            "pub-id_doi": "10.3389/fbioe.2020.00737",
+                            "pub-id_pmid": "32850691",
+                            "section_type": "REF",
+                            "source": "Frontiers in Bioengineering and Biotechnology",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2020"
+                        },
+                        "text": "A Neural Network Framework for Predicting the Tissue\u2010of\u2010Origin of 15 Common Cancer Types Based on RNA\u2010Seq Data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54614,
+                        "infons": {
+                            "pub-id_doi": "10.2174/1574893616666210708143556",
+                            "section_type": "REF",
+                            "source": "Current Bioinformatics",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2021"
+                        },
+                        "text": "Cervical Cancer Metastasis and Recurrence Risk Prediction Based on Deep Convolutional Neural Network",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54715,
+                        "infons": {
+                            "elocation-id": "1007831",
+                            "pub-id_doi": "10.3389/fmicb.2022.1007831",
+                            "pub-id_pmid": "36187983",
+                            "section_type": "REF",
+                            "source": "Frontiers in Microbiology",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2022"
+                        },
+                        "text": "Bacterial Biomarkers Capable of Identifying Recurrence or Metastasis Carry Disease Severity Information for Lung Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54835,
+                        "infons": {
+                            "elocation-id": "bbac448",
+                            "issue": "6",
+                            "pub-id_doi": "10.1093/bib/bbac448",
+                            "pub-id_pmid": "36242564",
+                            "section_type": "REF",
+                            "source": "Briefings in Bioinformatics",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2022"
+                        },
+                        "text": "ICSDA: A Multi\u2010Modal Deep Learning Model to Predict Breast Cancer Recurrence and Metastasis Risk by Integrating Pathological, Clinical and Gene Expression Data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 54997,
+                        "infons": {
+                            "elocation-id": "1050698",
+                            "pub-id_doi": "10.3389/fcvm.2023.1050698",
+                            "pub-id_pmid": "37383697",
+                            "section_type": "REF",
+                            "source": "Frontiers in Cardiovascular Medicine",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2023"
+                        },
+                        "text": "Identification of Risk Factors for Infection After Mitral Valve Surgery Through Machine Learning Approaches",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55105,
+                        "infons": {
+                            "elocation-id": "105516",
+                            "pub-id_doi": "10.1016/j.compbiomed.2022.105516",
+                            "pub-id_pmid": "35468406",
+                            "section_type": "REF",
+                            "source": "Computers in Biology and Medicine",
+                            "type": "ref",
+                            "volume": "146",
+                            "year": "2022"
+                        },
+                        "text": "A Multi\u2010Omics Machine Learning Framework in Predicting the Survival of Colorectal Cancer Patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55205,
+                        "infons": {
+                            "fpage": "428",
+                            "issue": "6",
+                            "lpage": "439",
+                            "pub-id_doi": "10.1006/jbin.2002.1038",
+                            "pub-id_pmid": "12198763",
+                            "section_type": "REF",
+                            "source": "Journal of Biomedical Informatics",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2001"
+                        },
+                        "text": "Modeling Medical Prognosis: Survival Analysis Techniques",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55262,
+                        "infons": {
+                            "fpage": "1418",
+                            "lpage": "1426",
+                            "pub-id_doi": "10.1109/access.2014.2373335",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "2",
+                            "year": "2014"
+                        },
+                        "text": "Predicting Outcomes of Nonsmall Cell Lung Cancer Using CT Image Features",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55335,
+                        "infons": {
+                            "fpage": "4375",
+                            "issue": "6",
+                            "lpage": "4385",
+                            "pub-id_doi": "10.1111/jcmm.14328",
+                            "pub-id_pmid": "31001929",
+                            "section_type": "REF",
+                            "source": "Journal of Cellular and Molecular Medicine",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2019"
+                        },
+                        "text": "Machine\u2010Learning Based Radiogenomics Analysis of MRI Features and Metagenes in Glioblastoma Multiforme Patients With Different Survival Time",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55478,
+                        "infons": {
+                            "elocation-id": "10353",
+                            "issue": "1",
+                            "pub-id_doi": "10.1038/s41598-017-10649-8",
+                            "pub-id_pmid": "28871110",
+                            "section_type": "REF",
+                            "source": "Scientific Reports",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2017"
+                        },
+                        "text": "A Deep Learning\u2010Based Radiomics Model for Prediction of Survival in Glioblastoma Multiforme",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55572,
+                        "infons": {
+                            "fpage": "2934",
+                            "issue": "9",
+                            "lpage": "2946",
+                            "pub-id_doi": "10.1158/1078-0432.ccr-10-1803",
+                            "pub-id_pmid": "21242119",
+                            "section_type": "REF",
+                            "source": "Clinical Cancer Research",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2011"
+                        },
+                        "text": "Prediction of Postoperative Recurrence\u2010Free Survival in Non\u2010Small Cell Lung Cancer by Using an Internationally Validated Gene Expression Model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55719,
+                        "infons": {
+                            "elocation-id": "5826",
+                            "issue": "23",
+                            "pub-id_doi": "10.3390/ijms20235826",
+                            "pub-id_pmid": "31756985",
+                            "section_type": "REF",
+                            "source": "International Journal of Molecular Sciences",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2019"
+                        },
+                        "text": "CGRP Signaling via CALCRL Increases Chemotherapy Resistance and Stem Cell Properties in Acute Myeloid Leukemia",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55830,
+                        "infons": {
+                            "fpage": "14",
+                            "issue": "1",
+                            "lpage": "15",
+                            "pub-id_doi": "10.1038/s41591-018-0320-3",
+                            "section_type": "REF",
+                            "source": "Nature Medicine",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2019"
+                        },
+                        "text": "A Call for Deep\u2010Learning Healthcare",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55868,
+                        "infons": {
+                            "elocation-id": "5176",
+                            "issue": "1",
+                            "pub-id_doi": "10.1038/s41598-020-62023-w",
+                            "pub-id_pmid": "32198433",
+                            "section_type": "REF",
+                            "source": "Scientific Reports",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2020"
+                        },
+                        "text": "Machine Learning and Feature Selection Applied to SEER Data to Reliably Assess Thyroid Cancer Prognosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 55972,
+                        "infons": {
+                            "fpage": "1904",
+                            "issue": "10",
+                            "lpage": "1912",
+                            "pub-id_doi": "10.1111/1759-7714.13163",
+                            "pub-id_pmid": "31414580",
+                            "section_type": "REF",
+                            "source": "Thoracic Cancer",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2019"
+                        },
+                        "text": "Decoding Tumor Mutation Burden and Driver Mutations in Early Stage Lung Adenocarcinoma Using CT\u2010Based Radiomics Signature",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56096,
+                        "infons": {
+                            "elocation-id": "29",
+                            "issue": "1",
+                            "pub-id_doi": "10.4103/2153-3539.186902",
+                            "pub-id_pmid": "27563488",
+                            "section_type": "REF",
+                            "source": "Journal of Pathology Informatics",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2016"
+                        },
+                        "text": "Deep Learning for Digital Pathology Image Analysis: A Comprehensive Tutorial With Selected Use Cases",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56197,
+                        "infons": {
+                            "elocation-id": "13543",
+                            "issue": "1",
+                            "pub-id_doi": "10.1038/s41598-017-13773-7",
+                            "pub-id_pmid": "29051570",
+                            "section_type": "REF",
+                            "source": "Scientific Reports",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2017"
+                        },
+                        "text": "Prediction of Recurrence in Early Stage Non\u2010Small Cell Lung Cancer Using Computer Extracted Nuclear Features From Digital H&E Images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56332,
+                        "infons": {
+                            "fpage": "39",
+                            "issue": "1",
+                            "lpage": "52",
+                            "pub-id_doi": "10.1097/pas.0000000000000948",
+                            "pub-id_pmid": "28961557",
+                            "section_type": "REF",
+                            "source": "American Journal of Surgical Pathology",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2018"
+                        },
+                        "text": "Whole Slide Imaging Versus Microscopy for Primary Diagnosis in Surgical Pathology: A Multicenter Blinded Randomized Noninferiority Study of 1992 Cases (Pivotal Study)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56499,
+                        "infons": {
+                            "elocation-id": "768",
+                            "pub-id_doi": "10.3389/fgene.2020.00768",
+                            "pub-id_pmid": "33193560",
+                            "section_type": "REF",
+                            "source": "Frontiers in Genetics",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2020"
+                        },
+                        "text": "DeepLRHE: A Deep Convolutional Neural Network Framework to Evaluate the Risk of Lung Cancer Recurrence and Metastasis From Histopathology Images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56644,
+                        "infons": {
+                            "elocation-id": "906888",
+                            "pub-id_doi": "10.3389/fonc.2022.906888",
+                            "section_type": "REF",
+                            "source": "Frontiers Oncology",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2022"
+                        },
+                        "text": "Prediction of Tumor Mutation Load in Colorectal Cancer Histopathological Images Based on Deep Learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56747,
+                        "infons": {
+                            "elocation-id": "12474",
+                            "issue": "1",
+                            "pub-id_doi": "10.1038/ncomms12474",
+                            "section_type": "REF",
+                            "source": "Nature Communications",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2016"
+                        },
+                        "text": "Predicting Non\u2010Small Cell Lung Cancer Prognosis by Fully Automated Microscopic Pathology Image Features",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56853,
+                        "infons": {
+                            "fpage": "45",
+                            "lpage": "53",
+                            "pub-id_doi": "10.1016/j.cmpb.2018.04.008",
+                            "pub-id_pmid": "29852967",
+                            "section_type": "REF",
+                            "source": "Computer Methods and Programs in Biomedicine",
+                            "type": "ref",
+                            "volume": "161",
+                            "year": "2018"
+                        },
+                        "text": "Integrating Genomic Data and Pathological Images to Effectively Predict Breast Cancer Clinical Outcome",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 56956,
+                        "infons": {
+                            "fpage": "1031",
+                            "issue": "5",
+                            "lpage": "1045",
+                            "pub-id_doi": "10.1007/s11517-020-02147-3",
+                            "pub-id_pmid": "32124225",
+                            "section_type": "REF",
+                            "source": "Medical, & Biological Engineering & Computing",
+                            "type": "ref",
+                            "volume": "58",
+                            "year": "2020"
+                        },
+                        "text": "DeepSurvNet: Deep Survival Convolutional Network for Brain Cancer Survival Rate Classification Based on Histopathological Images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57085,
+                        "infons": {
+                            "fpage": "609",
+                            "issue": "1",
+                            "lpage": "639",
+                            "pub-id_doi": "10.1007/s11831-021-09591-w",
+                            "section_type": "REF",
+                            "source": "Archives of Computational Methods in Engineering",
+                            "type": "ref",
+                            "volume": "29",
+                            "year": "2021"
+                        },
+                        "text": "A Comprehensive Review of Markov Random Field and Conditional Random Field Approaches in Pathology Image Analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57199,
+                        "infons": {
+                            "fpage": "4821",
+                            "issue": "7",
+                            "lpage": "4862",
+                            "pub-id_doi": "10.1007/s10462-020-09808-7",
+                            "section_type": "REF",
+                            "source": "Artificial Intelligence Review",
+                            "type": "ref",
+                            "volume": "53",
+                            "year": "2020"
+                        },
+                        "text": "A Review for Cervical Histopathology Image Analysis Using Machine Vision Approaches",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57283,
+                        "infons": {
+                            "elocation-id": "107070",
+                            "pub-id_doi": "10.1016/j.compbiomed.2023.107070",
+                            "pub-id_pmid": "37295389",
+                            "section_type": "REF",
+                            "source": "Computers in Biology and Medicine",
+                            "type": "ref",
+                            "volume": "162",
+                            "year": "2023"
+                        },
+                        "text": "CAM\u2010VT: A Weakly Supervised Cervical Cancer Nest Image Identification Approach Using Conjugated Attention Mechanism and Visual Transformer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57424,
+                        "infons": {
+                            "elocation-id": "104465",
+                            "pub-id_doi": "10.1016/j.compbiomed.2021.104465",
+                            "pub-id_pmid": "33975208",
+                            "section_type": "REF",
+                            "source": "Computers in Biology and Medicine",
+                            "type": "ref",
+                            "volume": "134",
+                            "year": "2021"
+                        },
+                        "text": "DeepCervix: A Deep Learning\u2010Based Framework for the Classification of Cervical Cells Using Hybrid Deep Feature Fusion Techniques",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57555,
+                        "infons": {
+                            "elocation-id": "108829",
+                            "pub-id_doi": "10.1016/j.patcog.2022.108829",
+                            "section_type": "REF",
+                            "source": "Pattern Recognition",
+                            "type": "ref",
+                            "volume": "130",
+                            "year": "2022"
+                        },
+                        "text": "CVM\u2010Cervix: A Hybrid Cervical Pap\u2010Smear Image Classification Framework Using CNN, Visual Transformer and Multilayer Perceptron",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57686,
+                        "infons": {
+                            "fpage": "381.e1",
+                            "issue": "4",
+                            "lpage": "381.e14",
+                            "pub-id_doi": "10.1016/j.ajog.2018.12.030",
+                            "section_type": "REF",
+                            "source": "American Journal of Obstetrics and Gynecology",
+                            "type": "ref",
+                            "volume": "220",
+                            "year": "2019"
+                        },
+                        "text": "Survival Outcome Prediction in Cervical Cancer: Cox Models vs Deep\u2010Learning Model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57770,
+                        "infons": {
+                            "elocation-id": "131",
+                            "issue": "1",
+                            "pub-id_doi": "10.1186/s13048-020-00730-8",
+                            "pub-id_pmid": "33160404",
+                            "section_type": "REF",
+                            "source": "Journal of Ovarian Research",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2020"
+                        },
+                        "text": "Identification of an Autophagy\u2010Related Gene Signature for Survival Prediction in Patients With Cervical Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57883,
+                        "infons": {
+                            "fpage": "1",
+                            "lpage": "7",
+                            "pub-id_doi": "10.1200/cci.18.00157",
+                            "section_type": "REF",
+                            "source": "JCO Clinical Cancer Informatics",
+                            "type": "ref",
+                            "volume": "3",
+                            "year": "2019"
+                        },
+                        "text": "HistoQC: An Open\u2010Source Quality Control Tool for Digital Pathology Slides",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57959,
+                        "infons": {
+                            "fpage": "1107",
+                            "lpage": "1110",
+                            "pub-id_doi": "10.1109/ISBI.2009.5193250",
+                            "section_type": "REF",
+                            "source": "International Symposium on Biomedical Imaging",
+                            "type": "ref",
+                            "year": "2009"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 57960,
+                        "infons": {
+                            "fpage": "2279",
+                            "issue": "10",
+                            "lpage": "2301",
+                            "pub-id_doi": "10.1016/s0031-3203(01)00178-9",
+                            "section_type": "REF",
+                            "source": "Pattern Recognition",
+                            "type": "ref",
+                            "volume": "35",
+                            "year": "2002"
+                        },
+                        "text": "Image Processing With Neural Networks\u2014A Review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58009,
+                        "infons": {
+                            "section_type": "REF",
+                            "source": "Deep Residual Learning for Image Recognition",
+                            "type": "ref",
+                            "year": "2016"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58010,
+                        "infons": {
+                            "fpage": "423",
+                            "issue": "2",
+                            "lpage": "443",
+                            "pub-id_doi": "10.1109/tpami.2018.2798607",
+                            "pub-id_pmid": "29994351",
+                            "section_type": "REF",
+                            "source": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+                            "type": "ref",
+                            "volume": "41",
+                            "year": "2019"
+                        },
+                        "text": "Multimodal Machine Learning: A Survey and Taxonomy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58061,
+                        "infons": {
+                            "fpage": "457",
+                            "lpage": "468",
+                            "section_type": "REF",
+                            "source": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+                            "type": "ref",
+                            "year": "2016"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58062,
+                        "infons": {
+                            "elocation-id": "101563",
+                            "pub-id_doi": "10.1016/j.media.2019.101563",
+                            "pub-id_pmid": "31561183",
+                            "section_type": "REF",
+                            "source": "Medical Image Analysis",
+                            "type": "ref",
+                            "volume": "58",
+                            "year": "2019"
+                        },
+                        "text": "Hover\u2010Net: Simultaneous Segmentation and Classification of Nuclei in multi\u2010tissue Histology Images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58165,
+                        "infons": {
+                            "fpage": "11",
+                            "lpage": "19",
+                            "pub-id_doi": "10.1007/978-3-030-23937-4_2",
+                            "section_type": "REF",
+                            "source": "European Congress on Digital Pathology",
+                            "type": "ref",
+                            "year": "2019"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58166,
+                        "infons": {
+                            "fpage": "1546",
+                            "issue": "6127",
+                            "lpage": "1558",
+                            "pub-id_doi": "10.1126/science.1235122",
+                            "pub-id_pmid": "23539594",
+                            "section_type": "REF",
+                            "source": "Science",
+                            "type": "ref",
+                            "volume": "339",
+                            "year": "2013"
+                        },
+                        "text": "Cancer Genome Landscapes",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 58191,
+                        "infons": {
+                            "fpage": "1434",
+                            "issue": "11",
+                            "lpage": "1443",
+                            "pub-id_doi": "10.1002/pmic.201300462",
+                            "pub-id_pmid": "24610677",
+                            "section_type": "REF",
+                            "source": "Proteomics",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2014"
+                        },
+                        "text": "iTRAQ Analysis of Colorectal Cancer Cell Lines Suggests Drebrin (DBN1) Is Overexpressed During Liver Metastasis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

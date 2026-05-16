@@ -1,0 +1,2375 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260508",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC7619041",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1016/j.neuroimage.2026.121881",
+                            "article-id_manuscript": "EMS213524",
+                            "article-id_pmc": "PMC7619041",
+                            "article-id_pmid": "41887545",
+                            "fpage": "121881",
+                            "kwd": "Mouse brain delineation Data augmentation Fluorescence microscopy Brain atlas Dense segmentation",
+                            "license": "This work is licensed under a CC BY 4.0 International license.",
+                            "lpage": "121881",
+                            "name_0": "surname:Yuan;given-names:Kunhao",
+                            "name_1": "surname:Woods;given-names:Hanan",
+                            "name_2": "surname:G\u00fcnar;given-names:\u00dclk\u00fc",
+                            "name_3": "surname:Dominic;given-names:Digin",
+                            "name_4": "surname:Wu;given-names:Ying",
+                            "name_5": "surname:Qiu;given-names:Zhen",
+                            "name_6": "surname:Grant;given-names:Seth G.N.",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "331",
+                            "year": "2026"
+                        },
+                        "text": "PRMix: Primary Region Mix Augmentation and Benchmark Dataset for Precise Whole Mouse Brain Anatomical Delineation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 114,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The architecture of the mouse brain shares remarkable similarities with the human brain, making it an essential model for studying brain pathologies, synaptic diversity, and regional specialization. A key step in such studies involves registering molecular images to reference brain atlases, a process hindered by the difficulty of accurately delineating brain regions. Toward this, we have curated a collection of high-resolution, dual-fluorescence microscopy images, termed as dual-fluorescence mouse brain microscopy (DMBM) dataset, complemented by expert annotations of 118 subregions in parasagittal sections. This dataset provides unprecedented insights into the molecular and structural complexity of the mouse brain. However, its full potential for detailed whole-brain analysis is compromised by challenges such as boundary ambiguity and sample scarcity in existing automated segmentation methods, prompting the development of the primary region mix (PRMix) augmentation method. PRMix is specifically designed to expand these datasets, enhance the realism of synthetic data and minimize overlap between adjacent regions. Our approach, together with the curated dataset, achieves superior segmentation performance across the mouse brain compared with existing methods, setting a new benchmark in brain imaging research.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1442,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1455,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The mouse brain is a fundamental model in neuroscience research owing to its structural and functional parallels with the human brain. Elucidating its molecular, synaptic, and cellular architecture is essential for understanding brain organization and function. Recent advances in molecular labeling, genetic tagging, and high-resolution imaging have enabled the generation of diverse, brain-wide datasets. However, the standard reference atlases that define brain region boundaries remain based on classical histology, creating a critical need for accurate delineation methods that are compatible with modern molecular imaging modalities.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2095,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Manual delineation and annotation of brain regions are labor-intensive and prone to inter-annotator variability, limiting both reproducibility and scalability. Automated methods offer a scalable alternative, enabling high-throughput and standardized analyses. However, their performance critically depends on the availability of high-quality and diverse training datasets, which are particularly limited for modalities that integrate molecular information with anatomically accurate annotations. In this context, data augmentation plays a crucial role in enriching datasets by introducing variability and enhancing the robustness and generalization of automated models. Yet, most existing methods focus on a binary segmentation problem, such as tumor segmentation or lesion segmentation, leaving more complex tasks, such as dense brain delineation, relatively underexplored. To address these challenges, we present the dual-fluorescence mouse brain microscopy (DMBM) dataset, a manually annotated collection of mouse brain parasagittal sections that integrates both structural and molecular information. To improve the precision of automated brain region delineation, we propose primary region mix (PRMix), a novel augmentation method that preserves the original anatomical structure of the brain while minimizing regional overlaps, enabling realistic data synthesis and improving the precision of automated brain delineation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3522,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Related work",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3535,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Brain atlases",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3549,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The Allen brain atlas and Paxinos brain atlases are widely used reference atlases that show delineated regions in planes of tissue sections. A core methodology used to create these atlases is Nissl staining, which highlights neuronal cell bodies and cytoarchitecture but lacks the resolution for molecular structures or synaptic connectivity. To overcome this limitation, fluorescent protein probes, such as those fused to endogenous synaptic proteins, self-labeling tags such as HaloTags, and antibody labeling, offer enhanced molecular insight and have been instrumental in developing single-synapse resolution maps of the mouse and human brain. In contrast to the cellular-level view of Nissl staining, protein-marked imaging provides superior subcellular detail.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4316,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "More recently, advances in high-throughput 3D imaging have accelerated the creation of brain-wide datasets with cellular or subcellular resolution. Light-sheet fluorescence microscopy (LSFM), for instance, has been instrumental in generating whole-brain maps by enabling rapid optical sectioning of cleared tissue. Similarly, serial two-photon tomography (STPT) has been employed to systematically image and reconstruct the entire mouse brain at micron-scale resolution, providing detailed cytoarchitectural and connectivity data.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4847,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "While these methods provide invaluable insights into whole-brain architecture and function, they often rely on single molecular markers or are optimized for tracing long-range projections.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5036,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Dual-synaptic markers",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5058,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Our work leverages a dual-synaptic marker strategy to dissect the molecular diversity of synapses. The two proteins we visualize, post-synaptic density protein 95 (PSD95) and synapse-associated protein 102 (SAP102), are key scaffolding molecules within the postsynaptic terminal of excitatory synapses but exhibit distinct expression patterns and functional roles throughout development and across different brain regions. Imaging these molecules at single-synapse resolution across the brain has allowed for the generation of the first brain-wide synaptic maps in mammals across the lifespan, in genetic models of neurodevelopmental disorders and in sleep deprivation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5728,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The use of such multi-marker synaptic atlases has vast potential. They provide a crucial baseline for studying how synaptic composition is altered in models of disease, the effect of experience and learning, the impact of pharmacological interventions, and many other applications. Furthermore, this approach can be extended to include additional synaptic markers to create even more detailed synaptome maps, enabling researchers to undertake advanced functional and connectomic studies.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6216,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Image augmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6235,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Deep learning-based image analysis, especially in medical imaging, often faces data scarcity. To mitigate this, image augmentation techniques, which were originally popularized in natural image recognition, have been widely adopted. Traditional approaches apply geometric transformations such as flipping and affine adjustments (rotation, scaling, translation) to teach models spatial invariance, as well as intensity perturbations (brightness and contrast shifts) to ensure robustness to variations in imaging conditions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6758,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "More sophisticated techniques have emerged that mix information between images to expand dataset diversity. MixUp introduced linear image combinations to expand datasets and regularize training, and was later extended to segmentation tasks. Recent advances include patch-based augmentation, scribble-based methods for medical imaging, semantic-aware augmentation, and self-adaptive blending to address background inconsistencies. While effective for object-centric tasks, these methods are nevertheless ill-suited for whole-brain analysis as they disregard global anatomical topology.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7343,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Image synthesis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7359,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "A related, yet distinct, line of research employs generative models to synthesize medical images, with a primary focus on modality imputation (i.e., translating images between modalities). This has proven effective in applications ranging from magnetic resonance imaging (MRI) and computed tomography (CT) image synthesis, to more recently, in multi-modal brain MRI to reduce data collection requirements. However, it was not designed for de novo sample synthesis and has not demonstrated success on high-resolution microscopy brain images, where cellular and regional integrity is a critical requirement.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7965,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "PRMix, with its primary region sampling and overlap-aware augmentation, is specifically designed to address these gaps.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8085,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "The dual-fluorescence mouse brain microscopy dataset",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8138,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Data collection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8154,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The dataset comprises whole-brain parasagittal sections from 96 mice (48 male, 48 female) ranging in age from 1\u201312 months. Detailed procedures for the generation of the mouse lines are described in. Briefly, the endogenous Psd95 and Sap102 genes were genetically modified by inserting the coding regions for fluorescent proteins eGFP and mKO2 into the 3\u2019 regions of the genes, resulting in the expression of PSD95eGFP and SAP102mKO2 fusion proteins. Mice were perfused with sodium pentobarbital and saline-PFA. Brains were dissected, post-fixed, and cryo-embedded in OCT compound. Parasagittal sections (18 \u03bcm) were cut referencing Allen mouse brain atlas slices 11\u201312. Whole-brain imaging was performed on a Nikon Eclipse Ti2 with a spinning disk confocal system, and 856 \u00d7 812 individual tiles (per image) were stitched into full images with 16\u00d7 downsampling. Subregions were manually delineated in ImageJ using PSD95/SAP102 protein markers, guided by the Allen brain atlas.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9140,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Dataset statistics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9159,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The collected dataset has 102 dual-fluorescence whole-brain parasagittal images (n = 96), with a median resolution of 6383 \u00d7 12531, encompassing 118 well-defined anatomical subregions from the sagittal mouse brain slices. Three exemplar images are shown in Fig. 1. The total number of pixels for each subregion is log-rescaled and summarized in Fig. 2(a), which highlights significant variations in pixel counts across subregions. Notably, the foreground-to-background ratio is approximately 0.84, making the proposed dataset highly challenging while informative for neuroscience and medical research. Fig. 2(b) illustrates the missing subregions for specific image IDs. Due to the location of the slices during sectioning, certain areas, such as AOB and RSPv6b, are present in only two slices and are considered less reliable and representative. We thus excluded them in evaluation but kept the information in the figure for completeness.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10100,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10108,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Motivation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10119,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "While we introduced a high-resolution, dual-fluorescence dataset, microscopy data are scarcer than for CT or MRI due to their extremely large size (e.g., 102k\u00d7 200k pixels) and low throughput, and thus insufficiently diverse on their own to eliminate augmentation. This scarcity, coupled with biological variability, makes augmentation essential.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10467,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Mixing-based augmentations like CutMix and CarveMix are suboptimal for our task as they were designed for object-centric tasks and fail to preserve global context. Generative methods such as MouseGAN series perform well when synthesizing low-resolution (~0.1 mm) images with a small number of regions (<30 per hemisphere). When applied to high-resolution brain images (~100 nm scale) with over a hundred subregions, they often generate anatomically plausible but texturally blurry structures, which compromises the crucial topological relationships among numerous small subregions. PRMix is thus motivated to enhance data diversity and realism for effective modeling. The overall diagram of the proposed PRMix is illustrated in Fig. 3, with the subsequent paragraphs detailing its design objectives and implementation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11286,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Offline hard-sample mining",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11313,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "According to our initial experiments, random sample mixing can introduce feature inconsistencies, while exclusively selecting visually similar samples lacks sufficient challenge for effective learning. We therefore designed a strategy to ensure each target image is paired with multiple query images from a diverse range of pre-computed similarities across the whole dataset, termed as offline hard-sample mining. We quantify similarity through a mask overlap score, a metric designed to emphasize structural variations, which constitute the primary challenge in delineation, whereas standard augmentations compensate for variations in texture and intensity. For each target image, similarity scores are computed against the remaining training images and sorted. The top 20% most similar samples are designated as \u2018easy\u2019 samples, while the remaining 80% are labeled as \u2018hard\u2019 samples. As shown in Fig. 4, \u2018easy\u2019 sample-mixing minimally affects adjacent regions. In the \u2018hard\u2019 case, however, a direct \u2018copy-and-paste\u2019 approach leads to significant overlaps with the striatum and pallidum regions. PRMix resolves this by recalculating the target primary region\u2019s optimal size, orientation, and location to fit properly within the target image. During data augmentation, we mix \u2018easy\u2019 and \u2018hard\u2019 samples in varying proportions, aiming to find a balance between challenge and learnability. Empirically, oversampling 80% from the hard-sample set yielded the best results. Details of the different sampling ratios are summarized in Table 5.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12878,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Primary region sampling",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12902,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Based on anatomical and functional criteria, we grouped the 118 brain subregions into 11 primary regions: cerebellum (CB), thalamus (TH), midbrain (MB), hindbrain (HB), isocortex, hypothalamus (HY), olfactory areas (OLF), cortical subplate (CTXsp), striatum (STR), pallidum (PAL), and hippocampal formation (HPF), as illustrated in Fig. 5. These primary regions serve as the fundamental units for mixing. During mixing, we only sampled 3\u20139 of these regions from multiple sources to replace those in target image, boosting diversity while preserving feature consistency. The primary region sampling offers two key advantages: (1) preserving the anatomical structure of the brain image and (2) avoiding potential subregional overlaps during the mixing process. More importantly, our design incorporates mixing at an intermediate semantic level, setting it apart from existing object-centric approaches. This makes it particularly well-suited for dense foreground tasks such as whole-brain delineation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13904,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Overlap-aware augmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13931,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To ensure those sampled regions align in location and size with the target image, we implemented an overlap-aware augmentation module. This module begins by applying random affine transformations \u2014 such as rescaling, rotation, and translation \u2014 to the query masks for individual primary regions. Applying these transformations independently to local regions introduces non-linear structural variations, simulating complex geometric distortions \u2014 such as local stretching and tissue shifting \u2014 frequently observed in histological preparations. Corresponding regions are then cut out from the target masks, leaving behind a complementary mask which is used to calculate intersections with the query mask. If the intersection is below a certain threshold \u03c4, the query region will be pasted directly onto the complementary masks at its original location. Otherwise, a greedy search for optimal affine parameters will begin to ensure a minimum intersection where possible. Once the greedy search converges, the optimized affine transformations are reapplied to the query images and masks, followed by the final pasting process. Crucially, this pasting operation is performed synchronously across both fluorescent channels. By transferring the multi-channel signal as a coupled unit, PRMix strictly preserves the intra-region synaptic co-localization patterns \u2014 essential for defining molecular identity \u2014 even as the background context changes. Further-more, by training the model to resolve anatomical structures despite these local geometric shifts and the artificial boundary discontinuities introduced by mixing, our approach effectively enhances robustness against physical artifacts like tears and folding. The overall process is outlined as pseudo-code in Algorithm 1.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15715,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2_caption"
+                        },
+                        "text": "OAA: Overlap-Aware Augmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15747,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "input : Source image, seg. mask, primary region ; Target seg. mask, primary region ; Overlap tolerance \u03c4; Rot., Scaling, Trans., Shift ranges: ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15893,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "output: Augmented low-overlap source mask and image: ; obtain binary region masks: ; Sample random affine transformations: ; Apply affine transformations to mask: ; Initialize best overlaps and shifts: O \u2190 +\u221e sx, sy \u2190 (sI, sI);",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16127,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "while sx \u2208 [sI, sh] do",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16152,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0whilesy \u2208 [sI, sh] do",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16190,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Shift binary region mask: ;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16240,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Calculate overlaps between the binary mask and the",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16313,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0complementary target mask: ;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16368,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if o < O then",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16406,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0O \u2190 o;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16445,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break inner loop if O < \u03c4;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16505,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0end",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16531,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sy \u2190 sy + stepsize;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16575,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0end",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16593,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sx \u2190 sx + stepsize;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16629,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break outer loop if O < \u03c4;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16671,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": " end ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16677,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Obtain optimal mask and image: ;",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16710,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u00a0\u00a0",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16715,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Comparison with existing mixing approaches",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16758,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Before formalizing the proposed PRMix, we compare it with existing mixing-based augmentations. Starting with the simplest method, MixUp blends a pair of images, i.e. source image Xs and target image Xt and their corresponding labels Ys and Yt. The synthesized image and label are generated through:  where \u03bb ~ U(0, 1) is a controlling factor. For CutMix and CarveMix, their mixing strategies can be summarized as: ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17178,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "\u2299 is the element-wise dot product and Ms represents a binary mask used to sample areas from the source image, which can be either rectangular regions (CutMix) or semantic regions (CarveMix). Taking both source image and target image semantics into account, we yielded the basic form of our PRMix:  where  is the overlap-mitigated semantic mask for primary region p, retrieved with  is the union of total k subregions within a primary region, known as , and the adapted source image  is generate with the overlap-mitigated semantic mask, using . Additionally, to enhance the versatility and variability of the dataset, we further extended the proposed PRMix to multiple source images, simply by denoting the above process as , and iterated the process multiple times via: ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17952,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This enables mixing at an intermediate semantic level and allows generalization beyond a single image pair, unlike traditional augmentation methods where repeated lower-level mixing often leads to occlusion and ambiguity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18174,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Exemplar synthesized images from different methods are illustrated in Fig. 6. MixUp generates ambiguous images, whereas CutMix and CarveMix focus on single regions and struggle to preserve global anatomy. By contrast, our method produces the most realistic and diverse-looking images. We also compared our approach to a generative model, MouseGAN++, initially designed for modality imputation in MRI. As shown at the bottom of the figure, while this GAN-based method maintains global structure, it does so at the cost of local texture and intensity details, which are essential for dense whole-brain delineation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18787,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Experiments",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18799,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Implementation details",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18822,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To ensure a fair comparison between different augmentation methods and minimize the influence of model architectures, all experiments were conducted using the state-of-the-art medical image segmentation model nnUNet, which enhances the classic UNet with task-specific configurations. Both the proposed PRMix and its comparators were applied offline to generate augmented datasets for each fold, thereby enhancing training efficiency. Additionally, a shared pipeline was applied during mixing, which included standard pre-processing (intensity normalization, foreground oversampling, color jittering, and affine transformations) and a final morphological opening step after mixing to smooth artificial edges resulting from manual delineation. The model was trained with an input patch size of 768 \u00d7 1536, approximately 1/64 of the median image size, using 2 patches per GPU and 250 minibatches per epoch. The collected dataset was split into 80 training/validation and 22 strictly isolated and unaugmented testing samples, and all experiments were conducted using 5-fold cross-validation on two NVIDIA RTX 4090 GPUs.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19939,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The augmented training sets were generated with varying folds, namely 5\u00d7 (~400 images), 10\u00d7 (~800 images) and 20\u00d7 (~1600 images), by excluding cases where source regions are absent from the target image. Although MouseGAN++ was developed for modality imputation rather than data augmentation, we generated a 20\u00d7 augmented dataset by repeated random sampling from the generative model. Due to the large size of the whole-brain image, patch-wise training has been employed. Under the given patch size and batch settings, the model requires approximately 2500 iterations to process the entire training dataset once\u2014a process that takes about two days on a single GPU. Consequently, the baseline model was trained for 12 full epochs as a reference, while the proposed PRMix model was evaluated with 3, 6, and 12 full epochs for comparison. Hereafter, unless otherwise specified, all mentions of \u201cepochs\u201d refer to full epochs.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20871,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Experimental results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20892,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We compared PRMix with existing methods in Table 1, evaluating categorical average precision, recall, F1 and mIoU. Unless stated otherwise, all results are the average of 5-fold runs and were obtained using purely synthesized data (except for the baseline). The best score is highlighted in bold text. Although MouseGAN utilizes an augmented dataset, it compromises intensity details, leading to the lowest precision and recall among all augmentation strategies. This performance gap largely stems from the fact that MouseGAN\u2019s architecture is optimized for modality imputation in lower-resolution MRI. Its reliance on CycleGAN-like translation often results in \u2018hallu-cinated\u2019 or blurred textures when applied to high-resolution, synapsedense microscopy data. In contrast, a simpler mixing-based method like MixUp outperforms MouseGAN, despite introducing pixel-wise ambiguity. While CutMix and CarveMix improve F1 and mIoU over the baseline, they fail to capture all true pixels, resulting in similar performance to MixUp. We hypothesize that this occurs because these methods generate synthetic samples without considering spatial locations, leading to overlapping regions that make distinguishing individual objects more challenging. By contrast, our proposed PRMix significantly outperforms all compared methods across all metrics, achieving the highest F1 (74.66) and mIoU (61.78) among all methods.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22304,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Qualitative results from different methods are illustrated in Fig. 7. The top two rows highlight under-represented regions, such as UVUgr, which Baseline, MouseGAN, CutMix, and CarveMix fail to segment. These mispredictions can be attributed to insufficient training data (Baseline), severe overlaps from mixing (CutMix and CarveMix), and an inability to capture the intensity distribution (MouseGAN). The third row displays challenging cortical regions where most methods struggle. In contrast, our proposed PRMix produces results that align closely with the ground truth anatomy. The final three rows present highly ambiguous samples in the sAMY, AON, and PTLp regions. Here, MouseGAN\u2019s result is particularly noisy due to a lack of intensity gradients, underscoring that both anatomical structure and intensity distribution are essential for accurate brain delineation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23179,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To move beyond qualitative comparisons, which can be prone to selection bias, we conducted a rigorous statistical analysis. We performed a paired t-test on the F1 and mIoU scores for every test sample, comparing PRMix against each baseline and competing method. The results are detailed in Table 2. As expected, all data augmentation methods, including PRMix, significantly outperformed the baseline. More importantly, PRMix also showed statistically significant improvements over MouseGAN, MixUp, and CarveMix. Although the margin over CutMix was not statistically significant, the p-values for both F1 (0.079) and mIoU (0.057) were close to the significance threshold, and PRMix\u2019s superior average performance is shown in Table 1.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23914,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Ablations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23924,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We conducted a comprehensive ablation study to evaluate the impact of several critical factors, including dataset scale, training duration, and the specific configuration of mixed images. Additionally, we investigated the influence of fluorescent channel selection, the proportion of hard samples in the HSM module, and the individual contributions of each PRMix component. Finally, we compared the effectiveness of purely synthetic training against a hybrid refinement schedule under a consistent computational budget, and all the results are detailed in Tables 3, 4, 5 and 6.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24502,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The results in Table 3(a) highlight the benefit of extensive data augmentation. Performance steadily improves as augmentation increases from 5\u00d7 to 20\u00d7, where the model achieves its highest F1 and mIoU scores, surpassing the baseline by a large margin. Table 3(b) confirms that performance also correlates with longer training. However, comparing the two factors reveals that augmentation provides a greater advantage than training duration. For example, PRMix 20\u00d7 with just 3 epochs of training outperforms PRMix 5\u00d7 with 12 epochs, demonstrating that exposure to more diverse samples is more critical than longer training with less diverse data.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25152,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our investigation into the number of mixed images (Table 4(a)) indicates that three is the optimal number. Mixing two images provides minimal variation and risks overfitting, whereas mixing four disrupts the target image\u2019s structure. We attribute this to excessive structural disruption: when too many foreign patches are introduced, the global topological coherence of the target image is compromised. This results in an anatomically implausible \u2018cluttered\u2019 canvas where key contextual cues are heavily occluded, making it difficult for the model to learn valid spatial relationships. Empirically, mixing three images achieves the best balance and the highest performance. In Table 4(b), we assess the impact of fluorescence channels. The dual-channel model significantly outperforms models trained on either the SAP102 or PSD95 channel alone, validating our methodological design. We also note that the PSD95 model slightly outperforms the SAP102 model, likely because its clearer expression in maturer synapses helps in distinguishing regional boundaries.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26217,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Table 5(a) shows that overemphasis on \u2018easy\u2019 samples (the 20% \u2018hard\u2019 setting) leads to suboptimal performance, likely due to insufficient feature diversity. In addition, the 50%:50% configuration does introduce greater diversity but still lacks enough hard examples to support learning a more generalizable representation, which accounts for its performance gap compared with the 80%\u2013hard setting. Table 5(b) shows that integrating primary region sampling (PRS) alone yields a noticeable performance improvement compared to the baseline. However, further adding either HSM or OAA individually leads to performance degradation, suggesting that the \u2018easy\u2019 setting alone does not benefit from OAA, and that introducing additional hard samples through HSM increases task complexity. In contrast, combining both HSM and OAA produces a substantial performance gain, underscoring their synergistic effect in enhancing dataset quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27159,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For practical utility, we compared the \u2018Purely Synthetic\u2019 protocol (12 epochs) against a \u2018Hybrid\u2019 schedule (6 epochs synthetic pre-training + 6 epochs real data refinement) under a consistent compute budget. The results (Table 6) indicate that while incorporating real data yields marginal gains across all methods (0.2\u20131.2 increase in F1), PRMix maintains its consistent superiority. This confirms that PRMix generates high-quality synthetic samples that effectively complement real data in mixed training pipelines.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27687,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27698,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "We curated the DMBM dataset, a high-resolution, expert-annotated collection capturing 118 brain subregions with unprecedented molecular and structural detail of the synaptic organization. For the first time, we demonstrate that integrating dual-fluorescence synaptic markers enables this dataset to serve as a comprehensive benchmark for regional delineation of the mouse brain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28077,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "To further improve the accuracy of automated segmentation methods, we introduced PRMix, a novel data augmentation that enables realistic data synthesis while preserving anatomical structures, achieving fine-grained brain region delineation beyond existing methods. By combining the DMBM dataset with PRMix augmentation, our work sets a new standard for mouse brain delineation and provides a robust framework for advancing neuroscience and biomedical imaging.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28537,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "The resulting automated delineator offers a > 10-fold reduction in processing time, resolving boundary ambiguities and minimizing the inconsistencies of manual annotation. This efficiency dramatically lowers the barrier to creating large-scale, high-accuracy atlases. Looking forward, the adaptability of our framework opens critical new research avenues. While this study validated PRMix exclusively on the DMBM dataset due to the scarcity of comparable high-resolution synaptic data, the core principles of our approach \u2014 region-aware sampling and overlap minimization \u2014 are modality-agnostic. Consequently, our framework holds significant potential to generalize across diverse histological stains and species, providing a powerful tool for comparative neuroanatomy. Future work will focus on validating PRMix on external datasets and distinct imaging protocols to further establish its robustness. Ultimately, integrating this approach with other modalities, such as spatial transcriptomics and connectomics, will pave the way for a more holistic understanding of brain architecture.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29629,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supplementary Material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29652,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Supplementary material related to this article can be found online at https://doi.org/10.1016/j.neuroimage.2026.121881.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29772,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": " CRediT authorship contribution statement ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29815,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": "Kunhao Yuan: Writing \u2013 review & editing, Writing \u2013 original draft, Visualization, Methodology, Data curation, Conceptualization. Hanan Woods: Writing \u2013 review & editing, Data curation. \u00dclk\u00fc G\u00fcnar: Data curation. Digin Dominic: Visualization, Resources. Ying Wu: Formal analysis. Zhen Qiu: Writing \u2013 review & editing, Formal analysis. Seth G.N. Grant: Writing \u2013 review & editing, Supervision, Resources, Funding acquisition, Conceptualization.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30271,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": " Ethics approval ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30289,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": "The animal experiments underwent review by the University of Edinburgh Animal Welfare and Ethical Review Body (AWERB). They were subsequently approved (PPL PF3F251A9 \u2013 24 July 2019 to 13 June 2024) by the UK Animals in Science Regulation Unit (ASRU) under the Animals (Scientific Procedures) Act 1986 in strict accordance with the Home Office Code of Practice. The experiments were conducted following an authorized experimental protocol endorsed by both the AWERB and the Bioresearch and Veterinary Services (BVS) department at the University of Edinburgh.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30849,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": " Declaration of competing interest ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30885,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "footnote"
+                        },
+                        "text": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31056,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31074,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Data and Code Availability Statement The data and code used for this study have been made public at https://git-pages.ecdf.ed.ac.uk/dmbm-datasets-5c13cd/. For the purpose of open access, the author has applied a CC-BY public copyright license to any Author Accepted Manuscript version arising from this submission.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31389,
+                        "infons": {
+                            "fpage": "73",
+                            "lpage": "83",
+                            "name_0": "surname:Basaran;given-names:B",
+                            "name_1": "surname:Zhang;given-names:W",
+                            "name_2": "surname:Qiao;given-names:M",
+                            "name_3": "surname:Kainz;given-names:B",
+                            "name_4": "surname:Matthews;given-names:P",
+                            "name_5": "surname:Bai;given-names:W",
+                            "section_type": "REF",
+                            "source": "Lesionmix: A lesion-level data augmentation method for medical image segmentation",
+                            "type": "ref",
+                            "year": "2023"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31390,
+                        "infons": {
+                            "fpage": "4057",
+                            "lpage": "4073",
+                            "name_0": "surname:Bulovaite;given-names:E",
+                            "name_1": "surname:Qiu;given-names:Z",
+                            "name_2": "surname:Kratschke;given-names:M",
+                            "name_3": "surname:Zgraj;given-names:A",
+                            "name_4": "surname:Fricker;given-names:D",
+                            "name_5": "surname:Tuck;given-names:E",
+                            "name_6": "surname:Gokhale;given-names:R",
+                            "name_7": "surname:Koniaris;given-names:B",
+                            "name_8": "surname:Jami;given-names:S",
+                            "name_9": "surname:Merino-Serrais;given-names:P",
+                            "pub-id_doi": "10.1016/j.neuron.2022.09.009",
+                            "pub-id_pmid": "36202095",
+                            "section_type": "REF",
+                            "source": "Neuron",
+                            "type": "ref",
+                            "volume": "110",
+                            "year": "2022"
+                        },
+                        "text": "A brain atlas of synapse protein lifetime across the mouse lifespan",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31458,
+                        "infons": {
+                            "elocation-id": "101535",
+                            "name_0": "surname:Chartsias;given-names:A",
+                            "name_1": "surname:Joyce;given-names:T",
+                            "name_2": "surname:Papanastasiou;given-names:G",
+                            "name_3": "surname:Semple;given-names:S",
+                            "name_4": "surname:Williams;given-names:M",
+                            "name_5": "surname:Newby;given-names:D",
+                            "name_6": "surname:Dharmakumar;given-names:R",
+                            "name_7": "surname:Tsaftaris;given-names:S",
+                            "pub-id_doi": "10.1016/j.media.2019.101535",
+                            "pub-id_pmid": "31351230",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "58",
+                            "year": "2019"
+                        },
+                        "text": "Disentangled representation learning in cardiac image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31521,
+                        "infons": {
+                            "fpage": "1597",
+                            "lpage": "1607",
+                            "name_0": "surname:Chen;given-names:T",
+                            "name_1": "surname:Kornblith;given-names:S",
+                            "name_2": "surname:Norouzi;given-names:M",
+                            "name_3": "surname:Hinton;given-names:G",
+                            "section_type": "REF",
+                            "source": "A simple framework for contrastive learning of visual representations",
+                            "type": "ref",
+                            "year": "2020"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31522,
+                        "infons": {
+                            "fpage": "270",
+                            "lpage": "275",
+                            "name_0": "surname:Cizeron;given-names:M",
+                            "name_1": "surname:Qiu;given-names:Z",
+                            "name_2": "surname:Koniaris;given-names:B",
+                            "name_3": "surname:Gokhale;given-names:R",
+                            "name_4": "surname:Komiyama;given-names:N",
+                            "name_5": "surname:Frans\u00e9n;given-names:E",
+                            "name_6": "surname:Grant;given-names:S",
+                            "pub-id_doi": "10.1126/science.aba3163",
+                            "pub-id_pmid": "32527927",
+                            "section_type": "REF",
+                            "source": "Science",
+                            "type": "ref",
+                            "volume": "369",
+                            "year": "2020"
+                        },
+                        "text": "A brainwide atlas of synapses across the mouse life span",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31579,
+                        "infons": {
+                            "fpage": "6864",
+                            "lpage": "6881",
+                            "name_0": "surname:Curran;given-names:O",
+                            "name_1": "surname:Qiu;given-names:Z",
+                            "name_2": "surname:Smith;given-names:C",
+                            "name_3": "surname:Grant;given-names:S",
+                            "pub-id_doi": "10.1111/ejn.14846",
+                            "pub-id_pmid": "32492218",
+                            "section_type": "REF",
+                            "source": "Eur J Neurosci",
+                            "type": "ref",
+                            "volume": "54",
+                            "year": "2021"
+                        },
+                        "text": "A single-synapse resolution survey of psd95-positive synapses in twenty human brain regions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31671,
+                        "infons": {
+                            "fpage": "2673",
+                            "lpage": "2682",
+                            "name_0": "surname:Cuthbert;given-names:P",
+                            "name_1": "surname:Stanford;given-names:L",
+                            "name_2": "surname:Coba;given-names:M",
+                            "name_3": "surname:Ainge;given-names:J",
+                            "name_4": "surname:Fink;given-names:A",
+                            "name_5": "surname:Opazo;given-names:P",
+                            "name_6": "surname:Delgado;given-names:J",
+                            "name_7": "surname:Komiyama;given-names:N",
+                            "name_8": "surname:O\u2019Dell;given-names:T",
+                            "name_9": "surname:Grant;given-names:S",
+                            "pub-id_doi": "10.1523/JNEUROSCI.4457-06.2007",
+                            "pub-id_pmid": "17344405",
+                            "section_type": "REF",
+                            "source": "J Neurosci",
+                            "type": "ref",
+                            "volume": "27",
+                            "year": "2007"
+                        },
+                        "text": "Synapse-associated protein 102/dlgh3 couples the nmda receptor to specific plasticity pathways and learning strategies",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31790,
+                        "infons": {
+                            "fpage": "321",
+                            "lpage": "331",
+                            "name_0": "surname:Frid-Adar;given-names:M",
+                            "name_1": "surname:Diamant;given-names:I",
+                            "name_2": "surname:Klang;given-names:E",
+                            "name_3": "surname:Amitai;given-names:M",
+                            "name_4": "surname:Goldberger;given-names:J",
+                            "name_5": "surname:Greenspan;given-names:H",
+                            "section_type": "REF",
+                            "source": "Neurocomputing",
+                            "type": "ref",
+                            "volume": "321",
+                            "year": "2018"
+                        },
+                        "text": "Gan-based synthetic medical image augmentation for increased cnn performance in liver lesion classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31898,
+                        "infons": {
+                            "fpage": "2918",
+                            "lpage": "2928",
+                            "name_0": "surname:Ghiasi;given-names:G",
+                            "name_1": "surname:Cui;given-names:Y",
+                            "name_2": "surname:Srinivas;given-names:A",
+                            "name_3": "surname:Qian;given-names:R",
+                            "name_4": "surname:Lin;given-names:T",
+                            "name_5": "surname:Cubuk;given-names:E",
+                            "name_6": "surname:Le;given-names:Q",
+                            "name_7": "surname:Zoph;given-names:B",
+                            "section_type": "REF",
+                            "source": "Simple copy-paste is a strong data augmentation method for instance segmentation",
+                            "type": "ref",
+                            "year": "2021"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31899,
+                        "infons": {
+                            "fpage": "488",
+                            "lpage": "498",
+                            "name_0": "surname:Isensee;given-names:F",
+                            "name_1": "surname:Wald;given-names:T",
+                            "name_2": "surname:Ulrich;given-names:C",
+                            "name_3": "surname:Baumgartner;given-names:M",
+                            "name_4": "surname:Roy;given-names:S",
+                            "name_5": "surname:Maier-Hein;given-names:K",
+                            "name_6": "surname:Jaeger;given-names:P",
+                            "section_type": "REF",
+                            "source": "Nnu-net revisited: A call for rigorous validation in 3d medical image segmentation",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31900,
+                        "infons": {
+                            "fpage": "115",
+                            "lpage": "118",
+                            "name_0": "surname:K\u00e1d\u00e1r;given-names:A",
+                            "name_1": "surname:Wittmann;given-names:G",
+                            "name_2": "surname:Liposits;given-names:Z",
+                            "name_3": "surname:Fekete;given-names:C",
+                            "pub-id_doi": "10.1016/j.jneumeth.2009.07.010",
+                            "pub-id_pmid": "19615409",
+                            "section_type": "REF",
+                            "source": "J Neurosci Methods",
+                            "type": "ref",
+                            "volume": "184",
+                            "year": "2009"
+                        },
+                        "text": "Improved method for combination of immunocytochemistry and nissl staining",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31974,
+                        "infons": {
+                            "fpage": "3836",
+                            "lpage": "3843",
+                            "name_0": "surname:Koukaroudi;given-names:D",
+                            "name_1": "surname:Qiu;given-names:Z",
+                            "name_2": "surname:Frans\u00e9n;given-names:E",
+                            "name_3": "surname:Gokhale;given-names:R",
+                            "name_4": "surname:Bulovaite;given-names:E",
+                            "name_5": "surname:Komiyama;given-names:N",
+                            "name_6": "surname:Seibt;given-names:J",
+                            "name_7": "surname:Grant;given-names:S",
+                            "pub-id_doi": "10.1016/j.cub.2024.07.032",
+                            "pub-id_pmid": "39096907",
+                            "section_type": "REF",
+                            "source": "Curr Biol",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2024"
+                        },
+                        "text": "Sleep maintains excitatory synapse diversity in the cortex and hippocampus",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32049,
+                        "infons": {
+                            "name_0": "surname:Krizhevsky;given-names:A",
+                            "name_1": "surname:Sutskever;given-names:I",
+                            "name_2": "surname:Hinton;given-names:G",
+                            "section_type": "REF",
+                            "source": "Adv Neural Inf Process Syst",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2012"
+                        },
+                        "text": "Imagenet classification with deep convolutional neural networks",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32113,
+                        "infons": {
+                            "fpage": "168",
+                            "lpage": "176",
+                            "name_0": "surname:Lein;given-names:E",
+                            "name_1": "surname:Hawrylycz;given-names:M",
+                            "name_2": "surname:Ao;given-names:N",
+                            "name_3": "surname:Ayres;given-names:M",
+                            "name_4": "surname:Bensinger;given-names:A",
+                            "name_5": "surname:Bernard;given-names:A",
+                            "name_6": "surname:Boe;given-names:A",
+                            "name_7": "surname:Boguski;given-names:M",
+                            "name_8": "surname:Brockway;given-names:K",
+                            "name_9": "surname:Byrnes;given-names:E",
+                            "pub-id_pmid": "17151600",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "445",
+                            "year": "2007"
+                        },
+                        "text": "Genome-wide atlas of gene expression in the adult mouse brain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32175,
+                        "infons": {
+                            "fpage": "60",
+                            "lpage": "88",
+                            "name_0": "surname:Litjens;given-names:G",
+                            "name_1": "surname:Kooi;given-names:T",
+                            "name_2": "surname:Bejnordi;given-names:B",
+                            "name_3": "surname:Setio;given-names:A",
+                            "name_4": "surname:Ciompi;given-names:F",
+                            "name_5": "surname:Ghafoorian;given-names:M",
+                            "name_6": "surname:Van Der Laak;given-names:J",
+                            "name_7": "surname:Van Ginneken;given-names:B",
+                            "name_8": "surname:S\u00e1nchez;given-names:C",
+                            "pub-id_pmid": "28778026",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2017"
+                        },
+                        "text": "A survey on deep learning in medical image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32227,
+                        "infons": {
+                            "fpage": "373",
+                            "lpage": "382",
+                            "name_0": "surname:Los;given-names:G",
+                            "name_1": "surname:Encell;given-names:L",
+                            "name_2": "surname:McDougall;given-names:M",
+                            "name_3": "surname:Hartzell;given-names:D",
+                            "name_4": "surname:Karassina;given-names:N",
+                            "name_5": "surname:Zimprich;given-names:C",
+                            "name_6": "surname:Wood;given-names:M",
+                            "name_7": "surname:Learish;given-names:R",
+                            "name_8": "surname:Ohana;given-names:R",
+                            "name_9": "surname:Urh;given-names:M",
+                            "pub-id_pmid": "18533659",
+                            "section_type": "REF",
+                            "source": "ACS Chem Biol",
+                            "type": "ref",
+                            "volume": "3",
+                            "year": "2008"
+                        },
+                        "text": "Halotag: a novel protein labeling technology for cell imaging and protein analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32310,
+                        "infons": {
+                            "fpage": "1993",
+                            "lpage": "2024",
+                            "name_0": "surname:Menze;given-names:B",
+                            "name_1": "surname:Jakab;given-names:A",
+                            "name_2": "surname:Bauer;given-names:S",
+                            "name_3": "surname:Kalpathy-Cramer;given-names:J",
+                            "name_4": "surname:Farahani;given-names:K",
+                            "name_5": "surname:Kirby;given-names:J",
+                            "name_6": "surname:Burren;given-names:Y",
+                            "name_7": "surname:Porz;given-names:N",
+                            "name_8": "surname:Slotboom;given-names:J",
+                            "name_9": "surname:Wiest;given-names:R",
+                            "pub-id_doi": "10.1109/TMI.2014.2377694",
+                            "pub-id_pmid": "25494501",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2014"
+                        },
+                        "text": "The multimodal brain tumor image segmentation benchmark (brats)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32374,
+                        "infons": {
+                            "name_0": "surname:Metzbower;given-names:S",
+                            "name_1": "surname:Levy;given-names:A",
+                            "name_2": "surname:Dharmasri;given-names:P",
+                            "name_3": "surname:Anderson;given-names:M",
+                            "name_4": "surname:Blanpied;given-names:T",
+                            "pub-id_doi": "10.1523/JNEUROSCI.1715-23.2024",
+                            "pub-id_pmid": "38777601",
+                            "section_type": "REF",
+                            "source": "J Neurosci",
+                            "type": "ref",
+                            "volume": "44",
+                            "year": "2024"
+                        },
+                        "text": "Distinct sap102 and psd-95 nano-organization defines multiple types of synaptic scaffold protein domains at single synapses",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32498,
+                        "infons": {
+                            "fpage": "433",
+                            "lpage": "439",
+                            "name_0": "surname:Migaud;given-names:M",
+                            "name_1": "surname:Charlesworth;given-names:P",
+                            "name_2": "surname:Dempster;given-names:M",
+                            "name_3": "surname:Webster;given-names:L",
+                            "name_4": "surname:Watabe;given-names:A",
+                            "name_5": "surname:Makhinson;given-names:M",
+                            "name_6": "surname:He;given-names:Y",
+                            "name_7": "surname:Ramsay;given-names:M",
+                            "name_8": "surname:Morris;given-names:R",
+                            "name_9": "surname:Morrison;given-names:J",
+                            "pub-id_pmid": "9853749",
+                            "section_type": "REF",
+                            "source": "Nature",
+                            "type": "ref",
+                            "volume": "396",
+                            "year": "1998"
+                        },
+                        "text": "Enhanced long-term potentiation and impaired learning in mice with mutant postsynaptic density-95 protein",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32604,
+                        "infons": {
+                            "fpage": "374",
+                            "lpage": "386",
+                            "name_0": "surname:Papp;given-names:E",
+                            "name_1": "surname:Leergaard;given-names:T",
+                            "name_2": "surname:Calabrese;given-names:E",
+                            "name_3": "surname:Johnson;given-names:G",
+                            "name_4": "surname:Bjaalie;given-names:J",
+                            "pub-id_doi": "10.1016/j.neuroimage.2014.04.001",
+                            "pub-id_pmid": "24726336",
+                            "section_type": "REF",
+                            "source": "Neuroimage",
+                            "type": "ref",
+                            "volume": "97",
+                            "year": "2014"
+                        },
+                        "text": "Waxholm space atlas of the sprague dawley rat brain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32656,
+                        "infons": {
+                            "name_0": "surname:Paxinos;given-names:G",
+                            "name_1": "surname:Watson;given-names:C",
+                            "section_type": "REF",
+                            "source": "The Rat Brain in Stereotaxic Coordinates: Hard Cover Edition",
+                            "type": "ref",
+                            "year": "2006"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32657,
+                        "infons": {
+                            "fpage": "433",
+                            "lpage": "446",
+                            "name_0": "surname:Perens;given-names:J",
+                            "name_1": "surname:Salinas;given-names:C",
+                            "name_2": "surname:Skytte;given-names:J",
+                            "name_3": "surname:Roostalu;given-names:U",
+                            "name_4": "surname:Dahl;given-names:A",
+                            "name_5": "surname:Dyrby;given-names:T",
+                            "name_6": "surname:Wichern;given-names:F",
+                            "name_7": "surname:Barkholt;given-names:P",
+                            "name_8": "surname:Vrang;given-names:N",
+                            "name_9": "surname:Jelsing;given-names:J",
+                            "pub-id_doi": "10.1007/s12021-020-09490-8",
+                            "pub-id_pmid": "33063286",
+                            "section_type": "REF",
+                            "source": "Neuroinformatics",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2021"
+                        },
+                        "text": "An optimized mouse brain atlas for automated mapping and quantification of neuronal activity using idisco+ and light sheet fluorescence microscopy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32804,
+                        "infons": {
+                            "elocation-id": "102514",
+                            "name_0": "surname:Reaungamornrat;given-names:S",
+                            "name_1": "surname:Sari;given-names:H",
+                            "name_2": "surname:Catana;given-names:C",
+                            "name_3": "surname:Kamen;given-names:A",
+                            "pub-id_doi": "10.1016/j.media.2022.102514",
+                            "pub-id_pmid": "35717874",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "80",
+                            "year": "2022"
+                        },
+                        "text": "Multimodal image synthesis based on disentanglement representations of anatomical and modality specific features, learned using uncooperative relativistic gan",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32963,
+                        "infons": {
+                            "fpage": "234",
+                            "lpage": "241",
+                            "name_0": "surname:Ronneberger;given-names:O",
+                            "name_1": "surname:Fischer;given-names:P",
+                            "name_2": "surname:Brox;given-names:T",
+                            "section_type": "REF",
+                            "source": "U-net: Convolutional networks for biomedical image segmentation",
+                            "type": "ref",
+                            "year": "2015"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32964,
+                        "infons": {
+                            "fpage": "1",
+                            "lpage": "48",
+                            "name_0": "surname:Shorten;given-names:C",
+                            "name_1": "surname:Khoshgoftaar;given-names:T",
+                            "pub-id_doi": "10.1186/s40537-021-00492-0",
+                            "pub-id_pmid": "34306963",
+                            "section_type": "REF",
+                            "source": "J Big Data",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2019"
+                        },
+                        "text": "A survey on image data augmentation for deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33018,
+                        "infons": {
+                            "elocation-id": "6836",
+                            "name_0": "surname:Tomas-Roca;given-names:L",
+                            "name_1": "surname:Qiu;given-names:Z",
+                            "name_2": "surname:Frans\u00e9n;given-names:E",
+                            "name_3": "surname:Gokhale;given-names:R",
+                            "name_4": "surname:Bulovaite;given-names:E",
+                            "name_5": "surname:Price;given-names:D",
+                            "name_6": "surname:Komiyama;given-names:N",
+                            "name_7": "surname:Grant;given-names:S",
+                            "pub-id_doi": "10.1038/s41467-022-34131-w",
+                            "pub-id_pmid": "36369219",
+                            "section_type": "REF",
+                            "source": "Nat Commun",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2022"
+                        },
+                        "text": "Developmental disruption and restoration of brain synaptome architecture in the murine pax6 neurodevelopmental disease model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33143,
+                        "infons": {
+                            "fpage": "1256",
+                            "lpage": "1265",
+                            "name_0": "surname:Velicky;given-names:P",
+                            "name_1": "surname:Miguel;given-names:E",
+                            "name_2": "surname:Michalska;given-names:J",
+                            "name_3": "surname:Lyudchik;given-names:J",
+                            "name_4": "surname:Wei;given-names:D",
+                            "name_5": "surname:Lin;given-names:Z",
+                            "name_6": "surname:Watson;given-names:J",
+                            "name_7": "surname:Troidl;given-names:J",
+                            "name_8": "surname:Beyer;given-names:J",
+                            "name_9": "surname:Ben-Simon;given-names:Y",
+                            "pub-id_doi": "10.1038/s41592-023-01936-6",
+                            "pub-id_pmid": "37429995",
+                            "section_type": "REF",
+                            "source": "Nature Methods",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2023"
+                        },
+                        "text": "Dense 4d nanoscale reconstruction of living brain tissue",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33200,
+                        "infons": {
+                            "fpage": "2043",
+                            "lpage": "2057",
+                            "name_0": "surname:Vousden;given-names:D",
+                            "name_1": "surname:Epp;given-names:J",
+                            "name_2": "surname:Okuno;given-names:H",
+                            "name_3": "surname:Nieman;given-names:B",
+                            "name_4": "surname:van Eede;given-names:M",
+                            "name_5": "surname:Dazai;given-names:J",
+                            "name_6": "surname:Ragan;given-names:T",
+                            "name_7": "surname:Bito;given-names:H",
+                            "name_8": "surname:Frankland;given-names:P",
+                            "name_9": "surname:Lerch;given-names:J",
+                            "pub-id_pmid": "24760545",
+                            "section_type": "REF",
+                            "source": "Brain Struct Funct",
+                            "type": "ref",
+                            "volume": "220",
+                            "year": "2015"
+                        },
+                        "text": "Whole-brain mapping of behaviourally induced neural activation in mice",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33271,
+                        "infons": {
+                            "fpage": "99",
+                            "name_0": "surname:Wang;given-names:T",
+                            "name_1": "surname:Xing;given-names:H",
+                            "name_2": "surname:Li;given-names:Y",
+                            "name_3": "surname:Wang;given-names:S",
+                            "name_4": "surname:Liu;given-names:L",
+                            "name_5": "surname:Li;given-names:F",
+                            "name_6": "surname:Jing;given-names:H",
+                            "pub-id_doi": "10.1186/s12880-022-00807-4",
+                            "pub-id_pmid": "35614382",
+                            "section_type": "REF",
+                            "source": "BMC Med Imaging",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2022"
+                        },
+                        "text": "Deep learning-based automated segmentation of eight brain anatomical regions using head ct images in pet/ct",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33379,
+                        "infons": {
+                            "elocation-id": "111975",
+                            "name_0": "surname:Wang;given-names:Y",
+                            "name_1": "surname:Yuan;given-names:K",
+                            "name_2": "surname:Schaefer;given-names:G",
+                            "name_3": "surname:Liu;given-names:X",
+                            "name_4": "surname:Jing;given-names:L",
+                            "name_5": "surname:Guo;given-names:K",
+                            "name_6": "surname:Wang;given-names:J",
+                            "name_7": "surname:Fang;given-names:H",
+                            "section_type": "REF",
+                            "source": "Pattern Recognit",
+                            "type": "ref",
+                            "year": "2025"
+                        },
+                        "text": "Refining pseudo-labels through iterative mix-up for weakly supervised semantic segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33471,
+                        "infons": {
+                            "elocation-id": "e230024",
+                            "name_0": "surname:Wasserthal;given-names:J",
+                            "name_1": "surname:Breit;given-names:H",
+                            "name_2": "surname:Meyer;given-names:M",
+                            "name_3": "surname:Pradella;given-names:M",
+                            "name_4": "surname:Hinck;given-names:D",
+                            "name_5": "surname:Sauter;given-names:A",
+                            "name_6": "surname:Heye;given-names:T",
+                            "name_7": "surname:Boll;given-names:D",
+                            "name_8": "surname:Cyriac;given-names:J",
+                            "name_9": "surname:Yang;given-names:S",
+                            "pub-id_doi": "10.1148/ryai.230024",
+                            "pub-id_pmid": "37795137",
+                            "section_type": "REF",
+                            "source": "Radiol: Artif Intell",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2023"
+                        },
+                        "text": "Totalsegmentator: robust segmentation of 104 anatomic structures in ct images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33549,
+                        "infons": {
+                            "elocation-id": "eadd9330",
+                            "name_0": "surname:Winding;given-names:M",
+                            "name_1": "surname:Pedigo;given-names:B",
+                            "name_2": "surname:Barnes;given-names:C",
+                            "name_3": "surname:Patsolic;given-names:H",
+                            "name_4": "surname:Park;given-names:Y",
+                            "name_5": "surname:Kazimiers;given-names:T",
+                            "name_6": "surname:Fushiki;given-names:A",
+                            "name_7": "surname:Andrade;given-names:I",
+                            "name_8": "surname:Khandelwal;given-names:A",
+                            "name_9": "surname:Valdes-Aleman;given-names:J",
+                            "pub-id_doi": "10.1126/science.add9330",
+                            "pub-id_pmid": "36893230",
+                            "section_type": "REF",
+                            "source": "Science",
+                            "type": "ref",
+                            "volume": "379",
+                            "year": "2023"
+                        },
+                        "text": "The connectome of an insect brain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33583,
+                        "infons": {
+                            "fpage": "1197",
+                            "lpage": "1209",
+                            "name_0": "surname:Yu;given-names:Z",
+                            "name_1": "surname:Han;given-names:X",
+                            "name_2": "surname:Zhang;given-names:S",
+                            "name_3": "surname:Feng;given-names:J",
+                            "name_4": "surname:Peng;given-names:T",
+                            "name_5": "surname:Zhang;given-names:X",
+                            "pub-id_pmid": "36449589",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2022"
+                        },
+                        "text": "Mousegan++: unsupervised disentanglement and contrastive representation for multiple mri modalities synthesis and structural segmentation of mouse brain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33736,
+                        "infons": {
+                            "fpage": "6023",
+                            "lpage": "6032",
+                            "name_0": "surname:Yun;given-names:S",
+                            "name_1": "surname:Han;given-names:D",
+                            "name_2": "surname:Oh;given-names:S",
+                            "name_3": "surname:Chun;given-names:S",
+                            "name_4": "surname:Choe;given-names:J",
+                            "name_5": "surname:Yoo;given-names:Y",
+                            "section_type": "REF",
+                            "source": "Cutmix: Regularization strategy to train strong classifiers with localizable features",
+                            "type": "ref",
+                            "year": "2019"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33737,
+                        "infons": {
+                            "fpage": "999",
+                            "lpage": "1014",
+                            "name_0": "surname:Zeisel;given-names:A",
+                            "name_1": "surname:Hochgerner;given-names:H",
+                            "name_2": "surname:L\u00f6nnerberg;given-names:P",
+                            "name_3": "surname:Johnsson;given-names:A",
+                            "name_4": "surname:Memic;given-names:F",
+                            "name_5": "surname:Van Der Zwan;given-names:J",
+                            "name_6": "surname:H\u00e4ring;given-names:M",
+                            "name_7": "surname:Braun;given-names:E",
+                            "name_8": "surname:Borm;given-names:L",
+                            "name_9": "surname:Manno;given-names:La",
+                            "pub-id_doi": "10.1016/j.cell.2018.06.021",
+                            "pub-id_pmid": "30096314",
+                            "section_type": "REF",
+                            "source": "Cell",
+                            "type": "ref",
+                            "volume": "174",
+                            "year": "2018"
+                        },
+                        "text": "Molecular architecture of the mouse nervous system",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33788,
+                        "infons": {
+                            "comment": "URL https://arxiv.org/abs/1710.09412",
+                            "elocation-id": "arXiv:1710.09412",
+                            "name_0": "surname:Zhang;given-names:H",
+                            "name_1": "surname:Cisse;given-names:M",
+                            "name_2": "surname:Dauphin;given-names:Y",
+                            "name_3": "surname:Lopez-Paz;given-names:D",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2018"
+                        },
+                        "text": "Mixup: Beyond empirical risk minimization",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33830,
+                        "infons": {
+                            "elocation-id": "120041",
+                            "name_0": "surname:Zhang;given-names:X",
+                            "name_1": "surname:Liu;given-names:C",
+                            "name_2": "surname:Ou;given-names:N",
+                            "name_3": "surname:Zeng;given-names:X",
+                            "name_4": "surname:Zhuo;given-names:Z",
+                            "name_5": "surname:Duan;given-names:Y",
+                            "name_6": "surname:Xiong;given-names:X",
+                            "name_7": "surname:Yu;given-names:Y",
+                            "name_8": "surname:Liu;given-names:Z",
+                            "name_9": "surname:Liu;given-names:Y",
+                            "pub-id_pmid": "36933626",
+                            "section_type": "REF",
+                            "source": "NeuroImage",
+                            "type": "ref",
+                            "volume": "271",
+                            "year": "2023"
+                        },
+                        "text": "Carvemix: a simple data augmentation method for brain lesion segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33904,
+                        "infons": {
+                            "fpage": "11656",
+                            "lpage": "11665",
+                            "name_0": "surname:Zhang;given-names:K",
+                            "name_1": "surname:Zhuang;given-names:X",
+                            "section_type": "REF",
+                            "source": "Cyclemix: A holistic strategy for medical image segmentation from scribble supervision",
+                            "type": "ref",
+                            "year": "2022"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33905,
+                        "infons": {
+                            "fpage": "781",
+                            "lpage": "799",
+                            "name_0": "surname:Zhu;given-names:F",
+                            "name_1": "surname:Cizeron;given-names:M",
+                            "name_2": "surname:Qiu;given-names:Z",
+                            "name_3": "surname:Benavides-Piccione;given-names:R",
+                            "name_4": "surname:Kopanitsa;given-names:M",
+                            "name_5": "surname:Skene;given-names:N",
+                            "name_6": "surname:Koniaris;given-names:B",
+                            "name_7": "surname:DeFelipe;given-names:J",
+                            "name_8": "surname:Fransen;given-names:E",
+                            "name_9": "surname:Komiyama;given-names:N",
+                            "pub-id_doi": "10.1016/j.neuron.2018.07.007",
+                            "pub-id_pmid": "30078578",
+                            "section_type": "REF",
+                            "source": "Neuron",
+                            "type": "ref",
+                            "volume": "99",
+                            "year": "2018"
+                        },
+                        "text": "Architecture of the mouse brain synaptome",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33947,
+                        "infons": {
+                            "fpage": "2223",
+                            "lpage": "2232",
+                            "name_0": "surname:Zhu;given-names:J",
+                            "name_1": "surname:Park;given-names:T",
+                            "name_2": "surname:Isola;given-names:P",
+                            "name_3": "surname:Efros;given-names:A",
+                            "section_type": "REF",
+                            "source": "Unpaired image-to-image translation using cycle-consistent adversarial networks",
+                            "type": "ref",
+                            "year": "2017"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33948,
+                        "infons": {
+                            "fpage": "683",
+                            "lpage": "692",
+                            "name_0": "surname:Zhu;given-names:Q",
+                            "name_1": "surname:Wang;given-names:Y",
+                            "name_2": "surname:Yin;given-names:L",
+                            "name_3": "surname:Yang;given-names:J",
+                            "name_4": "surname:Liao;given-names:F",
+                            "name_5": "surname:Li;given-names:S",
+                            "section_type": "REF",
+                            "source": "Selfmix: a self-adaptive data augmentation method for lesion segmentation",
+                            "type": "ref",
+                            "year": "2022"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33949,
+                        "infons": {
+                            "file": "EMS213524-f001.jpg",
+                            "id": "F1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Exemplar images from the curated dataset. From left to right: whole-brain images stained for SAP102 and PSD95, the dual-channel composite image (SAP102 in red, PSD95 in green), and the corresponding manually annotated brain regions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34182,
+                        "infons": {
+                            "file": "EMS213524-f002.jpg",
+                            "id": "F2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Top (a). Distribution of pixel counts across regions. Bottom (b). Region availability per image with light blue indicating presence and dark blue representing absence.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34350,
+                        "infons": {
+                            "file": "EMS213524-f003.jpg",
+                            "id": "F3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Overview of the proposed PRMix, consisting of three modules (1) offline hard-sample mining (HSM), (2) primary region sampling (PRS) and (3) overlapaware augmentation (OAA). Only a single fluorescent marker is shown for clarity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34578,
+                        "infons": {
+                            "file": "EMS213524-f004.jpg",
+                            "id": "F4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Exemplar samples from the \u2018easy\u2019 and \u2018hard\u2019 mixing categories. Target primary regions are highlighted with label masks, and affected areas are shown within dashed rectangles. For clarity, only one primary region is selected in the example; however, PRMix can handle mixing multiple primary regions from different sources.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34908,
+                        "infons": {
+                            "file": "EMS213524-f005.jpg",
+                            "id": "F5",
+                            "section_type": "FIG",
+                            "type": "fig_title_caption"
+                        },
+                        "text": "The 11 primary brain regions illustrated in distinct colors, showing the grouping of their 118 constituent subregions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35027,
+                        "infons": {
+                            "file": "EMS213524-f006.jpg",
+                            "id": "F6",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Exemplar results illustrating different augmentation outputs derived from identical source-target pairs. Panel (a): The middle two rows show the original image and its corresponding label mask, while the top and bottom rows provide zoomed-in views of the manipulated regions. Panel (b): The sample synthesis flow for generative method MouseGAN++. Best viewed in color.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35396,
+                        "infons": {
+                            "file": "EMS213524-f007.jpg",
+                            "id": "F7",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Visualization of results from different mixing methods on randomly selected testing samples. Dashed white rectangles indicate regions with the most significant discrepancies between methods. Best viewed digitally. Zoom-in images are available in the supplemental material.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35669,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Results on the isolated test set using different augmentation strategies, which are obtained with a 5-fold average.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35785,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "\u00b1: standard deviations over 5 runs. Regional results are provided in the supplementary material.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35883,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Method</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Precision</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Recall</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33\u00b10.49</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33\u00b10.48</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">66.35\u00b10.87</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">66.55\u00b10.40</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">MouseGAN 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">70.62\u00b10.28</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">57.11\u00b10.15</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">71.45\u00b10.46</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">71.35\u00b10.37</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">MixUp 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.30\u00b10.53</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">60.73\u00b10.4O</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">74.71\u00b10.43</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.77\u00b10.39</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CutMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">72.97\u00b10.79</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">60.67\u00b10.62</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">75.05\u00b10.42</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.83\u00b11.02</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CarveMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.30\u00b10.85</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">60.87\u00b10.56</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">74.10\u00b11.07</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">74.44\u00b10.49</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66+0.29</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78\u00b10.33</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>75.23\u00b10.57</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>75.31\u00b10.33</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "Method\tF1\tmIoU\tPrecision\tRecall\t \tBaseline\t65.33\u00b10.49\t54.33\u00b10.48\t66.35\u00b10.87\t66.55\u00b10.40\t \tMouseGAN 20\u00d7\t70.62\u00b10.28\t57.11\u00b10.15\t71.45\u00b10.46\t71.35\u00b10.37\t \tMixUp 20\u00d7\t73.30\u00b10.53\t60.73\u00b10.4O\t74.71\u00b10.43\t73.77\u00b10.39\t \tCutMix 20\u00d7\t72.97\u00b10.79\t60.67\u00b10.62\t75.05\u00b10.42\t73.83\u00b11.02\t \tCarveMix 20\u00d7\t73.30\u00b10.85\t60.87\u00b10.56\t74.10\u00b11.07\t74.44\u00b10.49\t \tPRMix 20\u00d7\t74.66+0.29\t61.78\u00b10.33\t75.23\u00b10.57\t75.31\u00b10.33\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36288,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Paired t-test p-values for F1 and mIoU, computed on test samples.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36354,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "*P < 0.05, **P < 0.01 and ***P < 0.001. One-sided tests evaluate whether the selected method yields significantly higher F1 or mIoU than the reference. In each subgrid, the method above the horizontal line is the reference and the one below is the tested method.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36617,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"top\" align=\"left\" rowspan=\"2\" style=\"border-top:solid thin\" colspan=\"1\">Method</th><th valign=\"top\" align=\"left\" colspan=\"2\" style=\"border-top:solid thin\" rowspan=\"1\">F1 Performance</th><th valign=\"top\" align=\"left\" colspan=\"2\" style=\"border-top:solid thin\" rowspan=\"1\">mIoU Performance</th></tr><tr><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1-score</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">p-value</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">p-value</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">MouseGAN 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>70.62</bold>**</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>5.68e</bold>\u2212<bold>3</bold></td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>57.11</bold>*</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>1.08e</bold>\u2212<bold>2</bold></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">MixUp 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>73.30</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>1.48e</bold>\u2212<bold>17</bold></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>60.73</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>5.84e</bold>\u2212<bold>21</bold></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CutMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>72.97</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>8.19e</bold>\u2212<bold>22</bold></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>60.67</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>1.87e</bold>\u2212<bold>24</bold></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CarveMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>73.30</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>7.21e</bold>\u2212<bold>21</bold></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>60.87</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>1.87e</bold>\u2212<bold>23</bold></td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>74.66</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>1.72e</bold>\u2212<bold>19</bold></td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>61.78</bold>***</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"><bold>8.69e</bold>\u2212<bold>22</bold></td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">MouseGAN 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">70.62</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">57.11</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>74.66</bold>***</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>4.78e</bold>\u2212<bold>5</bold></td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>61.78</bold>***</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>2.897e</bold>\u2212<bold>6</bold></td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">MixUp 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">73.30</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">60.73</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>74.66</bold>**</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>9.32e</bold>\u2212<bold>3</bold></td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>61.78</bold>**</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>7.83e</bold>\u2212<bold>3</bold></td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">CutMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">72.97</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">60.67</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">74.66</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">7.89e\u22122</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">61.78</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">5.65e\u22122</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">CarveMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">73.30</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">60.87</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">N/A</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">74.66</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">8.35e\u22122</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>61.78</bold>*</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\"><bold>4.61e</bold>\u2212<bold>2</bold></td></tr></tbody></table>\n"
+                        },
+                        "text": "Method\tF1 Performance\tmIoU Performance\t \tF1-score\tp-value\tmIoU\tp-value\t \tBaseline\t65.33\tN/A\t54.33\tN/A\t \tMouseGAN 20\u00d7\t70.62**\t5.68e\u22123\t57.11*\t1.08e\u22122\t \tMixUp 20\u00d7\t73.30***\t1.48e\u221217\t60.73***\t5.84e\u221221\t \tCutMix 20\u00d7\t72.97***\t8.19e\u221222\t60.67***\t1.87e\u221224\t \tCarveMix 20\u00d7\t73.30***\t7.21e\u221221\t60.87***\t1.87e\u221223\t \tPRMix 20\u00d7\t74.66***\t1.72e\u221219\t61.78***\t8.69e\u221222\t \tMouseGAN 20\u00d7\t70.62\tN/A\t57.11\tN/A\t \tPRMix 20\u00d7\t74.66***\t4.78e\u22125\t61.78***\t2.897e\u22126\t \tMixUp 20\u00d7\t73.30\tN/A\t60.73\tN/A\t \tPRMix 20\u00d7\t74.66**\t9.32e\u22123\t61.78**\t7.83e\u22123\t \tCutMix 20\u00d7\t72.97\tN/A\t60.67\tN/A\t \tPRMix 20\u00d7\t74.66\t7.89e\u22122\t61.78\t5.65e\u22122\t \tCarveMix 20\u00d7\t73.30\tN/A\t60.87\tN/A\t \tPRMix 20\u00d7\t74.66\t8.35e\u22122\t61.78*\t4.61e\u22122\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37320,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Ablation study on the impact of dataset scaling in augmented folds and training duration.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37410,
+                        "infons": {
+                            "file": "T3.xml",
+                            "id": "T3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"top\" align=\"center\" colspan=\"4\" style=\"border-top:solid thin\" rowspan=\"1\">(a) Scaling effect</th><th valign=\"top\" align=\"center\" colspan=\"4\" style=\"border-top:solid thin\" rowspan=\"1\">(b) The number of training epochs</th></tr><tr><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Method</th><th valign=\"top\" align=\"center\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Epochs</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Method</th><th valign=\"top\" align=\"center\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Epochs</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"center\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">12</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"center\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">12</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 5\u00d7</td><td valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">12</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">69.82</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">58.14</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">3</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">68.53</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">56.75</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 10\u00d7</td><td valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">12</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">70.05</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">58.13</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"center\" rowspan=\"1\" colspan=\"1\">6</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">69.92</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">57.97</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"center\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">12</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\"/><td valign=\"top\" align=\"center\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">12</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "(a) Scaling effect\t(b) The number of training epochs\t \tMethod\tEpochs\tF1\tmIoU\tMethod\tEpochs\tF1\tmIoU\t \tBaseline\t12\t65.33\t54.33\tBaseline\t12\t65.33\t54.33\t \tPRMix 5\u00d7\t12\t69.82\t58.14\tPRMix 20\u00d7\t3\t68.53\t56.75\t \tPRMix 10\u00d7\t12\t70.05\t58.13\tPRMix 20\u00d7\t6\t69.92\t57.97\t \tPRMix 20\u00d7\t12\t74.66\t61.78\t\t12\t74.66\t61.78\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37711,
+                        "infons": {
+                            "file": "T4.xml",
+                            "id": "T4",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Ablation on the number of mixing images and fluorescent channels.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37777,
+                        "infons": {
+                            "file": "T4.xml",
+                            "id": "T4",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"top\" align=\"center\" colspan=\"3\" style=\"border-top:solid thin\" rowspan=\"1\">(a) The number of mixing images</th><th valign=\"top\" align=\"center\" colspan=\"3\" style=\"border-top:solid thin\" rowspan=\"1\">(b) Fluorescence channels</th></tr><tr><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Method</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Method</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix Dual</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">74.34</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix_SAP102</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">69.92</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">57.77</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix Tri</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66</bold>\n</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78</bold>\n</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix_PSD95</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">70.00</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">58.44</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix Quad</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">71.03</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">59.50</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "(a) The number of mixing images\t(b) Fluorescence channels\t \tMethod\tF1\tmIoU\tMethod\tF1\tmIoU\t \tBaseline\t65.33\t54.33\tBaseline\t65.33\t54.33\t \tPRMix Dual\t74.34\t\tPRMix_SAP102\t69.92\t57.77\t \tPRMix Tri\t74.66\t61.78\tPRMix_PSD95\t70.00\t58.44\t \tPRMix Quad\t71.03\t59.50\tPRMix\t74.66\t61.78\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38050,
+                        "infons": {
+                            "file": "T5.xml",
+                            "id": "T5",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Ablation on the portion of hard samples and key components.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38110,
+                        "infons": {
+                            "file": "T5.xml",
+                            "id": "T5",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"top\" align=\"center\" colspan=\"3\" style=\"border-top:solid thin\" rowspan=\"1\">(a) The portion of \u2018hard\u2019 samples in HSM</th><th valign=\"top\" align=\"center\" colspan=\"5\" style=\"border-top:solid thin\" rowspan=\"1\">(b) Key components</th></tr><tr><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Method</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">PRS</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">HSM</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">OAA</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">Baseline</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">65.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">54.33</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"/><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\"/><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">73.70</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">60.76</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 20%</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">72.73</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">59.98</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">71.17</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">59.21</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">PRMix 50%</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">69.71</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">58.02</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\"/><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">70.60</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">58.57</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 80%</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\u2713</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>74.66</bold>\n</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">\n<bold>61.78</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "(a) The portion of \u2018hard\u2019 samples in HSM\t(b) Key components\t \tMethod\tF1\tmIoU\tPRS\tHSM\tOAA\tF1\tmIoU\t \tBaseline\t65.33\t54.33\t\u2713\t\t\t73.70\t60.76\t \tPRMix 20%\t72.73\t59.98\t\u2713\t\u2713\t\t71.17\t59.21\t \tPRMix 50%\t69.71\t58.02\t\u2713\t\t\u2713\t70.60\t58.57\t \tPRMix 80%\t74.66\t61.78\t\u2713\t\u2713\t\u2713\t74.66\t61.78\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38393,
+                        "infons": {
+                            "file": "T6.xml",
+                            "id": "T6",
+                            "section_type": "TABLE",
+                            "type": "table_title_caption"
+                        },
+                        "text": "Performance comparison of Synthetic (12 epochs) versus Hybrid (6 synthetic and 6 real epochs) strategies.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38499,
+                        "infons": {
+                            "file": "T6.xml",
+                            "id": "T6",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"top\" align=\"left\" rowspan=\"2\" style=\"border-top:solid thin\" colspan=\"1\">Method</th><th valign=\"top\" align=\"left\" colspan=\"2\" style=\"border-top:solid thin\" rowspan=\"1\">Synthetic</th><th valign=\"top\" align=\"left\" colspan=\"2\" style=\"border-top:solid thin\" rowspan=\"1\">Hybrid</th></tr><tr><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">F1</th><th valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">mIoU</th></tr></thead><tbody><tr><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">MouseGAN 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">70.62</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">57.11</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">71.01</td><td valign=\"top\" align=\"left\" style=\"border-top:solid thin\" rowspan=\"1\" colspan=\"1\">57.51</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">MixUp 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.30</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">60.73</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.73</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">61.10</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CutMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">72.97</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">60.67</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.73</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">61.01</td></tr><tr><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">CarveMix 20\u00d7</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">73.30</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">60.87</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">74.56</td><td valign=\"top\" align=\"left\" rowspan=\"1\" colspan=\"1\">61.42</td></tr><tr><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">PRMix 20\u00d7</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">74.66</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">61.78</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">74.94</td><td valign=\"top\" align=\"left\" style=\"border-bottom:solid thin\" rowspan=\"1\" colspan=\"1\">61.91</td></tr></tbody></table>\n"
+                        },
+                        "text": "Method\tSynthetic\tHybrid\t \tF1\tmIoU\tF1\tmIoU\t \tMouseGAN 20\u00d7\t70.62\t57.11\t71.01\t57.51\t \tMixUp 20\u00d7\t73.30\t60.73\t73.73\t61.10\t \tCutMix 20\u00d7\t72.97\t60.67\t73.73\t61.01\t \tCarveMix 20\u00d7\t73.30\t60.87\t74.56\t61.42\t \tPRMix 20\u00d7\t74.66\t61.78\t74.94\t61.91\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

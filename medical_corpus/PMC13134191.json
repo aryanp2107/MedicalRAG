@@ -1,0 +1,2759 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260503",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13134191",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1186/s12938-026-01547-0",
+                            "article-id_pmc": "PMC13134191",
+                            "article-id_pmid": "41877085",
+                            "article-id_publisher-id": "1547",
+                            "elocation-id": "66",
+                            "kwd": "Enchondroma Atypical cartilaginous tumors Magnetic resonance imaging Artificial intelligence Segmentation Radiomics",
+                            "license": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+                            "name_0": "surname:Joham;given-names:Simon Johannes",
+                            "name_1": "surname:Woltsche;given-names:Johannes Nikolaus",
+                            "name_2": "surname:Szolar;given-names:Dieter",
+                            "name_3": "surname:Leithner;given-names:Andreas",
+                            "name_4": "surname:Urschler;given-names:Martin",
+                            "name_5": "surname:Smolle;given-names:Maria Anna",
+                            "section_type": "TITLE",
+                            "title": "Keywords",
+                            "type": "front",
+                            "volume": "25",
+                            "year": "2026"
+                        },
+                        "text": "Machine learning vs. radiomics for discriminating atypical cartilaginous tumors from benign enchondromas on MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 112,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Background",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 123,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Enchondromas (EC) present cartilaginous tumors that are difficult to differentiate from their intermediate counterpart, atypical cartilaginous tumors (ACT). Histologically, tumor distinction of these entities is limited by sampling bias, while radiologically, similar lesion features render classification challenging. Therefore, the aim of this study is to investigate whether machine learning- or radiomics-based image analysis tools can reliably differentiate between EC and ACT using MRI data and corresponding expert annotations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 658,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 666,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Based on an MRI dataset of 206 unique patients (79 controls, 104 EC, 23 ACT), we develop a machine learning-based AI image analysis tool that uses the state-of-the-art nnU-Net framework for medical image segmentation and extends it for tumor classification. Two nnU-Net models (Scout and Specialist) are applied sequentially. Scout first detects images without tumor tissue and removes them from further analysis, whereas Specialist performs the final tumor classification on the remaining images. Alternatively, our tool supports radiomics-based classification using hand-crafted tumor characteristics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1270,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1278,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "In our cross-validation experiments, when using the two models approach, where Specialist follows Scout, we achieved 87% Sensitivity (95% CI [0.67, 0.96]) for the ACT class and 93% Sensitivity (95% CI [0.87, 0.97]) for the EC class. Furthermore, no image containing an ACT was classified as non-tumor.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1580,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Conclusions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1592,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "In this pilot study, we demonstrated that MRI information alone can be used to differentiate between ACT and EC with high accuracy. These results seem promising that in future, machine learning and AI can be used for better orthopedic diagnosis of cartilaginous tumors in clinical practice.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1883,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Supplementary Information",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1909,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The online version contains supplementary material available at 10.1186/s12938-026-01547-0.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2001,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2014,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Benign cartilaginous tumors, i.e., enchondroma (EC), and their malignant counterpart chondrosarcoma (CS) constitute primary bone tumors. CS are further subdivided into different gradings, with grade 1 CS of the appendicular skeleton recently being classified as \u201catypical cartilaginous tumor\u201d (ACT). EC and ACT constitute frequent incidental findings on X-ray projections, magnetic resonance imaging (MRI), and computed tomography (CT) scans in musculoskeletal radiology. Their combined prevalence is 0.4% around the shoulder, 1.5% around the knee, 0.7% around the proximal femur (mainly EC), and 0.07% around the hand (mainly EC). Both entities share common features on imaging, including their metaphyseal location, popcorn-like calcification pattern, typical appearance on MRI (T1 hypointense, T2 hyperintense), and no soft tissue component.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2863,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Histopathologically, EC are lobulated tumors of low cellularity with a hyalinized matrix, with embedded chondrocytes lacking cytological atypia. On the other hand, ACTs are rather cell-rich and show entrapment of bony trabeculae. However, histology itself can be prone to sampling bias given that an area non-representative of the least differentiated tumor component may be selected for biopsy. The radiological differentiation between EC and ACT is likewise difficult, though especially when lesions are present in the long tubular bones. Some imaging features have been postulated to distinguish both entities, including size (5\u00a0cm as threshold), presence and extent of endosteal scalloping, growth over time, and perilesional edema.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3601,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "While EC are considered benign, ACTs may progress, and eventually dedifferentiate into higher-grade chondrosarcomas. Therefore, close monitoring or surgical removal (i.e., curettage) is recommended in the latter. Other than EC and ACT, chondrosarcomas constitute malignant mesenchymal tumors with a potential to metastasize, requiring aggressive treatment with wide tumor resection, and in selected cases (e.g., non-resectable lesions) systemic chemotherapy and radiotherapy (although they are largely considered chemo- and radio-resistant). The difficulty lies in identification of atypical features indicative of semi-malignant ACTs based on imaging, in order to select the right patients for close surveillance or surgery. In this respect, artificial intelligence (AI)-based image investigation may be of value. Rather than being biased on prior knowledge and clinical reasoning, automated image analysis based on machine learning, more specifically deep learning and radiomics, has the potential to identify tumors suspicious of ACT by deciphering individual feature patterns within a lesion that eventually remain concealed from the human eye. Moreover, it has the potential benefit of being less subjective than radiological evaluation, especially when considering that experts are scarce due to the rarity of these lesions. To enable automated image analysis, recent deep learning-based image segmentation techniques have to be applied that precisely delineate lesion voxels, followed by an automated classification stage, e.g., via radiomics, which finds discriminative intensity and texture features within a segmented lesion of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5249,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig1_HTML.jpg",
+                            "id": "Fig1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Overview of our proposed AI-based image analysis tool for ACT and EC classification. The pipeline sequentially uses two nnU-Net segmentation models, Scout and Specialist, the former trained on tumor and non-tumor images and the latter trained on tumor cases only. The task of Scout is to detect all no-tumor cases during inference. After eliminating the no-tumor cases, we use Specialist for the final classification. The classification uses voxel class aggregation and ACT:EC ratio thresholding. Alternatively, our tool can perform radiomics-based classification using binarized Specialist predictions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5852,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we therefore aimed at (1) developing and (2) validating an automatic AI-based image analysis tool, trained on expert-provided radiological assessment of cartilaginous tumors, which differentiates EC and ACT on MRI of knee and shoulder based on machine learning, i.e., nnU-Net-based lesion segmentation and radiomics-based classification (see Fig.\u00a01).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6219,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6227,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Segmentation results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6248,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Tumor segmentation performance stratified by tumor type for Scout and Specialist models",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6336,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" rowspan=\"2\">Model</th><th align=\"left\" rowspan=\"2\">Metric</th><th align=\"left\" colspan=\"4\">Segmentation performance EC (<italic>n</italic>\u2009=\u2009104)</th><th align=\"left\" colspan=\"4\">Segmentation performance ACT (<italic>n</italic>\u2009=\u200923)</th></tr><tr><th align=\"left\">Mean</th><th align=\"left\">Median</th><th align=\"left\">95% CI</th><th align=\"left\">Range</th><th align=\"left\">Mean</th><th align=\"left\">Median</th><th align=\"left\">95% CI</th><th align=\"left\">Range</th></tr></thead><tbody><tr><td align=\"left\" rowspan=\"4\">Scout</td><td align=\"left\">DSC \u2191</td><td char=\".\" align=\"char\">0.81</td><td char=\".\" align=\"char\"><bold>0.91</bold></td><td align=\"left\">[0.75, 0.85]</td><td align=\"left\">[0.00, 0.97]</td><td char=\".\" align=\"char\">0.83</td><td char=\".\" align=\"char\">0.85</td><td align=\"left\">[0.75, 0.88]</td><td align=\"left\">[0.38, 0.98]</td></tr><tr><td align=\"left\">Prec. \u2191</td><td char=\".\" align=\"char\"><bold>0.87</bold></td><td char=\".\" align=\"char\">0.95</td><td align=\"left\">[0.81, 0.91]</td><td align=\"left\"><bold>[0.00, 1.00]</bold></td><td char=\".\" align=\"char\">0.92</td><td char=\".\" align=\"char\"><bold>0.97</bold></td><td align=\"left\">[<bold>0.87, 0.96]</bold></td><td align=\"left\"><bold>[0.64, 1.00]</bold></td></tr><tr><td align=\"left\">Sens. \u2191</td><td char=\".\" align=\"char\">0.79</td><td char=\".\" align=\"char\"><bold>0.91</bold></td><td align=\"left\">[0.73, 0.84]</td><td align=\"left\"><bold>[0.00, 1.00]</bold></td><td char=\".\" align=\"char\">0.79</td><td char=\".\" align=\"char\"><bold>0.87</bold></td><td align=\"left\">[0.68, 0.86]</td><td align=\"left\">[0.24, 0.98]</td></tr><tr><td align=\"left\"><p>MASD \u2193</p><p>(mm)<sup>a</sup></p></td><td char=\".\" align=\"char\">1.34</td><td char=\".\" align=\"char\">0.18</td><td align=\"left\">[0.47, 5.22]</td><td align=\"left\">[0.02, 79.86]</td><td char=\".\" align=\"char\">1.67</td><td char=\".\" align=\"char\"><bold>0.56</bold></td><td align=\"left\">[0.77, 4.94]</td><td align=\"left\">[0.04, 18.40]</td></tr><tr><td align=\"left\" rowspan=\"4\">Specialist</td><td align=\"left\">DSC \u2191</td><td char=\".\" align=\"char\"><bold>0.82</bold></td><td char=\".\" align=\"char\">0.90</td><td align=\"left\"><bold>[0.76, 0.86]</bold></td><td align=\"left\"><bold>[0.00, 0.98]</bold></td><td char=\".\" align=\"char\"><bold>0.85</bold></td><td char=\".\" align=\"char\"><bold>0.88</bold></td><td align=\"left\"><bold>[0.79, 0.88]</bold></td><td align=\"left\"><bold>[0.50, 0.95]</bold></td></tr><tr><td align=\"left\">Prec.\u2191</td><td char=\".\" align=\"char\"><bold>0.87</bold></td><td char=\".\" align=\"char\"><bold>0.96</bold></td><td align=\"left\"><bold>[0.82, 0.91]</bold></td><td align=\"left\"><bold>[0.00, 1.00]</bold></td><td char=\".\" align=\"char\"><bold>0.93</bold></td><td char=\".\" align=\"char\"><bold>0.97</bold></td><td align=\"left\"><bold>[0.87, 0.96]</bold></td><td align=\"left\">[0.59, 1.00]</td></tr><tr><td align=\"left\">Sens. \u2191</td><td char=\".\" align=\"char\"><bold>0.80</bold></td><td char=\".\" align=\"char\">0.90</td><td align=\"left\"><bold>[0.74, 0.84]</bold></td><td align=\"left\"><bold>[0.00, 1.00]</bold></td><td char=\".\" align=\"char\"><bold>0.80</bold></td><td char=\".\" align=\"char\">0.84</td><td align=\"left\"><bold>[0.72, 0.86]</bold></td><td align=\"left\"><bold>[0.33, 0.99]</bold></td></tr><tr><td align=\"left\"><p>MASD \u2193</p><p>(mm)<sup>a</sup></p></td><td char=\".\" align=\"char\"><bold>1.22</bold></td><td char=\".\" align=\"char\"><bold>0.11</bold></td><td align=\"left\"><bold>[0.47, 4.35]</bold></td><td align=\"left\"><bold>[0.01, 66.70]</bold></td><td char=\".\" align=\"char\"><bold>1.30</bold></td><td char=\".\" align=\"char\">0.60</td><td align=\"left\"><bold>[0.67, 3.44]</bold></td><td align=\"left\"><bold>[0.10, 12.36]</bold></td></tr></tbody></table>\n"
+                        },
+                        "text": "Model\tMetric\tSegmentation performance EC (n\u2009=\u2009104)\tSegmentation performance ACT (n\u2009=\u200923)\t \tMean\tMedian\t95% CI\tRange\tMean\tMedian\t95% CI\tRange\t \tScout\tDSC \u2191\t0.81\t0.91\t[0.75, 0.85]\t[0.00, 0.97]\t0.83\t0.85\t[0.75, 0.88]\t[0.38, 0.98]\t \tPrec. \u2191\t0.87\t0.95\t[0.81, 0.91]\t[0.00, 1.00]\t0.92\t0.97\t[0.87, 0.96]\t[0.64, 1.00]\t \tSens. \u2191\t0.79\t0.91\t[0.73, 0.84]\t[0.00, 1.00]\t0.79\t0.87\t[0.68, 0.86]\t[0.24, 0.98]\t \tMASD \u2193(mm)a\t1.34\t0.18\t[0.47, 5.22]\t[0.02, 79.86]\t1.67\t0.56\t[0.77, 4.94]\t[0.04, 18.40]\t \tSpecialist\tDSC \u2191\t0.82\t0.90\t[0.76, 0.86]\t[0.00, 0.98]\t0.85\t0.88\t[0.79, 0.88]\t[0.50, 0.95]\t \tPrec.\u2191\t0.87\t0.96\t[0.82, 0.91]\t[0.00, 1.00]\t0.93\t0.97\t[0.87, 0.96]\t[0.59, 1.00]\t \tSens. \u2191\t0.80\t0.90\t[0.74, 0.84]\t[0.00, 1.00]\t0.80\t0.84\t[0.72, 0.86]\t[0.33, 0.99]\t \tMASD \u2193(mm)a\t1.22\t0.11\t[0.47, 4.35]\t[0.01, 66.70]\t1.30\t0.60\t[0.67, 3.44]\t[0.10, 12.36]\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7184,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "Holes within tumor annotations were filled using a convex hull-based algorithm. Training used multi-label segmentation, testing used aggregated binary segmentation masks (tumor vs. background). Bold values mark highest performance in the respective metric. 95% confidence intervals (CI) computed using BCa bootstrap (10,000 resamples)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7519,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "aMASD calculated only for cases where both ground truth and prediction contain tumor voxel. EC: 99/104 valid cases for both models (5 empty predictions). ACT: 23/23 valid cases for both models",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7712,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "Scout: 17 EC cases and 7 ACT cases had MASD\u2009>\u20091\u00a0mm; 2 EC and 1 ACT case had MASD\u2009>\u20095\u00a0mm",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7810,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "Specialist: 17 EC cases and 6 ACT cases had MASD\u2009>\u20091\u00a0mm; 2 EC and 1 ACT case had MASD\u2009>\u20095\u00a0mm",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7913,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "Statistical comparison (permutation test, 10,000 iterations): No significant differences found between Scout and Specialist for EC or ACT tumor segmentation performance (all p\u2009>\u20090.05)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8101,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Table\u00a01 presents the fivefold cross-validation results for tumor segmentation using our two studied nnU-Net-based models (Scout and Specialist) on EC and ACT datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8270,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Overall performance: Both models achieved robust tumor segmentation across tumor classes. Mean Dice Similarity Coefficient (DSC) exceeded 80% for both models on EC and ACT, with Precision consistently above 87% and Sensitivity above or equal to 79%. No statistically significant differences were observed between Scout and Specialist models across any metric (permutation test, two-sided, 10,000 iterations, all p\u2009>>\u20090.05).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8698,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "EC vs. ACT Performance: ACT images yielded slightly higher segmentation performance than EC for both models. Scout achieved a mean DSC of 83% [95% CI 75%, 88%] on ACT versus 81% [75%, 85%] on EC. Similarly, Specialist achieved 85% [79%, 88%] on ACT versus 82% [76%, 86%] on EC. Importantly, both models maintained robust lower confidence interval bounds\u2009\u2265\u200975% DSC across both tumor classes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9095,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Boundary delineation accuracy: Mean Absolute Surface Distance (MASD) analysis (122 valid cases where both ground-truth and predictions contained tumor) revealed high precision in tumor boundary delineation. Median MASD values remained below 0.6\u00a0mm for both models, indicating excellent agreement with expert annotations. However, mean MASD values (Scout: 1.34\u20131.67\u00a0mm; Specialist: 1.22\u20131.30\u00a0mm) were elevated by three outlier cases with MASD\u2009>\u20095\u00a0mm.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9557,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "ROC curve analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9576,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig2_HTML.jpg",
+                            "id": "Fig2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "ROC Curve Comparison between Radiomics ensemble and nnU-Net-based Specialist and Scout models. There is no statistical difference between the AUC of the Radiomics ensemble and Specialist model (DeLong, p\u2009=\u20090.49). For all classification models, we use the classification threshold that maximizes ACT F1 Score performance, visually marked on each ROC curve. All models outperform the random classifier (0.50 AUC) substantially (Scout: 0.86, Specialist: 0.90, Radiomics: 0.93 AUC)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10058,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "For all classification models, we performed Receiver Operating Characteristic (ROC) curve analysis to optimize ACT classification performance (ACT F1 score), depicted in Fig.\u00a02. For nnU-Net-based Scout and Specialist models, we optimized the ACT: EC voxel ratio threshold of predicted segmentation masks. For radiomics-based models, we optimized the minimum ACT classification probability threshold.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10459,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "For the Scout model (Area under the Receiver Operating Characteristic, AUC\u2009=\u20090.86 [0.74, 0.93]), majority voting (\u2265\u200950% ACT: EC voxel ratio) was already within the optimal threshold range identified by ROC analysis [65.3%, 49.0%]. However, for the Specialist model (AUC\u2009=\u20090.90 [0.79, 0.96]), selecting a threshold within the optimal range [14.4%, 9.0%] led to substantial improvement in ACT Sensitivity compared to majority voting (87% vs. 74%). Similarly, for the radiomics ensemble based on ground-truth segmentation masks (AUC\u2009=\u20090.93 [0.81, 0.97]), threshold optimization improved ACT Sensitivity from 57 to 87% by selecting a threshold within the optimal range [40.0%, 27.0%]. There was no statistically significant difference between the AUC of the radiomics ensemble and Specialist model (DeLong test, p\u2009=\u20090.49). To reflect real clinical scenarios where ground-truth segmentation masks are unavailable, we also evaluated the radiomics ensemble on Specialist segmentation mask predictions (not shown in Fig.\u00a02 to reduce clutter), which yielded AUC\u2009=\u20090.92 [0.80, 0.96]. This was also not statistically different from the Specialist model (DeLong test, p\u2009=\u20090.52). These results on their own should however be interpreted with caution, since due to class imbalance (104 EC vs. 23 ACT cases), high AUC values can be achieved even with suboptimal ACT Precision.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11850,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Tumor scouting classification results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11888,
+                        "infons": {
+                            "file": "Tab2.xml",
+                            "id": "Tab2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Performance evaluation of nnU-Net-based tumor classification models in the tumor scouting phase (with ACT, EC, and NT images)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12014,
+                        "infons": {
+                            "file": "Tab2.xml",
+                            "id": "Tab2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" colspan=\"2\">ACT F1 Score optimized models (Based on ROC analysis)</th><th align=\"left\" colspan=\"2\">Scout</th><th align=\"left\" colspan=\"2\">Specialist</th></tr><tr><th align=\"left\">Class</th><th align=\"left\">Metric</th><th align=\"left\">Mean</th><th align=\"left\">95% CI</th><th align=\"left\">Mean</th><th align=\"left\">95% CI</th></tr></thead><tbody><tr><td align=\"left\" rowspan=\"3\">EC (<italic>n</italic>\u2009=\u2009104)</td><td align=\"left\">Precision\u2191</td><td char=\".\" align=\"char\">0.95</td><td char=\", \" align=\"char\">[0.89, 0.98]</td><td char=\".\" align=\"char\"><bold>0.97</bold></td><td char=\", \" align=\"char\"><bold>[0.92</bold><bold>, </bold><bold>0.99]</bold></td></tr><tr><td align=\"left\">Sensitivity \u2191</td><td char=\".\" align=\"char\">0.91</td><td char=\", \" align=\"char\">[0.85, 0.96]</td><td char=\".\" align=\"char\"><bold>0.93</bold></td><td char=\", \" align=\"char\"><bold>[0.87</bold><bold>, </bold><bold>0.97]</bold></td></tr><tr><td align=\"left\">F1 Score \u2191</td><td char=\".\" align=\"char\">0.93</td><td char=\", \" align=\"char\">[0.89, 0.96]</td><td char=\".\" align=\"char\"><bold>0.95</bold></td><td char=\", \" align=\"char\"><bold>[0.91</bold><bold>, </bold><bold>0.98]</bold></td></tr><tr><td align=\"left\" rowspan=\"3\">ACT (<italic>n</italic>\u2009=\u200923)</td><td align=\"left\">Precision \u2191</td><td char=\".\" align=\"char\">0.67</td><td char=\", \" align=\"char\">[0.46, 0.83]</td><td char=\".\" align=\"char\"><bold>0.74</bold></td><td char=\", \" align=\"char\"><bold>[0.55</bold><bold>, </bold><bold>0.89]</bold></td></tr><tr><td align=\"left\">Sensitivity \u2191</td><td char=\".\" align=\"char\">0.78</td><td char=\", \" align=\"char\">[0.57, 0.92]</td><td char=\".\" align=\"char\"><bold>0.87</bold></td><td char=\", \" align=\"char\"><bold>[0.67</bold><bold>, </bold><bold>0.96]</bold></td></tr><tr><td align=\"left\">F1 Score \u2191</td><td char=\".\" align=\"char\">0.72</td><td char=\", \" align=\"char\">[0.55, 0.85]</td><td char=\".\" align=\"char\"><bold>0.80</bold></td><td char=\", \" align=\"char\"><bold>[0.64</bold><bold>, </bold><bold>0.90]</bold></td></tr><tr><td align=\"left\" rowspan=\"4\">NT (<italic>n</italic>\u2009=\u200979)</td><td align=\"left\">Precision \u2191</td><td char=\".\" align=\"char\"><bold>0.93</bold></td><td char=\", \" align=\"char\"><bold>[0.86</bold><bold>, </bold><bold>0.97]</bold></td><td char=\".\" align=\"char\">0.93</td><td char=\", \" align=\"char\">[0.84, 0.97]</td></tr><tr><td align=\"left\">Sensitivity \u2191</td><td char=\".\" align=\"char\"><bold>0.86</bold></td><td char=\", \" align=\"char\"><bold>[0.77</bold><bold>, </bold><bold>0.93]</bold></td><td char=\".\" align=\"char\">0.78</td><td char=\", \" align=\"char\">[0.68, 0.87]</td></tr><tr><td align=\"left\">Specificity \u2191</td><td char=\".\" align=\"char\"><bold>0.96</bold></td><td char=\", \" align=\"char\"><bold>[0.91</bold><bold>, </bold><bold>0.98]</bold></td><td char=\".\" align=\"char\"><bold>0.96</bold></td><td char=\", \" align=\"char\"><bold>[0.91</bold><bold>, </bold><bold>0.98]</bold></td></tr><tr><td align=\"left\">F1 Score \u2191</td><td char=\".\" align=\"char\"><bold>0.89</bold></td><td char=\", \" align=\"char\"><bold>[0.83</bold><bold>, </bold><bold>0.94]</bold></td><td char=\".\" align=\"char\">0.85</td><td char=\", \" align=\"char\">[0.78, 0.91]</td></tr></tbody></table>\n"
+                        },
+                        "text": "ACT F1 Score optimized models (Based on ROC analysis)\tScout\tSpecialist\t \tClass\tMetric\tMean\t95% CI\tMean\t95% CI\t \tEC (n\u2009=\u2009104)\tPrecision\u2191\t0.95\t[0.89, 0.98]\t0.97\t[0.92, 0.99]\t \tSensitivity \u2191\t0.91\t[0.85, 0.96]\t0.93\t[0.87, 0.97]\t \tF1 Score \u2191\t0.93\t[0.89, 0.96]\t0.95\t[0.91, 0.98]\t \tACT (n\u2009=\u200923)\tPrecision \u2191\t0.67\t[0.46, 0.83]\t0.74\t[0.55, 0.89]\t \tSensitivity \u2191\t0.78\t[0.57, 0.92]\t0.87\t[0.67, 0.96]\t \tF1 Score \u2191\t0.72\t[0.55, 0.85]\t0.80\t[0.64, 0.90]\t \tNT (n\u2009=\u200979)\tPrecision \u2191\t0.93\t[0.86, 0.97]\t0.93\t[0.84, 0.97]\t \tSensitivity \u2191\t0.86\t[0.77, 0.93]\t0.78\t[0.68, 0.87]\t \tSpecificity \u2191\t0.96\t[0.91, 0.98]\t0.96\t[0.91, 0.98]\t \tF1 Score \u2191\t0.89\t[0.83, 0.94]\t0.85\t[0.78, 0.91]\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12701,
+                        "infons": {
+                            "file": "Tab2.xml",
+                            "id": "Tab2",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "Both models classify empty predictions (n=5) as no-tumor cases. For all models, classification threshold was optimized using ROC curve analysis to maximize ACT F1 Score performance. Bold values mark highest performance in the respective metric. 95% confidence intervals (CI) computed using BCa bootstrap (10,000 resamples)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13024,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Table\u00a02 presents the tumor discrimination and screening performance of Scout and Specialist models using the optimized ACT:EC voxel ratio threshold that maximized ACT F1 score.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13202,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "EC and ACT classification: The Specialist model outperformed Scout for both tumor classes, achieving F1 scores of 95% [91%, 98%] vs. 93% [89%, 96%] for EC and 80% [64%, 90%] vs. 72% [55%, 85%] for ACT. ACT classification proved more challenging than EC for both models, with lower precision and sensitivity reflecting the subtle imaging characteristics distinguishing ACT from EC.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13583,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Non-tumor (NT) detection: Scout demonstrated superior sensitivity for NT detection (86% [77%, 93%] vs. 78% [68%, 87%]), identifying more tumor-free cases while maintaining identical specificity compared with Specialist (96% [91%, 98%]). This higher sensitivity makes Scout more suitable for basic tumor screening, i.e., ruling out non-tumor cases.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13931,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Importantly, neither model misclassified any ACT-containing image as non-tumor (NT), demonstrating reliable detection of the semi-malignant tumor variant.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14086,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Final classification results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14115,
+                        "infons": {
+                            "file": "Tab3.xml",
+                            "id": "Tab3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Performance comparison of tumor classification models on final classification phase (ACT and EC images only): Specialist model (using ratio of ACT to EC voxels for classification), radiomics ensemble evaluated on Specialist segmentation predictions (clinical setting), and radiomics ensemble trained and evaluated on ground truth annotations (with filled holes, ideal scenario)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14493,
+                        "infons": {
+                            "file": "Tab3.xml",
+                            "id": "Tab3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\">ACT F1 Score optimized models (Based on ROC analysis)</th><th align=\"left\">Class</th><th align=\"left\">Precision \u2191</th><th align=\"left\">Sensitivity \u2191</th><th align=\"left\">F1 Score \u2191</th></tr></thead><tbody><tr><td align=\"left\" rowspan=\"2\">nnU-Net-based specialist model (ACT:EC voxel ratio optimized)</td><td align=\"left\">EC</td><td char=\", \" align=\"char\"><bold>0.97 [0.92</bold>, <bold>0.99]</bold></td><td char=\",\" align=\"char\"><bold>0.93 [0.87,0.97]</bold></td><td char=\", \" align=\"char\"><bold>0.95 [0.91</bold>, <bold>0.98]</bold></td></tr><tr><td align=\"left\">ACT</td><td char=\", \" align=\"char\"><bold>0.74 [0.55</bold>, <bold>0.89]</bold></td><td char=\", \" align=\"char\"><bold>0.87 [0.67</bold>, <bold>0.96]</bold></td><td char=\", \" align=\"char\"><bold>0.80 [0.64</bold>, <bold>0.90]</bold></td></tr><tr><td align=\"left\" rowspan=\"2\"><p>Radiomics features\u2009+\u2009XGBoost classifier</p><p>(Ensemble, <italic>Specialist</italic> model predictions labels)</p></td><td align=\"left\">EC</td><td char=\", \" align=\"char\">0.95 [0.89, 0.98]</td><td char=\", \" align=\"char\"><bold>0.93 [0.87</bold>, <bold>0.97]</bold></td><td char=\", \" align=\"char\">0.94 [0.90, 0.97]</td></tr><tr><td align=\"left\">ACT</td><td char=\",\" align=\"char\">0.72 [0.52,0.88]</td><td char=\", \" align=\"char\">0.78 [0.57, 0.92]</td><td char=\",\" align=\"char\">0.75 [0.59,0.87]</td></tr><tr><td align=\"left\" rowspan=\"2\"><p>Radiomics features\u2009+\u2009XGBoost classifier</p><p>(Ensemble, ground truth segmentation labels)</p></td><td align=\"left\">EC</td><td char=\",\" align=\"char\"><bold>0.97 [0.92, 0.99]</bold></td><td char=\", \" align=\"char\">0.92 [0.86, 0.96]</td><td char=\",\" align=\"char\"><bold>0.95 [0.91,0.97]</bold></td></tr><tr><td align=\"left\">ACT</td><td char=\",\" align=\"char\">0.71 [0.52,0.87]</td><td char=\", \" align=\"char\"><bold>0.87 [0.67</bold>, <bold>0.97]</bold></td><td char=\",\" align=\"char\">0.78 [0.63,0.89]</td></tr></tbody></table>\n"
+                        },
+                        "text": "ACT F1 Score optimized models (Based on ROC analysis)\tClass\tPrecision \u2191\tSensitivity \u2191\tF1 Score \u2191\t \tnnU-Net-based specialist model (ACT:EC voxel ratio optimized)\tEC\t0.97 [0.92, 0.99]\t0.93 [0.87,0.97]\t0.95 [0.91, 0.98]\t \tACT\t0.74 [0.55, 0.89]\t0.87 [0.67, 0.96]\t0.80 [0.64, 0.90]\t \tRadiomics features\u2009+\u2009XGBoost classifier(Ensemble, Specialist model predictions labels)\tEC\t0.95 [0.89, 0.98]\t0.93 [0.87, 0.97]\t0.94 [0.90, 0.97]\t \tACT\t0.72 [0.52,0.88]\t0.78 [0.57, 0.92]\t0.75 [0.59,0.87]\t \tRadiomics features\u2009+\u2009XGBoost classifier(Ensemble, ground truth segmentation labels)\tEC\t0.97 [0.92, 0.99]\t0.92 [0.86, 0.96]\t0.95 [0.91,0.97]\t \tACT\t0.71 [0.52,0.87]\t0.87 [0.67, 0.97]\t0.78 [0.63,0.89]\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15191,
+                        "infons": {
+                            "file": "Tab3.xml",
+                            "id": "Tab3",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "Empty Specialist segmentation predictions (n\u2009=\u20095) were considered as EC predictions. For all models, classification threshold was optimized using ROC curve analysis to maximize ACT F1 Score performance. Bold values mark highest performance in the respective column and class. 95% confidence intervals (CI) computed using BCa bootstrap (10,000 resamples)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15549,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Table\u00a03 compares the tumor discrimination performance of the Specialist model against the radiomics-based approach (XGBoost classifier ensemble), with both methods trained and evaluated exclusively on tumor-containing images. All models were optimized for high ACT F1 Score performance using ROC curve analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15862,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Specialist vs. radiomics (ground truth): The Specialist model achieved comparable performance to the radiomics approach for ACT classification, with F1 scores of 80% [64%, 90%] vs. 78% [63%, 89%] and matching ACT Sensitivity of 87% [67%, 96%] vs. 87% [67%, 97%]. The Specialist model demonstrated slightly higher ACT Precision (74% [55%, 89%] vs. 71% [52%, 87%]). For EC classification, both approaches achieved similarly high performance (F1 score: 95%).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16318,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Impact of predicted vs. ground-truth segmentation: To simulate real clinical scenarios where ground-truth segmentation masks are unavailable, we evaluated the radiomics approach (trained on ground truth) using the Specialist model\u2019s predicted segmentation masks for unseen test images. This realistic scenario resulted in performance degradation across both tumor classes, with F1 scores decreasing from 95 to 94% for EC and from 78 to 75% for ACT. Notably, ACT sensitivity declined from 87% [67%, 97%] to 78% [57%, 92%].",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16842,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Overall, the nnU-Net-based Specialist model seems beneficial as it solves segmentation and classification end-to-end, eliminating segmentation error propagation inherent to the multi-stage radiomics pipeline. Although the difference in ACT Sensitivity between Specialist (87%) and radiomics tested on Specialist segmentation masks (78%) was not statistically significant (permutation test, two-sided, 10,000 iterations, p\u2009=\u20090.38) due to the small sample size, the observed 9-percentage-point difference is highly clinically relevant for detecting ACT tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17405,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Most discriminative radiomics features",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17444,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig3_HTML.jpg",
+                            "id": "Fig3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Boxplot of the top 6 Radiomics features grouped by ground-truth tumor class. All features are used within the tumor classification ensemble and are ranked based on their importance in classification (average XGBoost gain) and feature difference (Mann\u2013Whitney U test effect size, r). All top features differ significantly by tumor class (p\u2009<\u20090.0001)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17799,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig4_HTML.jpg",
+                            "id": "Fig4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Correlation matrix of the top 20 Radiomics features used in our classification ensemble (out of overall 69 unique features). Features are labeled with their rank and effect direction, determined by classification importance (average XGBoost gain) and effect size (Mann\u2013Whitney U, r). All top features differ significantly by tumor class (p\u2009<\u20090.0001). Individual XGBoost models use a Pearson correlation threshold of |0.4|. This matrix identifies robust feature families potentially linked to biological tumor differences",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18326,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "As opposed to the deep learning-based approach, the radiomics approach enables investigation of the explainability of features used for predictions. Our final radiomics ensemble utilized 69 unique features from 1409 extracted radiomics features, selected through variance thresholding, correlation-based redundancy removal (threshold\u2009=|0.40| Pearson correlation coefficient), and model-driven selection across 100 independent training iterations. Ranking these features according to their combined importance in classification performance and feature effect size identified a distinctive texture-based signature differentiating enchondroma from ACT, with wavelet-transformed features dominating the top-ranked predictors. All top-ranked features demonstrated significant differences between tumor types (p\u2009<\u20090.0001). Figure\u00a03 presents boxplots of the six most discriminative features stratified by tumor type, demonstrating clear separation between EC and ACT classes with minimal overlap (effect sizes r\u2009=\u20090.37\u20130.58), validating the clinical utility of these radiomic biomarkers. Figure\u00a04 displays the correlation matrix of the top 20 features using hierarchical clustering, revealing distinct feature families that cluster based on shared feature information while maintaining complementary discriminative value across the classification ensemble.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19690,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Wavelet-transformed features dominated the top-ranked predictors. High-frequency wavelet decompositions (HHL, HHH, HLH) capturing fine-scale heterogeneity were consistently elevated in ACT (ranks #1\u20133, #5; effect sizes r\u2009=\u20090.50\u20130.58). Gray Level Size Zone Matrix (GLSZM) large area emphasis features were markedly elevated in ACT (effect sizes r\u2009=\u20090.50\u20130.58). Neighboring Gray Tone Difference Matrix (NGTDM) strength was significantly higher in enchondroma (rank #4; r\u2009=\u20090.48). Enchondromas exhibited greater shape elongation than ACT (rank #12; r\u2009=\u20090.37). Total energy features (logarithmic transformation) were markedly elevated in ACT (ranks #7\u20138). Zone variance (rank #6) and kurtosis features (ranks #16, #19) further differentiated ACT from enchondroma.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20474,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Feature robustness assessment",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20504,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig5_HTML.jpg",
+                            "id": "Fig5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Robustness assessment of Radiomics ensemble showing ROC curves with perturbation envelopes. Five perturbed versions were generated for each test image with Gaussian noise (\u03c3\u2009=\u20095% of intensity range) and random rotation ([\u2212\u00a015\u00b0,\u2009+\u200915\u00b0] around a randomly selected x-, y-, or z-axis). The ground-truth segmentation masks were transformed accordingly. No significant difference was observed between the original test performance and the average perturbed performance (DeLong test, p\u2009=\u20090.90)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21009,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "To also assess the stability of radiomics features to image perturbations, we performed robustness testing on the ensemble model. The corresponding ROC curve with perturbation envelope is shown in Fig.\u00a05. For each test image, five perturbed versions were generated by adding Gaussian noise (\u03c3\u2009=\u20095% of intensity range) as well as performing random image rotation (\u2212\u00a015\u00b0,\u2009+\u200915\u00b0) around a randomly selected x-, y-, or z-axis, with ground-truth segmentation masks transformed accordingly. No significant difference was observed between the original test performance and the average perturbed performance (DeLong test, p\u2009=\u20090.90), demonstrating robust feature extraction and model generalization.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21719,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Qualitative results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21739,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig6_HTML.jpg",
+                            "id": "Fig6",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Qualitative comparison between Specialist and Scout models. Each row displays: (left to right) original image, ground-truth segmentation with true class label, Specialist model prediction, and Scout model prediction (small lesions are best seen in digital version). The segmentation color scheme is: blue (EC) and red (ACT). a\u2013c and f demonstrate successful tumor classifications for knee and shoulder images by both models. c shows model predictions for a case containing both EC and ACT classes. d\u2013f illustrate outlier cases with the largest MASD",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22292,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure\u00a06 depicts several example input images and their respective ground-truth and predicted segmentation masks, while also showing the classification outcome of each model in brackets. Figure\u00a06 (a\u2013c) and Fig.\u00a06 (f) show correct classification of knee and shoulder MRI images by both models. Figure\u00a06 (c) shows the results of one of two images that have both tumor classes present and the larger tumor defines the target class. In this case, the Specialist model accurately segmented both tumors, but only labels a part of the ACT correctly. While the Scout model accurately segmented and classified the ACT, it completely omitted the second much smaller EC. The behavior of mixing both tumor classes inside one connected predicted segmentation mask was observed in several images (Fig.\u00a06 b\u2013c). This observation motivated our ROC curve analysis of the ACT:EC voxel ratio threshold parameter.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23194,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure\u00a06 (d\u2013f) shows the cases that resulted in the highest MASD values for both models. In Fig.\u00a06 (d), the Specialist model incorrectly labeled non-tumor tissue in the middle of the image volume (i.e., generating a false positive on an adjacent slice) achieving 66.70\u00a0mm MASD, yet correctly classified the volume as EC, while the Scout model failed to label any voxels as tumor tissue. In Fig.\u00a06 (e), this behavior is reversed, but Scout additionally misclassified the EC as ACT and achieves 79.86\u00a0mm MASD. However, both cases feature very small tumor lesions. A third case with outlier segmentation performance, heavily penalized by the MASD metric, is depicted in Fig.\u00a06 (f), where both models successfully segmented only one of two ECs.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23943,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23954,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In clinical practice, differentiation between EC and ACT is difficult, given that radiological features of both benign and aggressive potential may coexist; experts in this discrimination are scarce due to the rarity of these lesions, and histological analysis is prone to sampling bias. However, accurate differentiation of these lesions is of importance as it dictates further management, from active surveillance with regular MR imaging to surgery.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24406,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our radiomics-based differentiation approach uses hand-crafted features specifically designed for tumor phenotyping, and as expected, it performs well in our small dataset scenario when ground-truth segmentation masks are available while also showing benefits regarding improved explainability of important features. However, in the real-world clinical setting, where tumor segmentation masks have to be predicted instead of being manually annotated, lesion discrimination via direct aggregation of multi-label segmentation predictions outperforms the radiomics-based approach that depends on accurate segmentations by a 9-percentage-point difference in ACT Sensitivity. Despite not being statistically significant, we find this difference clinically relevant. The overall performance of the deep learning-based method is surprising as deep learning-based methods generally require sufficient data to learn robust task-specific feature representations from scratch. We believe that our results can be explained by (1) the end-to-end (segmentation and classification in one model) modeling of our nnU-Net approach, (2) the foreground oversampling, and (3) the strong data augmentation used in nnU-Net, which artificially increases the amount of image variation seen during training. This allows the nnU-Net to converge to a meaningful and robust tumor classifier despite the small imbalanced dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25806,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Furthermore, we could show that a sequential approach with two models following a separation of concerns strategy works best. This is implemented with a tumor scouting model to first filter out non-tumor images and a final classification model specialized on tumor images, which leads to a higher tumor classification performance than using a single model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26163,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Hence, the Scout model is better at identifying no tumor cases, whereas the Specialist model has a higher tumor discrimination performance, especially in the more critical ACT class.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26346,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_2"
+                        },
+                        "text": "Radiomics feature interpretation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26379,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "A benefit of radiomics vs. deep learning-based black box approaches is its better explainability of imaging features discriminating EC and ACT. Multi-scale textural heterogeneity emerged as the primary discriminative characteristic. High-frequency wavelet decompositions (HHL, HHH, HLH) capturing fine-scale heterogeneity were consistently elevated in ACT (ranks #1\u20133, #5; effect sizes r\u2009=\u20090.50\u20130.58), reflecting increased intratumoral complexity at submillimeter spatial scales. These high-frequency wavelet features capture textural irregularities that represent the cumulative imaging manifestations of cellular atypia, infiltrative growth patterns, and irregular tissue boundaries characteristic of ACT's permeative growth within the spongious bone.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27141,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Paradoxically, ACT simultaneously demonstrated both fine-scale disorganization and large-scale spatial clustering. GLSZM large area emphasis features, markedly elevated in ACT (effect sizes r\u2009=\u20090.50\u20130.58), indicate the presence of larger homogeneous zones within the tumor architecture. This multi-scale heterogeneity pattern, where ACT exhibits spatial clustering of similar intensities at certain scales (large homogeneous myxoid-rich regions) yet demonstrates fine-scale textural variation at other scales that may reflect cellular infiltration and matrix disruption, revealing a complex hierarchical texture organization that is fundamentally distinct from enchondroma\u2019s rather uniform architecture.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27853,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "In contrast, enchondromas demonstrated preservation of organized cartilaginous architecture, reflected by significantly higher NGTDM strength (rank #4; r\u2009=\u20090.48). This feature measures textural coarseness and primitive pattern strength; higher values in enchondroma indicate mature, organized hyaline cartilage with strong, regular spatial intensity patterns. ACT\u2019s lower strength reflects architectural disruption from cellular infiltration, myxoid degeneration, and loss of the uniform lobular cartilage organization characteristic of benign lesions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28412,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Unexpectedly, enchondromas exhibited greater shape elongation than ACT (rank #12; r\u2009=\u20090.37). This finding likely reflects differing growth constraints: enchondromas preferentially extend along the path of least resistance (i.e., within the spongious bone and thus along the bone\u2019s longitudinal axis), producing elongated morphology. Conversely, ACT\u2019s cortical remodeling and deep endosteal scalloping, hallmark features of local aggressiveness, permit more isotropic expansion, resulting in relatively more spherical morphology despite radiologically evident bone erosion.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28993,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Intensity-based features further distinguished the two tumor types. Total energy features (logarithmic transformation) were markedly elevated in ACT (ranks #7\u20138), reflecting increased signal intensity on proton density fat-suppressed imaging. This elevated signal corresponds with increased tissue water content and may reflect myxoid matrix degeneration, where hyaline cartilage matrix undergoes liquefactive changes with accumulation of free water, a hallmark feature more prevalent in ACT, different from the mature, organized cartilage of enchondroma. Zone variance (rank #6) and kurtosis features (ranks #16, #19) further captured the spatial heterogeneity and non-Gaussian intensity distribution characteristic of ACT's mixed composition (regions of preserved cartilage, myxoid degeneration, and increased cellularity).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29821,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Notably, these wavelet and second-order texture features substantially outperformed conventional first-order statistics, demonstrating that transformation of cartilaginous tumors into more aggressive variants (i.e., from enchondroma to ACT) manifests primarily as alterations in spatial texture patterns and architectural organization rather than simple intensity changes. The prominence of GLSZM (zone-based), Gray Level Dependence Matrix (GLDM, dependence-based), and NGTDM (neighborhood-based) features suggests that tumor biology in cartilaginous lesions is best characterized by analyzing spatial relationships between voxels rather than their individual intensities. It has to be noted that this interpretation is based on features extracted from manually created ground-truth segmentation masks that are generally not available in clinical practice, though. However, these findings might form a foundation to study the radiological definition of chondrosarcomas in more detail in future work.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30821,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_2"
+                        },
+                        "text": "Limitations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30833,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "First, our ground-truth definition of EC and ACT was based on radiological features and not on histological findings. Given that histological differentiation between EC and ACT is prone to sampling bias, the radiological differentiation using well-defined MRI-based criteria appears valid. Nevertheless, follow-up studies should aim at correlating model predictions with histopathological findings in case patients undergo surgery. Second, owing to the structure of the data used, further clinical details or follow-up images were not available. However, the model allows us to differentiate between EC and ACT on a single image, thus supporting treatment decision-making during the first clinical visit. Third, in some cases, segmentation predictions of EC and ACT were simultaneously present for the same tumor, as seen in Fig.\u00a06, thus complicating the analysis. Yet, this mirrors the evolution of cartilaginous tumors from small lesions with no features of aggressiveness to larger ones with (partial) characteristics of malignancy. To account for this, our model classifies lesions depending on the relative amount of one or the other component based on the ACT to EC voxel threshold, which was optimized with an ROC analysis. This threshold optimization significantly improves the performance of the Specialist model, as seen in Fig.\u00a02. The ROC analysis was estimated over the ensemble results and can be rerun in a computationally efficient manner as new annotated data becomes available to further increase the generalization of the chosen threshold. Fourth, large lesions could always be segmented correctly, while the performance of the model was poorer in smaller-sized lesions. However, all lesions defined as ACT were correctly segmented by the model, implying that even ACTs\u2009<\u20095\u00a0cm (e.g., in the fibular head) display features the model correctly captures as such. Finally, we used data from a single radiological center only, where also no potentially confounding findings like plasmacytoma were present. Thus, there is a risk of our model overfitting to our biased training data distribution, especially due to the small size of ACTs (n\u2009=\u200923) in the cohort. Therefore, additional external validation studies are required to assess and reproduce the model performance on independent larger and more comprehensive image datasets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33187,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33199,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In this pilot study, we have empirically demonstrated that an AI-based tool can solve the tasks of segmentation and classification of EC and ACT in knee and shoulder MRI scans, despite the small number of annotated training images. The finding that 87% of clinically relevant ACTs were successfully detected in our experiments is promising, so that AI tools may be used for tumor screening of ACT and EC in future clinical practice.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33632,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Materials and methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33654,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Dataset",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33662,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig7_HTML.jpg",
+                            "id": "Fig7",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Flowchart indicating selection of patients included in this study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33728,
+                        "infons": {
+                            "file": "12938_2026_1547_Fig8_HTML.jpg",
+                            "id": "Fig8",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Density plots showing the distribution of tumor sizes in the EC and ACT groups, with dotted vertical lines indicating the median tumor size for each class",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33883,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Characteristics of patients with cartilaginous lesions included in this study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33961,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\"/><th align=\"left\">Total count (<italic>n</italic>\u2009=\u2009209)</th><th align=\"left\">Control (<italic>n</italic>\u2009=\u200979)</th><th align=\"left\">EC (<italic>n</italic>\u2009=\u2009107)</th><th align=\"left\">ACT (<italic>n</italic>\u2009=\u200923)</th><th align=\"left\">p-value<sup>1</sup></th></tr></thead><tbody><tr><td align=\"left\" colspan=\"6\">Gender</td></tr><tr><td align=\"left\">\u00a0Female</td><td align=\"left\">89 (42.6%)</td><td align=\"left\">27 (34.2%)</td><td align=\"left\">49 (45.8%)</td><td align=\"left\">13 (56.5%)</td><td char=\".\" align=\"char\" rowspan=\"2\">0.10*</td></tr><tr><td align=\"left\">\u00a0Male</td><td align=\"left\">120 (57.4%)</td><td align=\"left\">52 (65.8%)</td><td align=\"left\">58 (54.2%)</td><td align=\"left\">10 (43.5%)</td></tr><tr><td align=\"left\">Age [years]</td><td align=\"left\">51\u2009\u00b1\u200918</td><td align=\"left\">51\u2009\u00b1\u200919</td><td align=\"left\">50\u2009\u00b1\u200919</td><td align=\"left\">57\u2009\u00b1\u200924</td><td char=\".\" align=\"char\">0.07**</td></tr><tr><td align=\"left\" colspan=\"6\">Joint</td></tr><tr><td align=\"left\">\u00a0Knee</td><td align=\"left\">139 (66.5%)</td><td align=\"left\">40 (50.6%)</td><td align=\"left\">84 (78.5%)</td><td align=\"left\">15 (65.2%)</td><td char=\".\" align=\"char\" rowspan=\"2\"><bold>\u2009&lt;\u20090.01*</bold></td></tr><tr><td align=\"left\">\u00a0Shoulder</td><td align=\"left\">70 (33.5%)</td><td align=\"left\">39 (49.4%)</td><td align=\"left\">23 (21.5%)</td><td align=\"left\">8 (34.8%)</td></tr><tr><td align=\"left\" colspan=\"6\">Side</td></tr><tr><td align=\"left\">\u00a0Left</td><td align=\"left\">108 (51.7%)</td><td align=\"left\">44 (55.7%)</td><td align=\"left\">51 (47.7%)</td><td align=\"left\">13 (56.5%)</td><td char=\".\" align=\"char\" rowspan=\"2\">0.70*</td></tr><tr><td align=\"left\">\u00a0Right</td><td align=\"left\">101 (48.3%)</td><td align=\"left\">35 (44.3%)</td><td align=\"left\">56 (52.3%)</td><td align=\"left\">10 (43.5%)</td></tr></tbody></table>\n"
+                        },
+                        "text": "\tTotal count (n\u2009=\u2009209)\tControl (n\u2009=\u200979)\tEC (n\u2009=\u2009107)\tACT (n\u2009=\u200923)\tp-value1\t \tGender\t \t\u00a0Female\t89 (42.6%)\t27 (34.2%)\t49 (45.8%)\t13 (56.5%)\t0.10*\t \t\u00a0Male\t120 (57.4%)\t52 (65.8%)\t58 (54.2%)\t10 (43.5%)\t \tAge [years]\t51\u2009\u00b1\u200918\t51\u2009\u00b1\u200919\t50\u2009\u00b1\u200919\t57\u2009\u00b1\u200924\t0.07**\t \tJoint\t \t\u00a0Knee\t139 (66.5%)\t40 (50.6%)\t84 (78.5%)\t15 (65.2%)\t\u2009<\u20090.01*\t \t\u00a0Shoulder\t70 (33.5%)\t39 (49.4%)\t23 (21.5%)\t8 (34.8%)\t \tSide\t \t\u00a0Left\t108 (51.7%)\t44 (55.7%)\t51 (47.7%)\t13 (56.5%)\t0.70*\t \t\u00a0Right\t101 (48.3%)\t35 (44.3%)\t56 (52.3%)\t10 (43.5%)\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34505,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "1comparison of Control, EC and ACT",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34540,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "*Chi-squared test",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34558,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "**Kruskal\u2013Wallis test",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34582,
+                        "infons": {
+                            "file": "Tab5.xml",
+                            "id": "Tab5",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Characteristics of cartilaginous tumors included",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34631,
+                        "infons": {
+                            "file": "Tab5.xml",
+                            "id": "Tab5",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\"/><th align=\"left\">Total count (<italic>n</italic>\u2009=\u2009130)</th><th align=\"left\">EC (<italic>n</italic>\u2009=\u2009107)</th><th align=\"left\">ACT (<italic>n</italic>\u2009=\u200923)</th><th align=\"left\"><italic>p</italic>-value<sup>1</sup></th></tr></thead><tbody><tr><td align=\"left\">Tumor size [mm]</td><td align=\"left\">17\u2009\u00b1\u200917</td><td align=\"left\">14\u2009\u00b1\u200912</td><td align=\"left\">54\u2009\u00b1\u200920</td><td char=\".\" align=\"char\"><bold>\u2009&lt;\u20090.01</bold>**</td></tr><tr><td align=\"left\" colspan=\"5\">Bone</td></tr><tr><td align=\"left\">\u00a0Humerus (prox.)</td><td align=\"left\">31 (23.8%)</td><td align=\"left\">23 (21.5%)</td><td align=\"left\">8 (34.8%)</td><td char=\".\" align=\"char\" rowspan=\"5\">0.07***</td></tr><tr><td align=\"left\">\u00a0Femur (dist.)</td><td align=\"left\">74 (56.9%)</td><td align=\"left\">62 (57.9%)</td><td align=\"left\">12 (52.2%)</td></tr><tr><td align=\"left\">\u00a0Tibia (prox.)</td><td align=\"left\">16 (12.3%)</td><td align=\"left\">16 (15.0%)</td><td align=\"left\">0 (0.0%)</td></tr><tr><td align=\"left\">\u00a0Fibula (prox.)</td><td align=\"left\">8 (6.2%)</td><td align=\"left\">5 (4.7%)</td><td align=\"left\">3 (13.0%)</td></tr><tr><td align=\"left\">\u00a0Patella</td><td align=\"left\">1 (0.8%)</td><td align=\"left\">1 (0.9%)</td><td align=\"left\">0 (0.0%)</td></tr><tr><td align=\"left\" colspan=\"5\">Location in relation to medullary canal\u2009</td></tr><tr><td align=\"left\">\u00a0Central</td><td align=\"left\">64 (49.2%)</td><td align=\"left\">61 (57.0%)</td><td align=\"left\">3 (13.0%)</td><td char=\".\" align=\"char\" rowspan=\"2\"><bold>&lt;\u20090.01</bold>***</td></tr><tr><td align=\"left\">\u00a0Peripheral</td><td align=\"left\">66 (50.8%)</td><td align=\"left\">46 (43.0%)</td><td align=\"left\">20 (87.0%)</td></tr><tr><td align=\"left\" colspan=\"5\">Location</td></tr><tr><td align=\"left\">\u00a0Epiphysis</td><td align=\"left\">8 (6.2%)</td><td align=\"left\">8 (7.5%)</td><td align=\"left\">0 (0.0%)</td><td char=\".\" align=\"char\" rowspan=\"6\"><bold>&lt;\u20090.01</bold>***</td></tr><tr><td align=\"left\">\u00a0Epimetaphysis</td><td align=\"left\">14 (10.8%)</td><td align=\"left\">11 (10.3%)</td><td align=\"left\">3 (13.0%)</td></tr><tr><td align=\"left\">\u00a0Metaphysis</td><td align=\"left\">74 (56.9%)</td><td align=\"left\">67 (62.6%)</td><td align=\"left\">7 (30.4%)</td></tr><tr><td align=\"left\">\u00a0Metadiaphysis</td><td align=\"left\">14 (10.8%)</td><td align=\"left\">8 (7.5%)</td><td align=\"left\">6 (26.1%)</td></tr><tr><td align=\"left\">\u00a0Diaphysis</td><td align=\"left\">19 (14.6%)</td><td align=\"left\">12 (11.2%)</td><td align=\"left\">7 (30.4%)</td></tr><tr><td align=\"left\">\u00a0Patella</td><td align=\"left\">1 (0.8%)</td><td align=\"left\">1 (0.9%)</td><td align=\"left\">0 (0.0%)</td></tr><tr><td align=\"left\" colspan=\"5\">Periosteal reaction</td></tr><tr><td align=\"left\">\u00a0Yes</td><td align=\"left\">0 (0.0%)</td><td align=\"left\">0 (0.0%)</td><td align=\"left\">0 (0.0%)</td><td char=\".\" align=\"char\" rowspan=\"2\"/></tr><tr><td align=\"left\">\u00a0No</td><td align=\"left\">130 (100.0%)</td><td align=\"left\">107 (100.0%)</td><td align=\"left\">23 (100.0%)</td></tr><tr><td align=\"left\" colspan=\"5\">Medullary edema</td></tr><tr><td align=\"left\">\u00a0Yes</td><td align=\"left\">2 (1.5%)</td><td align=\"left\">0 (0.0%)</td><td align=\"left\">2 (8.7%)</td><td char=\".\" align=\"char\" rowspan=\"2\"><bold>0.03</bold>***</td></tr><tr><td align=\"left\">\u00a0No</td><td align=\"left\">128 (98.5%)</td><td align=\"left\">107 (100.0%)</td><td align=\"left\">21 (91.3%)</td></tr><tr><td align=\"left\" colspan=\"5\">Endosteal scalloping</td></tr><tr><td align=\"left\">\u00a0No</td><td align=\"left\">116 (89.2%)</td><td align=\"left\">106 (99.1%)</td><td align=\"left\">10 (43.5%)</td><td char=\".\" align=\"char\" rowspan=\"3\"><bold>\u2009&lt;\u20090.01</bold>***</td></tr><tr><td align=\"left\">\u00a0Superficial</td><td align=\"left\">4 (3.1%)</td><td align=\"left\">1 (0.9%)</td><td align=\"left\">3 (13.0%)</td></tr><tr><td align=\"left\">\u00a0Deep</td><td align=\"left\">10 (7.7%)</td><td align=\"left\">0 (0.0%)</td><td align=\"left\">10 (43.5%)</td></tr><tr><td align=\"left\" colspan=\"5\">Reason for referral</td></tr><tr><td align=\"left\">\u00a0Tumor-associated</td><td align=\"left\">21 (16.2%)</td><td align=\"left\">8 (7.5%)</td><td align=\"left\">13 (56.5%)</td><td char=\".\" align=\"char\" rowspan=\"3\"><bold>\u2009&lt;\u20090.01</bold>*</td></tr><tr><td align=\"left\">\u00a0Other reason</td><td align=\"left\">74 (56.9%)</td><td align=\"left\">69 (64.5%)</td><td align=\"left\">5 (21.7%)</td></tr><tr><td align=\"left\">\u00a0Unknown</td><td align=\"left\">35 (26.9%)</td><td align=\"left\">30 (28.0%)</td><td align=\"left\">5 (21.7%)</td></tr><tr><td align=\"left\" colspan=\"5\">Contrast agent</td></tr><tr><td align=\"left\">\u00a0Yes</td><td align=\"left\">19 (14.6%)</td><td align=\"left\">7 (6.5%)</td><td align=\"left\">12 (52.2%)</td><td char=\".\" align=\"char\" rowspan=\"2\"><bold>\u2009&lt;\u20090.01</bold>*</td></tr><tr><td align=\"left\">\u00a0No</td><td align=\"left\">111 (85.4%)</td><td align=\"left\">100 (93.5%)</td><td align=\"left\">11 (47.8%)</td></tr><tr><td align=\"left\">Number of received MRIs</td><td align=\"left\">1\u2009\u00b1\u20091</td><td align=\"left\">1\u2009\u00b1\u20091</td><td align=\"left\">1\u2009\u00b1\u20091</td><td char=\".\" align=\"char\">0.08**</td></tr></tbody></table>\n"
+                        },
+                        "text": "\tTotal count (n\u2009=\u2009130)\tEC (n\u2009=\u2009107)\tACT (n\u2009=\u200923)\tp-value1\t \tTumor size [mm]\t17\u2009\u00b1\u200917\t14\u2009\u00b1\u200912\t54\u2009\u00b1\u200920\t\u2009<\u20090.01**\t \tBone\t \t\u00a0Humerus (prox.)\t31 (23.8%)\t23 (21.5%)\t8 (34.8%)\t0.07***\t \t\u00a0Femur (dist.)\t74 (56.9%)\t62 (57.9%)\t12 (52.2%)\t \t\u00a0Tibia (prox.)\t16 (12.3%)\t16 (15.0%)\t0 (0.0%)\t \t\u00a0Fibula (prox.)\t8 (6.2%)\t5 (4.7%)\t3 (13.0%)\t \t\u00a0Patella\t1 (0.8%)\t1 (0.9%)\t0 (0.0%)\t \tLocation in relation to medullary canal\u2009\t \t\u00a0Central\t64 (49.2%)\t61 (57.0%)\t3 (13.0%)\t<\u20090.01***\t \t\u00a0Peripheral\t66 (50.8%)\t46 (43.0%)\t20 (87.0%)\t \tLocation\t \t\u00a0Epiphysis\t8 (6.2%)\t8 (7.5%)\t0 (0.0%)\t<\u20090.01***\t \t\u00a0Epimetaphysis\t14 (10.8%)\t11 (10.3%)\t3 (13.0%)\t \t\u00a0Metaphysis\t74 (56.9%)\t67 (62.6%)\t7 (30.4%)\t \t\u00a0Metadiaphysis\t14 (10.8%)\t8 (7.5%)\t6 (26.1%)\t \t\u00a0Diaphysis\t19 (14.6%)\t12 (11.2%)\t7 (30.4%)\t \t\u00a0Patella\t1 (0.8%)\t1 (0.9%)\t0 (0.0%)\t \tPeriosteal reaction\t \t\u00a0Yes\t0 (0.0%)\t0 (0.0%)\t0 (0.0%)\t\t \t\u00a0No\t130 (100.0%)\t107 (100.0%)\t23 (100.0%)\t \tMedullary edema\t \t\u00a0Yes\t2 (1.5%)\t0 (0.0%)\t2 (8.7%)\t0.03***\t \t\u00a0No\t128 (98.5%)\t107 (100.0%)\t21 (91.3%)\t \tEndosteal scalloping\t \t\u00a0No\t116 (89.2%)\t106 (99.1%)\t10 (43.5%)\t\u2009<\u20090.01***\t \t\u00a0Superficial\t4 (3.1%)\t1 (0.9%)\t3 (13.0%)\t \t\u00a0Deep\t10 (7.7%)\t0 (0.0%)\t10 (43.5%)\t \tReason for referral\t \t\u00a0Tumor-associated\t21 (16.2%)\t8 (7.5%)\t13 (56.5%)\t\u2009<\u20090.01*\t \t\u00a0Other reason\t74 (56.9%)\t69 (64.5%)\t5 (21.7%)\t \t\u00a0Unknown\t35 (26.9%)\t30 (28.0%)\t5 (21.7%)\t \tContrast agent\t \t\u00a0Yes\t19 (14.6%)\t7 (6.5%)\t12 (52.2%)\t\u2009<\u20090.01*\t \t\u00a0No\t111 (85.4%)\t100 (93.5%)\t11 (47.8%)\t \tNumber of received MRIs\t1\u2009\u00b1\u20091\t1\u2009\u00b1\u20091\t1\u2009\u00b1\u20091\t0.08**\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36198,
+                        "infons": {
+                            "file": "Tab5.xml",
+                            "id": "Tab5",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "1comparison of EC and ACT",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36224,
+                        "infons": {
+                            "file": "Tab5.xml",
+                            "id": "Tab5",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "*Chi-squared test",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36242,
+                        "infons": {
+                            "file": "Tab5.xml",
+                            "id": "Tab5",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "**Wilcoxon rank-sum test",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36267,
+                        "infons": {
+                            "file": "Tab5.xml",
+                            "id": "Tab5",
+                            "section_type": "TABLE",
+                            "type": "table_foot"
+                        },
+                        "text": "***Fisher\u2019s exact test",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36292,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The dataset comprises 206 proton-density fat-suppressed MRI scans (79 controls, 103 patients with a single EC, 21 patients with a single ACT, 2 patients with both ACT and EC, and 1 patient with two ECs) of the knee and shoulder regions taken from a retrospective analysis described in that has been approved by the local ethics committee (No. 36\u2013070 ex 23/24). From an initial cohort of 744 tumor patients, all available cases with ACTs (n\u2009=\u200923) were included due to their underrepresentation, whereas the remaining tumor cases were randomly selected from patients with ECs. The resulting MRI dataset consists of 104 images containing EC and 23 images with ACTs as described in Fig.\u00a07. Distribution of tumor sizes for both EC and ACT groups is shown in Fig.\u00a08. Notably, two MRIs contain both tumor types. There is also one patient with two ECs, resulting in a total of 107 ECs. The remaining 79 images are from controls and without tumors (NT) and were selected from a pool of 93 control images, with selection limited to coronal view images and one image per patient to avoid over-representation of patients. In all images with multiple lesions, individual tumors were separate and did not form connected components. The mean age of the population at MRI was 51\u2009\u00b1\u200918\u00a0years, and 120 patients (57.4%) were male (Table\u00a04). The composition of the dataset regarding EC and ACT characteristics is shown in Table\u00a05. The MRI volumes have mean dimensions of (318\u2009\u00b1\u200955, 304\u2009\u00b1\u200946, 21\u2009\u00b1\u20094) voxels, with a physical resolution of (0.59\u2009\u00b1\u20090.11, 0.59\u2009\u00b1\u20090.11, 4.58\u2009\u00b1\u20090.68) mm per voxel. More detailed MRI specifications can be found in the supplementary materials. The annotated EC and ACT regions comprise around 0.1% of total voxels, thus leading to class imbalance. Due to the small individual dataset sizes, we combined knee and shoulder images into one dataset, which performed best in preliminary segmentation experiments.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38251,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Reference annotation of segmentation and classification labels",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38314,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The free annotation software ITK-SNAP (version 3.8.0) was used for manual tumor segmentation. ITK-SNAP outputs NIFTI files that contain mask information delineating the cartilage lesions for each MRI sequence. Manual tumor annotations were performed by one of the coauthors (J.W.), who had conducted an extensive literature review and received specialized training in the imaging characteristics of cartilaginous tumors. All annotated lesions were reviewed and verified by two experienced orthopedic oncologists (M.S. and A.L.). Diagnosis of EC or ACT was made based on the following radiological criteria: tumor size larger than 4.9\u00a0cm, deep endosteal scalloping (i.e., involvement of more than 2/3 of bone cortex), tumor-related adjacent medullary edema, periosteal reaction, as previously described. In case one of the criteria that are highly suggestive of an aggressive lesion was positive, the lesion was diagnosed as ACT. Image evaluation was first carried out by an experienced coauthor with special training for image interpretation of EC vs. ACT (J.W.), followed by reexamination by an expert orthopedic oncologist (A.L.).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39448,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Image analysis study design",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39476,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As depicted in Fig.\u00a01, our AI-based image analysis tool addresses two distinct tasks: semantic voxel-wise segmentation of tumors in each patient volume and patient-wise classification of segmented tumors for EC and ACT differentiation. The 3D segmentation task performs separation of tumor tissue from surrounding anatomical structures in MRI images. Given our limited dataset size (MRI images: 104 EC, 23 ACT, and 79 without tumor) and the high imbalance between semi-malignant and benign tumor occurrence as well as the small size of tumors in the images, we investigated machine learning methods specifically designed for medical imaging tasks with small annotated training sets and class imbalance. Therefore, we used the state-of-the-art nnU-Net framework (V2) for semantic image segmentation. nnU-Net has become the standard framework for semantic segmentation in medical imaging due to its ease of use, while still maintaining state-of-the-art segmentation performance on various datasets (including tumor datasets like BRATS in brain imaging). The patient-wise classification task distinguishes between three classes: No Tumor (NT), ACT, and EC. Regarding image classification, we evaluate two strategies: (1) directly aggregating the per voxel votes of the nnU-Net predicted segmentation masks (i.e., multi-label segmentation), thus performing simultaneous segmentation and classification, and (2) an ensemble of XGBoost classifiers trained on radiomics features derived within binarized lesion segmentation masks. These radiomics features are specifically designed to potentially capture the phenotypic texture characteristics of tumors, thus promising accurate and explainable results in the presence of small training data sets.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41218,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Semantic segmentation and classification with nnU-Net",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41272,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Traditionally, for multi-label segmentation of distinct EC and ACT, we would need to manually design a machine learning solution, including model selection, deep neural network architecture, training duration, and hyperparameters. This process is both time-intensive and error-prone. The deep learning-based nnU-Net framework addresses this challenge by condensing expert knowledge in medical image segmentation in the form of heuristics derived from an automated dataset preanalysis phase, thus delivering a standardized pipeline.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41804,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As shown in Fig.\u00a01, our methodology employs two distinct nnU-Net models: a Scout model trained on the complete dataset (encompassing knee and shoulder images with tumor, as well as non-tumor cases), and a Specialist model trained exclusively on annotated knee and shoulder tumor images. This approach follows a separation of concerns strategy, where the Scout model performs an initial screening to identify and filter out tumor-free images (tumor scouting). Subsequently, the Specialist model is applied to the remaining cases for definitive classification, allowing it to focus specifically on distinguishing between different tumor types (final tumor classification). All nnU-Net models were trained with V2 using the default settings, the 3D high-resolution architecture, and without residual encoder for 1,000 epochs per fold.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42637,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "While nnU-Net primarily focuses on multi-label voxel-level segmentation, we also extended it to perform image-level (i.e., patient-wise) classification by aggregating the voxel-wise segmentation mask predictions. Specifically, we calculate the ratio of predicted ACT to EC voxels to determine the classification label of the entire image. Images without any tumor-labeled voxels are classified as no-tumor cases. We optimize the threshold of the ratio of ACT:EC voxels used for classification through Receiver Operating Characteristic (ROC) curve analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43194,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Classification with radiomics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43224,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "nnU-Net relies on deep learning for extracting task-specific image segmentation features directly from data. In contrast, radiomics features are mathematically well-defined image processing features that are used to describe the radiographic phenotype of a tumor, extracted from a region of interest (ROI) or volume of interest (VOI) defined by a segmentation mask\u2014in our case, annotated or predicted tumor regions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43642,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "After feature extraction using PyRadiomics, we train an ensemble of XGBoost classifiers to distinguish between EC and ACT classes using these extracted radiomics features. XGBoost implements gradient tree boosting, which excels at handling structured tabular data, like our radiomics features, as shown in. The supplementary materials contain a detailed description of our radiomics tumor classification approach, including feature extraction specifications and a completed METRICS questionnaire that quantifies the quality of our radiomics approach.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44193,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Radiomics feature importance quantification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44237,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To assess explainability of radiomics features for predictions, we employed a dual-ranking approach to comprehensively assess feature importance of the final radiomics ensemble, combining both discriminative power and feature difference between tumor types. First, XGBoost gain importance was calculated across all trained models, quantifying each feature's contribution to classification accuracy through its cumulative reduction in model loss during tree-based splitting. Second, we computed effect sizes (r) using Mann\u2013Whitney U tests to assess the magnitude of difference between EC and ACT groups. Features were independently ranked by both metrics, and a combined ranking was generated through weighted averaging (50% XGBoost rank\u2009+\u200950% effect size rank), with lower combined ranks indicating superior features. Only features achieving statistical significance (Mann\u2013Whitney U test, two-sided, p\u2009<\u20090.05) were retained for final ranking. This allows us to identify features that are both highly discriminative for machine learning classification and biologically meaningful in their magnitude of difference between tumor types, thus establishing improved explainability of predictions compared with a deep learning-based classification approach.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45500,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Statistical analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45521,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our experimental validation methodology builds upon two foundations: the established validation protocol from the nnU-Net framework, which has been extensively tested across various medical image datasets, and the recent recommendations from the Metrics Reloaded framework. The latter addresses common shortcomings in evaluation metric selection for biomedical image analysis, which can impede successful clinical translation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45948,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "nnU-Net evaluation: Models trained for multi-class segmentation underwent fivefold cross-validation following nnU-Net\u2019s protocol, where each fold used 80% of data for training and 20% for validation, ensuring each image was tested exactly once. We combined all out-of-fold predictions to compute final performance metrics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46273,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Radiomics evaluation: For the radiomics approach using binary segmentation masks (tumor vs. background) derived from multi-class nnU-Net predictions, we exploited the computational efficiency of XGBoost to run 100 randomized trials. In each trial, we used stratified 80/20 train-test splits to maintain class balance. We combined all 100 trial models into a classification ensemble, where each model only classifies images from its held-out test set, yielding a prediction for every image comparable to the nnU-Net cross-validation setup. While a similarly comprehensive evaluation would be desirable for nnU-Net, it is computationally prohibitive due to significantly longer training times (\u00d7\u200942 in our setting). For both approaches and all metrics, 95% confidence intervals (CI) were computed using scipy\u2019s bootstrap implementation based on the bias-corrected and accelerated (BCa) bootstrap algorithm to quantify test sample uncertainty.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47219,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Evaluation metrics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 47238,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Based on the recommendations of, we used two different groups of metrics for segmentation and classification. For segmentation, we combined the widely used Dice Similarity Coefficient (DSC) as a counting metric with the Mean Absolute Surface Distance (MASD) as a distance-based metric. For classification, we combined one-vs-all counting-based metrics (F1 score, Sensitivity, Specificity, Precision) with a multi-threshold metric (AUC) evaluated on the semi-malignant ACT class, as we are most interested in having a high True Positive Rate (TPR). Furthermore, we use AUC for evaluation despite the common view that Area Under the Precision\u2013Recall curve is preferable for imbalanced datasets. Recent research demonstrates that AUC remains more meaningful in classification settings where false negatives carry higher costs, such as in cancer screening.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48093,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supplementary Information",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48119,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "title"
+                        },
+                        "text": "Abbreviations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48133,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "ACT",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48137,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Atypical cartilaginous tumor",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48166,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "AI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48169,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Artificial intelligence",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48193,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "AUC",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48197,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Area under the receiver operating Characteristic",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48246,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "EC",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48249,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Enchondroma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48261,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "CS",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48264,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Chondrosarcoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48279,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "DSC",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48283,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Dice similarity coefficient",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48311,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "GLDM",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48316,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Gray level dependence matrix",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48345,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "GLSZM",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48351,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Gray level size zone matrix",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48379,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "MASD",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48384,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Mean absolute surface distance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48415,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48419,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Magnetic resonance imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48446,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "NGTDM",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48452,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Neighboring gray tone difference matrix",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48492,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "NT",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48495,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "No tumor",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48504,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "ROC",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48508,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "Receiver operating characteristic",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48542,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "TPR",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48546,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "paragraph"
+                        },
+                        "text": "True positive rate",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48565,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "footnote"
+                        },
+                        "text": "Publisher's Note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48582,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "footnote"
+                        },
+                        "text": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48701,
+                        "infons": {
+                            "section_type": "ABBR",
+                            "type": "footnote"
+                        },
+                        "text": "Simon Johannes Joham and Johannes Nikolaus Woltsche have contributed equally and share first authorship.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48806,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 48827,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "S.J.J.: conceptualization, methodology, software, writing\u2013original draft J. N. W.: visualization, data curation, writing\u2013review and editing D. S.: conceptualization, data curation, funding acquisition, writing\u2013review and editing A. L.: validation, funding acquisition, writing\u2013review and editing M. U.: methodology, software, investigation, supervision, writing\u2013original draft M. A. S.: conceptualization, validation, supervision, writing\u2013review and editing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49298,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "title"
+                        },
+                        "text": "Funding",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49306,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "paragraph"
+                        },
+                        "text": "This research was funded in whole or in part by the Austrian Science Fund (FWF) 10.55776/PAT1748423.\u00a0For open access purposes, the author has applied a CC BY public copyright license to any author accepted manuscript version arising from this submission.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49562,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title"
+                        },
+                        "text": "Data availability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49580,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "All derived data and materials used in this publication are available on request.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49662,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title"
+                        },
+                        "text": "Declarations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49675,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title"
+                        },
+                        "text": "Ethics approval and consent to participate",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49718,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Institutional Review Board approval was obtained by the local ethics committee (Medical University of Graz, No. 36-070 ex 23/24) in accordance with the Declaration of Helsinki. For this retrospective study, written informed consent was waived by the Institutional Review Board.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 49996,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title"
+                        },
+                        "text": "Consent for publication",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50020,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "All coauthors have read this work and gave consent for publication.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50088,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title"
+                        },
+                        "text": "Competing interests",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50108,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The authors declare no competing interests.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50152,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50163,
+                        "infons": {
+                            "citation-alternatives": "Flemming DJ, Murphey MD. Enchondroma and chondrosarcoma. Semin Musculoskelet Radiol. 2000;4:59\u201371.\n",
+                            "fpage": "59",
+                            "lpage": "71",
+                            "name_0": "surname:Flemming;given-names:DJ",
+                            "name_1": "surname:Murphey;given-names:MD",
+                            "pub-id_doi": "10.1055/s-2000-6855",
+                            "pub-id_pmid": "11061692",
+                            "section_type": "REF",
+                            "source": "Semin Musculoskelet Radiol",
+                            "type": "ref",
+                            "volume": "4",
+                            "year": "2000"
+                        },
+                        "text": "Enchondroma and chondrosarcoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50194,
+                        "infons": {
+                            "citation-alternatives": "Heck RK Jr, Peabody TD, Simon MA. Staging of primary malignancies of bone. CA Cancer J Clin. 2006;56:366\u201375.\n",
+                            "fpage": "366",
+                            "lpage": "375",
+                            "name_0": "surname:Heck;given-names:RK;suffix:Jr",
+                            "name_1": "surname:Peabody;given-names:TD",
+                            "name_2": "surname:Simon;given-names:MA",
+                            "pub-id_pmid": "17135693",
+                            "section_type": "REF",
+                            "source": "CA Cancer J Clin",
+                            "type": "ref",
+                            "volume": "56",
+                            "year": "2006"
+                        },
+                        "text": "Staging of primary malignancies of bone",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50234,
+                        "infons": {
+                            "citation-alternatives": "Bov\u00e9e JVMG, Bloem JL, Flanagan AM, Nielsen GP, Yoshida A. WHO Classification of Tumours Editorial Board: Soft Tissue and Bone Tumours. Lyon: International Agency for Research on Cancer; 2020.",
+                            "name_0": "surname:Bov\u00e9e;given-names:JVMG",
+                            "name_1": "surname:Bloem;given-names:JL",
+                            "name_2": "surname:Flanagan;given-names:AM",
+                            "name_3": "surname:Nielsen;given-names:GP",
+                            "name_4": "surname:Yoshida;given-names:A",
+                            "section_type": "REF",
+                            "source": "WHO Classification of Tumours Editorial Board: Soft Tissue and Bone Tumours",
+                            "type": "ref",
+                            "year": "2020"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50235,
+                        "infons": {
+                            "citation-alternatives": "Woltsche JN, Smolle MA, Szolar D, et al. Prevalence and characteristics of benign cartilaginous tumours of the shoulder joint: an MRI-based study. Skeletal Radiol. 2024;53(1):59\u201366.\n",
+                            "fpage": "59",
+                            "issue": "1",
+                            "lpage": "66",
+                            "name_0": "surname:Woltsche;given-names:JN",
+                            "name_1": "surname:Smolle;given-names:MA",
+                            "name_2": "surname:Szolar;given-names:D",
+                            "pub-id_doi": "10.1007/s00256-023-04375-8",
+                            "pub-id_pmid": "37269383",
+                            "section_type": "REF",
+                            "source": "Skeletal Radiol",
+                            "type": "ref",
+                            "volume": "53",
+                            "year": "2024"
+                        },
+                        "text": "Prevalence and characteristics of benign cartilaginous tumours of the shoulder joint: an MRI-based study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50340,
+                        "infons": {
+                            "citation-alternatives": "Woltsche JN, Smolle MA, Szolar D, et al. Prevalence and characteristics of benign cartilaginous tumours of the knee joint as identified on MRI scans. Cancer Imaging. 2023;23(1):50.\n",
+                            "fpage": "50",
+                            "issue": "1",
+                            "name_0": "surname:Woltsche;given-names:JN",
+                            "name_1": "surname:Smolle;given-names:MA",
+                            "name_2": "surname:Szolar;given-names:D",
+                            "pub-id_doi": "10.1186/s40644-023-00572-9",
+                            "pub-id_pmid": "37231453",
+                            "section_type": "REF",
+                            "source": "Cancer Imaging",
+                            "type": "ref",
+                            "volume": "23",
+                            "year": "2023"
+                        },
+                        "text": "Prevalence and characteristics of benign cartilaginous tumours of the knee joint as identified on MRI scans",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50448,
+                        "infons": {
+                            "citation-alternatives": "Davies AM, Patel A, Azzopardi C, et al. Prevalence of enchondromas of the proximal femur in adults as an incidental finding on MRI of the pelvis. Indian J Radiol Imaging. 2021;31(3):582\u20135.\n",
+                            "fpage": "582",
+                            "issue": "3",
+                            "lpage": "585",
+                            "name_0": "surname:Davies;given-names:AM",
+                            "name_1": "surname:Patel;given-names:A",
+                            "name_2": "surname:Azzopardi;given-names:C",
+                            "pub-id_doi": "10.1055/s-0041-1735915",
+                            "pub-id_pmid": "34790301",
+                            "section_type": "REF",
+                            "source": "Indian J Radiol Imaging",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2021"
+                        },
+                        "text": "Prevalence of enchondromas of the proximal femur in adults as an incidental finding on MRI of the pelvis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50553,
+                        "infons": {
+                            "citation-alternatives": "Davies AM, Shah A, Shah R, et al. Are the tubular bones of the hand really the commonest site for an enchondroma? Clin Radiol. 2020;75(7):533\u20137.\n",
+                            "fpage": "533",
+                            "issue": "7",
+                            "lpage": "537",
+                            "name_0": "surname:Davies;given-names:AM",
+                            "name_1": "surname:Shah;given-names:A",
+                            "name_2": "surname:Shah;given-names:R",
+                            "pub-id_doi": "10.1016/j.crad.2020.02.004",
+                            "pub-id_pmid": "32183998",
+                            "section_type": "REF",
+                            "source": "Clin Radiol",
+                            "type": "ref",
+                            "volume": "75",
+                            "year": "2020"
+                        },
+                        "text": "Are the tubular bones of the hand really the commonest site for an enchondroma?",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50633,
+                        "infons": {
+                            "citation-alternatives": "Smolle MA, Lehner B, Omlor G, et al. Der atypische chondrogene Tumor: Diagnostik und Therapie. Onkologie. 2022;28(7):595\u2013601.",
+                            "fpage": "595",
+                            "issue": "7",
+                            "lpage": "601",
+                            "name_0": "surname:Smolle;given-names:MA",
+                            "name_1": "surname:Lehner;given-names:B",
+                            "name_2": "surname:Omlor;given-names:G",
+                            "pub-id_doi": "10.1007/s00761-022-01099-7",
+                            "section_type": "REF",
+                            "source": "Onkologie",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2022"
+                        },
+                        "text": "Der atypische chondrogene Tumor: Diagnostik und Therapie",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50690,
+                        "infons": {
+                            "citation-alternatives": "Fletcher CDM. Diagnostic Histopathology of Tumors. Amsterdam: Elsevier; 2020.",
+                            "name_0": "surname:Fletcher;given-names:CDM",
+                            "section_type": "REF",
+                            "source": "Diagnostic Histopathology of Tumors",
+                            "type": "ref",
+                            "year": "2020"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50691,
+                        "infons": {
+                            "citation-alternatives": "Woltsche JN, Smolle MA, Szolar D, et al. Follow-up analysis of lesion characteristics of enchondromas and atypical cartilaginous tumours of the knee and shoulder region on MRI. Eur Radiol. 2024;35:2935\u201345.\n",
+                            "fpage": "2935",
+                            "lpage": "2945",
+                            "name_0": "surname:Woltsche;given-names:JN",
+                            "name_1": "surname:Smolle;given-names:MA",
+                            "name_2": "surname:Szolar;given-names:D",
+                            "pub-id_doi": "10.1007/s00330-024-11106-7",
+                            "pub-id_pmid": "39414654",
+                            "section_type": "REF",
+                            "source": "Eur Radiol",
+                            "type": "ref",
+                            "volume": "35",
+                            "year": "2024"
+                        },
+                        "text": "Follow-up analysis of lesion characteristics of enchondromas and atypical cartilaginous tumours of the knee and shoulder region on MRI",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50826,
+                        "infons": {
+                            "citation-alternatives": "Murphey MD, Flemming DJ, Boyea SR, et al. Enchondroma versus chondrosarcoma in the appendicular skeleton: differentiating features. Radiographics. 1998;18(5):1213\u201337.\n",
+                            "fpage": "1213",
+                            "issue": "5",
+                            "lpage": "1237",
+                            "name_0": "surname:Murphey;given-names:MD",
+                            "name_1": "surname:Flemming;given-names:DJ",
+                            "name_2": "surname:Boyea;given-names:SR",
+                            "pub-id_doi": "10.1148/radiographics.18.5.9747616",
+                            "pub-id_pmid": "9747616",
+                            "section_type": "REF",
+                            "source": "Radiographics",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "1998"
+                        },
+                        "text": "Enchondroma versus chondrosarcoma in the appendicular skeleton: differentiating features",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 50915,
+                        "infons": {
+                            "citation-alternatives": "Douis H, Parry M, Vaiyapuri S, et al. What are the differentiating clinical and MRI-features of enchondromas from low-grade chondrosarcomas? Eur Radiol. 2018;28(1):398\u2013409.\n",
+                            "fpage": "398",
+                            "issue": "1",
+                            "lpage": "409",
+                            "name_0": "surname:Douis;given-names:H",
+                            "name_1": "surname:Parry;given-names:M",
+                            "name_2": "surname:Vaiyapuri;given-names:S",
+                            "pub-id_doi": "10.1007/s00330-017-4947-0",
+                            "pub-id_pmid": "28695356",
+                            "section_type": "REF",
+                            "source": "Eur Radiol",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2018"
+                        },
+                        "text": "What are the differentiating clinical and MRI-features of enchondromas from low-grade chondrosarcomas?",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51018,
+                        "infons": {
+                            "citation-alternatives": "van de Sande MAJ, van der Wal RJP, Navas Ca\u00f1ete A, et al. Radiologic differentiation of enchondromas, atypical cartilaginous tumors, and high-grade chondrosarcomas-improving tumor-specific treatment: a paradigm in transit? Cancer. 2019;125:3288\u201391.\n",
+                            "fpage": "3288",
+                            "lpage": "3291",
+                            "name_0": "surname:van de Sande;given-names:MAJ",
+                            "name_1": "surname:van der Wal;given-names:RJP",
+                            "name_2": "surname:Navas Ca\u00f1ete;given-names:A",
+                            "pub-id_doi": "10.1002/cncr.32404",
+                            "pub-id_pmid": "31381137",
+                            "section_type": "REF",
+                            "source": "Cancer",
+                            "type": "ref",
+                            "volume": "125",
+                            "year": "2019"
+                        },
+                        "text": "Radiologic differentiation of enchondromas, atypical cartilaginous tumors, and high-grade chondrosarcomas-improving tumor-specific treatment: a paradigm in transit?",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51183,
+                        "infons": {
+                            "citation-alternatives": "Scholte CHJ, van de Sande MAJ, van der Wal RJP. Clinical outcome of curettage in atypical cartilaginous tumours of the long bones: a descriptive cohort study. Acta Orthop. 2024;95:752\u20137.\n",
+                            "fpage": "752",
+                            "lpage": "757",
+                            "name_0": "surname:Scholte;given-names:CHJ",
+                            "name_1": "surname:van de Sande;given-names:MAJ",
+                            "name_2": "surname:van der Wal;given-names:RJP",
+                            "pub-id_doi": "10.2340/17453674.2024.42636",
+                            "pub-id_pmid": "39713913",
+                            "section_type": "REF",
+                            "source": "Acta Orthop",
+                            "type": "ref",
+                            "volume": "95",
+                            "year": "2024"
+                        },
+                        "text": "Clinical outcome of curettage in atypical cartilaginous tumours of the long bones: a descriptive cohort study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51293,
+                        "infons": {
+                            "citation-alternatives": "Litjens G, Kooi T, Bejnordi BE, et al. A survey on deep learning in medical image analysis. Med Image Anal. 2017;42:60\u201388.\n",
+                            "fpage": "60",
+                            "lpage": "88",
+                            "name_0": "surname:Litjens;given-names:G",
+                            "name_1": "surname:Kooi;given-names:T",
+                            "name_2": "surname:Bejnordi;given-names:BE",
+                            "pub-id_doi": "10.1016/j.media.2017.07.005",
+                            "pub-id_pmid": "28778026",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "42",
+                            "year": "2017"
+                        },
+                        "text": "A survey on deep learning in medical image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51345,
+                        "infons": {
+                            "citation-alternatives": "Gillies RJ, Kinahan PE, Hricak H. Radiomics: images are more than pictures, they are data. Radiology. 2016;278(2):563\u201377.\n",
+                            "fpage": "563",
+                            "issue": "2",
+                            "lpage": "577",
+                            "name_0": "surname:Gillies;given-names:RJ",
+                            "name_1": "surname:Kinahan;given-names:PE",
+                            "name_2": "surname:Hricak;given-names:H",
+                            "pub-id_doi": "10.1148/radiol.2015151169",
+                            "pub-id_pmid": "26579733",
+                            "section_type": "REF",
+                            "source": "Radiology",
+                            "type": "ref",
+                            "volume": "278",
+                            "year": "2016"
+                        },
+                        "text": "Radiomics: images are more than pictures, they are data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51401,
+                        "infons": {
+                            "citation-alternatives": "Crombe A, Spinnato P, Italiano A, et al. Radiomics and artificial intelligence for soft-tissue sarcomas: current status and perspectives. Diagn Interv Imaging. 2023;104(12):567\u201383.\n",
+                            "fpage": "567",
+                            "issue": "12",
+                            "lpage": "583",
+                            "name_0": "surname:Crombe;given-names:A",
+                            "name_1": "surname:Spinnato;given-names:P",
+                            "name_2": "surname:Italiano;given-names:A",
+                            "pub-id_doi": "10.1016/j.diii.2023.09.005",
+                            "pub-id_pmid": "37802753",
+                            "section_type": "REF",
+                            "source": "Diagn Interv Imaging",
+                            "type": "ref",
+                            "volume": "104",
+                            "year": "2023"
+                        },
+                        "text": "Radiomics and artificial intelligence for soft-tissue sarcomas: current status and perspectives",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51497,
+                        "infons": {
+                            "citation-alternatives": "Steiner J, Bloice M, Igrec J, et al. MRI-based deep learning and radiomics pipeline for myxoid liposarcoma: a feasibility study in a rare sarcoma. Sci Rep. 2025;15:44104.\n",
+                            "fpage": "44104",
+                            "name_0": "surname:Steiner;given-names:J",
+                            "name_1": "surname:Bloice;given-names:M",
+                            "name_2": "surname:Igrec;given-names:J",
+                            "pub-id_doi": "10.1038/s41598-025-27217-0",
+                            "pub-id_pmid": "41408069",
+                            "section_type": "REF",
+                            "source": "Sci Rep",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2025"
+                        },
+                        "text": "MRI-based deep learning and radiomics pipeline for myxoid liposarcoma: a feasibility study in a rare sarcoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51606,
+                        "infons": {
+                            "citation-alternatives": "Sackl M, Tinauer C, Urschler M, et al. Fully automated hippocampus segmentation using T2-informed deep convolutional neural networks. Neuroimage. 2024;298:120767.\n",
+                            "fpage": "120767",
+                            "name_0": "surname:Sackl;given-names:M",
+                            "name_1": "surname:Tinauer;given-names:C",
+                            "name_2": "surname:Urschler;given-names:M",
+                            "pub-id_doi": "10.1016/j.neuroimage.2024.120767",
+                            "pub-id_pmid": "39103064",
+                            "section_type": "REF",
+                            "source": "Neuroimage",
+                            "type": "ref",
+                            "volume": "298",
+                            "year": "2024"
+                        },
+                        "text": "Fully automated hippocampus segmentation using T2-informed deep convolutional neural networks",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51700,
+                        "infons": {
+                            "citation-alternatives": "Hadzic A, Urschler M, Press JNA, et al. Evaluating a periapical lesion detection CNN on a clinically representative CBCT dataset - a validation study. J Clin Med. 2023;13(1):197.\n",
+                            "fpage": "197",
+                            "issue": "1",
+                            "name_0": "surname:Hadzic;given-names:A",
+                            "name_1": "surname:Urschler;given-names:M",
+                            "name_2": "surname:Press;given-names:JNA",
+                            "pub-id_doi": "10.3390/jcm13010197",
+                            "pub-id_pmid": "38202204",
+                            "section_type": "REF",
+                            "source": "J Clin Med",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2023"
+                        },
+                        "text": "Evaluating a periapical lesion detection CNN on a clinically representative CBCT dataset - a validation study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51810,
+                        "infons": {
+                            "citation-alternatives": "Gitto S, Cuocolo R, van Langenvelde K, et al. MRI radiomics-based machine learning classification of atypical cartilaginous tumours and grade II chondrosarcoma of long bones. EBioMedicine. 2022;75:103757.\n",
+                            "fpage": "103757",
+                            "name_0": "surname:Gitto;given-names:S",
+                            "name_1": "surname:Cuocolo;given-names:R",
+                            "name_2": "surname:van Langenvelde;given-names:K",
+                            "pub-id_doi": "10.1016/j.ebiom.2021.103757",
+                            "pub-id_pmid": "34933178",
+                            "section_type": "REF",
+                            "source": "EBioMedicine",
+                            "type": "ref",
+                            "volume": "75",
+                            "year": "2022"
+                        },
+                        "text": "MRI radiomics-based machine learning classification of atypical cartilaginous tumours and grade II chondrosarcoma of long bones",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 51938,
+                        "infons": {
+                            "citation-alternatives": "Yushkevich PA, Piven J, Hazlett HC, et al. User-guided 3D active contour segmentation of anatomical structures: significantly improved efficiency and reliability. Neuroimage. 2006;31(3):1116\u201328.\n",
+                            "fpage": "1116",
+                            "issue": "3",
+                            "lpage": "1128",
+                            "name_0": "surname:Yushkevich;given-names:PA",
+                            "name_1": "surname:Piven;given-names:J",
+                            "name_2": "surname:Hazlett;given-names:HC",
+                            "pub-id_doi": "10.1016/j.neuroimage.2006.01.015",
+                            "pub-id_pmid": "16545965",
+                            "section_type": "REF",
+                            "source": "Neuroimage",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2006"
+                        },
+                        "text": "User-guided 3D active contour segmentation of anatomical structures: significantly improved efficiency and reliability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52057,
+                        "infons": {
+                            "citation-alternatives": "Mulligan ME. How to diagnose enchondroma, bone infarct, and chondrosarcoma. Curr Probl Diagn Radiol. 2019;48(3):262\u201373.\n",
+                            "fpage": "262",
+                            "issue": "3",
+                            "lpage": "273",
+                            "name_0": "surname:Mulligan;given-names:ME",
+                            "pub-id_doi": "10.1067/j.cpradiol.2018.04.002",
+                            "pub-id_pmid": "29724496",
+                            "section_type": "REF",
+                            "source": "Curr Probl Diagn Radiol",
+                            "type": "ref",
+                            "volume": "48",
+                            "year": "2019"
+                        },
+                        "text": "How to diagnose enchondroma, bone infarct, and chondrosarcoma",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52119,
+                        "infons": {
+                            "citation-alternatives": "Isensee F, Jaeger PF, Kohl SAA, et al. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203\u201311.\n",
+                            "fpage": "203",
+                            "issue": "2",
+                            "lpage": "211",
+                            "name_0": "surname:Isensee;given-names:F",
+                            "name_1": "surname:Jaeger;given-names:PF",
+                            "name_2": "surname:Kohl;given-names:SAA",
+                            "pub-id_doi": "10.1038/s41592-020-01008-z",
+                            "pub-id_pmid": "33288961",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "2021"
+                        },
+                        "text": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52208,
+                        "infons": {
+                            "citation-alternatives": "Ronneberger O, Fischer P, Brox T. U-Net: Convolutional Networks for Biomedical Image Segmentation. Cham: Springer; 2015.",
+                            "name_0": "surname:Ronneberger;given-names:O",
+                            "name_1": "surname:Fischer;given-names:P",
+                            "name_2": "surname:Brox;given-names:T",
+                            "section_type": "REF",
+                            "source": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+                            "type": "ref",
+                            "year": "2015"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52209,
+                        "infons": {
+                            "citation-alternatives": "Isensee F, Wald T, Baumgartner M, et al. nnU-Net revisited: A call for rigorous validation in 3D medical image segmentation. Cham: Springer; 2024.",
+                            "name_0": "surname:Isensee;given-names:F",
+                            "name_1": "surname:Wald;given-names:T",
+                            "name_2": "surname:Baumgartner;given-names:M",
+                            "section_type": "REF",
+                            "source": "nnU-Net revisited: A call for rigorous validation in 3D medical image segmentation",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52210,
+                        "infons": {
+                            "citation-alternatives": "Menze BH, Jakab A, Bauer S, et al. The multimodal brain tumor image segmentation benchmark (BRATS). IEEE Trans Med Imaging. 2015;34(10):1993\u20132024.\n",
+                            "fpage": "1993",
+                            "issue": "10",
+                            "lpage": "2024",
+                            "name_0": "surname:Menze;given-names:BH",
+                            "name_1": "surname:Jakab;given-names:A",
+                            "name_2": "surname:Bauer;given-names:S",
+                            "pub-id_doi": "10.1109/TMI.2014.2377694",
+                            "pub-id_pmid": "25494501",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Med Imaging",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2015"
+                        },
+                        "text": "The multimodal brain tumor image segmentation benchmark (BRATS)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52274,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Chen T, Guestrin C. XGBoost: A scalable tree boosting system. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. 2016. pp. 785\u201394",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52459,
+                        "infons": {
+                            "citation-alternatives": "van Griethuysen JJM, Fedorov A, Parmar C, et al. Computational radiomics system to decode the radiographic phenotype. Cancer Res. 2017;77(21):e104\u20137.\n",
+                            "fpage": "e104",
+                            "issue": "21",
+                            "lpage": "e107",
+                            "name_0": "surname:van Griethuysen;given-names:JJM",
+                            "name_1": "surname:Fedorov;given-names:A",
+                            "name_2": "surname:Parmar;given-names:C",
+                            "pub-id_doi": "10.1158/0008-5472.CAN-17-0339",
+                            "pub-id_pmid": "29092951",
+                            "section_type": "REF",
+                            "source": "Cancer Res",
+                            "type": "ref",
+                            "volume": "77",
+                            "year": "2017"
+                        },
+                        "text": "Computational radiomics system to decode the radiographic phenotype",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52527,
+                        "infons": {
+                            "citation-alternatives": "Gonzalez S, Garcia S, Del Ser J, et al. A practical tutorial on bagging and boosting based ensembles for machine learning: algorithms, software tools, performance study, practical perspectives and opportunities. Inf Fusion. 2020;64:205\u201337.",
+                            "fpage": "205",
+                            "lpage": "237",
+                            "name_0": "surname:Gonzalez;given-names:S",
+                            "name_1": "surname:Garcia;given-names:S",
+                            "name_2": "surname:Del Ser;given-names:J",
+                            "pub-id_doi": "10.1016/j.inffus.2020.07.007",
+                            "section_type": "REF",
+                            "source": "Inf Fusion",
+                            "type": "ref",
+                            "volume": "64",
+                            "year": "2020"
+                        },
+                        "text": "A practical tutorial on bagging and boosting based ensembles for machine learning: algorithms, software tools, performance study, practical perspectives and opportunities",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52698,
+                        "infons": {
+                            "citation-alternatives": "Kocak B, Akinci D\u2019Antonoli T, Mercaldo N, et al. METhodological radiomICs score (METRICS): a quality scoring tool fro radiomics research endorsed by EuSoMII. Insights Imaging. 2024;15(1):8.\n",
+                            "fpage": "8",
+                            "issue": "1",
+                            "name_0": "surname:Kocak;given-names:B",
+                            "name_1": "surname:Akinci D'Antonoli;given-names:T",
+                            "name_2": "surname:Mercaldo;given-names:N",
+                            "pub-id_doi": "10.1186/s13244-023-01572-w",
+                            "pub-id_pmid": "38228979",
+                            "section_type": "REF",
+                            "source": "Insights Imaging",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2024"
+                        },
+                        "text": "METhodological radiomICs score (METRICS): a quality scoring tool fro radiomics research endorsed by EuSoMII",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52806,
+                        "infons": {
+                            "citation-alternatives": "Maier-Hein L, Reinke A, Godau P, et al. Metrics reloaded: recommendations for image analysis validation. Nat Methods. 2024;21(2):195\u2013212.\n",
+                            "fpage": "195",
+                            "issue": "2",
+                            "lpage": "212",
+                            "name_0": "surname:Maier-Hein;given-names:L",
+                            "name_1": "surname:Reinke;given-names:A",
+                            "name_2": "surname:Godau;given-names:P",
+                            "pub-id_doi": "10.1038/s41592-023-02151-z",
+                            "pub-id_pmid": "38347141",
+                            "section_type": "REF",
+                            "source": "Nat Methods",
+                            "type": "ref",
+                            "volume": "21",
+                            "year": "2024"
+                        },
+                        "text": "Metrics reloaded: recommendations for image analysis validation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 52870,
+                        "infons": {
+                            "citation-alternatives": "McDermott M, Zhang H, Hanssen L, et al. A closer look at AUROC and AUPRC under class imbalance. Adv Neural Inf Process Syst. 2024;37:44102\u201363.",
+                            "fpage": "44102",
+                            "lpage": "44163",
+                            "name_0": "surname:McDermott;given-names:M",
+                            "name_1": "surname:Zhang;given-names:H",
+                            "name_2": "surname:Hanssen;given-names:L",
+                            "section_type": "REF",
+                            "source": "Adv Neural Inf Process Syst",
+                            "type": "ref",
+                            "volume": "37",
+                            "year": "2024"
+                        },
+                        "text": "A closer look at AUROC and AUPRC under class imbalance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

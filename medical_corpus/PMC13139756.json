@@ -1,0 +1,2007 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260507",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13139756",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1088/2057-1976/ae6459",
+                            "article-id_other": "BPEX-105984.R2",
+                            "article-id_pmc": "PMC13139756",
+                            "article-id_pmid": "42030976",
+                            "article-id_publisher-id": "bpexae6459",
+                            "article-id_publisher-manuscript": "ae6459",
+                            "elocation-id": "035017",
+                            "issue": "3",
+                            "kwd": "deep learning brain cancer MRI images computer-aided diagnosis tumor segmentation",
+                            "license": "\nOriginal content from this work may be used under the terms of the Creative Commons Attribution 4.0 license. Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI.",
+                            "name_0": "surname:Behzadpour;given-names:Majid",
+                            "name_1": "surname:Azizi;given-names:Ebrahim",
+                            "name_2": "surname:Ortiz;given-names:Bengie L",
+                            "name_3": "surname:Wu;given-names:Kai",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "12",
+                            "year": "2026"
+                        },
+                        "text": "Enhanced ResU-Net for brain tumor segmentation using EfficientNetB0, channel attention, and ASPP",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 97,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Abstract",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 106,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Accurate and efficient segmentation of brain tumors is critical for diagnosis, treatment planning, and monitoring in clinical practice. In this study, we present an enhanced ResU-Net architecture for automatic brain tumor segmentation, integrating an EfficientNetB0 encoder, a channel attention mechanism, and an atrous spatial pyramid pooling (ASPP) module. The EfficientNetB0 encoder leverages pre-trained features to improve feature extraction efficiency, while the channel attention mechanism enhances the model\u2019s focus on tumor-relevant features. ASPP enables multi-scale contextual learning, which is crucial for handling tumors of varying sizes and shapes. The proposed model was evaluated on two benchmark datasets: The Cancer Genome Atlas Low Grade Glioma and brain tumor segmentation (BraTS-2020). Experimental results demonstrate that our method consistently outperforms the baseline ResU-Net and its EfficientNet variant, achieving dice similarity coefficient of 0.903 and 0.851, and HD95 scores of 9.43 and 3.54 for whole tumor and tumor core (TC) regions on the BraTS 2020 dataset, respectively. Compared to state-of-the-art methods, our approach shows competitive performance, particularly in whole tumor and TC segmentation. These results indicate that combining a powerful encoder with attention mechanisms and ASPP can significantly enhance BraTS performance. The proposed approach holds promise for further optimization and application in other medical image segmentation tasks.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1606,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1619,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Brain tumors arise as a result of the uncontrollable proliferation of abnormal cells. Although their exact causes are not well-known, some of the risk factors include family history, metastases, and exposure to ionizing radiation. A very common type of brain tumor is glioma. The World Health Organization has divided glioma into two categories: low-grade (Grade I and Grade II) gliomas and high-grade (Grade III and Grade IV) gliomas. Low-grade gliomas (LGG) tend to be less aggressive, with longer survival rates, while high-grade gliomas (HGG) exhibit rapid progression and require urgent medical intervention. The median survival rate for HGG is less than two years, with observed survival rates of approximately 42.4% at six months, 17.7% at one year, and 3.3% at two years.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2399,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Magnetic resonance imaging (MRI) is a primary modality for brain tumor diagnosis due to its non-invasive nature and high-resolution imaging capabilities, providing detailed structural, functional, and diffusion information. Accurate tumor segmentation from MRI is essential for diagnosis, treatment planning, and monitoring. However, manual segmentation remains time-consuming and subject to inter- and intra-observer variability, motivating the development of automated approaches. The challenge in segmenting brain tumors lies in the differences in shape, size, and location that each tumor assumes from one patient to another. Most HGG invade the surrounding normal-appearing tissues; hence, their borders cannot be well delineated. Additionally, MRI images obtained from various modalities such as flair, T1, contrast-enhanced T1, and T2 differ in their degree of contrast, making segmentation even more challenging. Traditional machine learning techniques relied on manual feature extraction and labeled datasets for training classifiers; however, these usually faced ambiguous boundaries between malignant and benign tissues and needed substantial expert input at the initial annotation stage.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3599,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Recent advancements in deep learning have revolutionized brain tumor segmentation (BraTS). Convolutional neural networks (CNNs) and fully convolutional networks (FCNs) have demonstrated remarkable success in medical image analysis due to their ability to learn complex hierarchical features from large datasets. Notably, the introduction of the BraTS challenge (BraTS) has accelerated the development of robust, standardized models for BraTS by providing high-quality annotated datasets. U-Net and its variants have become the most widely adopted deep models in BraTS, often achieving state-of-the-art performance compared to other deep learning-based models. However, such networks usually have a few limitations: they are not effective at modeling complex contextual features or processing multi-scale information efficiently.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4428,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Channel attention mechanisms: the traditional U-Net model regards all channels with equal importance, so we will use a channel attention mechanism. This approach enables the network to selectively emphasize the most informative channels of each MRI modality for enhancing the focus on tumor regions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4728,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Atrous spatial pyramid pooling (ASPP): an ASPP module is integrated at the bottleneck to capture multi-scale contextual information, which is quite essential for the accurate segmentation of tumors with varied sizes and shapes. ASPP lets the model embed both local and global contextual clues.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5022,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In this work, we propose an improved ResU-Net architecture for BraTS using multimodal MRI data. Our model is based on some previous works in ResU-Net-based architectures and embodies several key improvements to enhance the accuracy of segmentations: ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5273,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "We further enhance our approach by leveraging EfficientNet as the backbone encoder, which provides a powerful feature extraction capability while maintaining computational efficiency. Its compound scaling strategy ensures a balanced trade-off between model depth, width, and resolution, allowing for better representation of complex brain tumor features with reduced computational costs. We evaluate our model on two benchmark datasets: the Cancer Genome Atlas LGG (TCGA-LGG) dataset, containing 3929 MRI scans of 110 patients, and BraTS2020, including multimodal MRI scans from 369 patients. The TCGA dataset would better represent real-world variations, while BraTS2020 includes standardized ground truth annotations and is, therefore, more suitable for benchmarking segmentation models. Our approach targets state-of-the-art performance by addressing the key limitations of existing models through advanced architectural modifications.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6212,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Related works",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6226,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The field of deep learning models for BraTS has undergone extensive exploration. Deep neural networks have recently become the favored choice, dominating most works on BraTS, particularly since larger datasets have been beneficial to them. Kamnitsas et al proposed an ensemble approach, combining predictions from multiple 3D convolutional networks, including DeepMedic, FCN, and U-Net. Similarly, Myronenko investigated a cascaded U-Net model, where a coarse segmentation obtained from the first stage was further refined by a second-stage U-Net. Isensee et al applied nnU-Net, a self-configuring method that adapts U-Net to particular datasets, achieving state-of-the-art performance in the BraTS challenge. Further variants of nnU-Net, including the use of group normalization instead of batch normalization and the addition of axial attention, have presented higher segmentation accuracy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7119,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The attention mechanism has played a pivotal role in improving BraTS. Noori et al applied channel attention immediately after the concatenation of low-level and high-level features in a 2D encoder\u2013decoder architecture, emphasizing the importance of weighing different features over naive concatenation. Zhang et al introduced attention gates at the skip connections, further improving segmentation accuracy. Additionally, Cao et al proposed a U-Net-like model using 3D shuffle attention in the encoder for better feature extraction and skip connections. These studies highlight how the inclusion of attention mechanisms enhances segmentation quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7772,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "U-Net is one of the foundational architectures for segmenting medical images. The model proposed by Ronneberger et al includes a contracting path for feature extraction and an expansive path for precise localization through upsampling. The concatenation of encoder and decoder features through skip connections enhances segmentation accuracy by preserving spatial details. Furthermore, hybrid models, such as U-Net combined with other architectures like ResNet, have achieved excellent results in BraTS tasks, with dice similarity coefficients (DSCs) higher than 0.90 on benchmark datasets. Recent works also feature a genetic algorithm-based CNN that automatically optimizes the network architecture, achieving accuracy up to 0.94 on the TCGA dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8525,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Further developments in BraTS involve modifications of the standard U-Net model for better performance. Baid et al presented a 3D patch-based U-Net for glioma segmentation and survival prediction. Their approach, using a deep learning radiomics algorithm for gliomas, achieved significant results, with DSC values of 0.9795 for HGG and 0.9950 for low-grade gliomas. Another noteworthy approach is the spatial pyramid pooling U-Net (SPP-U-Net), which integrates SPP with attention blocks to improve multi-scale feature representation. Additionally, researchers like Roy et al have introduced advanced architectures, such as S-Net and SA-Net, that utilize attention-based mechanisms to enhance segmentation results on MRI scans.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9252,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Recent advancements also explore new architectures beyond traditional CNNs. For instance, Ruba et al proposed JGate-AttResU-Net, which incorporates an attention gate and residual blocks to reliably highlight variably sized tumor regions. Yanjun Peng and Jindong Sun proposed an efficient automatic weighted dilated convolutional network (AD-Net) architecture, based on weighted dilated convolutions and deep supervision, to enhance segmentation efficiency. More recently, transformer-based models like TransBTS have shown that attention-driven models are capable of learning robust features for BraTS. These works highlight the trend of using more complex neural network elements, including transformers and multi-scale feature fusion, to achieve better segmentation results.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10028,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Recent studies have explored MRI-based radiomics approaches for non-invasive tumor characterization and clinical outcome prediction. For instance, an XGBoost-based model predicted 1p/19q co-deletion status in low-grade glioma patients using optimized imaging features, achieving 82.8% accuracy on an external test set and reducing reliance on invasive procedures. Similarly, another study developed an MRI-based radiomics model for survival prediction, reporting strong performance with an average iAUC of 0.867 on the test set across both GBM and LGG dataset. These works highlight the growing role of imaging-derived features and machine learning in improving clinical decision-making for brain tumor analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10741,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Despite these advancements, many existing methods rely on computationally intensive 3D architectures or lack a unified integration of multi-scale contextual learning and adaptive feature refinement. This limits their efficiency and practical applicability. To address these limitations, we propose an enhanced ResU-Net framework that combines an EfficientNet encoder, channel attention, and ASPP for improved feature representation and multi-scale context modeling.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11207,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Methodology",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11219,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this work, we propose an improved version of the ResU-Net model as the backbone of our approach to BraTS. First, we propose the structure of ResU-Net, enhanced by the EfficientNetB0 encoder, to leverage pre-trained features and improve efficiency. Then, we introduce the channel attention mechanism, showing how it serves to help in feature selection by emphasizing the relevant regions, ensuring the model focuses on critical tumor areas. Next, we incorporate ASPP in the bottleneck to model multi-scale contextual information, enhancing the model to recognize tumors of varying sizes. The integration of residual blocks for facilitating better gradient flow and refinement is retained, mitigating vanishing gradient issues and enhancing learning stability. Figure 1 shows the components of the proposed ResU-Net-based model.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12049,
+                        "infons": {
+                            "file": "bpexae6459f1_hr.jpg",
+                            "id": "bpexae6459f1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "The architecture of the proposed 2D ResU-Net-based model, leveraging an EfficientNet encoder for feature extraction, followed by multi-scale feature fusion in the bottleneck, and a decoder comprising an attention block, residual connections, and upsampling layers.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12314,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Baseline model: ResU-Net with EfficientNetB0 encoder",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12367,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our baseline model relies on the ResU-Net architecture, incorporating an EfficientNetB0 encoder. The network has an encoder\u2013decoder structure with skip connections between corresponding layers. The multi-modal MRI inputs are processed by a pre-trained EfficientNetB0 backbone initialized with ImageNet weights that can be further fine-tuned during training. EfficientNetB0 was chosen for its superior feature extraction capability with fewer parameters, enabled by its compound scaling strategy, which balances network depth, width, and resolution efficiently, achieving higher DSC while maintaining lower computational costs.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12996,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The encoder pathway utilizes four key activation layers from EfficientNetB0 (block1a through block4a) to extract hierarchical features. The pathway in the decoder comprises a total of four upsampling levels, reducing feature channels from 256 to 32 through transposed convolutions with a stride of 2. At each level, the decoder receives skip connections from the corresponding encoder activation layer, followed by a residual block for feature refinement.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13452,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This final output layer consists of a 2 \u00d7 2 transposed convolution that upsamples to the input resolution, followed by a 1 \u00d7 1 convolution with sigmoid activation to generate three output channels corresponding to the whole tumor, tumor core (TC), and enhancing tumor regions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13731,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Channel attention mechanism",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13759,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our network incorporates channel attention mechanisms in the decoder pathway to adaptively recalibrate channel-wise feature responses. The channel attention mechanism emphasizes informative feature channels while suppressing less important ones. The attention module is applied after each skip connection concatenation in the decoder pathway to effectively calibrate the merged features from different scales. Channel attention has been shown to improve segmentation accuracy through enhanced feature discrimination and reduction in irrelevant activations, leading to more robust and precise predictions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14364,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Given an input feature map F \u2208 \u211d^(H \u00d7 W \u00d7 C), the channel attention module first generates two different channel descriptors through global average pooling  and global max pooling  operations:   where F(i,j) represents the feature value at spatial position (i,j). The channel attention map  is then computed by:  where \u03c3 denotes the sigmoid activation function. The final output  is obtained by rescaling the input feature map with the attention weights:  where \u2297 denotes channel-wise multiplication. The attention mechanism is systematically integrated at four levels in the decoder pathway, processing feature maps with varying channel depths (256, 128, 64, and 32 channels). This hierarchical application of channel attention helps in refining features at multiple scales, particularly after the fusion of skip connections with upsampled features, leading to more discriminative feature representations for accurate tumor segmentation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15312,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "ASPP",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15317,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In particular, we embed an ASPP module at the bottleneck of the network to capture multi-scale contextual information that is critical for segmenting brain tumors of diverse sizes and shapes. This ASPP module performs parallel atrous convolutions at different dilation rates of 6, 12, and 18, along with a 1 \u00d7 1 convolution branch and a global pooling branch. The ASPP allows the model to capture both fine-grained and high-level semantic information by using multiple dilations, making it effective in capturing tumors of varying sizes and irregular shapes. Each branch processes the input features using 256 filters, followed by ReLU activation. Features from all the branches are then concatenated and processed through a final 1 \u00d7 1 convolution, hence letting the network capture contextual information effectively at different scales with no loss in spatial resolution.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16194,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Experiments",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16206,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Datasets and augmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16232,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We utilized two datasets: the BraTS-Glioma dataset provided by the BraTS Challenge 2023 and the TCGA LGG dataset, containing 3929 MRI scans of 110 patients. The BraTS MRI scans in the BraTS-Glioma comprise native (T1), post-contrast T1-weighted (T1Gd), T2-weighted (T2), and T2 fluid attenuated inversion recovery (T2-FLAIR). The primary evaluations have been performed for three tumor sub-regions of interest: the \u2018enhancing tumor\u2019 with hyper-intensity in T1Gd\u2014ET, the \u2018TC\u2019 that includes both necrotic regions and ET\u2014TC, and the \u2018whole tumor\u2019 that includes TC and peritumoral invaded tissue\u2014WT. These datasets were chosen due to their extensive use in BraTS research and their well-annotated multi-modal MRI scans, making them ideal for training and evaluation. The BraTS dataset is widely recognized for benchmarking tumor segmentation models, ensuring comparability with state-of-the-art methods.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17150,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Since the BraTS dataset consists of 3D MRI scans, we process the data using a slice-by-slice approach, where each 2D slice is treated as an independent input while maintaining spatial consistency through standardized preprocessing. Each slice is represented as a multi-channel input, incorporating four MRI modalities (T1, T1Gd, T2, and FLAIR) to provide rich contextual information. This study follows a similar design rationale to nnU-Net, emphasizing that systematic architectural optimization and well-designed training strategies can yield competitive performance, even within a 2D framework.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17748,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "From the BraTS data, we used 369 cases for training, 125 cases for validation, and 166 cases for test set (a ratio of 56% for training, 19% for validation, and 25% for testing). From the TCGA-LGG dataset, we adopted 120 cases for training, 28 cases for validation, and 28 cases for the test set (a ratio of 70% for training, 15% for validation, and 15% for testing). Models are trained using many augmentation techniques to increase robustness and prevent overfitting by using random rotation of \u00b125 degrees that can capture different types of invariances or orientation variability. It includes using random horizontal/vertical shifts that are within 20% of the dimensions of an image, random zoom transformations with \u00b120% limits, random horizontal flips, and interpolating newly created pixels with one of the following techniques during the above operations: nearest neighbors. These augmentation parameters are carefully selected based on empirical studies and prior works in medical image analysis.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18755,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All dataset partitions were performed at the patient level to prevent data leakage between training, validation, and test sets, ensuring that slices from the same patient do not appear across different subsets and maintaining a fair evaluation protocol.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19009,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Evaluation metrics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19028,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To evaluate the performance of our BraTS models, two common metrics were adopted: the DSC and the 95th percentile Hausdorff Distance (HD95), both widely used in medical image analysis. DSC refers to the ratio of overlap between the predicted tumor area and the ground truth annotation; it as:  where \u2223P\u2223 and \u2223G\u2223 denote the number of pixels in the predicted and ground truth regions, respectively. A higher DSC indicates a better overlap between the real and predicted masks of tumors.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19521,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Complementing the DSC, we also use the HD95, which is the robust version of the HD95, computing the 95th percentile of the maximum surface-to-surface distance between predicted segmentation and ground truth boundary. This metric provides the accuracy of the boundary localization and is insensitive to extreme outliers by excluding the worst 5% of boundary mismatches. The mathematical formulation of HD95 is given as:  where d(a,B) represents the shortest Euclidean distance from a point a in segmentation A to the closest point in ground truth B.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20070,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "These two metrics, the DSC and HD95, provide a comprehensive measure of volumetric overlap and boundary precision of the segmented tumor regions. However, despite their strengths, they also have limitations. DSC, while effective for measuring overlap, may not fully reflect boundary alignment errors, especially in cases with thin or irregular tumor structures. Similarly, HD95, though robust to extreme outliers, may still be influenced by segmentation inconsistencies in complex tumor shapes. Therefore, interpreting results using both metrics ensures a more balanced evaluation of segmentation accuracy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20677,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Results and discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20700,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this section, we present a detailed analysis and comparison of the quantitative results obtained from the baseline ResU-Net, Res-UNet with EfficientNet backbone, and our proposed enhanced method incorporating channel attention and ASPP mechanisms. The evaluation was performed on two distinct datasets: TCGA LGG and BraTS 2020.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21031,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The proposed method demonstrates potential for clinical applicability by achieving consistent improvements in tumor boundary delineation across two publicly available datasets, which is essential for reliable treatment planning and longitudinal monitoring. Our model emphasizes a balance between segmentation accuracy and computational efficiency by leveraging an EfficientNet encoder and channel attention mechanisms for multi-scale feature. While external validation on independent institutional datasets and domain-shift analysis is beyond the scope of this study, the use of two heterogeneous benchmarks (TCGA LGG and BraTS 2020) provides initial evidence of generalization capability. In addition, the 2D design enables relatively efficient inference with a lower computational burden compared to many transformer-based models, supporting its feasibility for integration into clinical workflows. Future work will focus on validating the model in real-world clinical environments, including multi-center data evaluation and analysis of its impact on downstream tasks such as prognosis estimation and treatment decision support. Furthermore, the model was trained using k-fold cross-validation on the training set to enhance robustness and reduce sensitivity to data variability. This strategy allows the model to be exposed to different subsets of the data during training, improving its generalization capability and stability. The final evaluation was conducted on independent test sets to ensure an unbiased assessment of performance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22573,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Comparison of the proposed method",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22607,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Quantitative results. Tables 1 and 2 show the comparisons of our proposed method with the baseline approaches. The proposed improved model consistently outperforms the different variations of baseline methods for both datasets. On the TCGA LGG dataset, the results indicate that our proposed method provides the top segmentation performance with a DSC of 0.797 and HD95 of 6.16, which is considerably improved from the baseline Res-UNet (DSC: 0.787, HD95: 7.21).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23070,
+                        "infons": {
+                            "file": "bpexae6459t1.xml",
+                            "id": "bpexae6459t1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Compared segmentation results with baselines on the TCGA LGG test dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23145,
+                        "infons": {
+                            "file": "bpexae6459t1.xml",
+                            "id": "bpexae6459t1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">Methods</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">Aug</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">DSC</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">HD95</th></tr></thead><tbody><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Res-Unet</td><td colspan=\"1\" rowspan=\"1\"/><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.787</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">7.21</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Res-Unet</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\u2713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.773</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">7.29</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Res-Unet + EfficientNet</td><td colspan=\"1\" rowspan=\"1\"/><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.775</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">6.47</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Res-Unet + EfficientNet</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\u2713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.781</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">6.39</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Our Method</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\u2713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.797</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>6.16</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "Methods\tAug\tDSC\tHD95\t \tRes-Unet\t\t0.787\t7.21\t \tRes-Unet\t\u2713\t0.773\t7.29\t \tRes-Unet + EfficientNet\t\t0.775\t6.47\t \tRes-Unet + EfficientNet\t\u2713\t0.781\t6.39\t \tOur Method\t\u2713\t0.797\t6.16\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23325,
+                        "infons": {
+                            "file": "bpexae6459t2.xml",
+                            "id": "bpexae6459t2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Compared segmentation results with baselines on the BraTS2020 test dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23401,
+                        "infons": {
+                            "file": "bpexae6459t2.xml",
+                            "id": "bpexae6459t2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\"/><th align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\"/><th align=\"center\" colspan=\"3\" rowspan=\"1\" valign=\"bottom\">DSC</th><th align=\"center\" colspan=\"3\" rowspan=\"1\" valign=\"bottom\">HD95</th></tr><tr><th align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">Methods</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">Aug</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">ET</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">WT</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">TC</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">ET</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">WT</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">TC</th></tr></thead><tbody><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">ResU-Net</td><td colspan=\"1\" rowspan=\"1\"/><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.722</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.851</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.767</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">7.20</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">11.65</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.54</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">ResU-Net</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\u2713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.725</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.863</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.770</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">7.18</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">11.13</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">6.21</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">ResU-Net + EfficientNet</td><td colspan=\"1\" rowspan=\"1\"/><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.741</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.877</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.781</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">6.25</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">10.41</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.34</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">ResU-Net + EfficientNet</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\u2713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.750</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.889</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.789</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">6.35</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">10.08</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.14</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Our method</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\u2713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.762</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.903</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.794</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>5.87</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>9.43</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>3.54</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "\t\tDSC\tHD95\t \tMethods\tAug\tET\tWT\tTC\tET\tWT\tTC\t \tResU-Net\t\t0.722\t0.851\t0.767\t7.20\t11.65\t5.54\t \tResU-Net\t\u2713\t0.725\t0.863\t0.770\t7.18\t11.13\t6.21\t \tResU-Net + EfficientNet\t\t0.741\t0.877\t0.781\t6.25\t10.41\t5.34\t \tResU-Net + EfficientNet\t\u2713\t0.750\t0.889\t0.789\t6.35\t10.08\t5.14\t \tOur method\t\u2713\t0.762\t0.903\t0.794\t5.87\t9.43\t3.54\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23717,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The baseline ResU-Net struggles with boundary refinement and lacks effective feature recalibration, leading to higher HD95 values. Its combination with the EfficientNet backbone and data augmentation demonstrated a mediocre boost: (DSC: 0.781, HD95: 6.39), suggesting that while a stronger encoder enhances feature extraction, it alone does not fully optimize segmentation performance, whereas our final method further improved the segmentation results by including channel attention and ASPP. However, despite these improvements, certain challenges remain. First, small and disorganized tumors are difficult to segment with loss of spatial information in downsampling operations, with fine-grained information not recovered well through skip operations. Receptive field constraints in early layers make it difficult to detect faint areas of a tumor, and bias in Dice loss towards larger structures lessens vulnerability to small lesions. Second, boundary refinement is still limited, as feature smoothing in deep layers and restrictions in skip operations contribute to over-smooth prediction and failure of the model-to-model sharp transition and indeterminate borders of a tumor accurately. Despite improvement in multi-scale feature extraction using ASPP, it attends less to boundary information and sharp detail in general. Third, modality variation in multi-modal MRI introduces generalizability concerns through intensity and contrast variation between scanners, which channel attention alone cannot fully address. Where data augmentation helps mitigate domain shifts, it cannot eliminate all variations in tumor appearance between protocols.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25367,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "On the BraTS 2020 dataset, the proposed approach reports the best performance in the three tumor regions: ET, WT, and TC. The improved model achieves DSC of 0.762, 0.903, and 0.851 for ET, WT, and TC, respectively, significantly outperforming both a baseline ResU-Net and its EfficientNet variant. HD95 also improved significantly, most notably in the TC region, where our approach achieved 3.54 against the baseline value of 5.54. The most difficult part for segmentation, the whole tumor area, demonstrates a much-improved DSC (0.903) and low HD95 of 9.43 against the baseline of 0.851 and 11.65, respectively.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25980,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "A p-value threshold of p < 0.05 was set to define statistical significance in the Wilcoxon signed-rank test. On the TCGA LGG dataset, the improvement in DSC from 0.781 to 0.797 was found to be statistically significant, p = 0.012, and the reduction in HD95 (from 6.39 to 6.16) also yielded a significant result, p = 0.003. For the BraTS 2020 dataset, the performance leap in the TC region, where HD95 dropped from 5.14 to 3.54, produced a highly significant p-value of p < 0.001. These results confirm that the integration of channel attention and ASPP mechanisms provides a robust and non-random enhancement to the segmentation architecture.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26623,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The impact of data augmentation varies across different model configurations. While the baseline ResU-Net shows mixed results with augmentation (slight decrease in TCGA LGG performance but improvement in BraTS 2020), the EfficientNet backbone consistently improved from augmentation across both datasets. This could indicate that the more complex architecture is better at using the augmented data in order to learn robust features.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27056,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure 2 shows representative segmentation results comparing our proposed method with the baseline approaches. The visual comparison demonstrates that our enhanced model, incorporating channel attention and ASPP modules, produces more precise tumor boundaries that closely align with the ground truth, particularly in areas where the baseline ResU-Net struggles to maintain boundary consistency. This visual improvement validates the quantitative results and highlights the effectiveness of our architectural enhancements, especially the synergistic effect of channel attention for feature refinement and ASPP for multi-scale context integration.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27703,
+                        "infons": {
+                            "file": "bpexae6459f2_hr.jpg",
+                            "id": "bpexae6459f2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Segmentation results provided by the standard ResU-Net and our method. This result was obtained from the test set. Reproduced with permission from.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27851,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To enhance model interpretability, Grad-CAM was applied to visualize the regions contributing to the model\u2019s predictions. The resulting heatmaps, as shown in figure 2, indicate that the model consistently focuses on clinically relevant tumor regions rather than irrelevant background structures. This behavior suggests that the model learns meaningful feature representations aligned with tumor characteristics across different MRI modalities. The integration of attention mechanisms within the architecture further supports this interpretability by emphasizing informative feature channels during decoding. These observations provide additional evidence that the model\u2019s predictions are not only accurate but also explainable, which is an important requirement for clinical adoption and trust in automated medical imaging systems.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28687,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The superior performance of our proposed method can be attributed to several factors. The channel attention mechanism helps the model focus on the most relevant features in each modality, while the ASPP module effectively captures multi-scale contextual information. When combined with the EfficientNet backbone, which provides a stronger feature extraction capability with fewer parameters, and data augmentation, which introduces anatomical variability and improves generalization, these components work synergistically to achieve more accurate and reliable segmentation results.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29269,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Training convergence analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29299,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To examine the training behavior of the proposed model, the training and validation accuracy and loss curves are presented in figure 3. The curves show that the model converges within the early epochs and maintains stable performance throughout the remaining training process. The small gap between the training and validation curves suggests consistent generalization without evident overfitting. Additionally, the smooth and monotonic decrease in loss suggests effective convergence without oscillations or divergence, confirming the robustness of the training process.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29871,
+                        "infons": {
+                            "file": "bpexae6459f3_hr.jpg",
+                            "id": "bpexae6459f3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Training and validation accuracy and loss curves over 50 epochs, illustrating the convergence and stability of the model during optimization.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30013,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Comparison with the state-of-the-art methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30058,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "For a fair comparison, table 3 presents the performance metrics of our method against several state-of-the-art approaches on BraTS. The comparison includes both recent and established methods: ResU-net, nnU-Net, SCU-Net, Alternating time-space Transformer (ATST), and Daza et al.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30338,
+                        "infons": {
+                            "file": "bpexae6459t3.xml",
+                            "id": "bpexae6459t3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Segmentation comparison of our method with the state-of-the-art.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30403,
+                        "infons": {
+                            "file": "bpexae6459t3.xml",
+                            "id": "bpexae6459t3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\"/><th align=\"center\" colspan=\"3\" rowspan=\"1\" valign=\"bottom\">DSC</th><th align=\"center\" colspan=\"3\" rowspan=\"1\" valign=\"bottom\">HD95</th></tr><tr><th align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">Methods</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">ET</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">WT</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">TC</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">ET</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">WT</th><th align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"bottom\">TC</th></tr></thead><tbody><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">ResU-net</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.722</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.851</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.767</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">7.20</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">11.65</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.54</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">nnU-Net</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.720</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.810</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.770</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">4.2</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">3.5</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.5</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">SCU-Net <xref rid=\"bpexae6459bib46\" ref-type=\"bibr\">46</xref></td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.713</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.791</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.772</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">4.1</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.1</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">5.4</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">ATST <xref rid=\"bpexae6459bib36\" ref-type=\"bibr\">36</xref></td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.785</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.9017</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.837</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">32.25</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">4.39</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">8.34</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Cerberus <xref rid=\"bpexae6459bib47\" ref-type=\"bibr\">47</xref></td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.794</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.897</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">0.845</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">29.82</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">3.59</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">6.47</td></tr><tr><td align=\"left\" colspan=\"1\" rowspan=\"1\" valign=\"top\">Our method</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.762</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.903</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>0.851</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>5.87</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>9.43</bold>\n</td><td align=\"center\" colspan=\"1\" rowspan=\"1\" valign=\"top\">\n<bold>3.54</bold>\n</td></tr></tbody></table>\n"
+                        },
+                        "text": "\tDSC\tHD95\t \tMethods\tET\tWT\tTC\tET\tWT\tTC\t \tResU-net\t0.722\t0.851\t0.767\t7.20\t11.65\t5.54\t \tnnU-Net\t0.720\t0.810\t0.770\t4.2\t3.5\t5.5\t \tSCU-Net \t0.713\t0.791\t0.772\t4.1\t5.1\t5.4\t \tATST \t0.785\t0.9017\t0.837\t32.25\t4.39\t8.34\t \tCerberus \t0.794\t0.897\t0.845\t29.82\t3.59\t6.47\t \tOur method\t0.762\t0.903\t0.851\t5.87\t9.43\t3.54\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30705,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Wang et al\u2019s ATST method ranked second during the BraTS challenge by introducing a new method that relied on two interlinked pathways, each processing a pair of modalities. Its method turned out to be quite efficient, particularly on whole tumor segmentation, where its DSC score was 0.9017. Similarly, Daza et al proposed a lightweight approach that showed the best performance in various metrics and resulted in the highest DSC values of 0.794, 0.897, and 0.845 for ET, WT, and TC, respectively.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31205,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our method achieves competitive performance: 0.903 for whole tumor segmentation and 0.851 for TC segmentation, achieving a DSC of 0.762 for enhancing tumor, comparable to baseline methods such as ResU-net with 0.722 and nnU-Net at 0.720, though inferior compared to recent approaches like ATST and Daza et al. HD95 is rather inconsistent for the different tumor regions, with our method obtaining 5.87, 9.43, and 3.54 for ET, WT, and TC, respectively.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31657,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 31668,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In this study, we proposed an integrated method based on ResU-Net for segmenting brain tumors by incorporating an EfficientNetB0 encoder, channel attention mechanism, and ASPP to reinforce the ability of multi-scale feature extraction and contextual learning. These demonstrated their performances on two benchmark datasets: TCGA LGG and BraTS 2020 and outperformed the baseline ResU-Net and its EfficientNet variant. The proposed approach shows the best performances in terms of DSC and HD95 scores on essential tumor regions, and it reaches a DSC of 0.903 and HD95 of 9.43 for the whole tumor on BraTS 2020. Compared with the state-of-the-art, our model exhibited competitive performance in whole tumor and TC segmentation, validating the effectiveness of combining a powerful encoder with an attention mechanism and ASPP for accurate boundary delineation. These results demonstrate that our approach demonstrates promising performance for clinical use, subject to further validation, and its further optimization and adaptation may be carried out on other medical segmentation tasks.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32755,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32783,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The data that support the findings of this study are openly available at the following URL/DOI: https://github.com/majid9418/EResU-Net.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32919,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "title_1"
+                        },
+                        "text": "Funding Declaration",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 32939,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "paragraph"
+                        },
+                        "text": "Research reported in this publication was supported by the National Institute Of Biomedical Imaging And Bioengineering of the National Institutes of Health under Award Number R03EB036435. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. B. L.O. is supported by the NHLBI (National Heart, Lung, and Blood Institute) training Grant Number 2T32HL007622-36.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33392,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflict of interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33413,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The authors declare no conflict of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33458,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33469,
+                        "infons": {
+                            "fpage": "317",
+                            "lpage": "324",
+                            "name_0": "surname:I\u015f\u0131n;given-names:A",
+                            "name_1": "surname:Direko\u011flu;given-names:C",
+                            "name_2": "surname:\u015eah;given-names:M",
+                            "pub-id_doi": "10.1016/j.procs.2016.09.407",
+                            "section_type": "REF",
+                            "source": "Proc. Comput. Sci.",
+                            "type": "ref",
+                            "volume": "102",
+                            "year": "2016"
+                        },
+                        "text": "Review of MRI-based brain tumor image segmentation using deep learning methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33548,
+                        "infons": {
+                            "fpage": "479",
+                            "lpage": "489",
+                            "name_0": "surname:Ohgaki;given-names:H",
+                            "name_1": "surname:Kleihues;given-names:P",
+                            "pub-id_doi": "10.1093/jnen/64.6.479",
+                            "pub-id_pmid": "15977639",
+                            "section_type": "REF",
+                            "source": "J. Neuropathol. Exp. Neurol.",
+                            "type": "ref",
+                            "volume": "64",
+                            "year": "2005"
+                        },
+                        "text": "Population-based studies on incidence, survival rates, and genetic alterations in astrocytic and oligodendroglial gliomas",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33670,
+                        "infons": {
+                            "fpage": "1993",
+                            "lpage": "2024",
+                            "name_0": "surname:Menze;given-names:B H",
+                            "name_1": "surname:Jakab;given-names:A",
+                            "name_2": "surname:Bauer;given-names:S",
+                            "name_3": "surname:Kalpathy-Cramer;given-names:J",
+                            "name_4": "surname:Farahani;given-names:K",
+                            "name_5": "surname:Kirby;given-names:J",
+                            "name_6": "surname:Burren;given-names:Y",
+                            "name_7": "surname:Porz;given-names:N",
+                            "name_8": "surname:Slotboom;given-names:J",
+                            "name_9": "surname:Wiest;given-names:R",
+                            "pub-id_doi": "10.1109/TMI.2014.2377694",
+                            "pub-id_pmid": "25494501",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Med. Imaging",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2014"
+                        },
+                        "text": "The multimodal brain tumor image segmentation benchmark (BRATS)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33734,
+                        "infons": {
+                            "fpage": "R97",
+                            "name_0": "surname:Bauer;given-names:S",
+                            "name_1": "surname:Wiest;given-names:R",
+                            "name_2": "surname:Nolte;given-names:L-P",
+                            "name_3": "surname:Reyes;given-names:M",
+                            "pub-id_doi": "10.1088/0031-9155/58/13/R97",
+                            "pub-id_pmid": "23743802",
+                            "section_type": "REF",
+                            "source": "Phys. Med. Biol.",
+                            "type": "ref",
+                            "volume": "58",
+                            "year": "2013"
+                        },
+                        "text": "A survey of MRI-based medical image analysis for brain tumor studies",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33803,
+                        "infons": {
+                            "fpage": "683",
+                            "name_0": "surname:Yusoff;given-names:M",
+                            "name_1": "surname:Haryanto;given-names:T",
+                            "name_2": "surname:Suhartanto;given-names:H",
+                            "name_3": "surname:Mustafa;given-names:W A",
+                            "name_4": "surname:Zain;given-names:J M",
+                            "name_5": "surname:Kusmardi;given-names:K",
+                            "pub-id_doi": "10.3390/diagnostics13040683",
+                            "pub-id_pmid": "36832171",
+                            "section_type": "REF",
+                            "source": "Diagnostics",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2023"
+                        },
+                        "text": "Accuracy analysis of deep learning methods in breast cancer classification: a structured review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33899,
+                        "infons": {
+                            "fpage": "S169",
+                            "lpage": "88",
+                            "name_0": "surname:Mandal;given-names:P K",
+                            "name_1": "surname:Mahajan;given-names:R",
+                            "name_2": "surname:Dinov;given-names:I D",
+                            "pub-id_doi": "10.3233/JAD-2012-120412",
+                            "pub-id_pmid": "22647262",
+                            "section_type": "REF",
+                            "source": "J. Alzheimer\u2019s Dis.",
+                            "type": "ref",
+                            "volume": "31",
+                            "year": "2012"
+                        },
+                        "text": "Structural brain atlases: design, rationale, and applications in normal and pathological cohorts",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33996,
+                        "infons": {
+                            "fpage": "1",
+                            "lpage": "13",
+                            "name_0": "surname:Pellico;given-names:J",
+                            "name_1": "surname:Ellis;given-names:C M",
+                            "name_2": "surname:Davis;given-names:J J",
+                            "pub-id_doi": "10.1155/2019/1845637",
+                            "section_type": "REF",
+                            "source": "Contrast Media Mol. Imaging",
+                            "type": "ref",
+                            "volume": "2019",
+                            "year": "2019"
+                        },
+                        "text": "Nanoparticle\u2010based paramagnetic contrast agents for magnetic resonance imaging",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34077,
+                        "infons": {
+                            "fpage": "545",
+                            "lpage": "563",
+                            "name_0": "surname:Chlap;given-names:P",
+                            "name_1": "surname:Min;given-names:H",
+                            "name_2": "surname:Vandenberg;given-names:N",
+                            "name_3": "surname:Dowling;given-names:J",
+                            "name_4": "surname:Holloway;given-names:L",
+                            "name_5": "surname:Haworth;given-names:A",
+                            "pub-id_doi": "10.1111/1754-9485.13261",
+                            "pub-id_pmid": "34145766",
+                            "section_type": "REF",
+                            "source": "J. Med. Imaging Radiat. Oncol.",
+                            "type": "ref",
+                            "volume": "65",
+                            "year": "2021"
+                        },
+                        "text": "A review of medical image data augmentation techniques for deep learning applications",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34163,
+                        "infons": {
+                            "fpage": "5791",
+                            "lpage": "6512",
+                            "name_0": "surname:Abdou;given-names:M A",
+                            "pub-id_doi": "10.1007/s00521-022-06960-9",
+                            "section_type": "REF",
+                            "source": "Neural Comput. Appl.",
+                            "type": "ref",
+                            "volume": "34",
+                            "year": "2022"
+                        },
+                        "text": "Literature review: efficient deep neural networks techniques for medical image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34251,
+                        "infons": {
+                            "elocation-id": "1392807",
+                            "name_0": "surname:Abidin;given-names:Z U",
+                            "name_1": "surname:Naqvi;given-names:R A",
+                            "name_2": "surname:Haider;given-names:A",
+                            "name_3": "surname:Kim;given-names:H S",
+                            "name_4": "surname:Jeong;given-names:D",
+                            "name_5": "surname:Lee;given-names:S W",
+                            "pub-id_doi": "10.3389/fbioe.2024.1392807",
+                            "pub-id_pmid": "39104626",
+                            "section_type": "REF",
+                            "source": "Front. Bioeng. Biotechnol.",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2024"
+                        },
+                        "text": "Recent deep learning-based brain tumor segmentation models using multi-modality magnetic resonance imaging: a prospective survey",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34380,
+                        "infons": {
+                            "fpage": "49",
+                            "lpage": "74",
+                            "name_0": "surname:Lefkovits;given-names:S",
+                            "name_1": "surname:Lefkovits;given-names:L",
+                            "pub-id_doi": "10.2478/ausi-2022-0004",
+                            "section_type": "REF",
+                            "source": "Acta Univ. Sapientiae Inform.",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2022"
+                        },
+                        "text": "U-Net architecture variants for brain tumor segmentation of histogram corrected images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34467,
+                        "infons": {
+                            "comment": "(arXiv:2410.17863)",
+                            "name_0": "surname:Srinanda;given-names:K",
+                            "name_1": "surname:Prabhu;given-names:M M",
+                            "name_2": "surname:Lal;given-names:S",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "CASCRNet: an atrous spatial pyramid pooling and shared channel residual based network for capsule endoscopy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34575,
+                        "infons": {
+                            "fpage": "6105",
+                            "lpage": "6114",
+                            "name_0": "surname:Tan;given-names:M",
+                            "name_1": "surname:Le;given-names:Q",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2019"
+                        },
+                        "text": "Efficientnet: rethinking model scaling for convolutional neural networks International Conf. on Machine Learning (PMLR)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34695,
+                        "infons": {
+                            "fpage": "27",
+                            "lpage": "35",
+                            "name_0": "surname:Mazurowski;given-names:M A",
+                            "name_1": "surname:Clark;given-names:K",
+                            "name_2": "surname:Czarnek;given-names:N M",
+                            "name_3": "surname:Shamsesfandabadi;given-names:P",
+                            "name_4": "surname:Peters;given-names:K B",
+                            "name_5": "surname:Saha;given-names:A",
+                            "pub-id_doi": "10.1007/s11060-017-2420-1",
+                            "section_type": "REF",
+                            "source": "J. Neuro-Oncol.",
+                            "type": "ref",
+                            "volume": "133",
+                            "year": "2017"
+                        },
+                        "text": "Radiogenomics of lower-grade glioma: algorithmically-assessed tumor shape is associated with tumor genomic subtypes and patient outcomes in a multi-institutional study with The Cancer genome atlas data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34897,
+                        "infons": {
+                            "name_0": "surname:Pedano;given-names:N",
+                            "name_1": "surname:Flanders;given-names:A E",
+                            "name_2": "surname:Scarpace;given-names:L",
+                            "name_3": "surname:Mikkelsen;given-names:T",
+                            "name_4": "surname:Eschbacher;given-names:J M",
+                            "name_5": "surname:Hermes;given-names:B",
+                            "name_6": "surname:Sisneros;given-names:V",
+                            "name_7": "surname:Barnholtz-Sloan;given-names:J",
+                            "name_8": "surname:Ostrom;given-names:Q",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2016"
+                        },
+                        "text": "The cancer genome atlas low grade glioma collection (TCGA-LGG) (No Title)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 34971,
+                        "infons": {
+                            "comment": "(arXiv:2107.02314)",
+                            "name_0": "surname:Baid;given-names:U",
+                            "name_1": "surname:Ghodasara;given-names:S",
+                            "name_2": "surname:Mohan;given-names:S",
+                            "name_3": "surname:Bilello;given-names:M",
+                            "name_4": "surname:Calabrese;given-names:E",
+                            "name_5": "surname:Colak;given-names:E",
+                            "name_6": "surname:Farahani;given-names:K",
+                            "name_7": "surname:Kalpathy-Cramer;given-names:J",
+                            "name_8": "surname:Kitamura;given-names:F C",
+                            "name_9": "surname:Pati;given-names:S",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2021"
+                        },
+                        "text": "The rsna-asnr-miccai brats 2021 benchmark on brain tumor segmentation and radiogenomic classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35073,
+                        "infons": {
+                            "fpage": "450",
+                            "lpage": "462",
+                            "name_0": "surname:Kamnitsas;given-names:K",
+                            "name_1": "surname:Bai;given-names:W",
+                            "name_2": "surname:Ferrante;given-names:E",
+                            "name_3": "surname:McDonagh;given-names:S",
+                            "name_4": "surname:Sinclair;given-names:M",
+                            "name_5": "surname:Pawlowski;given-names:N",
+                            "name_6": "surname:Rajchl;given-names:M",
+                            "name_7": "surname:Lee;given-names:M",
+                            "name_8": "surname:Kainz;given-names:B",
+                            "name_9": "surname:Rueckert;given-names:D",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "volume": "3",
+                            "year": "2018"
+                        },
+                        "text": "Ensembles of multiple models and architectures for robust brain tumour segmentation brainlesion: glioma, multiple sclerosis, stroke and traumatic brain injuries:",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35235,
+                        "infons": {
+                            "fpage": "61",
+                            "lpage": "78",
+                            "name_0": "surname:Kamnitsas;given-names:K",
+                            "name_1": "surname:Ledig;given-names:C",
+                            "name_2": "surname:Newcombe;given-names:V F",
+                            "name_3": "surname:Simpson;given-names:J P",
+                            "name_4": "surname:Kane;given-names:A D",
+                            "name_5": "surname:Menon;given-names:D K",
+                            "name_6": "surname:Rueckert;given-names:D",
+                            "name_7": "surname:Glocker;given-names:B",
+                            "pub-id_doi": "10.1016/j.media.2016.10.004",
+                            "pub-id_pmid": "27865153",
+                            "section_type": "REF",
+                            "source": "Med. Image Anal.",
+                            "type": "ref",
+                            "volume": "36",
+                            "year": "2017"
+                        },
+                        "text": "Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35328,
+                        "infons": {
+                            "fpage": "61",
+                            "lpage": "78",
+                            "name_0": "surname:Kamnitsas;given-names:K",
+                            "name_1": "surname:Ledig;given-names:C",
+                            "name_2": "surname:Newcombe;given-names:V F J",
+                            "name_3": "surname:Simpson;given-names:J P",
+                            "name_4": "surname:Kane;given-names:A D",
+                            "name_5": "surname:Menon;given-names:D K",
+                            "name_6": "surname:Rueckert;given-names:D",
+                            "name_7": "surname:Glocker;given-names:B",
+                            "pub-id_doi": "10.1016/j.media.2016.10.004",
+                            "pub-id_pmid": "27865153",
+                            "section_type": "REF",
+                            "source": "Med. Image Anal.",
+                            "type": "ref",
+                            "volume": "36",
+                            "year": "2017"
+                        },
+                        "text": "Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35421,
+                        "infons": {
+                            "fpage": "311",
+                            "lpage": "320",
+                            "name_0": "surname:Myronenko;given-names:A",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2019"
+                        },
+                        "text": "3D MRI brain tumor segmentation using autoencoder regularization brainlesion: glioma, multiple sclerosis, stroke and traumatic brain injuries",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35563,
+                        "infons": {
+                            "fpage": "118",
+                            "lpage": "132",
+                            "name_0": "surname:Isensee;given-names:F",
+                            "name_1": "surname:J\u00e4ger;given-names:P F",
+                            "name_2": "surname:Full;given-names:P M",
+                            "name_3": "surname:Vollmuth;given-names:P",
+                            "name_4": "surname:Maier-Hein;given-names:K H",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2021"
+                        },
+                        "text": "nnU-Net for brain tumor segmentation brainlesion: glioma, multiple sclerosis, stroke and traumatic brain injuries",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35677,
+                        "infons": {
+                            "fpage": "173",
+                            "lpage": "186",
+                            "name_0": "surname:Luu;given-names:H M",
+                            "name_1": "surname:Park;given-names:S-H",
+                            "section_type": "REF",
+                            "source": "Extending nn-UNet for Brain Tumor Segmentation Int. MICCAI Brainlesion Workshop",
+                            "type": "ref",
+                            "year": "2021"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35678,
+                        "infons": {
+                            "fpage": "269",
+                            "lpage": "275",
+                            "name_0": "surname:Noori;given-names:M",
+                            "name_1": "surname:Bahri;given-names:A",
+                            "name_2": "surname:Mohammadi;given-names:K",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2019"
+                        },
+                        "text": "Attention-guided version of 2D UNet for automatic brain tumor segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35753,
+                        "infons": {
+                            "fpage": "58533",
+                            "lpage": "58545",
+                            "name_0": "surname:Zhang;given-names:J",
+                            "name_1": "surname:Jiang;given-names:Z",
+                            "name_2": "surname:Dong;given-names:J",
+                            "name_3": "surname:Hou;given-names:Y",
+                            "name_4": "surname:Liu;given-names:B",
+                            "pub-id_doi": "10.1109/ACCESS.2020.2983075",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2020"
+                        },
+                        "text": "Attention gate resU-Net for automatic MRI brain tumor segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35820,
+                        "infons": {
+                            "elocation-id": "104296",
+                            "name_0": "surname:Cao;given-names:Y",
+                            "name_1": "surname:Zhou;given-names:W",
+                            "name_2": "surname:Zang;given-names:M",
+                            "name_3": "surname:An;given-names:D",
+                            "name_4": "surname:Feng;given-names:Y",
+                            "name_5": "surname:Yu;given-names:B",
+                            "pub-id_doi": "10.1016/j.bspc.2022.104296",
+                            "section_type": "REF",
+                            "source": "Biomed. Signal Process. Control",
+                            "type": "ref",
+                            "volume": "80",
+                            "year": "2023"
+                        },
+                        "text": "MBANet: a 3D convolutional neural network with multi-branch attention for brain tumor segmentation from MRI images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35935,
+                        "infons": {
+                            "fpage": "234",
+                            "lpage": "241",
+                            "name_0": "surname:Ronneberger;given-names:O",
+                            "name_1": "surname:Fischer;given-names:P",
+                            "name_2": "surname:Brox;given-names:T",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2015"
+                        },
+                        "text": "U-net: convolutional networks for biomedical image segmentation medical image computing and computer-assisted intervention\u2013MICCAI 2015",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36072,
+                        "infons": {
+                            "fpage": "770",
+                            "lpage": "808",
+                            "name_0": "surname:He;given-names:K",
+                            "name_1": "surname:Zhang;given-names:X",
+                            "name_2": "surname:Ren;given-names:S",
+                            "name_3": "surname:Sun;given-names:J",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2016"
+                        },
+                        "text": "Deep residual learning for image recognition",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36117,
+                        "infons": {
+                            "fpage": "1",
+                            "lpage": "10",
+                            "name_0": "surname:Saha;given-names:A",
+                            "name_1": "surname:Zhang;given-names:Y-D",
+                            "name_2": "surname:Satapathy;given-names:S C",
+                            "pub-id_doi": "10.1007/s10723-021-09590-y",
+                            "section_type": "REF",
+                            "source": "J. Grid Comput.",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2021"
+                        },
+                        "text": "Brain tumour segmentation with a muti-pathway ResNet based UNet",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36181,
+                        "infons": {
+                            "fpage": "63",
+                            "lpage": "74",
+                            "name_0": "surname:Anaraki;given-names:A K",
+                            "name_1": "surname:Ayati;given-names:M",
+                            "name_2": "surname:Kazemi;given-names:F",
+                            "pub-id_doi": "10.1016/j.bbe.2018.10.004",
+                            "section_type": "REF",
+                            "source": "Biocybern. Biomed. Eng.",
+                            "type": "ref",
+                            "volume": "39",
+                            "year": "2019"
+                        },
+                        "text": "Magnetic resonance imaging-based brain tumor grades classification and grading via convolutional neural networks and genetic algorithms",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36317,
+                        "infons": {
+                            "fpage": "5267",
+                            "lpage": "5281",
+                            "name_0": "surname:Iqbal;given-names:M J",
+                            "name_1": "surname:Iqbal;given-names:M W",
+                            "name_2": "surname:Anwar;given-names:M",
+                            "name_3": "surname:Khan;given-names:M M",
+                            "name_4": "surname:Nazimi;given-names:A J",
+                            "name_5": "surname:Ahmad;given-names:M N",
+                            "pub-id_doi": "10.32604/cmc.2023.033024",
+                            "section_type": "REF",
+                            "source": "Comput. Mater. Contin.",
+                            "type": "ref",
+                            "volume": "74",
+                            "year": "2022"
+                        },
+                        "text": "Brain tumor segmentation in multimodal MRI using U-Net layered structure",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36390,
+                        "infons": {
+                            "fpage": "369",
+                            "lpage": "379",
+                            "name_0": "surname:Baid;given-names:U",
+                            "name_1": "surname:Talbar;given-names:S",
+                            "name_2": "surname:Rane;given-names:S",
+                            "name_3": "surname:Gupta;given-names:S",
+                            "name_4": "surname:Thakur;given-names:M H",
+                            "name_5": "surname:Moiyadi;given-names:A",
+                            "name_6": "surname:Thakur;given-names:S",
+                            "name_7": "surname:Mahajan;given-names:A",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2019"
+                        },
+                        "text": "Deep learning radiomics algorithm for gliomas (drag) model: a novel approach using 3D unet based deep convolutional neural network for predicting survival in gliomas brainlesion: glioma, multiple sclerosis, stroke and traumatic brain injuries",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36633,
+                        "infons": {
+                            "elocation-id": "1091850",
+                            "name_0": "surname:Vijay;given-names:S",
+                            "name_1": "surname:Guhan;given-names:T",
+                            "name_2": "surname:Srinivasan;given-names:K",
+                            "name_3": "surname:Vincent;given-names:P D R",
+                            "name_4": "surname:Chang;given-names:C-Y",
+                            "pub-id_doi": "10.3389/fpubh.2023.1091850",
+                            "pub-id_pmid": "36817919",
+                            "section_type": "REF",
+                            "source": "Front. Public Health",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2023"
+                        },
+                        "text": "MRI brain tumor segmentation using residual spatial pyramid pooling-powered 3D U-Net",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36718,
+                        "infons": {
+                            "fpage": "28658",
+                            "lpage": "28679",
+                            "name_0": "surname:Roy;given-names:S",
+                            "name_1": "surname:Saha;given-names:R",
+                            "name_2": "surname:Sarkar;given-names:S",
+                            "name_3": "surname:Mehera;given-names:R",
+                            "name_4": "surname:Pal;given-names:R K",
+                            "name_5": "surname:Bandyopadhyay;given-names:S K",
+                            "pub-id_doi": "10.1109/ACCESS.2023.3257722",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "11",
+                            "year": "2023"
+                        },
+                        "text": "Brain tumour segmentation using S-Net and SA-Net",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36767,
+                        "infons": {
+                            "elocation-id": "104926",
+                            "name_0": "surname:Ruba;given-names:T",
+                            "name_1": "surname:Tamilselvi;given-names:R",
+                            "name_2": "surname:Beham;given-names:M P",
+                            "pub-id_doi": "10.1016/j.bspc.2023.104926",
+                            "section_type": "REF",
+                            "source": "Biomed. Signal Process. Control",
+                            "type": "ref",
+                            "volume": "84",
+                            "year": "2023"
+                        },
+                        "text": "Brain tumor segmentation using JGate-AttResUNet\u2013A novel deep learning approach",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36848,
+                        "infons": {
+                            "elocation-id": "104336",
+                            "name_0": "surname:Peng;given-names:Y",
+                            "name_1": "surname:Sun;given-names:J",
+                            "pub-id_doi": "10.1016/j.bspc.2022.104336",
+                            "section_type": "REF",
+                            "source": "Biomed. Signal Process. Control",
+                            "type": "ref",
+                            "volume": "80",
+                            "year": "2023"
+                        },
+                        "text": "The multimodal MRI brain tumor segmentation based on AD-Net",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36908,
+                        "infons": {
+                            "fpage": "15156",
+                            "lpage": "15169",
+                            "name_0": "surname:Wang;given-names:W",
+                            "name_1": "surname:Zhang;given-names:K",
+                            "name_2": "surname:Su;given-names:Y",
+                            "name_3": "surname:Wang;given-names:J",
+                            "name_4": "surname:Wang;given-names:Q",
+                            "pub-id_doi": "10.1109/TNNLS.2023.3282905",
+                            "section_type": "REF",
+                            "source": "IEEE T. Neural Netw. Learn. Syst.",
+                            "type": "ref",
+                            "volume": "35",
+                            "year": "2023"
+                        },
+                        "text": "Learning cross-attention discriminators via alternating time\u2013space transformers for visual tracking",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37010,
+                        "infons": {
+                            "fpage": "2699",
+                            "lpage": "3312",
+                            "name_0": "surname:Le;given-names:V H",
+                            "name_1": "surname:Minh;given-names:T N T",
+                            "name_2": "surname:Kha;given-names:Q H",
+                            "name_3": "surname:Le;given-names:N Q K",
+                            "pub-id_doi": "10.1007/s11517-023-02875-2",
+                            "pub-id_pmid": "37432527",
+                            "section_type": "REF",
+                            "source": "Med. Biol. Eng. Comput.",
+                            "type": "ref",
+                            "volume": "61",
+                            "year": "2023"
+                        },
+                        "text": "A transfer learning approach on MRI-based radiomics signature for overall survival prediction of low-grade and high-grade gliomas",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37140,
+                        "infons": {
+                            "fpage": "5398",
+                            "name_0": "surname:Kha;given-names:Q-H",
+                            "name_1": "surname:Le;given-names:V-H",
+                            "name_2": "surname:Hung;given-names:T N K",
+                            "name_3": "surname:Le;given-names:N Q K",
+                            "pub-id_doi": "10.3390/cancers13215398",
+                            "pub-id_pmid": "34771562",
+                            "section_type": "REF",
+                            "source": "Cancers",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2021"
+                        },
+                        "text": "Development and validation of an efficient MRI radiomics signature for improving the predictive performance of 1p/19q co-deletion in lower-grade gliomas",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37293,
+                        "infons": {
+                            "fpage": "94",
+                            "lpage": "114",
+                            "name_0": "surname:Diakogiannis;given-names:F I",
+                            "name_1": "surname:Waldner;given-names:F",
+                            "name_2": "surname:Caccetta;given-names:P",
+                            "name_3": "surname:Wu;given-names:C",
+                            "pub-id_doi": "10.1016/j.isprsjprs.2020.01.013",
+                            "section_type": "REF",
+                            "source": "ISPRS J. Photogramm. Remote Sens.",
+                            "type": "ref",
+                            "volume": "162",
+                            "year": "2020"
+                        },
+                        "text": "ResUNet-a: a deep learning framework for semantic segmentation of remotely sensed data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37380,
+                        "infons": {
+                            "fpage": "84",
+                            "lpage": "90",
+                            "name_0": "surname:Krizhevsky;given-names:A",
+                            "name_1": "surname:Sutskever;given-names:I",
+                            "name_2": "surname:Hinton;given-names:G E",
+                            "pub-id_doi": "10.1145/3065386",
+                            "section_type": "REF",
+                            "source": "Commun. ACM",
+                            "type": "ref",
+                            "volume": "60",
+                            "year": "2012"
+                        },
+                        "text": "ImageNet classification with deep convolutional neural networks",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37444,
+                        "infons": {
+                            "fpage": "134",
+                            "lpage": "142",
+                            "name_0": "surname:Siddique;given-names:N",
+                            "name_1": "surname:Paheding;given-names:S",
+                            "name_2": "surname:Alom;given-names:M Z",
+                            "name_3": "surname:Devabhaktuni;given-names:V",
+                            "pub-id_doi": "10.1117/12.2591343",
+                            "section_type": "REF",
+                            "source": "Proc. SPIE",
+                            "type": "ref",
+                            "volume": "11735",
+                            "year": "2021"
+                        },
+                        "text": "Recurrent residual U-Net with efficientnet encoder for medical image segmentation pattern recognition and tracking XXXII",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37565,
+                        "infons": {
+                            "fpage": "365",
+                            "lpage": "377",
+                            "name_0": "surname:Li;given-names:Y",
+                            "name_1": "surname:Fan;given-names:C",
+                            "name_2": "surname:Qian;given-names:P",
+                            "pub-id_doi": "10.1117/12.2671339",
+                            "section_type": "REF",
+                            "source": "Proc. SPIE",
+                            "type": "ref",
+                            "volume": "12610",
+                            "year": "2023"
+                        },
+                        "text": "A medical image segmentation algorithm based on spatial and channel attention mechanisms and data augmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37676,
+                        "infons": {
+                            "fpage": "834",
+                            "lpage": "848",
+                            "name_0": "surname:Chen;given-names:L-C",
+                            "name_1": "surname:Papandreou;given-names:G",
+                            "name_2": "surname:Kokkinos;given-names:I",
+                            "name_3": "surname:Murphy;given-names:K",
+                            "name_4": "surname:Yuille;given-names:A L",
+                            "pub-id_doi": "10.1109/TPAMI.2017.2699184",
+                            "pub-id_pmid": "28463186",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Pattern Anal. Mach. Intell.",
+                            "type": "ref",
+                            "volume": "40",
+                            "year": "2017"
+                        },
+                        "text": "Deeplab: semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37788,
+                        "infons": {
+                            "fpage": "203",
+                            "lpage": "211",
+                            "name_0": "surname:Isensee;given-names:F",
+                            "name_1": "surname:Jaeger;given-names:P F",
+                            "name_2": "surname:Kohl;given-names:S A A",
+                            "name_3": "surname:Petersen;given-names:J",
+                            "name_4": "surname:Maier-Hein;given-names:K H",
+                            "pub-id_doi": "10.1038/s41592-020-01008-z",
+                            "pub-id_pmid": "33288961",
+                            "section_type": "REF",
+                            "source": "Nat. Methods",
+                            "type": "ref",
+                            "volume": "18",
+                            "year": "2021"
+                        },
+                        "text": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37877,
+                        "infons": {
+                            "fpage": "12561",
+                            "lpage": "13105",
+                            "name_0": "surname:Goceri;given-names:E",
+                            "pub-id_doi": "10.1007/s10462-023-10453-z",
+                            "section_type": "REF",
+                            "source": "Artif. Intell. Rev.",
+                            "type": "ref",
+                            "volume": "56",
+                            "year": "2023"
+                        },
+                        "text": "Medical image data augmentation: techniques, comparisons and interpretations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 37954,
+                        "infons": {
+                            "fpage": "199",
+                            "name_0": "surname:Zheng;given-names:P",
+                            "name_1": "surname:Zhu;given-names:X",
+                            "name_2": "surname:Guo;given-names:W",
+                            "pub-id_doi": "10.1186/s12880-022-00931-1",
+                            "pub-id_pmid": "36401207",
+                            "section_type": "REF",
+                            "source": "BMC Med. Imaging",
+                            "type": "ref",
+                            "volume": "22",
+                            "year": "2022"
+                        },
+                        "text": "Brain tumour segmentation based on an improved U-Net",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38007,
+                        "infons": {
+                            "fpage": "342",
+                            "lpage": "351",
+                            "name_0": "surname:Daza;given-names:L",
+                            "name_1": "surname:G\u00f3mez;given-names:C",
+                            "name_2": "surname:Arbel\u00e1ez;given-names:P",
+                            "section_type": "REF",
+                            "type": "ref",
+                            "year": "2021"
+                        },
+                        "text": "Cerberus: a multi-headed network for brain tumor segmentation Brainlesion: glioma, multiple sclerosis, stroke and traumatic brain injuries",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38146,
+                        "infons": {
+                            "comment": "(Available at: https://github.com/majid9418/EResU-Net)",
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

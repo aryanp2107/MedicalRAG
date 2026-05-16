@@ -1,0 +1,1978 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260502",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13129080",
+                "infons": {
+                    "license": "CC BY-NC-ND"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.1038/s41598-026-42868-3",
+                            "article-id_pmc": "PMC13129080",
+                            "article-id_pmid": "41844781",
+                            "article-id_publisher-id": "42868",
+                            "elocation-id": "13834",
+                            "kwd": "Contrast enhancement Contrast entropy Genetic Algorithm (GA) Genetically-Adapted Dual-Cut Histogram Equalization (GADCHE) Image processing Image quality Engineering Biomedical engineering",
+                            "license": "Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article\u2019s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article\u2019s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.",
+                            "name_0": "surname:Bukhori;given-names:Iksan",
+                            "name_1": "surname:Sim;given-names:Kok Swee",
+                            "name_2": "surname:Gan;given-names:Kok Beng",
+                            "name_3": "surname:Aziz;given-names:Nor Azlina Ab",
+                            "section_type": "TITLE",
+                            "title": "Keywords Subject terms",
+                            "type": "front",
+                            "volume": "16",
+                            "year": "2026"
+                        },
+                        "text": "Contrast enhancement for brain MRI images via genetic algorithm-based dual cut histogram equalization",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 102,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "Contrast enhancement technique is a prevalent problem in aiding interpretation of Magnetic Resonance Imaging (MRI) images. A low contrast MRI image may prove to be problematic in identifying medical problems such as brain tumor in the image, either in visual identification or by automated algorithm such as machine learning. This study proposes a novel enhancement technique for Brain MRI images named Genetically Adapted Dual Cut Histogram Equalization (GADCHE). The main contribution of the paper is to provide technique to enhance the contrast of the image while simultaneously maintaining the structure of the image. The proposed method eliminates the extreme values of the histogram and partitions the histogram into three distinct groups and apply asymmetric transformation to them. The Genetic Algorithm side handles the optimization of the histogram\u2019s cutting points to achieve optimum results. The experiments show that the proposed method gives promising results in terms of contrast enhancement across three datasets with average Effective Measure of Enhancement (EME) score of 263.25, Effective Measure of Enhancement Entropy (EMEE) score of 5.51, Logarithmic Michelson Contrast Measure (AME) score of 1.196, Logarithmic Michelson Contrast Measure by Entropy (AMEE) score of 0.0067 and Peak Signal to Ratio (PSNR) score of 30.06. The structural integrity of the resulting images are also shown to be intact with Structural Similarity Index (SSIM) score of 0.74 and Absolute Mean Brightness Error (AMBE) score of 9.75. In terms of contrast entropy, the proposed method is shown to perform other techniques, with competing results in terms of structural integrity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1780,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1793,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Contrast enhancement of Magnetic Resonance Imaging (MRI) image of Brain plays a crucial role in helping identification of brain tumor. This is because low contrast in medical images may make the identification more challenging. This challenge arises not only with manual, expert-based interpretation, but also an automated one such as in AI-based approaches. Due to this, several research have proposed contrast enhancement techniques over the years. One of the simplest and popular method is Histogram Equalization (HE) which distributes pixel intensity over the full intensity range. This approach however is not suitable for a contrast enhancement where brightness preservation is important due to the mean-shift problem. Zuiderveld proposed Contrast Limited Adaptive Histogram Equalization (CLAHE) to reduce this problem along with the noise problem in the original HE. Yeong-Taeg Kim further attempted to solve the brightness preservation problem by proposing Brightness-preserving Bi-histogram Equalization (BBHE). Yu Wan, Qian Chen and Bio-Min Zang later proposed Dualistic Sub-image Histogram Equalization (DSIHE) which is claimed to perform better than BBHE in terms of entropy and brightness preservation. Teh and Sim also proposed a variant of BBHE called Extreme-Level Eliminating Brightness-preserving Bi-Histogram Equalization (ELEBBHE) by removing the extreme values from both ends of the histogram and divides the histogram into two sub-images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3254,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "This paper proposes a novel contrast enhancement technique called Dual-Cut Histogram Equalization (DCHE) and its extension via Genetic Algorithm Optimization (GADCHE). The performance of the proposed method is compared with several contrast enhancement techniques on a dataset of brain MRI images according to several image enhancement metrics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3599,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Related works",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3613,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Over the years, several contrast enhancement techniques have been proposed. These techniques are discussed in this section. In 1980\u2009s, Histogram Equalization (HE) was the predominant technique in medical image enhancement. Since then, it has been applied in many fields, some of the most recent being the application on facial recognition, enhancement on artistic images, and Noise correction on digital image. The main problem with HE is that it sometimes over-enhance the image, causing the image to look unnatural.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4133,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In order to tackle this over enhancement problem, Contrast Limited Histogram Equalization was introduced which limits the contrast amplification to yield a more natural-looking enhanced image. CLAHE works by dividing the image into several tiles of certain size. The HE is then implemented on each tile independently with predefined clip limit.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 4478,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Brightness-preserving Bi-Histogram Equalization (BBHE) was also developed to preserve the mean brightness of the image while enhancing its contrast. However, instead of dividing the image directly into several regions like in CLAHE, BBHE instead divides the Histogram of the image into two sub-histograms based on the mean intensity value. The histogram equalization is then performed on each sub-histogram independently. This is then followed by the merging of the sub-histograms to construct the enhanced image. his technique has been used in multiple fields, for example to help CNN in detecting mango plant disease detection and video processing on FPGA.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5137,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Dualistic Sub Image Histogram Equalization (DSIHE) is yet another image enhancement technique designed to overcome the limitations of traditional histogram equalization methods while preserving local contrast and image details. DSIHE\u2019s pipeline starts by dividing the input image into dualistic sub-images and applying histogram equalization adaptively to each sub-image, thereby achieving a balanced enhancement across both homogeneous and heterogeneous regions. This way, DSIHE is said to effectively preserve local contrast while minimizing the risk of over-enhancement or artifacts by treating homogeneous and heterogeneous regions separately. DSIHE has been used for example in reducing inconsistent illumination in video, being combined with variant of BBHE, and working together with CLAHE in wavelet image fusion. It also has been shown to perform well to detect stroke using CT scan of the brain.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6045,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In 2016, Teh et al. proposed a new contrast enhancement technique called Extreme-Level Eliminating Brightness Preserving Bi-Histogram Equalization (ELEBBHE). This technique was introduced to detect ischemic stroke on the brain via CT scan image. Other enhancement techniques typically did not really care about extreme values of the histogram. That is, every pixel\u2019s brightness level contribute to the histogram equalization. This posed a problem when dealing with CT scan of the brain, where a lot pixels with low brightness values typically represent a background, while those with very high brightness values represent the skull. Since the one typically wants to enhance the brain region, the background and skull should not be part of the enhancement process. ELEBBHE effectively removes the extreme values on either side of the histogram before splitting the histogram into two regions for the HE process to be implemented.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6976,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In all of these methods, the cutting points of the histogram are determined rigidly. These rigid techniques may not be able to adapt to specific characteristics of each image. Adaptive Gamma corrections ( instead used Adaptive Gamma Correction (AGC) to apply different kinds of enhancement for different regions of the image. However, the classifications of these regions are still decided based on predefined parameters which may not generalize well to all images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7442,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In order to mitigate this problem, this paper proposed a novel contrast enhancement technique which get rids of the needs to predetermine where the regions of the image on which different enhancement is implemented by using Genetic Algorithm (GA). By guiding the GA through the Image Quality Assessment(IQA) metrics, the resulting enhancement is aimed to give balanced between enhancement quality and image\u2019s structural integrity.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7875,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Image enhancement quality metrics",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7909,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "There are quite a few Image Quality Assessment (IQA) metrics typically used in discussing image enhancement techniques to evaluate how well the technique performed. In this paper in particular, we shall discuss five of them, namely Effective Measure of Enhancement (EME), Effective Measure of Enhancement Entropy (EMEE), Peak Signal to Noise Ratio (PSNR), Structural Similarity Index (SSIM), and Absolute Mean Brightness Error (AMBE).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8344,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Effective Measure of Enhancement (EME)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8383,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "EME is a metric to evaluate image enhancement which has been widely used as an IQA metric. In this metric, the image is divided into multiple  blocks. Let each block be represented as , where i and j are the row and column index of the pixel in this block, respectively. The contrast ratio inside of a block  can be defined as equation (1)where  and  are the maximum and minimum pixel value within block , respectively. The small nonzero constant c is added in the denominator to avoid division of zero. EME can then be defined mathematically as shown in equation (2)In this metric, higher value means better image quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9007,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Effective Measure of Enhancement Entropy (EMEE)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9055,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "EMEE is introduced to solve the problem of range-dependence in EME by utilizing the concept of entropy. Due to this reason, this metric is commonly categorized as contrast entropy metric. Just like EME, this metric also quantifies pixel diversity in multiple blocks and averaging them. Simply put, EMEE is defined as presented in equation (3).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9399,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Logarithmic Michelson Contrast Measure (AME)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9444,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "AME is first proposed by Agaian et.al in. This metric is based on Michelson contrast measure. Similar to EME and EMEE, in this metric the image is divided into blocks. For each block, the Michelson contrast is defined as in equation (4).Where again small nonzero constant c is included to avoid division by zero. The AME is commonly then defined as shown in equation (5).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9816,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Logarithmic Michelson Contrast Measure by Entropy (AMEE)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 9873,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "The inclusion of entropy measure to AME results in the entropic variation of the AME, commonly called AMEE. This metric is especially good when being applied to images with random texture and nonuniform background such as breast cancer and brain images. This metric is described by equation (6).Like in AME, in this metric good contrast is defined by AMEE value close to zero.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10250,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Structural Similarity Index (SSIM)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10285,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "SSIM is a metric to identify the structural similarity between two images. It takes into account luminance, contrast, and structure, aiming to mimic human visual perception. This metric is important in the case of image contrast enhancement, since we want to obtain a new image of higher contrast from original image without actually changing the image too much. The SSIM is defined in equation (7).Where x and y represent the two images being compared.  represents the variance of image x while  represents the variance of image y.  and  represent the mean of image x and image y, respectively. Finally,  is the local covariance between images x and y and  and  are small numbers added to avoid division by zero.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10999,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "SSIM\u2019s output is in the range of [0,\u00a01] where 0 means the two images are totally different while 1 means the two images are exactly the same.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11144,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Peak to Noise Signal Ratio (PSNR)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11178,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Peak Signal-to-Noise Ratio (PSNR) is a measure commonly used in image processing to evaluate the quality of a reconstructed or processed image compared to an original reference image. It quantifies the ratio between the maximum possible power of a signal and the power of corrupting noise that affects the fidelity of its representation. Let x be the original image and y be the enhanced image. The Mean Squared Error (MSE) between these two images is defined as equation (8).Where N is the total number of pixels in the image. The equation for Peak Signal-to-Noise Ratio (PSNR) is then as shown in equation (9).Higher PSNR typically indicates better image quality.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11844,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_2"
+                        },
+                        "text": "Average Mean Brightness Error (AMBE)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11881,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "AMBE represents the absolute difference of mean brightness between two images. It can be described by equation (10).Where  and  depict the mean of the original and the enhanced image, respectively. This metric measures the degree of brightness distortion produced by the enhancement method. The lower AMBE, the better the preservation of brightness is in the image.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12247,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Proposed method",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12263,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Preprocessing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12277,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig1_HTML.jpg",
+                            "id": "Fig1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Preprocessing used in this research. It consists of contour cropping method with a resizing algorithm used at the end.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12396,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Some images in MRI images usually contain a lot of black background, often dominating the image of the brain itself. Thus, in this study we implement a background removal to focus on the brain image itself. After that, each image is resized to the size of . Figure 1 shows the preprocessing used in this research. Similar technique was also used in.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12746,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Proposed method: Dual-Cut Histogram Equalization (DCHE)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12802,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig2_HTML.jpg",
+                            "id": "Fig2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Example of histogram partitioning by  and .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12846,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In this paper, a novel contrast enhancement technique for grayscale image is introduced. Similar to ELBBHE(), the algorithm starts by removing extreme values of the histogram. The difference lies in the next step in the algorithm. Unlike in ELEBBHE where a single partition point is given (), DCHE uses two partition points named  and  with , where L is the highest intensity value of the image. The idea behind this is rather simple. In a grayscale brain MRI image, there are typically a lot of black and gray pixels representing background and brain tissue, respectively. There will also be several pixels with higher intensity representing skull or the tumor in the brain. These higher intensity pixels will form a clump on the histogram (See Fig. 2).This clump area may require different contrast enhancement treatment compared to the other areas. Therefore, two cutting points may be determined, flanking this region (See Fig. 2).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13782,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig3_HTML.jpg",
+                            "id": "Fig3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Effect of applying equation ((11)): (a) Original, (b) After Transformation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13858,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The idea is to scale up the brightness for the Region 1 and Region 3. This scaling up process is done asymmetrically. The aim for such arrangement is to try to darken the pixels which correspond to the normal tissue, which may actually help the tumor on the brain to show up clearer against darker background. This asymmetric scaling is performed by using the transformation function , given by equation (11).Where L denotes the highest intensity level, and . This function transforms the intensity levels of pixels based on their cumulative distribution probabilities within each part of the histogram, defined as defined in equation (12). An example of the effect (11) on an image is shown in 3. As can be seen in this figure, the resulting image is shown to better highlight the tumor.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14647,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Where  is the PDF of the pixels with brightness . Finally, the transformed values are applied to each pixel in the input image using the equation defined in equation (13).Where  is the intensity of the pixel at position (i,\u00a0j). The transformation function T is applied to each pixel in the input image, utilizing the pre-computed transformation values based on the cumulative distribution probabilities.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15052,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As one can see in equation (11) the middle part of the histogram is changed to zero. This has an effect of making the normal tissue of the brain, which takes the most space in the image to be as dark as possible. Along with the asymmetric scaling as in equation (11), this has an effect of emphasizing the abnormal region in the brain. The pseudo code for this algorithm can be seen in Algorithm\u00a01.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15452,
+                        "infons": {
+                            "file": "41598_2026_42868_Figa_HTML.jpg",
+                            "id": "Figa",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "DCHE algorithm",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15467,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As can be seen from equation (11), this method depends heavily on the choice of  and . A suitable  and  also determines the balance between the clear tumor region in the brain and the IQA metrics commonly used to determine performance of contrast enhancement techniques. In the following sections, Genetic Algorithm is employed to automatically determine the optimal value of these parameters. ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15862,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Proposed method: Genetically-Adapted Dual-Cut Histogram Equalization (GADCHE)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15940,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig4_HTML.jpg",
+                            "id": "Fig4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "GADCHE pipeline.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15957,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Genetic Algorithm (GA) is one of the optimization methods in the category of evolutionary computing. The idea behind the algorithm is inspired by natural selection and genetic processes. With GA optimization, we can choose the two cutting points in DCHE optimally. A grayscale image which needs to be enhanced first go through the preprocessing step which removes the background as much as possible and ensures the image has a size of 256 x 256. A random population of and  is initialized and these solution candidates are optimized using GA until the stopping criteria is achieved, that is, either until we have  generations or until the best fitness in  consecutive generations improved by less than . In general, the whole process is depicted in Fig. 4",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16713,
+                        "infons": {
+                            "file": "41598_2026_42868_Figb_HTML.jpg",
+                            "id": "Figb",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "GA-DCHE algorithm",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 16731,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The resulting image is aimed to be of high contrast entropy but while also keeping Structural Similarity (SSIM) relatively high, indicating that the contrast enhancement does not make the enhanced image stray too far away from the original. The pseudocode of the whole algorithm is described in detail in Algorithm\u00a02. ",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17051,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Code availability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17069,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The code used to implement the proposed method can be accessed from",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17137,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Experimental results and analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17171,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "GA parameters.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17186,
+                        "infons": {
+                            "file": "Tab1.xml",
+                            "id": "Tab1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\">Params</th><th align=\"left\">Description</th><th align=\"left\">Value</th></tr></thead><tbody><tr><td align=\"left\"><inline-formula id=\"IEq40\"><tex-math id=\"d33e916\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$N_{pop}$$\\end{document}</tex-math></inline-formula></td><td align=\"left\">Number of individuals in population</td><td align=\"left\">60</td></tr><tr><td align=\"left\"><inline-formula id=\"IEq41\"><tex-math id=\"d33e926\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$N_{gen}$$\\end{document}</tex-math></inline-formula></td><td align=\"left\">Number of generations (iterations)</td><td align=\"left\">200</td></tr><tr><td align=\"left\"><inline-formula id=\"IEq42\"><tex-math id=\"d33e936\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$p_c$$\\end{document}</tex-math></inline-formula></td><td align=\"left\">Crossover probability</td><td align=\"left\">0.9</td></tr><tr><td align=\"left\"><inline-formula id=\"IEq43\"><tex-math id=\"d33e946\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$p_{mut}$$\\end{document}</tex-math></inline-formula></td><td align=\"left\">Mutation probability</td><td align=\"left\">1/8</td></tr><tr><td align=\"left\"><inline-formula id=\"IEq44\"><tex-math id=\"d33e956\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$f_{thresh}$$\\end{document}</tex-math></inline-formula></td><td align=\"left\">Threshold of which two fitness values are deemed significantly different</td><td align=\"left\"><inline-formula id=\"IEq45\"><tex-math id=\"d33e963\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$10^{-6}$$\\end{document}</tex-math></inline-formula></td></tr><tr><td align=\"left\"><inline-formula id=\"IEq46\"><tex-math id=\"d33e969\">\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$n_{stag}$$\\end{document}</tex-math></inline-formula></td><td align=\"left\">The number of consecutive nonsignificant best fitness before the search is stopped</td><td align=\"left\">10</td></tr></tbody></table>\n"
+                        },
+                        "text": "Params\tDescription\tValue\t \t\tNumber of individuals in population\t60\t \t\tNumber of generations (iterations)\t200\t \t\tCrossover probability\t0.9\t \t\tMutation probability\t1/8\t \t\tThreshold of which two fitness values are deemed significantly different\t\t \t\tThe number of consecutive nonsignificant best fitness before the search is stopped\t10\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 17521,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All images used in the simulation in this Section are obtained from three different datasets. 164 images were taken from, 705 images from, and 969 images from. In total, 1838 MRI brain images are used, each one resized to . All simulations are implemented using Python on an Intel Core i5-1335U 1.30 GHz CPU with 16 GB RAM. For the GA part, the parameters used in the simulations are as shown in Table 1. For each image, the average time needed for the GA to find the best  and  is found to be about 15 minutes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18033,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "IQA metrics evaluation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18056,
+                        "infons": {
+                            "file": "Tab2.xml",
+                            "id": "Tab2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "IQA Metrics (Averaged across all images in each dataset). N:No enhancement, H:HE, C:CLAHE, B:BBHE, D:DSIHE, E:ELEBBHE, G:GADCHE.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18185,
+                        "infons": {
+                            "file": "Tab2.xml",
+                            "id": "Tab2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" rowspan=\"2\"/><th align=\"left\" rowspan=\"2\">Metrics</th><th align=\"left\" rowspan=\"2\">N</th><th align=\"left\" colspan=\"7\">Algorithms being compared</th><th align=\"left\">Proposed</th></tr><tr><th align=\"left\">HE</th><th align=\"left\">AHE</th><th align=\"left\">AGC</th><th align=\"left\">C</th><th align=\"left\">B</th><th align=\"left\">D</th><th align=\"left\">E</th><th align=\"left\">G</th></tr></thead><tbody><tr><td align=\"left\" colspan=\"11\">Dataset 1<sup><xref ref-type=\"bibr\" rid=\"CR44\">44</xref></sup></td></tr><tr><td align=\"left\" rowspan=\"4\"><p>Contrast</p><p>Entropy</p></td><td align=\"left\">EME</td><td align=\"left\">82.52</td><td align=\"left\">105.43</td><td align=\"left\">112.18</td><td align=\"left\">123.15</td><td align=\"left\">182.09</td><td align=\"left\">80.50</td><td align=\"left\">80.75</td><td align=\"left\">133.92</td><td align=\"left\"><bold>288.52</bold></td></tr><tr><td align=\"left\">EMEE</td><td align=\"left\">1.02</td><td align=\"left\">1.75</td><td align=\"left\">1.69</td><td align=\"left\">1.99</td><td align=\"left\">3.70</td><td align=\"left\">0.71</td><td align=\"left\">0.72</td><td align=\"left\">2.41</td><td align=\"left\"><bold>6.16</bold></td></tr><tr><td align=\"left\">AME</td><td align=\"left\">6.67</td><td align=\"left\">31.52</td><td align=\"left\">13.25</td><td align=\"left\">4.99</td><td align=\"left\">26.54</td><td align=\"left\">3.18</td><td align=\"left\">3.12</td><td align=\"left\">18.74</td><td align=\"left\"><bold>0.037</bold></td></tr><tr><td align=\"left\">AMEE</td><td align=\"left\">0.04</td><td align=\"left\">0.375</td><td align=\"left\">0.38</td><td align=\"left\">0.16</td><td align=\"left\">0.361</td><td align=\"left\">0.015</td><td align=\"left\">0.015</td><td align=\"left\">0.02</td><td align=\"left\"><bold>0.00181</bold></td></tr><tr><td align=\"left\" rowspan=\"3\"><p>Structural</p><p>Integrity</p></td><td align=\"left\">SSIM</td><td align=\"left\">-</td><td align=\"left\">0.51</td><td align=\"left\">0.78</td><td align=\"left\">0.96</td><td align=\"left\">0.33</td><td align=\"left\">0.59</td><td align=\"left\">0.59</td><td align=\"left\"><bold>0.87</bold></td><td align=\"left\">0.66</td></tr><tr><td align=\"left\">PSNR</td><td align=\"left\">-</td><td align=\"left\">27.97</td><td align=\"left\">28.46</td><td align=\"left\">28.42</td><td align=\"left\">27.59</td><td align=\"left\">29.00</td><td align=\"left\">29.04</td><td align=\"left\">28.26</td><td align=\"left\"><bold>29.21</bold></td></tr><tr><td align=\"left\">AMBE</td><td align=\"left\">-</td><td align=\"left\">68.94</td><td align=\"left\">26.87</td><td align=\"left\"><bold>9.05</bold></td><td align=\"left\">63.21</td><td align=\"left\">38.96</td><td align=\"left\">37.88</td><td align=\"left\">9.43</td><td align=\"left\"><bold>16.66</bold></td></tr><tr><td align=\"left\" colspan=\"11\">Dataset 2<sup><xref ref-type=\"bibr\" rid=\"CR45\">45</xref></sup></td></tr><tr><td align=\"left\" rowspan=\"4\"><p>Contrast</p><p>Entropy</p></td><td align=\"left\">EME</td><td align=\"left\">133.23</td><td align=\"left\">135.05</td><td align=\"left\">110.35</td><td align=\"left\">150.81</td><td align=\"left\">151.49</td><td align=\"left\">62.65</td><td align=\"left\">63.42</td><td align=\"left\">154.42</td><td align=\"left\"><bold>250.91</bold></td></tr><tr><td align=\"left\">EMEE</td><td align=\"left\">2.36</td><td align=\"left\">2.54</td><td align=\"left\">1.66</td><td align=\"left\">2.76</td><td align=\"left\">3.00</td><td align=\"left\">0.47</td><td align=\"left\">0.47</td><td align=\"left\">2.56</td><td align=\"left\"><bold>5.20</bold></td></tr><tr><td align=\"left\">AME</td><td align=\"left\">7.16</td><td align=\"left\">22.91</td><td align=\"left\">11.15</td><td align=\"left\">5.76</td><td align=\"left\">28.91</td><td align=\"left\">3.68</td><td align=\"left\">3.49</td><td align=\"left\">54.48</td><td align=\"left\"><bold>1.68</bold></td></tr><tr><td align=\"left\">AMEE</td><td align=\"left\">0.04</td><td align=\"left\">0.18</td><td align=\"left\">0.14</td><td align=\"left\">0.03</td><td align=\"left\">0.35</td><td align=\"left\">0.018</td><td align=\"left\">0.017</td><td align=\"left\">0.85</td><td align=\"left\"><bold>0.01</bold></td></tr><tr><td align=\"left\" rowspan=\"3\"><p>Structural</p><p>Integrity</p></td><td align=\"left\">SSIM</td><td align=\"left\">1</td><td align=\"left\">0.45</td><td align=\"left\">0.78</td><td align=\"left\"><bold>0.96</bold></td><td align=\"left\">0.34</td><td align=\"left\">0.49</td><td align=\"left\">0.49</td><td align=\"left\">0.0003</td><td align=\"left\">0.69</td></tr><tr><td align=\"left\">PSNR</td><td align=\"left\">-</td><td align=\"left\">28.15</td><td align=\"left\">28.50</td><td align=\"left\">27.99</td><td align=\"left\">27.67</td><td align=\"left\">28.84</td><td align=\"left\">28.96</td><td align=\"left\">27.88</td><td align=\"left\"><bold>29.63</bold></td></tr><tr><td align=\"left\">AMBE</td><td align=\"left\">-</td><td align=\"left\">70.54</td><td align=\"left\">26.41</td><td align=\"left\">9.36</td><td align=\"left\">64.85</td><td align=\"left\">44.23</td><td align=\"left\">40.81</td><td align=\"left\">75.72</td><td align=\"left\"><bold>8.87</bold></td></tr><tr><td align=\"left\" colspan=\"11\">Dataset 3<sup><xref ref-type=\"bibr\" rid=\"CR46\">46</xref></sup></td></tr><tr><td align=\"left\" rowspan=\"4\"><p>Contrast</p><p>Entropy</p></td><td align=\"left\">EME</td><td align=\"left\">98.56</td><td align=\"left\">108.43</td><td align=\"left\">112.93</td><td align=\"left\">134.08</td><td align=\"left\">159.57</td><td align=\"left\">79.65</td><td align=\"left\">80.03</td><td align=\"left\">153.23</td><td align=\"left\"><bold>250.33</bold></td></tr><tr><td align=\"left\">EMEE</td><td align=\"left\">1.47</td><td align=\"left\">1.85</td><td align=\"left\">1.76</td><td align=\"left\">2.32</td><td align=\"left\">3.18</td><td align=\"left\">0.70</td><td align=\"left\">0.70</td><td align=\"left\">2.52</td><td align=\"left\"><bold>5.19</bold></td></tr><tr><td align=\"left\">AME</td><td align=\"left\">7.13</td><td align=\"left\">29.76</td><td align=\"left\">11.55</td><td align=\"left\">5.66</td><td align=\"left\">27.96</td><td align=\"left\">3.10</td><td align=\"left\">3.00</td><td align=\"left\">64.29</td><td align=\"left\"><bold>1.87</bold></td></tr><tr><td align=\"left\">AMEE</td><td align=\"left\">0.038</td><td align=\"left\">0.32</td><td align=\"left\">0.14</td><td align=\"left\">0.03</td><td align=\"left\">0.35</td><td align=\"left\">0.015</td><td align=\"left\">0.015</td><td align=\"left\">1.053</td><td align=\"left\"><bold>0.01</bold></td></tr><tr><td align=\"left\" rowspan=\"3\"><p>Structural</p><p>Integrity</p></td><td align=\"left\">SSIM</td><td align=\"left\">1</td><td align=\"left\">0.67</td><td align=\"left\">0.77</td><td align=\"left\"><bold>0.98</bold></td><td align=\"left\">0.32</td><td align=\"left\">0.72</td><td align=\"left\">0.72</td><td align=\"left\">\u22120.006</td><td align=\"left\">0.87</td></tr><tr><td align=\"left\">PSNR</td><td align=\"left\">-</td><td align=\"left\">27.87</td><td align=\"left\">28.00</td><td align=\"left\">29.51</td><td align=\"left\">27.70</td><td align=\"left\">30.20</td><td align=\"left\">30.20</td><td align=\"left\">27.94</td><td align=\"left\"><bold>31.34</bold></td></tr><tr><td align=\"left\">AMBE</td><td align=\"left\">-</td><td align=\"left\">54.87</td><td align=\"left\">26.54</td><td align=\"left\">8.23</td><td align=\"left\">58.41</td><td align=\"left\">30.01</td><td align=\"left\">30.01</td><td align=\"left\">54.01</td><td align=\"left\"><bold>3.70</bold></td></tr></tbody></table>\n"
+                        },
+                        "text": "\tMetrics\tN\tAlgorithms being compared\tProposed\t \tHE\tAHE\tAGC\tC\tB\tD\tE\tG\t \tDataset 1\t \tContrastEntropy\tEME\t82.52\t105.43\t112.18\t123.15\t182.09\t80.50\t80.75\t133.92\t288.52\t \tEMEE\t1.02\t1.75\t1.69\t1.99\t3.70\t0.71\t0.72\t2.41\t6.16\t \tAME\t6.67\t31.52\t13.25\t4.99\t26.54\t3.18\t3.12\t18.74\t0.037\t \tAMEE\t0.04\t0.375\t0.38\t0.16\t0.361\t0.015\t0.015\t0.02\t0.00181\t \tStructuralIntegrity\tSSIM\t-\t0.51\t0.78\t0.96\t0.33\t0.59\t0.59\t0.87\t0.66\t \tPSNR\t-\t27.97\t28.46\t28.42\t27.59\t29.00\t29.04\t28.26\t29.21\t \tAMBE\t-\t68.94\t26.87\t9.05\t63.21\t38.96\t37.88\t9.43\t16.66\t \tDataset 2\t \tContrastEntropy\tEME\t133.23\t135.05\t110.35\t150.81\t151.49\t62.65\t63.42\t154.42\t250.91\t \tEMEE\t2.36\t2.54\t1.66\t2.76\t3.00\t0.47\t0.47\t2.56\t5.20\t \tAME\t7.16\t22.91\t11.15\t5.76\t28.91\t3.68\t3.49\t54.48\t1.68\t \tAMEE\t0.04\t0.18\t0.14\t0.03\t0.35\t0.018\t0.017\t0.85\t0.01\t \tStructuralIntegrity\tSSIM\t1\t0.45\t0.78\t0.96\t0.34\t0.49\t0.49\t0.0003\t0.69\t \tPSNR\t-\t28.15\t28.50\t27.99\t27.67\t28.84\t28.96\t27.88\t29.63\t \tAMBE\t-\t70.54\t26.41\t9.36\t64.85\t44.23\t40.81\t75.72\t8.87\t \tDataset 3\t \tContrastEntropy\tEME\t98.56\t108.43\t112.93\t134.08\t159.57\t79.65\t80.03\t153.23\t250.33\t \tEMEE\t1.47\t1.85\t1.76\t2.32\t3.18\t0.70\t0.70\t2.52\t5.19\t \tAME\t7.13\t29.76\t11.55\t5.66\t27.96\t3.10\t3.00\t64.29\t1.87\t \tAMEE\t0.038\t0.32\t0.14\t0.03\t0.35\t0.015\t0.015\t1.053\t0.01\t \tStructuralIntegrity\tSSIM\t1\t0.67\t0.77\t0.98\t0.32\t0.72\t0.72\t\u22120.006\t0.87\t \tPSNR\t-\t27.87\t28.00\t29.51\t27.70\t30.20\t30.20\t27.94\t31.34\t \tAMBE\t-\t54.87\t26.54\t8.23\t58.41\t30.01\t30.01\t54.01\t3.70\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19580,
+                        "infons": {
+                            "file": "Tab3.xml",
+                            "id": "Tab3",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "IQA Metrics (Averaged across all datasets). N:No enhancement, H:HE, C:CLAHE, B:BBHE, D:DSIHE, E:ELEBBHE, G:GADCHE.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19695,
+                        "infons": {
+                            "file": "Tab3.xml",
+                            "id": "Tab3",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\" colspan=\"11\">Dataset 1<sup><xref ref-type=\"bibr\" rid=\"CR44\">44</xref></sup></th></tr><tr><th align=\"left\" rowspan=\"2\"/><th align=\"left\" rowspan=\"2\">Metrics</th><th align=\"left\" rowspan=\"2\">N</th><th align=\"left\" colspan=\"7\">Algorithms being compared</th><th align=\"left\">Proposed</th></tr><tr><th align=\"left\">HE</th><th align=\"left\">AHE</th><th align=\"left\">AGC</th><th align=\"left\">C</th><th align=\"left\">B</th><th align=\"left\">D</th><th align=\"left\">E</th><th align=\"left\">G</th></tr></thead><tbody><tr><td align=\"left\" rowspan=\"4\"><p>Contrast</p><p>Entropy</p></td><td align=\"left\">EME</td><td align=\"left\">82.52</td><td align=\"left\">105.43</td><td align=\"left\">112.18</td><td align=\"left\">123.15</td><td align=\"left\">182.09</td><td align=\"left\">80.50</td><td align=\"left\">80.75</td><td align=\"left\">133.92</td><td align=\"left\"><bold>288.52</bold></td></tr><tr><td align=\"left\">EMEE</td><td align=\"left\">1.02</td><td align=\"left\">1.75</td><td align=\"left\">1.69</td><td align=\"left\">1.99</td><td align=\"left\">3.70</td><td align=\"left\">0.71</td><td align=\"left\">0.72</td><td align=\"left\">2.41</td><td align=\"left\"><bold>6.16</bold></td></tr><tr><td align=\"left\">AME</td><td align=\"left\">6.67</td><td align=\"left\">31.52</td><td align=\"left\">13.25</td><td align=\"left\">4.99</td><td align=\"left\">26.54</td><td align=\"left\">3.18</td><td align=\"left\">3.12</td><td align=\"left\">18.74</td><td align=\"left\"><bold>0.037</bold></td></tr><tr><td align=\"left\">AMEE</td><td align=\"left\">0.04</td><td align=\"left\">0.375</td><td align=\"left\">0.38</td><td align=\"left\">0.16</td><td align=\"left\">0.361</td><td align=\"left\">0.015</td><td align=\"left\">0.015</td><td align=\"left\">0.02</td><td align=\"left\"><bold>0.00181</bold></td></tr></tbody></table>\n"
+                        },
+                        "text": "Dataset 1\t \t\tMetrics\tN\tAlgorithms being compared\tProposed\t \tHE\tAHE\tAGC\tC\tB\tD\tE\tG\t \tContrastEntropy\tEME\t82.52\t105.43\t112.18\t123.15\t182.09\t80.50\t80.75\t133.92\t288.52\t \tEMEE\t1.02\t1.75\t1.69\t1.99\t3.70\t0.71\t0.72\t2.41\t6.16\t \tAME\t6.67\t31.52\t13.25\t4.99\t26.54\t3.18\t3.12\t18.74\t0.037\t \tAMEE\t0.04\t0.375\t0.38\t0.16\t0.361\t0.015\t0.015\t0.02\t0.00181\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20028,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Several IQA metrics which have been discussed before (EME, EMEE, AME, AMEE, SSIM, PSNR, and AMBE) are evaluated for HE, AHE, AGC, CLAHE, BBHE, DSIHE, ELEBBHE, and the proposed method. The averages of the evaluation for EME, EMEE, AME, and AMEE are presented in Table 2. The best scores in each metric are written in bold. The average result of each metric across all three datasets is presented in Table 3. The actual distribution of the results is shown in Fig. 5 for the contrast entropy metrics and in Fig. 6 for the structural integrity metrics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20578,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig5_HTML.jpg",
+                            "id": "Fig5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Boxplot representation of simulation results (EME, EMEE, AME, and AMEE). The blue horizontal line on the last two figures represent the base zero line.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20730,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig6_HTML.jpg",
+                            "id": "Fig6",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Boxplot representation of simulation results (SSIM, PSNR, and AMBE).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 20799,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The results in terms of SSIM, PSNR, and AMBE can be seen in Fig. 6. In terms of Image Quality (SSIM, PSNR, AMBE), the proposed method was below some of the other algorithm. Even so, in terms of all enhancement entropy metrics, proposed method performs much better than the others. In AME and AMEE, proposed method gives results closer to zero compared to other enhancement techniques. Thus, we can conclude that the proposed method has better performance in terms of contrast entropy, and can still be compared in terms of structural integrity metrics.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21352,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Statistical significance",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21377,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "ANOVA Test ().",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21392,
+                        "infons": {
+                            "file": "Tab4.xml",
+                            "id": "Tab4",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th align=\"left\">Metric</th><th align=\"left\">p-value</th></tr></thead><tbody><tr><td align=\"left\">EME</td><td align=\"left\">0</td></tr><tr><td align=\"left\">EMEE</td><td align=\"left\">0</td></tr><tr><td align=\"left\">AME</td><td align=\"left\">0</td></tr><tr><td align=\"left\">AMEE</td><td align=\"left\">4.1031E-277</td></tr><tr><td align=\"left\">SSIM</td><td align=\"left\">5.9E-232</td></tr><tr><td align=\"left\">PSNR</td><td align=\"left\">1.2E-132</td></tr><tr><td align=\"left\">AMBE</td><td align=\"left\">0</td></tr></tbody></table>\n"
+                        },
+                        "text": "Metric\tp-value\t \tEME\t0\t \tEMEE\t0\t \tAME\t0\t \tAMEE\t4.1031E-277\t \tSSIM\t5.9E-232\t \tPSNR\t1.2E-132\t \tAMBE\t0\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21495,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "In order to assess the significance of the evaluation results for each metric, a series of ANOVA test is conducted for each metric on all images in the dataset. The ANOVA test for the EME metric is shown in Table 4.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21711,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "As seen from Table 4, the differences between each metric are deemed as statistically significant enough, since for each of this metric, .",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21850,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Visual assessment of the enhanced images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21891,
+                        "infons": {
+                            "file": "41598_2026_42868_Fig7_HTML.jpg",
+                            "id": "Fig7",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Examples of the enhancement on five brain images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21941,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "The purpose of this image enhancement for brain tumor MRI images is to aid in detecting tumor. Thus, in this section we present the visual assessment to see how the enhanced images show clearer distinction between the tumor and the normal tissue surrounding it. Figure 7 shows the enhancement results of five images in the dataset visually.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22282,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22293,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In this paper, a novel contrast enhancement technique called Genetically-Adapted Dual-Cut Histogram Equalization (GADCHE) is presented to aid in identifying tumor in low-contrast MRI brain images. This method divides the histogram of grayscale image into three regions and apply different contrast enhancement to each region. The integration of GA helps in determining the optimal cutting points of the histogram and thus improve the technique\u2019s performance.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 22754,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "The proposed method is tested against other contrast enhancement techniques, namely HE, CLAHE, BBHE, DSIHE, ELEBBHE, and RSIHE on brain tumor images in three different datasets. The method shows better results in seven metrics, namely EME, EMEE, AME, AMEE, SSIM, PSNR, and AMBE. All in all, the method shows promising result to aid in identifying brain tumor in MRI images.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23128,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Publisher\u2019s note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23147,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23266,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23287,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "I.B: Writing \u2014 original draft; Programming; Experiments. K.S.S: Conceptualization; supervision; methodology; Writing \u2014 review & editing. K.B.G: Formal Analysis; resources; Writing \u2014 review & editing. N.A.A: AGC analysis, Additional two datasets analysis. All authors analyzed the results and reviewed the manuscript.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23610,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "title"
+                        },
+                        "text": "Funding",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23618,
+                        "infons": {
+                            "section_type": "ACK_FUND",
+                            "type": "paragraph"
+                        },
+                        "text": "The research is supported by Multimedia University, Malaysia. No additional funding is received.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23715,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title"
+                        },
+                        "text": "Data availability",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23733,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "Dataset: https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mrihttps://www.kaggle.com/datasets/orvile/brain-cancer-mri-datasethttps://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/versions/1 Code: https://github.com/iksanb/GADCHE/tree/GADCHE_v1.0",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24021,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title"
+                        },
+                        "text": "Declarations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24034,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title"
+                        },
+                        "text": "Competing interests",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24054,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The authors declare no competing interests.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24098,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24109,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Abin, D. et al. Brain Tumor Image Enhancement Using Blending of Contrast Enhancement Techniques, 736\u2013747 (Springer Cham, 2022).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24239,
+                        "infons": {
+                            "citation-alternatives": "Umbaugh, S. E. Digital image processing and analysis (CRC Press, 2022).",
+                            "name_0": "surname:Umbaugh;given-names:SE",
+                            "section_type": "REF",
+                            "source": "Digital image processing and analysis",
+                            "type": "ref",
+                            "year": "2022"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24240,
+                        "infons": {
+                            "citation-alternatives": "Younis, M. H., Abbas, S., Hayat, U., Musaddiq, M. H. & Hashmi, A. A cutting-edge hybrid approach for precise COVID-19 detection using deep learning. International Journal on Robotics, Automation and Sciences6, 86\u201393. 10.33093/ijoras.2024.6.1.12 (2024).",
+                            "fpage": "86",
+                            "lpage": "93",
+                            "name_0": "surname:Younis;given-names:MH",
+                            "name_1": "surname:Abbas;given-names:S",
+                            "name_2": "surname:Hayat;given-names:U",
+                            "name_3": "surname:Musaddiq;given-names:MH",
+                            "name_4": "surname:Hashmi;given-names:A",
+                            "pub-id_doi": "10.33093/ijoras.2024.6.1.12",
+                            "section_type": "REF",
+                            "source": "International Journal on Robotics, Automation and Sciences",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2024"
+                        },
+                        "text": "A cutting-edge hybrid approach for precise COVID-19 detection using deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24322,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Tan, T.-L., Sim, K. S. & Chong, A.-K. Contrast enhancement of ct brain images for detection of ischemic stroke. In: 2012 International Conference on Biomedical Engineering (ICoBE), 385\u2013388. 10.1109/ICoBE.2012.6179043(2012).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24548,
+                        "infons": {
+                            "citation-alternatives": "Toh, J. J. & Sayeed, M. S. Review on detecting pneumonia in deep learning. International Journal on Robotics, Automation and Sciences6, 70\u201377. 10.33093/ijoras.2024.6.1.10 (2024).",
+                            "fpage": "70",
+                            "lpage": "77",
+                            "name_0": "surname:Toh;given-names:JJ",
+                            "name_1": "surname:Sayeed;given-names:MS",
+                            "pub-id_doi": "10.33093/ijoras.2024.6.1.10",
+                            "section_type": "REF",
+                            "source": "International Journal on Robotics, Automation and Sciences",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2024"
+                        },
+                        "text": "Review on detecting pneumonia in deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24595,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Koh, N. C. Y., Sim, K. S. & Tso, C. P. CT brain lesion detection through combination of recursive sub-image histogram equalization in wavelet domain and adaptive gamma correction with weighting distribution. In: 2016 International Conference on Robotics, Automation and Sciences (ICORAS) (IEEE, 2016).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24897,
+                        "infons": {
+                            "citation-alternatives": "Sim, K. S., Tso, C. P. & Tan, Y. Y. Recursive sub-image histogram equalization applied to gray scale images. Pattern Recognit. Lett.28, 1209\u20131221. 10.1016/j.patrec.2007.02.003 (2007).",
+                            "fpage": "1209",
+                            "lpage": "1221",
+                            "name_0": "surname:Sim;given-names:KS",
+                            "name_1": "surname:Tso;given-names:CP",
+                            "name_2": "surname:Tan;given-names:YY",
+                            "pub-id_doi": "10.1016/j.patrec.2007.02.003",
+                            "section_type": "REF",
+                            "source": "Pattern Recognit. Lett.",
+                            "type": "ref",
+                            "volume": "28",
+                            "year": "2007"
+                        },
+                        "text": "Recursive sub-image histogram equalization applied to gray scale images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24969,
+                        "infons": {
+                            "citation-alternatives": "Zuiderveld, K. Contrast limited adaptive histogram equalization 474\u2013485 (Academic Press Professional Inc, 1994).",
+                            "fpage": "474",
+                            "lpage": "485",
+                            "name_0": "surname:Zuiderveld;given-names:K",
+                            "section_type": "REF",
+                            "source": "Contrast limited adaptive histogram equalization",
+                            "type": "ref",
+                            "year": "1994"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24970,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Soniminde, N. & Biradar, M. Boosting wavelet-based image fusion using equal weighted average of DSIHE and CLAHE. In: 2024 International Conference on Emerging Smart Computing and Informatics (ESCI), 1\u20136 (IEEE, 2024).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25189,
+                        "infons": {
+                            "citation-alternatives": "Kim, Y.-T. Contrast enhancement using brightness preserving bi-histogram equalization. IEEE Trans. Consum. Electron.43, 1\u20138 (1997).",
+                            "fpage": "1",
+                            "lpage": "8",
+                            "name_0": "surname:Kim;given-names:Y-T",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Consum. Electron.",
+                            "type": "ref",
+                            "volume": "43",
+                            "year": "1997"
+                        },
+                        "text": "Contrast enhancement using brightness preserving bi-histogram equalization",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25264,
+                        "infons": {
+                            "citation-alternatives": "Rajpoot, V. et al. Mango plant disease detection system using hybrid BBHE and CNN approach. Trait. Signal39, 1071\u20131078 (2022).",
+                            "fpage": "1071",
+                            "lpage": "1078",
+                            "name_0": "surname:Rajpoot;given-names:V",
+                            "pub-id_doi": "10.18280/ts.390334",
+                            "section_type": "REF",
+                            "source": "Trait. Signal",
+                            "type": "ref",
+                            "volume": "39",
+                            "year": "2022"
+                        },
+                        "text": "Mango plant disease detection system using hybrid BBHE and CNN approach",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25336,
+                        "infons": {
+                            "citation-alternatives": "Wang, Y., Chen, Q. & Zhang, B. Image enhancement based on equal area dualistic sub-image histogram equalization method. IEEE Trans. Consum. Electron.45, 68\u201375 (1999).",
+                            "fpage": "68",
+                            "lpage": "75",
+                            "name_0": "surname:Wang;given-names:Y",
+                            "name_1": "surname:Chen;given-names:Q",
+                            "name_2": "surname:Zhang;given-names:B",
+                            "pub-id_doi": "10.1109/30.754419",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Consum. Electron.",
+                            "type": "ref",
+                            "volume": "45",
+                            "year": "1999"
+                        },
+                        "text": "Image enhancement based on equal area dualistic sub-image histogram equalization method",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25424,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Thepade, S. D., Ople, M., Mahindra, V., Kulye, V. & Jamdar, S. Low light image contrast enhancement using blending of histogram equalization based methods DSIHE and MMBEBHE. In: 2022 2nd Asian Conference on Innovation in Technology (ASIANCON) (IEEE, 2022).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25681,
+                        "infons": {
+                            "citation-alternatives": "Kandhway, P., Bhandari, A. K. & Singh, A. A novel reformed histogram equalization based medical image contrast enhancement using krill herd optimization. Biomed. Signal Process. Control56, 101677 (2020).",
+                            "fpage": "101677",
+                            "name_0": "surname:Kandhway;given-names:P",
+                            "name_1": "surname:Bhandari;given-names:AK",
+                            "name_2": "surname:Singh;given-names:A",
+                            "pub-id_doi": "10.1016/j.bspc.2019.101677",
+                            "section_type": "REF",
+                            "source": "Biomed. Signal Process. Control",
+                            "type": "ref",
+                            "volume": "56",
+                            "year": "2020"
+                        },
+                        "text": "A novel reformed histogram equalization based medical image contrast enhancement using krill herd optimization",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25792,
+                        "infons": {
+                            "citation-alternatives": "Mirza, M. W., Siddiq, A. & Khan, I. R. A comparative study of medical image enhancement algorithms and quality assessment metrics on COVID-19 CT images. Signal Image Video Process.17, 915\u2013924 (2023).\n",
+                            "fpage": "915",
+                            "lpage": "924",
+                            "name_0": "surname:Mirza;given-names:MW",
+                            "name_1": "surname:Siddiq;given-names:A",
+                            "name_2": "surname:Khan;given-names:IR",
+                            "pub-id_doi": "10.1007/s11760-022-02214-2",
+                            "pub-id_pmid": "35493403",
+                            "section_type": "REF",
+                            "source": "Signal Image Video Process.",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2023"
+                        },
+                        "text": "A comparative study of medical image enhancement algorithms and quality assessment metrics on COVID-19 CT images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25905,
+                        "infons": {
+                            "citation-alternatives": "Chowdhury, J. H., Liu, Q. & Ramanna, S. Simple histogram equalization technique improves performance of VGG models on facial emotion recognition datasets. Algorithms10.3390/a17060238 (2024).",
+                            "name_0": "surname:Chowdhury;given-names:JH",
+                            "name_1": "surname:Liu;given-names:Q",
+                            "name_2": "surname:Ramanna;given-names:S",
+                            "pub-id_doi": "10.3390/a17060238",
+                            "section_type": "REF",
+                            "source": "Algorithms",
+                            "type": "ref",
+                            "year": "2024"
+                        },
+                        "text": "Simple histogram equalization technique improves performance of VGG models on facial emotion recognition datasets",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26019,
+                        "infons": {
+                            "citation-alternatives": "Zhang, W. The feature enhancement method of artistic images based on histogram equalization and bilateral filtering. PeerJ Comput. Sci.10, e2109 (2024).\n",
+                            "fpage": "e2109",
+                            "name_0": "surname:Zhang;given-names:W",
+                            "pub-id_doi": "10.7717/peerj-cs.2109",
+                            "pub-id_pmid": "39669451",
+                            "section_type": "REF",
+                            "source": "PeerJ Comput. Sci.",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2024"
+                        },
+                        "text": "The feature enhancement method of artistic images based on histogram equalization and bilateral filtering",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26125,
+                        "infons": {
+                            "citation-alternatives": "Surmayanti, S. & Sumijan, S. Improving digital image clarity: A study on the application of histogram equalization for noise correction. SinkrOn8, 1073\u20131079 (2024).",
+                            "fpage": "1073",
+                            "lpage": "1079",
+                            "name_0": "surname:Surmayanti;given-names:S",
+                            "name_1": "surname:Sumijan;given-names:S",
+                            "pub-id_doi": "10.33395/sinkron.v8i2.13564",
+                            "section_type": "REF",
+                            "source": "SinkrOn",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2024"
+                        },
+                        "text": "Improving digital image clarity: A study on the application of histogram equalization for noise correction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26232,
+                        "infons": {
+                            "citation-alternatives": "Yogalakshmi, G. & Sheela Rani, B. Sailfish optimizer based CLAHE with U-NET for MRI brain tumour segmentation. Meas. Sens.33, 101229 (2024).",
+                            "fpage": "101229",
+                            "name_0": "surname:Yogalakshmi;given-names:G",
+                            "name_1": "surname:Sheela Rani;given-names:B",
+                            "pub-id_doi": "10.1016/j.measen.2024.101229",
+                            "section_type": "REF",
+                            "source": "Meas. Sens.",
+                            "type": "ref",
+                            "volume": "33",
+                            "year": "2024"
+                        },
+                        "text": "Sailfish optimizer based CLAHE with U-NET for MRI brain tumour segmentation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26308,
+                        "infons": {
+                            "citation-alternatives": "Hana, F. M. & Maulida, I. D. Analysis of contrast limited adaptive histogram equalization (CLAHE) parameters on finger knuckle print identification. J. Phys. Conf. Ser.1764, 012049 (2021).",
+                            "fpage": "012049",
+                            "name_0": "surname:Hana;given-names:FM",
+                            "name_1": "surname:Maulida;given-names:ID",
+                            "pub-id_doi": "10.1088/1742-6596/1764/1/012049",
+                            "section_type": "REF",
+                            "source": "J. Phys. Conf. Ser.",
+                            "type": "ref",
+                            "volume": "1764",
+                            "year": "2021"
+                        },
+                        "text": "Analysis of contrast limited adaptive histogram equalization (CLAHE) parameters on finger knuckle print identification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26427,
+                        "infons": {
+                            "citation-alternatives": "Zuo, C., Chen, Q. & Sui, X. Range limited bi-histogram equalization for image contrast enhancement. Optik (Stuttg.)124, 425\u2013431 (2013).",
+                            "fpage": "425",
+                            "lpage": "431",
+                            "name_0": "surname:Zuo;given-names:C",
+                            "name_1": "surname:Chen;given-names:Q",
+                            "name_2": "surname:Sui;given-names:X",
+                            "pub-id_doi": "10.1016/j.ijleo.2011.12.057",
+                            "section_type": "REF",
+                            "source": "Optik (Stuttg.)",
+                            "type": "ref",
+                            "volume": "124",
+                            "year": "2013"
+                        },
+                        "text": "Range limited bi-histogram equalization for image contrast enhancement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26498,
+                        "infons": {
+                            "citation-alternatives": "Rajpoot, V. et al. Mango plant disease detection system using hybrid BBHE and CNN approach. Trait. Du Signal39, 1071\u20131078 (2022).",
+                            "fpage": "1071",
+                            "lpage": "1078",
+                            "name_0": "surname:Rajpoot;given-names:V",
+                            "pub-id_doi": "10.18280/ts.390334",
+                            "section_type": "REF",
+                            "source": "Trait. Du Signal",
+                            "type": "ref",
+                            "volume": "39",
+                            "year": "2022"
+                        },
+                        "text": "Mango plant disease detection system using hybrid BBHE and CNN approach",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26570,
+                        "infons": {
+                            "citation-alternatives": "Wang, Z., Yue, H., Wang, J., Tao, H. & Wang, L. Design and implementation of brightness configurable Bi-Histogram equalization based on FPGA. IOP Conf. Ser. Earth Environ. Sci.693, 012087 (2021).",
+                            "fpage": "012087",
+                            "name_0": "surname:Wang;given-names:Z",
+                            "name_1": "surname:Yue;given-names:H",
+                            "name_2": "surname:Wang;given-names:J",
+                            "name_3": "surname:Tao;given-names:H",
+                            "name_4": "surname:Wang;given-names:L",
+                            "pub-id_doi": "10.1088/1755-1315/693/1/012087",
+                            "section_type": "REF",
+                            "source": "IOP Conf. Ser. Earth Environ. Sci.",
+                            "type": "ref",
+                            "volume": "693",
+                            "year": "2021"
+                        },
+                        "text": "Design and implementation of brightness configurable Bi-Histogram equalization based on FPGA",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26663,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Abin, D. & Thepade, S. D. Illumination inconsistency reduction in video frames using DSIHE with kekre\u2019s LUV color space. In: 2021 Third International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV) (IEEE, 2021).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26918,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Thepade, S. D., Ople, M., Mahindra, V., Kulye, V. & Jamdar, S. Low light image contrast enhancement using blending of histogram equalization based methods DSIHE and MMBEBHE. In: 2022 2nd Asian Conference on Innovation in Technology (ASIANCON)(IEEE, 2022).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27174,
+                        "infons": {
+                            "citation-alternatives": "Ng, Y. J. & Sim, K. S. A review of brain early infarct image contrast enhancement using various histogram equalization techniques. Int. J. Adv. Sci. Eng. Inf. Technol.14, 1849\u20131860 (2024).",
+                            "fpage": "1849",
+                            "lpage": "1860",
+                            "name_0": "surname:Ng;given-names:YJ",
+                            "name_1": "surname:Sim;given-names:KS",
+                            "pub-id_doi": "10.18517/ijaseit.14.6.10115",
+                            "section_type": "REF",
+                            "source": "Int. J. Adv. Sci. Eng. Inf. Technol.",
+                            "type": "ref",
+                            "volume": "14",
+                            "year": "2024"
+                        },
+                        "text": "A review of brain early infarct image contrast enhancement using various histogram equalization techniques",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27281,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Teh, V., Sim, K. S. & Wong, E. K. Extreme-level eliminating brightness preserving bi-histogram equalization technique for brain ischemic detection. In: 2016 International Journal of Innovative Computing, Information and Control(ICIC International, 2018).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27536,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Sahnoun, M. et al. A comparative study of mri contrast enhancement techniques based on traditional gamma correction and adaptive gamma correction: Case of multiple sclerosis pathology. In: 2018 4th International Conference on Advanced Technologies for Signal and Image Processing (ATSIP), 1\u20137. 10.1109/atsip.2018.8364467(IEEE 2018).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27871,
+                        "infons": {
+                            "citation-alternatives": "Halder, T. K., Sarkar, K., Mandal, A. & Bagchi, B. Brain MRI/CT contrast enhancement using hybrid transformation. Indian J. Sci. Technol.16, 2398\u20132408. 10.17485/ijst/v16i31.834 (2023).",
+                            "fpage": "2398",
+                            "lpage": "2408",
+                            "name_0": "surname:Halder;given-names:TK",
+                            "name_1": "surname:Sarkar;given-names:K",
+                            "name_2": "surname:Mandal;given-names:A",
+                            "name_3": "surname:Bagchi;given-names:B",
+                            "pub-id_doi": "10.17485/ijst/v16i31.834",
+                            "section_type": "REF",
+                            "source": "Indian J. Sci. Technol.",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2023"
+                        },
+                        "text": "Brain MRI/CT contrast enhancement using hybrid transformation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27933,
+                        "infons": {
+                            "citation-alternatives": "Akila, K., Jayashree, L. S. & Vasuki, A. Mammographic image enhancement using indirect contrast enhancement techniques - A comparative study. Procedia Comput. Sci.47, 255\u2013261 (2015).",
+                            "fpage": "255",
+                            "lpage": "261",
+                            "name_0": "surname:Akila;given-names:K",
+                            "name_1": "surname:Jayashree;given-names:LS",
+                            "name_2": "surname:Vasuki;given-names:A",
+                            "pub-id_doi": "10.1016/j.procs.2015.03.205",
+                            "section_type": "REF",
+                            "source": "Procedia Comput. Sci.",
+                            "type": "ref",
+                            "volume": "47",
+                            "year": "2015"
+                        },
+                        "text": "Mammographic image enhancement using indirect contrast enhancement techniques - A comparative study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28033,
+                        "infons": {
+                            "citation-alternatives": "Agaian, S. S., Panetta, K. & Grigoryan, A. M. Transform-based image enhancement algorithms with performance measure. IEEE Trans. Image Process.10, 367\u2013382 (2001).\n",
+                            "fpage": "367",
+                            "lpage": "382",
+                            "name_0": "surname:Agaian;given-names:SS",
+                            "name_1": "surname:Panetta;given-names:K",
+                            "name_2": "surname:Grigoryan;given-names:AM",
+                            "pub-id_doi": "10.1109/83.908502",
+                            "pub-id_pmid": "18249627",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Image Process.",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2001"
+                        },
+                        "text": "Transform-based image enhancement algorithms with performance measure",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28103,
+                        "infons": {
+                            "citation-alternatives": "Agaian, S. S., Silver, B. & Panetta, K. A. Transform coefficient histogram-based image enhancement algorithms using contrast entropy. IEEE Trans. Image Process.16, 741\u2013758 (2007).\n",
+                            "fpage": "741",
+                            "lpage": "758",
+                            "name_0": "surname:Agaian;given-names:SS",
+                            "name_1": "surname:Silver;given-names:B",
+                            "name_2": "surname:Panetta;given-names:KA",
+                            "pub-id_doi": "10.1109/TIP.2006.888338",
+                            "pub-id_pmid": "17357734",
+                            "section_type": "REF",
+                            "source": "IEEE Trans. Image Process.",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2007"
+                        },
+                        "text": "Transform coefficient histogram-based image enhancement algorithms using contrast entropy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28193,
+                        "infons": {
+                            "citation-alternatives": "Ang, J., Sim, K. S., Tan, S. C. & Lim, C. P. Adaptive contrast enhancement with lesion focusing (ACELF). IEEE Access13, 41785\u201341796. 10.1109/ACCESS.2025.3546913 (2025).",
+                            "fpage": "41785",
+                            "lpage": "41796",
+                            "name_0": "surname:Ang;given-names:J",
+                            "name_1": "surname:Sim;given-names:KS",
+                            "name_2": "surname:Tan;given-names:SC",
+                            "name_3": "surname:Lim;given-names:CP",
+                            "pub-id_doi": "10.1109/ACCESS.2025.3546913",
+                            "section_type": "REF",
+                            "source": "IEEE Access",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2025"
+                        },
+                        "text": "Adaptive contrast enhancement with lesion focusing (ACELF)",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28252,
+                        "infons": {
+                            "citation-alternatives": "Abdoli, M., Nasiri, F., Brault, P. & Ghanbari, M. Quality assessment tool for performance measurement of image contrast enhancement methods. IET Image Process.13, 833\u2013842 (2019).",
+                            "fpage": "833",
+                            "lpage": "842",
+                            "name_0": "surname:Abdoli;given-names:M",
+                            "name_1": "surname:Nasiri;given-names:F",
+                            "name_2": "surname:Brault;given-names:P",
+                            "name_3": "surname:Ghanbari;given-names:M",
+                            "pub-id_doi": "10.1049/iet-ipr.2018.5520",
+                            "section_type": "REF",
+                            "source": "IET Image Process.",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2019"
+                        },
+                        "text": "Quality assessment tool for performance measurement of image contrast enhancement methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28342,
+                        "infons": {
+                            "citation-alternatives": "Gupta, S. & Porwal, R. Appropriate contrast enhancement measures for brain and breast cancer images. Int. J. Biomed. Imaging2016, 4710842 (2016).\n",
+                            "fpage": "4710842",
+                            "name_0": "surname:Gupta;given-names:S",
+                            "name_1": "surname:Porwal;given-names:R",
+                            "pub-id_doi": "10.1155/2016/4710842",
+                            "pub-id_pmid": "27127497",
+                            "section_type": "REF",
+                            "source": "Int. J. Biomed. Imaging",
+                            "type": "ref",
+                            "volume": "2016",
+                            "year": "2016"
+                        },
+                        "text": "Appropriate contrast enhancement measures for brain and breast cancer images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28419,
+                        "infons": {
+                            "citation-alternatives": "Gunawan, A. A. S. et al. Item verification on the smart trolley system using object recognition based on the structural similarity index. Procedia Comput. Sci.227, 147\u2013158 (2023).",
+                            "fpage": "147",
+                            "lpage": "158",
+                            "name_0": "surname:Gunawan;given-names:AAS",
+                            "pub-id_doi": "10.1016/j.procs.2023.10.512",
+                            "section_type": "REF",
+                            "source": "Procedia Comput. Sci.",
+                            "type": "ref",
+                            "volume": "227",
+                            "year": "2023"
+                        },
+                        "text": "Item verification on the smart trolley system using object recognition based on the structural similarity index",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28531,
+                        "infons": {
+                            "citation-alternatives": "Chan, W. T. Conditional noise filter for MRI images with revised theory on second-order histograms. International Journal on Robotics, Automation and Sciences3, 25\u201332. 10.33093/ijoras.2021.3.5 (2021).",
+                            "fpage": "25",
+                            "lpage": "32",
+                            "name_0": "surname:Chan;given-names:WT",
+                            "pub-id_doi": "10.33093/ijoras.2021.3.5",
+                            "section_type": "REF",
+                            "source": "International Journal on Robotics, Automation and Sciences",
+                            "type": "ref",
+                            "volume": "3",
+                            "year": "2021"
+                        },
+                        "text": "Conditional noise filter for MRI images with revised theory on second-order histograms",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28618,
+                        "infons": {
+                            "citation-alternatives": "Al Najjar, Y. Comparative analysis of image quality assessment metrics: MSE, PSNR, SSIM and FSIM. Int. J. Sci. Res. (Raipur)13, 110\u2013114 (2024).",
+                            "fpage": "110",
+                            "lpage": "114",
+                            "name_0": "surname:Al Najjar;given-names:Y",
+                            "section_type": "REF",
+                            "source": "Int. J. Sci. Res. (Raipur)",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2024"
+                        },
+                        "text": "Comparative analysis of image quality assessment metrics: MSE, PSNR, SSIM and FSIM",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28701,
+                        "infons": {
+                            "citation-alternatives": "Gandhamal, A., Talbar, S., Gajre, S., Hani, A. F. M. & Kumar, D. Local gray level s-curve transformation - A generalized contrast enhancement technique for medical images. Comput. Biol. Med.83, 120\u2013133 (2017).\n",
+                            "fpage": "120",
+                            "lpage": "133",
+                            "name_0": "surname:Gandhamal;given-names:A",
+                            "name_1": "surname:Talbar;given-names:S",
+                            "name_2": "surname:Gajre;given-names:S",
+                            "name_3": "surname:Hani;given-names:AFM",
+                            "name_4": "surname:Kumar;given-names:D",
+                            "pub-id_doi": "10.1016/j.compbiomed.2017.03.001",
+                            "pub-id_pmid": "28279861",
+                            "section_type": "REF",
+                            "source": "Comput. Biol. Med.",
+                            "type": "ref",
+                            "volume": "83",
+                            "year": "2017"
+                        },
+                        "text": "Local gray level s-curve transformation - A generalized contrast enhancement technique for medical images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28807,
+                        "infons": {
+                            "citation-alternatives": "Vijayalakshmi, D., Nath, M. K. & Acharya, O. P. A comprehensive survey on image contrast enhancement techniques in spatial domain. Sens. Imaging10.1007/s11220-020-00305-3 (2020).",
+                            "name_0": "surname:Vijayalakshmi;given-names:D",
+                            "name_1": "surname:Nath;given-names:MK",
+                            "name_2": "surname:Acharya;given-names:OP",
+                            "pub-id_doi": "10.1007/s11220-020-00305-3",
+                            "section_type": "REF",
+                            "source": "Sens. Imaging",
+                            "type": "ref",
+                            "year": "2020"
+                        },
+                        "text": "A comprehensive survey on image contrast enhancement techniques in spatial domain",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28889,
+                        "infons": {
+                            "citation-alternatives": "Md Ashafuddula, N. I. & Islam, R. ContourTL-Net: Contour-based transfer learning algorithm for early-stage brain tumor detection. Int. J. Biomed. Imaging2024, 6347920 (2024).\n",
+                            "fpage": "6347920",
+                            "name_0": "surname:Md Ashafuddula;given-names:NI",
+                            "name_1": "surname:Islam;given-names:R",
+                            "pub-id_doi": "10.1155/2024/6347920",
+                            "pub-id_pmid": "38716037",
+                            "section_type": "REF",
+                            "source": "Int. J. Biomed. Imaging",
+                            "type": "ref",
+                            "volume": "2024",
+                            "year": "2024"
+                        },
+                        "text": "ContourTL-Net: Contour-based transfer learning algorithm for early-stage brain tumor detection",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28984,
+                        "infons": {
+                            "citation-alternatives": "Ramanathan, T. T., Hossen, M. J. & Sayeed, M. S. Genetic algorithm-based multitier ensemble classifier for diagnosis of heart disease. International Journal on Robotics, Automation and Sciences6, 29\u201335. 10.33093/ijoras.2024.6.1.5 (2024).",
+                            "fpage": "29",
+                            "lpage": "35",
+                            "name_0": "surname:Ramanathan;given-names:TT",
+                            "name_1": "surname:Hossen;given-names:MJ",
+                            "name_2": "surname:Sayeed;given-names:MS",
+                            "pub-id_doi": "10.33093/ijoras.2024.6.1.5",
+                            "section_type": "REF",
+                            "source": "International Journal on Robotics, Automation and Sciences",
+                            "type": "ref",
+                            "volume": "6",
+                            "year": "2024"
+                        },
+                        "text": "Genetic algorithm-based multitier ensemble classifier for diagnosis of heart disease",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29069,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "iksanb. iksanb/gadche: Gadche v1.0, DOI: 10.5281/ZENODO.18373351 (2026). https://github.com/iksanb/GADCHE/tree/GADCHE_v1.0.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29193,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Bhuvaji, S., Kadam, A., Bhumkar, P., Dedge, S. & Kanchan, S. Brain tumor classification (mri). 10.34740/KAGGLE/DSV/1183165 (2020). https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29402,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Orvile. Brain cancer - mri dataset (2025). https://www.kaggle.com/datasets/orvile/brain-cancer-mri-dataset.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29510,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "ref"
+                        },
+                        "text": "Nickparvar, M. Brain tumor mri dataset, 10.34740/KAGGLE/DSV/2645886 (2021). https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/versions/1.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29671,
+                        "infons": {
+                            "citation-alternatives": "Walpole, R. E., Myers, R. H., Myers, S. L. & Ye, K. Probability & statistics for engineers & scientists 8 edn. (Pearson, 2006).",
+                            "name_0": "surname:Walpole;given-names:RE",
+                            "name_1": "surname:Myers;given-names:RH",
+                            "name_2": "surname:Myers;given-names:SL",
+                            "name_3": "surname:Ye;given-names:K",
+                            "section_type": "REF",
+                            "source": "Probability & statistics for engineers & scientists",
+                            "type": "ref",
+                            "year": "2006"
+                        },
+                        "text": "",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]

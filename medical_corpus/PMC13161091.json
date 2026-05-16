@@ -1,0 +1,1908 @@
+[
+    {
+        "bioctype": "BioCCollection",
+        "source": "PMC",
+        "date": "20260514",
+        "key": "pmc.key",
+        "version": "1.0",
+        "infons": {},
+        "documents": [
+            {
+                "bioctype": "BioCDocument",
+                "id": "PMC13161091",
+                "infons": {
+                    "license": "CC BY"
+                },
+                "passages": [
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 0,
+                        "infons": {
+                            "article-id_doi": "10.3389/fimmu.2026.1749668",
+                            "article-id_pmc": "PMC13161091",
+                            "elocation-id": "1749668",
+                            "kwd": "breast cancer deep learning dynamic contrast-enhanced MRI neoadjuvant therapy pathological complete response tumor microenvironment tumor-infiltrating lymphocytes",
+                            "license": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.",
+                            "name_0": "surname:Yan;given-names:Lan",
+                            "name_1": "surname:Huang;given-names:Xianming",
+                            "name_2": "surname:Liu;given-names:Lan",
+                            "name_3": "surname:Wu;given-names:Ao",
+                            "name_4": "surname:Luo;given-names:Yingyi",
+                            "name_5": "surname:Li;given-names:Hao",
+                            "name_6": "surname:Yi;given-names:Shaofeng",
+                            "name_7": "surname:Yu;given-names:Tenghua",
+                            "name_8": "surname:Zeng;given-names:Qiao",
+                            "section_type": "TITLE",
+                            "type": "front",
+                            "volume": "17",
+                            "year": "2026"
+                        },
+                        "text": "Predicting response to neoadjuvant therapy in breast cancer using longitudinal DCE-MRI deep learning integrated with tumor microenvironment data",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 145,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Objective",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 155,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "This study developed and validated a multimodal fusion model to enable the early and accurate prediction of pathological complete response (pCR) to neoadjuvant therapy (NAT) in breast cancer. The model integrates deep learning (DL) features derived from longitudinal dynamic contrast-enhanced magnetic resonance imaging (DCE-MRI) acquired early during treatment, peripheral blood inflammatory (PBI) indices, and baseline levels of tumor-infiltrating lymphocytes (TILs).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 625,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 633,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "A total of 262 breast cancer patients receiving NAT were retrospectively enrolled and divided into a training cohort (n=183) and a validation cohort (n=79) based on the time of surgery. Deep learning models (Pre-NAT DL and Post-2nd-NAT DL) were constructed using features extracted from pre-treatment (baseline) and post-second-cycle DCE-MRI images, respectively. An immune-inflammation model was built using baseline TILs and dynamically changing PBI indices. A clinical model was developed based on baseline clinicopathological characteristics. Finally, a combined model was constructed by integrating features from all the aforementioned modalities. The models were developed using various machine learning algorithms, and their predictive performance was assessed and compared.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1415,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1423,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "In the validation cohort, the combined model achieved superior predictive performance, with an area under the receiver operating characteristic curve of 0.90 and specificity of 95%. Its performance was significantly better than that of any single-modality model. The Post-2nd-NAT DL model (AUC\u00a0=\u00a00.85) outperformed the Pre-NAT DL model (AUC\u00a0=\u00a00.75), confirming the critical predictive value of deep learning features from early-treatment DCE-MRI. The immune-inflammation model also exhibited independent predictive capability (AUC\u00a0=\u00a00.73).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1969,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract_title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 1980,
+                        "infons": {
+                            "section_type": "ABSTRACT",
+                            "type": "abstract"
+                        },
+                        "text": "The combined model integrating deep learning features from early longitudinal DCE-MRI, dynamic systemic inflammatory indicators, and baseline TILs significantly enhances the early prediction of pCR to NAT in breast cancer. This multimodal fusion strategy offers a potential tool to aid personalized treatment planning in breast cancer patients undergoing NAT.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2340,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "title_1"
+                        },
+                        "text": "Introduction",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2353,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Neoadjuvant therapy (NAT) is a standard treatment for patients with locally advanced breast cancer, and its efficacy directly influences surgical decisions and patient prognosis. The accurate and early prediction of treatment response is critical for optimizing individualized regimens, thereby avoiding ineffective therapies and unnecessary toxicity. However, there is currently a lack of reliable non-invasive biomarkers in clinical practice for reliably predicting efficacy in the early stages of treatment. This limitation has spurred the development of multimodal, cross-scale predictive models.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 2954,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Our team\u2019s previous research has demonstrated that radiomic features based on dynamic contrast-enhanced magnetic resonance imaging (DCE-MRI) show significant potential for the early prediction of NAT response. Radiomics, by extracting and analyzing a high volume of quantitative features from medical images, can reveal intratumoral heterogeneity. However, conventional radiomics relies on handcrafted features, which have limited representational capacity, thus restricting its broader clinical application. Deep learning (DL) techniques can automatically learn hierarchical feature representations from data, providing a distinct advantage in capturing lesion complexity and dynamic changes. This capability offers a promising technical pathway for significantly improving prediction accuracy.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 3752,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "In recent years, the role of the tumor microenvironment (TME) in tumor initiation, progression, and treatment response has gained increasing attention. The TME is a complex ecosystem composed of tumor cells, immune cells, stromal cells, vascular networks, and various signaling molecules. Among these, tumor-infiltrating lymphocytes (TILs), as a core component of the TME, are key effector cells in anti-tumor immune responses and are strongly associated with prognosis and survival, particularly in triple-negative breast cancer (TNBC) and HER2-positive breast cancer. TILs have also been confirmed to be significantly correlated with the rate of pathological complete response (pCR) to neoadjuvant therapy in breast cancer. On the other hand, the systemic inflammatory response represents another critical dimension of the TME, which can be quantified using peripheral blood inflammatory (PBI) indices such as the Neutrophil-to-Lymphocyte Ratio (NLR), Platelet-to-Lymphocyte Ratio (PLR), and Systemic Immune-inflammation Index (SII). These indices reflect the balance of the body\u2019s immune and inflammatory status and play important roles in tumor progression, metastasis, and treatment resistance. However, the joint influence of TILs and systemic inflammation on treatment efficacy, and their potential complementary value to deep learning features, remain poorly understood.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5133,
+                        "infons": {
+                            "section_type": "INTRO",
+                            "type": "paragraph"
+                        },
+                        "text": "Therefore, this study aims to integrate DL features extracted from longitudinal DCE-MRI images acquired early during treatment, PBI indices, and baseline TILs levels. The objective is to construct a multi-parameter, fused predictive model for the non-invasive and accurate assessment of treatment response in breast cancer patients during the early courses of NAT. This integrated imaging-immune-inflammatory approach seeks to provide a more reliable basis for individualized clinical treatment decision-making.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5645,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_1"
+                        },
+                        "text": "Methods",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5653,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Study population",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 5670,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "This retrospective study follows the detailed flowchart depicted in Figure\u00a01. This retrospective study enrolled breast cancer patients who received NAT followed by surgical resection between October 2019 and April 2025. The inclusion criteria were as follows (1): Pathological confirmation of breast cancer by core needle biopsy at baseline before treatment (2); Completion of 4\u20138 cycles of neoadjuvant therapy (3); Undergoing surgical resection after NAT (4); Availability of DCE-MRI scans and relevant laboratory tests performed at baseline and after the 2nd cycle. The exclusion criteria were: (1) Missing imaging, clinical, or pathological data; (2) History of malignant tumors at other sites; (3) Presence of active infection at baseline or after the 2nd cycle of NAT. This study was approved by the institutional review board of our hospital (Approval No.: 2025ky117). The requirement for informed consent was waived due to the retrospective nature of the study. Patients were divided into a training cohort (70%, surgeries prior to December 25, 2022) and a validation cohort (30%, surgeries following this date) to ensure temporal validation. Clinical data such as patient sex, age, clinical stage, tumor markers carbohydrate antigen 125 (CA125), CA153, and carcinoembryonic antigen (CEA) were also collected.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 6990,
+                        "infons": {
+                            "file": "fimmu-17-1749668-g001.jpg",
+                            "id": "f1",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Study workflow for the development and validation of predictive models. The schematic illustrates the sequential pipeline for building multi-modal models to predict treatment response in breast cancer. (A) Development of deep learning (DL) models from dynamic contrast-enhanced magnetic resonance imaging (DCE-MRI) acquired pre- and post-neoadjuvant therapy (NAT). (B) Construction of an immune-inflammation model from peripheral blood inflammatory (PBI) indices and baseline tumor-infiltrating lymphocytes (TILs). (C) Integration of models and comprehensive evaluation to identify the optimal predictor.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7595,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Definition and data collection of PBI indices",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 7641,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Peripheral blood laboratory data were extracted from medical records at baseline and after the second treatment cycle (within one week before the first and third cycle, respectively). Collected parameters included neutrophil count (\u00d7109/L, N), monocyte count (\u00d7109/L, M), platelet count (\u00d7109/L, P), lymphocyte count (\u00d7109/L, L), and albumin concentration (g/L, A). The following inflammatory indices were calculated: neutrophil-to-lymphocyte ratio (NLR) = N/L, monocyte-to-lymphocyte ratio (MLR) = M/L, platelet-to-lymphocyte ratio (PLR) = P/L, systemic immune-inflammation index (SII) = P \u00d7 NLR, systemic inflammation response index (SIRI) = N \u00d7 MLR, and pan-immune-inflammation value (PIV) = (N \u00d7 M \u00d7 P)/L. Dynamic peripheral blood inflammatory (dPBI) indices were defined as the post-treatment value minus the baseline value (e.g., dNLR = NLRpost-2nd-NAT \u2212 NLRbaseline).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8526,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Pathological evaluation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 8550,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Immunohistochemistry (IHC) was performed on all biopsy and surgical specimens. HER2 positivity was defined as an IHC result of 3+, or IHC 2+ with confirmed HER2 gene amplification by FISH. The positivity thresholds for ER and PR were set at \u22651% of tumor cells showing positive nuclear staining. Stromal TILs were assessed on hematoxylin and eosin (H&E)-stained sections according to the guidelines of the International TILs Working Group. After formalin fixation and paraffin embedding of the surgical resection specimens from all enrolled cases, H&E-stained sections were prepared. The evaluation specifically targeted the stromal TILs excluding areas within tumor cell nests and regions of necrosis. Initially, the stromal areas were identified under low-power magnification (\u00d740\u2013\u00d7100) to preliminarily determine the type of inflammatory cell infiltration. Subsequently, the percentage of the stromal area occupied by mononuclear inflammatory cells (including lymphocytes and plasma cells) was quantitatively assessed under high-power fields (\u00d7200\u2013\u00d7400). Based on international standards, cases were categorized into the low-TILs group (TILs <10%) and the high-TILs group (TILs \u226510%). All slides were independently evaluated by a designated, experienced pathologist who was blinded to the clinical and imaging information of the patients. In cases where assessment was ambiguous or borderline, a second pathologist was consulted for review, and a final score was determined by consensus. pCR was defined as the absence of residual invasive carcinoma in both the breast primary site and axillary lymph nodes (ypT0/is, ypN0), with or without the presence of ductal carcinoma in situ.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10246,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Magnetic resonance imaging and deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10291,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_3"
+                        },
+                        "text": "Image acquisition and preprocessing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 10327,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All images were retrieved from the Picture Archiving and Communication System (PACS). Detailed dynamic contrast enhanced-MRI (DCE-MRI) acquisition parameters are provided in Supplementary Material. The study utilized images from the peak enhancement phase of dynamic contrast-enhanced MRI. To minimize variations from different protocols, all images were resampled to an isotropic 1\u00d71\u00d71 mm\u00b3 resolution using B-spline interpolation and underwent intensity normalization via Z-score standardization. The delineation region of interest (ROI) for breast tumor was primarily performed by an attending radiologist with over ten years of experience in breast imaging. Detailed information regarding the tumor segmentation process is described in Supplementary Material.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11093,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Deep transfer learning model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 11122,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "We used a pre-trained ResNet-101 model, initialized with ImageNet weights and implemented in PyTorch. Inputs were built from standardized and resampled DCE-MRI ROIs mentioned above. A 2.5D format was created by stacking the largest tumor slice along with two slices above and two slices below (five slices in total). The model was fine-tuned using transfer learning. First, all convolutional layers were frozen while only the new classifier (with dropout set to 0.5) was trained. Then, the entire network was unfrozen for end-to-end fine-tuning. Training was conducted with the following hyperparameters: optimizer: AdamW; learning rate: 1\u00d710-4 (classifier) and 5\u00d710-5 (full network); batch size: 16; max epochs: 50. We applied weighted binary cross-entropy loss to handle class imbalance and used early stopping (patience: 10 epochs). Data augmentation included random horizontal flipping, \u00b1\u00a010\u00b0 rotation, and \u00b110% brightness/contrast adjustment. More details regarding the DL model are provided in the Supplementary Material. Ultimately, using the ResNet-101 model, 2048 deep learning features were extracted from the baseline and post-2nd-NAT DCE-MRI ROIs, respectively. All experiments ran on an NVIDIA GeForce RTX 4080 SUPER GPU.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12363,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To make the decision-making process of the model more transparent and investigate its interpretability, we employ Gradient-weighted class activation mapping (Grad-CAM) to visualize the ResNet-101 model, aiming to reveal the image regions the model focuses on when making pCR predictions.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12651,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Model development and evaluation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 12684,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "To predict pCR following NAT, this study developed the following models (1): Pre-NAT DL model: developed using the 2.5D DL features derived from pre-treatment DCE-MRI images, with feature selection performed via T-test, Pearson correlation analysis, and Least Absolute Shrinkage and Selection Operator (LASSO) regression. (2) Post-2nd-NAT DL model: built using the 2.5D DL features from post-2nd-NAT DCE-MRI images, following the same feature selection procedure. (3) Immune-Inflammation model: constructed by selecting PBI indices (measured at baseline, 2nd-cycle, and dPBI) and baseline TILs levels that demonstrated statistically significant differences between the pCR and non-pCR groups. (4) Clinical-Pathology model: built using baseline clinicpathological characteristics that showed statistically significant differences between the pCR and non-pCR groups. (5) Combined model: developed by pooling variables from all the above models and performing stepwise regression with minimum Akaike Information Criterion (AIC) for final variable selection.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 13739,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "All models were developed using various machine learning algorithms, including logistic regression (LR), naive Bayes (NB), support vector machine (SVM), k-nearest neighbors (KNN), random forest (RF), extreme gradient boosting (XGBoost), adaptive boosting (AdaBoost), and multilayer perceptron (MLP). The best-performing algorithm for each model in the validation set was selected as the final model. Model performance was evaluated and compared using the area under the receiver operating characteristic (ROC) curve (AUC), accuracy, sensitivity, specificity, positive predictive value (PPV), negative predictive value (NPV), F1-score, and DeLong test.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14391,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "title_2"
+                        },
+                        "text": "Statistical analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 14412,
+                        "infons": {
+                            "section_type": "METHODS",
+                            "type": "paragraph"
+                        },
+                        "text": "Statistical analyses in this study were performed using Python (version 3.9.5) and R (version 4.3.1). Continuous variables are presented as median (interquartile range), and comparisons between groups were conducted using the T test for normally distributed data or the Mann-Whitney U test for non-normally distributed data, based on the results of the Shapiro-Wilk normality test. Categorical variables are described as frequencies (percentages), and group comparisons were made using the Chi-squared test or Fisher\u2019s exact test, as appropriate. A two-sided P-value < 0.05 was considered statistically significant.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15030,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_1"
+                        },
+                        "text": "Results",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15038,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Patients",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15047,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study enrolled a total of 262 breast cancer patients (median age, 50 years [IQR, 47\u201352 years]) who received NAT. Pathological complete response was achieved in 37.7% (69/183) and 51.9% (41/79) of patients in the training and validation cohorts, respectively. The characteristics of all patients, including age, tumor location, clinical stage, tumor markers (CEA, CA153, CA125), hormone receptor status (ER, PR), HER2 status, Ki-67 index, and PBI indicators, are summarized in Table\u00a01.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15540,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Characteristics of the study population in the training and validation cohorts.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 15620,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Characteristics</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Training cohort (n = 183)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Validation cohort (n = 79)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Total (n = 262)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">P value</th></tr></thead><tbody><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Treatment Response</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.033</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Non-pCR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">114 (62.30%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">38 (48.10%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">152 (58.02%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">pCR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">69 (37.70%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">41 (51.90%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">110 (41.98%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Age</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (47.00, 52.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (47.00, 52.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (47.00, 52.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.732</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Location</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.076</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Left</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">87 (47.54%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">47 (59.49%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">134 (51.15%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Right</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">96 (52.46%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">32 (40.51%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">128 (48.85%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Clinical stage</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.728</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">I</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">4 (2.19%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2 (2.53%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">6 (2.29%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">II</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">72 (39.34%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">31 (39.24%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">103 (39.31%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">III</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">96 (52.46%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">44 (55.70%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">140 (53.44%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">IV</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">11 (6.01%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2 (2.53%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">13 (4.96%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">ER</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.330</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">negative</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">79 (43.17%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">29 (36.71%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">108 (41.22%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">positive</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">104 (56.83%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50 (63.29%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">154 (58.78%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.998</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">negative</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">88 (48.09)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">38 (48.10%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">126 (48.09%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">positive</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">95 (51.91%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">41 (51.90%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">136 (51.91%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">HER2</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.812</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">negative</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">99 (54.10%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">44 (55.70%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">143 (54.58%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">positive</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">84 (45.90%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">35 (44.30%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">119 (45.42%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Ki67</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (30.00, 70.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (30.00, 70.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (30.00, 70.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.598</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">TILs</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.414</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Low</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">53 (28.96%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">19 (24.05%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">72 (27.48%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">High</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">130 (71.04%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">60 (75.95%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">190 (72.52%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">CEA</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.58 (0.96, 2.71)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.42 (0.80, 2.87)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.50 (0.91, 2.71)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.461</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">CA153</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">10.60 (7.55, 17.80)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">10.62 (7.40, 18.85)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">10.61 (7.53, 18.38)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.671</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">CA125</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">14.26 (10.72, 23.02)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">13.12 (9.57, 18.36)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">13.68 (10.25, 21.01)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.140</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">NLR<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.27 (1.79, 3.26)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.95 (1.62, 2.83)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.18 (1.74, 3.10)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.061</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PLR<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">144.97 (118.87, 189.06)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">150.00 (114.86, 186.26)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">145.95 (117.42, 188.30)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.919</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">LMR<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">5.07 (3.94, 6.71)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">5.23 (3.97, 6.52)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">5.09 (3.95, 6.67)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.744</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SIRI<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.73 (0.48, 1.11)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.68 (0.47, 0.83)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.70 (0.48, 1.05)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.543</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SII<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">536.95 (365.24, 850.93)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">490.38 (390.57, 671.48)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">515.50 (373.33, 772.88)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.372</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PIV<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">161.90 (105.31, 286.26)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">153.09 (111.67, 231.15)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">160.75 (105.70, 276.56)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.977</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">NLR<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.52 (1.71, 3.73)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.09 (1.46, 3.17)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.40 (1.59, 3.57)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.062</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PLR<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">204.97 (149.31, 299.38)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">194.05 (134.87, 290.44)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">202.56 (144.53, 298.05)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.420</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">LMR<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3.12 (2.38, 4.77)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3.65 (2.67, 5.16)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3.35 (2.46, 4.84)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.106</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SIRI<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.97 (0.57, 1.67)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.70 (0.39, 1.44)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.93 (0.50, 1.58)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.032</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SII<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">656.37 (392.26, 1077.74)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">516.82 (318.97, 942.72)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">617.88 (354.90, 1053.56)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.083</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PIV<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">249.01 (123.35, 498.40)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">179.69 (76.44, 398.37)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">226.32 (104.19, 480.30)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.062</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dNLR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.23 (-0.74, 1.29)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">-0.04 (-0.92, 0.92)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.18 (-0.78, 1.24)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.261</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dPLR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">61.21 (3.34, 139.88)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">19.21 (-18.52, 115.12)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">48.26 (-3.58, 131.35)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.015</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dLMR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">-1.81 (-2.92, -0.37)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">-1.31 (-2.92, 0.52)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">-1.60 (-2.92, -0.07)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.168</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dSIRI</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.25 (-0.21, 0.85)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.06 (-0.46, 0.71)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.18 (-0.27, 0.81)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.055</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dSII</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">116.72 (-178.75, 555.28)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">37.32 (-223.02, 289.93)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">85.70 (-196.86, 494.90)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.130</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dPIV</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">79.86 (-44.98, 269.13)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">21.02 (-105.26, 223.80)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.86 (-68.16, 256.42)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.062</td></tr></tbody></table>\n"
+                        },
+                        "text": "Characteristics\tTraining cohort (n = 183)\tValidation cohort (n = 79)\tTotal (n = 262)\tP value\t \tTreatment Response\t\t\t\t0.033\t \tNon-pCR\t114 (62.30%)\t38 (48.10%)\t152 (58.02%)\t\t \tpCR\t69 (37.70%)\t41 (51.90%)\t110 (41.98%)\t\t \tAge\t50.00 (47.00, 52.00)\t50.00 (47.00, 52.00)\t50.00 (47.00, 52.00)\t0.732\t \tLocation\t\t\t\t0.076\t \tLeft\t87 (47.54%)\t47 (59.49%)\t134 (51.15%)\t\t \tRight\t96 (52.46%)\t32 (40.51%)\t128 (48.85%)\t\t \tClinical stage\t\t\t\t0.728\t \tI\t4 (2.19%)\t2 (2.53%)\t6 (2.29%)\t\t \tII\t72 (39.34%)\t31 (39.24%)\t103 (39.31%)\t\t \tIII\t96 (52.46%)\t44 (55.70%)\t140 (53.44%)\t\t \tIV\t11 (6.01%)\t2 (2.53%)\t13 (4.96%)\t\t \tER\t\t\t\t0.330\t \tnegative\t79 (43.17%)\t29 (36.71%)\t108 (41.22%)\t\t \tpositive\t104 (56.83%)\t50 (63.29%)\t154 (58.78%)\t\t \tPR\t\t\t\t0.998\t \tnegative\t88 (48.09)\t38 (48.10%)\t126 (48.09%)\t\t \tpositive\t95 (51.91%)\t41 (51.90%)\t136 (51.91%)\t\t \tHER2\t\t\t\t0.812\t \tnegative\t99 (54.10%)\t44 (55.70%)\t143 (54.58%)\t\t \tpositive\t84 (45.90%)\t35 (44.30%)\t119 (45.42%)\t\t \tKi67\t50.00 (30.00, 70.00)\t50.00 (30.00, 70.00)\t50.00 (30.00, 70.00)\t0.598\t \tTILs\t\t\t\t0.414\t \tLow\t53 (28.96%)\t19 (24.05%)\t72 (27.48%)\t\t \tHigh\t130 (71.04%)\t60 (75.95%)\t190 (72.52%)\t\t \tCEA\t1.58 (0.96, 2.71)\t1.42 (0.80, 2.87)\t1.50 (0.91, 2.71)\t0.461\t \tCA153\t10.60 (7.55, 17.80)\t10.62 (7.40, 18.85)\t10.61 (7.53, 18.38)\t0.671\t \tCA125\t14.26 (10.72, 23.02)\t13.12 (9.57, 18.36)\t13.68 (10.25, 21.01)\t0.140\t \tNLRpre-NAT\t2.27 (1.79, 3.26)\t1.95 (1.62, 2.83)\t2.18 (1.74, 3.10)\t0.061\t \tPLRpre-NAT\t144.97 (118.87, 189.06)\t150.00 (114.86, 186.26)\t145.95 (117.42, 188.30)\t0.919\t \tLMRpre-NAT\t5.07 (3.94, 6.71)\t5.23 (3.97, 6.52)\t5.09 (3.95, 6.67)\t0.744\t \tSIRIpre-NAT\t0.73 (0.48, 1.11)\t0.68 (0.47, 0.83)\t0.70 (0.48, 1.05)\t0.543\t \tSIIpre-NAT\t536.95 (365.24, 850.93)\t490.38 (390.57, 671.48)\t515.50 (373.33, 772.88)\t0.372\t \tPIVpre-NAT\t161.90 (105.31, 286.26)\t153.09 (111.67, 231.15)\t160.75 (105.70, 276.56)\t0.977\t \tNLRpost-2nd-NAT\t2.52 (1.71, 3.73)\t2.09 (1.46, 3.17)\t2.40 (1.59, 3.57)\t0.062\t \tPLRpost-2nd-NAT\t204.97 (149.31, 299.38)\t194.05 (134.87, 290.44)\t202.56 (144.53, 298.05)\t0.420\t \tLMRpost-2nd-NAT\t3.12 (2.38, 4.77)\t3.65 (2.67, 5.16)\t3.35 (2.46, 4.84)\t0.106\t \tSIRIpost-2nd-NAT\t0.97 (0.57, 1.67)\t0.70 (0.39, 1.44)\t0.93 (0.50, 1.58)\t0.032\t \tSIIpost-2nd-NAT\t656.37 (392.26, 1077.74)\t516.82 (318.97, 942.72)\t617.88 (354.90, 1053.56)\t0.083\t \tPIVpost-2nd-NAT\t249.01 (123.35, 498.40)\t179.69 (76.44, 398.37)\t226.32 (104.19, 480.30)\t0.062\t \tdNLR\t0.23 (-0.74, 1.29)\t-0.04 (-0.92, 0.92)\t0.18 (-0.78, 1.24)\t0.261\t \tdPLR\t61.21 (3.34, 139.88)\t19.21 (-18.52, 115.12)\t48.26 (-3.58, 131.35)\t0.015\t \tdLMR\t-1.81 (-2.92, -0.37)\t-1.31 (-2.92, 0.52)\t-1.60 (-2.92, -0.07)\t0.168\t \tdSIRI\t0.25 (-0.21, 0.85)\t0.06 (-0.46, 0.71)\t0.18 (-0.27, 0.81)\t0.055\t \tdSII\t116.72 (-178.75, 555.28)\t37.32 (-223.02, 289.93)\t85.70 (-196.86, 494.90)\t0.130\t \tdPIV\t79.86 (-44.98, 269.13)\t21.02 (-105.26, 223.80)\t50.86 (-68.16, 256.42)\t0.062\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 18428,
+                        "infons": {
+                            "file": "T1.xml",
+                            "id": "T1",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "Data are presented as n (%) for categorical variables and median (interquartile range) for continuous variables. pCR, pathological complete response; Non-pCR, non-pathological complete response; ER, Estrogen Receptor; PR, Progesterone Receptor; HER2, Human Epidermal Growth Factor Receptor 2; Ki-67, marker of proliferation Ki-67; TILs, Tumor-Infiltrating Lymphocytes; CEA, Carcinoembryonic Antigen; CA153, Carbohydrate Antigen 153; CA125, Carbohydrate Antigen 125; NLR, Neutrophil-to-Lymphocyte Ratio; PLR, Platelet-to-Lymphocyte Ratio; LMR, Lymphocyte-to-Monocyte Ratio; SIRI, Systemic Inflammation Response Index; SII, Systemic Immune-inflammation Index; PIV, Pan-immune-inflammation Value; d, delta (change).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19141,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Model development",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 19159,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Data from the training set were used for model development. The distribution of characteristics between the pCR and non-pCR groups is presented in Table\u00a02. The process for constructing each model is as follows. DCE-MRI DL Models: From the pre-treatment and post-2nd-cycle DCE-MRI images, 2,048 deep learning features were respectively extracted using ResNet-101. After applying the feature selection methods described above, 6 pre-NAT DL features and 10 post-2nd-NAT DL features were selected to construct the Pre-NAT DL model and Post-2nd-NAT DL model, respectively. Detailed procedures for DL feature selection are provided in the Supplementary Material. Immune-Inflammation Model: Variables showing significant differences in univariate analysis between the pCR and non-pCR groups in the training set, specifically SIIbaseline, dSII, dPLR, and TILs, were utilized to build the immune-inflammation model. Clinical-Pathological Model: Clinical-pathological indicators demonstrating statistically significant differences between the pCR and non-pCR groups in the training set, namely ER, PR, HER2, and Ki67, were selected to construct the clinical-pathological model. Combined Model: Variables incorporated in the above models were pooled. Through stepwise regression with the minimum Akaike Information Criterion (AIC\u00a0=\u00a0118.19), the final combined model included clinical features (Ki67, ER, PR, HER2), inflammatory features (dPLR, SIIbaseline, TILs), and deep learning features (Pre_DL_F370, Pre_DL_F719, Pre_DL_F727, Post_DL_F297, Post_DL_F414, Post_DL_F711, Post_DL_F727, Post_DL_F732). The AIC-based selection process is illustrated in Figure\u00a02. All models were developed using multiple machine learning algorithms. The performance of these algorithms for each model is summarized in Figure\u00a03. Based on the criterion of achieving consistently high AUC performance in the validation cohort, logistic regression was selected as the final algorithm for model construction.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21139,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_caption"
+                        },
+                        "text": "Differences in characteristics between the pCR and non-pCR groups in the training set.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 21226,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table",
+                            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<table frame=\"hsides\" rules=\"groups\"><thead><tr><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Characteristics</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">non-pCR (n = 114)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">pCR (n = 69)</th><th valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">P value</th></tr></thead><tbody><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Age</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (47.00, 52.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">50.00 (47.00, 53.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.591</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Location</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.806</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Left</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">55 (48.25%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">32 (46.38%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Right</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">59 (51.75%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">37 (53.62%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Clinical stage</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.158</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">I</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3 (2.63%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1 (1.45%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">II</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">49 (42.98%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">23 (33.33%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">III</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">53 (46.49%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">43 (62.32%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">IV</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">9 (7.89)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2 (2.90%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">ER</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;.001</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">negative</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">33 (28.95%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">46 (66.67%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">positive</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">81 (71.05%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">23 (33.33%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;.001</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">negative</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">43 (37.72%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">45 (65.22%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">positive</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">71 (62.28%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">24 (34.78%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">HER2</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;.001</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">negative</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">74 (64.91%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">25 (36.23%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">positive</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">40 (35.09%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">44 (63.77%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Ki67</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">40.00 (30.00, 60.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">60.00 (35.00, 70.00)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.014</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">TILs</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">&lt;.001</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">Low</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">44 (38.60%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">9 (13.04%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">High</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">70 (61.40%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">60 (86.96%)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\"/></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">CEA</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.67 (0.93, 2.66)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">1.48 (1.02, 2.71)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.954</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">CA153</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">10.26 (7.70, 17.23)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">10.80 (7.50, 18.30)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.943</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">CA125</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">14.73 (11.47, 24.63)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">13.40 (9.72, 20.19)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.144</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">NLR<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.35 (1.90, 3.35)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.15 (1.63, 3.06)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.058</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PLR<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">144.25 (118.78, 187.57)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">145.88 (121.81, 191.11)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.984</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">LMR<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">5.06 (3.93, 6.67)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">5.07 (3.97, 6.75)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.864</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SIRI<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.73 (0.50, 1.14)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.69 (0.46, 1.07)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.489</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SII<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">579.96 (407.15, 943.13)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">458.28 (325.11, 724.36)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.013</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PIV<sub>pre-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">165.78 (106.73, 288.39)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">145.36 (87.85, 286.12)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.476</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">NLR<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.40 (1.60, 3.38)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">2.62 (1.80, 4.30)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.176</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PLR<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">214.97 (155.24, 299.69)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">201.35 (147.69, 295.90)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.445</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">LMR<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3.04 (2.34, 4.75)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">3.44 (2.54, 4.75)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.502</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SIRI<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.95 (0.56, 1.63)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.97 (0.64, 1.72)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.634</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">SII<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">644.84 (385.71, 1057.73)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">681.74 (411.43, 1247.88)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.595</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">PIV<sub>post-2nd-NAT</sub></td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">258.73 (122.02, 497.37)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">234.89 (136.86, 499.37)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.976</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dNLR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.18 (-0.62, 1.21)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.41 (-0.85, 1.62)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.725</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dPLR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">80.07 (8.74, 148.78)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">35.60 (-8.45, 89.33)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.003</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dLMR</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">-1.89 (-2.85, -0.44)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">-1.66 (-2.93, -0.31)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.789</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dSIRI</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.22 (-0.26, 0.77)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.28 (-0.12, 0.96)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.451</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dSII</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">165.88 (-143.35, 608.14)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">7.00 (-282.25, 383.44)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.026</td></tr><tr><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">dPIV</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">80.52 (-43.83, 266.04)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">79.86 (-45.60, 271.18)</td><td valign=\"middle\" align=\"center\" rowspan=\"1\" colspan=\"1\">0.923</td></tr></tbody></table>\n"
+                        },
+                        "text": "Characteristics\tnon-pCR (n = 114)\tpCR (n = 69)\tP value\t \tAge\t50.00 (47.00, 52.00)\t50.00 (47.00, 53.00)\t0.591\t \tLocation\t\t\t0.806\t \tLeft\t55 (48.25%)\t32 (46.38%)\t\t \tRight\t59 (51.75%)\t37 (53.62%)\t\t \tClinical stage\t\t\t0.158\t \tI\t3 (2.63%)\t1 (1.45%)\t\t \tII\t49 (42.98%)\t23 (33.33%)\t\t \tIII\t53 (46.49%)\t43 (62.32%)\t\t \tIV\t9 (7.89)\t2 (2.90%)\t\t \tER\t\t\t<.001\t \tnegative\t33 (28.95%)\t46 (66.67%)\t\t \tpositive\t81 (71.05%)\t23 (33.33%)\t\t \tPR\t\t\t<.001\t \tnegative\t43 (37.72%)\t45 (65.22%)\t\t \tpositive\t71 (62.28%)\t24 (34.78%)\t\t \tHER2\t\t\t<.001\t \tnegative\t74 (64.91%)\t25 (36.23%)\t\t \tpositive\t40 (35.09%)\t44 (63.77%)\t\t \tKi67\t40.00 (30.00, 60.00)\t60.00 (35.00, 70.00)\t0.014\t \tTILs\t\t\t<.001\t \tLow\t44 (38.60%)\t9 (13.04%)\t\t \tHigh\t70 (61.40%)\t60 (86.96%)\t\t \tCEA\t1.67 (0.93, 2.66)\t1.48 (1.02, 2.71)\t0.954\t \tCA153\t10.26 (7.70, 17.23)\t10.80 (7.50, 18.30)\t0.943\t \tCA125\t14.73 (11.47, 24.63)\t13.40 (9.72, 20.19)\t0.144\t \tNLRpre-NAT\t2.35 (1.90, 3.35)\t2.15 (1.63, 3.06)\t0.058\t \tPLRpre-NAT\t144.25 (118.78, 187.57)\t145.88 (121.81, 191.11)\t0.984\t \tLMRpre-NAT\t5.06 (3.93, 6.67)\t5.07 (3.97, 6.75)\t0.864\t \tSIRIpre-NAT\t0.73 (0.50, 1.14)\t0.69 (0.46, 1.07)\t0.489\t \tSIIpre-NAT\t579.96 (407.15, 943.13)\t458.28 (325.11, 724.36)\t0.013\t \tPIVpre-NAT\t165.78 (106.73, 288.39)\t145.36 (87.85, 286.12)\t0.476\t \tNLRpost-2nd-NAT\t2.40 (1.60, 3.38)\t2.62 (1.80, 4.30)\t0.176\t \tPLRpost-2nd-NAT\t214.97 (155.24, 299.69)\t201.35 (147.69, 295.90)\t0.445\t \tLMRpost-2nd-NAT\t3.04 (2.34, 4.75)\t3.44 (2.54, 4.75)\t0.502\t \tSIRIpost-2nd-NAT\t0.95 (0.56, 1.63)\t0.97 (0.64, 1.72)\t0.634\t \tSIIpost-2nd-NAT\t644.84 (385.71, 1057.73)\t681.74 (411.43, 1247.88)\t0.595\t \tPIVpost-2nd-NAT\t258.73 (122.02, 497.37)\t234.89 (136.86, 499.37)\t0.976\t \tdNLR\t0.18 (-0.62, 1.21)\t0.41 (-0.85, 1.62)\t0.725\t \tdPLR\t80.07 (8.74, 148.78)\t35.60 (-8.45, 89.33)\t0.003\t \tdLMR\t-1.89 (-2.85, -0.44)\t-1.66 (-2.93, -0.31)\t0.789\t \tdSIRI\t0.22 (-0.26, 0.77)\t0.28 (-0.12, 0.96)\t0.451\t \tdSII\t165.88 (-143.35, 608.14)\t7.00 (-282.25, 383.44)\t0.026\t \tdPIV\t80.52 (-43.83, 266.04)\t79.86 (-45.60, 271.18)\t0.923\t \t",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 23202,
+                        "infons": {
+                            "file": "T2.xml",
+                            "id": "T2",
+                            "section_type": "TABLE",
+                            "type": "table_footnote"
+                        },
+                        "text": "Data are presented as n (%) for categorical variables and median (interquartile range) for continuous variables. P-values were calculated using the Chi-squared test (or Fisher\u2019s exact test) for categorical variables and the Mann-Whitney U test for continuous variables. pCR, pathological complete response; Non-pCR, non-pathological complete response; ER, Estrogen Receptor; PR, Progesterone Receptor; HER2, Human Epidermal Growth Factor Receptor 2; Ki-67, marker of proliferation Ki-67; TILs, Tumor-Infiltrating Lymphocytes; CEA, Carcinoembryonic Antigen; CA153, Carbohydrate Antigen 153; CA125, Carbohydrate Antigen 125; NLR, Neutrophil-to-Lymphocyte Ratio; PLR, Platelet-to-Lymphocyte Ratio; LMR, Lymphocyte-to-Monocyte Ratio; SIRI, Systemic Inflammation Response Index; SII, Systemic Immune-inflammation Index; PIV, Pan-immune-inflammation Value; d, delta (change).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24074,
+                        "infons": {
+                            "file": "fimmu-17-1749668-g002.jpg",
+                            "id": "f2",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Akaike Information Criterion (AIC) based model selection process for the combined model. (A) Bar chart showing the AIC reduction achieved at each step of the feature selection process. (B) Line chart illustrating the progression of the AIC value during the forward stepwise regression. (C) Line chart comparing the model performance metrics (AUC and Accuracy) against the number of features added.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24472,
+                        "infons": {
+                            "file": "fimmu-17-1749668-g003.jpg",
+                            "id": "f3",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Comparison of predictive performance for the four models in the validation cohort using various machine learning algorithms. (A) Clinical-Pathology model, (B) Immune-Inflammation model, (C) Pre-neoadjuvant therapy (Pre-NAT) Deep Learning (DL) model, and (D) Post-2nd-cycle-NAT (Post-2nd-NAT) DL model. The receiver operating characteristic (ROC) curves for each model, generated by eight machine learning methods, are displayed. The area under the curve (AUC) values with 95% confidence intervals are annotated for each curve.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 24999,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Visualization analysis of deep learning model",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25045,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "Figure\u00a04 presents Grad-CAM heatmaps superimposed on the pre-NAT and post-2nd-NAT DCE-MRI for one representative patient who achieved pCR and one with non-pCR. The heatmaps highlight the spatial regions within and around the tumor that the model attributed the greatest importance to when making its classification decision. In the pCR case, the model\u2019s primary attention was focused on the enhancing tumor margin at baseline. Following the second treatment cycle, these high-attention regions showed a marked reduction in both extent and intensity, aligning with the observed pathological response. In contrast, for the non-pCR case, the spatial distribution and intensity of the model\u2019s focal regions remained largely unchanged between the two time points.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 25808,
+                        "infons": {
+                            "file": "fimmu-17-1749668-g004.jpg",
+                            "id": "f4",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Visualization of deep learning model attention using Gradient-weighted Class Activation Mapping (Grad-CAM). The heatmaps (overlaid in red-yellow) highlight the image regions that most influenced the ResNet-101 model\u2019s prediction of pathological complete response (pCR). (A) Representative patient with non-pCR: the spatial distribution and intensity of the model\u2019s focal regions show minimal change between baseline (top) and post-2nd-NAT (bottom). (B) Representative patient who achieved pCR: the model\u2019s attention at baseline (top) is concentrated at the enhancing tumor margin. After the second cycle of neoadjuvant therapy (bottom), the extent and intensity of the attention region are markedly reduced.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26522,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "title_2"
+                        },
+                        "text": "Model evaluation",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 26539,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The comparative diagnostic performance of all models is presented in Figure\u00a05. In the training cohort, the combined model demonstrated the best predictive performance, with accuracy, AUC, sensitivity, negative predictive value, and F1-score all exceeding those of other models, reaching 0.85, 0.95, 0.99, 0.99, and 0.83, respectively (Figure\u00a05A). The combined model maintained its superior performance in the validation cohort, where it demonstrated the highest discriminative ability, with its accuracy (0.87) and AUC (0.90) being significantly superior to those of any single-modality model (Figure\u00a05B). It also demonstrated exceptionally high specificity (0.95) and positive predictive value (0.94), indicating its high reliability in identifying pCR. Figures\u00a05C, D show that the AUC values of both the combined model and the Post-2nd-NAT DL model were significantly higher than those of the clinical-pathological model in both the training and validation cohorts (P < 0.05).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 27522,
+                        "infons": {
+                            "file": "fimmu-17-1749668-g005.jpg",
+                            "id": "f5",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Comparative analysis of model performance across different datasets and evaluation metrics. (A, B) Radar charts depicting the diagnostic efficacy of different models in the training and validation sets, respectively. Metrics include Sensitivity, Specificity, Positive Predictive Value (PPV), Negative Predictive Value (NPV), and F1-score. (C, D) Horizontal bar charts comparing the Area Under the Curve (AUC) of different models in the training and validation sets, respectively. Error bars represent 95% confidence intervals (CI). **P < 0.01, *P < 0.05 vs. the Clinical-Pathology model (orange).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28119,
+                        "infons": {
+                            "section_type": "RESULTS",
+                            "type": "paragraph"
+                        },
+                        "text": "The correlation coefficient plot for the variables incorporated into the combined model is shown in Figure\u00a06A, indicating no significant multicollinearity issues. Clinical features (ER), inflammatory features (dPLR, SIIbaseline), and deep learning features (Pre_DL_F370, Pre_DL_F719, Pre_DL_F727, Post_DL_F711, Post_DL_F732) exhibited a strong negative impact on treatment response; whereas clinical features (Ki67, PR, HER2), immune features (TILs), and deep learning features (Post_DL_F297, Post_DL_F414, Post_DL_F727) demonstrated a strong positive impact on treatment response (Figure\u00a06B).",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 28715,
+                        "infons": {
+                            "file": "fimmu-17-1749668-g006.jpg",
+                            "id": "f6",
+                            "section_type": "FIG",
+                            "type": "fig_caption"
+                        },
+                        "text": "Analysis of variables in the combined model. (A) Correlation matrix heatmap of the variables included in the combined model, demonstrating the absence of strong multicollinearity. (B) Predictor importance plot (lollipop chart) showing the direction and magnitude of each variable\u2019s association with the treatment response, as determined by the logistic regression coefficients. Feature categories are color-coded. Negative coefficients (red) indicate a negative impact on response, while positive coefficients (blue) indicate a positive impact. ER, estrogen receptor; dPLR, dynamic platelet-to-lymphocyte ratio; SII, systemic immune-inflammation index; TILs, tumor-infiltrating lymphocytes; Pre_DL, pre-treatment deep learning feature; Post_DL, post-treatment (2nd cycle) deep learning feature.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29512,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Discussion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 29523,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Accurately predicting pCR to NAT noninvasively remains a significant challenge in breast cancer management. To address this challenge, our study successfully developed and validated a combined model that incorporates DL features from early longitudinal DCE-MRI, PBI indices, and baseline TILs levels. The combined model demonstrated strong predictive performance in the validation set (AUC\u00a0=\u00a00.90), significantly outperforming models based on single data modalities. These findings highlight the value of combining longitudinal tumor heterogeneity information with TME-related data for achieving accurate, noninvasive prediction of treatment response during the early cycles of NAT.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 30208,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our study confirms the strong potential of DL features based on longitudinal DCE-MRI in capturing dynamic changes in tumor treatment response. Zhou et\u00a0al. demonstrated that a DL model using CNN on breast masses could predict lymph node metastasis in breast cancer. Xu et\u00a0al. reported that a 3D ResNet-50 model based on pre-treatment DCE-MRI predicted NAT response in TNBC with an AUC of 0.72.\u00a0A systematic review on multimodal DL for predicting breast cancer NAT outcomes indicated that CNN was the primary architecture (88.2%), and longitudinal imaging improved prediction compared to baseline imaging alone. Consistent with this, our study utilized the ResNet-101 architecture. Furthermore, our study showed that the Post-2nd-NAT DL model (validation cohort AUC\u00a0=\u00a00.85) demonstrated improved predictive performance compared to the Pre-NAT DL model (validation cohort AUC\u00a0=\u00a00.75). This finding aligns with the current understanding of tumor heterogeneity and its dynamic evolution under NAT. Unlike traditional imaging, which relies heavily on human visual assessment, DL features treat the breast lesion as a subject for pixel-by-pixel quantitative evaluation. This quantitative approach can yield more accurate and reproducible imaging diagnoses than qualitative reasoning. Moreover, conventional radiomics and single-time-point imaging often fail to capture the complex spatiotemporal heterogeneity in tumors. In contrast, deep learning methods excel at analyzing longitudinal data. They can effectively decode subtle treatment-induced phenotypic alterations, including intratumoral necrosis, vascular permeability shifts, and cellular density modifications. These changes often serve as early markers of therapeutic response. The superior performance of our Post-2nd-NAT DL model over the Pre-NAT DL model further confirms this advantage. Treatment-emergent imaging features provide predictive information that extends beyond static baseline characteristics. This approach facilitates the earlier application of imaging biomarkers to guide precision oncology decisions. Of note, the Grad-CAM heatmaps in our study further indicate that the regions the model focused on for predicting pCR were predominantly located at the tumor margin (tumor-stroma interface), and pronounced longitudinal changes in these regions early during treatment were closely associated with pathological complete response. This suggests that the abstract DL features contributing significantly to the combined model likely encode information related to dynamic alterations in tumor morphology and enhancement patterns induced early by therapy. Although the tumor-stroma interface is known to be a TIL-rich zone, the correlation matrix (Figure\u00a06A) showed no strong associations between DL features and TILs. Thus, we hypothesize that these imaging features primarily reflect tumor angiogenesis, vascular permeability, and cellular density rather than direct immune cell infiltration. Future studies with larger cohorts are warranted to further validate the generalizability and biological basis of this spatiotemporal association, and ongoing prospective studies with image-pathology spatial co-registration are expected to clarify the relationship between imaging features and the immune microenvironment.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 33502,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Our analysis of PBI biomarkers revealed that a higher SIIbaseline and smaller increases in dPLR and dSII during early treatment were significantly associated with pCR. This finding provides novel insights into the relationship between systemic inflammatory dynamics and response to NAT. Notably, this pattern differs from reports commonly seen in other cancers, such as non-small cell lung cancer. This discrepancy may be attributed to the substantial heterogeneity of breast cancer. SII integrates three cell lines closely related to immune inflammation: neutrophils, platelets, and lymphocytes. A higher baseline level might indicate a pre-existing degree of tumor recognition and response by the immune system, potentially providing a foundation for subsequent NAT to elicit a more robust anti-tumor immune effect. Significant increases in PLR and SII are often associated with platelet activation, neutrophilia, and lymphocytopenia, changes that typically predict immunosuppression and disease progression. Consequently, the absence of a substantial increase, or even a trend toward stability or decrease, in these markers during early treatment may indicate that the therapy successfully broke the tumor-induced immunosuppression, preventing further deterioration of the systemic inflammatory state and allowing the immune system to function more effectively. Integrating baseline SII with dynamic early-treatment indicators like dPLR and dSII allows for a more sensitive capture of the evolution of systemic immune-inflammatory balance under therapeutic intervention, thereby enabling a more precise assessment of a patient\u2019s potential benefit from NAT. Furthermore, peripheral blood inflammatory markers offer the advantages of easy accessibility, low cost, and high reproducibility. As the core component of anti-tumor immunity within the TME, the correlation between baseline TILs levels and pCR has been widely confirmed in breast cancer, especially in triple-negative and HER2-positive subtypes. The successful construction of our immune-inflammatory model suggests that a comprehensive assessment framework should encompass both local (TILs in TME) and systemic (peripheral blood inflammatory indices) dimensions, while also considering both baseline status and early treatment dynamics. Such multi-dimensional integrated analysis provides a fresh perspective for understanding the immunobiological mechanisms underlying the heterogeneous efficacy of breast cancer treatments.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 35993,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "Most importantly, the combined model developed through multimodal data integration demonstrated a substantial improvement in predictive performance. By leveraging complementary information from imaging, immunological, and clinical domains, our model potentially overcomes the limitations inherent in single-data-source approaches. For instance, while DL features excel at capturing intratumoral heterogeneity and subtle treatment-induced changes, TILs and inflammatory indicators provide crucial immunological context that helps explain differential treatment responses in radiologically similar tumors. Consistent with this, Janse et\u00a0al. reported in the LIMA breast MRI trial that tumor subtype remained an important predictor of response to neoadjuvant chemotherapy compared to MR-based DL features. Accordingly, our combined model incorporated key pathological indicators that determine molecular subtypes.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36904,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "title_1"
+                        },
+                        "text": "Limitations",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 36916,
+                        "infons": {
+                            "section_type": "DISCUSS",
+                            "type": "paragraph"
+                        },
+                        "text": "This study has several limitations that should be acknowledged. First, its single-center retrospective design may introduce selection bias. The relatively limited sample size further constrains the generalizability of our findings. Second, all MRI data were acquired using scanners and protocols from a single institution. Although standardization procedures were applied, this limitation necessitates caution. The model\u2019s generalizability requires future validation through prospective, multi-center studies with larger cohorts. Third, our 2.5D input (five consecutive slices) may not fully capture the whole-tumor volumetric heterogeneity. Although five slices covering the tumor core region can capture most of the predictive imaging features, this approach does not equate to a full 3D analysis. Future studies should employ full 3D convolutional networks or more advanced multi-slice fusion strategies to more comprehensively characterize the spatiotemporal heterogeneity of tumors. Fourth, although we employed Grad-CAM to visualize the spatial focus of the deep learning model, the inherent \u201cblack-box\u201d nature of deep learning limits full interpretability of the extracted features. The biological underpinnings of these imaging phenotypes remain to be elucidated. Finally, our study focused specifically on predicting pathological complete response. Future research should investigate whether our model can predict long-term outcomes such as disease-free survival or overall survival.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38415,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "title_1"
+                        },
+                        "text": "Conclusion",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38426,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "paragraph"
+                        },
+                        "text": "In summary, this study demonstrates that integrating multi-modal data significantly enhances early prediction of pCR in breast cancer patients receiving NAT. The combined approach incorporates DL features from early-treatment longitudinal DCE-MRI, PBI indices, TILs, and key pathological markers. This multi-scale integration strategy provides a more comprehensive characterization of tumor heterogeneity, holding promise for informing personalized treatment planning in breast cancer patients undergoing NAT.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38936,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Edited by: Giuseppe Palmieri, University of Sassari, Italy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 38995,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Reviewed by: Guhan Qian, University of Minnesota Twin Cities, United States",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39071,
+                        "infons": {
+                            "section_type": "CONCL",
+                            "type": "footnote"
+                        },
+                        "text": "Zheng Ye, Guangzhou University, China",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39109,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Data availability statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39137,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The raw data supporting the conclusions of this article will be made available by the authors, without undue reservation.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39259,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Ethics statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39276,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The studies involving humans were approved by the institutional review board of Jiangxi Cancer Hospital. The studies were conducted in accordance with the local legislation and institutional requirements. This retrospective study was approved by the ethics committees of all the participating hospitals, and the requirement for informed consent was waived.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39633,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "title_1"
+                        },
+                        "text": "Author contributions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 39654,
+                        "infons": {
+                            "section_type": "AUTH_CONT",
+                            "type": "paragraph"
+                        },
+                        "text": "LY: Writing \u2013 original draft, Writing \u2013 review & editing, Conceptualization, Formal analysis. XH: Data curation, Supervision, Writing \u2013 review & editing. LL: Formal analysis, Resources, Supervision, Writing \u2013 review & editing. AW: Data curation, Formal analysis, Investigation, Writing \u2013 original draft. YL: Data curation, Formal analysis, Investigation, Writing \u2013 review & editing. HL: Data curation, Formal analysis, Investigation, Methodology, Writing \u2013 review & editing. SY: Data curation, Formal analysis, Investigation, Methodology, Writing \u2013 review & editing. TY: Supervision, Writing \u2013 review & editing. QZ: Conceptualization, Supervision, Writing \u2013 original draft, Writing\u00a0\u2013 review & editing.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40379,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Conflict of interest",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40400,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that this work was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40573,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Generative AI statement",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40597,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "The author(s) declared that generative AI was not used in the creation of this manuscript.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40688,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "Any alternative text (alt text) provided alongside figures in this article has been generated by Frontiers with the support of artificial intelligence and reasonable efforts have been made to ensure accuracy, including review by the authors wherever possible. If you identify any issues, please contact us.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 40995,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "title_1"
+                        },
+                        "text": "Publisher\u2019s note",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41014,
+                        "infons": {
+                            "section_type": "COMP_INT",
+                            "type": "paragraph"
+                        },
+                        "text": "All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41361,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "title_1"
+                        },
+                        "text": "Supplementary material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41384,
+                        "infons": {
+                            "section_type": "SUPPL",
+                            "type": "paragraph"
+                        },
+                        "text": "The Supplementary Material for this article can be found online at: https://www.frontiersin.org/articles/10.3389/fimmu.2026.1749668/full#supplementary-material",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41544,
+                        "infons": {
+                            "section_type": "REF",
+                            "type": "title"
+                        },
+                        "text": "References",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41555,
+                        "infons": {
+                            "fpage": "27",
+                            "issue": "(1)",
+                            "lpage": "39",
+                            "pub-id_doi": "10.1016/s1470-2045(17)30777-5",
+                            "pub-id_pmid": "29242041",
+                            "section_type": "REF",
+                            "source": "Lancet Oncol",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2018"
+                        },
+                        "text": "Long-term outcomes for neoadjuvant versus adjuvant chemotherapy in early breast cancer: meta-analysis of individual patient data from ten randomised trials",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41711,
+                        "infons": {
+                            "name_0": "surname:Spring;given-names:LM",
+                            "name_1": "surname:Bar;given-names:Y",
+                            "name_2": "surname:Isakoff;given-names:SJ",
+                            "pub-id_doi": "10.6004/jnccn.2022.7016",
+                            "pub-id_pmid": "35714678",
+                            "section_type": "REF",
+                            "source": "J Natl Compr Canc Netw",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2022"
+                        },
+                        "text": "The evolving role of neoadjuvant therapy for operable breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41779,
+                        "infons": {
+                            "elocation-id": "104817",
+                            "name_0": "surname:Cascianelli;given-names:S",
+                            "name_1": "surname:Milojkovic;given-names:I",
+                            "name_2": "surname:Masseroli;given-names:M",
+                            "pub-id_doi": "10.1016/j.jbi.2025.104817",
+                            "pub-id_pmid": "40216371",
+                            "section_type": "REF",
+                            "source": "J BioMed Inform",
+                            "type": "ref",
+                            "volume": "166",
+                            "year": "2025"
+                        },
+                        "text": "A novel machine learning-based workflow to capture intra-patient heterogeneity through transcriptional multi-label characterization and clinically relevant classification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 41950,
+                        "infons": {
+                            "fpage": "264",
+                            "name_0": "surname:Zeng;given-names:Q",
+                            "name_1": "surname:Deng;given-names:Y",
+                            "name_2": "surname:Nan;given-names:J",
+                            "name_3": "surname:Zou;given-names:Z",
+                            "name_4": "surname:Yu;given-names:T",
+                            "name_5": "surname:Liu;given-names:L",
+                            "pub-id_doi": "10.1186/s12885-025-13678-z",
+                            "pub-id_pmid": "39953506",
+                            "section_type": "REF",
+                            "source": "BMC Cancer",
+                            "type": "ref",
+                            "volume": "25",
+                            "year": "2025"
+                        },
+                        "text": "Delta dual-region DCE-MRI radiomics from breast masses predicts axillary lymph node response after neoadjuvant therapy for breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42087,
+                        "infons": {
+                            "name_0": "surname:Zeng;given-names:Q",
+                            "name_1": "surname:Xiong;given-names:F",
+                            "name_2": "surname:Liu;given-names:L",
+                            "name_3": "surname:Zhong;given-names:L",
+                            "name_4": "surname:Cai;given-names:F",
+                            "name_5": "surname:Zeng;given-names:X",
+                            "pub-id_doi": "10.1016/j.acra.2023.04.009",
+                            "pub-id_pmid": "37169624",
+                            "section_type": "REF",
+                            "source": "Acad Radiol",
+                            "type": "ref",
+                            "volume": "30",
+                            "year": "2023"
+                        },
+                        "text": "Radiomics based on DCE-MRI for predicting response to neoadjuvant therapy in breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42178,
+                        "infons": {
+                            "name_0": "surname:Zeng;given-names:Q",
+                            "name_1": "surname:Ke;given-names:M",
+                            "name_2": "surname:Zhong;given-names:L",
+                            "name_3": "surname:Zhou;given-names:Y",
+                            "name_4": "surname:Zhu;given-names:X",
+                            "name_5": "surname:He;given-names:C",
+                            "pub-id_doi": "10.1016/j.acra.2022.11.006",
+                            "pub-id_pmid": "36564256",
+                            "section_type": "REF",
+                            "source": "Acad Radiol",
+                            "type": "ref",
+                            "volume": "30",
+                            "year": "2023"
+                        },
+                        "text": "Radiomics based on dynamic contrast-enhanced MRI to early predict pathologic complete response in breast cancer patients treated with neoadjuvant therapy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42332,
+                        "infons": {
+                            "elocation-id": "101719",
+                            "name_0": "surname:Qi;given-names:YJ",
+                            "name_1": "surname:Su;given-names:GH",
+                            "name_2": "surname:You;given-names:C",
+                            "name_3": "surname:Zhang;given-names:X",
+                            "name_4": "surname:Xiao;given-names:Y",
+                            "name_5": "surname:Jiang;given-names:YZ",
+                            "pub-id_doi": "10.1016/j.xcrm.2024.101719",
+                            "pub-id_pmid": "39293402",
+                            "section_type": "REF",
+                            "source": "Cell Rep Med",
+                            "type": "ref",
+                            "volume": "5",
+                            "year": "2024"
+                        },
+                        "text": "Radiomics in breast cancer: current advances and future directions",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42399,
+                        "infons": {
+                            "elocation-id": "102444",
+                            "name_0": "surname:Chen;given-names:X",
+                            "name_1": "surname:Wang;given-names:X",
+                            "name_2": "surname:Zhang;given-names:K",
+                            "name_3": "surname:Fung;given-names:KM",
+                            "name_4": "surname:Thai;given-names:TC",
+                            "name_5": "surname:Moore;given-names:K",
+                            "pub-id_doi": "10.1016/j.media.2022.102444",
+                            "pub-id_pmid": "35472844",
+                            "section_type": "REF",
+                            "source": "Med Image Anal",
+                            "type": "ref",
+                            "volume": "79",
+                            "year": "2022"
+                        },
+                        "text": "Recent advances and clinical applications of deep learning in medical image analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42484,
+                        "infons": {
+                            "fpage": "565",
+                            "name_0": "surname:Kuang;given-names:J",
+                            "name_1": "surname:Zhong;given-names:G",
+                            "name_2": "surname:Zhao;given-names:L",
+                            "name_3": "surname:Yuan;given-names:X",
+                            "name_4": "surname:Zhou;given-names:Y",
+                            "name_5": "surname:Li;given-names:J",
+                            "pub-id_doi": "10.1038/s41746-025-01967-7",
+                            "pub-id_pmid": "40897851",
+                            "section_type": "REF",
+                            "source": "NPJ Digit Med",
+                            "type": "ref",
+                            "volume": "8",
+                            "year": "2025"
+                        },
+                        "text": "Machine learning analysis reveals tumor heterogeneity and stromal-immune niches in breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42581,
+                        "infons": {
+                            "name_0": "surname:Leon-Ferre;given-names:RA",
+                            "name_1": "surname:Jonas;given-names:SF",
+                            "name_2": "surname:Salgado;given-names:R",
+                            "name_3": "surname:Loi;given-names:S",
+                            "name_4": "surname:de Jong;given-names:V",
+                            "name_5": "surname:Carter;given-names:JM",
+                            "pub-id_doi": "10.1001/jama.2024.3056",
+                            "pub-id_pmid": "38563834",
+                            "section_type": "REF",
+                            "source": "Jama",
+                            "type": "ref",
+                            "volume": "331",
+                            "year": "2024"
+                        },
+                        "text": "Tumor-infiltrating lymphocytes in triple-negative breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42645,
+                        "infons": {
+                            "elocation-id": "104120",
+                            "name_0": "surname:Schlam;given-names:I",
+                            "name_1": "surname:Loi;given-names:S",
+                            "name_2": "surname:Salgado;given-names:R",
+                            "name_3": "surname:Swain;given-names:SM",
+                            "pub-id_doi": "10.1016/j.esmoop.2024.104120",
+                            "pub-id_pmid": "39826475",
+                            "section_type": "REF",
+                            "source": "ESMO Open",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2025"
+                        },
+                        "text": "Tumor-infiltrating lymphocytes in HER2-positive breast cancer: potential impact and challenges",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42740,
+                        "infons": {
+                            "fpage": "150",
+                            "name_0": "surname:El Bairi;given-names:K",
+                            "name_1": "surname:Haynes;given-names:HR",
+                            "name_2": "surname:Blackley;given-names:E",
+                            "name_3": "surname:Fineberg;given-names:S",
+                            "name_4": "surname:Shear;given-names:J",
+                            "name_5": "surname:Turner;given-names:S",
+                            "pub-id_doi": "10.1038/s41523-021-00346-1",
+                            "pub-id_pmid": "34853355",
+                            "section_type": "REF",
+                            "source": "NPJ Breast Cancer",
+                            "type": "ref",
+                            "volume": "7",
+                            "year": "2021"
+                        },
+                        "text": "The tale of TILs in breast cancer: a report from the International Immuno-Oncology Biomarker Working Group",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 42847,
+                        "infons": {
+                            "elocation-id": "1422717",
+                            "name_0": "surname:Zhai;given-names:W",
+                            "name_1": "surname:Zhang;given-names:C",
+                            "name_2": "surname:Duan;given-names:F",
+                            "name_3": "surname:Xie;given-names:J",
+                            "name_4": "surname:Dai;given-names:S",
+                            "name_5": "surname:Lin;given-names:Y",
+                            "pub-id_doi": "10.3389/fimmu.2024.1422717",
+                            "pub-id_pmid": "39108262",
+                            "section_type": "REF",
+                            "source": "Front Immunol",
+                            "type": "ref",
+                            "volume": "15",
+                            "year": "2024"
+                        },
+                        "text": "Dynamics of peripheral blood inflammatory index predict tumor pathological response and survival among patients with locally advanced non-small cell lung cancer who underwent neoadjuvant immunochemotherapy: a multi-cohort retrospective study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43089,
+                        "infons": {
+                            "name_0": "surname:Salgado;given-names:R",
+                            "name_1": "surname:Denkert;given-names:C",
+                            "name_2": "surname:Demaria;given-names:S",
+                            "name_3": "surname:Sirtaine;given-names:N",
+                            "name_4": "surname:Klauschen;given-names:F",
+                            "name_5": "surname:Pruneri;given-names:G",
+                            "pub-id_doi": "10.1093/annonc/mdu450",
+                            "pub-id_pmid": "25214542",
+                            "section_type": "REF",
+                            "source": "Ann Oncol",
+                            "type": "ref",
+                            "volume": "26",
+                            "year": "2015"
+                        },
+                        "text": "The evaluation of tumor-infiltrating lymphocytes (TILs) in breast cancer: recommendations by an International TILs Working Group 2014",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43223,
+                        "infons": {
+                            "fpage": "16",
+                            "lpage": "25",
+                            "name_0": "surname:Dieci;given-names:MV",
+                            "name_1": "surname:Radosevic-Robin;given-names:N",
+                            "name_2": "surname:Fineberg;given-names:S",
+                            "name_3": "surname:van den Eynden;given-names:G",
+                            "name_4": "surname:Ternes;given-names:N",
+                            "name_5": "surname:Penault-Llorca;given-names:F",
+                            "pub-id_doi": "10.1016/j.semcancer.2017.10.003",
+                            "pub-id_pmid": "29024776",
+                            "section_type": "REF",
+                            "source": "Semin Cancer Biol",
+                            "type": "ref",
+                            "volume": "52",
+                            "year": "2018"
+                        },
+                        "text": "Update on tumor-infiltrating lymphocytes (TILs) in breast cancer, including recommendations to assess TILs in residual disease after neoadjuvant therapy and in carcinoma in situ: a report of the International Immuno-Oncology Biomarker Working Group on Breast Cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43489,
+                        "infons": {
+                            "name_0": "surname:Loi;given-names:S",
+                            "name_1": "surname:Michiels;given-names:S",
+                            "name_2": "surname:Adams;given-names:S",
+                            "name_3": "surname:Loibl;given-names:S",
+                            "name_4": "surname:Budczies;given-names:J",
+                            "name_5": "surname:Denkert;given-names:C",
+                            "pub-id_doi": "10.1016/j.annonc.2021.07.007",
+                            "pub-id_pmid": "34311075",
+                            "section_type": "REF",
+                            "source": "Ann Oncol",
+                            "type": "ref",
+                            "volume": "32",
+                            "year": "2021"
+                        },
+                        "text": "The journey of tumor-infiltrating lymphocytes as a biomarker in breast cancer: clinical utility in an era of checkpoint inhibition",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43620,
+                        "infons": {
+                            "elocation-id": "e241805",
+                            "name_0": "surname:Huang;given-names:Y",
+                            "name_1": "surname:Wang;given-names:X",
+                            "name_2": "surname:Cao;given-names:Y",
+                            "name_3": "surname:Lan;given-names:X",
+                            "name_4": "surname:Hu;given-names:X",
+                            "name_5": "surname:Mou;given-names:F",
+                            "pub-id_doi": "10.1148/radiol.241805",
+                            "pub-id_pmid": "40232145",
+                            "section_type": "REF",
+                            "source": "Radiology",
+                            "type": "ref",
+                            "volume": "315",
+                            "year": "2025"
+                        },
+                        "text": "Nomogram for predicting neoadjuvant chemotherapy response in breast cancer using MRI-based intratumoral heterogeneity quantification",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43753,
+                        "infons": {
+                            "fpage": "249",
+                            "name_0": "surname:He;given-names:J",
+                            "name_1": "surname:Xu;given-names:J",
+                            "name_2": "surname:Chen;given-names:W",
+                            "name_3": "surname:Cao;given-names:M",
+                            "name_4": "surname:Zhang;given-names:J",
+                            "name_5": "surname:Yang;given-names:Q",
+                            "pub-id_doi": "10.1038/s41698-025-01055-9",
+                            "pub-id_pmid": "40696140",
+                            "section_type": "REF",
+                            "source": "NPJ Precis Oncol",
+                            "type": "ref",
+                            "volume": "9",
+                            "year": "2025"
+                        },
+                        "text": "Development of a deep learning model for T1N0 gastric cancer diagnosis using 2.5D radiomic data in preoperative CT images",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43875,
+                        "infons": {
+                            "elocation-id": "107660",
+                            "name_0": "surname:Xu;given-names:W",
+                            "name_1": "surname:Fu;given-names:YL",
+                            "name_2": "surname:Zhu;given-names:D",
+                            "pub-id_doi": "10.1016/j.cmpb.2023.107660",
+                            "pub-id_pmid": "37320940",
+                            "section_type": "REF",
+                            "source": "Comput Methods Programs BioMed",
+                            "type": "ref",
+                            "volume": "240",
+                            "year": "2023"
+                        },
+                        "text": "ResNet and its application to medical image processing: research progress and challenges",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 43964,
+                        "infons": {
+                            "fpage": "287",
+                            "lpage": "300",
+                            "name_0": "surname:Xiao;given-names:Y",
+                            "name_1": "surname:Liang;given-names:F",
+                            "name_2": "surname:Liu;given-names:B",
+                            "pub-id_doi": "10.1109/tcyb.2020.2973450",
+                            "pub-id_pmid": "32149707",
+                            "section_type": "REF",
+                            "source": "IEEE Trans Cybern",
+                            "type": "ref",
+                            "volume": "52",
+                            "year": "2022"
+                        },
+                        "text": "A transfer learning-based multi-instance learning method with weak labels",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44038,
+                        "infons": {
+                            "fpage": "1070",
+                            "issue": "(9)",
+                            "name_0": "surname:Zhang;given-names:H",
+                            "name_1": "surname:Ogasawara;given-names:K",
+                            "pub-id_doi": "10.3390/bioengineering10091070",
+                            "pub-id_pmid": "37760173",
+                            "section_type": "REF",
+                            "source": "Bioengineering (Basel)",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2023"
+                        },
+                        "text": "Grad-CAM-based explainable artificial intelligence related to medical text processing",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44124,
+                        "infons": {
+                            "fpage": "19",
+                            "lpage": "28",
+                            "name_0": "surname:Zhou;given-names:LQ",
+                            "name_1": "surname:Wu;given-names:XL",
+                            "name_2": "surname:Huang;given-names:SY",
+                            "name_3": "surname:Wu;given-names:GG",
+                            "name_4": "surname:Ye;given-names:HR",
+                            "name_5": "surname:Wei;given-names:Q",
+                            "pub-id_doi": "10.1148/radiol.2019190372",
+                            "pub-id_pmid": "31746687",
+                            "section_type": "REF",
+                            "source": "Radiology",
+                            "type": "ref",
+                            "volume": "294",
+                            "year": "2020"
+                        },
+                        "text": "Lymph node metastasis prediction from primary breast cancer US images using deep learning",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44214,
+                        "infons": {
+                            "fpage": "966",
+                            "issue": "(6)",
+                            "name_0": "surname:Xu;given-names:Z",
+                            "name_1": "surname:Zhou;given-names:Z",
+                            "name_2": "surname:Son;given-names:JB",
+                            "name_3": "surname:Feng;given-names:H",
+                            "name_4": "surname:Adrada;given-names:BE",
+                            "name_5": "surname:Moseley;given-names:TW",
+                            "pub-id_doi": "10.3390/cancers17060966",
+                            "pub-id_pmid": "40149299",
+                            "section_type": "REF",
+                            "source": "Cancers (Basel)",
+                            "type": "ref",
+                            "volume": "17",
+                            "year": "2025"
+                        },
+                        "text": "Deep learning models based on pretreatment MRI and clinicopathological data to predict responses to neoadjuvant systemic therapy in triple-negative breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44376,
+                        "infons": {
+                            "fpage": "72",
+                            "name_0": "surname:Krasniqi;given-names:E",
+                            "name_1": "surname:Filomeno;given-names:L",
+                            "name_2": "surname:Arcuri;given-names:T",
+                            "name_3": "surname:Ferretti;given-names:G",
+                            "name_4": "surname:Gasparro;given-names:S",
+                            "name_5": "surname:Fulvi;given-names:A",
+                            "pub-id_doi": "10.1186/s13062-025-00661-8",
+                            "pub-id_pmid": "40551237",
+                            "section_type": "REF",
+                            "source": "Biol Direct",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2025"
+                        },
+                        "text": "Multimodal deep learning for predicting neoadjuvant treatment outcomes in breast cancer: a systematic review",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44485,
+                        "infons": {
+                            "elocation-id": "103298",
+                            "name_0": "surname:Tang;given-names:W",
+                            "name_1": "surname:Jin;given-names:C",
+                            "name_2": "surname:Kong;given-names:Q",
+                            "name_3": "surname:Liu;given-names:C",
+                            "name_4": "surname:Chen;given-names:S",
+                            "name_5": "surname:Ding;given-names:S",
+                            "pub-id_doi": "10.1016/j.eclinm.2025.103298",
+                            "pub-id_pmid": "40584836",
+                            "section_type": "REF",
+                            "source": "EClinicalMedicine",
+                            "type": "ref",
+                            "volume": "85",
+                            "year": "2025"
+                        },
+                        "text": "Development and validation of an MRI spatiotemporal interaction model for early noninvasive prediction of neoadjuvant chemotherapy response in breast cancer: a multicentre study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44663,
+                        "infons": {
+                            "fpage": "137",
+                            "name_0": "surname:Jiang;given-names:B",
+                            "name_1": "surname:Bao;given-names:L",
+                            "name_2": "surname:He;given-names:S",
+                            "name_3": "surname:Chen;given-names:X",
+                            "name_4": "surname:Jin;given-names:Z",
+                            "name_5": "surname:Ye;given-names:Y",
+                            "pub-id_doi": "10.1186/s13058-024-01895-6",
+                            "pub-id_pmid": "39304962",
+                            "section_type": "REF",
+                            "source": "Breast Cancer Res",
+                            "type": "ref",
+                            "volume": "26",
+                            "year": "2024"
+                        },
+                        "text": "Deep learning applications in breast cancer histopathological imaging: diagnosis, treatment, and prognosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44770,
+                        "infons": {
+                            "name_0": "surname:Qiu;given-names:B",
+                            "name_1": "surname:Zheng;given-names:Y",
+                            "name_2": "surname:Liu;given-names:S",
+                            "name_3": "surname:Song;given-names:R",
+                            "name_4": "surname:Wu;given-names:L",
+                            "name_5": "surname:Lu;given-names:C",
+                            "pub-id_doi": "10.1158/0008-5472.can-24-4190",
+                            "pub-id_pmid": "40305075",
+                            "section_type": "REF",
+                            "source": "Cancer Res",
+                            "type": "ref",
+                            "volume": "85",
+                            "year": "2025"
+                        },
+                        "text": "Multitask deep learning based on longitudinal CT images facilitates prediction of lymph node metastasis and survival in chemotherapy-treated gastric cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 44926,
+                        "infons": {
+                            "name_0": "surname:Zhou;given-names:Y",
+                            "name_1": "surname:Guo;given-names:X",
+                            "name_2": "surname:Shen;given-names:L",
+                            "name_3": "surname:Liu;given-names:K",
+                            "name_4": "surname:Sun;given-names:Q",
+                            "name_5": "surname:Wang;given-names:Y",
+                            "pub-id_doi": "10.2147/ott.s434193",
+                            "pub-id_pmid": "38021447",
+                            "section_type": "REF",
+                            "source": "Onco Targets Ther",
+                            "type": "ref",
+                            "volume": "16",
+                            "year": "2023"
+                        },
+                        "text": "Predictive significance of systemic immune-inflammation index in patients with breast cancer: a retrospective cohort study",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45049,
+                        "infons": {
+                            "fpage": "1206",
+                            "name_0": "surname:Kim;given-names:JY",
+                            "name_1": "surname:Jung;given-names:EJ",
+                            "name_2": "surname:Kim;given-names:JM",
+                            "name_3": "surname:Lee;given-names:HS",
+                            "name_4": "surname:Kwag;given-names:SJ",
+                            "name_5": "surname:Park;given-names:JH",
+                            "pub-id_doi": "10.1186/s12885-020-07700-9",
+                            "pub-id_pmid": "33287745",
+                            "section_type": "REF",
+                            "source": "BMC Cancer",
+                            "type": "ref",
+                            "volume": "20",
+                            "year": "2020"
+                        },
+                        "text": "Dynamic changes of neutrophil-to-lymphocyte ratio and platelet-to-lymphocyte ratio predicts breast cancer prognosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45165,
+                        "infons": {
+                            "elocation-id": "734948",
+                            "name_0": "surname:Leng;given-names:J",
+                            "name_1": "surname:Wu;given-names:F",
+                            "name_2": "surname:Zhang;given-names:L",
+                            "pub-id_doi": "10.3389/fonc.2022.734948",
+                            "pub-id_pmid": "35651788",
+                            "section_type": "REF",
+                            "source": "Front Oncol",
+                            "type": "ref",
+                            "volume": "12",
+                            "year": "2022"
+                        },
+                        "text": "Prognostic significance of pretreatment neutrophil-to-lymphocyte ratio, platelet-to-lymphocyte ratio, or monocyte-to-lymphocyte ratio in endometrial neoplasms: a systematic review and meta-analysis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45363,
+                        "infons": {
+                            "name_0": "surname:Schobert;given-names:IT",
+                            "name_1": "surname:Savic;given-names:LJ",
+                            "name_2": "surname:Chapiro;given-names:J",
+                            "name_3": "surname:Bousabarah;given-names:K",
+                            "name_4": "surname:Chen;given-names:E",
+                            "name_5": "surname:Laage-Gaupp;given-names:F",
+                            "pub-id_doi": "10.1007/s00330-020-06931-5",
+                            "pub-id_pmid": "32424595",
+                            "section_type": "REF",
+                            "source": "Eur Radiol",
+                            "type": "ref",
+                            "volume": "30",
+                            "year": "2020"
+                        },
+                        "text": "Neutrophil-to-lymphocyte and platelet-to-lymphocyte ratios as predictors of tumor response in hepatocellular carcinoma after DEB-TACE",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45497,
+                        "infons": {
+                            "elocation-id": "1234953",
+                            "name_0": "surname:Cichowska-Cwali\u0144ska;given-names:N",
+                            "name_1": "surname:Bie\u0144kowski;given-names:M",
+                            "name_2": "surname:Pop\u0119da;given-names:M",
+                            "name_3": "surname:Dr\u00f3\u017cka;given-names:M",
+                            "name_4": "surname:Rutkowski;given-names:J",
+                            "name_5": "surname:Jassem;given-names:J",
+                            "pub-id_doi": "10.3389/fonc.2023.1234953",
+                            "pub-id_pmid": "37886164",
+                            "section_type": "REF",
+                            "source": "Front Oncol",
+                            "type": "ref",
+                            "volume": "13",
+                            "year": "2023"
+                        },
+                        "text": "Radiotherapy-induced dynamic changes in the lymphocyte-to-monocyte ratio in patients with laryngeal cancer indicate poor prognosis",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45628,
+                        "infons": {
+                            "name_0": "surname:Takada;given-names:K",
+                            "name_1": "surname:Kashiwagi;given-names:S",
+                            "name_2": "surname:Asano;given-names:Y",
+                            "name_3": "surname:Goto;given-names:W",
+                            "name_4": "surname:Takahashi;given-names:K",
+                            "name_5": "surname:Shibutani;given-names:M",
+                            "pub-id_doi": "10.21873/anticanres.13752",
+                            "pub-id_pmid": "31570453",
+                            "section_type": "REF",
+                            "source": "Anticancer Res",
+                            "type": "ref",
+                            "volume": "39",
+                            "year": "2019"
+                        },
+                        "text": "Clinical evaluation of dynamic monitoring of neutrophil-to-lymphocyte and platelet-to-lymphocyte ratios in primary endocrine therapy for advanced breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45788,
+                        "infons": {
+                            "name_0": "surname:Fiste;given-names:O",
+                            "name_1": "surname:Mavrothalassitis;given-names:E",
+                            "name_2": "surname:Kokkalis;given-names:A",
+                            "name_3": "surname:Anagnostakis;given-names:M",
+                            "name_4": "surname:Gomatou;given-names:G",
+                            "name_5": "surname:Kontogiannis;given-names:A",
+                            "pub-id_doi": "10.1007/s12094-024-03814-9",
+                            "pub-id_pmid": "39668275",
+                            "section_type": "REF",
+                            "source": "Clin Transl Oncol",
+                            "type": "ref",
+                            "volume": "27",
+                            "year": "2025"
+                        },
+                        "text": "Inflammation-related biomarkers as predictors of pathological complete response in early-stage breast cancer",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 45897,
+                        "infons": {
+                            "name_0": "surname:Sharma;given-names:P",
+                            "name_1": "surname:Stecklein;given-names:SR",
+                            "name_2": "surname:Yoder;given-names:R",
+                            "name_3": "surname:Staley;given-names:JM",
+                            "name_4": "surname:Schwensen;given-names:K",
+                            "name_5": "surname:O'Dea;given-names:A",
+                            "pub-id_doi": "10.1001/jamaoncol.2023.5033",
+                            "pub-id_pmid": "37991778",
+                            "section_type": "REF",
+                            "source": "JAMA Oncol",
+                            "type": "ref",
+                            "volume": "10",
+                            "year": "2024"
+                        },
+                        "text": "Clinical and biomarker findings of neoadjuvant pembrolizumab and carboplatin plus docetaxel in triple-negative breast cancer: NeoPACT phase 2 clinical trial",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46054,
+                        "infons": {
+                            "fpage": "40",
+                            "lpage": "50",
+                            "name_0": "surname:Denkert;given-names:C",
+                            "name_1": "surname:von Minckwitz;given-names:G",
+                            "name_2": "surname:Darb-Esfahani;given-names:S",
+                            "name_3": "surname:Lederer;given-names:B",
+                            "name_4": "surname:Heppner;given-names:BI",
+                            "name_5": "surname:Weber;given-names:KE",
+                            "pub-id_doi": "10.1016/s1470-2045(17)30904-x",
+                            "pub-id_pmid": "29233559",
+                            "section_type": "REF",
+                            "source": "Lancet Oncol",
+                            "type": "ref",
+                            "volume": "19",
+                            "year": "2018"
+                        },
+                        "text": "Tumour-infiltrating lymphocytes and prognosis in different subtypes of breast cancer: a pooled analysis of 3771 patients treated with neoadjuvant therapy",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    },
+                    {
+                        "bioctype": "BioCPassage",
+                        "offset": 46208,
+                        "infons": {
+                            "fpage": "850",
+                            "issue": "(2)",
+                            "lpage": "62",
+                            "name_0": "surname:Janse;given-names:MHA",
+                            "name_1": "surname:Janssen;given-names:LM",
+                            "name_2": "surname:Wolters-van der Ben;given-names:EJM",
+                            "name_3": "surname:Moman;given-names:MR",
+                            "name_4": "surname:Viergever;given-names:MA",
+                            "name_5": "surname:van Diest;given-names:PJ",
+                            "pub-id_doi": "10.1007/s00330-025-11801-z",
+                            "pub-id_pmid": "40770139",
+                            "section_type": "REF",
+                            "source": "Eur Radiol",
+                            "type": "ref",
+                            "volume": "36",
+                            "year": "2025"
+                        },
+                        "text": "Deep learning-based radiomics does not improve residual cancer burden prediction post-chemotherapy in LIMA breast MRI trial",
+                        "sentences": [],
+                        "annotations": [],
+                        "relations": []
+                    }
+                ],
+                "annotations": [],
+                "relations": []
+            }
+        ]
+    }
+]
